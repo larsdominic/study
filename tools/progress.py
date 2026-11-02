@@ -18,6 +18,9 @@ GUIDES=[
  dict(subject="Maths AA SL", title="Tue 10 Nov: 2.2 to 2.5", link="guides/2026-11-10-maths-aa-sl-2.2-2.5.html", ican="ib-maths-aa-sl-22-25-ican", quiz="ib-quiz-guide-2026-11-10",
       map={"SL 2.2":["d1","d2","d3","d4","d5"],"SL 2.3":["s1","s2","s3"],"SL 2.4":["k1","k2","k3"],"SL 2.5":["c1","c2","c3"]},
       anchors={"SL 2.2":"#s22","SL 2.3":"#s23","SL 2.4":"#s24","SL 2.5":"#s25"}),
+ dict(subject="Biology HL", title="Thu 5 Nov: A1.1 and A1.2", link="guides/2026-11-05-biology-hl-a1.1-a1.2.html", ican="ib-bio-a11-a12-ican", quiz="ib-quiz-guide-2026-11-05",
+      map={"A1.1":["w1","w2","w3","w4","w5","w6","w7","w8"],"A1.2":["n1","n2","n3","n4","n5","n6","n7","n8","n9","n10","n11","n12","n13","n14","n15"]},
+      anchors={"A1.1":"#a11","A1.2":"#a12"}),
  dict(subject="Business Management SL", title="Fri 6 Nov: Unit 1, 1.1 to 1.6", link="guides/2026-11-06-business-sl-1.1-1.6.html", ican="ib-business-sl-11-16-ican", quiz="ib-quiz-guide-2026-11-06",
       map={"1.1":["b11a","b11b","b11c","b11d"],"1.2":["b12a","b12b","b12c","b12d"],"1.3":["b13a","b13b","b13c","b13d"],"1.4":["b14a","b14b"],"1.5":["b15a","b15b","b15c","b15d","b15e"],"1.6":["b16a","b16b"]},
       anchors={"1.1":"#s11","1.2":"#s12","1.3":"#s13","1.4":"#s14","1.5":"#s15","1.6":"#s16"}),
@@ -35,7 +38,8 @@ BM=[("1.1","What is a business?"),("1.2","Types of business entities"),("1.3","B
 ("3.1","Introduction to finance"),("3.2","Sources of finance"),("3.3","Costs and revenues"),("3.4","Final accounts"),("3.5","Profitability and liquidity ratio analysis"),("3.7","Cash flow"),("3.8","Investment appraisal"),
 ("4.1","Introduction to marketing"),("4.2","Marketing planning"),("4.4","Market research"),("4.5","The seven Ps of the marketing mix"),
 ("5.1","Introduction to operations management"),("5.2","Operations methods"),("5.4","Location"),("5.5","Break-even analysis")]  # SL sub-topics only (HL-only 2.5, 2.7, 3.6, 3.9, 4.3, 4.6, 5.3, 5.6-5.9 left out)
-SUBJECTS=[dict(name="Maths AA SL",topics=MATHS),dict(name="Chemistry HL",topics=CHEM),dict(name="Business Management SL",topics=BM)]
+BIO=[("A1.1","Water"),("A1.2","Nucleic acids")]  # PARTIAL: only topics with guides so far; replace with the full official list once the IB Biology guide is in the folder
+SUBJECTS=[dict(name="Maths AA SL",topics=MATHS),dict(name="Chemistry HL",topics=CHEM),dict(name="Biology HL",topics=BIO,partial=True),dict(name="Business Management SL",topics=BM)]
 body='''
 <div class="card" style="margin-top:24px">
   <b>What the colours mean</b>
@@ -73,8 +77,8 @@ var sd=document.getElementById('subjects'), out='';
 SUBJECTS.forEach(function(s){var c={g:0,a:0,r:0,n:0}, rows='';
   s.topics.forEach(function(t){var i=info[s.name+'|'+t[0]]||{st:'n',ev:'',link:null}; c[i.st]++;
     rows+='<div class="trow"><span class="dot" style="background:'+COL[i.st]+';margin-top:7px"></span><div class="code">'+t[0]+'</div><div class="name">'+(i.link?'<a href="'+i.link+'">'+t[1]+'</a>':t[1])+'</div><div class="ev">'+i.ev+'</div></div>';});
-  out+='<h2>'+s.name+'</h2><div class="sum"><span><span class="dot" style="background:var(--green)"></span>'+c.g+' secure</span><span><span class="dot" style="background:var(--amber)"></span>'+c.a+' in progress</span><span><span class="dot" style="background:var(--red)"></span>'+c.r+' to do</span><span><span class="dot" style="background:#C3C9CD"></span>'+c.n+' not covered yet</span></div><div class="card" style="padding-top:4px">'+rows+'</div>';});
-sd.innerHTML=out+'<p style="font-size:.9rem;color:var(--ink-soft)">Biology, English and French appear here once their official subject guides are in the folder. Topic codes and order are the official IB ones. Maths AA section names are short summaries of the content of each section, because the IB guide numbers those sections without giving them titles; Chemistry and Business Management names are the official IB titles (Business: SL sub-topics only).</p>';
+  out+='<h2>'+s.name+(s.partial?' <span style="font-size:.8rem;color:var(--ink-soft);font-family:inherit">(partial list: full topic list once the official Biology guide is in the folder)</span>':'')+'</h2><div class="sum"><span><span class="dot" style="background:var(--green)"></span>'+c.g+' secure</span><span><span class="dot" style="background:var(--amber)"></span>'+c.a+' in progress</span><span><span class="dot" style="background:var(--red)"></span>'+c.r+' to do</span><span><span class="dot" style="background:#C3C9CD"></span>'+c.n+' not covered yet</span></div><div class="card" style="padding-top:4px">'+rows+'</div>';});
+sd.innerHTML=out+'<p style="font-size:.9rem;color:var(--ink-soft)">Biology shows only the topics studied so far; English and French appear once their official subject guides are in the folder. Topic codes and order are the official IB ones. Maths AA section names are short summaries of the content of each section, because the IB guide numbers those sections without giving them titles; Chemistry and Business Management names are the official IB titles (Business: SL sub-topics only).</p>';
 '''.replace('__S__',json.dumps(SUBJECTS)).replace('__G__',json.dumps(GUIDES)).replace('__R__',json.dumps(REVIEWS)).replace('__T__',json.dumps(TIMED))
 open(out+'/progress.html','w').write(page("Progress: IB study","index.html","Progress","Every syllabus topic for each subject, coloured by how far Jamila has got. Tick the \"I can\" boxes in the guides and do the quizzes, and this page updates itself.",body,script))
 print("progress ok")

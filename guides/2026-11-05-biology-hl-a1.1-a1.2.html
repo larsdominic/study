@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biology HL study guide: A1.1 Water and A1.2 Nucleic acids (Thu 5 Nov 2026)</title>
+<!--
+  NOT YET CHECKED AGAINST THE OFFICIAL IB BIOLOGY GUIDE (first assessment 2025). No official guide is in the IB folder.
+  Sources used: the Term 1 teacher slide deck "Grade 11 - First term (IB DP Biology) - Part 1" (Google Slides
+  1Cdkg3Tn3riqP_CQF1-yW3Er7AhgaN0ncpLhBf9ZikrQ, most slides are images; text and 8 slide images read on 2 Nov 2026),
+  and the Save My Exams past-paper packs and mark schemes for A1.1 and A1.2 (HL and SL).
+  Unverified items:
+  1. Statement numbers and titles A1.1.1 to A1.1.8 and A1.2.1 to A1.2.15, and which are HL only, are copied from the
+     teacher deck's topic slides (deck slides 42, 61, 78, 123, 140, 161, 190, 211). The deck writes "polar of charged"
+     in A1.1.4; this page reads it as "polar or charged". The "I can" wording is written from those titles plus what
+     the packs and mark schemes ask; it is not the official IB wording.
+  2. The aquatic animal examples (black-throated loon, Gavia arctica; ringed seal, Pusa hispida) are recalled from the
+     official guide's A1.1.6 guidance, not seen in the folder. The deck itself uses a whale picture for thermal
+     conductivity. Animal facts used are general, well documented biology.
+  3. HL A1.1.7: the asteroid hypothesis and the reasons for retention (gravity, temperature) are the commonly taught
+     content; the exact official guidance was not seen.
+  4. The idea that students are not assessed on the number of hydrogen bonds per base pair comes from the
+     Save My Exams mark scheme (A1.2 Q6a note), not from the official guide.
+  5. Whether a Biology data booklet is issued in Jamila's exam session (May 2028) is not confirmed: web sources
+     disagree. The page treats everything as "Learn".
+  6. Exam format (Paper 1A 40 multiple-choice marks at HL, Paper 1B 30, Paper 2 70) is from the teacher deck's
+     assessment slides, not from the official guide.
+  7. Chargaff percentages are copied from the teacher deck's Table 2 (slide 238: human, salmon, wheat, yeast,
+     Mycobacterium tuberculosis; the deck also lists cattle, sea urchin, phage T2 and polio virus).
+-->
+<style>
+  :root{
+    --paper:#F5F7F4; --ink:#1E2A33; --ink-soft:#4A5862; --rule:#D6DCD8;
+    --indigo:#2F47A6; --indigo-soft:#E6EAF7; --amber:#B8761A; --amber-soft:#FBF1DF;
+    --green:#2E7D4F; --green-soft:#E3F2E8; --red:#B23A3A; --red-soft:#F8E4E4;
+    --card:#FFFFFF;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;overflow-wrap:break-word}
+  h1,h2,h3,h4{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;line-height:1.2;margin:0 0 .4em;font-weight:600}
+  h1{font-size:2.3rem}
+  h2{font-size:1.75rem;margin-top:0}
+  h3{font-size:1.25rem;margin-top:1.8em}
+  h4{font-size:1.05rem;margin-top:1.4em;font-family:inherit;font-weight:700}
+  p{margin:0 0 1em}
+  a{color:var(--indigo)}
+  code,.mono{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;font-size:.95em}
+  sup,sub{line-height:0}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
+
+  /* hero: hydrogen bonds between water molecules and between DNA base pairs, which is the day's content */
+  .hero{background:#0B0F1A;color:#fff;padding:0 0 28px}
+  .banner{display:block;width:100%;height:auto;max-height:300px}
+  .hero .wrap{padding-top:18px;padding-bottom:0}
+  .hero h1{color:#fff}
+  .hero p{color:#C9D1E6;max-width:660px}
+  .hero .series{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:1.15rem;color:#F2C46D;margin:0 0 14px}
+  .meta{display:flex;flex-wrap:wrap;gap:8px 22px;color:#C9D1E6;font-size:.95rem;margin-top:8px}
+
+  nav.toc{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+  nav.toc .wrap{display:flex;gap:4px;flex-wrap:wrap;padding:8px 20px}
+  nav.toc a{text-decoration:none;color:var(--ink-soft);padding:6px 10px;border-radius:6px;font-size:.92rem}
+  nav.toc a:hover,nav.toc a:focus-visible{background:var(--indigo-soft);color:var(--indigo);outline:none}
+
+  .plan{display:grid;grid-template-columns:1fr;gap:12px;margin:22px 0 8px}
+  .plan > div{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);padding:12px 16px}
+  .plan .bh{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-bottom:4px}
+  .plan .bh b{font-size:1.2rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+  .plan .bh span{font-weight:700;color:var(--indigo)}
+  .plan ol{margin:6px 0 0;padding-left:22px}
+  .plan li{margin:4px 0}
+  .plan .t{color:var(--ink-soft);font-size:.88rem;white-space:nowrap}
+  .files{margin:16px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+  .files li a{display:inline-block;background:var(--card);border:1px solid var(--rule);padding:5px 10px;border-radius:999px;font-size:.9rem;text-decoration:none}
+  .files li a:hover{border-color:var(--indigo)}
+  .hl{display:inline-block;background:var(--indigo);color:#fff;font-size:.72rem;font-weight:700;padding:1px 6px;border-radius:3px;vertical-align:middle;margin-left:6px;font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif}
+  .note{background:var(--amber-soft);border:1px solid var(--amber);padding:10px 14px;margin:14px 0 0;font-size:.95rem}
+  section.topic ul{padding-left:22px}
+  section.topic li{margin:4px 0}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 20px;background:var(--card);border:1px solid var(--rule);padding:10px 14px;font-size:.92rem;margin:16px 0}
+
+  section.topic{margin-top:56px;padding-top:28px;border-top:3px solid var(--ink)}
+  .kicker{color:var(--indigo);font-weight:700;letter-spacing:.01em;margin-bottom:4px}
+  .guiding{font-style:italic;color:var(--ink-soft);margin-bottom:18px}
+
+  .ican{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:0 0 24px}
+  .ican p{margin:0 0 8px;font-weight:700}
+  .ican label{display:flex;gap:10px;align-items:flex-start;padding:5px 0;cursor:pointer}
+  .ican input{margin-top:6px;width:16px;height:16px;flex:none;accent-color:var(--indigo)}
+
+  /* formula booklet markers */
+  .fb,.learn{display:inline-block;font-size:.72rem;font-weight:700;padding:1px 7px;border-radius:3px;vertical-align:middle;margin-left:6px;white-space:nowrap;font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.01em}
+  .fb{background:var(--green);color:#fff}
+  .learn{background:var(--amber);color:#fff}
+
+  table{border-collapse:collapse;width:100%;margin:12px 0 20px;font-size:.95rem;background:var(--card)}
+  th,td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#EDF0EC}
+  td.c,th.c{text-align:center}
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+  figure{margin:20px 0;background:var(--card);border:1px solid var(--rule);padding:12px}
+  figure svg{display:block;width:100%;height:auto}
+  figcaption{font-size:.9rem;color:var(--ink-soft);margin-top:8px}
+  .keyrow{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.9rem;margin-top:6px}
+  .sw{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-2px;margin-right:6px}
+
+  .tip{background:var(--amber-soft);border-left:5px solid var(--amber);padding:12px 16px;margin:18px 0}
+  .tip b:first-child{color:var(--amber)}
+  .worked{background:var(--indigo-soft);border-left:5px solid var(--indigo);padding:12px 16px;margin:18px 0}
+  .worked > b:first-child{color:var(--indigo)}
+  .worked ol{margin:6px 0 0;padding-left:22px}
+  .worked li{margin:3px 0}
+  .formula{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:1.2rem;text-align:center;margin:12px 0;line-height:2}
+  .nw{white-space:nowrap}
+  .fbox{background:var(--card);border:1px solid var(--rule);padding:6px 14px;margin:14px 0}
+  .fbox .formula{margin:8px 0}
+
+
+
+  details{background:var(--card);border:1px solid var(--rule);padding:10px 14px;margin:10px 0}
+  summary{cursor:pointer;font-weight:600}
+  details[open] summary{margin-bottom:8px}
+
+  .quiz .q{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:12px 0}
+  .quiz .q > p{font-weight:600;margin-bottom:8px}
+  .quiz button{display:block;width:100%;text-align:left;background:#F3F5F2;border:1px solid var(--rule);padding:8px 12px;margin:6px 0;border-radius:6px;font:inherit;cursor:pointer;color:var(--ink)}
+  .quiz button:hover,.quiz button:focus-visible{border-color:var(--indigo);outline:none}
+  .quiz button.right{background:var(--green-soft);border-color:var(--green)}
+  .quiz button.wrong{background:var(--red-soft);border-color:var(--red)}
+  .quiz .why{display:none;margin-top:8px;font-size:.95rem;color:var(--ink-soft)}
+  .quiz .q.done .why{display:block}
+  .score{font-weight:700;margin-top:14px}
+
+  .end{margin-top:56px;background:var(--card);border:1px solid var(--rule);padding:18px 20px}
+  .end ul{margin:8px 0 0;padding-left:20px}
+  @media (max-width:600px){h1{font-size:1.8rem}body{font-size:16px}th,td{padding:6px}.formula{font-size:1.08rem}}
+  @media print{nav.toc{position:static}details{break-inside:avoid}.quiz button{border:1px solid #999}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="banner" viewBox="0 0 1000 330" role="img" aria-label="Five water molecules held together by hydrogen bonds, beside a short piece of DNA whose two antiparallel strands are held together by hydrogen bonds between the base pairs A-T, G-C, C-G and T-A">
+<rect width="1000" height="330" fill="#0B0F1A"/>
+<line x1="222.7" y1="199.1" x2="247.2" y2="218.0" stroke="#F2C46D" stroke-width="3" stroke-dasharray="6 5"/>
+<line x1="137.3" y1="199.1" x2="112.8" y2="218.0" stroke="#F2C46D" stroke-width="3" stroke-dasharray="6 5"/>
+<line x1="134.3" y1="133.7" x2="159.6" y2="151.6" stroke="#F2C46D" stroke-width="3" stroke-dasharray="6 5"/>
+<line x1="225.7" y1="133.7" x2="200.4" y2="151.6" stroke="#F2C46D" stroke-width="3" stroke-dasharray="6 5"/>
+<line x1="180" y1="166" x2="210.0" y2="189.3" stroke="#C9D1E6" stroke-width="5"/>
+<line x1="180" y1="166" x2="150.0" y2="189.3" stroke="#C9D1E6" stroke-width="5"/>
+<circle cx="210.0" cy="189.3" r="13" fill="#F4F6FA"/>
+<circle cx="150.0" cy="189.3" r="13" fill="#F4F6FA"/>
+<circle cx="180" cy="166" r="22" fill="#E5534B"/>
+<line x1="267.0" y1="233.3" x2="296.3" y2="209.2" stroke="#C9D1E6" stroke-width="5"/>
+<line x1="267.0" y1="233.3" x2="283.0" y2="267.8" stroke="#C9D1E6" stroke-width="5"/>
+<circle cx="296.3" cy="209.2" r="13" fill="#F4F6FA"/>
+<circle cx="283.0" cy="267.8" r="13" fill="#F4F6FA"/>
+<circle cx="267.0" cy="233.3" r="22" fill="#E5534B"/>
+<line x1="93.0" y1="233.3" x2="77.0" y2="267.8" stroke="#C9D1E6" stroke-width="5"/>
+<line x1="93.0" y1="233.3" x2="63.7" y2="209.2" stroke="#C9D1E6" stroke-width="5"/>
+<circle cx="77.0" cy="267.8" r="13" fill="#F4F6FA"/>
+<circle cx="63.7" cy="209.2" r="13" fill="#F4F6FA"/>
+<circle cx="93.0" cy="233.3" r="22" fill="#E5534B"/>
+<line x1="90.2" y1="102.5" x2="121.2" y2="124.4" stroke="#C9D1E6" stroke-width="5"/>
+<line x1="90.2" y1="102.5" x2="61.2" y2="127.1" stroke="#C9D1E6" stroke-width="5"/>
+<circle cx="121.2" cy="124.4" r="13" fill="#F4F6FA"/>
+<circle cx="61.2" cy="127.1" r="13" fill="#F4F6FA"/>
+<circle cx="90.2" cy="102.5" r="22" fill="#E5534B"/>
+<line x1="269.8" y1="102.5" x2="238.8" y2="124.4" stroke="#C9D1E6" stroke-width="5"/>
+<line x1="269.8" y1="102.5" x2="298.8" y2="127.1" stroke="#C9D1E6" stroke-width="5"/>
+<circle cx="238.8" cy="124.4" r="13" fill="#F4F6FA"/>
+<circle cx="298.8" cy="127.1" r="13" fill="#F4F6FA"/>
+<circle cx="269.8" cy="102.5" r="22" fill="#E5534B"/>
+<g font-size="32" fill="#C9D1E6" font-family="Georgia,serif"><text x="180" y="136" text-anchor="middle">δ−</text><text x="130.0" y="199.3" text-anchor="end">δ+</text></g>
+<g font-family="Arial,Helvetica,sans-serif">
+<path d="M425.0,70 H880" stroke="#5C6A8A" stroke-width="4" fill="none"/>
+<path d="M490,262 H945.0" stroke="#5C6A8A" stroke-width="4" fill="none"/>
+<rect x="466.0" y="89.4" width="48" height="62" rx="4" fill="#E39A5E"/>
+<rect x="466.0" y="202.6" width="48" height="40" rx="4" fill="#7FC98A"/>
+<line x1="481" y1="154.4" x2="481" y2="199.6" stroke="#F2C46D" stroke-width="3" stroke-dasharray="5 4"/>
+<line x1="499" y1="154.4" x2="499" y2="199.6" stroke="#F2C46D" stroke-width="3" stroke-dasharray="5 4"/>
+<text x="490" y="131.9" text-anchor="middle" font-size="32" font-weight="700" fill="#0B0F1A">A</text>
+<text x="490" y="234.1" text-anchor="middle" font-size="32" font-weight="700" fill="#0B0F1A">T</text>
+<rect x="596.0" y="89.4" width="48" height="62" rx="4" fill="#E39A5E"/>
+<rect x="596.0" y="202.6" width="48" height="40" rx="4" fill="#7FC98A"/>
+<line x1="607" y1="154.4" x2="607" y2="199.6" stroke="#F2C46D" stroke-width="3" stroke-dasharray="5 4"/>
+<line x1="620" y1="154.4" x2="620" y2="199.6" stroke="#F2C46D" stroke-width="3" stroke-dasharray="5 4"/>
+<line x1="633" y1="154.4" x2="633" y2="199.6" stroke="#F2C46D" stroke-width="3" stroke-dasharray="5 4"/>
+<text x="620" y="131.9" text-anchor="middle" font-size="32" font-weight="700" fill="#0B0F1A">G</text>
+<text x="620" y="234.1" text-anchor="middle" font-size="32" font-weight="700" fill="#0B0F1A">C</text>
+<rect x="726.0" y="89.4" width="48" height="40" rx="4" fill="#7FC98A"/>
+<rect x="726.0" y="180.6" width="48" height="62" rx="4" fill="#E39A5E"/>
+<line x1="737" y1="132.4" x2="737" y2="177.6" stroke="#F2C46D" stroke-width="3" stroke-dasharray="5 4"/>
+<line x1="750" y1="132.4" x2="750" y2="177.6" stroke="#F2C46D" stroke-width="3" stroke-dasharray="5 4"/>
+<line x1="763" y1="132.4" x2="763" y2="177.6" stroke="#F2C46D" stroke-width="3" stroke-dasharray="5 4"/>
+<text x="750" y="120.9" text-anchor="middle" font-size="32" font-weight="700" fill="#0B0F1A">C</text>
+<text x="750" y="223.1" text-anchor="middle" font-size="32" font-weight="700" fill="#0B0F1A">G</text>
+<rect x="856.0" y="89.4" width="48" height="40" rx="4" fill="#7FC98A"/>
+<rect x="856.0" y="180.6" width="48" height="62" rx="4" fill="#E39A5E"/>
+<line x1="871" y1="132.4" x2="871" y2="177.6" stroke="#F2C46D" stroke-width="3" stroke-dasharray="5 4"/>
+<line x1="889" y1="132.4" x2="889" y2="177.6" stroke="#F2C46D" stroke-width="3" stroke-dasharray="5 4"/>
+<text x="880" y="120.9" text-anchor="middle" font-size="32" font-weight="700" fill="#0B0F1A">T</text>
+<text x="880" y="223.1" text-anchor="middle" font-size="32" font-weight="700" fill="#0B0F1A">A</text>
+<polygon points="490.0,46.0 512.8,62.6 504.1,89.4 475.9,89.4 467.2,62.6" fill="#6F8EF0"/>
+<polygon points="490.0,286.0 467.2,269.4 475.9,242.6 504.1,242.6 512.8,269.4" fill="#6F8EF0"/>
+<polygon points="620.0,46.0 642.8,62.6 634.1,89.4 605.9,89.4 597.2,62.6" fill="#6F8EF0"/>
+<polygon points="620.0,286.0 597.2,269.4 605.9,242.6 634.1,242.6 642.8,269.4" fill="#6F8EF0"/>
+<polygon points="750.0,46.0 772.8,62.6 764.1,89.4 735.9,89.4 727.2,62.6" fill="#6F8EF0"/>
+<polygon points="750.0,286.0 727.2,269.4 735.9,242.6 764.1,242.6 772.8,269.4" fill="#6F8EF0"/>
+<polygon points="880.0,46.0 902.8,62.6 894.1,89.4 865.9,89.4 857.2,62.6" fill="#6F8EF0"/>
+<polygon points="880.0,286.0 857.2,269.4 865.9,242.6 894.1,242.6 902.8,269.4" fill="#6F8EF0"/>
+<circle cx="425.0" cy="70" r="14" fill="#9FD8DB"/>
+<circle cx="555.0" cy="70" r="14" fill="#9FD8DB"/>
+<circle cx="685.0" cy="70" r="14" fill="#9FD8DB"/>
+<circle cx="815.0" cy="70" r="14" fill="#9FD8DB"/>
+<circle cx="555.0" cy="262" r="14" fill="#9FD8DB"/>
+<circle cx="685.0" cy="262" r="14" fill="#9FD8DB"/>
+<circle cx="815.0" cy="262" r="14" fill="#9FD8DB"/>
+<circle cx="945.0" cy="262" r="14" fill="#9FD8DB"/>
+<g font-size="34" fill="#C9D1E6" font-weight="700">
+<text x="405" y="81.9" text-anchor="end">5'</text>
+<text x="910" y="81.9">3'</text>
+<text x="460" y="273.9" text-anchor="end">3'</text>
+<text x="965" y="273.9">5'</text>
+</g>
+</g>
+</svg>
+  <div class="wrap">
+    <p class="series">Dashed lines: hydrogen bonds. Left, between water molecules. Right, between the bases of DNA.</p>
+    <h1>Biology HL: water and nucleic acids</h1>
+    <p>Study guide for Thursday 5 November 2026. On the left of the picture, five water molecules cling together by hydrogen bonds: that one fact explains cohesion, adhesion, water as a solvent and its thermal properties (A1.1). On the right, a short piece of DNA: two antiparallel strands, with the same kind of weak bond holding each base pair together (A1.2). By the end of today you should be able to draw both from memory.</p>
+    <div class="meta"><span>About 2 hours</span><span>A1.1 and A1.2, SL and HL, HL-only parts marked</span><span>Source: your teacher's Term 1 slide deck and the class past-paper packs</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <a href="../index.html" style="font-weight:700;color:var(--indigo)">All days</a><a href="#plan">Plan</a><a href="#a11">A1.1 Water</a><a href="#a12">A1.2 Nucleic acids</a><a href="#a12hl">A1.2 HL</a><a href="#quiz">Quiz</a><a href="#end">Finish</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section id="plan">
+  <h2 style="margin-top:28px">How to spend the two hours</h2>
+  <div class="note"><b>Please note.</b> The syllabus wording on this page has not yet been checked against the official IB Biology guide. There is no copy of the guide in your IB folder, so the topic list comes from your teacher's slide deck and the past-paper packs. Ask your teacher for the official guide; this page will be checked against it then.</div>
+  <p style="margin:10px 0 0">Four blocks of 30 minutes. Do them in order and tick each step off on paper. The links open each file; the section links jump down this page. The packs say "HL" on the cover but most questions are SL content, which you need too.</p>
+  <div class="plan">
+    <div>
+      <div class="bh"><b>Block 1 · 30 min</b><span>A1.1 Water: polarity, hydrogen bonds, cohesion, adhesion</span></div>
+      <ol>
+        <li>Open the <a href="https://docs.google.com/presentation/d/1Cdkg3Tn3riqP_CQF1-yW3Er7AhgaN0ncpLhBf9ZikrQ/edit#slide=id.g3f6e5233a89_0_53">teacher deck at slide 42</a> and flick through slides 42 to 77 (A1.1.1 to A1.1.4). Just look at the pictures; do not take notes. <span class="t">(5 min)</span></li>
+        <li>Read <a href="#a11">A1.1.1 to A1.1.4</a> below. Cover the steps of each worked example and try it first. <span class="t">(8 min)</span></li>
+        <li>Do questions 1 to 3 of <a href="#check11">Self-check A1.1</a> on paper, then open it. <span class="t">(2 min)</span></li>
+        <li>Open the <a href="https://drive.google.com/file/d/1L6pumGhcvM_h5sfaDKnb8KMpcqwBLkZN/view">A1.1 Water HL pack</a> and do <b>questions 3(a), 5(c), 10(a), 10(b), 11 and 13</b> (11 marks) on paper. <span class="t">(10 min)</span></li>
+        <li>Mark with the <a href="https://drive.google.com/file/d/1QX2NpZVRHUTECrAqm_qwQI6qhFY0qYjO/view">A1.1 HL mark scheme</a>. Each [1 mark] line is one marking point: you get the mark only if your answer says that idea. For the multiple-choice questions, also read why each wrong option is wrong. <span class="t">(4 min)</span></li>
+        <li>Write each lost mark into the Error log tab of the study sheet: what you wrote, what the mark scheme wanted. <span class="t">(1 min)</span></li>
+      </ol>
+    </div>
+    <div>
+      <div class="bh"><b>Block 2 · 30 min</b><span>A1.1 Solvent, aquatic habitats, thermal properties; HL origin of water</span></div>
+      <ol>
+        <li>Flick through the <a href="https://docs.google.com/presentation/d/1Cdkg3Tn3riqP_CQF1-yW3Er7AhgaN0ncpLhBf9ZikrQ/edit#slide=id.g3f9a8a0c14d_0_49">deck slides 78 to 138</a> (A1.1.5 to A1.1.8, HL from slide 123). <span class="t">(4 min)</span></li>
+        <li>Read <a href="#a115">A1.1.5 to A1.1.8</a> below, including the <span class="hl" style="margin-left:0">HL</span> part. <span class="t">(9 min)</span></li>
+        <li>Do questions 4 to 6 of <a href="#check11">Self-check A1.1</a>, then open it. <span class="t">(2 min)</span></li>
+        <li>In the <a href="https://drive.google.com/file/d/1L6pumGhcvM_h5sfaDKnb8KMpcqwBLkZN/view">A1.1 Water HL pack</a> do <b>questions 3(b), 3(c), 9(d), 12(a)</b> and the multiple-choice <b>questions 14, 17, 19 and 23</b> (16 marks). For 12(a), which is worth 7 marks, plan first: list every property, then add one effect on living things to each. <span class="t">(12 min)</span></li>
+        <li>Mark with the <a href="https://drive.google.com/file/d/1QX2NpZVRHUTECrAqm_qwQI6qhFY0qYjO/view">A1.1 HL mark scheme</a> and log what you lost. For 12(a), count one mark per property and one per effect, up to 7. <span class="t">(3 min)</span></li>
+      </ol>
+    </div>
+    <div>
+      <div class="bh"><b>Block 3 · 30 min</b><span>A1.2 Nucleotides, DNA and RNA</span></div>
+      <ol>
+        <li>Flick through the <a href="https://docs.google.com/presentation/d/1Cdkg3Tn3riqP_CQF1-yW3Er7AhgaN0ncpLhBf9ZikrQ/edit#slide=id.g3f767853bfa_0_40">deck slides 140 to 189</a> (A1.2.1 to A1.2.8). <span class="t">(4 min)</span></li>
+        <li>Read the <a href="#a12">A1.2 section</a> below. Draw the nucleotide and the four base pairs from memory once, then compare with the figures. <span class="t">(9 min)</span></li>
+        <li>Do <a href="#check12">Self-check A1.2</a>, then open it. <span class="t">(2 min)</span></li>
+        <li>Open the <a href="https://drive.google.com/file/d/17yCCOngWAHyTNYE_aocMLN2cJdTBw9tq/view">A1.2 Nucleic acids HL pack</a> and do <b>questions 1, 2(a), 2(b), 4(a), 4(b), 6(a), 6(b), 7 and 8</b> (19 marks). Use the shapes from this page for the drawings: circle, pentagon, rectangle. <span class="t">(12 min)</span></li>
+        <li>Mark with the <a href="https://drive.google.com/file/d/1rsQ9FGiGVwlTwIHalzcFYupsNwK4Swgm/view">A1.2 HL mark scheme</a> and log what you lost. For 4(a) the mark scheme also shows the working step by step: compare it with yours. In 6(a), base names written as letters only lose the mark. <span class="t">(3 min)</span></li>
+      </ol>
+    </div>
+    <div>
+      <div class="bh"><b>Block 4 · 30 min</b><span>A1.2 HL extras, then the quiz</span></div>
+      <ol>
+        <li>Flick through the <a href="https://docs.google.com/presentation/d/1Cdkg3Tn3riqP_CQF1-yW3Er7AhgaN0ncpLhBf9ZikrQ/edit#slide=id.g3fad06ed1bc_0_133">deck slides 190 to 240</a> (A1.2.9 to A1.2.15). <span class="t">(3 min)</span></li>
+        <li>Read the <a href="#a12hl">A1.2 HL section</a>. <span class="t">(7 min)</span></li>
+        <li>Do <a href="#check12hl">Self-check A1.2 HL</a>, then open it. <span class="t">(2 min)</span></li>
+        <li>Do <b>questions 2(d), 9(a) to 9(c) and 10</b> of the <a href="https://drive.google.com/file/d/17yCCOngWAHyTNYE_aocMLN2cJdTBw9tq/view">A1.2 HL pack</a>, then <b>questions 10(b) and 11</b> of the <a href="https://drive.google.com/file/d/1fedxvPx0fBz3BCTjFytXPHYRMI-Mci_R/view">A1.2 SL pack</a> (11 marks). <span class="t">(7 min)</span></li>
+        <li>Mark them with the <a href="https://drive.google.com/file/d/1rsQ9FGiGVwlTwIHalzcFYupsNwK4Swgm/view">HL mark scheme</a> and the <a href="https://drive.google.com/file/d/153IzzdDDSJ7YAlPJsSc_35krFoZ8Sua-/view">SL mark scheme</a>. For SL 10(b) the mark scheme shows the working step by step: compare it with yours. <span class="t">(2 min)</span></li>
+        <li>Do the <a href="#quiz">quiz</a> at the bottom of the page. Decide on your answer before you click. <span class="t">(8 min)</span></li>
+        <li>Write every mistake from today into the Error log tab. <span class="t">(1 min)</span></li>
+      </ol>
+    </div>
+  </div>
+  <p><b>Files for today in the IB folder</b></p>
+  <ul class="files">
+    <li><a href="https://docs.google.com/presentation/d/1Cdkg3Tn3riqP_CQF1-yW3Er7AhgaN0ncpLhBf9ZikrQ/edit">Term 1 teacher slide deck</a></li>
+    <li><a href="https://drive.google.com/file/d/1L6pumGhcvM_h5sfaDKnb8KMpcqwBLkZN/view">A1.1 Water HL pack</a></li>
+    <li><a href="https://drive.google.com/file/d/1QX2NpZVRHUTECrAqm_qwQI6qhFY0qYjO/view">A1.1 HL mark scheme</a></li>
+    <li><a href="https://drive.google.com/file/d/1RlgdU_DGXzN1Uyze8znbPG84be3BiT8I/view">A1.1 Water SL pack</a></li>
+    <li><a href="https://drive.google.com/file/d/1jXrJjOyLwCZFfL1W1-he9QOs8sN-T_82/view">A1.1 SL mark scheme</a></li>
+    <li><a href="https://drive.google.com/file/d/17yCCOngWAHyTNYE_aocMLN2cJdTBw9tq/view">A1.2 Nucleic acids HL pack</a></li>
+    <li><a href="https://drive.google.com/file/d/1rsQ9FGiGVwlTwIHalzcFYupsNwK4Swgm/view">A1.2 HL mark scheme</a></li>
+    <li><a href="https://drive.google.com/file/d/1fedxvPx0fBz3BCTjFytXPHYRMI-Mci_R/view">A1.2 Nucleic acids SL pack</a></li>
+    <li><a href="https://drive.google.com/file/d/153IzzdDDSJ7YAlPJsSc_35krFoZ8Sua-/view">A1.2 SL mark scheme</a></li>
+  </ul>
+  <p style="font-size:.95rem;color:var(--ink-soft)">The <a href="https://drive.google.com/file/d/1RlgdU_DGXzN1Uyze8znbPG84be3BiT8I/view">A1.1 SL pack</a> has no questions of its own: all 20 are also in the HL pack (with different numbers), so you do not need it today. Do not open the Grade 11 combined test or its mark schemes: you will sit that paper as a timed mock on Saturday 21 November.</p>
+  <div class="legend" aria-label="Legend for the markers">
+    <span><span class="learn" style="margin-left:0">Learn</span> a fact or definition to know by heart. There is no Biology data booklet in your folder, so nothing in Biology is "given": learn it all.</span>
+    <span><span class="hl" style="margin-left:0">HL</span> Higher Level only</span>
+  </div>
+  <h4>Where the numbers come from</h4>
+  <p style="font-size:.95rem">The statement numbers (A1.1.1, A1.2.11 and so on) are the IB numbers as listed on your teacher's topic slides. A1.1 has statements 1 to 6 for everyone and 7 to 8 for HL only; A1.2 has 1 to 10 for everyone and 11 to 15 for HL only. The page numbers on those slides (for example "Pages 2-15") are textbook pages.</p>
+  <p style="font-size:.95rem;color:var(--ink-soft)">Exam format, from the teacher deck: Paper 1A is multiple choice (40 questions, 40 marks at HL); Paper 1B is four data-based questions (30 marks at HL); Paper 2 is data-based, short-answer and extended-response questions (70 marks at HL, 2 hours 30 minutes). The quiz at the end of this page is in Paper 1A style.</p>
+</section>
+
+<!-- =============================== A1.1 =============================== -->
+<section class="topic" id="a11">
+  <div class="kicker">A1.1 · SL and HL</div>
+  <h2>Water</h2>
+  <p class="guiding">One small, bent, polar molecule. Almost every property that makes water the medium of life comes from the hydrogen bonds between its molecules.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="w1"><span>Explain why water is the medium for life: the first cells arose in water, cytoplasm is mostly water, and metabolism happens in solution (A1.1.1)</span></label>
+    <label><input type="checkbox" data-k="w2"><span>Explain how the polar covalent bonds inside a water molecule lead to hydrogen bonds between molecules, and draw them with δ+ and δ− (A1.1.2)</span></label>
+    <label><input type="checkbox" data-k="w3"><span>Explain cohesion and its consequences: transport of water under tension in xylem, and surface tension that supports small animals (A1.1.3)</span></label>
+    <label><input type="checkbox" data-k="w4"><span>Explain adhesion to polar or charged materials and its consequences: capillary action in xylem, plant cell walls and soil (A1.1.4)</span></label>
+    <label><input type="checkbox" data-k="w5"><span>Use the terms hydrophilic, hydrophobic and amphipathic, and link water's solvent properties to metabolism and to transport in plants and animals (A1.1.5)</span></label>
+    <label><input type="checkbox" data-k="w6"><span>Compare buoyancy, viscosity, thermal conductivity and specific heat capacity of water and air, and explain the consequences for animals in aquatic habitats (A1.1.6)</span></label>
+    <label><input type="checkbox" data-k="w7"><span>Outline the hypothesis that Earth's water came from outside the planet, and why Earth kept it (A1.1.7)<span class="hl">HL</span></span></label>
+    <label><input type="checkbox" data-k="w8"><span>Explain why the search for life elsewhere starts with the search for water, using the idea of the Goldilocks zone (A1.1.8)<span class="hl">HL</span></span></label>
+  </div>
+
+  <h3>A1.1.1 Water as the medium for life</h3>
+  <p>Life is thought to have begun in water, and every cell still works in it. The fluid part of the cytoplasm, the <b>cytosol</b>, is mostly water, and the chemical reactions of metabolism happen between molecules dissolved in it. Water is also a reactant (in hydrolysis and in photosynthesis) and a product (in condensation reactions and in respiration). Even <b>xerophytic</b> plants, which are adapted to very dry places, keep water inside their cells: they are adapted to save it, not to live without it.</p>
+
+  <h3>A1.1.2 Polar bonds and hydrogen bonds</h3>
+  <p>Inside a water molecule, oxygen shares a pair of electrons with each hydrogen atom: two <b>covalent bonds</b>. Oxygen attracts shared electrons much more strongly than hydrogen does (it is more electronegative), so the electrons spend more time near the oxygen. The oxygen end gets a small negative charge, <b>δ−</b>, and each hydrogen a small positive charge, <b>δ+</b>. These are <b>polar covalent bonds</b>. Because the molecule is bent (about 104.5°), the charges do not cancel out: the whole molecule is <b>polar</b>.</p>
+  <p>A <b>hydrogen bond</b> is the attraction between a δ+ hydrogen of one molecule and the δ− oxygen (or nitrogen) of another molecule.<span class="learn">Learn</span> One hydrogen bond is weak, roughly a twentieth of the strength of a covalent bond, and hydrogen bonds keep breaking and re-forming in liquid water. But there are so many that together they hold water together strongly.</p>
+  <figure>
+    <svg viewBox="70 30 570 280" role="img" aria-label="Two water molecules. Each has an oxygen atom bonded to two hydrogen atoms by polar covalent bonds. Oxygen carries a partial negative charge and the hydrogens partial positive charges. A dashed hydrogen bond links a hydrogen of the left molecule to the oxygen of the right molecule.">
+<rect width="700" height="320" fill="#fff"/>
+<line x1="248.0" y1="190.0" x2="295.0" y2="190.0" stroke="#2F47A6" stroke-width="4" stroke-dasharray="6 5"/>
+<line x1="170" y1="190" x2="228.0" y2="190.0" stroke="#1E2A33" stroke-width="6"/>
+<line x1="170" y1="190" x2="155.5" y2="246.2" stroke="#1E2A33" stroke-width="6"/>
+<circle cx="228.0" cy="190.0" r="17" fill="#FFFFFF"/>
+<circle cx="155.5" cy="246.2" r="17" fill="#FFFFFF"/>
+<circle cx="170" cy="190" r="30" fill="#E5534B"/>
+<line x1="328.0" y1="190" x2="363.5" y2="144.1" stroke="#1E2A33" stroke-width="6"/>
+<line x1="328.0" y1="190" x2="363.5" y2="235.9" stroke="#1E2A33" stroke-width="6"/>
+<circle cx="363.5" cy="144.1" r="17" fill="#FFFFFF"/>
+<circle cx="363.5" cy="235.9" r="17" fill="#FFFFFF"/>
+<circle cx="328.0" cy="190" r="30" fill="#E5534B"/>
+<text x="170" y="199" text-anchor="middle" font-size="26" font-weight="700" fill="#fff">O</text>
+<circle cx="228.0" cy="190.0" r="17" fill="none" stroke="#1E2A33" stroke-width="1.5"/>
+<text x="228.0" y="198.0" text-anchor="middle" font-size="22" font-weight="700" fill="#1E2A33">H</text>
+<circle cx="155.5" cy="246.2" r="17" fill="none" stroke="#1E2A33" stroke-width="1.5"/>
+<text x="155.5" y="254.2" text-anchor="middle" font-size="22" font-weight="700" fill="#1E2A33">H</text>
+<text x="328.0" y="199" text-anchor="middle" font-size="26" font-weight="700" fill="#fff">O</text>
+<circle cx="363.5" cy="144.1" r="17" fill="none" stroke="#1E2A33" stroke-width="1.5"/>
+<text x="363.5" y="152.1" text-anchor="middle" font-size="22" font-weight="700" fill="#1E2A33">H</text>
+<circle cx="363.5" cy="235.9" r="17" fill="none" stroke="#1E2A33" stroke-width="1.5"/>
+<text x="363.5" y="243.9" text-anchor="middle" font-size="22" font-weight="700" fill="#1E2A33">H</text>
+<g font-size="28" fill="#B23A3A" font-family="Georgia,serif">
+<text x="88" y="200">δ−</text>
+<text x="208.0" y="160.0">δ+</text>
+<text x="93.5" y="262.2">δ+</text>
+</g>
+<g stroke="#4A5862" stroke-width="2" fill="none">
+<path d="M353.8,161.1 L450,70"/>
+<path d="M278.0,198 L278.0,285 L450,285"/>
+</g>
+<g font-size="24" fill="#1E2A33" font-family="Arial,Helvetica,sans-serif">
+<text x="456" y="62">covalent bond</text>
+<text x="456" y="293">hydrogen bond</text>
+</g>
+</svg>
+    <figcaption>Two water molecules. The solid lines are polar covalent bonds inside each molecule; the dashed line is a hydrogen bond between the two molecules. Red = oxygen, white = hydrogen. Always draw hydrogen bonds as dashed or dotted lines, from an H to an O of a different molecule.</figcaption>
+  </figure>
+  <div class="worked"><b>Worked example: a 3-mark explanation.</b> "Explain how hydrogen bonds form between water molecules." A model answer, one marking point per step:
+    <ol>
+      <li>Oxygen is more electronegative than hydrogen, so the electrons in each O-H covalent bond are pulled towards the oxygen.</li>
+      <li>This makes the oxygen slightly negative (δ−) and the hydrogens slightly positive (δ+): the bonds are polar, and because the molecule is bent the whole molecule is polar.</li>
+      <li>The δ+ hydrogen of one water molecule is attracted to the δ− oxygen of a neighbouring molecule: this attraction is a hydrogen bond.</li>
+    </ol>
+    Check: three separate ideas (cause, charges, attraction between molecules), each in its own sentence.</div>
+  <div class="tip"><b>Exam trap.</b> Hydrogen bonds are <b>between</b> molecules. The O-H bonds <b>inside</b> a water molecule are covalent. "Water has hydrogen bonds between its hydrogen and oxygen atoms" loses the mark unless you add "of neighbouring molecules". In drawings, the δ+ goes on H and the δ− on O, and the dashed line never joins H to H or O to O.</div>
+
+  <h3>A1.1.3 Cohesion</h3>
+  <p><b>Cohesion</b> is water molecules sticking to each other, because of hydrogen bonds between them.<span class="learn">Learn</span> Two consequences for living things:</p>
+  <ul>
+    <li><b>Transport under tension in xylem.</b> Water evaporates from leaves (transpiration) and this pulls on the water in the xylem. Because the molecules cohere, the whole column is pulled up as one, even in a tree tens of metres tall, without breaking. The water is under tension (negative pressure), which is why xylem vessels need strong walls that do not collapse.</li>
+    <li><b>Surface tension.</b> At the surface, water molecules are pulled inwards and sideways by hydrogen bonds, so the surface behaves like a thin elastic skin. Small animals such as pond skaters (water striders) can stand on it without sinking.</li>
+  </ul>
+
+  <h3>A1.1.4 Adhesion</h3>
+  <p><b>Adhesion</b> is water molecules sticking to other substances that are polar or charged, again by hydrogen bonds or attraction to charges.<span class="learn">Learn</span> Cellulose in plant cell walls, the lignified walls of xylem, glass and the surfaces of soil particles are all polar, so water adheres to them. Water is not attracted to non-polar, waxy surfaces.</p>
+  <ul>
+    <li><b>Capillary action.</b> Adhesion pulls water up and along narrow polar spaces; cohesion drags the molecules behind along with it. This moves water through the tiny spaces in plant cell walls, helps water rise in narrow xylem vessels, and holds water in the small spaces between soil particles, where roots can reach it.</li>
+    <li>The curved surface of water in a glass tube (a meniscus) is caused by adhesion to the glass.</li>
+  </ul>
+  <div class="worked"><b>Worked example: cohesion or adhesion?</b> "Rain forms round drops on a waxy leaf, but spreads out and soaks into a paper towel. Explain."
+    <ol>
+      <li>The leaf cuticle is wax, which is non-polar. Water cannot form hydrogen bonds with it, so there is almost no adhesion.</li>
+      <li>Cohesion (hydrogen bonds between the water molecules) then pulls the water into the shape with the smallest surface: a round drop.</li>
+      <li>A paper towel is made of cellulose, which has many polar -OH groups. Water forms hydrogen bonds with it: strong adhesion.</li>
+      <li>Adhesion pulls the water along the narrow gaps between the cellulose fibres, and cohesion pulls more water behind it: capillary action soaks the towel.</li>
+    </ol></div>
+  <div class="tip"><b>Exam trap.</b> Cohesion is water to <b>water</b>; adhesion is water to <b>something else</b>. A meniscus, or water climbing a wall, is adhesion; mark schemes do not accept "cohesion" or "surface tension" for it. If asked about a column of water moving up the xylem, give both: cohesion keeps the column unbroken, adhesion to the walls helps it rise and stops it falling back.</div>
+
+  <h3 id="a115">A1.1.5 Water as a solvent</h3>
+  <p>Because water molecules are polar, they are attracted to other polar molecules and to ions. When salt dissolves, the δ− oxygen ends of water molecules surround each positive Na<sup>+</sup> ion and the δ+ hydrogen ends surround each negative Cl<sup>−</sup> ion, so the ions separate and spread through the water. Polar molecules such as glucose dissolve because they form hydrogen bonds with water.</p>
+  <ul>
+    <li><b>Hydrophilic</b> ("water-loving"): attracted to water. Ions and polar molecules: salts, glucose, amino acids.<span class="learn">Learn</span></li>
+    <li><b>Hydrophobic</b> ("water-hating"): not attracted to water because they are non-polar. Fats and oils, waxes; they cluster together in water instead of dissolving.<span class="learn">Learn</span></li>
+    <li><b>Amphipathic</b>: one part hydrophilic and another part hydrophobic in the same molecule. Phospholipids: hydrophilic phosphate head, hydrophobic fatty acid tails. This is why they form membranes.<span class="learn">Learn</span></li>
+  </ul>
+  <p><b>Medium for metabolism.</b> Dissolved molecules can move around and collide, so reactions can happen; enzymes act on dissolved substrates in the cytoplasm. <b>Medium for transport.</b> Blood plasma carries dissolved glucose, amino acids, ions and urea around the body. Xylem sap carries dissolved mineral ions up from the roots; phloem sap carries dissolved sucrose.</p>
+  <div class="worked"><b>Worked example: predict how each substance travels in blood.</b>
+    <div class="tablewrap"><table>
+      <tr><th>Substance</th><th>Polar or charged?</th><th>How it is carried in blood</th></tr>
+      <tr><td>Sodium chloride</td><td>ions: hydrophilic</td><td>dissolved in plasma</td></tr>
+      <tr><td>Glucose</td><td>polar (many -OH groups): hydrophilic</td><td>dissolved in plasma</td></tr>
+      <tr><td>Oxygen</td><td>non-polar: only slightly soluble</td><td>a little dissolved; nearly all bound to haemoglobin in red blood cells</td></tr>
+      <tr><td>Fats (triglycerides)</td><td>non-polar: hydrophobic</td><td>packed inside lipoprotein particles with a hydrophilic outer layer</td></tr>
+      <tr><td>Cholesterol</td><td>almost all non-polar (one small -OH): hydrophobic</td><td>inside lipoproteins, like fats</td></tr>
+    </table></div>
+    Reasoning steps: (1) is it charged or polar? (2) if yes, water surrounds it and it dissolves; (3) if not, the body needs a carrier: a protein (haemoglobin) or a particle with a water-loving surface (lipoprotein).</div>
+
+  <h3>A1.1.6 Physical properties of water and life in aquatic habitats</h3>
+  <p>Animals that live in water face a very different physical world from animals in air. Four properties to compare:</p>
+  <div class="tablewrap"><table>
+    <tr><th>Property (meaning)</th><th>Water compared with air</th><th>Consequence for aquatic animals</th></tr>
+    <tr><td><b>Buoyancy</b>: upward push of a fluid on an object in it</td><td>water is about 800 times denser, so it pushes up far more</td><td>the body is supported, so less energy is used to stay up and large bodies are possible; diving animals must work against it</td></tr>
+    <tr><td><b>Viscosity</b>: how much a fluid resists flowing</td><td>water is more than 50 times more viscous</td><td>much more drag when moving: streamlined bodies save energy</td></tr>
+    <tr><td><b>Thermal conductivity</b>: how fast heat passes through</td><td>water conducts heat about 24 times faster</td><td>body heat is lost quickly to cold water: insulation (blubber, air trapped in fur or feathers) is needed</td></tr>
+    <tr><td><b>Specific heat capacity</b>: energy needed to raise 1 kg by 1 °C</td><td>about 4 times more per kilogram, and thousands of times more per litre</td><td>lakes and seas change temperature slowly, so aquatic habitats are thermally stable</td></tr>
+  </table></div>
+  <p>The specific heat capacity of water is about 4&nbsp;200 J kg<sup>−1</sup> °C<sup>−1</sup> (4.2 J per gram). It is high because heat energy must first break hydrogen bonds before the molecules can move faster; only then does the temperature rise.</p>
+  <p>Two animals often used to show this:</p>
+  <ul>
+    <li><b>Black-throated loon</b> (<i>Gavia arctica</i>), a diving bird that lives both in air and under water. It flies in air, but under water it swims with feet set far back on a streamlined body, which reduces drag. It has heavier, less air-filled bones than most flying birds and can press air out of its feathers, so it is less buoyant and can dive.</li>
+    <li><b>Ringed seal</b> (<i>Pusa hispida</i>), an Arctic mammal that lives in icy water. A thick layer of blubber (fat conducts heat poorly) insulates it against the high thermal conductivity of cold water, and also adds buoyancy. Its streamlined body reduces drag. It must surface to breathe air, using breathing holes it keeps open in the ice.</li>
+  </ul>
+  <h4>Also in your packs: two more thermal properties</h4>
+  <ul>
+    <li><b>High latent heat of vaporisation.</b> Evaporating water takes a lot of energy (about 2.4 kJ per gram at body temperature), because every molecule that escapes must break its hydrogen bonds. So evaporation of sweat, of water during panting, or of water from leaves in transpiration removes a lot of heat: it cools.<span class="learn">Learn</span></li>
+    <li><b>Ice floats.</b> In ice, hydrogen bonds hold the molecules in an open lattice, so ice is less dense than liquid water. Ice forms on top of ponds and insulates the water below, so aquatic organisms survive winter.</li>
+  </ul>
+  <div class="worked"><b>Worked example: why does a seal need blubber?</b> "A ringed seal and a land mammal of the same size both have a body temperature of 37 °C. The seal swims in water at 2 °C, the land mammal stands in air at 2 °C. Explain why the seal needs much more insulation."
+    <ol>
+      <li>Both lose heat from the body surface to the colder surroundings, because there is a 35 °C temperature difference.</li>
+      <li>Water has a much higher thermal conductivity than air (about 24 times), so heat passes from the skin into water far faster.</li>
+      <li>Water also has a high specific heat capacity, so the water next to the skin absorbs a lot of heat without warming up much; the temperature difference stays large.</li>
+      <li>So without insulation the seal would lose heat many times faster than the land mammal. Blubber, a thick layer of fat, conducts heat poorly and slows this loss.</li>
+    </ol></div>
+
+  <h3>A1.1.7 Where Earth's water came from <span class="hl">HL</span></h3>
+  <p>Earth formed about 4.5 billion years ago as a very hot ball of rock. A leading hypothesis is that much of the water now on Earth was brought later from outside the planet (it is <b>extraplanetary</b>), mainly by <b>asteroids</b> (and possibly comets) that collided with Earth. Evidence: water locked in certain asteroids (carbonaceous chondrite meteorites) has a ratio of heavy hydrogen (deuterium) to ordinary hydrogen similar to that of Earth's oceans.</p>
+  <p>Why Earth <b>kept</b> its water:</p>
+  <ul>
+    <li><b>Gravity</b>: Earth is massive enough to hold on to an atmosphere, including water vapour, so the water does not escape into space.</li>
+    <li><b>Temperature</b>: Earth's distance from the Sun keeps most of the surface between 0 °C and 100 °C, so water vapour condenses and stays liquid as oceans.</li>
+  </ul>
+
+  <h3>A1.1.8 Water and the search for life elsewhere <span class="hl">HL</span></h3>
+  <p>All life we know needs liquid water, so the search for life on other planets and moons starts by looking for water. The <b>Goldilocks zone</b> (habitable zone) is the range of distances from a star where a planet's surface is neither too hot (water boils away) nor too cold (water freezes), so liquid water can exist.<span class="learn">Learn</span> Earth is inside the Sun's Goldilocks zone. Places studied for possible life include Mars (polar ice and signs that liquid water flowed in the past) and moons such as Europa and Enceladus, which are outside the zone but have liquid oceans under their ice because they are heated from inside.</p>
+  <div class="worked"><b>Worked example (HL).</b> "Mars has water ice at its poles. Suggest why there is no liquid water on its surface today."
+    <ol>
+      <li>Mars is farther from the Sun than Earth: its average surface temperature is about −60 °C, so water freezes.</li>
+      <li>Mars has a much smaller mass and weaker gravity than Earth, and has lost most of its atmosphere; surface pressure is less than 1% of Earth's.</li>
+      <li>At such low pressure, any liquid water warmed above freezing would quickly evaporate. So water exists as ice or vapour, not as a liquid.</li>
+      <li>Link to A1.1.8: no surface liquid water makes surface life unlikely, which is why searches look for water underground or in the past.</li>
+    </ol></div>
+
+  <details id="check11"><summary>Self-check A1.1 (answer on paper, then open)</summary>
+    <ol>
+      <li>Why is the oxygen atom in a water molecule slightly negative?</li>
+      <li>Draw three water molecules joined by two hydrogen bonds, with δ+ and δ− on one of them.</li>
+      <li>Water moves through the cellulose walls of leaf cells even when this is upwards. Which property of water is mainly responsible, and why does cellulose allow it?</li>
+      <li>Is a phospholipid hydrophilic, hydrophobic or amphipathic? Explain in one sentence.</li>
+      <li>Why does it cost a loon energy to dive, but cost a seal almost no energy to float at the surface?</li>
+      <li><span class="hl" style="margin-left:0">HL</span> Give two reasons why Earth kept liquid water, and define the Goldilocks zone.</li>
+    </ol>
+    <p><b>Answers.</b> 1: oxygen is more electronegative than hydrogen, so it pulls the shared electrons of the O-H bonds towards itself. 2: compare with the figure above: each dashed line must go from an H of one molecule to the O of another; δ− on O, δ+ on each H. 3: adhesion; cellulose has many polar -OH groups, so water forms hydrogen bonds with it (with cohesion pulling the next molecules along: capillary action). 4: amphipathic: it has a hydrophilic phosphate head and hydrophobic fatty acid tails. 5: water is dense and gives a large buoyant force; a seal with blubber has an overall density close to water so it floats easily, while a diving loon must push against that upward force (it reduces buoyancy with dense bones and by pressing air out of its feathers). 6: Earth's gravity holds its atmosphere and water vapour; its distance from the Sun keeps temperatures mostly between 0 and 100 °C so water condenses and stays liquid. The Goldilocks zone is the range of distances from a star where liquid water can exist on a planet's surface.</p>
+  </details>
+</section>
+
+<!-- =============================== A1.2 =============================== -->
+<section class="topic" id="a12">
+  <div class="kicker">A1.2 · SL and HL</div>
+  <h2>Nucleic acids</h2>
+  <p class="guiding">Four building blocks, one simple pairing rule, and room for limitless information.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="n1"><span>State that DNA is the genetic material of all living organisms, and that some viruses use RNA instead (A1.2.1)</span></label>
+    <label><input type="checkbox" data-k="n2"><span>Name and draw the three parts of a nucleotide with simple shapes, and number the carbons of the sugar (A1.2.2)</span></label>
+    <label><input type="checkbox" data-k="n3"><span>Describe how covalent bonds between sugar and phosphate form the sugar-phosphate backbone of DNA and RNA (A1.2.3)</span></label>
+    <label><input type="checkbox" data-k="n4"><span>Name the bases in DNA and in RNA and explain that their sequence is the basis of a code (A1.2.4)</span></label>
+    <label><input type="checkbox" data-k="n5"><span>Explain that RNA is a polymer made by condensation of nucleotide monomers, and draw a short strand (A1.2.5)</span></label>
+    <label><input type="checkbox" data-k="n6"><span>Describe and draw DNA as a double helix of two antiparallel strands linked by hydrogen bonds between complementary base pairs, A with T and G with C (A1.2.6)</span></label>
+    <label><input type="checkbox" data-k="n7"><span>Compare DNA and RNA: number of strands, sugar and bases (A1.2.7)</span></label>
+    <label><input type="checkbox" data-k="n8"><span>Explain how complementary base pairing allows genetic information to be copied (replication) and used (expression) (A1.2.8)</span></label>
+    <label><input type="checkbox" data-k="n9"><span>Calculate the number of possible base sequences (4<sup>n</sup>) and explain the limitless capacity of DNA to store information (A1.2.9)</span></label>
+    <label><input type="checkbox" data-k="n10"><span>Explain why the conservation of the genetic code across all life is evidence of universal common ancestry (A1.2.10)</span></label>
+  </div>
+
+  <h3>A1.2.1 DNA is the genetic material</h3>
+  <p>All living organisms, from bacteria to humans, store their genetic information as <b>DNA</b> (deoxyribonucleic acid). Some <b>viruses</b> use <b>RNA</b> (ribonucleic acid) as their genetic material instead, for example influenza viruses, HIV and the coronavirus that causes COVID-19. Viruses are not usually counted as living organisms, because they cannot carry out metabolism or reproduce outside a host cell; that is why the statement says "all living organisms".</p>
+
+  <h3>A1.2.2 The parts of a nucleotide</h3>
+  <p>DNA and RNA are <b>polynucleotides</b>: polymers ("poly" = many) made of monomers called <b>nucleotides</b>. Each nucleotide has three parts:<span class="learn">Learn</span></p>
+  <ol>
+    <li>a <b>phosphate</b> group (draw a circle),</li>
+    <li>a <b>pentose</b> sugar, with 5 carbon atoms (draw a pentagon): <b>deoxyribose</b> in DNA, <b>ribose</b> in RNA,</li>
+    <li>a nitrogen-containing <b>base</b> (draw a rectangle).</li>
+  </ol>
+  <figure>
+    <svg viewBox="0 0 640 340" role="img" aria-label="A DNA nucleotide drawn with simple shapes: a circle for the phosphate, linked to carbon 5 prime of a pentagon-shaped deoxyribose sugar; the base, a rectangle, is attached to carbon 1 prime; carbon 3 prime carries an OH group and carbon 2 prime carries only a hydrogen">
+<rect width="640" height="340" fill="#fff"/>
+<g stroke="#1E2A33" stroke-width="4" fill="none">
+<line x1="237.2" y1="159.6" x2="199.2" y2="97.6"/>
+<line x1="199.2" y1="97.6" x2="95" y2="92"/>
+<line x1="362.8" y1="159.6" x2="450" y2="159.6"/>
+<line x1="261.2" y1="233.4" x2="261.2" y2="277.4"/>
+<line x1="338.8" y1="233.4" x2="338.8" y2="273.4"/>
+</g>
+<polygon points="300.0,114.0 362.8,159.6 338.8,233.4 261.2,233.4 237.2,159.6" fill="#6F8EF0" stroke="#1E2A33" stroke-width="2"/>
+<circle cx="95" cy="92" r="44" fill="#4BA3A8" stroke="#1E2A33" stroke-width="2"/>
+<rect x="450" y="123.6" width="170" height="72" rx="6" fill="#E39A5E" stroke="#1E2A33" stroke-width="2"/>
+<circle cx="300.0" cy="114.0" r="17" fill="#fff" stroke="#1E2A33" stroke-width="2"/>
+<g font-family="Arial,Helvetica,sans-serif" fill="#1E2A33">
+<text x="300.0" y="122.0" text-anchor="middle" font-size="22" font-weight="700">O</text>
+<text x="95" y="101" text-anchor="middle" font-size="26" font-weight="700" fill="#fff">P</text>
+<text x="95" y="170" text-anchor="middle" font-size="24">phosphate</text>
+<text x="300" y="196" text-anchor="middle" font-size="24" fill="#fff" font-weight="700">sugar</text>
+<text x="535" y="168.6" text-anchor="middle" font-size="26" font-weight="700">base</text>
+<g font-size="24" font-weight="700" fill="#B23A3A">
+<text x="368.8" y="147.6">1'</text>
+<text x="350.8" y="235.4">2'</text>
+<text x="227.2" y="235.4">3'</text>
+<text x="199.2" y="185.6">4'</text>
+<text x="209.2" y="91.6">5'</text>
+</g>
+<text x="261.2" y="305.4" text-anchor="middle" font-size="24">OH</text>
+<text x="338.8" y="301.4" text-anchor="middle" font-size="24">H</text>
+</g>
+</svg>
+    <figcaption>A DNA nucleotide in simple shapes. The carbons of the sugar are numbered 1′ to 5′ ("one prime" to "five prime"), clockwise from the oxygen in the ring: the base is attached to carbon 1′, the phosphate to carbon 5′ (on the side chain), and carbon 3′ carries an -OH group where the next nucleotide's phosphate will join. In deoxyribose, carbon 2′ carries only H ("deoxy" = one oxygen fewer); in ribose (RNA) it carries -OH. Nucleotides contain the elements C, H, O, N and P.</figcaption>
+  </figure>
+
+  <h3>A1.2.3 The sugar-phosphate backbone</h3>
+  <p>Nucleotides are joined by a <b>covalent bond</b> between the phosphate of one nucleotide and the carbon 3′ of the sugar of the previous one (this link is called a phosphodiester bond). Alternating sugar and phosphate groups form a strong, continuous chain: the <b>sugar-phosphate backbone</b>. The bases stick out to the side of the backbone, in any order.</p>
+
+  <h3>A1.2.4 Bases: the code</h3>
+  <p>DNA has four bases: <b>adenine (A), cytosine (C), guanine (G) and thymine (T)</b>. RNA has <b>adenine, cytosine, guanine and uracil (U)</b>: uracil replaces thymine.<span class="learn">Learn</span> The backbone is the same along the whole molecule; only the sequence of bases varies, so the <b>base sequence</b> is what carries the genetic information, like the order of letters in a text.</p>
+
+  <h3>A1.2.5 RNA is made by condensation</h3>
+  <p>RNA is a single strand of nucleotides. Each new nucleotide is joined to the growing strand in a <b>condensation reaction</b>: the bond between phosphate and sugar forms and a molecule of water is released. (Breaking the bond again uses water: hydrolysis.) A drawing of an RNA strand is a vertical chain of pentagons and circles, each pentagon with a rectangle (A, C, G or U) on its side, and the label "ribose" on the sugars.</p>
+
+  <h3>A1.2.6 DNA: a double helix</h3>
+  <p>DNA is made of <b>two strands</b>, twisted into a <b>double helix</b>. The bases of one strand pair with the bases of the other, held by <b>hydrogen bonds</b>. Pairing is <b>complementary</b>: <b>adenine pairs with thymine, and guanine pairs with cytosine</b>.<span class="learn">Learn</span> The two strands run in opposite directions: they are <b>antiparallel</b> (one runs 5′ to 3′, the other 3′ to 5′; see the HL section).</p>
+  <figure>
+    <svg viewBox="0 0 700 330" role="img" aria-label="A short piece of double-stranded DNA drawn with simple shapes: phosphate circles and pentagon sugars form two backbones, rectangles are bases, dashed lines are hydrogen bonds; the top strand runs 5 prime to 3 prime left to right and the bottom strand runs the other way">
+<g font-family="Arial,Helvetica,sans-serif">
+<path d="M125.0,70 H580" stroke="#7A8794" stroke-width="4" fill="none"/>
+<path d="M190,262 H645.0" stroke="#7A8794" stroke-width="4" fill="none"/>
+<rect x="166.0" y="89.4" width="48" height="62" rx="4" fill="#E39A5E"/>
+<rect x="166.0" y="202.6" width="48" height="40" rx="4" fill="#7FC98A"/>
+<line x1="181" y1="154.4" x2="181" y2="199.6" stroke="#2F47A6" stroke-width="3" stroke-dasharray="5 4"/>
+<line x1="199" y1="154.4" x2="199" y2="199.6" stroke="#2F47A6" stroke-width="3" stroke-dasharray="5 4"/>
+<text x="190" y="130.5" text-anchor="middle" font-size="28" font-weight="700" fill="#1E2A33">A</text>
+<text x="190" y="232.7" text-anchor="middle" font-size="28" font-weight="700" fill="#1E2A33">T</text>
+<rect x="296.0" y="89.4" width="48" height="62" rx="4" fill="#E39A5E"/>
+<rect x="296.0" y="202.6" width="48" height="40" rx="4" fill="#7FC98A"/>
+<line x1="307" y1="154.4" x2="307" y2="199.6" stroke="#2F47A6" stroke-width="3" stroke-dasharray="5 4"/>
+<line x1="320" y1="154.4" x2="320" y2="199.6" stroke="#2F47A6" stroke-width="3" stroke-dasharray="5 4"/>
+<line x1="333" y1="154.4" x2="333" y2="199.6" stroke="#2F47A6" stroke-width="3" stroke-dasharray="5 4"/>
+<text x="320" y="130.5" text-anchor="middle" font-size="28" font-weight="700" fill="#1E2A33">G</text>
+<text x="320" y="232.7" text-anchor="middle" font-size="28" font-weight="700" fill="#1E2A33">C</text>
+<rect x="426.0" y="89.4" width="48" height="40" rx="4" fill="#7FC98A"/>
+<rect x="426.0" y="180.6" width="48" height="62" rx="4" fill="#E39A5E"/>
+<line x1="437" y1="132.4" x2="437" y2="177.6" stroke="#2F47A6" stroke-width="3" stroke-dasharray="5 4"/>
+<line x1="450" y1="132.4" x2="450" y2="177.6" stroke="#2F47A6" stroke-width="3" stroke-dasharray="5 4"/>
+<line x1="463" y1="132.4" x2="463" y2="177.6" stroke="#2F47A6" stroke-width="3" stroke-dasharray="5 4"/>
+<text x="450" y="119.5" text-anchor="middle" font-size="28" font-weight="700" fill="#1E2A33">C</text>
+<text x="450" y="221.7" text-anchor="middle" font-size="28" font-weight="700" fill="#1E2A33">G</text>
+<rect x="556.0" y="89.4" width="48" height="40" rx="4" fill="#7FC98A"/>
+<rect x="556.0" y="180.6" width="48" height="62" rx="4" fill="#E39A5E"/>
+<line x1="571" y1="132.4" x2="571" y2="177.6" stroke="#2F47A6" stroke-width="3" stroke-dasharray="5 4"/>
+<line x1="589" y1="132.4" x2="589" y2="177.6" stroke="#2F47A6" stroke-width="3" stroke-dasharray="5 4"/>
+<text x="580" y="119.5" text-anchor="middle" font-size="28" font-weight="700" fill="#1E2A33">T</text>
+<text x="580" y="221.7" text-anchor="middle" font-size="28" font-weight="700" fill="#1E2A33">A</text>
+<polygon points="190.0,46.0 212.8,62.6 204.1,89.4 175.9,89.4 167.2,62.6" fill="#6F8EF0"/>
+<polygon points="190.0,286.0 167.2,269.4 175.9,242.6 204.1,242.6 212.8,269.4" fill="#6F8EF0"/>
+<polygon points="320.0,46.0 342.8,62.6 334.1,89.4 305.9,89.4 297.2,62.6" fill="#6F8EF0"/>
+<polygon points="320.0,286.0 297.2,269.4 305.9,242.6 334.1,242.6 342.8,269.4" fill="#6F8EF0"/>
+<polygon points="450.0,46.0 472.8,62.6 464.1,89.4 435.9,89.4 427.2,62.6" fill="#6F8EF0"/>
+<polygon points="450.0,286.0 427.2,269.4 435.9,242.6 464.1,242.6 472.8,269.4" fill="#6F8EF0"/>
+<polygon points="580.0,46.0 602.8,62.6 594.1,89.4 565.9,89.4 557.2,62.6" fill="#6F8EF0"/>
+<polygon points="580.0,286.0 557.2,269.4 565.9,242.6 594.1,242.6 602.8,269.4" fill="#6F8EF0"/>
+<circle cx="125.0" cy="70" r="14" fill="#4BA3A8"/>
+<circle cx="255.0" cy="70" r="14" fill="#4BA3A8"/>
+<circle cx="385.0" cy="70" r="14" fill="#4BA3A8"/>
+<circle cx="515.0" cy="70" r="14" fill="#4BA3A8"/>
+<circle cx="255.0" cy="262" r="14" fill="#4BA3A8"/>
+<circle cx="385.0" cy="262" r="14" fill="#4BA3A8"/>
+<circle cx="515.0" cy="262" r="14" fill="#4BA3A8"/>
+<circle cx="645.0" cy="262" r="14" fill="#4BA3A8"/>
+<g font-size="30" fill="#1E2A33" font-weight="700">
+<text x="105" y="80.5" text-anchor="end">5'</text>
+<text x="610" y="80.5">3'</text>
+<text x="160" y="272.5" text-anchor="end">3'</text>
+<text x="665" y="272.5">5'</text>
+</g>
+</g>
+</svg>
+    <figcaption>Part of a DNA double strand, untwisted so you can see it. Circles: phosphates; pentagons: deoxyribose; rectangles: bases; dashed lines: hydrogen bonds. The bottom strand is drawn upside down because it runs in the opposite direction. A-T pairs have two hydrogen bonds and G-C pairs three (mark schemes accept any number of lines, but it is good to know).</figcaption>
+    <div class="keyrow"><span><span class="sw" style="background:#E39A5E"></span>purine (A, G): two rings, longer</span><span><span class="sw" style="background:#7FC98A"></span>pyrimidine (C, T): one ring, shorter</span><span><span class="sw" style="background:#6F8EF0"></span>deoxyribose</span><span><span class="sw" style="background:#4BA3A8"></span>phosphate</span></div>
+  </figure>
+
+  <h3>A1.2.7 DNA and RNA compared</h3>
+  <div class="tablewrap"><table>
+    <tr><th></th><th>DNA</th><th>RNA</th></tr>
+    <tr><td>Strands</td><td>two, a double helix</td><td>one</td></tr>
+    <tr><td>Sugar</td><td>deoxyribose</td><td>ribose</td></tr>
+    <tr><td>Bases</td><td>A, C, G, T</td><td>A, C, G, U</td></tr>
+    <tr><td>Same in both</td><td colspan="2">nucleotides of phosphate + pentose + base; sugar-phosphate backbone with covalent bonds; A, C and G</td></tr>
+  </table></div>
+
+  <h3>A1.2.8 Why complementary pairing matters</h3>
+  <p>Because A always pairs with T and G with C, one strand fixes the sequence of the other. So each strand can be a <b>template</b>: in <b>replication</b>, new nucleotides pair with the bases of each old strand, giving two identical DNA molecules. In <b>expression</b>, RNA nucleotides pair with a DNA template to make messenger RNA (transcription), and then transfer RNA anticodons pair with the messenger RNA codons (translation). You will meet the details in D1.1 and D1.2; for now, the key point is that the pairing rule makes copying accurate.</p>
+  <div class="worked"><b>Worked example: base percentages.</b> "A double-stranded DNA molecule is 2&nbsp;000 base pairs long and 22% of its bases are adenine. Find the percentage of each base and the number of guanine nucleotides."
+    <ol>
+      <li>A pairs with T, so T = A = <b>22%</b>.</li>
+      <li>A + T = 44%, so G + C = 100% − 44% = 56%.</li>
+      <li>G pairs with C, so G = C = 56% ÷ 2 = <b>28%</b>.</li>
+      <li>2&nbsp;000 base pairs = 2 × 2&nbsp;000 = 4&nbsp;000 nucleotides (two per pair).</li>
+      <li>Guanine nucleotides = 28% of 4&nbsp;000 = 0.28 × 4&nbsp;000 = <b>1&nbsp;120</b>.</li>
+    </ol>
+    Check: A and T are 880 each (22% of 4&nbsp;000), G and C 1&nbsp;120 each: 880 + 880 + 1&nbsp;120 + 1&nbsp;120 = 4&nbsp;000. Correct.</div>
+  <div class="tip"><b>Exam trap.</b> These rules (A = T, G = C) only work for <b>double-stranded</b> DNA, and only for the whole molecule. In one strand on its own the four bases can be in any amounts. And a "base pair" is two nucleotides: double the number of base pairs before you count nucleotides.</div>
+
+  <h3>A1.2.9 Limitless information</h3>
+  <p>Any base can follow any other, so with 4 possible bases at each position, a sequence of n bases can be arranged in <span class="nw">4<sup>n</sup></span> different ways. This number grows so quickly that DNA can store practically limitless information.</p>
+  <div class="worked"><b>Worked example.</b> "How many different sequences of 5 bases are possible? What is the shortest group of bases that could give each of the 20 amino acids its own code?"
+    <ol>
+      <li>5 bases: <span class="nw">4<sup>5</sup> = 4 × 4 × 4 × 4 × 4 = 1&nbsp;024</span> sequences.</li>
+      <li>Groups of 1 base give 4<sup>1</sup> = 4 codes: fewer than 20.</li>
+      <li>Groups of 2 give 4<sup>2</sup> = 16 codes: still fewer than 20.</li>
+      <li>Groups of 3 give 4<sup>3</sup> = 64 codes: at least 20. So the shortest is <b>3 bases</b>, which is why the genetic code uses triplets (codons).</li>
+    </ol>
+    For comparison: 10 bases give 4<sup>10</sup> = 1&nbsp;048&nbsp;576 sequences, already more than a million.</div>
+
+  <h3>A1.2.10 One code for all life</h3>
+  <p>The <b>genetic code</b> (which triplet of bases stands for which amino acid) is the same in almost all organisms: bacteria, plants, fungi and animals. There is no chemical reason why a particular triplet must mean a particular amino acid, so the best explanation for everyone sharing the same code is that all life inherited it from a <b>common ancestor</b>: <b>universal common ancestry</b>. (A few small variations exist, for example in mitochondria, but the code is otherwise conserved.) This is also why a human gene can be read correctly by a bacterium in genetic engineering.</p>
+  <div class="tip"><b>Exam trap.</b> Write the bases in full the first time (adenine, thymine, cytosine, guanine, uracil): one mark scheme in your pack refuses the letters alone. Label RNA sugars "ribose" and DNA sugars "deoxyribose", not just "sugar" or "pentose". And never put thymine in RNA.</div>
+
+  <details id="check12"><summary>Self-check A1.2</summary>
+    <ol>
+      <li>Name the three parts of a nucleotide. To which carbon of the sugar is the base attached, and to which the phosphate?</li>
+      <li>Is the genetic material of every virus DNA?</li>
+      <li>A DNA molecule has 400 base pairs. How many nucleotides does it have, and how many sugar-phosphate backbones?</li>
+      <li>In a double-stranded DNA sample 31% of the bases are guanine. What percentage is thymine?</li>
+      <li>How many different sequences of 4 bases are possible?</li>
+      <li>Why is the universal genetic code evidence for common ancestry, rather than just a coincidence?</li>
+    </ol>
+    <p><b>Answers.</b> 1: phosphate, pentose sugar (deoxyribose or ribose), nitrogenous base; base on carbon 1′, phosphate on carbon 5′. 2: no: some viruses (such as influenza viruses and HIV) have RNA as their genetic material. 3: 800 nucleotides; 2 backbones (one per strand). 4: C = 31%, so G + C = 62%, A + T = 38%, T = 19%. 5: 4<sup>4</sup> = 256. 6: the link between a triplet and its amino acid is arbitrary, so many different codes would work equally well; organisms sharing the same one most likely inherited it from one shared ancestor.</p>
+  </details>
+</section>
+
+<!-- =============================== A1.2 HL =============================== -->
+<section class="topic" id="a12hl">
+  <div class="kicker">A1.2 · HL only</div>
+  <h2>Nucleic acids: direction, stability, packing and the evidence <span class="hl">HL</span></h2>
+  <p class="guiding">Why the two strands run opposite ways, how two metres of DNA fit in a nucleus, and how scientists proved DNA is the genetic material.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="n11"><span>Explain the directionality of DNA and RNA: 5′ and 3′ ends, and why it matters in replication, transcription and translation (A1.2.11)<span class="hl">HL</span></span></label>
+    <label><input type="checkbox" data-k="n12"><span>Explain how purine-to-pyrimidine pairing keeps the DNA helix a constant width and stable (A1.2.12)<span class="hl">HL</span></span></label>
+    <label><input type="checkbox" data-k="n13"><span>Describe the structure of a nucleosome: DNA wound around eight histone proteins, held by H1, joined by linker DNA (A1.2.13)<span class="hl">HL</span></span></label>
+    <label><input type="checkbox" data-k="n14"><span>Explain how the Hershey-Chase experiment showed that DNA is the genetic material (A1.2.14)<span class="hl">HL</span></span></label>
+    <label><input type="checkbox" data-k="n15"><span>Analyse Chargaff's data on purines and pyrimidines and explain how it falsified the tetranucleotide hypothesis (A1.2.15)<span class="hl">HL</span></span></label>
+  </div>
+
+  <h3>A1.2.11 Directionality</h3>
+  <p>Every strand of DNA or RNA has two different ends. At the <b>5′ end</b> there is a phosphate attached to carbon 5′ of the first sugar. At the <b>3′ end</b> there is a sugar with a free -OH on carbon 3′.<span class="learn">Learn</span> Inside the strand, each phosphate links carbon 5′ of one sugar to carbon 3′ of the next, so the strand has a direction, 5′ to 3′, like an arrow.</p>
+  <p>Why it matters:</p>
+  <ul>
+    <li><b>Replication</b>: DNA polymerase can only add new nucleotides to the free 3′ end, so new DNA is always built in the 5′ to 3′ direction.</li>
+    <li><b>Transcription</b>: RNA is also built 5′ to 3′.</li>
+    <li><b>Translation</b>: ribosomes read messenger RNA from its 5′ end towards its 3′ end.</li>
+  </ul>
+  <p>In the double helix the two strands are <b>antiparallel</b>: one runs 5′ to 3′ and its partner runs 3′ to 5′ alongside it. In the figure above, the top strand runs 5′ to 3′ left to right, the bottom strand 5′ to 3′ right to left.</p>
+  <div class="worked"><b>Worked example: write the complementary strand.</b> "One strand of DNA is 5′-AGCTTAGC-3′. Write its complementary strand, showing both ends, then write it in the 5′ to 3′ direction."
+    <ol>
+      <li>Pair each base: A with T, G with C. A G C T T A G C gives T C G A A T C G.</li>
+      <li>The partner strand is antiparallel, so under the 5′ end of the first strand is the 3′ end of the second: <span class="nw">3′-TCGAATCG-5′</span>.</li>
+      <li>Sequences are normally written 5′ to 3′, so read it backwards: <span class="nw"><b>5′-GCTAAGCT-3′</b></span>.</li>
+    </ol>
+    Check: line up 5′-AGCTTAGC-3′ above 3′-TCGAATCG-5′: every pair is A-T or G-C, and the ends are opposite. Correct.</div>
+
+  <h3>A1.2.12 Purine-to-pyrimidine pairing</h3>
+  <p>The bases come in two shapes. <b>Purines</b>, adenine and guanine, have <b>two rings</b>. <b>Pyrimidines</b>, cytosine, thymine and uracil, have <b>one ring</b>.<span class="learn">Learn</span> Every base pair in DNA is one purine plus one pyrimidine (A-T, G-C). So every rung of the ladder is the same length (three rings across), and the two backbones stay the same distance apart, about 2 nm, along the whole molecule (look at the figure: the long and short rectangles always add up to the same length). A purine-purine pair would be too wide and a pyrimidine-pyrimidine pair too narrow; either would distort the helix. The regular, constant width lets the base pairs stack neatly on top of one another, which makes the double helix stable. The hydrogen bonds also only line up correctly for A with T and G with C, so the pairing is specific.</p>
+
+  <h3>A1.2.13 The nucleosome</h3>
+  <p>In eukaryotes, DNA is wrapped around proteins called <b>histones</b>. A <b>nucleosome</b> is a core of <b>eight histone proteins</b> (two each of four types) with DNA wound around it about twice (about 1.7 turns). A further histone, <b>H1</b>, sits where the DNA enters and leaves and holds it in place. A short stretch of <b>linker DNA</b> joins one nucleosome to the next, so DNA looks like a string of beads under the electron microscope.<span class="learn">Learn</span></p>
+  <figure>
+    <svg viewBox="0 0 700 340" role="img" aria-label="A nucleosome: a core of eight histone proteins, of which the front four are visible, with DNA wound about twice around it; an H1 histone sits where the DNA enters and leaves, and linker DNA runs on to the next nucleosome">
+<rect width="700" height="340" fill="#fff"/>
+<path d="M40,318 C140,300 230,290 278,278" stroke="#2F47A6" stroke-width="12" fill="none" stroke-linecap="round"/>
+<path d="M322,278 C370,290 460,300 560,318" stroke="#2F47A6" stroke-width="12" fill="none" stroke-linecap="round"/>
+<circle cx="300" cy="160" r="112" fill="none" stroke="#8FA3E8" stroke-width="12"/>
+<circle cx="300" cy="160" r="98" fill="none" stroke="#2F47A6" stroke-width="12"/>
+<circle cx="268" cy="116" r="40" fill="#E39A5E" opacity=".45"/>
+<circle cx="344" cy="116" r="40" fill="#7FC98A" opacity=".45"/>
+<circle cx="268" cy="192" r="40" fill="#C98BD6" opacity=".45"/>
+<circle cx="344" cy="192" r="40" fill="#F2C46D" opacity=".45"/>
+<circle cx="262" cy="122" r="40" fill="#E39A5E" stroke="#1E2A33" stroke-width="2"/>
+<circle cx="338" cy="122" r="40" fill="#7FC98A" stroke="#1E2A33" stroke-width="2"/>
+<circle cx="262" cy="198" r="40" fill="#C98BD6" stroke="#1E2A33" stroke-width="2"/>
+<circle cx="338" cy="198" r="40" fill="#F2C46D" stroke="#1E2A33" stroke-width="2"/>
+<ellipse cx="300" cy="280" rx="26" ry="18" fill="#B23A3A" stroke="#1E2A33" stroke-width="2"/>
+<g stroke="#4A5862" stroke-width="2" fill="none">
+<path d="M366,94 L520,70"/>
+<path d="M380,230 L520,190"/>
+<path d="M326,284 L520,250"/>
+<path d="M120,302 L120,260 L60,260"/>
+</g>
+<g font-family="Arial,Helvetica,sans-serif" font-size="24" fill="#1E2A33">
+<text x="526" y="78">histones</text>
+<text x="526" y="198">DNA</text>
+<text x="526" y="258" font-weight="700" fill="#B23A3A">H1</text>
+<text x="20" y="250">linker DNA</text>
+</g>
+</svg>
+    <figcaption>A nucleosome seen face on. The front four of the eight histones are drawn solid; the back four show faintly behind them. DNA is the blue band: it winds about twice round the core (the paler ring is the second turn). H1 clips the entering and leaving DNA together.</figcaption>
+  </figure>
+  <p>Histones are rich in positively charged amino acids, which attract the negatively charged phosphates of the DNA backbone. Nucleosomes let a very long DNA molecule be packed (supercoiled) into a small nucleus, and how tightly they pack controls which genes can be reached and expressed. Prokaryotes have no histones, so their DNA does not form nucleosomes (it is "naked" DNA).</p>
+
+  <h3>A1.2.14 The Hershey-Chase experiment</h3>
+  <p>In 1952 Alfred Hershey and Martha Chase asked: when a virus infects a cell, is it the protein or the DNA that enters and carries the genetic instructions? They used the T2 <b>bacteriophage</b>, a virus made of only a protein coat and DNA, which infects the bacterium <i>E. coli</i>.</p>
+  <div class="tablewrap"><table>
+    <tr><th>Step</th><th>Batch 1</th><th>Batch 2</th></tr>
+    <tr><td>Label</td><td>radioactive sulfur, <sup>35</sup>S: goes into protein (in amino acids such as cysteine and methionine); DNA has no sulfur</td><td>radioactive phosphorus, <sup>32</sup>P: goes into DNA (in the phosphate backbone); the protein coat has almost no phosphorus</td></tr>
+    <tr><td>Infect, then blend</td><td colspan="2">viruses attach to bacteria and inject their genetic material; a kitchen-type blender knocks the empty coats off the bacteria</td></tr>
+    <tr><td>Centrifuge</td><td colspan="2">heavy bacteria form a pellet at the bottom; light virus coats stay in the liquid (supernatant)</td></tr>
+    <tr><td>Result</td><td>radioactivity mostly in the <b>supernatant</b>: the protein stayed outside</td><td>radioactivity mostly in the <b>pellet</b>: the DNA went into the bacteria</td></tr>
+  </table></div>
+  <div class="worked"><b>Worked example: from results to conclusion.</b> "Explain how the results show that DNA, not protein, is the genetic material of the phage."
+    <ol>
+      <li>The genetic material is whatever enters the bacterium, because the bacterium then makes new viruses from those instructions.</li>
+      <li><sup>35</sup>S labels only protein. It was found in the supernatant, with the empty coats, so protein did not enter the bacteria.</li>
+      <li><sup>32</sup>P labels only DNA. It was found in the pellet, inside the bacteria, so DNA entered.</li>
+      <li>Therefore DNA, not protein, carries the instructions to make new phages. (The experiment depended on new technology, radioactive isotopes, which let the two molecules be traced separately.)</li>
+    </ol></div>
+
+  <h3>A1.2.15 Chargaff's data</h3>
+  <p>Before the structure of DNA was known, the <b>tetranucleotide hypothesis</b> said DNA was a simple repeating unit of the four nucleotides, so all four bases would be present in equal amounts (25% each) in every organism. A molecule like that would be far too simple to carry genetic information. Erwin Chargaff measured the bases in DNA from many species. Data from Table 2 in your teacher's deck (slide 238), in percent:</p>
+  <div class="tablewrap"><table>
+    <tr><th>Organism</th><th class="c">A</th><th class="c">T</th><th class="c">G</th><th class="c">C</th></tr>
+    <tr><td>Human</td><td class="c">31.0</td><td class="c">31.5</td><td class="c">19.1</td><td class="c">18.4</td></tr>
+    <tr><td>Salmon</td><td class="c">29.7</td><td class="c">29.1</td><td class="c">20.8</td><td class="c">20.4</td></tr>
+    <tr><td>Wheat</td><td class="c">27.3</td><td class="c">27.1</td><td class="c">22.7</td><td class="c">22.8</td></tr>
+    <tr><td>Yeast</td><td class="c">31.3</td><td class="c">32.9</td><td class="c">18.7</td><td class="c">17.1</td></tr>
+    <tr><td><i>Mycobacterium tuberculosis</i></td><td class="c">15.1</td><td class="c">14.6</td><td class="c">34.9</td><td class="c">35.4</td></tr>
+  </table></div>
+  <div class="worked"><b>Worked example: analyse the human row.</b>
+    <ol>
+      <li>Ratio A : T = 31.0 ÷ 31.5 = <b>0.98</b>; ratio G : C = 19.1 ÷ 18.4 = <b>1.04</b>. Both close to 1, so A ≈ T and G ≈ C.</li>
+      <li>Purines A + G = 31.0 + 19.1 = <b>50.1%</b>; pyrimidines T + C = 31.5 + 18.4 = <b>49.9%</b>: about half each.</li>
+      <li>But A (31.0%) is far from G (19.1%), and none of the four is near 25%. Yeast is similar (A 31.3, G 18.7), while <i>Mycobacterium tuberculosis</i> has the opposite pattern (A 15.1, G 34.9): the proportions differ between species.</li>
+      <li>Conclusion: the amounts are not equal, so the tetranucleotide hypothesis is <b>falsified</b>. The pattern A ≈ T and G ≈ C (Chargaff's rules) was later explained by complementary base pairing in Watson and Crick's double helix.</li>
+    </ol></div>
+  <div class="tip"><b>Exam traps.</b> (1) Hershey-Chase: <sup>35</sup>S = protein = supernatant; <sup>32</sup>P = DNA = pellet. Swapping them reverses the conclusion. (2) "A = T" does not mean "A = 25%": the A + T share varies between species. (3) A nucleosome has <b>eight</b> histones in its core, not four; H1 is outside the core. (4) The 5′ end has the phosphate, the 3′ end the free sugar -OH, and new nucleotides are only added at the 3′ end.</div>
+
+  <details id="check12hl"><summary>Self-check A1.2 HL</summary>
+    <ol>
+      <li>When a nucleotide joins a growing strand, its phosphate bonds to which carbon of the last sugar in the strand?</li>
+      <li>Which bases are pyrimidines, and why must each base pair contain one?</li>
+      <li>Why does it help that histones are positively charged?</li>
+      <li>Why did Hershey and Chase use <sup>35</sup>S for protein and <sup>32</sup>P for DNA, and not the other way round?</li>
+      <li>In the deck's table, yeast DNA is 31.3% adenine. What percentage of thymine would base pairing predict, and what was measured?</li>
+    </ol>
+    <p><b>Answers.</b> 1: carbon 3′ (the free -OH at the 3′ end), which is why strands grow 5′ to 3′. 2: cytosine, thymine and uracil (one ring); a purine (two rings) paired with a pyrimidine keeps the helix the same width everywhere, so it is regular and stable. 3: they attract the negatively charged phosphate groups of DNA, so DNA winds tightly around them. 4: sulfur is in proteins but not in DNA, and phosphorus is in DNA but almost absent from the phage protein, so each label marks only one of the two molecules. 5: predicted 31.3%, measured 32.9%: close; the small difference is most likely measurement error.</p>
+  </details>
+</section>
+
+<!-- =============================== QUIZ =============================== -->
+<section class="topic quiz" id="quiz">
+  <div class="kicker">Ten questions, Paper 1A style (multiple choice)</div>
+  <h2>Quick quiz</h2>
+  <p>Decide on your answer before you click. Every question explains the trap after you answer. Write any you miss into the Error log. Questions 5, 9 and 10 are HL.</p>
+
+  <div class="q" data-a="1"><p>1. In liquid water, hydrogen bonds form between</p>
+    <button>the oxygen and hydrogen atoms inside one water molecule</button>
+    <button>a hydrogen atom of one molecule and the oxygen atom of a neighbouring molecule</button>
+    <button>the hydrogen atoms of two neighbouring molecules</button>
+    <button>the oxygen atoms of two neighbouring molecules</button>
+    <div class="why">A hydrogen bond is between molecules: δ+ H of one, δ− O of another. Inside one molecule the O-H bonds are covalent (option 1). H with H, or O with O, would bring like charges together, which repel (options 3 and 4).</div></div>
+
+  <div class="q" data-a="0"><p>2. Transpiration pulls water up the xylem of a 30 m tree as a continuous column. Which property of water mainly stops the column from breaking?</p>
+    <button>Cohesion between water molecules</button>
+    <button>Adhesion to the xylem walls</button>
+    <button>High latent heat of vaporisation</button>
+    <button>High specific heat capacity</button>
+    <div class="why">Hydrogen bonds between the water molecules hold the column together while it is under tension: cohesion. Adhesion is water sticking to the walls; it helps water rise but it is not what links one molecule to the next. Latent heat explains why transpiration cools the leaf, not the pull.</div></div>
+
+  <div class="q" data-a="2"><p>3. Which substance is transported in human blood mainly by being dissolved in the plasma?</p>
+    <button>Oxygen</button>
+    <button>Cholesterol</button>
+    <button>Glucose</button>
+    <button>Triglycerides</button>
+    <div class="why">Glucose is polar and forms hydrogen bonds with water, so it dissolves. Oxygen is non-polar and only slightly soluble: almost all of it travels bound to haemoglobin. Cholesterol and triglycerides are hydrophobic and travel inside lipoproteins.</div></div>
+
+  <div class="q" data-a="3"><p>4. A ringed seal loses body heat much faster in water at 2 °C than it would in air at 2 °C. Which property of water best explains this?</p>
+    <button>High viscosity</button>
+    <button>High buoyancy</button>
+    <button>High latent heat of vaporisation</button>
+    <button>High thermal conductivity</button>
+    <div class="why">Water conducts heat away from the skin about 24 times faster than air. Viscosity and buoyancy affect movement and support, not heat. Latent heat of vaporisation matters for cooling by evaporation (sweating), not for a seal under water.</div></div>
+
+  <div class="q" data-a="0"><p>5. (HL) Which statement best explains why Earth has kept liquid water at its surface?</p>
+    <button>Earth's gravity holds its atmosphere, and its distance from the Sun keeps most surface temperatures between 0 °C and 100 °C</button>
+    <button>All of Earth's water was produced by photosynthesis after life began</button>
+    <button>Asteroid impacts keep replacing the water that evaporates into space each year</button>
+    <button>Earth is outside the Goldilocks zone, so its water cannot escape</button>
+    <div class="why">Retention needs gravity (to hold the atmosphere and water vapour) and the right temperature (inside the Goldilocks zone, not outside it). Asteroids are the hypothesis for where water came from, not for why it stays. Photosynthesis splits water; it does not create Earth's oceans.</div></div>
+
+  <div class="q" data-a="2"><p>6. Which components make up the backbone of one strand of DNA?</p>
+    <button>Bases joined by hydrogen bonds</button>
+    <button>Alternating ribose and phosphate joined by covalent bonds</button>
+    <button>Alternating deoxyribose and phosphate joined by covalent bonds</button>
+    <button>Alternating bases and phosphates joined by covalent bonds</button>
+    <div class="why">The backbone is sugar-phosphate-sugar-phosphate, linked by strong covalent bonds, and in DNA the sugar is deoxyribose. Ribose is the RNA sugar. Hydrogen bonds link the two strands through the bases; they are not part of the backbone.</div></div>
+
+  <div class="q" data-a="1"><p>7. In a sample of double-stranded DNA, 18% of the bases are guanine. What percentage of the bases are adenine?</p>
+    <button>18%</button>
+    <button>32%</button>
+    <button>36%</button>
+    <button>64%</button>
+    <div class="why">G = C = 18%, so G + C = 36% and A + T = 64%. A = T = 64% ÷ 2 = 32%. 18% assumes A = G; 36% is G + C; 64% is A + T, forgetting to halve.</div></div>
+
+  <div class="q" data-a="3"><p>8. Which feature is found in RNA but not in DNA?</p>
+    <button>The base cytosine</button>
+    <button>Phosphate groups in the backbone</button>
+    <button>Two antiparallel strands</button>
+    <button>The sugar ribose and the base uracil</button>
+    <div class="why">RNA has ribose and uracil; DNA has deoxyribose and thymine. Cytosine and phosphate are in both. Two antiparallel strands describe DNA, not RNA.</div></div>
+
+  <div class="q" data-a="2"><p>9. (HL) A new nucleotide is added to a growing DNA strand. Its phosphate group forms a covalent bond with which carbon of the sugar at the end of the strand?</p>
+    <button>Carbon 1′</button>
+    <button>Carbon 2′</button>
+    <button>Carbon 3′</button>
+    <button>Carbon 5′</button>
+    <div class="why">New nucleotides join the free -OH on carbon 3′, so strands grow 5′ to 3′. Carbon 5′ is where each nucleotide's own phosphate sits; carbon 1′ carries the base; carbon 2′ has just H in deoxyribose.</div></div>
+
+  <div class="q" data-a="0"><p>10. (HL) In the Hershey-Chase experiment, after blending and centrifuging, most of the radioactivity in the pellet of bacteria came from</p>
+    <button><sup>32</sup>P in the phage DNA</button>
+    <button><sup>35</sup>S in the phage DNA</button>
+    <button><sup>32</sup>P in the phage protein coats</button>
+    <button><sup>35</sup>S in the phage protein coats</button>
+    <div class="why">DNA, labelled with <sup>32</sup>P, entered the bacteria and went down into the pellet. <sup>35</sup>S labels protein, and the coats stayed in the supernatant. DNA contains no sulfur, and the protein coat has almost no phosphorus, so options 2 and 3 are impossible labels.</div></div>
+
+  <div class="score" id="score">Score: 0 / 10 answered 0</div>
+</section>
+
+<section class="end" id="end">
+  <h2 style="font-size:1.4rem">Before you close this</h2>
+  <ul>
+    <li>Tick the "I can" boxes you are confident about. The unticked ones are the first ten minutes of your next biology session (Wednesday 11 November, B1.1 Carbohydrates and lipids).</li>
+    <li>Mark every pack question you did against the mark scheme, point by point: each [1 mark] line needs its own idea in your answer.</li>
+    <li>Open the study sheet, <b>Error log</b> tab, and write one row for every mistake from the packs and the quiz: what went wrong, and the rule that fixes it (for example "meniscus = adhesion, not cohesion").</li>
+    <li>Draw from memory before you sleep: three water molecules with hydrogen bonds, one nucleotide, and four base pairs with their 5′ and 3′ ends. These are the key diagrams for the exam window.</li>
+    <li>Also on the study site: <a href="../flashcards.html">flashcards</a> (5 to 10 minutes a day), <a href="../exam.html">exam technique</a>, and your <a href="../progress.html">progress page</a>, which turns green as you tick the "I can" boxes and pass the quiz.</li>
+  </ul>
+</section>
+
+</main>
+
+<script>
+(function(){
+  // remember ticked "I can" boxes on this device; fails quietly where storage is unavailable
+  var key='ib-bio-a11-a12-ican';
+  var boxes=document.querySelectorAll('.ican input');
+  try{ var saved=JSON.parse(localStorage.getItem(key)||'{}'); boxes.forEach(function(b){ if(saved[b.dataset.k]) b.checked=true; }); }catch(e){}
+  boxes.forEach(function(b){ b.addEventListener('change',function(){ try{ var s={}; boxes.forEach(function(x){ if(x.checked) s[x.dataset.k]=1; }); localStorage.setItem(key,JSON.stringify(s)); }catch(e){} }); });
+
+  // quiz
+  var qs=document.querySelectorAll('.quiz .q'); var right=0, done=0, total=qs.length;
+  qs.forEach(function(q){
+    var a=parseInt(q.dataset.a,10); var btns=q.querySelectorAll('button');
+    btns.forEach(function(b,i){ b.addEventListener('click',function(){
+      if(q.classList.contains('done')) return;
+      q.classList.add('done'); done++;
+      if(i===a){ b.classList.add('right'); right++; } else { b.classList.add('wrong'); btns[a].classList.add('right'); }
+      document.getElementById('score').textContent='Score: '+right+' / '+total+' answered '+done+(done===total?(right>=8?'. Good. Log the ones you missed.':'. Re-read the sections for the ones you missed, then log them.'):'');
+      if(done===qs.length){ try{ var KQ='ib-quiz-guide-2026-11-05'; var prev=JSON.parse(localStorage.getItem(KQ)||'null'); localStorage.setItem(KQ,JSON.stringify({right:right,total:qs.length,date:new Date().toISOString().slice(0,10),best:Math.max(right,prev&&prev.best||0)})); }catch(e){} }
+    }); });
+  });
+})();
+</script>
+</body>
+</html>
