@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maths AA SL study guide: functions, graphs, composite and inverse functions (Tue 10 Nov 2026)</title>
+<!--
+  Syllabus numbering used here is the official one from the IB Mathematics: analysis and approaches guide
+  (first assessment 2021): SL 2.2 concept of a function, domain, range, graph, inverse as a reflection;
+  SL 2.3 the graph of a function, sketching, technology; SL 2.4 key features of graphs and intersections;
+  SL 2.5 composite functions, identity function, finding the inverse function.
+  The school programme of study (2026-27) numbers these weeks 2.3 "Functions, domain, range, graph",
+  2.4 "Composition of functions" and 2.5 "The inverse function"; the plan row said "Functions 2.3 to 2.5".
+  The Drive pack is titled "2.3-2.5 Functions Toolkit" (school numbering). The file name uses the official 2.2-2.5.
+  The text extraction of the official guide drops the root sign in the SL 2.2 example; the rendered PDF page
+  (guide p. 37) shows f(x) = sqrt(2 - x), domain x <= 2, range f(x) >= 0. Checked.
+  Easy 2 and Medium 8 of the pack are graph questions whose diagrams are only in the pack PDF; this page does not
+  reproduce those graphs. GDC key sequences are given for TI-84 Plus CE and Casio fx-CG50 because the page does not
+  know which GDC Jamila uses (unverified: her school's GDC model).
+  The "with Solutions" file is a Save My Exams worked-solutions document with its own M1/A1/R1 guidance, not an
+  official IB markscheme.
+-->
+<style>
+  :root{
+    --paper:#F5F7F4; --ink:#1E2A33; --ink-soft:#4A5862; --rule:#D6DCD8;
+    --indigo:#2F47A6; --indigo-soft:#E6EAF7; --amber:#B8761A; --amber-soft:#FBF1DF;
+    --green:#2E7D4F; --green-soft:#E3F2E8; --red:#B23A3A; --red-soft:#F8E4E4;
+    --card:#FFFFFF;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;overflow-wrap:break-word}
+  h1,h2,h3,h4{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;line-height:1.2;margin:0 0 .4em;font-weight:600}
+  h1{font-size:2.3rem}
+  h2{font-size:1.75rem;margin-top:0}
+  h3{font-size:1.25rem;margin-top:1.8em}
+  h4{font-size:1.05rem;margin-top:1.4em;font-family:inherit;font-weight:700}
+  p{margin:0 0 1em}
+  a{color:var(--indigo)}
+  code,.mono{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;font-size:.95em}
+  sup,sub{line-height:0}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
+
+  /* hero: a mapping diagram of f and f^-1, and the graphs of f(x) = (x - 1)^2 + 3, x >= 1, and its inverse,
+     mirror images in the line y = x. That is the day's content: function, inverse, reflection. */
+  .hero{background:#0B0F1A;color:#fff;padding:0 0 28px}
+  .heroart{display:block;width:100%;height:auto;max-height:280px}
+  .hero .wrap{padding-top:18px;padding-bottom:0}
+  .hero h1{color:#fff}
+  .hero p{color:#C9D1E6;max-width:660px}
+  .hero .series{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:1.15rem;color:#F2C46D;margin:0 0 14px}
+  .hero .series .inv{color:#7FB2F0}
+  .meta{display:flex;flex-wrap:wrap;gap:8px 22px;color:#C9D1E6;font-size:.95rem;margin-top:8px}
+
+  nav.toc{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+  nav.toc .wrap{display:flex;gap:4px;flex-wrap:wrap;padding:8px 20px}
+  nav.toc a{text-decoration:none;color:var(--ink-soft);padding:6px 10px;border-radius:6px;font-size:.92rem}
+  nav.toc a:hover,nav.toc a:focus-visible{background:var(--indigo-soft);color:var(--indigo);outline:none}
+
+  .plan{display:grid;grid-template-columns:1fr;gap:12px;margin:22px 0 8px}
+  .plan > div{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);padding:12px 16px}
+  .plan .bh{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-bottom:4px}
+  .plan .bh b{font-size:1.2rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+  .plan .bh span{font-weight:700;color:var(--indigo)}
+  .plan ol{margin:6px 0 0;padding-left:22px}
+  .plan li{margin:4px 0}
+  .plan .t{color:var(--ink-soft);font-size:.88rem;white-space:nowrap}
+  .files{margin:16px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+  .files li a{display:inline-block;background:var(--card);border:1px solid var(--rule);padding:5px 10px;border-radius:999px;font-size:.9rem;text-decoration:none}
+  .files li a:hover{border-color:var(--indigo)}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 20px;background:var(--card);border:1px solid var(--rule);padding:10px 14px;font-size:.92rem;margin:16px 0}
+
+  section.topic{margin-top:56px;padding-top:28px;border-top:3px solid var(--ink)}
+  .kicker{color:var(--indigo);font-weight:700;letter-spacing:.01em;margin-bottom:4px}
+  .guiding{font-style:italic;color:var(--ink-soft);margin-bottom:18px}
+
+  .ican{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:0 0 24px}
+  .ican p{margin:0 0 8px;font-weight:700}
+  .ican label{display:flex;gap:10px;align-items:flex-start;padding:5px 0;cursor:pointer}
+  .ican input{margin-top:6px;width:16px;height:16px;flex:none;accent-color:var(--indigo)}
+
+  /* formula booklet markers */
+  .fb,.learn{display:inline-block;font-size:.72rem;font-weight:700;padding:1px 7px;border-radius:3px;vertical-align:middle;margin-left:6px;white-space:nowrap;font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.01em}
+  .fb{background:var(--green);color:#fff}
+  .learn{background:var(--amber);color:#fff}
+
+  table{border-collapse:collapse;width:100%;margin:12px 0 20px;font-size:.95rem;background:var(--card)}
+  th,td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#EDF0EC}
+  td.c,th.c{text-align:center}
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+  figure{margin:20px 0;background:var(--card);border:1px solid var(--rule);padding:12px}
+  figure svg{display:block;width:100%;height:auto}
+  figcaption{font-size:.9rem;color:var(--ink-soft);margin-top:8px}
+  .keyrow{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.9rem;margin-top:6px}
+  .sw{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-2px;margin-right:6px}
+
+  .tip{background:var(--amber-soft);border-left:5px solid var(--amber);padding:12px 16px;margin:18px 0}
+  .tip b:first-child{color:var(--amber)}
+  .worked{background:var(--indigo-soft);border-left:5px solid var(--indigo);padding:12px 16px;margin:18px 0}
+  .worked > b:first-child{color:var(--indigo)}
+  .worked ol{margin:6px 0 0;padding-left:22px}
+  .worked li{margin:3px 0}
+  .formula{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:1.2rem;text-align:center;margin:12px 0;line-height:2}
+  .nw{white-space:nowrap}
+  .fbox{background:var(--card);border:1px solid var(--rule);padding:6px 14px;margin:14px 0}
+  .fbox .formula{margin:8px 0}
+
+  /* stacked fractions, all in HTML so they wrap */
+  .frac{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;font-size:.92em;line-height:1.15;margin:0 2px}
+  .frac>span:first-child{border-bottom:1px solid currentColor;padding:0 3px}
+  .frac>span:last-child{padding:0 3px}
+
+  details{background:var(--card);border:1px solid var(--rule);padding:10px 14px;margin:10px 0}
+  summary{cursor:pointer;font-weight:600}
+  details[open] summary{margin-bottom:8px}
+
+  .quiz .q{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:12px 0}
+  .quiz .q > p{font-weight:600;margin-bottom:8px}
+  .quiz button{display:block;width:100%;text-align:left;background:#F3F5F2;border:1px solid var(--rule);padding:8px 12px;margin:6px 0;border-radius:6px;font:inherit;cursor:pointer;color:var(--ink)}
+  .quiz button:hover,.quiz button:focus-visible{border-color:var(--indigo);outline:none}
+  .quiz button.right{background:var(--green-soft);border-color:var(--green)}
+  .quiz button.wrong{background:var(--red-soft);border-color:var(--red)}
+  .quiz .why{display:none;margin-top:8px;font-size:.95rem;color:var(--ink-soft)}
+  .quiz .q.done .why{display:block}
+  .score{font-weight:700;margin-top:14px}
+
+  .end{margin-top:56px;background:var(--card);border:1px solid var(--rule);padding:18px 20px}
+  .end ul{margin:8px 0 0;padding-left:20px}
+  @media (max-width:600px){h1{font-size:1.8rem}body{font-size:16px}th,td{padding:6px}.formula{font-size:1.08rem}}
+  @media print{nav.toc{position:static}details{break-inside:avoid}.quiz button{border:1px solid #999}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="heroart" viewBox="0 0 1000 300" aria-label="Left: a mapping diagram where f sends 1, 2 and 3 to 3, 4 and 7, and the inverse sends them back. Right: the graph of f and of its inverse, mirror images in the dashed line y equals x">
+<rect width="1000" height="300" fill="#0B0F1A"/>
+<g stroke="#1F2840" stroke-width="1"><line x1="590.0" y1="22" x2="590.0" y2="274"/><line x1="560" y1="244.0" x2="812" y2="244.0"/><line x1="620.0" y1="22" x2="620.0" y2="274"/><line x1="560" y1="214.0" x2="812" y2="214.0"/><line x1="650.0" y1="22" x2="650.0" y2="274"/><line x1="560" y1="184.0" x2="812" y2="184.0"/><line x1="680.0" y1="22" x2="680.0" y2="274"/><line x1="560" y1="154.0" x2="812" y2="154.0"/><line x1="710.0" y1="22" x2="710.0" y2="274"/><line x1="560" y1="124.0" x2="812" y2="124.0"/><line x1="740.0" y1="22" x2="740.0" y2="274"/><line x1="560" y1="94.0" x2="812" y2="94.0"/><line x1="770.0" y1="22" x2="770.0" y2="274"/><line x1="560" y1="64.0" x2="812" y2="64.0"/><line x1="800.0" y1="22" x2="800.0" y2="274"/><line x1="560" y1="34.0" x2="812" y2="34.0"/></g>
+<g stroke="#8F9BB8" stroke-width="1.8"><line x1="560" y1="274" x2="812" y2="274"/><line x1="560" y1="22" x2="560" y2="274"/></g>
+<line x1="560.0" y1="274.0" x2="806.0" y2="28.0" stroke="#8F9BB8" stroke-width="2" stroke-dasharray="7 6"/>
+<polyline points="590.0,184.0 590.3,184.0 590.7,184.0 591.0,184.0 591.4,183.9 591.7,183.9 592.1,183.9 592.4,183.8 592.7,183.8 593.1,183.7 593.4,183.6 593.8,183.5 594.1,183.4 594.4,183.3 594.8,183.2 595.1,183.1 595.5,183.0 595.8,182.9 596.2,182.7 596.5,182.6 596.8,182.4 597.2,182.3 597.5,182.1 597.9,181.9 598.2,181.8 598.6,181.6 598.9,181.4 599.2,181.2 599.6,180.9 599.9,180.7 600.3,180.5 600.6,180.3 600.9,180.0 601.3,179.8 601.6,179.5 602.0,179.2 602.3,178.9 602.7,178.7 603.0,178.4 603.3,178.1 603.7,177.8 604.0,177.4 604.4,177.1 604.7,176.8 605.1,176.4 605.4,176.1 605.7,175.7 606.1,175.4 606.4,175.0 606.8,174.6 607.1,174.2 607.4,173.9 607.8,173.5 608.1,173.0 608.5,172.6 608.8,172.2 609.2,171.8 609.5,171.3 609.8,170.9 610.2,170.4 610.5,170.0 610.9,169.5 611.2,169.0 611.5,168.5 611.9,168.0 612.2,167.5 612.6,167.0 612.9,166.5 613.3,166.0 613.6,165.4 613.9,164.9 614.3,164.3 614.6,163.8 615.0,163.2 615.3,162.6 615.7,162.1 616.0,161.5 616.3,160.9 616.7,160.3 617.0,159.7 617.4,159.0 617.7,158.4 618.0,157.8 618.4,157.1 618.7,156.5 619.1,155.8 619.4,155.2 619.8,154.5 620.1,153.8 620.4,153.1 620.8,152.4 621.1,151.7 621.5,151.0 621.8,150.3 622.2,149.5 622.5,148.8 622.8,148.1 623.2,147.3 623.5,146.5 623.9,145.8 624.2,145.0 624.5,144.2 624.9,143.4 625.2,142.6 625.6,141.8 625.9,141.0 626.3,140.2 626.6,139.3 626.9,138.5 627.3,137.7 627.6,136.8 628.0,135.9 628.3,135.1 628.7,134.2 629.0,133.3 629.3,132.4 629.7,131.5 630.0,130.6 630.4,129.7 630.7,128.8 631.0,127.8 631.4,126.9 631.7,126.0 632.1,125.0 632.4,124.0 632.8,123.1 633.1,122.1 633.4,121.1 633.8,120.1 634.1,119.1 634.5,118.1 634.8,117.1 635.2,116.0 635.5,115.0 635.8,114.0 636.2,112.9 636.5,111.9 636.9,110.8 637.2,109.7 637.5,108.6 637.9,107.6 638.2,106.5 638.6,105.4 638.9,104.2 639.3,103.1 639.6,102.0 639.9,100.9 640.3,99.7 640.6,98.6 641.0,97.4 641.3,96.3 641.6,95.1 642.0,93.9 642.3,92.7 642.7,91.5 643.0,90.3 643.4,89.1 643.7,87.9 644.0,86.6 644.4,85.4 644.7,84.2 645.1,82.9 645.4,81.6 645.8,80.4 646.1,79.1 646.4,77.8 646.8,76.5 647.1,75.2 647.5,73.9 647.8,72.6 648.1,71.3 648.5,70.0 648.8,68.6 649.2,67.3 649.5,65.9 649.9,64.6 650.2,63.2 650.5,61.8 650.9,60.4 651.2,59.0 651.6,57.6 651.9,56.2 652.3,54.8 652.6,53.4 652.9,52.0 653.3,50.5 653.6,49.1 654.0,47.6 654.3,46.2 654.6,44.7 655.0,43.2 655.3,41.7 655.7,40.2 656.0,38.7 656.4,37.2 656.7,35.7 657.0,34.2 657.4,32.6 657.7,31.1 658.1,29.6 658.4,28.0" fill="none" stroke="#F2C46D" stroke-width="3.5"/>
+<polyline points="650.0,244.0 650.0,243.7 650.0,243.3 650.0,243.0 650.1,242.6 650.1,242.3 650.1,241.9 650.2,241.6 650.2,241.3 650.3,240.9 650.4,240.6 650.5,240.2 650.6,239.9 650.7,239.6 650.8,239.2 650.9,238.9 651.0,238.5 651.1,238.2 651.3,237.8 651.4,237.5 651.6,237.2 651.7,236.8 651.9,236.5 652.1,236.1 652.2,235.8 652.4,235.4 652.6,235.1 652.8,234.8 653.1,234.4 653.3,234.1 653.5,233.7 653.7,233.4 654.0,233.1 654.2,232.7 654.5,232.4 654.8,232.0 655.1,231.7 655.3,231.3 655.6,231.0 655.9,230.7 656.2,230.3 656.6,230.0 656.9,229.6 657.2,229.3 657.6,228.9 657.9,228.6 658.3,228.3 658.6,227.9 659.0,227.6 659.4,227.2 659.8,226.9 660.1,226.6 660.5,226.2 661.0,225.9 661.4,225.5 661.8,225.2 662.2,224.8 662.7,224.5 663.1,224.2 663.6,223.8 664.0,223.5 664.5,223.1 665.0,222.8 665.5,222.5 666.0,222.1 666.5,221.8 667.0,221.4 667.5,221.1 668.0,220.7 668.6,220.4 669.1,220.1 669.7,219.7 670.2,219.4 670.8,219.0 671.4,218.7 671.9,218.3 672.5,218.0 673.1,217.7 673.7,217.3 674.3,217.0 675.0,216.6 675.6,216.3 676.2,216.0 676.9,215.6 677.5,215.3 678.2,214.9 678.8,214.6 679.5,214.2 680.2,213.9 680.9,213.6 681.6,213.2 682.3,212.9 683.0,212.5 683.7,212.2 684.5,211.8 685.2,211.5 685.9,211.2 686.7,210.8 687.5,210.5 688.2,210.1 689.0,209.8 689.8,209.5 690.6,209.1 691.4,208.8 692.2,208.4 693.0,208.1 693.8,207.7 694.7,207.4 695.5,207.1 696.3,206.7 697.2,206.4 698.1,206.0 698.9,205.7 699.8,205.3 700.7,205.0 701.6,204.7 702.5,204.3 703.4,204.0 704.3,203.6 705.2,203.3 706.2,203.0 707.1,202.6 708.0,202.3 709.0,201.9 710.0,201.6 710.9,201.2 711.9,200.9 712.9,200.6 713.9,200.2 714.9,199.9 715.9,199.5 716.9,199.2 718.0,198.8 719.0,198.5 720.0,198.2 721.1,197.8 722.1,197.5 723.2,197.1 724.3,196.8 725.4,196.5 726.4,196.1 727.5,195.8 728.6,195.4 729.8,195.1 730.9,194.7 732.0,194.4 733.1,194.1 734.3,193.7 735.4,193.4 736.6,193.0 737.8,192.7 738.9,192.4 740.1,192.0 741.3,191.7 742.5,191.3 743.7,191.0 744.9,190.6 746.1,190.3 747.4,190.0 748.6,189.6 749.8,189.3 751.1,188.9 752.4,188.6 753.6,188.2 754.9,187.9 756.2,187.6 757.5,187.2 758.8,186.9 760.1,186.5 761.4,186.2 762.7,185.9 764.0,185.5 765.4,185.2 766.7,184.8 768.1,184.5 769.4,184.1 770.8,183.8 772.2,183.5 773.6,183.1 775.0,182.8 776.4,182.4 777.8,182.1 779.2,181.7 780.6,181.4 782.0,181.1 783.5,180.7 784.9,180.4 786.4,180.0 787.8,179.7 789.3,179.4 790.8,179.0 792.3,178.7 793.8,178.3 795.3,178.0 796.8,177.6 798.3,177.3 799.8,177.0 801.4,176.6 802.9,176.3 804.4,175.9 806.0,175.6" fill="none" stroke="#7FB2F0" stroke-width="3.5"/>
+<line x1="590.0" y1="184.0" x2="650.0" y2="244.0" stroke="#5A6688" stroke-width="1.5" stroke-dasharray="3 5"/>
+<circle cx="590.0" cy="184.0" r="5.5" fill="#F2C46D" stroke="#F2C46D" stroke-width="2"/>
+<circle cx="650.0" cy="244.0" r="5.5" fill="#7FB2F0" stroke="#7FB2F0" stroke-width="2"/>
+<line x1="620.0" y1="154.0" x2="680.0" y2="214.0" stroke="#5A6688" stroke-width="1.5" stroke-dasharray="3 5"/>
+<circle cx="620.0" cy="154.0" r="5.5" fill="#F2C46D" stroke="#F2C46D" stroke-width="2"/>
+<circle cx="680.0" cy="214.0" r="5.5" fill="#7FB2F0" stroke="#7FB2F0" stroke-width="2"/>
+<line x1="650.0" y1="64.0" x2="770.0" y2="184.0" stroke="#5A6688" stroke-width="1.5" stroke-dasharray="3 5"/>
+<circle cx="650.0" cy="64.0" r="5.5" fill="#F2C46D" stroke="#F2C46D" stroke-width="2"/>
+<circle cx="770.0" cy="184.0" r="5.5" fill="#7FB2F0" stroke="#7FB2F0" stroke-width="2"/>
+<text x="664.0" y="72.0" font-family="Arial" font-size="26" fill="#F2C46D" text-anchor="start">(3, 7)</text>
+<text x="770.0" y="218.0" font-family="Arial" font-size="26" fill="#7FB2F0" text-anchor="middle">(7, 3)</text>
+<text x="800.0" y="18.0" font-family="Arial" font-size="26" fill="#C9D1E6" text-anchor="end">y = x</text>
+<text x="626.0" y="106.0" font-family="Arial" font-size="30" fill="#F2C46D" text-anchor="end" font-weight="bold">f</text>
+<text x="740.0" y="171.5" font-family="Arial" font-size="30" fill="#7FB2F0" text-anchor="middle" font-weight="bold">f⁻¹</text>
+<text x="812.0" y="266.0" font-family="Arial" font-size="24" fill="#8F9BB8" text-anchor="end">x</text>
+<text x="570.0" y="36.0" font-family="Arial" font-size="24" fill="#8F9BB8" text-anchor="start">y</text>
+<g fill="none" stroke="#5A6688" stroke-width="2"><ellipse cx="130" cy="155" rx="62" ry="118"/><ellipse cx="400" cy="155" rx="62" ry="118"/></g>
+<g font-family="Arial" font-size="34" text-anchor="middle">
+<text x="130" y="97" fill="#F2C46D">1</text><text x="400" y="97" fill="#7FB2F0">3</text>
+<text x="130" y="167" fill="#F2C46D">2</text><text x="400" y="167" fill="#7FB2F0">4</text>
+<text x="130" y="237" fill="#F2C46D">3</text><text x="400" y="237" fill="#7FB2F0">7</text>
+</g>
+<line x1="168" y1="75" x2="350" y2="75" stroke="#F2C46D" stroke-width="2.5"/><path d="M362,75 l-13,-6 v12 z" fill="#F2C46D"/>
+<line x1="362" y1="95" x2="180" y2="95" stroke="#7FB2F0" stroke-width="2.5"/><path d="M168,95 l13,-6 v12 z" fill="#7FB2F0"/>
+<line x1="168" y1="145" x2="350" y2="145" stroke="#F2C46D" stroke-width="2.5"/><path d="M362,145 l-13,-6 v12 z" fill="#F2C46D"/>
+<line x1="362" y1="165" x2="180" y2="165" stroke="#7FB2F0" stroke-width="2.5"/><path d="M168,165 l13,-6 v12 z" fill="#7FB2F0"/>
+<line x1="168" y1="215" x2="350" y2="215" stroke="#F2C46D" stroke-width="2.5"/><path d="M362,215 l-13,-6 v12 z" fill="#F2C46D"/>
+<line x1="362" y1="235" x2="180" y2="235" stroke="#7FB2F0" stroke-width="2.5"/><path d="M168,235 l13,-6 v12 z" fill="#7FB2F0"/>
+<text x="265" y="30" font-family="Arial" font-size="30" font-weight="bold" fill="#F2C46D" text-anchor="middle">f</text>
+<text x="265" y="295" font-family="Arial" font-size="30" font-weight="bold" fill="#7FB2F0" text-anchor="middle">f⁻¹</text>
+  </svg>
+  <div class="wrap">
+    <p class="series"><span class="nw">f(x)&nbsp;= (x&nbsp;−&nbsp;1)<sup>2</sup>&nbsp;+&nbsp;3, x&nbsp;≥&nbsp;1</span> &nbsp;and&nbsp; <span class="inv nw">f<sup>−1</sup>(x)&nbsp;= 1&nbsp;+&nbsp;√(x&nbsp;−&nbsp;3), x&nbsp;≥&nbsp;3</span></p>
+    <h1>Maths AA SL: functions, graphs, composite and inverse functions</h1>
+    <p>Study guide for Tuesday 10 November 2026. On the left, f sends 1, 2 and 3 to 3, 4 and 7, and f<sup>−1</sup> sends them straight back. On the right, every point (a, b) on the yellow graph of f has a partner (b, a) on the blue graph of f<sup>−1</sup>: the two graphs are mirror images in the line y&nbsp;= x. By the end of today you will be able to find that inverse yourself, with its domain (it is worked example 4 in the <a href="#s25" style="color:#F2C46D">SL 2.5 section</a>).</p>
+    <div class="meta"><span>About 2 hours</span><span>Official syllabus SL 2.2, 2.3, 2.4 and 2.5 (school 2.3 to 2.5)</span><span>Source: IB Maths AA guide (first assessment 2021), formula booklet and the class functions pack</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <a href="../index.html" style="font-weight:700;color:var(--indigo)">All days</a><a href="#plan">Plan</a><a href="#s22">2.2 Functions</a><a href="#s23">2.3 Graphs</a><a href="#s24">2.4 Key features</a><a href="#s25">2.5 Composite and inverse</a><a href="#quiz">Quiz</a><a href="#end">Finish</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section id="plan">
+  <h2 style="margin-top:28px">How to spend the two hours</h2>
+  <p style="margin:10px 0 0">Four blocks. Do them in order and tick each step off on paper. The page links take you straight to each file; the section links jump down this page. All pack questions are in the <a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">functions toolkit pack</a>; you check them with its <a href="https://drive.google.com/file/d/17i6FFlAOtJVleGT-KvN84niIrHyicNdj/view">"with Solutions" version</a>, which shows the full working and, under "Mark Scheme and Guidance", what each mark is for: M1&nbsp;= a method mark, A1&nbsp;= a correct-answer mark, R1&nbsp;= a mark for a correct reason. It is a Save My Exams file, not an official IB mark scheme, but it uses the same M1/A1/R1 style.</p>
+  <div class="plan">
+    <div>
+      <div class="bh"><b>Block 1 · 30 min</b><span>SL 2.2 Functions, domain, range and the idea of an inverse</span></div>
+      <ol>
+        <li>Read the <a href="#s22">SL 2.2 section</a> below. Cover each worked example's steps and try it yourself first. <span class="t">(10 min)</span></li>
+        <li>Do "Self-check SL 2.2" at the end of the section on paper, then open it to check. <span class="t">(4 min)</span></li>
+        <li>Open the <a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">functions pack</a> and do <b>Easy question 3</b> (all parts) and <b>Medium question 3</b> (all parts) on paper, no calculator. Write the range with f(x) or y, never with x. <span class="t">(13 min)</span></li>
+        <li>Open the <a href="https://drive.google.com/file/d/17i6FFlAOtJVleGT-KvN84niIrHyicNdj/view">solutions version</a>, find the same questions and mark yourself with the M1/A1 lines. Count the marks (out of 13), then write each mark you lost into the Error log tab of the study sheet: what went wrong and the rule that fixes it. <span class="t">(3 min)</span></li>
+      </ol>
+    </div>
+    <div>
+      <div class="bh"><b>Block 2 · 35 min</b><span>SL 2.3 Graphs and SL 2.4 Key features and intersections</span></div>
+      <ol>
+        <li>Read the <a href="#s23">SL 2.3 section</a> and the <a href="#s24">SL 2.4 section</a>. <span class="t">(12 min)</span></li>
+        <li>Do both self-checks (SL 2.3 and SL 2.4) on paper, then open them to check. <span class="t">(4 min)</span></li>
+        <li>In the <a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">functions pack</a> do <b>Easy question 2</b> (sketch the inverse on paper by copying the graph roughly), <b>Hard question 3</b> and <b>Very Hard question 1</b>. Hard 3 is SL 2.4 thinking: find the smallest value of the expression under the root first. Very Hard 1 is about asymptotes: a power of −<span class="frac"><span>1</span><span>2</span></span> means one over a square root. <span class="t">(16 min)</span></li>
+        <li>Mark with the <a href="https://drive.google.com/file/d/17i6FFlAOtJVleGT-KvN84niIrHyicNdj/view">solutions version</a> (17 marks in total) and log what you lost. In Hard 3(b)⁠(ii) the R1 mark needs a reference to your answer to part (i). <span class="t">(3 min)</span></li>
+      </ol>
+    </div>
+    <div>
+      <div class="bh"><b>Block 3 · 35 min</b><span>SL 2.5 Composite functions and finding the inverse</span></div>
+      <ol>
+        <li>Read the <a href="#s25">SL 2.5 section</a>, especially worked examples 1, 3 and 4. <span class="t">(12 min)</span></li>
+        <li>Do "Self-check SL 2.5" on paper, then open it to check. <span class="t">(4 min)</span></li>
+        <li>In the <a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">functions pack</a> do <b>Easy question 1</b>, <b>Medium question 7</b> and <b>Hard question 4</b>, no calculator. For each inverse, write the four steps (y =, swap, rearrange, f<sup>−1</sup>(x) =) and state the domain. <span class="t">(16 min)</span></li>
+        <li>Mark with the <a href="https://drive.google.com/file/d/17i6FFlAOtJVleGT-KvN84niIrHyicNdj/view">solutions version</a> (21 marks in total) and log what you lost. Hard 4 gives no mark for a ± sign in the inverse. <span class="t">(3 min)</span></li>
+      </ol>
+    </div>
+    <div>
+      <div class="bh"><b>Block 4 · 20 min</b><span>Mixed question, then the quiz</span></div>
+      <ol>
+        <li>In the <a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">functions pack</a> do <b>Medium question 8</b>: a piecewise function from a graph, then the sketch of its inverse. Reflect the three marked points by swapping their coordinates. <span class="t">(7 min)</span></li>
+        <li>Mark it with the <a href="https://drive.google.com/file/d/17i6FFlAOtJVleGT-KvN84niIrHyicNdj/view">solutions version</a> (7 marks) and log what you lost. <span class="t">(2 min)</span></li>
+        <li>Do the <a href="#quiz">quiz</a> at the bottom of the page. Work each question on paper before you click. <span class="t">(9 min)</span></li>
+        <li>Write every mistake from today into the Error log tab. <span class="t">(2 min)</span></li>
+      </ol>
+      <p style="margin:8px 0 0;font-size:.95rem">Extra, only if you have time on another day: <a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">pack</a> Medium 5, Hard 8 and Hard 10, marked with the <a href="https://drive.google.com/file/d/17i6FFlAOtJVleGT-KvN84niIrHyicNdj/view">solutions version</a>.</p>
+    </div>
+  </div>
+  <p><b>Files for today in the IB folder</b></p>
+  <ul class="files">
+    <li><a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">Functions toolkit pack (questions)</a></li>
+    <li><a href="https://drive.google.com/file/d/17i6FFlAOtJVleGT-KvN84niIrHyicNdj/view">Functions toolkit pack with solutions</a></li>
+    <li><a href="https://drive.google.com/file/d/1yofdn_7Gu3pb2O5G6iHhrXVgRUQ1Qldz/view">Formula booklet</a></li>
+    <li><a href="https://drive.google.com/file/d/1QEKfLslMdDBj1lHfmenCX7V887rTu_IN/view">IB Maths AA subject guide</a></li>
+    <li><a href="https://drive.google.com/file/d/1KXqPygfpTbZf2ibmm7PvfnC09yizSzKW/view">School programme of study</a></li>
+  </ul>
+  <div class="legend" aria-label="Legend for the formula markers">
+    <span><span class="fb" style="margin-left:0">In booklet</span> given in the exam formula booklet: know how to use it, no need to memorise it</span>
+    <span><span class="learn" style="margin-left:0">Learn</span> not in the booklet: you must remember it</span>
+  </div>
+  <p style="font-size:.95rem">Today almost everything is <span class="learn" style="margin-left:0">Learn</span>: the formula booklet has nothing for official SL 2.2 to 2.5. The only booklet items you use today are the gradient formula and the equations of a straight line (listed under SL 2.1, for Self-check SL 2.2 question 1 and pack Medium 8) and the axis of symmetry of a quadratic and the quadratic formula (listed under SL 2.6 and 2.7 in the <a href="https://drive.google.com/file/d/1yofdn_7Gu3pb2O5G6iHhrXVgRUQ1Qldz/view">booklet</a>).</p>
+  <h4>Your class numbers these topics differently</h4>
+  <p>The school programme counts its own lessons; exam papers, the solutions file's mark lines and this guide use the official IB numbers. Same content, different labels.</p>
+  <div class="tablewrap"><table>
+    <tr><th>Content</th><th class="c">Official IB number</th><th class="c">School programme</th></tr>
+    <tr><td>Function, domain, range, graph, notation, function as a model</td><td class="c">SL 2.2</td><td class="c">2.3</td></tr>
+    <tr><td>The graph of a function, sketching, graphing with technology</td><td class="c">SL 2.3</td><td class="c">2.3</td></tr>
+    <tr><td>Key features of graphs, intersections</td><td class="c">SL 2.4</td><td class="c">2.3 (asymptotes again in 2.7)</td></tr>
+    <tr><td>Composite functions</td><td class="c">SL 2.5</td><td class="c">2.4</td></tr>
+    <tr><td>Inverse function: the idea and the reflection in y&nbsp;= x</td><td class="c">SL 2.2</td><td class="c">2.5</td></tr>
+    <tr><td>Identity function, finding f<sup>−1</sup>(x)</td><td class="c">SL 2.5</td><td class="c">2.5</td></tr>
+  </table></div>
+  <p style="font-size:.95rem;color:var(--ink-soft)">Not in today's guide: lines (official SL 2.1, school 2.1), quadratics (official SL 2.6 and 2.7, school 2.2), transformations (official SL 2.11, school 2.6) and rational functions (official SL 2.8, school 2.7).</p>
+  <p style="font-size:.95rem;color:var(--ink-soft)">Exam format: Paper 1 is 90 minutes with no calculator; Paper 2 is 90 minutes with a graphic display calculator (GDC). Both are worth 80 marks, with short questions in section A and longer ones in section B. Neither paper is multiple choice; the quiz at the end uses multiple choice only so the page can mark it for you. The guide says the domain in an exam question is the largest possible one unless the question says otherwise.</p>
+</section>
+
+<!-- =============================== SL 2.2 =============================== -->
+<section class="topic" id="s22">
+  <div class="kicker">SL 2.2 (school 2.3 and 2.5)</div>
+  <h2>Functions, domain, range and the idea of an inverse</h2>
+  <p class="guiding">A function is a rule that gives every allowed input exactly one output.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="d1"><span>Explain the concept of a function, its domain, its range and its graph</span></label>
+    <label><input type="checkbox" data-k="d2"><span>Use function notation, for example f(x), v(t), C(n)</span></label>
+    <label><input type="checkbox" data-k="d3"><span>Use a function as a mathematical model of a real situation</span></label>
+    <label><input type="checkbox" data-k="d4"><span>Explain that an inverse function reverses or undoes the effect of a function, for example that solving f(x)&nbsp;= 10 is the same as finding f<sup>−1</sup>(10)</span></label>
+    <label><input type="checkbox" data-k="d5"><span>Use the notation f<sup>−1</sup>(x), see the inverse as a reflection in the line y&nbsp;= x, and know that an inverse exists only for a one-to-one function, with the domain of f<sup>−1</sup> equal to the range of f</span></label>
+  </div>
+
+  <h3>The words and the notation</h3>
+  <p>A <b>function</b> takes each input x from its <b>domain</b> and gives exactly one output f(x). The set of all outputs is the <b>range</b>. f(3) means "put 3 in": if f(x)&nbsp;= x<sup>2</sup>&nbsp;+&nbsp;1 then f(3)&nbsp;= 10. The letters change with the context: v(t) is a velocity at time t, C(n) a cost for n items. The <b>graph</b> of f is every point (x, f(x)).</p>
+  <figure>
+    <svg viewBox="0 0 720 290" aria-label="Three mapping diagrams. A: one-to-one. B: many-to-one, two inputs give 4. C: not a function, the input 4 has two outputs">
+<defs><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2F47A6"/></marker></defs>
+<g font-family="Arial" font-size="22" fill="#1E2A33" text-anchor="middle">
+<text x="115" y="30" font-size="26" font-weight="bold">A</text>
+<ellipse cx="50" cy="160" rx="38" ry="92" fill="#E6EAF7" stroke="#2F47A6" stroke-width="1.5"/>
+<ellipse cx="180" cy="160" rx="38" ry="92" fill="#FBF1DF" stroke="#B8761A" stroke-width="1.5"/>
+<text x="50" y="113">1</text>
+<text x="50" y="168">2</text>
+<text x="50" y="223">3</text>
+<text x="180" y="113">2</text>
+<text x="180" y="168">4</text>
+<text x="180" y="223">6</text>
+<line x1="72" y1="105" x2="156" y2="105" stroke="#2F47A6" stroke-width="2" marker-end="url(#ahm)"/>
+<line x1="72" y1="160" x2="156" y2="160" stroke="#2F47A6" stroke-width="2" marker-end="url(#ahm)"/>
+<line x1="72" y1="215" x2="156" y2="215" stroke="#2F47A6" stroke-width="2" marker-end="url(#ahm)"/>
+<text x="50" y="282" font-size="22" fill="#4A5862">x</text><text x="180" y="282" font-size="22" fill="#4A5862">f(x)</text>
+<text x="360" y="30" font-size="26" font-weight="bold">B</text>
+<ellipse cx="295" cy="160" rx="38" ry="92" fill="#E6EAF7" stroke="#2F47A6" stroke-width="1.5"/>
+<ellipse cx="425" cy="160" rx="38" ry="92" fill="#FBF1DF" stroke="#B8761A" stroke-width="1.5"/>
+<text x="295" y="113">−2</text>
+<text x="295" y="168">2</text>
+<text x="295" y="223">3</text>
+<text x="425" y="133">4</text>
+<text x="425" y="208">9</text>
+<line x1="317" y1="105" x2="401" y2="125" stroke="#2F47A6" stroke-width="2" marker-end="url(#ahm)"/>
+<line x1="317" y1="160" x2="401" y2="125" stroke="#2F47A6" stroke-width="2" marker-end="url(#ahm)"/>
+<line x1="317" y1="215" x2="401" y2="200" stroke="#2F47A6" stroke-width="2" marker-end="url(#ahm)"/>
+<text x="295" y="282" font-size="22" fill="#4A5862">x</text><text x="425" y="282" font-size="22" fill="#4A5862">f(x)</text>
+<text x="605" y="30" font-size="26" font-weight="bold">C</text>
+<ellipse cx="540" cy="160" rx="38" ry="92" fill="#E6EAF7" stroke="#2F47A6" stroke-width="1.5"/>
+<ellipse cx="670" cy="160" rx="38" ry="92" fill="#FBF1DF" stroke="#B8761A" stroke-width="1.5"/>
+<text x="540" y="133">4</text>
+<text x="540" y="208">9</text>
+<text x="670" y="113">2</text>
+<text x="670" y="168">−2</text>
+<text x="670" y="223">3</text>
+<line x1="562" y1="125" x2="646" y2="105" stroke="#2F47A6" stroke-width="2" marker-end="url(#ahm)"/>
+<line x1="562" y1="125" x2="646" y2="160" stroke="#2F47A6" stroke-width="2" marker-end="url(#ahm)"/>
+<line x1="562" y1="200" x2="646" y2="215" stroke="#2F47A6" stroke-width="2" marker-end="url(#ahm)"/>
+<text x="540" y="282" font-size="22" fill="#4A5862">x</text><text x="670" y="282" font-size="22" fill="#4A5862">f(x)</text>
+</g>
+    </svg>
+    <div class="keyrow"><span><b>A</b> one-to-one: a function, and each output comes from one input (f(x)&nbsp;= 2x)</span><span><b>B</b> many-to-one: still a function (f(x)&nbsp;= x<sup>2</sup>), but 4 comes from −2 and from 2</span><span><b>C</b> not a function: the input 4 has two outputs</span></div>
+    <figcaption>Test on a graph <span class="learn">Learn</span>: a vertical line may cross the graph of a function at most once (each input, one output). A horizontal line may cross a one-to-one function at most once (each output, one input). Only one-to-one functions, like A, have an inverse.</figcaption>
+  </figure>
+
+  <h3>Domain and range</h3>
+  <p>In an exam the domain is the <b>largest possible domain</b> unless the question gives one. For today's functions there are two things that are not allowed <span class="learn">Learn</span> (logarithms add a third later in Topic 2):</p>
+  <ul>
+    <li>dividing by zero: <span class="nw">f(x)&nbsp;= <span class="frac"><span>1</span><span>x&nbsp;−&nbsp;5</span></span></span> needs x ≠ 5;</li>
+    <li>the square root of a negative number: <span class="nw">√(x&nbsp;+&nbsp;3)</span> needs x&nbsp;+&nbsp;3&nbsp;≥&nbsp;0, so x&nbsp;≥&nbsp;−3.</li>
+  </ul>
+  <p>Write the domain with x (x&nbsp;≥&nbsp;−3) and the range with f(x) or y (f(x)&nbsp;≥&nbsp;0). Interval notation is also accepted <span class="learn">Learn</span>: [a, b] includes both ends, ]a, b[ includes neither, so x&nbsp;≥&nbsp;1 is [1, ∞[ and 2&nbsp;&lt;&nbsp;x&nbsp;&lt;&nbsp;5 is ]2, 5[.</p>
+
+  <div class="worked"><b>Worked example 1: the guide's own example.</b> Find the largest possible domain and the range of <span class="nw">f(x)&nbsp;= √(2&nbsp;−&nbsp;x)</span>.
+    <ol>
+      <li>The expression under the root cannot be negative: 2&nbsp;−&nbsp;x&nbsp;≥&nbsp;0.</li>
+      <li>So <b>x&nbsp;≤&nbsp;2</b>. Check one value either side: f(1)&nbsp;= √1&nbsp;= 1 works; f(3)&nbsp;= √(−1) does not exist.</li>
+      <li>A square root is never negative, and f(2)&nbsp;= √0&nbsp;= 0, so the smallest output is 0.</li>
+      <li>As x goes down (f(−2)&nbsp;= 2, f(−7)&nbsp;= 3), the output keeps growing without limit, so the range is <b>f(x)&nbsp;≥&nbsp;0</b>.</li>
+    </ol></div>
+  <figure>
+    <svg viewBox="0 0 700 320" aria-label="Graph of y equals the square root of 2 minus x. It starts at (2, 0) and rises slowly to the left through (minus 2, 2) and (minus 7, 3). The domain is marked on the x-axis and the range on the y-axis">
+<g stroke="#D6DCD8" stroke-width="1">
+<line x1="77.8" y1="15" x2="77.8" y2="300"/>
+<line x1="135.5" y1="15" x2="135.5" y2="300"/>
+<line x1="193.3" y1="15" x2="193.3" y2="300"/>
+<line x1="251.0" y1="15" x2="251.0" y2="300"/>
+<line x1="308.8" y1="15" x2="308.8" y2="300"/>
+<line x1="366.6" y1="15" x2="366.6" y2="300"/>
+<line x1="424.3" y1="15" x2="424.3" y2="300"/>
+<line x1="539.8" y1="15" x2="539.8" y2="300"/>
+<line x1="597.6" y1="15" x2="597.6" y2="300"/>
+<line x1="655.3" y1="15" x2="655.3" y2="300"/>
+<line x1="20" y1="191.7" x2="690" y2="191.7"/>
+<line x1="20" y1="134.7" x2="690" y2="134.7"/>
+<line x1="20" y1="77.7" x2="690" y2="77.7"/>
+<line x1="20" y1="20.7" x2="690" y2="20.7"/>
+</g>
+<g stroke="#1E2A33" stroke-width="1.8"><line x1="20" y1="248.7" x2="690" y2="248.7"/><line x1="482.1" y1="15" x2="482.1" y2="300"/></g>
+<g fill="#1E2A33"><path d="M690,248.7 l-10,-5 v10 z"/><path d="M482.1,15 l-5,10 h10 z"/></g>
+<g font-family="Arial" font-size="22" fill="#4A5862" text-anchor="middle">
+<text x="77.8" y="274.7">−7</text>
+<text x="135.5" y="274.7">−6</text>
+<text x="193.3" y="274.7">−5</text>
+<text x="251.0" y="274.7">−4</text>
+<text x="308.8" y="274.7">−3</text>
+<text x="366.6" y="274.7">−2</text>
+<text x="424.3" y="274.7">−1</text>
+<text x="539.8" y="274.7">1</text>
+<text x="597.6" y="274.7">2</text>
+<text x="655.3" y="274.7">3</text>
+</g>
+<g font-family="Arial" font-size="22" fill="#4A5862" text-anchor="end">
+<text x="475.1" y="199.4">1</text>
+<text x="475.1" y="142.4">2</text>
+<text x="475.1" y="85.4">3</text>
+<text x="475.1" y="28.4">4</text>
+</g>
+<g font-family="Arial" font-size="24" font-style="italic" fill="#1E2A33"><text x="686" y="238.7" text-anchor="end">x</text><text x="492.1" y="33">y</text></g>
+<line x1="31.6" y1="248.7" x2="597.6" y2="248.7" stroke="#2F47A6" stroke-width="7"/>
+<line x1="482.1" y1="248.7" x2="482.1" y2="26.4" stroke="#B8761A" stroke-width="7"/>
+<polyline points="597.6,248.7 597.6,247.8 597.5,246.9 597.5,246.0 597.4,245.1 597.2,244.2 597.1,243.3 596.9,242.5 596.7,241.6 596.4,240.7 596.2,239.8 595.9,238.9 595.5,238.0 595.2,237.1 594.8,236.2 594.4,235.3 594.0,234.4 593.5,233.5 593.0,232.6 592.5,231.7 591.9,230.9 591.3,230.0 590.7,229.1 590.1,228.2 589.4,227.3 588.7,226.4 588.0,225.5 587.3,224.6 586.5,223.7 585.7,222.8 584.9,221.9 584.0,221.0 583.1,220.1 582.2,219.3 581.2,218.4 580.3,217.5 579.2,216.6 578.2,215.7 577.2,214.8 576.1,213.9 574.9,213.0 573.8,212.1 572.6,211.2 571.4,210.3 570.2,209.4 568.9,208.6 567.6,207.7 566.3,206.8 565.0,205.9 563.6,205.0 562.2,204.1 560.8,203.2 559.3,202.3 557.8,201.4 556.3,200.5 554.8,199.6 553.2,198.7 551.6,197.8 550.0,197.0 548.3,196.1 546.6,195.2 544.9,194.3 543.2,193.4 541.4,192.5 539.6,191.6 537.8,190.7 535.9,189.8 534.1,188.9 532.2,188.0 530.2,187.1 528.2,186.2 526.3,185.4 524.2,184.5 522.2,183.6 520.1,182.7 518.0,181.8 515.9,180.9 513.7,180.0 511.5,179.1 509.3,178.2 507.0,177.3 504.7,176.4 502.4,175.5 500.1,174.6 497.7,173.8 495.3,172.9 492.9,172.0 490.5,171.1 488.0,170.2 485.5,169.3 483.0,168.4 480.4,167.5 477.8,166.6 475.2,165.7 472.5,164.8 469.9,163.9 467.2,163.0 464.4,162.2 461.7,161.3 458.9,160.4 456.1,159.5 453.2,158.6 450.4,157.7 447.5,156.8 444.5,155.9 441.6,155.0 438.6,154.1 435.6,153.2 432.5,152.3 429.5,151.5 426.4,150.6 423.2,149.7 420.1,148.8 416.9,147.9 413.7,147.0 410.4,146.1 407.2,145.2 403.9,144.3 400.5,143.4 397.2,142.5 393.8,141.6 390.4,140.7 387.0,139.9 383.5,139.0 380.0,138.1 376.5,137.2 372.9,136.3 369.3,135.4 365.7,134.5 362.1,133.6 358.4,132.7 354.7,131.8 351.0,130.9 347.3,130.0 343.5,129.1 339.7,128.3 335.9,127.4 332.0,126.5 328.1,125.6 324.2,124.7 320.2,123.8 316.3,122.9 312.2,122.0 308.2,121.1 304.2,120.2 300.1,119.3 295.9,118.4 291.8,117.5 287.6,116.7 283.4,115.8 279.2,114.9 274.9,114.0 270.6,113.1 266.3,112.2 262.0,111.3 257.6,110.4 253.2,109.5 248.8,108.6 244.3,107.7 239.8,106.8 235.3,105.9 230.8,105.1 226.2,104.2 221.6,103.3 217.0,102.4 212.3,101.5 207.6,100.6 202.9,99.7 198.2,98.8 193.4,97.9 188.6,97.0 183.8,96.1 178.9,95.2 174.1,94.4 169.2,93.5 164.2,92.6 159.2,91.7 154.3,90.8 149.2,89.9 144.2,89.0 139.1,88.1 134.0,87.2 128.9,86.3 123.7,85.4 118.5,84.5 113.3,83.6 108.0,82.8 102.7,81.9 97.4,81.0 92.1,80.1 86.7,79.2 81.3,78.3 75.9,77.4 70.5,76.5 65.0,75.6 59.5,74.7 54.0,73.8 48.4,72.9 42.8,72.0 37.2,71.2 31.6,70.3" fill="none" stroke="#1E2A33" stroke-width="3"/>
+<circle cx="597.6" cy="248.7" r="5.5" fill="#1E2A33" stroke="#1E2A33" stroke-width="2"/>
+<circle cx="539.8" cy="191.7" r="5.5" fill="#1E2A33" stroke="#1E2A33" stroke-width="2"/>
+<circle cx="366.6" cy="134.7" r="5.5" fill="#1E2A33" stroke="#1E2A33" stroke-width="2"/>
+<circle cx="77.8" cy="77.7" r="5.5" fill="#1E2A33" stroke="#1E2A33" stroke-width="2"/>
+<circle cx="597.6" cy="248.7" r="7" fill="#2F47A6" stroke="#2F47A6" stroke-width="2"/>
+<text x="605.6" y="236.7" font-family="Arial" font-size="22" fill="#1E2A33" text-anchor="start">(2, 0)</text>
+<text x="366.6" y="118.7" font-family="Arial" font-size="22" fill="#1E2A33" text-anchor="middle">(−2, 2)</text>
+<text x="77.8" y="61.7" font-family="Arial" font-size="22" fill="#1E2A33" text-anchor="middle">(−7, 3)</text>
+<text x="222.2" y="234.7" font-family="Arial" font-size="24" fill="#2F47A6" text-anchor="middle" font-weight="bold">domain</text>
+<text x="496.1" y="100.5" font-family="Arial" font-size="24" fill="#B8761A" text-anchor="start" font-weight="bold">range</text>
+    </svg>
+    <div class="keyrow"><span><span class="sw" style="background:#2F47A6"></span>domain x&nbsp;≤&nbsp;2: the part of the x-axis the graph sits above</span><span><span class="sw" style="background:#B8761A"></span>range f(x)&nbsp;≥&nbsp;0: the part of the y-axis the graph reaches</span></div>
+    <figcaption>The guide says "a graph is helpful in visualizing the range": read the domain off the x-axis and the range off the y-axis. The end point (2, 0) is included, so it is a solid dot.</figcaption>
+  </figure>
+
+  <div class="worked"><b>Worked example 2: a domain that is given (<a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">pack Medium 4</a>).</b> f(x)&nbsp;= −6x&nbsp;−&nbsp;3 for −5&nbsp;≤&nbsp;x&nbsp;≤&nbsp;3. Find f(2), the x with f(x)&nbsp;= 15, the range of f and the domain of f<sup>−1</sup>.
+    <ol>
+      <li>f(2)&nbsp;= −6&nbsp;×&nbsp;2&nbsp;−&nbsp;3&nbsp;= <b>−15</b>.</li>
+      <li>−6x&nbsp;−&nbsp;3&nbsp;= 15, so −6x&nbsp;= 18 and <b>x&nbsp;= −3</b>. It is inside the domain, so it counts.</li>
+      <li>The graph is a straight line with a negative gradient, so the outputs run between the values at the two ends: f(−5)&nbsp;= 30&nbsp;−&nbsp;3&nbsp;= 27 and f(3)&nbsp;= −18&nbsp;−&nbsp;3&nbsp;= −21.</li>
+      <li>Both ends are included (≤), so the range is <b>−21&nbsp;≤&nbsp;f(x)&nbsp;≤&nbsp;27</b>, smallest value first.</li>
+      <li>The domain of f<sup>−1</sup> is the range of f: <b>−21&nbsp;≤&nbsp;x&nbsp;≤&nbsp;27</b>.</li>
+    </ol></div>
+
+  <h3>A function as a model</h3>
+  <div class="worked"><b>Worked example 3 (<a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">pack Hard 1</a>).</b> A square with side x has perimeter P&nbsp;= 4x and area A&nbsp;= x<sup>2</sup>. Write P in terms of A and A in terms of P. Then, given that P<sup>−1</sup>(40)&nbsp;= A(k), find k.
+    <ol>
+      <li>From A&nbsp;= x<sup>2</sup>: x&nbsp;= √A (a length is positive). So <b>P&nbsp;= 4√A</b>.</li>
+      <li>From P&nbsp;= 4x: x&nbsp;= <span class="frac"><span>P</span><span>4</span></span>. So <b>A&nbsp;= <span class="frac"><span>P<sup>2</sup></span><span>16</span></span></b>.</li>
+      <li>P<sup>−1</sup>(40) is the area that gives a perimeter of 40: 4√A&nbsp;= 40, so √A&nbsp;= 10 and A&nbsp;= 100.</li>
+      <li>A(k)&nbsp;= <span class="frac"><span>k<sup>2</sup></span><span>16</span></span>&nbsp;= 100, so k<sup>2</sup>&nbsp;= 1600 and <b>k&nbsp;= 40</b> (a perimeter is positive, so not −40).</li>
+      <li>Why the answer is 40 again: A(P) undoes P(A), so P<sup>−1</sup> is the function A. That is what an inverse is.</li>
+    </ol></div>
+
+  <h3>The inverse function: undo, and reflect in y&nbsp;= x</h3>
+  <p>f(x)&nbsp;= 2x&nbsp;+&nbsp;3 means "double, then add 3". To undo it, do the opposite operations in the opposite order: "subtract 3, then halve", so <span class="nw">f<sup>−1</sup>(x)&nbsp;= <span class="frac"><span>x&nbsp;−&nbsp;3</span><span>2</span></span></span>. f(4)&nbsp;= 11 and f<sup>−1</sup>(11)&nbsp;= 4.</p>
+  <p>The guide's example <span class="learn">Learn</span>: <b>solving f(x)&nbsp;= 10 is the same as finding f<sup>−1</sup>(10)</b>. Here 2x&nbsp;+&nbsp;3&nbsp;= 10 gives x&nbsp;= 3.5, and f<sup>−1</sup>(10)&nbsp;= <span class="frac"><span>10&nbsp;−&nbsp;3</span><span>2</span></span>&nbsp;= 3.5. You do not need the whole inverse to find one value of it.</p>
+  <p>Inputs and outputs swap, so every point (a, b) on y&nbsp;= f(x) becomes (b, a) on y&nbsp;= f<sup>−1</sup>(x). Swapping the coordinates is a <b>reflection in the line y&nbsp;= x</b> <span class="learn">Learn</span>: look at the banner, where (3, 7) on f matches (7, 3) on f<sup>−1</sup>. The same swap gives <span class="learn">Learn</span>: <b>domain of f<sup>−1</sup>&nbsp;= range of f</b>, and range of f<sup>−1</sup>&nbsp;= domain of f.</p>
+  <p>An inverse exists only for a <b>one-to-one</b> function. f(x)&nbsp;= x<sup>2</sup> on all real numbers has f(−2)&nbsp;= f(2)&nbsp;= 4, so "undo 4" has two answers and there is no inverse. Restrict the domain to x&nbsp;≥&nbsp;0 and the inverse is √x.</p>
+
+  <div class="tip"><b>Exam traps.</b> (1) Writing the range with x ("x&nbsp;≥&nbsp;0"): the mark scheme does not accept it. (2) Strict or not, for a straight-line function: if the domain has &lt;, the matching end of the range has&nbsp;&lt;&nbsp;too; if it has ≤, keep ≤. (3) Range of a decreasing function: put the smaller value first, −21&nbsp;≤&nbsp;f(x)&nbsp;≤&nbsp;27, not 27&nbsp;≤&nbsp;f(x)&nbsp;≤&nbsp;−21. (4) f<sup>−1</sup>(x) is not <span class="frac"><span>1</span><span>f(x)</span></span>. (5) Forgetting that a solution must lie in the domain.</div>
+
+  <details><summary>Self-check SL 2.2 (answer on paper, then open)</summary>
+    <ol>
+      <li>A table gives f(−2)&nbsp;= −12, f(0)&nbsp;= −4 and f(3)&nbsp;= 8. Find f<sup>−1</sup>(8). Given that f is linear, find f(x). (<a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">pack Easy 4(a) and (c)</a>)</li>
+      <li>f(x)&nbsp;= <span class="frac"><span>5&nbsp;−&nbsp;x<sup>2</sup></span><span>3</span></span> and g(x)&nbsp;= 4&nbsp;−&nbsp;<span class="frac"><span>3</span><span>x</span></span>, each with its largest possible domain. Write down the range of f, and the domain and range of g. (<a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">pack Medium 6(a) and (b)</a>)</li>
+      <li>f(x)&nbsp;= √(x&nbsp;−&nbsp;14) for x&nbsp;≥&nbsp;14. Find f<sup>−1</sup>(2). (<a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">pack Hard 2(a)</a>)</li>
+      <li>Find the largest possible domain and the range of h(x)&nbsp;= √(x&nbsp;+&nbsp;3).</li>
+    </ol>
+    <p><b>Answers.</b> 1: f(3)&nbsp;= 8, so f<sup>−1</sup>(8)&nbsp;= 3. Gradient through (0, −4) and (3, 8) is <span class="frac"><span>12</span><span>3</span></span>&nbsp;= 4, so f(x)&nbsp;= 4x&nbsp;−&nbsp;4 (check: 4&nbsp;×&nbsp;(−2)&nbsp;−&nbsp;4&nbsp;= −12). 2: x<sup>2</sup>&nbsp;≥&nbsp;0, so the largest value of f is f(0)&nbsp;= <span class="frac"><span>5</span><span>3</span></span>: range f(x)&nbsp;≤&nbsp;<span class="frac"><span>5</span><span>3</span></span>. g: domain x ≠ 0; <span class="frac"><span>3</span><span>x</span></span> can be any number except 0, so the range is g(x) ≠ 4. 3: solve √(x&nbsp;−&nbsp;14)&nbsp;= 2: x&nbsp;−&nbsp;14&nbsp;= 4, so f<sup>−1</sup>(2)&nbsp;= 18. 4: x&nbsp;+&nbsp;3&nbsp;≥&nbsp;0 gives x&nbsp;≥&nbsp;−3; range h(x)&nbsp;≥&nbsp;0.</p>
+  </details>
+</section>
+
+<!-- =============================== SL 2.3 =============================== -->
+<section class="topic" id="s23">
+  <div class="kicker">SL 2.3 (school 2.3)</div>
+  <h2>The graph of a function</h2>
+  <p class="guiding">A graph is the function drawn: every point on it is an input and its output.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="s1"><span>Use the graph of a function and its equation y&nbsp;= f(x)</span></label>
+    <label><input type="checkbox" data-k="s2"><span>Create a sketch from given information or a context, including transferring a graph from screen to paper, with the axes and key features labelled, and know the difference between "draw" and "sketch"</span></label>
+    <label><input type="checkbox" data-k="s3"><span>Use technology to graph functions, including their sums and differences</span></label>
+  </div>
+
+  <p>The point (a, b) lies on the graph of y&nbsp;= f(x) exactly when f(a)&nbsp;= b. Example: (3, 5) is on y&nbsp;= x<sup>2</sup>&nbsp;−&nbsp;4 because 9&nbsp;−&nbsp;4&nbsp;= 5; (1, 2) is not, because 1&nbsp;−&nbsp;4&nbsp;= −3.</p>
+
+  <h3>Draw or sketch? <span class="learn">Learn</span></h3>
+  <div class="tablewrap"><table>
+    <tr><th>Command term</th><th>What the IB means</th></tr>
+    <tr><td><b>Draw</b></td><td>An accurate, labelled graph in pencil: to scale, points plotted correctly, a ruler for straight lines, joined by a straight line or a smooth curve.</td></tr>
+    <tr><td><b>Sketch</b></td><td>The general shape, labelled as appropriate, with the relevant features. Not to scale, but the features must be in the right places.</td></tr>
+  </table></div>
+  <p>A sketch must still show <span class="learn">Learn</span>: labelled axes; intercepts with their coordinates; maximum and minimum points; asymptotes as dashed lines with their equations; end points if the domain is restricted (solid dot if included, open dot if not); and the right shape at both ends. When you copy a graph from the GDC screen to paper, note the window you used and read the key points with the GDC tools (zero, minimum, maximum, intersect) before you copy.</p>
+
+  <div class="worked"><b>Worked example 1: a sketch from information.</b> A quadratic function has zeros at x&nbsp;= −1 and x&nbsp;= 3 and a maximum point at (1, 4). Find f(x) and sketch y&nbsp;= f(x).
+    <ol>
+      <li>Zeros at −1 and 3 mean f(x)&nbsp;= a(x&nbsp;+&nbsp;1)⁠(x&nbsp;−&nbsp;3) for some a.</li>
+      <li>Use the maximum: f(1)&nbsp;= a(2)⁠(−2)&nbsp;= −4a&nbsp;= 4, so a&nbsp;= −1.</li>
+      <li>f(x)&nbsp;= −(x&nbsp;+&nbsp;1)⁠(x&nbsp;−&nbsp;3)&nbsp;= <b>−x<sup>2</sup>&nbsp;+&nbsp;2x&nbsp;+&nbsp;3</b>. The y-intercept is f(0)&nbsp;= 3.</li>
+      <li>a&nbsp;&lt;&nbsp;0, so the parabola opens downwards. Mark and label (−1, 0), (3, 0), (0, 3) and (1, 4), and draw a smooth curve symmetric about x&nbsp;= 1.</li>
+    </ol></div>
+  <figure>
+    <svg viewBox="0 0 700 340" aria-label="A sketch of the downward parabola y equals minus x squared plus 2x plus 3 with the points (minus 1, 0), (3, 0), (0, 3) and (1, 4) labelled and the axis of symmetry x equals 1 dashed">
+<g stroke="#1E2A33" stroke-width="1.8"><line x1="20" y1="206.7" x2="690" y2="206.7"/><line x1="261.9" y1="15" x2="261.9" y2="330"/></g>
+<g fill="#1E2A33"><path d="M690,206.7 l-10,-5 v10 z"/><path d="M261.9,15 l-5,10 h10 z"/></g>
+<g font-family="Arial" font-size="22" fill="#4A5862" text-anchor="middle">
+</g>
+<g font-family="Arial" font-size="22" fill="#4A5862" text-anchor="end">
+</g>
+<g font-family="Arial" font-size="24" font-style="italic" fill="#1E2A33"><text x="686" y="196.7" text-anchor="end">x</text><text x="271.9" y="33">y</text></g>
+<polyline points="89.8,347.9 92.4,342.4 95.1,336.9 97.7,331.5 100.4,326.1 103.1,320.8 105.7,315.5 108.4,310.3 111.0,305.2 113.7,300.1 116.3,295.0 119.0,290.1 121.6,285.1 124.3,280.3 126.9,275.5 129.6,270.7 132.2,266.0 134.9,261.4 137.5,256.8 140.2,252.2 142.8,247.8 145.5,243.3 148.1,239.0 150.8,234.7 153.4,230.4 156.1,226.2 158.7,222.1 161.4,218.0 164.1,214.0 166.7,210.0 169.4,206.1 172.0,202.2 174.7,198.4 177.3,194.6 180.0,190.9 182.6,187.3 185.3,183.7 187.9,180.2 190.6,176.7 193.2,173.3 195.9,169.9 198.5,166.6 201.2,163.3 203.8,160.1 206.5,157.0 209.1,153.9 211.8,150.9 214.4,147.9 217.1,145.0 219.7,142.1 222.4,139.3 225.0,136.6 227.7,133.9 230.4,131.2 233.0,128.6 235.7,126.1 238.3,123.6 241.0,121.2 243.6,118.8 246.3,116.5 248.9,114.3 251.6,112.1 254.2,109.9 256.9,107.9 259.5,105.8 262.2,103.9 264.8,101.9 267.5,100.1 270.1,98.3 272.8,96.5 275.4,94.8 278.1,93.2 280.7,91.6 283.4,90.1 286.0,88.6 288.7,87.2 291.4,85.8 294.0,84.5 296.7,83.2 299.3,82.0 302.0,80.9 304.6,79.8 307.3,78.8 309.9,77.8 312.6,76.9 315.2,76.0 317.9,75.2 320.5,74.5 323.2,73.8 325.8,73.1 328.5,72.6 331.1,72.0 333.8,71.6 336.4,71.1 339.1,70.8 341.7,70.5 344.4,70.2 347.0,70.0 349.7,69.9 352.3,69.8 355.0,69.8 357.7,69.8 360.3,69.9 363.0,70.0 365.6,70.2 368.3,70.5 370.9,70.8 373.6,71.1 376.2,71.6 378.9,72.0 381.5,72.6 384.2,73.1 386.8,73.8 389.5,74.5 392.1,75.2 394.8,76.0 397.4,76.9 400.1,77.8 402.7,78.8 405.4,79.8 408.0,80.9 410.7,82.0 413.3,83.2 416.0,84.5 418.7,85.8 421.3,87.2 424.0,88.6 426.6,90.1 429.3,91.6 431.9,93.2 434.6,94.8 437.2,96.5 439.9,98.3 442.5,100.1 445.2,101.9 447.8,103.9 450.5,105.8 453.1,107.9 455.8,109.9 458.4,112.1 461.1,114.3 463.7,116.5 466.4,118.8 469.0,121.2 471.7,123.6 474.3,126.1 477.0,128.6 479.6,131.2 482.3,133.9 485.0,136.6 487.6,139.3 490.3,142.1 492.9,145.0 495.6,147.9 498.2,150.9 500.9,153.9 503.5,157.0 506.2,160.1 508.8,163.3 511.5,166.6 514.1,169.9 516.8,173.3 519.4,176.7 522.1,180.2 524.7,183.7 527.4,187.3 530.0,190.9 532.7,194.6 535.3,198.4 538.0,202.2 540.6,206.1 543.3,210.0 546.0,214.0 548.6,218.0 551.3,222.1 553.9,226.2 556.6,230.4 559.2,234.7 561.9,239.0 564.5,243.3 567.2,247.8 569.8,252.2 572.5,256.8 575.1,261.4 577.8,266.0 580.4,270.7 583.1,275.5 585.7,280.3 588.4,285.1 591.0,290.1 593.7,295.0 596.3,300.1 599.0,305.2 601.6,310.3 604.3,315.5 606.9,320.8 609.6,326.1 612.3,331.5 614.9,336.9 617.6,342.4 620.2,347.9" fill="none" stroke="#2F47A6" stroke-width="3"/>
+<line x1="355.0" y1="323.2" x2="355.0" y2="25.3" stroke="#4A5862" stroke-width="1.5" stroke-dasharray="6 5"/>
+<circle cx="168.9" cy="206.7" r="6" fill="#2F47A6" stroke="#2F47A6" stroke-width="2"/>
+<circle cx="541.1" cy="206.7" r="6" fill="#2F47A6" stroke="#2F47A6" stroke-width="2"/>
+<circle cx="261.9" cy="104.0" r="6" fill="#2F47A6" stroke="#2F47A6" stroke-width="2"/>
+<circle cx="355.0" cy="69.8" r="6" fill="#2F47A6" stroke="#2F47A6" stroke-width="2"/>
+<text x="160.9" y="194.7" font-family="Arial" font-size="22" fill="#1E2A33" text-anchor="end">(−1, 0)</text>
+<text x="551.1" y="194.7" font-family="Arial" font-size="22" fill="#1E2A33" text-anchor="start">(3, 0)</text>
+<text x="251.9" y="96.0" font-family="Arial" font-size="22" fill="#1E2A33" text-anchor="end">(0, 3)</text>
+<text x="367.0" y="61.8" font-family="Arial" font-size="22" fill="#1E2A33" text-anchor="start">(1, 4)</text>
+<text x="363.0" y="329.2" font-family="Arial" font-size="22" fill="#4A5862" text-anchor="start">x = 1</text>
+    </svg>
+    <figcaption>This is what a full-mark sketch looks like: no grid or scale needed, but every key point is labelled with its coordinates and the shape is right.</figcaption>
+  </figure>
+
+  <h3>Sums and differences of functions</h3>
+  <p>(f&nbsp;+&nbsp;g)⁠(x) means f(x)&nbsp;+&nbsp;g(x): at each x, add the two heights. (f&nbsp;−&nbsp;g)⁠(x)&nbsp;= f(x)&nbsp;−&nbsp;g(x). On the GDC, enter f in Y1 and g in Y2, then Y3&nbsp;= Y1&nbsp;−&nbsp;Y2.</p>
+  <div class="worked"><b>Worked example 2.</b> f(x)&nbsp;= x<sup>2</sup> and g(x)&nbsp;= 2x. Make a table of f&nbsp;−&nbsp;g and sketch it with f and g.
+    <div class="tablewrap"><table style="margin:8px 0">
+      <tr><th>x</th><td class="c">−1</td><td class="c">0</td><td class="c">1</td><td class="c">2</td><td class="c">3</td></tr>
+      <tr><th>f(x)&nbsp;= x<sup>2</sup></th><td class="c">1</td><td class="c">0</td><td class="c">1</td><td class="c">4</td><td class="c">9</td></tr>
+      <tr><th>g(x)&nbsp;= 2x</th><td class="c">−2</td><td class="c">0</td><td class="c">2</td><td class="c">4</td><td class="c">6</td></tr>
+      <tr><th>(f&nbsp;−&nbsp;g)⁠(x)</th><td class="c">3</td><td class="c">0</td><td class="c">−1</td><td class="c">0</td><td class="c">3</td></tr>
+    </table></div>
+    <ol>
+      <li>(f&nbsp;−&nbsp;g)⁠(x)&nbsp;= x<sup>2</sup>&nbsp;−&nbsp;2x, a parabola with zeros at 0 and 2 and minimum (1, −1).</li>
+      <li>f&nbsp;−&nbsp;g is zero exactly where f and g are equal: the graphs of f and g cross at x&nbsp;= 0 and x&nbsp;= 2. This is the link to intersections in SL 2.4.</li>
+      <li>f&nbsp;−&nbsp;g is negative for 0&nbsp;&lt;&nbsp;x&nbsp;&lt;&nbsp;2, where the line g is above the curve f.</li>
+    </ol></div>
+  <figure>
+    <svg viewBox="0 0 700 345" aria-label="Graphs of y equals x squared, y equals 2x, and their difference x squared minus 2x. f and g cross at (0, 0) and (2, 4), where f minus g is zero">
+<g stroke="#D6DCD8" stroke-width="1">
+<line x1="97.3" y1="15" x2="97.3" y2="330"/>
+<line x1="355.0" y1="15" x2="355.0" y2="330"/>
+<line x1="612.7" y1="15" x2="612.7" y2="330"/>
+<line x1="20" y1="315.5" x2="690" y2="315.5"/>
+<line x1="20" y1="218.5" x2="690" y2="218.5"/>
+<line x1="20" y1="170.1" x2="690" y2="170.1"/>
+<line x1="20" y1="121.6" x2="690" y2="121.6"/>
+<line x1="20" y1="73.2" x2="690" y2="73.2"/>
+<line x1="20" y1="24.7" x2="690" y2="24.7"/>
+</g>
+<g stroke="#1E2A33" stroke-width="1.8"><line x1="20" y1="267.0" x2="690" y2="267.0"/><line x1="226.2" y1="15" x2="226.2" y2="330"/></g>
+<g fill="#1E2A33"><path d="M690,267.0 l-10,-5 v10 z"/><path d="M226.2,15 l-5,10 h10 z"/></g>
+<g font-family="Arial" font-size="22" fill="#4A5862" text-anchor="middle">
+<text x="97.3" y="293.0">−1</text>
+<text x="355.0" y="293.0">1</text>
+<text x="612.7" y="293.0">3</text>
+</g>
+<g font-family="Arial" font-size="22" fill="#4A5862" text-anchor="end">
+<text x="219.2" y="323.2">−2</text>
+<text x="219.2" y="226.2">2</text>
+<text x="219.2" y="177.8">4</text>
+<text x="219.2" y="129.3">6</text>
+<text x="219.2" y="80.9">8</text>
+<text x="219.2" y="32.4">10</text>
+</g>
+<g font-family="Arial" font-size="24" font-style="italic" fill="#1E2A33"><text x="686" y="257.0" text-anchor="end">x</text><text x="236.2" y="33">y</text></g>
+<polyline points="20.0,205.0 23.1,206.8 26.2,208.6 29.3,210.4 32.4,212.2 35.5,213.9 38.6,215.6 41.6,217.3 44.7,219.0 47.8,220.6 50.9,222.2 54.0,223.8 57.1,225.3 60.2,226.8 63.3,228.3 66.4,229.7 69.5,231.2 72.6,232.6 75.7,233.9 78.8,235.3 81.8,236.6 84.9,237.9 88.0,239.2 91.1,240.4 94.2,241.6 97.3,242.8 100.4,243.9 103.5,245.0 106.6,246.1 109.7,247.2 112.8,248.2 115.9,249.2 119.0,250.2 122.0,251.2 125.1,252.1 128.2,253.0 131.3,253.9 134.4,254.7 137.5,255.5 140.6,256.3 143.7,257.1 146.8,257.8 149.9,258.5 153.0,259.2 156.1,259.8 159.2,260.4 162.2,261.0 165.3,261.6 168.4,262.1 171.5,262.6 174.6,263.1 177.7,263.6 180.8,264.0 183.9,264.4 187.0,264.8 190.1,265.1 193.2,265.4 196.3,265.7 199.4,266.0 202.4,266.2 205.5,266.4 208.6,266.6 211.7,266.7 214.8,266.8 217.9,266.9 221.0,267.0 224.1,267.0 227.2,267.0 230.3,267.0 233.4,266.9 236.5,266.8 239.6,266.7 242.6,266.6 245.7,266.4 248.8,266.2 251.9,266.0 255.0,265.8 258.1,265.5 261.2,265.2 264.3,264.9 267.4,264.5 270.5,264.1 273.6,263.7 276.7,263.3 279.8,262.8 282.8,262.3 285.9,261.8 289.0,261.2 292.1,260.6 295.2,260.0 298.3,259.4 301.4,258.7 304.5,258.0 307.6,257.3 310.7,256.6 313.8,255.8 316.9,255.0 320.0,254.2 323.0,253.3 326.1,252.4 329.2,251.5 332.3,250.5 335.4,249.6 338.5,248.6 341.6,247.5 344.7,246.5 347.8,245.4 350.9,244.3 354.0,243.2 357.1,242.0 360.2,240.8 363.2,239.6 366.3,238.3 369.4,237.0 372.5,235.7 375.6,234.4 378.7,233.0 381.8,231.6 384.9,230.2 388.0,228.8 391.1,227.3 394.2,225.8 397.3,224.3 400.4,222.7 403.4,221.1 406.5,219.5 409.6,217.9 412.7,216.2 415.8,214.5 418.9,212.8 422.0,211.0 425.1,209.2 428.2,207.4 431.3,205.6 434.4,203.7 437.5,201.8 440.6,199.9 443.6,198.0 446.7,196.0 449.8,194.0 452.9,191.9 456.0,189.9 459.1,187.8 462.2,185.7 465.3,183.5 468.4,181.4 471.5,179.2 474.6,176.9 477.7,174.7 480.8,172.4 483.8,170.1 486.9,167.7 490.0,165.4 493.1,163.0 496.2,160.5 499.3,158.1 502.4,155.6 505.5,153.1 508.6,150.6 511.7,148.0 514.8,145.4 517.9,142.8 521.0,140.2 524.0,137.5 527.1,134.8 530.2,132.0 533.3,129.3 536.4,126.5 539.5,123.7 542.6,120.8 545.7,118.0 548.8,115.1 551.9,112.1 555.0,109.2 558.1,106.2 561.2,103.2 564.2,100.2 567.3,97.1 570.4,94.0 573.5,90.9 576.6,87.7 579.7,84.6 582.8,81.3 585.9,78.1 589.0,74.9 592.1,71.6 595.2,68.2 598.3,64.9 601.4,61.5 604.4,58.1 607.5,54.7 610.6,51.2 613.7,47.8 616.8,44.2 619.9,40.7 623.0,37.1 626.1,33.5 629.2,29.9 632.3,26.3 635.4,22.6 638.5,18.9" fill="none" stroke="#2F47A6" stroke-width="3"/>
+<polyline points="65.1,327.6 68.2,326.4 71.3,325.2 74.5,324.1 77.6,322.9 80.7,321.7 83.8,320.5 87.0,319.4 90.1,318.2 93.2,317.0 96.3,315.8 99.5,314.6 102.6,313.5 105.7,312.3 108.8,311.1 112.0,309.9 115.1,308.8 118.2,307.6 121.3,306.4 124.5,305.2 127.6,304.1 130.7,302.9 133.8,301.7 137.0,300.5 140.1,299.4 143.2,298.2 146.3,297.0 149.5,295.8 152.6,294.7 155.7,293.5 158.8,292.3 162.0,291.1 165.1,290.0 168.2,288.8 171.3,287.6 174.5,286.4 177.6,285.3 180.7,284.1 183.8,282.9 187.0,281.7 190.1,280.6 193.2,279.4 196.3,278.2 199.5,277.0 202.6,275.9 205.7,274.7 208.8,273.5 211.9,272.3 215.1,271.2 218.2,270.0 221.3,268.8 224.4,267.6 227.6,266.5 230.7,265.3 233.8,264.1 236.9,262.9 240.1,261.8 243.2,260.6 246.3,259.4 249.4,258.2 252.6,257.1 255.7,255.9 258.8,254.7 261.9,253.5 265.1,252.4 268.2,251.2 271.3,250.0 274.4,248.8 277.6,247.7 280.7,246.5 283.8,245.3 286.9,244.1 290.1,243.0 293.2,241.8 296.3,240.6 299.4,239.4 302.6,238.3 305.7,237.1 308.8,235.9 311.9,234.7 315.1,233.6 318.2,232.4 321.3,231.2 324.4,230.0 327.6,228.9 330.7,227.7 333.8,226.5 336.9,225.3 340.1,224.2 343.2,223.0 346.3,221.8 349.4,220.6 352.6,219.5 355.7,218.3 358.8,217.1 361.9,215.9 365.1,214.8 368.2,213.6 371.3,212.4 374.4,211.2 377.5,210.1 380.7,208.9 383.8,207.7 386.9,206.5 390.0,205.4 393.2,204.2 396.3,203.0 399.4,201.8 402.5,200.7 405.7,199.5 408.8,198.3 411.9,197.1 415.0,196.0 418.2,194.8 421.3,193.6 424.4,192.4 427.5,191.3 430.7,190.1 433.8,188.9 436.9,187.7 440.0,186.6 443.2,185.4 446.3,184.2 449.4,183.0 452.5,181.9 455.7,180.7 458.8,179.5 461.9,178.3 465.0,177.2 468.2,176.0 471.3,174.8 474.4,173.6 477.5,172.5 480.7,171.3 483.8,170.1 486.9,168.9 490.0,167.8 493.2,166.6 496.3,165.4 499.4,164.2 502.5,163.0 505.7,161.9 508.8,160.7 511.9,159.5 515.0,158.3 518.2,157.2 521.3,156.0 524.4,154.8 527.5,153.6 530.6,152.5 533.8,151.3 536.9,150.1 540.0,148.9 543.1,147.8 546.3,146.6 549.4,145.4 552.5,144.2 555.6,143.1 558.8,141.9 561.9,140.7 565.0,139.5 568.1,138.4 571.3,137.2 574.4,136.0 577.5,134.8 580.6,133.7 583.8,132.5 586.9,131.3 590.0,130.1 593.1,129.0 596.3,127.8 599.4,126.6 602.5,125.4 605.6,124.3 608.8,123.1 611.9,121.9 615.0,120.7 618.1,119.6 621.3,118.4 624.4,117.2 627.5,116.0 630.6,114.9 633.8,113.7 636.9,112.5 640.0,111.3 643.1,110.2 646.3,109.0 649.4,107.8 652.5,106.6 655.6,105.5 658.8,104.3 661.9,103.1 665.0,101.9 668.1,100.8 671.3,99.6 674.4,98.4 677.5,97.2 680.6,96.1 683.8,94.9 686.9,93.7 690.0,92.5" fill="none" stroke="#B8761A" stroke-width="3"/>
+<polyline points="20.0,127.4 23.4,130.7 26.7,133.9 30.1,137.1 33.4,140.3 36.7,143.4 40.1,146.5 43.4,149.6 46.8,152.6 50.1,155.6 53.5,158.6 56.9,161.5 60.2,164.4 63.6,167.3 66.9,170.1 70.3,172.9 73.6,175.7 76.9,178.4 80.3,181.1 83.7,183.8 87.0,186.4 90.4,189.0 93.7,191.6 97.1,194.1 100.4,196.6 103.8,199.1 107.1,201.5 110.5,203.9 113.8,206.3 117.1,208.7 120.5,211.0 123.8,213.2 127.2,215.5 130.5,217.7 133.9,219.9 137.2,222.0 140.6,224.1 143.9,226.2 147.3,228.3 150.7,230.3 154.0,232.3 157.4,234.2 160.7,236.1 164.0,238.0 167.4,239.9 170.7,241.7 174.1,243.5 177.4,245.2 180.8,246.9 184.2,248.6 187.5,250.3 190.8,251.9 194.2,253.5 197.6,255.0 200.9,256.6 204.2,258.1 207.6,259.5 211.0,260.9 214.3,262.3 217.6,263.7 221.0,265.0 224.3,266.3 227.7,267.6 231.1,268.8 234.4,270.0 237.7,271.2 241.1,272.3 244.5,273.4 247.8,274.5 251.1,275.5 254.5,276.5 257.9,277.5 261.2,278.4 264.5,279.3 267.9,280.2 271.2,281.0 274.6,281.8 277.9,282.6 281.3,283.3 284.7,284.0 288.0,284.7 291.3,285.3 294.7,285.9 298.1,286.5 301.4,287.0 304.8,287.5 308.1,288.0 311.4,288.5 314.8,288.9 318.1,289.2 321.5,289.6 324.9,289.9 328.2,290.2 331.6,290.4 334.9,290.6 338.2,290.8 341.6,291.0 345.0,291.1 348.3,291.2 351.7,291.2 355.0,291.2 358.4,291.2 361.7,291.2 365.1,291.1 368.4,291.0 371.8,290.8 375.1,290.6 378.5,290.4 381.8,290.2 385.2,289.9 388.5,289.6 391.9,289.2 395.2,288.9 398.6,288.5 401.9,288.0 405.3,287.5 408.6,287.0 411.9,286.5 415.3,285.9 418.7,285.3 422.0,284.7 425.4,284.0 428.7,283.3 432.1,282.6 435.4,281.8 438.8,281.0 442.1,280.2 445.4,279.3 448.8,278.4 452.2,277.5 455.5,276.5 458.9,275.5 462.2,274.5 465.6,273.4 468.9,272.3 472.2,271.2 475.6,270.0 478.9,268.8 482.3,267.6 485.7,266.3 489.0,265.0 492.4,263.7 495.7,262.3 499.0,260.9 502.4,259.5 505.8,258.1 509.1,256.6 512.5,255.0 515.8,253.5 519.2,251.9 522.5,250.3 525.9,248.6 529.2,246.9 532.5,245.2 535.9,243.5 539.2,241.7 542.6,239.9 545.9,238.0 549.3,236.1 552.6,234.2 556.0,232.3 559.3,230.3 562.7,228.3 566.1,226.2 569.4,224.1 572.8,222.0 576.1,219.9 579.4,217.7 582.8,215.5 586.1,213.2 589.5,211.0 592.9,208.7 596.2,206.3 599.5,203.9 602.9,201.5 606.2,199.1 609.6,196.6 613.0,194.1 616.3,191.6 619.6,189.0 623.0,186.4 626.4,183.8 629.7,181.1 633.0,178.4 636.4,175.7 639.8,172.9 643.1,170.1 646.4,167.3 649.8,164.4 653.2,161.5 656.5,158.6 659.9,155.6 663.2,152.6 666.5,149.6 669.9,146.5 673.2,143.4 676.6,140.3 680.0,137.1 683.3,133.9 686.6,130.7 690.0,127.4" fill="none" stroke="#2E7D4F" stroke-width="3" stroke-dasharray="9 5"/>
+<line x1="483.8" y1="267.0" x2="483.8" y2="170.1" stroke="#4A5862" stroke-width="1.5" stroke-dasharray="4 4"/>
+<circle cx="226.2" cy="267.0" r="6" fill="#1E2A33" stroke="#1E2A33" stroke-width="2"/>
+<circle cx="483.8" cy="170.1" r="6" fill="#1E2A33" stroke="#1E2A33" stroke-width="2"/>
+<circle cx="483.8" cy="267.0" r="6" fill="#2E7D4F" stroke="#2E7D4F" stroke-width="2"/>
+<text x="615.6" y="40.1" font-family="Arial" font-size="26" fill="#2F47A6" text-anchor="end" font-weight="bold">f</text>
+<text x="684.0" y="86.5" font-family="Arial" font-size="26" fill="#B8761A" text-anchor="end" font-weight="bold">g</text>
+<text x="50.0" y="127.4" font-family="Arial" font-size="26" fill="#2E7D4F" text-anchor="start" font-weight="bold">f − g</text>
+<text x="473.8" y="164.1" font-family="Arial" font-size="22" fill="#1E2A33" text-anchor="end">(2, 4)</text>
+<text x="491.8" y="297.0" font-family="Arial" font-size="22" fill="#2E7D4F" text-anchor="start">(2, 0)</text>
+    </svg>
+    <div class="keyrow"><span><span class="sw" style="background:#2F47A6"></span>f(x)&nbsp;= x<sup>2</sup></span><span><span class="sw" style="background:#B8761A"></span>g(x)&nbsp;= 2x</span><span><span class="sw" style="background:#2E7D4F"></span>(f&nbsp;−&nbsp;g)⁠(x)&nbsp;= x<sup>2</sup>&nbsp;−&nbsp;2x</span></div>
+    <figcaption>Where the blue and yellow graphs cross, the green graph is on the x-axis: at x&nbsp;= 2 both heights are 4, so the difference is 0.</figcaption>
+  </figure>
+
+  <div class="tip"><b>Exam traps.</b> (1) A sketch without labelled intercepts or turning points loses marks even with a perfect shape. (2) Drawing past the end of a restricted domain: the graph must stop at its end point. (3) Copying from the GDC with a window that hides a feature: zoom out once to check nothing is missing. (4) Asymptotes drawn as solid lines or without their equations.</div>
+
+  <details><summary>Self-check SL 2.3</summary>
+    <ol>
+      <li>Does (−2, 3) lie on y&nbsp;= x<sup>2</sup>&nbsp;−&nbsp;1? Does (2, 5)?</li>
+      <li>A ball's height is h(t)&nbsp;= 20t&nbsp;−&nbsp;5t<sup>2</sup> metres for 0&nbsp;≤&nbsp;t&nbsp;≤&nbsp;4 seconds. Which points would you label on a sketch? What is the range of h?</li>
+      <li>"Draw" or "sketch": which one needs a scale and plotted points?</li>
+      <li>f(x)&nbsp;= 3x and g(x)&nbsp;= x<sup>2</sup>. Find (f&nbsp;+&nbsp;g)⁠(2) and (f&nbsp;−&nbsp;g)⁠(2).</li>
+    </ol>
+    <p><b>Answers.</b> 1: (−2)<sup>2</sup>&nbsp;−&nbsp;1&nbsp;= 3, yes; 2<sup>2</sup>&nbsp;−&nbsp;1&nbsp;= 3, not 5, so no. 2: the end points (0, 0) and (4, 0), and the maximum (2, 20), since h(2)&nbsp;= 40&nbsp;−&nbsp;20&nbsp;= 20; range 0&nbsp;≤&nbsp;h(t)&nbsp;≤&nbsp;20. 3: draw. 4: 6&nbsp;+&nbsp;4&nbsp;= 10 and 6&nbsp;−&nbsp;4&nbsp;= 2.</p>
+  </details>
+</section>
+
+<!-- =============================== SL 2.4 =============================== -->
+<section class="topic" id="s24">
+  <div class="kicker">SL 2.4 (school 2.3, asymptotes also in 2.7)</div>
+  <h2>Key features of graphs and intersections</h2>
+  <p class="guiding">What to look for on any graph, and how to find where two graphs meet.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="k1"><span>Determine key features of graphs: maximum and minimum values, intercepts, symmetry, vertex, zeros of functions or roots of equations</span></label>
+    <label><input type="checkbox" data-k="k2"><span>Find vertical and horizontal asymptotes using graphing technology</span></label>
+    <label><input type="checkbox" data-k="k3"><span>Find the points of intersection of two curves or lines using technology</span></label>
+  </div>
+
+  <h3>The key features <span class="learn">Learn</span></h3>
+  <div class="tablewrap"><table>
+    <tr><th>Feature</th><th>How to find it</th></tr>
+    <tr><td>y-intercept</td><td>Put x&nbsp;= 0. Give the point (0, f(0)).</td></tr>
+    <tr><td>Zeros, roots, x-intercepts</td><td>The same x-values, three names: solve f(x)&nbsp;= 0. As points they are (x, 0).</td></tr>
+    <tr><td>Vertex, maximum or minimum</td><td>For a quadratic the vertex is on the axis of symmetry <span class="nw">x&nbsp;= −<span class="frac"><span>b</span><span>2a</span></span></span> <span class="fb">In booklet</span>. The maximum or minimum <b>value</b> is the y-coordinate.</td></tr>
+    <tr><td>Symmetry</td><td>A parabola is symmetric about its axis. A graph can also be symmetric about the y-axis, for example y&nbsp;= x<sup>2</sup>: it has the same height at x and at −x. (The names "odd" and "even" function are HL only, AHL 2.14.)</td></tr>
+    <tr><td>Vertical asymptote</td><td>A line x&nbsp;= a that the graph approaches but never reaches; usually where a denominator is zero.</td></tr>
+    <tr><td>Horizontal asymptote</td><td>A line y&nbsp;= b that the graph approaches as x gets very large (positive or negative).</td></tr>
+  </table></div>
+
+  <div class="worked"><b>Worked example 1: all the features of a quadratic.</b> f(x)&nbsp;= x<sup>2</sup>&nbsp;−&nbsp;2x&nbsp;−&nbsp;3.
+    <ol>
+      <li>y-intercept: f(0)&nbsp;= −3, the point (0, −3).</li>
+      <li>Zeros: x<sup>2</sup>&nbsp;−&nbsp;2x&nbsp;−&nbsp;3&nbsp;= (x&nbsp;−&nbsp;3)⁠(x&nbsp;+&nbsp;1)&nbsp;= 0, so x&nbsp;= 3 or x&nbsp;= −1.</li>
+      <li>Axis of symmetry: x&nbsp;= −<span class="frac"><span>−2</span><span>2&nbsp;×&nbsp;1</span></span>&nbsp;= 1 (halfway between the zeros, as a check).</li>
+      <li>Vertex: f(1)&nbsp;= 1&nbsp;−&nbsp;2&nbsp;−&nbsp;3&nbsp;= −4, so (1, −4). a&nbsp;&gt;&nbsp;0, so it is a minimum and the minimum value is −4.</li>
+      <li>Range: f(x)&nbsp;≥&nbsp;−4.</li>
+    </ol></div>
+
+  <h3>Intersections</h3>
+  <p>Two graphs meet where they have the same y for the same x, so solve f(x)&nbsp;= g(x) <span class="learn">Learn</span>, then find y from either equation. On Paper 2 use the GDC: graph both and use the intersect tool (TI-84 Plus CE: 2nd, TRACE (CALC), 5: intersect; Casio fx-CG50: G-SOLV, then ISCT). Give answers to 3 significant figures unless they are exact.</p>
+  <div class="worked"><b>Worked example 2: where a line meets the parabola.</b> Find the points where y&nbsp;= x<sup>2</sup>&nbsp;−&nbsp;2x&nbsp;−&nbsp;3 meets y&nbsp;= x&nbsp;+&nbsp;1.
+    <ol>
+      <li>Set equal: x<sup>2</sup>&nbsp;−&nbsp;2x&nbsp;−&nbsp;3&nbsp;= x&nbsp;+&nbsp;1.</li>
+      <li>Collect on one side: x<sup>2</sup>&nbsp;−&nbsp;3x&nbsp;−&nbsp;4&nbsp;= 0, so (x&nbsp;−&nbsp;4)⁠(x&nbsp;+&nbsp;1)&nbsp;= 0.</li>
+      <li>x&nbsp;= 4 or x&nbsp;= −1.</li>
+      <li>Find y from the line (easier): x&nbsp;= 4 gives y&nbsp;= 5; x&nbsp;= −1 gives y&nbsp;= 0.</li>
+      <li>The points are <b>(4, 5) and (−1, 0)</b>. Check in the parabola: 16&nbsp;−&nbsp;8&nbsp;−&nbsp;3&nbsp;= 5 and 1&nbsp;+&nbsp;2&nbsp;−&nbsp;3&nbsp;= 0.</li>
+    </ol></div>
+  <figure>
+    <svg viewBox="0 0 700 375" aria-label="The parabola y equals x squared minus 2x minus 3 with its intercepts and vertex (1, minus 4) marked, and the line y equals x plus 1 crossing it at (minus 1, 0) and (4, 5)">
+<g stroke="#D6DCD8" stroke-width="1">
+<line x1="77.9" y1="15" x2="77.9" y2="360"/>
+<line x1="160.6" y1="15" x2="160.6" y2="360"/>
+<line x1="326.0" y1="15" x2="326.0" y2="360"/>
+<line x1="408.8" y1="15" x2="408.8" y2="360"/>
+<line x1="574.2" y1="15" x2="574.2" y2="360"/>
+<line x1="656.9" y1="15" x2="656.9" y2="360"/>
+<line x1="20" y1="324.7" x2="690" y2="324.7"/>
+<line x1="20" y1="270.4" x2="690" y2="270.4"/>
+<line x1="20" y1="161.7" x2="690" y2="161.7"/>
+<line x1="20" y1="107.4" x2="690" y2="107.4"/>
+<line x1="20" y1="53.0" x2="690" y2="53.0"/>
+</g>
+<g stroke="#1E2A33" stroke-width="1.8"><line x1="20" y1="216.0" x2="690" y2="216.0"/><line x1="243.3" y1="15" x2="243.3" y2="360"/></g>
+<g fill="#1E2A33"><path d="M690,216.0 l-10,-5 v10 z"/><path d="M243.3,15 l-5,10 h10 z"/></g>
+<g font-family="Arial" font-size="22" fill="#4A5862" text-anchor="middle">
+<text x="77.9" y="242.0">−2</text>
+<text x="160.6" y="242.0">−1</text>
+<text x="326.0" y="242.0">1</text>
+<text x="408.8" y="242.0">2</text>
+<text x="574.2" y="242.0">4</text>
+<text x="656.9" y="242.0">5</text>
+</g>
+<g font-family="Arial" font-size="22" fill="#4A5862" text-anchor="end">
+<text x="236.3" y="332.4">−4</text>
+<text x="236.3" y="278.1">−2</text>
+<text x="236.3" y="169.4">2</text>
+<text x="236.3" y="115.1">4</text>
+<text x="236.3" y="60.7">6</text>
+</g>
+<g font-family="Arial" font-size="24" font-style="italic" fill="#1E2A33"><text x="686" y="206.0" text-anchor="end">x</text><text x="253.3" y="33">y</text></g>
+<polyline points="82.0,88.3 84.5,93.0 86.9,97.6 89.4,102.3 91.8,106.8 94.2,111.3 96.7,115.8 99.1,120.2 101.6,124.6 104.0,128.9 106.4,133.2 108.9,137.4 111.3,141.6 113.8,145.7 116.2,149.8 118.6,153.9 121.1,157.9 123.5,161.8 126.0,165.7 128.4,169.6 130.8,173.4 133.3,177.1 135.7,180.9 138.2,184.5 140.6,188.1 143.0,191.7 145.5,195.2 147.9,198.7 150.4,202.1 152.8,205.5 155.2,208.8 157.7,212.1 160.1,215.4 162.6,218.6 165.0,221.7 167.4,224.8 169.9,227.9 172.3,230.9 174.8,233.8 177.2,236.7 179.6,239.6 182.1,242.4 184.5,245.2 187.0,247.9 189.4,250.5 191.8,253.2 194.3,255.7 196.7,258.3 199.2,260.8 201.6,263.2 204.0,265.6 206.5,267.9 208.9,270.2 211.4,272.5 213.8,274.7 216.2,276.8 218.7,278.9 221.1,281.0 223.6,283.0 226.0,284.9 228.4,286.9 230.9,288.7 233.3,290.5 235.8,292.3 238.2,294.0 240.6,295.7 243.1,297.4 245.5,298.9 248.0,300.5 250.4,302.0 252.8,303.4 255.3,304.8 257.7,306.2 260.2,307.5 262.6,308.7 265.0,309.9 267.5,311.1 269.9,312.2 272.4,313.2 274.8,314.3 277.2,315.2 279.7,316.2 282.1,317.0 284.6,317.9 287.0,318.6 289.4,319.4 291.9,320.1 294.3,320.7 296.8,321.3 299.2,321.8 301.6,322.3 304.1,322.8 306.5,323.2 309.0,323.5 311.4,323.8 313.8,324.1 316.3,324.3 318.7,324.5 321.2,324.6 323.6,324.7 326.0,324.7 328.5,324.7 330.9,324.6 333.4,324.5 335.8,324.3 338.2,324.1 340.7,323.8 343.1,323.5 345.6,323.2 348.0,322.8 350.5,322.3 352.9,321.8 355.3,321.3 357.8,320.7 360.2,320.1 362.7,319.4 365.1,318.6 367.5,317.9 370.0,317.0 372.4,316.2 374.9,315.2 377.3,314.3 379.7,313.2 382.2,312.2 384.6,311.1 387.1,309.9 389.5,308.7 391.9,307.5 394.4,306.2 396.8,304.8 399.3,303.4 401.7,302.0 404.1,300.5 406.6,298.9 409.0,297.4 411.5,295.7 413.9,294.0 416.3,292.3 418.8,290.5 421.2,288.7 423.7,286.9 426.1,284.9 428.5,283.0 431.0,281.0 433.4,278.9 435.9,276.8 438.3,274.7 440.7,272.5 443.2,270.2 445.6,267.9 448.1,265.6 450.5,263.2 452.9,260.8 455.4,258.3 457.8,255.7 460.3,253.2 462.7,250.5 465.1,247.9 467.6,245.2 470.0,242.4 472.5,239.6 474.9,236.7 477.3,233.8 479.8,230.9 482.2,227.9 484.7,224.8 487.1,221.7 489.5,218.6 492.0,215.4 494.4,212.1 496.9,208.8 499.3,205.5 501.7,202.1 504.2,198.7 506.6,195.2 509.1,191.7 511.5,188.1 513.9,184.5 516.4,180.9 518.8,177.1 521.3,173.4 523.7,169.6 526.1,165.7 528.6,161.8 531.0,157.9 533.5,153.9 535.9,149.8 538.3,145.7 540.8,141.6 543.2,137.4 545.7,133.2 548.1,128.9 550.5,124.6 553.0,120.2 555.4,115.8 557.9,111.3 560.3,106.8 562.7,102.3 565.2,97.6 567.6,93.0 570.1,88.3" fill="none" stroke="#2F47A6" stroke-width="3"/>
+<polyline points="20.0,262.2 23.4,261.1 26.7,260.0 30.1,258.9 33.4,257.8 36.8,256.7 40.1,255.6 43.5,254.5 46.8,253.4 50.1,252.3 53.5,251.2 56.8,250.1 60.2,249.0 63.5,247.9 66.9,246.8 70.2,245.7 73.6,244.6 77.0,243.5 80.3,242.4 83.7,241.3 87.0,240.2 90.4,239.1 93.7,238.0 97.0,236.9 100.4,235.8 103.8,234.7 107.1,233.6 110.4,232.5 113.8,231.4 117.1,230.3 120.5,229.2 123.8,228.1 127.2,227.0 130.6,225.9 133.9,224.8 137.2,223.7 140.6,222.6 143.9,221.5 147.3,220.4 150.6,219.3 154.0,218.2 157.4,217.1 160.7,216.0 164.1,214.9 167.4,213.8 170.7,212.7 174.1,211.6 177.4,210.5 180.8,209.4 184.2,208.3 187.5,207.2 190.8,206.1 194.2,205.0 197.6,203.9 200.9,202.8 204.3,201.7 207.6,200.6 211.0,199.5 214.3,198.4 217.6,197.3 221.0,196.2 224.3,195.1 227.7,194.0 231.1,192.9 234.4,191.8 237.8,190.7 241.1,189.6 244.4,188.5 247.8,187.4 251.2,186.3 254.5,185.2 257.9,184.1 261.2,183.0 264.5,181.9 267.9,180.8 271.2,179.7 274.6,178.6 278.0,177.5 281.3,176.4 284.6,175.3 288.0,174.2 291.4,173.1 294.7,172.0 298.1,170.9 301.4,169.8 304.8,168.7 308.1,167.6 311.4,166.5 314.8,165.4 318.1,164.3 321.5,163.2 324.9,162.1 328.2,161.0 331.6,159.9 334.9,158.8 338.2,157.7 341.6,156.6 345.0,155.5 348.3,154.4 351.6,153.3 355.0,152.2 358.4,151.1 361.7,150.0 365.1,148.9 368.4,147.8 371.7,146.7 375.1,145.6 378.5,144.5 381.8,143.4 385.2,142.3 388.5,141.2 391.8,140.1 395.2,139.0 398.6,137.9 401.9,136.8 405.2,135.7 408.6,134.6 412.0,133.5 415.3,132.4 418.7,131.3 422.0,130.2 425.3,129.1 428.7,128.0 432.1,126.9 435.4,125.8 438.8,124.7 442.1,123.6 445.4,122.5 448.8,121.4 452.2,120.3 455.5,119.2 458.8,118.1 462.2,117.0 465.5,115.9 468.9,114.8 472.3,113.7 475.6,112.6 479.0,111.5 482.3,110.4 485.6,109.3 489.0,108.2 492.3,107.1 495.7,106.0 499.0,104.9 502.4,103.8 505.8,102.7 509.1,101.6 512.5,100.5 515.8,99.4 519.1,98.3 522.5,97.2 525.9,96.1 529.2,95.0 532.5,93.9 535.9,92.8 539.2,91.7 542.6,90.6 546.0,89.5 549.3,88.4 552.6,87.3 556.0,86.2 559.3,85.1 562.7,84.0 566.0,82.9 569.4,81.8 572.8,80.7 576.1,79.6 579.5,78.5 582.8,77.4 586.2,76.3 589.5,75.2 592.8,74.1 596.2,73.0 599.5,71.9 602.9,70.8 606.2,69.7 609.6,68.6 613.0,67.5 616.3,66.4 619.6,65.3 623.0,64.2 626.4,63.1 629.7,62.0 633.0,60.9 636.4,59.8 639.8,58.7 643.1,57.6 646.4,56.5 649.8,55.4 653.2,54.3 656.5,53.2 659.9,52.1 663.2,51.0 666.5,49.9 669.9,48.8 673.2,47.7 676.6,46.6 680.0,45.5 683.3,44.4 686.6,43.3 690.0,42.2" fill="none" stroke="#B8761A" stroke-width="3"/>
+<line x1="326.0" y1="354.6" x2="326.0" y2="20.4" stroke="#4A5862" stroke-width="1.5" stroke-dasharray="6 5"/>
+<circle cx="491.5" cy="216.0" r="6" fill="#2F47A6" stroke="#2F47A6" stroke-width="2"/>
+<circle cx="243.3" cy="297.5" r="6" fill="#2F47A6" stroke="#2F47A6" stroke-width="2"/>
+<circle cx="326.0" cy="324.7" r="6" fill="#2F47A6" stroke="#2F47A6" stroke-width="2"/>
+<circle cx="160.6" cy="216.0" r="7" fill="#fff" stroke="#B23A3A" stroke-width="2"/>
+<circle cx="574.2" cy="80.2" r="7" fill="#fff" stroke="#B23A3A" stroke-width="2"/>
+<text x="499.5" y="244.0" font-family="Arial" font-size="22" fill="#1E2A33" text-anchor="start">(3, 0)</text>
+<text x="235.3" y="307.5" font-family="Arial" font-size="22" fill="#1E2A33" text-anchor="end">(0, −3)</text>
+<text x="338.0" y="334.7" font-family="Arial" font-size="22" fill="#1E2A33" text-anchor="start">(1, −4)</text>
+<text x="150.6" y="204.0" font-family="Arial" font-size="22" fill="#B23A3A" text-anchor="end">(−1, 0)</text>
+<text x="562.2" y="74.2" font-family="Arial" font-size="22" fill="#B23A3A" text-anchor="end">(4, 5)</text>
+<text x="334.0" y="36.4" font-family="Arial" font-size="22" fill="#4A5862" text-anchor="start">x = 1</text>
+    </svg>
+    <div class="keyrow"><span><span class="sw" style="background:#2F47A6"></span>y&nbsp;= x<sup>2</sup>&nbsp;−&nbsp;2x&nbsp;−&nbsp;3</span><span><span class="sw" style="background:#B8761A"></span>y&nbsp;= x&nbsp;+&nbsp;1</span><span><span class="sw" style="background:#B23A3A"></span>points of intersection (open circles)</span></div>
+    <figcaption>Worked examples 1 and 2 on one picture. (−1, 0) is both a zero of the parabola and an intersection with the line.</figcaption>
+  </figure>
+
+  <h3>Asymptotes</h3>
+  <div class="worked"><b>Worked example 3: asymptotes and intercepts.</b> f(x)&nbsp;= 1&nbsp;+&nbsp;<span class="frac"><span>3</span><span>x&nbsp;−&nbsp;2</span></span>. Find the asymptotes and the axis intercepts.
+    <ol>
+      <li>x&nbsp;−&nbsp;2&nbsp;= 0 at x&nbsp;= 2, where f is not defined: vertical asymptote <b>x&nbsp;= 2</b>.</li>
+      <li>When x is very large (positive or negative), <span class="frac"><span>3</span><span>x&nbsp;−&nbsp;2</span></span> gets close to 0, so f(x) gets close to 1: horizontal asymptote <b>y&nbsp;= 1</b>.</li>
+      <li>y-intercept: f(0)&nbsp;= 1&nbsp;+&nbsp;<span class="frac"><span>3</span><span>−2</span></span>&nbsp;= −0.5, the point (0, −0.5).</li>
+      <li>Zero: <span class="frac"><span>3</span><span>x&nbsp;−&nbsp;2</span></span>&nbsp;= −1, so x&nbsp;−&nbsp;2&nbsp;= −3 and x&nbsp;= −1, the point (−1, 0).</li>
+      <li>So the domain is x ≠ 2 and the range is f(x) ≠ 1. On the GDC you see the same: the graph runs along the dashed lines without touching them.</li>
+    </ol></div>
+  <figure>
+    <svg viewBox="0 0 700 375" aria-label="Graph of y equals 1 plus 3 over x minus 2 in two branches, with the dashed asymptotes x equals 2 and y equals 1, and the intercepts (0, minus 0.5) and (minus 1, 0)">
+<g stroke="#D6DCD8" stroke-width="1">
+<line x1="83.4" y1="15" x2="83.4" y2="360"/>
+<line x1="355.0" y1="15" x2="355.0" y2="360"/>
+<line x1="445.5" y1="15" x2="445.5" y2="360"/>
+<line x1="536.1" y1="15" x2="536.1" y2="360"/>
+<line x1="626.6" y1="15" x2="626.6" y2="360"/>
+<line x1="20" y1="322.3" x2="690" y2="322.3"/>
+<line x1="20" y1="268.4" x2="690" y2="268.4"/>
+<line x1="20" y1="160.5" x2="690" y2="160.5"/>
+<line x1="20" y1="106.6" x2="690" y2="106.6"/>
+<line x1="20" y1="52.7" x2="690" y2="52.7"/>
+</g>
+<g stroke="#1E2A33" stroke-width="1.8"><line x1="20" y1="214.5" x2="690" y2="214.5"/><line x1="264.5" y1="15" x2="264.5" y2="360"/></g>
+<g fill="#1E2A33"><path d="M690,214.5 l-10,-5 v10 z"/><path d="M264.5,15 l-5,10 h10 z"/></g>
+<g font-family="Arial" font-size="22" fill="#4A5862" text-anchor="middle">
+<text x="83.4" y="240.5">−4</text>
+<text x="355.0" y="240.5">2</text>
+<text x="445.5" y="240.5">4</text>
+<text x="536.1" y="240.5">6</text>
+<text x="626.6" y="240.5">8</text>
+</g>
+<g font-family="Arial" font-size="22" fill="#4A5862" text-anchor="end">
+<text x="257.5" y="330.0">−4</text>
+<text x="257.5" y="276.1">−2</text>
+<text x="257.5" y="168.2">2</text>
+<text x="257.5" y="114.3">4</text>
+<text x="257.5" y="60.4">6</text>
+</g>
+<g font-family="Arial" font-size="24" font-style="italic" fill="#1E2A33"><text x="686" y="204.5" text-anchor="end">x</text><text x="274.5" y="33">y</text></g>
+<line x1="355.0" y1="360.0" x2="355.0" y2="15.0" stroke="#B23A3A" stroke-width="2" stroke-dasharray="8 6"/>
+<line x1="20.0" y1="187.5" x2="690.0" y2="187.5" stroke="#B23A3A" stroke-width="2" stroke-dasharray="8 6"/>
+<polyline points="20.0,198.4 21.6,198.5 23.1,198.5 24.7,198.6 26.2,198.6 27.8,198.7 29.4,198.7 30.9,198.8 32.5,198.9 34.1,198.9 35.6,199.0 37.2,199.0 38.7,199.1 40.3,199.1 41.9,199.2 43.4,199.2 45.0,199.3 46.6,199.4 48.1,199.4 49.7,199.5 51.2,199.6 52.8,199.6 54.4,199.7 55.9,199.7 57.5,199.8 59.0,199.9 60.6,199.9 62.2,200.0 63.7,200.1 65.3,200.1 66.9,200.2 68.4,200.3 70.0,200.3 71.5,200.4 73.1,200.5 74.7,200.6 76.2,200.6 77.8,200.7 79.3,200.8 80.9,200.9 82.5,200.9 84.0,201.0 85.6,201.1 87.2,201.2 88.7,201.2 90.3,201.3 91.8,201.4 93.4,201.5 95.0,201.6 96.5,201.7 98.1,201.7 99.7,201.8 101.2,201.9 102.8,202.0 104.3,202.1 105.9,202.2 107.5,202.3 109.0,202.4 110.6,202.5 112.1,202.6 113.7,202.7 115.3,202.8 116.8,202.9 118.4,203.0 120.0,203.1 121.5,203.2 123.1,203.3 124.6,203.4 126.2,203.5 127.8,203.6 129.3,203.7 130.9,203.8 132.5,203.9 134.0,204.1 135.6,204.2 137.1,204.3 138.7,204.4 140.3,204.5 141.8,204.7 143.4,204.8 144.9,204.9 146.5,205.1 148.1,205.2 149.6,205.3 151.2,205.5 152.8,205.6 154.3,205.7 155.9,205.9 157.4,206.0 159.0,206.2 160.6,206.3 162.1,206.5 163.7,206.6 165.2,206.8 166.8,207.0 168.4,207.1 169.9,207.3 171.5,207.4 173.1,207.6 174.6,207.8 176.2,208.0 177.7,208.2 179.3,208.3 180.9,208.5 182.4,208.7 184.0,208.9 185.6,209.1 187.1,209.3 188.7,209.5 190.2,209.7 191.8,209.9 193.4,210.1 194.9,210.4 196.5,210.6 198.0,210.8 199.6,211.1 201.2,211.3 202.7,211.5 204.3,211.8 205.9,212.0 207.4,212.3 209.0,212.6 210.5,212.8 212.1,213.1 213.7,213.4 215.2,213.7 216.8,214.0 218.4,214.3 219.9,214.6 221.5,214.9 223.0,215.2 224.6,215.6 226.2,215.9 227.7,216.3 229.3,216.6 230.8,217.0 232.4,217.4 234.0,217.7 235.5,218.1 237.1,218.5 238.7,219.0 240.2,219.4 241.8,219.8 243.3,220.3 244.9,220.7 246.5,221.2 248.0,221.7 249.6,222.2 251.1,222.7 252.7,223.3 254.3,223.8 255.8,224.4 257.4,225.0 259.0,225.6 260.5,226.2 262.1,226.9 263.6,227.6 265.2,228.3 266.8,229.0 268.3,229.7 269.9,230.5 271.5,231.3 273.0,232.1 274.6,233.0 276.1,233.9 277.7,234.9 279.3,235.8 280.8,236.8 282.4,237.9 283.9,239.0 285.5,240.2 287.1,241.4 288.6,242.7 290.2,244.0 291.8,245.4 293.3,246.8 294.9,248.4 296.4,250.0 298.0,251.7 299.6,253.5 301.1,255.4 302.7,257.5 304.3,259.6 305.8,261.9 307.4,264.4 308.9,267.0 310.5,269.8 312.1,272.7 313.6,276.0 315.2,279.4 316.7,283.2 318.3,287.3 319.9,291.7 321.4,296.5 323.0,301.9 324.6,307.7 326.1,314.2 327.7,321.5 329.2,329.6 330.8,338.8 332.4,349.2" fill="none" stroke="#2F47A6" stroke-width="3"/>
+<polyline points="377.6,25.8 379.2,36.2 380.8,45.4 382.3,53.5 383.9,60.8 385.4,67.3 387.0,73.1 388.6,78.5 390.1,83.3 391.7,87.7 393.3,91.8 394.8,95.6 396.4,99.0 397.9,102.3 399.5,105.2 401.1,108.0 402.6,110.6 404.2,113.1 405.7,115.4 407.3,117.5 408.9,119.6 410.4,121.5 412.0,123.3 413.6,125.0 415.1,126.6 416.7,128.2 418.2,129.6 419.8,131.0 421.4,132.3 422.9,133.6 424.5,134.8 426.1,136.0 427.6,137.1 429.2,138.2 430.7,139.2 432.3,140.1 433.9,141.1 435.4,142.0 437.0,142.9 438.5,143.7 440.1,144.5 441.7,145.3 443.2,146.0 444.8,146.7 446.4,147.4 447.9,148.1 449.5,148.8 451.0,149.4 452.6,150.0 454.2,150.6 455.7,151.2 457.3,151.7 458.9,152.3 460.4,152.8 462.0,153.3 463.5,153.8 465.1,154.3 466.7,154.7 468.2,155.2 469.8,155.6 471.3,156.0 472.9,156.5 474.5,156.9 476.0,157.3 477.6,157.6 479.2,158.0 480.7,158.4 482.3,158.7 483.8,159.1 485.4,159.4 487.0,159.8 488.5,160.1 490.1,160.4 491.6,160.7 493.2,161.0 494.8,161.3 496.3,161.6 497.9,161.9 499.5,162.2 501.0,162.4 502.6,162.7 504.1,163.0 505.7,163.2 507.3,163.5 508.8,163.7 510.4,163.9 512.0,164.2 513.5,164.4 515.1,164.6 516.6,164.9 518.2,165.1 519.8,165.3 521.3,165.5 522.9,165.7 524.4,165.9 526.0,166.1 527.6,166.3 529.1,166.5 530.7,166.7 532.3,166.8 533.8,167.0 535.4,167.2 536.9,167.4 538.5,167.6 540.1,167.7 541.6,167.9 543.2,168.0 544.8,168.2 546.3,168.4 547.9,168.5 549.4,168.7 551.0,168.8 552.6,169.0 554.1,169.1 555.7,169.3 557.2,169.4 558.8,169.5 560.4,169.7 561.9,169.8 563.5,169.9 565.1,170.1 566.6,170.2 568.2,170.3 569.7,170.5 571.3,170.6 572.9,170.7 574.4,170.8 576.0,170.9 577.5,171.1 579.1,171.2 580.7,171.3 582.2,171.4 583.8,171.5 585.4,171.6 586.9,171.7 588.5,171.8 590.0,171.9 591.6,172.0 593.2,172.1 594.7,172.2 596.3,172.3 597.9,172.4 599.4,172.5 601.0,172.6 602.5,172.7 604.1,172.8 605.7,172.9 607.2,173.0 608.8,173.1 610.3,173.2 611.9,173.3 613.5,173.3 615.0,173.4 616.6,173.5 618.2,173.6 619.7,173.7 621.3,173.8 622.8,173.8 624.4,173.9 626.0,174.0 627.5,174.1 629.1,174.1 630.7,174.2 632.2,174.3 633.8,174.4 635.3,174.4 636.9,174.5 638.5,174.6 640.0,174.7 641.6,174.7 643.1,174.8 644.7,174.9 646.3,174.9 647.8,175.0 649.4,175.1 651.0,175.1 652.5,175.2 654.1,175.3 655.6,175.3 657.2,175.4 658.8,175.4 660.3,175.5 661.9,175.6 663.4,175.6 665.0,175.7 666.6,175.8 668.1,175.8 669.7,175.9 671.3,175.9 672.8,176.0 674.4,176.0 675.9,176.1 677.5,176.1 679.1,176.2 680.6,176.3 682.2,176.3 683.8,176.4 685.3,176.4 686.9,176.5 688.4,176.5 690.0,176.6" fill="none" stroke="#2F47A6" stroke-width="3"/>
+<circle cx="264.5" cy="227.9" r="6" fill="#2F47A6" stroke="#2F47A6" stroke-width="2"/>
+<circle cx="219.2" cy="214.5" r="6" fill="#2F47A6" stroke="#2F47A6" stroke-width="2"/>
+<text x="254.5" y="257.9" font-family="Arial" font-size="22" fill="#1E2A33" text-anchor="end">(0, −0.5)</text>
+<text x="213.2" y="202.5" font-family="Arial" font-size="22" fill="#1E2A33" text-anchor="end">(−1, 0)</text>
+<text x="345.0" y="42.0" font-family="Arial" font-size="22" fill="#B23A3A" text-anchor="end">x = 2</text>
+<text x="26.0" y="177.5" font-family="Arial" font-size="22" fill="#B23A3A" text-anchor="start">y = 1</text>
+    </svg>
+    <figcaption>Asymptotes are drawn dashed and labelled with their equations. The guide expects you to find them with graphing technology; reasoning like steps 1 and 2 lets you check the GDC picture and works on Paper 1.</figcaption>
+  </figure>
+
+  <div class="tip"><b>Exam traps.</b> (1) Giving "x&nbsp;= 4" when the question asks for the point: write (4, 5). (2) The minimum <b>value</b> is the y-coordinate (−4), not the x where it happens. (3) Asymptotes are lines, so write equations: "x&nbsp;= 2", not "2". (4) Finding the x-values of an intersection and stopping: you need the y-values too. (5) GDC answers rounded too early or to fewer than 3 significant figures.</div>
+
+  <details><summary>Self-check SL 2.4</summary>
+    <ol>
+      <li>Solve x<sup>2</sup>&nbsp;= 4x&nbsp;−&nbsp;3, then say what the answers mean for the graphs of y&nbsp;= x<sup>2</sup> and y&nbsp;= 4x&nbsp;−&nbsp;3. (<a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">pack Medium 1(c)</a>)</li>
+      <li>f(x)&nbsp;= −2x<sup>2</sup>&nbsp;+&nbsp;8x&nbsp;−&nbsp;3. Find the axis of symmetry, the vertex, the y-intercept and the range.</li>
+      <li>Write down the asymptotes of y&nbsp;= 4&nbsp;−&nbsp;<span class="frac"><span>3</span><span>x</span></span>.</li>
+      <li>Find the points of intersection of y&nbsp;= 2x&nbsp;+&nbsp;1 and y&nbsp;= x<sup>2</sup>&nbsp;−&nbsp;2.</li>
+    </ol>
+    <p><b>Answers.</b> 1: x<sup>2</sup>&nbsp;−&nbsp;4x&nbsp;+&nbsp;3&nbsp;= (x&nbsp;−&nbsp;1)⁠(x&nbsp;−&nbsp;3)&nbsp;= 0, so x&nbsp;= 1 or 3: the line crosses the parabola at x&nbsp;= 1 and x&nbsp;= 3. 2: x&nbsp;= −<span class="frac"><span>8</span><span>−4</span></span>&nbsp;= 2; f(2)&nbsp;= −8&nbsp;+&nbsp;16&nbsp;−&nbsp;3&nbsp;= 5, so the vertex is the maximum (2, 5); y-intercept (0, −3); range f(x)&nbsp;≤&nbsp;5. 3: x&nbsp;= 0 and y&nbsp;= 4. 4: x<sup>2</sup>&nbsp;−&nbsp;2x&nbsp;−&nbsp;3&nbsp;= 0, x&nbsp;= 3 or −1, points (3, 7) and (−1, −1).</p>
+  </details>
+</section>
+
+<!-- =============================== SL 2.5 =============================== -->
+<section class="topic" id="s25">
+  <div class="kicker">SL 2.5 (school 2.4 and 2.5)</div>
+  <h2>Composite functions and finding the inverse</h2>
+  <p class="guiding">Functions can be chained, and a function chained with its inverse does nothing at all.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="c1"><span>Find and use composite functions, (f&nbsp;∘&nbsp;g)⁠(x)&nbsp;= f(g(x))</span></label>
+    <label><input type="checkbox" data-k="c2"><span>Use the identity function: (f&nbsp;∘&nbsp;f<sup>−1</sup>)⁠(x)&nbsp;= (f<sup>−1</sup>&nbsp;∘&nbsp;f)⁠(x)&nbsp;= x</span></label>
+    <label><input type="checkbox" data-k="c3"><span>Find the inverse function f<sup>−1</sup>(x), knowing that an inverse exists only for a one-to-one function</span></label>
+  </div>
+
+  <h3>Composite functions</h3>
+  <div class="fbox">
+    <div class="formula"><span class="nw">(f&nbsp;∘&nbsp;g)⁠(x)&nbsp;= f(g(x))</span> <span class="learn">Learn</span></div>
+    <p style="margin:0 0 8px;font-size:.95rem">Read it from the inside out: <b>g acts first</b>, then f acts on g's output. The function written next to x goes first.</p>
+  </div>
+  <figure>
+    <svg viewBox="0 0 700 230" aria-label="Two chains of function machines. Top: 2 goes into g to give 6, then into f to give 17. Bottom: 2 goes into f to give 5, then into g to give 27">
+<defs><marker id="ahc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#4A5862"/></marker></defs>
+<g font-family="Arial" font-size="30" text-anchor="middle">
+<text x="45" y="70" fill="#1E2A33">2</text>
+<rect x="110" y="28" width="100" height="64" rx="8" fill="#E6EAF7" stroke="#2F47A6" stroke-width="2"/><text x="160" y="71" font-weight="bold" font-style="italic" fill="#2F47A6">g</text>
+<rect x="390" y="28" width="100" height="64" rx="8" fill="#FBF1DF" stroke="#B8761A" stroke-width="2"/><text x="440" y="71" font-weight="bold" font-style="italic" fill="#B8761A">f</text>
+<text x="300" y="70" fill="#1E2A33">6</text><text x="610" y="70" fill="#1E2A33" font-weight="bold">17</text>
+<line x1="66" y1="60" x2="106" y2="60" stroke="#4A5862" stroke-width="2.5" marker-end="url(#ahc)"/>
+<line x1="214" y1="60" x2="272" y2="60" stroke="#4A5862" stroke-width="2.5" marker-end="url(#ahc)"/>
+<line x1="328" y1="60" x2="386" y2="60" stroke="#4A5862" stroke-width="2.5" marker-end="url(#ahc)"/>
+<line x1="494" y1="60" x2="568" y2="60" stroke="#4A5862" stroke-width="2.5" marker-end="url(#ahc)"/>
+<text x="45" y="185" fill="#1E2A33">2</text>
+<rect x="110" y="143" width="100" height="64" rx="8" fill="#FBF1DF" stroke="#B8761A" stroke-width="2"/><text x="160" y="186" font-weight="bold" font-style="italic" fill="#B8761A">f</text>
+<rect x="390" y="143" width="100" height="64" rx="8" fill="#E6EAF7" stroke="#2F47A6" stroke-width="2"/><text x="440" y="186" font-weight="bold" font-style="italic" fill="#2F47A6">g</text>
+<text x="300" y="185" fill="#1E2A33">5</text><text x="610" y="185" fill="#1E2A33" font-weight="bold">27</text>
+<line x1="66" y1="175" x2="106" y2="175" stroke="#4A5862" stroke-width="2.5" marker-end="url(#ahc)"/>
+<line x1="214" y1="175" x2="272" y2="175" stroke="#4A5862" stroke-width="2.5" marker-end="url(#ahc)"/>
+<line x1="328" y1="175" x2="386" y2="175" stroke="#4A5862" stroke-width="2.5" marker-end="url(#ahc)"/>
+<line x1="494" y1="175" x2="568" y2="175" stroke="#4A5862" stroke-width="2.5" marker-end="url(#ahc)"/>
+</g>
+    </svg>
+    <figcaption>f(x)&nbsp;= 3x&nbsp;−&nbsp;1 and g(x)&nbsp;= x<sup>2</sup>&nbsp;+&nbsp;2. Top row: (f&nbsp;∘&nbsp;g)⁠(2)&nbsp;= 17. Bottom row: (g&nbsp;∘&nbsp;f)⁠(2)&nbsp;= 27. Changing the order changes the answer.</figcaption>
+  </figure>
+
+  <div class="worked"><b>Worked example 1: both orders.</b> f(x)&nbsp;= 3x&nbsp;−&nbsp;1 and g(x)&nbsp;= x<sup>2</sup>&nbsp;+&nbsp;2. Find (f&nbsp;∘&nbsp;g)⁠(x) and (g&nbsp;∘&nbsp;f)⁠(x), and check with x&nbsp;= 2.
+    <ol>
+      <li>(f&nbsp;∘&nbsp;g)⁠(x)&nbsp;= f(x<sup>2</sup>&nbsp;+&nbsp;2): replace every x in f with x<sup>2</sup>&nbsp;+&nbsp;2.</li>
+      <li>= 3(x<sup>2</sup>&nbsp;+&nbsp;2)&nbsp;−&nbsp;1&nbsp;= <b>3x<sup>2</sup>&nbsp;+&nbsp;5</b>. Check: 3&nbsp;×&nbsp;4&nbsp;+&nbsp;5&nbsp;= 17, as in the picture.</li>
+      <li>(g&nbsp;∘&nbsp;f)⁠(x)&nbsp;= g(3x&nbsp;−&nbsp;1)&nbsp;= (3x&nbsp;−&nbsp;1)<sup>2</sup>&nbsp;+&nbsp;2.</li>
+      <li>= 9x<sup>2</sup>&nbsp;−&nbsp;6x&nbsp;+&nbsp;1&nbsp;+&nbsp;2&nbsp;= <b>9x<sup>2</sup>&nbsp;−&nbsp;6x&nbsp;+&nbsp;3</b>. Check: 36&nbsp;−&nbsp;12&nbsp;+&nbsp;3&nbsp;= 27.</li>
+    </ol></div>
+  <p>Domain of a composite: g's output must be an allowed input for f. With f(x)&nbsp;= √x and g(x)&nbsp;= x&nbsp;−&nbsp;4, (f&nbsp;∘&nbsp;g)⁠(x)&nbsp;= √(x&nbsp;−&nbsp;4) only exists for x&nbsp;≥&nbsp;4.</p>
+
+  <h3>The identity function and the inverse</h3>
+  <div class="fbox">
+    <div class="formula"><span class="nw">(f&nbsp;∘&nbsp;f<sup>−1</sup>)⁠(x)&nbsp;= (f<sup>−1</sup>&nbsp;∘&nbsp;f)⁠(x)&nbsp;= x</span> <span class="learn">Learn</span></div>
+    <p style="margin:0 0 8px;font-size:.95rem">The function x&nbsp;↦&nbsp;x is the <b>identity function</b>: it changes nothing. A function followed by its inverse (in either order) is the identity. This is also the quickest check of an inverse you have found.</p>
+  </div>
+  <div class="worked"><b>Worked example 2: show two functions are inverses (<a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">pack Medium 2</a>).</b> f(x)&nbsp;= <span class="frac"><span>1</span><span>2</span></span>⁠(4x&nbsp;−&nbsp;3) and g(x)&nbsp;= 0.5x&nbsp;+&nbsp;0.75. Find (f&nbsp;∘&nbsp;g)⁠(x) and (g&nbsp;∘&nbsp;f)⁠(x), and hence write down f<sup>−1</sup>(x).
+    <ol>
+      <li>(f&nbsp;∘&nbsp;g)⁠(x)&nbsp;= <span class="frac"><span>1</span><span>2</span></span>⁠(4(0.5x&nbsp;+&nbsp;0.75)&nbsp;−&nbsp;3)&nbsp;= <span class="frac"><span>1</span><span>2</span></span>⁠(2x&nbsp;+&nbsp;3&nbsp;−&nbsp;3)&nbsp;= <b>x</b>.</li>
+      <li>(g&nbsp;∘&nbsp;f)⁠(x)&nbsp;= 0.5&nbsp;×&nbsp;<span class="frac"><span>1</span><span>2</span></span>⁠(4x&nbsp;−&nbsp;3)&nbsp;+&nbsp;0.75&nbsp;= x&nbsp;−&nbsp;0.75&nbsp;+&nbsp;0.75&nbsp;= <b>x</b>.</li>
+      <li>Both orders give the identity, so g undoes f: <b>f<sup>−1</sup>(x)&nbsp;= 0.5x&nbsp;+&nbsp;0.75</b>.</li>
+      <li>f is linear on all real numbers, so its range is all real numbers: domain of f<sup>−1</sup> is x ∈ ℝ, and its range is ℝ too.</li>
+    </ol></div>
+
+  <h3>Finding f<sup>−1</sup>(x) in four steps <span class="learn">Learn</span></h3>
+  <ol>
+    <li>Write y&nbsp;= f(x).</li>
+    <li>Swap x and y.</li>
+    <li>Rearrange to make y the subject.</li>
+    <li>Write f<sup>−1</sup>(x)&nbsp;= … and state its domain, which is the range of f.</li>
+  </ol>
+  <div class="worked"><b>Worked example 3: a linear function.</b> f(x)&nbsp;= <span class="frac"><span>2x&nbsp;+&nbsp;5</span><span>3</span></span>. Find f<sup>−1</sup>(x).
+    <ol>
+      <li>y&nbsp;= <span class="frac"><span>2x&nbsp;+&nbsp;5</span><span>3</span></span>.</li>
+      <li>Swap: x&nbsp;= <span class="frac"><span>2y&nbsp;+&nbsp;5</span><span>3</span></span>.</li>
+      <li>3x&nbsp;= 2y&nbsp;+&nbsp;5, so 2y&nbsp;= 3x&nbsp;−&nbsp;5 and y&nbsp;= <span class="frac"><span>3x&nbsp;−&nbsp;5</span><span>2</span></span>.</li>
+      <li><b>f<sup>−1</sup>(x)&nbsp;= <span class="frac"><span>3x&nbsp;−&nbsp;5</span><span>2</span></span></b>, x ∈ ℝ. Check: f<sup>−1</sup>(4)&nbsp;= <span class="frac"><span>7</span><span>2</span></span> and f(<span class="frac"><span>7</span><span>2</span></span>)&nbsp;= <span class="frac"><span>7&nbsp;+&nbsp;5</span><span>3</span></span>&nbsp;= 4.</li>
+    </ol></div>
+
+  <div class="worked"><b>Worked example 4: the banner, a restricted domain.</b> f(x)&nbsp;= (x&nbsp;−&nbsp;1)<sup>2</sup>&nbsp;+&nbsp;3 for x&nbsp;≥&nbsp;1. Find f<sup>−1</sup>(x) and its domain.
+    <ol>
+      <li>Why the restriction: on all real numbers f(0)&nbsp;= f(2)&nbsp;= 4, so f is not one-to-one. For x&nbsp;≥&nbsp;1 only the right half of the parabola is used, which is one-to-one. At SL the question gives you the restricted domain; choosing a restriction yourself is HL (AHL 2.14).</li>
+      <li>Range of f: (x&nbsp;−&nbsp;1)<sup>2</sup>&nbsp;≥&nbsp;0, so f(x)&nbsp;≥&nbsp;3.</li>
+      <li>y&nbsp;= (x&nbsp;−&nbsp;1)<sup>2</sup>&nbsp;+&nbsp;3. Swap: x&nbsp;= (y&nbsp;−&nbsp;1)<sup>2</sup>&nbsp;+&nbsp;3.</li>
+      <li>(y&nbsp;−&nbsp;1)<sup>2</sup>&nbsp;= x&nbsp;−&nbsp;3, so y&nbsp;−&nbsp;1&nbsp;= ±√(x&nbsp;−&nbsp;3).</li>
+      <li>Choose the sign: the range of f<sup>−1</sup> is the domain of f, y&nbsp;≥&nbsp;1, so take +.</li>
+      <li><b>f<sup>−1</sup>(x)&nbsp;= 1&nbsp;+&nbsp;√(x&nbsp;−&nbsp;3), for x&nbsp;≥&nbsp;3</b>. Check: f(3)&nbsp;= 7 and f<sup>−1</sup>(7)&nbsp;= 1&nbsp;+&nbsp;2&nbsp;= 3.</li>
+    </ol></div>
+
+  <div class="worked"><b>Worked example 5: find f when you know f&nbsp;∘&nbsp;g (<a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">pack Hard 5</a>).</b> Write x<sup>2</sup>&nbsp;+&nbsp;12x&nbsp;+&nbsp;24 in the form (x&nbsp;+&nbsp;h)<sup>2</sup>&nbsp;+&nbsp;k. Then, with g(x)&nbsp;= x&nbsp;+&nbsp;6 and (f&nbsp;∘&nbsp;g)⁠(x)&nbsp;= x<sup>2</sup>&nbsp;+&nbsp;12x&nbsp;+&nbsp;24, find f(x).
+    <ol>
+      <li>Complete the square: x<sup>2</sup>&nbsp;+&nbsp;12x&nbsp;+&nbsp;24&nbsp;= (x&nbsp;+&nbsp;6)<sup>2</sup>&nbsp;−&nbsp;36&nbsp;+&nbsp;24&nbsp;= <b>(x&nbsp;+&nbsp;6)<sup>2</sup>&nbsp;−&nbsp;12</b>.</li>
+      <li>(f&nbsp;∘&nbsp;g)⁠(x)&nbsp;= f(x&nbsp;+&nbsp;6), so f(x&nbsp;+&nbsp;6)&nbsp;= (x&nbsp;+&nbsp;6)<sup>2</sup>&nbsp;−&nbsp;12.</li>
+      <li>f squares its input and subtracts 12: <b>f(x)&nbsp;= x<sup>2</sup>&nbsp;−&nbsp;12</b>.</li>
+    </ol></div>
+
+  <div class="tip"><b>Exam traps.</b> (1) Doing the composite in the wrong order: in (f&nbsp;∘&nbsp;g)⁠(x), g goes first. (2) Writing ± in the final inverse: choose one sign using the domain (pack Hard 4 gives no mark for ±). (3) Forgetting the domain of f<sup>−1</sup>: it is the range of f, not the domain of f. (4) Swapping x and y but then not rearranging fully. (5) Reading f<sup>−1</sup>(x) as <span class="frac"><span>1</span><span>f(x)</span></span>.</div>
+
+  <details><summary>Self-check SL 2.5</summary>
+    <ol>
+      <li>f(x)&nbsp;= x<sup>2</sup> and g(x)&nbsp;= 4x&nbsp;−&nbsp;3. Find (f&nbsp;∘&nbsp;g)⁠(x) and (g&nbsp;∘&nbsp;f)⁠(x). (<a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">pack Medium 1(b)</a>)</li>
+      <li>f(x)&nbsp;= √(x&nbsp;−&nbsp;14) for x&nbsp;≥&nbsp;14, and g is a function with an inverse and g(14)&nbsp;= 3. Find (f&nbsp;∘&nbsp;g<sup>−1</sup>)⁠(3). (<a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">pack Hard 2(b)</a>)</li>
+      <li>h(x)&nbsp;= −4x<sup>2</sup>&nbsp;+&nbsp;24x&nbsp;+&nbsp;8. Write h(x) as a(x&nbsp;−&nbsp;p)<sup>2</sup>&nbsp;+&nbsp;q. With f(x)&nbsp;= (x&nbsp;−&nbsp;3)<sup>2</sup> and (g&nbsp;∘&nbsp;f)⁠(x)&nbsp;= h(x), find g(x). (<a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">pack Hard 9</a>)</li>
+      <li>Find the inverse of f(x)&nbsp;= 5&nbsp;−&nbsp;2x.</li>
+    </ol>
+    <p><b>Answers.</b> 1: (f&nbsp;∘&nbsp;g)⁠(x)&nbsp;= (4x&nbsp;−&nbsp;3)<sup>2</sup>&nbsp;= 16x<sup>2</sup>&nbsp;−&nbsp;24x&nbsp;+&nbsp;9; (g&nbsp;∘&nbsp;f)⁠(x)&nbsp;= 4x<sup>2</sup>&nbsp;−&nbsp;3. 2: g(14)&nbsp;= 3 means g<sup>−1</sup>(3)&nbsp;= 14, so the answer is f(14)&nbsp;= √0&nbsp;= 0. 3: h(x)&nbsp;= −4(x&nbsp;−&nbsp;3)<sup>2</sup>&nbsp;+&nbsp;44, so g takes (x&nbsp;−&nbsp;3)<sup>2</sup> to −4(x&nbsp;−&nbsp;3)<sup>2</sup>&nbsp;+&nbsp;44: g(x)&nbsp;= −4x&nbsp;+&nbsp;44. 4: x&nbsp;= 5&nbsp;−&nbsp;2y, so y&nbsp;= <span class="frac"><span>5&nbsp;−&nbsp;x</span><span>2</span></span>: f<sup>−1</sup>(x)&nbsp;= <span class="frac"><span>5&nbsp;−&nbsp;x</span><span>2</span></span>.</p>
+  </details>
+</section>
+
+<!-- =============================== QUIZ =============================== -->
+<section class="topic quiz" id="quiz">
+  <div class="kicker">Ten questions, Paper 1 style (no calculator)</div>
+  <h2>Quick quiz</h2>
+  <p>Work each one out on paper first, then click your answer. Every question explains the trap after you answer. Write any you miss into the Error log.</p>
+
+  <div class="q" data-a="1"><p>1. The largest possible domain of f(x)&nbsp;= √(5&nbsp;−&nbsp;x) is</p>
+    <button>x&nbsp;≥&nbsp;5</button>
+    <button>x&nbsp;≤&nbsp;5</button>
+    <button>x&nbsp;&lt;&nbsp;5</button>
+    <button>x&nbsp;≥&nbsp;0</button>
+    <div class="why">5&nbsp;−&nbsp;x&nbsp;≥&nbsp;0 gives x&nbsp;≤&nbsp;5. x&nbsp;&lt;&nbsp;5 wrongly leaves out x&nbsp;= 5, where f(5)&nbsp;= √0&nbsp;= 0 is fine. x&nbsp;≥&nbsp;5 comes from not flipping the sign when dividing by −1. x&nbsp;≥&nbsp;0 mixes the domain up with the range, which is f(x)&nbsp;≥&nbsp;0.</div></div>
+
+  <div class="q" data-a="3"><p>2. The point (k, 7) lies on the graph of y&nbsp;= 2x<sup>2</sup>&nbsp;−&nbsp;1, with k&nbsp;&gt;&nbsp;0. The value of k is</p>
+    <button>4</button>
+    <button>√3</button>
+    <button>97</button>
+    <button>2</button>
+    <div class="why">Put x&nbsp;= k and y&nbsp;= 7: 2k<sup>2</sup>&nbsp;−&nbsp;1&nbsp;= 7, so k<sup>2</sup>&nbsp;= 4 and k&nbsp;= 2 (k&nbsp;&gt;&nbsp;0). 4 is k<sup>2</sup>, not k; √3 comes from subtracting 1 instead of adding it; 97 is the y-value at x&nbsp;= 7, which swaps the coordinates.</div></div>
+
+  <div class="q" data-a="1"><p>3. f(x)&nbsp;= 2x&nbsp;+&nbsp;1. The value of f<sup>−1</sup>(9) is</p>
+    <button>19</button>
+    <button>4</button>
+    <button><span class="frac"><span>1</span><span>19</span></span></button>
+    <button>5</button>
+    <div class="why">f<sup>−1</sup>(9) is the input that f sends to 9: 2x&nbsp;+&nbsp;1&nbsp;= 9 gives x&nbsp;= 4. 19 is f(9); <span class="frac"><span>1</span><span>19</span></span> treats f<sup>−1</sup> as a reciprocal; 5 is <span class="frac"><span>9&nbsp;+&nbsp;1</span><span>2</span></span>, which undoes "+ 1" with another "+ 1".</div></div>
+
+  <div class="q" data-a="2"><p>4. f(x)&nbsp;= x&nbsp;+&nbsp;5 and g(x)&nbsp;= x<sup>2</sup>. The value of (f&nbsp;∘&nbsp;g)⁠(3) is</p>
+    <button>64</button>
+    <button>17</button>
+    <button>14</button>
+    <button>72</button>
+    <div class="why">g acts first: g(3)&nbsp;= 9, then f(9)&nbsp;= 14. 64 is (g&nbsp;∘&nbsp;f)⁠(3)&nbsp;= 8<sup>2</sup>, the wrong order. 17 is f(3)&nbsp;+&nbsp;g(3) and 72 is f(3)&nbsp;×&nbsp;g(3): a composite is neither a sum nor a product.</div></div>
+
+  <div class="q" data-a="0"><p>5. f(x)&nbsp;= <span class="frac"><span>x&nbsp;−&nbsp;2</span><span>3</span></span>. f<sup>−1</sup>(x) is</p>
+    <button>3x&nbsp;+&nbsp;2</button>
+    <button>3x&nbsp;−&nbsp;2</button>
+    <button><span class="frac"><span>3</span><span>x&nbsp;−&nbsp;2</span></span></button>
+    <button><span class="frac"><span>x&nbsp;+&nbsp;2</span><span>3</span></span></button>
+    <div class="why">Swap: x&nbsp;= <span class="frac"><span>y&nbsp;−&nbsp;2</span><span>3</span></span>, so 3x&nbsp;= y&nbsp;−&nbsp;2 and y&nbsp;= 3x&nbsp;+&nbsp;2. Check: f(3&nbsp;×&nbsp;1&nbsp;+&nbsp;2)&nbsp;= f(5)&nbsp;= 1. 3x&nbsp;−&nbsp;2 undoes the division but not the subtraction; <span class="frac"><span>3</span><span>x&nbsp;−&nbsp;2</span></span> is the reciprocal of f; <span class="frac"><span>x&nbsp;+&nbsp;2</span><span>3</span></span> undoes the subtraction but divides again.</div></div>
+
+  <div class="q" data-a="1"><p>6. The graphs of y&nbsp;= x<sup>2</sup> and y&nbsp;= x&nbsp;+&nbsp;6 meet at</p>
+    <button>(−3, 9) and (2, 4)</button>
+    <button>(3, 9) and (−2, 4)</button>
+    <button>(3, 0) and (−2, 0)</button>
+    <button>(3, 9) only</button>
+    <div class="why">x<sup>2</sup>&nbsp;= x&nbsp;+&nbsp;6 gives x<sup>2</sup>&nbsp;−&nbsp;x&nbsp;−&nbsp;6&nbsp;= (x&nbsp;−&nbsp;3)⁠(x&nbsp;+&nbsp;2)&nbsp;= 0, so x&nbsp;= 3 or −2, and y&nbsp;= x&nbsp;+&nbsp;6 gives 9 and 4. (−3, 9) and (2, 4) come from the wrong signs in the brackets; check: −3&nbsp;+&nbsp;6&nbsp;= 3, not 9. (3, 0) and (−2, 0) forget to find y. "(3, 9) only" drops the negative solution.</div></div>
+
+  <div class="q" data-a="2"><p>7. The graph of y&nbsp;= 2&nbsp;+&nbsp;<span class="frac"><span>1</span><span>x&nbsp;+&nbsp;3</span></span> has asymptotes</p>
+    <button>x&nbsp;= 3 and y&nbsp;= 2</button>
+    <button>x&nbsp;= −3 and y&nbsp;= 0</button>
+    <button>x&nbsp;= −3 and y&nbsp;= 2</button>
+    <button>x&nbsp;= 2 and y&nbsp;= −3</button>
+    <div class="why">The denominator is zero at x&nbsp;= −3, so x&nbsp;= −3 is vertical. For very large x the fraction tends to 0, so y tends to 2: y&nbsp;= 2 is horizontal. x&nbsp;= 3 has the wrong sign; y&nbsp;= 0 forgets the "2 +"; the last option swaps x and y.</div></div>
+
+  <div class="q" data-a="3"><p>8. The vertex of y&nbsp;= 2x<sup>2</sup>&nbsp;−&nbsp;8x&nbsp;+&nbsp;1 is</p>
+    <button>(−2, 25)</button>
+    <button>(2, −11)</button>
+    <button>(4, 1)</button>
+    <button>(2, −7)</button>
+    <div class="why">Axis: x&nbsp;= −<span class="frac"><span>b</span><span>2a</span></span>&nbsp;= <span class="frac"><span>8</span><span>4</span></span>&nbsp;= 2 (in the booklet). y&nbsp;= 2&nbsp;×&nbsp;4&nbsp;−&nbsp;16&nbsp;+&nbsp;1&nbsp;= −7. (−2, 25) drops the minus in −b; (2, −11) forgets to multiply x<sup>2</sup> by 2; (4, 1) uses −<span class="frac"><span>b</span><span>a</span></span> instead of −<span class="frac"><span>b</span><span>2a</span></span>.</div></div>
+
+  <div class="q" data-a="2"><p>9. Which of these functions has an inverse function?</p>
+    <button>f(x)&nbsp;= x<sup>2</sup>, x ∈ ℝ</button>
+    <button>f(x)&nbsp;= x<sup>2</sup>&nbsp;−&nbsp;4x, x&nbsp;≥&nbsp;0</button>
+    <button>f(x)&nbsp;= x<sup>2</sup>, x&nbsp;≥&nbsp;0</button>
+    <button>f(x)&nbsp;= 5, x ∈ ℝ</button>
+    <div class="why">Only one-to-one functions have inverses. x<sup>2</sup> for x&nbsp;≥&nbsp;0 is one-to-one. x<sup>2</sup> on ℝ has f(−2)&nbsp;= f(2); x<sup>2</sup>&nbsp;−&nbsp;4x for x&nbsp;≥&nbsp;0 has f(0)&nbsp;= f(4)&nbsp;= 0 (its vertex is at x&nbsp;= 2, inside the domain); a constant function sends every input to 5.</div></div>
+
+  <div class="q" data-a="1"><p>10. f(x)&nbsp;= √(x&nbsp;−&nbsp;1)&nbsp;+&nbsp;2 for x&nbsp;≥&nbsp;1. The domain of f<sup>−1</sup> is</p>
+    <button>x&nbsp;≥&nbsp;1</button>
+    <button>x&nbsp;≥&nbsp;2</button>
+    <button>x&nbsp;≥&nbsp;0</button>
+    <button>x ∈ ℝ</button>
+    <div class="why">The domain of f<sup>−1</sup> is the range of f. The root is at least 0 (at x&nbsp;= 1), so f(x)&nbsp;≥&nbsp;2. x&nbsp;≥&nbsp;1 is the domain of f, which becomes the range of f<sup>−1</sup>; x&nbsp;≥&nbsp;0 forgets the "+ 2".</div></div>
+
+  <div class="score" id="score">Score: 0 / 10 answered 0</div>
+</section>
+
+<section class="end" id="end">
+  <h2 style="font-size:1.4rem">Before you close this</h2>
+  <ul>
+    <li>Tick the "I can" boxes you are confident about. The unticked ones are the first ten minutes of your next maths session.</li>
+    <li>Mark the pack questions you did against the <a href="https://drive.google.com/file/d/17i6FFlAOtJVleGT-KvN84niIrHyicNdj/view">solutions version</a>, including the method marks (M1) and reason marks (R1), not just the answers.</li>
+    <li>Open the study sheet, <b>Error log</b> tab, and write one row for every mistake from the pack questions and the quiz: what went wrong, and the rule that fixes it (for example "wrote the range with x instead of f(x)").</li>
+    <li>Still to come in Topic 2 at school: transformations (official SL 2.11), asymptotes of rational functions (official SL 2.8), then exponents and logarithms.</li>
+    <li>Also on the study site: <a href="../flashcards.html">flashcards</a> (5 to 10 minutes a day), <a href="../exam-maths-aa-sl.html">exam technique</a> for this subject, and your <a href="../progress.html">progress page</a>, which turns green as you tick the "I can" boxes and pass the quiz.</li>
+  </ul>
+</section>
+
+</main>
+
+<script>
+(function(){
+  // remember ticked "I can" boxes on this device; fails quietly where storage is unavailable
+  var key='ib-maths-aa-sl-22-25-ican';
+  var boxes=document.querySelectorAll('.ican input');
+  try{ var saved=JSON.parse(localStorage.getItem(key)||'{}'); boxes.forEach(function(b){ if(saved[b.dataset.k]) b.checked=true; }); }catch(e){}
+  boxes.forEach(function(b){ b.addEventListener('change',function(){ try{ var s={}; boxes.forEach(function(x){ if(x.checked) s[x.dataset.k]=1; }); localStorage.setItem(key,JSON.stringify(s)); }catch(e){} }); });
+
+  // quiz
+  var qs=document.querySelectorAll('.quiz .q'); var right=0, done=0, total=qs.length;
+  qs.forEach(function(q){
+    var a=parseInt(q.dataset.a,10); var btns=q.querySelectorAll('button');
+    btns.forEach(function(b,i){ b.addEventListener('click',function(){
+      if(q.classList.contains('done')) return;
+      q.classList.add('done'); done++;
+      if(i===a){ b.classList.add('right'); right++; } else { b.classList.add('wrong'); btns[a].classList.add('right'); }
+      document.getElementById('score').textContent='Score: '+right+' / '+total+' answered '+done+(done===total?(right>=8?'. Good. Log the ones you missed.':'. Re-read the sections for the ones you missed, then log them.'):'');
+      if(done===qs.length){ try{ var KQ='ib-quiz-guide-2026-11-10'; var prev=JSON.parse(localStorage.getItem(KQ)||'null'); localStorage.setItem(KQ,JSON.stringify({right:right,total:qs.length,date:new Date().toISOString().slice(0,10),best:Math.max(right,prev&&prev.best||0)})); }catch(e){} }
+    }); });
+  });
+})();
+</script>
+</body>
+</html>

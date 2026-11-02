@@ -8,6 +8,7 @@ LINKS={
  "2026-11-03":dict(url="guides/2026-11-03-chemistry-s1.1-s1.3.html",label="Chemistry HL S1.1 to S1.3",quiz="ib-quiz-guide-2026-11-03"),
  "2026-11-04":dict(url="guides/2026-11-04-maths-aa-sl-1.2-1.6.html",label="Maths AA SL 1.2 to 1.6",quiz="ib-quiz-guide-2026-11-04"),
  "2026-11-06":dict(url="guides/2026-11-06-business-sl-1.1-1.6.html",label="Business Management SL Unit 1, 1.1 to 1.6",quiz="ib-quiz-guide-2026-11-06"),
+ "2026-11-10":dict(url="guides/2026-11-10-maths-aa-sl-2.2-2.5.html",label="Maths AA SL 2.2 to 2.5 (functions)",quiz="ib-quiz-guide-2026-11-10"),
  "2026-11-08":dict(url="review/2026-11-08-week-1.html",label="Week 1 review",quiz="ib-quiz-review-2026-11-08"),
 }
 body=f'''
