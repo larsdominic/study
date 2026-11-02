@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chemistry HL study guide: S1.4, S1.5 and R2.1 (Mon 9 Nov 2026)</title>
+<!--
+  Syllabus statements, numbering and guidance are from the IB Chemistry guide (first assessment 2025),
+  Structure 1.4, Structure 1.5 and Reactivity 2.1. All three say "Additional higher level: None", so nothing on this page is HL-only.
+
+  Data booklet: there is no data booklet in the Drive folder. The guide itself says these are GIVEN in the data booklet:
+  the Avogadro constant N_A (units mol^-1), Ar values to two decimal places, n = m/M, n = CV, the molar volume of an ideal gas at STP,
+  the gas constant R, PV = nRT, the combined gas law, and the atom economy equation. Everything else is marked "Learn".
+  Values used here: N_A = 6.02 x 10^23 mol^-1; R = 8.31 J K^-1 mol^-1; molar volume at STP = 22.7 dm^3 mol^-1
+    (consistent: 8.31 x 273 / 100000 = 0.0227 m^3).
+  Checker (3 Nov), from the contents of the 2025 data booklet (version 1.1, as indexed at ibchem.com/root_pdf/DataBook2025.pdf):
+    section 4 prints "Temperature (K) = temperature (C) + 273.15", "1 dm3 = 1 litre = 1 x 10^-3 m3 = 1 x 10^3 cm3",
+    "STP conditions: 273.15 K and 100 kPa" and SATP 298.15 K and 100 kPa, so these are now marked "In booklet".
+    Section 1 (equations) has no percentage yield equation and no n = V/Vm, so both stay "Learn".
+    Calculations on this page use + 273, like the class handouts and the Avogadro answers; + 273.15 changes at most the last
+    significant figure (quiz Q7: 3.33 instead of 3.32 dm3, still option B).
+  SATP: the S1.5 handout mentions SATP, but the 2025 guide does not; SATP questions (Exercise 5.3 Q14) are not assigned.
+  Ar values used (IB data booklet, 2 d.p.): H 1.01, He 4.00, C 12.01, N 14.01, O 16.00, Na 22.99, Mg 24.31, Al 26.98, S 32.07,
+    Cl 35.45, K 39.10, Ca 40.08, Fe 55.85, Zn 65.38; plus, for the assigned handout questions: P 30.97, Cr 52.00, Mn 54.94,
+    Cu 63.55, Br 79.90, Pb 207.20 (the values the handout answers use).
+
+  Decisions:
+  - R2.1 statements 2.1.1 to 2.1.5 are all explained; practice today is equations, mole ratios, limiting reactant, yields, atom economy.
+    Left for later: titration practice (handout Exercise 16.3), ionic equations (Exercise 16.1 Q3 to 5, a class extra not named in the guide).
+  - Sat 14 Nov has a timed set on back titration and water of crystallisation, so the back-titration files, the water of crystallisation
+    worksheet, S1.4 handout homework Q11 (MgSO4.xH2O) and Exercise 16.3 Q7 (hydrated oxalic acid) are not assigned here.
+  - The Avogadro "questions" file is answers only. The questions on this page under #avogadro were reconstructed from the worked answers;
+    the original wording is unknown, and in Q1 the starting volume (67.2 cm3) was worked backwards from the answer 60.9 cm3.
+  - Handout exercise numbers (4.x, 5.x, 16.x) are workbook chapter numbers, mapped in the plan.
+-->
+<style>
+  :root{
+    --paper:#F5F7F4; --ink:#1E2A33; --ink-soft:#4A5862; --rule:#D6DCD8;
+    --indigo:#2F47A6; --indigo-soft:#E6EAF7; --amber:#B8761A; --amber-soft:#FBF1DF;
+    --green:#2E7D4F; --green-soft:#E3F2E8; --red:#B23A3A; --red-soft:#F8E4E4;
+    --card:#FFFFFF;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;overflow-wrap:break-word}
+  h1,h2,h3,h4{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;line-height:1.2;margin:0 0 .4em;font-weight:600}
+  h1{font-size:2.3rem}
+  h2{font-size:1.75rem;margin-top:0}
+  h3{font-size:1.25rem;margin-top:1.8em}
+  h4{font-size:1.05rem;margin-top:1.4em;font-family:inherit;font-weight:700}
+  p{margin:0 0 1em}
+  a{color:var(--indigo)}
+  code,.mono{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;font-size:.95em}
+  sup,sub{line-height:0}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
+
+  /* hero: the "mole bridge", the road map that every calculation today follows */
+  .hero{background:#0B0F1A;color:#fff;padding:0 0 28px}
+  .bridge{display:block;width:100%;max-width:820px;height:auto;margin:0 auto}
+  .hero .wrap{padding-top:14px;padding-bottom:0}
+  .hero h1{color:#fff}
+  .hero p{color:#C9D1E6;max-width:660px}
+  .meta{display:flex;flex-wrap:wrap;gap:8px 22px;color:#C9D1E6;font-size:.95rem;margin-top:8px}
+
+  nav.toc{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+  nav.toc .wrap{display:flex;gap:4px;flex-wrap:wrap;padding:8px 20px}
+  nav.toc a{text-decoration:none;color:var(--ink-soft);padding:6px 10px;border-radius:6px;font-size:.92rem}
+  nav.toc a:hover,nav.toc a:focus-visible{background:var(--indigo-soft);color:var(--indigo);outline:none}
+
+  .plan{display:grid;grid-template-columns:1fr;gap:12px;margin:22px 0 8px}
+  .plan > div{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);padding:12px 16px}
+  .plan .bh{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-bottom:4px}
+  .plan .bh b{font-size:1.2rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+  .plan .bh span{font-weight:700;color:var(--indigo)}
+  .plan ol{margin:6px 0 0;padding-left:22px}
+  .plan li{margin:4px 0}
+  .plan .t{color:var(--ink-soft);font-size:.88rem;white-space:nowrap}
+  .files{margin:16px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+  .files li a{display:inline-block;background:var(--card);border:1px solid var(--rule);padding:5px 10px;border-radius:999px;font-size:.9rem;text-decoration:none}
+  .files li a:hover{border-color:var(--indigo)}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 20px;background:var(--card);border:1px solid var(--rule);padding:10px 14px;font-size:.92rem;margin:16px 0}
+
+  section.topic{margin-top:56px;padding-top:28px;border-top:3px solid var(--ink)}
+  .kicker{color:var(--indigo);font-weight:700;letter-spacing:.01em;margin-bottom:4px}
+  .guiding{font-style:italic;color:var(--ink-soft);margin-bottom:18px}
+
+  .ican{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:0 0 24px}
+  .ican p{margin:0 0 8px;font-weight:700}
+  .ican label{display:flex;gap:10px;align-items:flex-start;padding:5px 0;cursor:pointer}
+  .ican input{margin-top:6px;width:16px;height:16px;flex:none;accent-color:var(--indigo)}
+
+  /* data booklet markers */
+  .fb,.learn{display:inline-block;font-size:.72rem;font-weight:700;padding:1px 7px;border-radius:3px;vertical-align:middle;margin-left:6px;white-space:nowrap;font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.01em}
+  .fb{background:var(--green);color:#fff}
+  .learn{background:var(--amber);color:#fff}
+
+  table{border-collapse:collapse;width:100%;margin:12px 0 20px;font-size:.95rem;background:var(--card)}
+  th,td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#EDF0EC}
+  td.c,th.c{text-align:center}
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0 20px}
+  .tablewrap table{margin:0}
+
+  figure{margin:20px 0;background:var(--card);border:1px solid var(--rule);padding:12px}
+  figure svg{display:block;width:100%;height:auto}
+  figcaption{font-size:.9rem;color:var(--ink-soft);margin-top:8px}
+  .key{margin:8px 0 0;padding-left:20px;font-size:.92rem}
+  .key li{margin:2px 0}
+
+  .tip{background:var(--amber-soft);border-left:5px solid var(--amber);padding:12px 16px;margin:18px 0}
+  .tip > b:first-child{color:var(--amber)}
+  .worked{background:var(--indigo-soft);border-left:5px solid var(--indigo);padding:12px 16px;margin:18px 0}
+  .worked > b:first-child{color:var(--indigo)}
+  .worked ol{margin:6px 0 0;padding-left:22px}
+  .worked li{margin:3px 0}
+  .formula{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:1.2rem;text-align:center;margin:12px 0;line-height:2}
+  .nw{white-space:nowrap}
+  .fbox{background:var(--card);border:1px solid var(--rule);padding:6px 14px;margin:14px 0}
+  .fbox .formula{margin:8px 0}
+  .frac{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;font-size:.92em;line-height:1.15;margin:0 2px}
+  .frac>span:first-child{border-bottom:1px solid currentColor;padding:0 3px}
+  .frac>span:last-child{padding:0 3px}
+
+  details{background:var(--card);border:1px solid var(--rule);padding:10px 14px;margin:10px 0}
+  summary{cursor:pointer;font-weight:600}
+  details[open] summary{margin-bottom:8px}
+
+  .quiz .q{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:12px 0}
+  .quiz .q > p{font-weight:600;margin-bottom:8px}
+  .quiz button{display:block;width:100%;text-align:left;background:#F3F5F2;border:1px solid var(--rule);padding:8px 12px;margin:6px 0;border-radius:6px;font:inherit;cursor:pointer;color:var(--ink)}
+  .quiz button:hover,.quiz button:focus-visible{border-color:var(--indigo);outline:none}
+  .quiz button.right{background:var(--green-soft);border-color:var(--green)}
+  .quiz button.wrong{background:var(--red-soft);border-color:var(--red)}
+  .quiz .why{display:none;margin-top:8px;font-size:.95rem;color:var(--ink-soft)}
+  .quiz .q.done .why{display:block}
+  .score{font-weight:700;margin-top:14px}
+
+  .end{margin-top:56px;background:var(--card);border:1px solid var(--rule);padding:18px 20px}
+  .end ul{margin:8px 0 0;padding-left:20px}
+  @media (max-width:600px){h1{font-size:1.8rem}body{font-size:16px}th,td{padding:6px}.formula{font-size:1.08rem}}
+  @media print{nav.toc{position:static}details{break-inside:avoid}.quiz button{border:1px solid #999}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="bridge" viewBox="0 0 760 420" aria-label="The mole bridge: mass, particles, gas volume or solution of the given substance A are turned into moles of A, the mole ratio from the equation crosses to moles of B, and moles of B are turned into the mass, particles, gas volume or solution asked for">
+    <defs>
+      <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9FB4FF"/></marker>
+      <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#F2C46D"/></marker>
+    </defs>
+    <rect width="760" height="420" fill="#0B0F1A"/>
+    <g font-family="Arial, Helvetica, sans-serif" font-size="24" text-anchor="middle">
+      <!-- boxes: given side (left) and wanted side (right) -->
+      <g fill="#141A2B" stroke="#5B6684" stroke-width="2">
+        <rect x="20" y="140" width="140" height="60" rx="8"/><rect x="20" y="230" width="140" height="60" rx="8"/><rect x="20" y="320" width="140" height="60" rx="8"/>
+        <rect x="600" y="140" width="140" height="60" rx="8"/><rect x="600" y="230" width="140" height="60" rx="8"/><rect x="600" y="320" width="140" height="60" rx="8"/>
+        <rect x="225" y="30" width="130" height="60" rx="8"/><rect x="405" y="30" width="130" height="60" rx="8"/>
+      </g>
+      <g fill="#E8ECF6">
+        <text x="90" y="178">mass</text><text x="90" y="268">gas</text><text x="90" y="358">solution</text>
+        <text x="670" y="178">mass</text><text x="670" y="268">gas</text><text x="670" y="358">solution</text>
+        <text x="290" y="68">particles</text><text x="470" y="68">particles</text>
+      </g>
+      <!-- arrows into n(A) and out of n(B) -->
+      <g stroke="#9FB4FF" stroke-width="3" fill="none" marker-end="url(#ah)">
+        <line x1="160" y1="175" x2="248" y2="236"/><line x1="160" y1="260" x2="238" y2="260"/><line x1="160" y1="345" x2="248" y2="284"/>
+        <line x1="290" y1="90" x2="290" y2="206"/>
+        <line x1="512" y1="236" x2="600" y2="175"/><line x1="522" y1="260" x2="600" y2="260"/><line x1="512" y1="284" x2="600" y2="345"/>
+        <line x1="470" y1="206" x2="470" y2="90"/>
+      </g>
+      <g fill="#9FB4FF">
+        <text x="215" y="183">÷ M</text><text x="200" y="244">÷ V<tspan font-size="22" dy="6">m</tspan></text><text x="214" y="352">c × V</text>
+        <text x="334" y="160">÷ N<tspan font-size="22" dy="6">A</tspan></text>
+        <text x="545" y="185">× M</text><text x="561" y="244">× V<tspan font-size="22" dy="6">m</tspan></text><text x="552" y="352">÷ V</text>
+        <text x="426" y="160">× N<tspan font-size="22" dy="6">A</tspan></text>
+      </g>
+      <!-- the two mole hubs and the bridge -->
+      <line x1="342" y1="260" x2="416" y2="260" stroke="#F2C46D" stroke-width="5" marker-end="url(#ag)"/>
+      <circle cx="290" cy="260" r="50" fill="#F2C46D"/><circle cx="470" cy="260" r="50" fill="#F2C46D"/>
+      <g fill="#0B0F1A" font-weight="bold" font-size="26"><text x="290" y="269">n(A)</text><text x="470" y="269">n(B)</text></g>
+      <g fill="#F2C46D"><text x="380" y="236">× b/a</text><text x="380" y="300">ratio</text></g>
+      <g fill="#8F9BB8" font-size="22"><text x="290" y="340">given</text><text x="470" y="340">wanted</text></g>
+      <text x="380" y="404" fill="#F2C46D" font-size="24">V<tspan font-size="22" dy="6">m</tspan><tspan dy="-6"> = 22.7 dm³ mol⁻¹ at STP · PV = nRT</tspan></text>
+    </g>
+  </svg>
+  <div class="wrap">
+    <h1>Chemistry HL: the mole, ideal gases and reacting amounts</h1>
+    <p>Study guide for Monday 9 November 2026. The picture above is the whole of today in one map. Whatever you are given about substance A (its mass, number of particles, gas volume, or a solution's concentration and volume), you first turn it into moles, n(A). The balanced equation then takes you across the bridge: multiply by the mole ratio b/a. From n(B) you turn back into whatever is asked. S1.4 builds the arrows, S1.5 adds gases, R2.1 adds the bridge.</p>
+    <div class="meta"><span>About 2 hours</span><span>Structure 1.4, Structure 1.5, Reactivity 2.1 (SL and HL: no HL-only content in these three)</span><span>Source: IB Chemistry guide (first assessment 2025) and the class handouts</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <a href="../index.html" style="font-weight:700;color:var(--indigo)">All days</a><a href="#plan">Plan</a><a href="#s14">S1.4 The mole</a><a href="#s15">S1.5 Ideal gases</a><a href="#avogadro">Avogadro set</a><a href="#r21">R2.1 Reacting amounts</a><a href="#quiz">Quiz</a><a href="#end">Finish</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section id="plan">
+  <h2 style="margin-top:28px">How to spend the two hours</h2>
+  <p style="margin:10px 0 0">Four blocks. Do them in order and tick each step off on paper. Have a calculator ready: it is allowed in every IB Chemistry paper. The page links take you straight to each file; the section links jump down this page.</p>
+  <div class="plan">
+    <div>
+      <div class="bh"><b>Block 1 · 30 min</b><span>S1.4 Moles, particles, masses, formulas</span></div>
+      <ol>
+        <li>Read the <a href="#s14">S1.4 section</a> from 1.4.1 to 1.4.4. Cover the steps of each worked example and try it first. <span class="t">(10 min)</span></li>
+        <li>Do questions 1 to 3 of "Self-check S1.4" on paper, then open it to check. <span class="t">(3 min)</span></li>
+        <li>Open the <a href="https://drive.google.com/file/d/1ud6MEr1gO9nnaX7pk7NjkBTyhpfKwnCp/view">S1.4 handout</a> and do <b>questions 9 a to c, 10 a to c and 11</b> (molecular and empirical formulas, the page before the "Exercise 4.4" answers). Use the A<sub>r</sub> values to two decimal places listed in this guide. <span class="t">(10 min)</span></li>
+        <li>Mark with the answers printed in the same handout under "Exercise 4.4". Check the method too: dividing by A<sub>r</sub>, dividing by the smallest value, then the M ratio for the molecular formula. These are the steps that earn marks in Paper 2. <span class="t">(4 min)</span></li>
+        <li>Write every mistake into the Error log tab of the study sheet: what went wrong and the rule that fixes it. <span class="t">(3 min)</span></li>
+      </ol>
+    </div>
+    <div>
+      <div class="bh"><b>Block 2 · 25 min</b><span>S1.4 Concentration and Avogadro's law</span></div>
+      <ol>
+        <li>Read 1.4.5 and 1.4.6 in the <a href="#s14c">S1.4 section</a>. <span class="t">(8 min)</span></li>
+        <li>Do questions 4 to 6 of "Self-check S1.4", then check. <span class="t">(2 min)</span></li>
+        <li>In the <a href="https://drive.google.com/file/d/1ud6MEr1gO9nnaX7pk7NjkBTyhpfKwnCp/view">S1.4 handout</a> do <b>questions 2, 6, 9 and 10</b> of the concentration set (before the "Exercise 4.5" answers) and <b>question 3</b> of the gas volume set (H<sub>2</sub>S burned in oxygen, before "Exercise 4.6"). <span class="t">(10 min)</span></li>
+        <li>Mark with the handout's "Exercise 4.5" and "Exercise 4.6" answers. In question 3, water is a gas in that equation, so it counts in the final volume. <span class="t">(3 min)</span></li>
+        <li>Log mistakes in the Error log. <span class="t">(2 min)</span></li>
+      </ol>
+    </div>
+    <div>
+      <div class="bh"><b>Block 3 · 30 min</b><span>S1.5 Ideal gases, group task, Avogadro answers</span></div>
+      <ol>
+        <li>Read the <a href="#s15">S1.5 section</a>. <span class="t">(9 min)</span></li>
+        <li>Open the <a href="https://drive.google.com/file/d/1qkp0lJM4ExBWV7rCkRYP6D65Rq-EZuRb/view">S1.5 group work task</a>. The class split it into five groups; you do it alone: write two lines for each Group 1 question, and fill the table for Groups 2 to 5 (what is constant, the equation, the graph). Check against <a href="#group">"Group task, your version"</a>. <span class="t">(4 min)</span></li>
+        <li>Do "Self-check S1.5", then check. <span class="t">(2 min)</span></li>
+        <li>Do <b>questions 1, 2 and 3</b> of the <a href="#avogadro">Avogadro practice set</a> on paper. Convert to Pa, m<sup>3</sup> and K before you substitute. <span class="t">(10 min)</span></li>
+        <li>Mark against the <a href="https://drive.google.com/file/d/1OQ-yVYvsWOKy-R0_mc3sAJJQYJJvWIhy/view">Avogadro answers sheet</a>. The folder has only these answers, so the questions on this page were rebuilt from them. Count an answer right if it matches to 3 significant figures and your units are right. <span class="t">(3 min)</span></li>
+        <li>Log mistakes, especially unit slips. <span class="t">(2 min)</span></li>
+      </ol>
+    </div>
+    <div>
+      <div class="bh"><b>Block 4 · 35 min</b><span>R2.1 Equations, limiting reactant, yields, atom economy; quiz</span></div>
+      <ol>
+        <li>Read the <a href="#r21">R2.1 section</a>. <span class="t">(10 min)</span></li>
+        <li>Do "Self-check R2.1", then check. <span class="t">(2 min)</span></li>
+        <li>In the <a href="https://drive.google.com/file/d/1TAYUtJuBRPfFFDx83it0Xl14lGn-sx-4/view">R2.1 handout</a> do <b>question 8</b> (magnesium burning in CO<sub>2</sub>), then <b>questions 3a and 4c</b> of the yield and atom economy set. Then do <b>question 4</b> of the <a href="#avogadro">Avogadro practice set</a> (a limiting reactant that gives a gas). <span class="t">(8 min)</span></li>
+        <li>Mark: the handout prints its answers after the questions ("Exercise 16.1" and "Exercise 16.2"); Avogadro question 4 is on the <a href="https://drive.google.com/file/d/1OQ-yVYvsWOKy-R0_mc3sAJJQYJJvWIhy/view">answers sheet</a>. <span class="t">(2 min)</span></li>
+        <li>Do the <a href="#quiz">quiz</a>. Work each question on paper before you click. <span class="t">(10 min)</span></li>
+        <li>Write every mistake from today into the Error log tab. <span class="t">(3 min)</span></li>
+      </ol>
+    </div>
+  </div>
+  <p><b>Files for today in the IB folder</b></p>
+  <ul class="files">
+    <li><a href="https://drive.google.com/file/d/1ud6MEr1gO9nnaX7pk7NjkBTyhpfKwnCp/view">S1.4 Handout</a></li>
+    <li><a href="https://drive.google.com/file/d/1sLLpVEODi7Me0N9yP2jxBHLBmSiVzzg4/view">S1.4 Slides</a></li>
+    <li><a href="https://drive.google.com/file/d/1rReykKVjWQTe0_RNoFjMFRTUk1CuPL9u/view">S1.5 Handout</a></li>
+    <li><a href="https://drive.google.com/file/d/1CNjlvHJH3xEMeyP1NdgCn2cHiWIidfhI/view">S1.5 Slides</a></li>
+    <li><a href="https://drive.google.com/file/d/1qkp0lJM4ExBWV7rCkRYP6D65Rq-EZuRb/view">S1.5 Group work task</a></li>
+    <li><a href="https://drive.google.com/file/d/1OQ-yVYvsWOKy-R0_mc3sAJJQYJJvWIhy/view">S1.4 to 1.5 Avogadro answers</a></li>
+    <li><a href="https://drive.google.com/file/d/1TAYUtJuBRPfFFDx83it0Xl14lGn-sx-4/view">R2.1 Handout</a></li>
+    <li><a href="https://drive.google.com/file/d/1ACCKX-cQMXkRSnsAFWpR56iG4rBRI-E_/view">R2.1 Slides</a></li>
+    <li><a href="https://drive.google.com/file/d/1Blcb2xlieXOizwTcIWsH7w5WwMsX-YtB/view">IB Chemistry subject guide</a></li>
+  </ul>
+  <div class="legend" aria-label="Legend for the data booklet markers">
+    <span><span class="fb" style="margin-left:0">In booklet</span> given in the exam data booklet: know how to use it, no need to memorise it</span>
+    <span><span class="learn" style="margin-left:0">Learn</span> not in the booklet: you must remember it</span>
+  </div>
+  <p style="font-size:.95rem;color:var(--ink-soft)">The official guide says these are in the data booklet: the Avogadro constant N<sub>A</sub> = 6.02 × 10<sup>23</sup> mol<sup>−1</sup>, the gas constant R = 8.31 J K<sup>−1</sup> mol<sup>−1</sup>, the molar volume of an ideal gas at STP (22.7 dm<sup>3</sup> mol<sup>−1</sup>), the relative atomic masses to two decimal places, and the equations n = m/M, n = CV, PV = nRT, the combined gas law and the atom economy equation. The booklet also prints the STP conditions (273.15 K and 100 kPa), T(K) = T(°C) + 273.15 and 1 dm<sup>3</sup> = 10<sup>3</sup> cm<sup>3</sup> = 10<sup>−3</sup> m<sup>3</sup>. Today's A<sub>r</sub> values: H 1.01, He 4.00, C 12.01, N 14.01, O 16.00, Na 22.99, Mg 24.31, Al 26.98, P 30.97, S 32.07, Cl 35.45, K 39.10, Ca 40.08, Cr 52.00, Mn 54.94, Fe 55.85, Cu 63.55, Zn 65.38, Br 79.90, Pb 207.20. The folder has no data booklet: ask the teacher for a clean copy and practise with it.</p>
+  <h4>The handouts number things differently</h4>
+  <p>The handouts come from a workbook whose exercise numbers follow its own chapters. Same content, different labels:</p>
+  <div class="tablewrap"><table>
+    <tr><th>Handout</th><th class="c">Workbook exercises</th><th class="c">Official IB topic</th></tr>
+    <tr><td>S1.4 The mole</td><td class="c">4.2 to 4.6</td><td class="c">Structure 1.4</td></tr>
+    <tr><td>S1.5 Ideal gases</td><td class="c">5.1 to 5.3 and "Test your understanding" 8 to 21</td><td class="c">Structure 1.5</td></tr>
+    <tr><td>R2.1 Stoichiometry</td><td class="c">16.1 to 16.3</td><td class="c">Reactivity 2.1</td></tr>
+  </table></div>
+  <p style="font-size:.95rem;color:var(--ink-soft)"><b>Left for later in R2.1.</b> Every R2.1 statement is explained below, but today's practice stops at equations, mole ratios, limiting reactant, yields and atom economy. Still to practise: titration calculations (R2.1 handout, the questions before "Exercise 16.3"), which lead into the back titration and water of crystallisation set on Saturday 14 November, and ionic equations (R2.1 handout questions 3 to 5), a class extra that is not in the official R2.1 statements. Extra practice when you have time, all with answers in the handouts: S1.5 handout "Test your understanding" 8 to 21, S1.4 handout homework question 12, R2.1 handout questions 12 to 14, and question 5 of the <a href="#avogadro">Avogadro set</a>.</p>
+  <p style="font-size:.95rem;color:var(--ink-soft)">Exam format (HL): Paper 1A is 40 multiple-choice questions with no marks lost for wrong answers; Paper 1B is data-based and practical questions; Paper 2 is short and extended answers. A calculator and a clean data booklet are allowed in all of them. The quiz at the end is in Paper 1A style.</p>
+</section>
+
+<!-- =============================== S1.4 =============================== -->
+<section class="topic" id="s14">
+  <div class="kicker">Structure 1.4</div>
+  <h2>Counting particles by mass: the mole</h2>
+  <p class="guiding">Guiding question: how do we quantify matter on the atomic scale?</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="s141"><span>Convert the amount of substance, n, to the number of specified elementary entities, using the Avogadro constant N<sub>A</sub> (1.4.1)</span></label>
+    <label><input type="checkbox" data-k="s142"><span>Determine relative formula masses M<sub>r</sub> from relative atomic masses A<sub>r</sub> (1.4.2)</span></label>
+    <label><input type="checkbox" data-k="s143"><span>Solve problems involving the relationships between the number of particles, the amount of substance in moles and the mass in grams (1.4.3)</span></label>
+    <label><input type="checkbox" data-k="s144"><span>Interconvert the percentage composition by mass and the empirical formula, and determine the molecular formula from the empirical formula and molar mass (1.4.4)</span></label>
+    <label><input type="checkbox" data-k="s145"><span>Solve problems involving the molar concentration, amount of solute and volume of solution, in mol dm<sup>−3</sup> and g dm<sup>−3</sup> (1.4.5)</span></label>
+    <label><input type="checkbox" data-k="s146"><span>Solve problems involving the mole ratio of reactants and/or products and the volume of gases, using Avogadro's law (1.4.6)</span></label>
+  </div>
+
+  <h3>1.4.1 The mole and the Avogadro constant</h3>
+  <p>The <b>mole</b> (mol) is the SI unit of amount of substance. One mole contains exactly N<sub>A</sub> elementary entities. An <b>elementary entity</b> is whatever you are counting: an atom, a molecule, an ion, an electron, or a specified group of particles such as a formula unit of NaCl. Always say which.</p>
+  <div class="fbox">
+    <div class="formula"><span class="nw">N<sub>A</sub> = 6.02 × 10<sup>23</sup> mol<sup>−1</sup></span> <span class="fb">In booklet</span></div>
+    <div class="formula"><span class="nw">N = n × N<sub>A</sub></span> (N = number of particles, n = amount in mol) <span class="learn">Learn</span></div>
+  </div>
+  <div class="worked"><b>Worked example 1.</b> How many hydrogen atoms are there in 0.0500 mol of methane, CH<sub>4</sub>?
+    <ol>
+      <li>Molecules first: N(CH<sub>4</sub>) = 0.0500 × 6.02 × 10<sup>23</sup> = 3.01 × 10<sup>22</sup> molecules.</li>
+      <li>Each molecule has 4 H atoms: N(H) = 4 × 3.01 × 10<sup>22</sup> = 12.04 × 10<sup>22</sup> = <b>1.20 × 10<sup>23</sup></b> H atoms. (When 12.04 × 10<sup>22</sup> becomes 1.204 × 10<sup>23</sup>, the power goes up by one: check it every time.)</li>
+    </ol>
+    Going the other way: 1.50 × 10<sup>24</sup> water molecules is <span class="nw">n = 1.50 × 10<sup>24</sup> ÷ 6.02 × 10<sup>23</sup></span> = <b>2.49 mol</b>.
+  </div>
+  <div class="tip"><b>Exam trap.</b> Read which entity is asked: molecules, atoms of one element, all atoms, or ions. 0.0500 mol of CH<sub>4</sub> has 3.01 × 10<sup>22</sup> molecules but five times as many atoms in total.</div>
+
+  <h3>1.4.2 Relative atomic mass and relative formula mass</h3>
+  <p>Masses of atoms are compared on a scale relative to carbon-12 (one <sup>12</sup>C atom has a relative mass of exactly 12). A<sub>r</sub> is the weighted average relative mass of an element's atoms; M<sub>r</sub> is the sum of the A<sub>r</sub> values of all the atoms in the formula. Both are ratios, so they have <b>no units</b>. Use the data booklet A<sub>r</sub> values to two decimal places.</p>
+  <div class="worked"><b>Worked example 2.</b> M<sub>r</sub> of calcium nitrate, Ca(NO<sub>3</sub>)<sub>2</sub>, and of ammonium sulfate, (NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub>.
+    <ol>
+      <li>Ca(NO<sub>3</sub>)<sub>2</sub>: the bracket doubles everything inside it, so 1 Ca, 2 N, 6 O. <span class="nw">40.08 + 2(14.01 + 3 × 16.00)</span> = 40.08 + 2 × 62.01 = <b>164.10</b>.</li>
+      <li>(NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub>: 2 N, 8 H, 1 S, 4 O. <span class="nw">2(14.01 + 4 × 1.01) + 32.07 + 4 × 16.00</span> = 36.10 + 32.07 + 64.00 = <b>132.17</b>.</li>
+    </ol>
+  </div>
+
+  <h3>1.4.3 Molar mass and n = m/M</h3>
+  <p>The <b>molar mass</b> M is the mass of one mole, in g mol<sup>−1</sup>. It has the same number as M<sub>r</sub> (water: M<sub>r</sub> = 18.02, M = 18.02 g mol<sup>−1</sup>).</p>
+  <div class="fbox">
+    <div class="formula"><span class="nw">n = <span class="frac"><span>m</span><span>M</span></span></span> &nbsp; <span class="nw">(n in mol, m in g, M in g mol<sup>−1</sup>)</span> <span class="fb">In booklet</span></div>
+  </div>
+  <div class="worked"><b>Worked example 3.</b>
+    <ol>
+      <li>Mass of 0.150 mol of (NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub>: m = n × M = 0.150 × 132.17 = 19.83 g, so <b>19.8 g</b> (3 significant figures, like the data).</li>
+      <li>Amount in 5.00 g of CaCO<sub>3</sub>: M = 40.08 + 12.01 + 48.00 = 100.09 g mol<sup>−1</sup>; n = 5.00 ÷ 100.09 = <b>0.0500 mol</b>.</li>
+      <li>Mass of one water molecule: one mole (6.02 × 10<sup>23</sup> molecules) has mass 18.02 g, so one molecule has <span class="nw">18.02 ÷ 6.02 × 10<sup>23</sup></span> = <b>2.99 × 10<sup>−23</sup> g</b>.</li>
+    </ol>
+  </div>
+
+  <h3>1.4.4 Empirical and molecular formulas</h3>
+  <p>The <b>empirical formula</b> is the simplest whole-number ratio of atoms of each element in a compound. The <b>molecular formula</b> is the actual number of atoms of each element in one molecule, and is always a whole-number multiple of the empirical formula (H<sub>2</sub>O<sub>2</sub> is (HO)<sub>2</sub>; glucose C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> is (CH<sub>2</sub>O)<sub>6</sub>). Ionic and giant structures have only an empirical formula.</p>
+  <p><b>Percentage by mass from a formula</b> <span class="learn">Learn</span>: <span class="nw">% element</span> = <span class="nw">(number of atoms × A<sub>r</sub>)</span> <span class="nw">÷ M<sub>r</sub> × 100</span>. Example: % N in NH<sub>4</sub>NO<sub>3</sub> (M<sub>r</sub> = 80.06) = <span class="nw">2 × 14.01 ÷ 80.06 × 100</span> = 35.0%.</p>
+  <div class="worked"><b>Worked example 4.</b> A compound is 40.0% C, 6.7% H and 53.3% O by mass. Its molar mass is 180.18 g mol<sup>−1</sup>. Find the empirical and molecular formulas.
+    <div class="tablewrap"><table>
+      <tr><th>Step</th><th class="c">C</th><th class="c">H</th><th class="c">O</th></tr>
+      <tr><td>Mass in 100 g</td><td class="c">40.0</td><td class="c">6.7</td><td class="c">53.3</td></tr>
+      <tr><td>÷ A<sub>r</sub> (moles)</td><td class="c">40.0 ÷ 12.01 = 3.331</td><td class="c">6.7 ÷ 1.01 = 6.634</td><td class="c">53.3 ÷ 16.00 = 3.331</td></tr>
+      <tr><td>÷ smallest</td><td class="c">1.00</td><td class="c">1.99</td><td class="c">1.00</td></tr>
+      <tr><td>Whole numbers</td><td class="c">1</td><td class="c">2</td><td class="c">1</td></tr>
+    </table></div>
+    <ol>
+      <li>Empirical formula <b>CH<sub>2</sub>O</b>, with M = 12.01 + 2.02 + 16.00 = 30.03 g mol<sup>−1</sup>.</li>
+      <li>Multiple: 180.18 ÷ 30.03 = 6.00, so the molecular formula is (CH<sub>2</sub>O)<sub>6</sub> = <b>C<sub>6</sub>H<sub>12</sub>O<sub>6</sub></b>.</li>
+    </ol>
+  </div>
+  <p><b>From combustion data</b> (the Tool 1 link in the guide): all the carbon ends up in CO<sub>2</sub> and all the hydrogen in H<sub>2</sub>O. Mass of C = <span class="nw">mass of CO<sub>2</sub> × 12.01 ÷ 44.01</span>; mass of H = <span class="nw">mass of H<sub>2</sub>O × 2.02 ÷ 18.02</span>; mass of O = sample mass minus C minus H. Then carry on as in the table. Homework question 12 in the <a href="https://drive.google.com/file/d/1ud6MEr1gO9nnaX7pk7NjkBTyhpfKwnCp/view">S1.4 handout</a> is a full 7-mark example, with its answer.</p>
+  <div class="tip"><b>Exam trap.</b> Do not round too early or too far. A ratio of 1 : 1.33 means multiply everything by 3 (3 : 4), and 1 : 1.5 means multiply by 2 (2 : 3); rounding 1.33 to 1 gives the wrong formula. Keep 3 or 4 significant figures until the last step.</div>
+
+  <h3 id="s14c">1.4.5 Molar concentration</h3>
+  <p>Concentration is the amount of solute per volume of <b>solution</b> (not per volume of solvent). The guide requires square brackets for molar concentration: [NaCl] = 0.10 mol dm<sup>−3</sup>. You must use both units, mol dm<sup>−3</sup> and g dm<sup>−3</sup>, and convert between them.</p>
+  <div class="fbox">
+    <div class="formula"><span class="nw">n = CV</span> &nbsp; <span class="nw">(C in mol dm<sup>−3</sup>, V in dm<sup>3</sup>)</span> <span class="fb">In booklet</span></div>
+    <div class="formula"><span class="nw">g dm<sup>−3</sup> = mol dm<sup>−3</sup> × M</span> <span class="learn">Learn</span> &nbsp; <span class="nw">1 dm<sup>3</sup> = 1000 cm<sup>3</sup></span> <span class="fb">In booklet</span></div>
+  </div>
+  <div class="worked"><b>Worked example 5.</b> 2.00 g of NaOH is dissolved in water and made up to 250 cm<sup>3</sup> of solution.
+    <ol>
+      <li>M(NaOH) = 22.99 + 16.00 + 1.01 = 40.00 g mol<sup>−1</sup>; n = 2.00 ÷ 40.00 = 0.0500 mol.</li>
+      <li>V = 250 cm<sup>3</sup> = 0.250 dm<sup>3</sup>; [NaOH] = 0.0500 ÷ 0.250 = <b>0.200 mol dm<sup>−3</sup></b>.</li>
+      <li>In g dm<sup>−3</sup>: 2.00 g ÷ 0.250 dm<sup>3</sup> = <b>8.00 g dm<sup>−3</sup></b> (check: 0.200 × 40.00 = 8.00).</li>
+      <li>Dilution: 10.0 cm<sup>3</sup> of 2.00 mol dm<sup>−3</sup> made up to 250 cm<sup>3</sup>. The moles do not change: n = 2.00 × 0.0100 = 0.0200 mol, so the new concentration is 0.0200 ÷ 0.250 = <b>0.0800 mol dm<sup>−3</sup></b>.</li>
+    </ol>
+  </div>
+  <div class="tip"><b>Exam trap.</b> Convert cm<sup>3</sup> to dm<sup>3</sup> (÷ 1000) before using n = CV. And for ions, count them: [Cl<sup>−</sup>] in 0.10 mol dm<sup>−3</sup> MgCl<sub>2</sub> is 0.20 mol dm<sup>−3</sup>, because each MgCl<sub>2</sub> gives two Cl<sup>−</sup> ions.</div>
+
+  <h3>1.4.6 Avogadro's law</h3>
+  <p><b>Avogadro's law</b> <span class="learn">Learn</span>: equal volumes of all gases, measured at the same temperature and pressure, contain equal numbers of molecules. So for gases at the same T and P, the <b>volume ratio is the mole ratio</b> of the equation, and you can work in cm<sup>3</sup> without converting to moles.</p>
+  <div class="worked"><b>Worked example 6.</b> 20 cm<sup>3</sup> of propane is burned in 150 cm<sup>3</sup> of oxygen. All volumes are measured at room temperature and pressure, where water is a liquid. Find the volume and composition of the gas at the end.
+    <ol>
+      <li>Equation: <span class="nw">C<sub>3</sub>H<sub>8</sub>(g) + 5O<sub>2</sub>(g) → 3CO<sub>2</sub>(g) + 4H<sub>2</sub>O(l)</span>.</li>
+      <li>20 cm<sup>3</sup> of propane needs 5 × 20 = 100 cm<sup>3</sup> of O<sub>2</sub>. Oxygen is in excess: 150 − 100 = 50 cm<sup>3</sup> left over.</li>
+      <li>CO<sub>2</sub> formed: 3 × 20 = 60 cm<sup>3</sup>. The water is liquid, so its volume is negligible.</li>
+      <li>Final gas: 50 cm<sup>3</sup> O<sub>2</sub> + 60 cm<sup>3</sup> CO<sub>2</sub> = <b>110 cm<sup>3</sup></b>.</li>
+    </ol>
+  </div>
+  <div class="tip"><b>Exam trap.</b> Volume ratio = mole ratio only for gases, at the same temperature and pressure. Check the state symbol of water: H<sub>2</sub>O(l) adds no volume, H<sub>2</sub>O(g) does. And remember the leftover excess reactant in the final volume.</div>
+
+  <details><summary>Self-check S1.4 (questions 1 to 3 in Block 1, 4 to 6 in Block 2)</summary>
+    <ol>
+      <li>How many ions in total are there in 0.200 mol of Na<sub>2</sub>SO<sub>4</sub>?</li>
+      <li>What is the mass of 0.0250 mol of Ca(NO<sub>3</sub>)<sub>2</sub>?</li>
+      <li>A compound is 52.2% C, 13.0% H and 34.8% O by mass. Find its empirical formula.</li>
+      <li>What is [K<sup>+</sup>] in 0.150 mol dm<sup>−3</sup> K<sub>2</sub>SO<sub>4</sub>?</li>
+      <li>Convert 0.250 mol dm<sup>−3</sup> NaCl into g dm<sup>−3</sup>.</li>
+      <li>10 cm<sup>3</sup> of N<sub>2</sub> reacts completely with 30 cm<sup>3</sup> of H<sub>2</sub>: N<sub>2</sub>(g) + 3H<sub>2</sub>(g) → 2NH<sub>3</sub>(g). What volume of ammonia forms at the same T and P?</li>
+    </ol>
+    <p><b>Answers.</b> 1: each Na<sub>2</sub>SO<sub>4</sub> gives 3 ions, so 3 × 0.200 × 6.02 × 10<sup>23</sup> = 3.61 × 10<sup>23</sup>. 2: 0.0250 × 164.10 = 4.10 g. 3: C 52.2 ÷ 12.01 = 4.346, H 13.0 ÷ 1.01 = 12.87, O 34.8 ÷ 16.00 = 2.175; dividing by 2.175 gives 2.00 : 5.92 : 1.00, so C<sub>2</sub>H<sub>6</sub>O. 4: 2 × 0.150 = 0.300 mol dm<sup>−3</sup>. 5: M(NaCl) = 58.44, so 0.250 × 58.44 = 14.6 g dm<sup>−3</sup>. 6: 2 × 10 = 20 cm<sup>3</sup> (the volume of gas falls from 40 cm<sup>3</sup> to 20 cm<sup>3</sup>).</p>
+  </details>
+</section>
+
+<!-- =============================== S1.5 =============================== -->
+<section class="topic" id="s15">
+  <div class="kicker">Structure 1.5</div>
+  <h2>Ideal gases</h2>
+  <p class="guiding">Guiding question: how does the model of ideal gas behaviour help us to predict the behaviour of real gases?</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="s151"><span>Recognise the key assumptions in the ideal gas model (1.5.1)</span></label>
+    <label><input type="checkbox" data-k="s152"><span>Explain the limitations of the ideal gas model: real gases deviate most at low temperature and high pressure (1.5.2)</span></label>
+    <label><input type="checkbox" data-k="s153"><span>Investigate the relationship between temperature, pressure and volume for a fixed mass of an ideal gas and analyse graphs relating these variables, knowing that the molar volume is constant at a given temperature and pressure (1.5.3)</span></label>
+    <label><input type="checkbox" data-k="s154"><span>Solve problems relating to the ideal gas equation PV = nRT and the combined gas law (1.5.4)</span></label>
+  </div>
+
+  <h3>1.5.1 The ideal gas model</h3>
+  <p>An ideal gas is a model with these assumptions <span class="learn">Learn</span>:</p>
+  <ul>
+    <li>the particles are in constant, random motion;</li>
+    <li>the particles have <b>negligible volume</b> compared with the volume of the container;</li>
+    <li>there are <b>no intermolecular forces</b> between the particles;</li>
+    <li>all collisions are <b>elastic</b>: no total kinetic energy is lost when particles collide.</li>
+  </ul>
+
+  <h3>1.5.2 Real gases</h3>
+  <p>Real gases deviate from the model, most at <b>low temperature and high pressure</b>. No calculations are needed, only the explanation:</p>
+  <ul>
+    <li><b>High pressure:</b> the particles are pushed close together, so their own volume is no longer negligible compared with the container, and the attractions between them start to matter.</li>
+    <li><b>Low temperature:</b> the particles move slowly, so the attractions between them have a bigger effect (the gas is closer to condensing).</li>
+    <li><b>Larger or more polar molecules</b> deviate more: bigger particles take up more of the volume, and polar molecules attract each other more strongly.</li>
+  </ul>
+  <p>A real gas behaves most like an ideal gas at high temperature and low pressure. Small non-polar particles such as helium come closest.</p>
+  <div class="tip"><b>Exam trap.</b> "Explain why a real gas deviates at high pressure" needs two points: the volume of the particles is no longer negligible, and the intermolecular forces are no longer negligible because the particles are close together. "Particles collide more" scores nothing.</div>
+
+  <h3>1.5.3 Pressure, volume, temperature and the molar volume</h3>
+  <p>For a fixed mass (fixed n) of ideal gas, each pair of variables is linked when the third is kept constant. Temperature must always be in <b>kelvin</b>: <span class="nw">T (K) = T (°C) + 273.15</span> <span class="fb">In booklet</span>. Adding 273, as the handouts, the answer sheets and this page do, is accepted; at most it moves the last significant figure (quiz question 7 gives 3.32 or 3.33 dm<sup>3</sup>, the same option). The names of the individual gas laws are not assessed.</p>
+  <figure>
+    <svg viewBox="0 0 720 560" aria-label="Four sketch graphs: pressure against volume is a curve, pressure against one over volume is a straight line through the origin, volume against kelvin temperature is a straight line through the origin, and volume against Celsius temperature is a straight line that meets the axis at minus 273">
+      <g font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#1E2A33">
+        <g stroke="#1E2A33" stroke-width="2">
+          <line x1="60" y1="230" x2="320" y2="230"/><line x1="60" y1="230" x2="60" y2="30"/>
+          <line x1="420" y1="230" x2="680" y2="230"/><line x1="420" y1="230" x2="420" y2="30"/>
+          <line x1="60" y1="510" x2="320" y2="510"/><line x1="60" y1="510" x2="60" y2="310"/>
+          <line x1="380" y1="510" x2="690" y2="510"/><line x1="530" y1="510" x2="530" y2="310"/>
+        </g>
+        <polyline points="85,50.0 90,80.0 95,101.4 100,117.5 110,140.0 120,155.0 135,170.0 150,180.0 170,189.1 190,195.4 220,201.9 250,206.3 280,209.5 310,212.0" fill="none" stroke="#2F47A6" stroke-width="4"/>
+        <line x1="420" y1="230" x2="640" y2="70" stroke="#2F47A6" stroke-width="4"/>
+        <line x1="60" y1="510" x2="300" y2="350" stroke="#2F47A6" stroke-width="4"/>
+        <line x1="400" y1="510" x2="470" y2="470.7" stroke="#2F47A6" stroke-width="3" stroke-dasharray="7 6"/>
+        <line x1="470" y1="470.7" x2="680" y2="352.8" stroke="#2F47A6" stroke-width="4"/>
+        <text x="45" y="48" text-anchor="end">P</text><text x="320" y="262" text-anchor="end">V</text>
+        <text x="405" y="48" text-anchor="end">P</text><text x="680" y="262" text-anchor="end">1/V</text>
+        <text x="45" y="328" text-anchor="end">V</text><text x="320" y="542" text-anchor="end">T / K</text><text x="60" y="542" text-anchor="middle">0</text>
+        <text x="515" y="328" text-anchor="end">V</text><text x="690" y="548" text-anchor="end">T / °C</text><text x="530" y="542" text-anchor="middle">0</text><text x="400" y="542" text-anchor="middle">−273</text>
+        <g font-weight="bold" fill="#B8761A" font-size="26"><text x="300" y="60">a</text><text x="680" y="140">b</text><text x="300" y="420">c</text><text x="690" y="420">d</text></g>
+      </g>
+    </svg>
+    <ul class="key">
+      <li><b>a</b> P against V at constant T: a curve. Double the pressure, the volume halves (P × V stays constant).</li>
+      <li><b>b</b> P against 1/V at constant T: a straight line through the origin, which shows that P is inversely proportional to V.</li>
+      <li><b>c</b> V against T in kelvin at constant P: a straight line through the origin (V/T constant). P against T in kelvin at constant V has the same shape (P/T constant).</li>
+      <li><b>d</b> V against T in °C: the same line, but it meets the temperature axis at −273 °C, absolute zero. The dashed part is extrapolated: a real gas would liquefy before getting there.</li>
+    </ul>
+    <figcaption>Sketch graphs are enough in the exam: label both axes with the quantity and unit, and show where the line meets the origin or the axis.</figcaption>
+  </figure>
+  <p>At a given temperature and pressure, one mole of <b>any</b> ideal gas has the same volume, the <b>molar volume</b> V<sub>m</sub>. At STP:</p>
+  <div class="fbox">
+    <div class="formula"><span class="nw">V<sub>m</sub> = 22.7 dm<sup>3</sup> mol<sup>−1</sup> at STP</span> <span class="fb">In booklet</span></div>
+    <div class="formula"><span class="nw">STP = 273.15 K (0 °C) and 100 kPa</span> <span class="fb">In booklet</span> &nbsp; <span class="nw">n = <span class="frac"><span>V</span><span>V<sub>m</sub></span></span></span> <span class="learn">Learn</span></div>
+  </div>
+  <!-- STP conditions: printed in section 4 of the 2025 data booklet as 273.15 K and 100 kPa (checked 3 Nov). -->
+  <div class="worked"><b>Worked example 7.</b> What volume does 4.40 g of CO<sub>2</sub> occupy at STP?
+    <ol>
+      <li>M(CO<sub>2</sub>) = 12.01 + 32.00 = 44.01 g mol<sup>−1</sup>; n = 4.40 ÷ 44.01 = 0.1000 mol.</li>
+      <li>V = n × V<sub>m</sub> = 0.1000 × 22.7 = <b>2.27 dm<sup>3</sup></b>.</li>
+    </ol>
+  </div>
+
+  <h3>1.5.4 The ideal gas equation and the combined gas law</h3>
+  <div class="fbox">
+    <div class="formula"><span class="nw">PV = nRT</span> &nbsp; <span class="nw">R = 8.31 J K<sup>−1</sup> mol<sup>−1</sup></span> <span class="fb">In booklet</span></div>
+    <div class="formula"><span class="nw"><span class="frac"><span>P<sub>1</sub>V<sub>1</sub></span><span>T<sub>1</sub></span></span> = <span class="frac"><span>P<sub>2</sub>V<sub>2</sub></span><span>T<sub>2</sub></span></span></span> <span class="fb">In booklet</span></div>
+  </div>
+  <p>The guide says <b>SI units only</b> for PV = nRT <span class="learn">Learn</span>: P in pascals (Pa), V in cubic metres (m<sup>3</sup>), T in kelvin. Conversions: 1 kPa = 10<sup>3</sup> Pa; 1 m<sup>3</sup> = 10<sup>3</sup> dm<sup>3</sup> = 10<sup>6</sup> cm<sup>3</sup>, so cm<sup>3</sup> × 10<sup>−6</sup> = m<sup>3</sup> and dm<sup>3</sup> × 10<sup>−3</sup> = m<sup>3</sup>. In the combined gas law the units only have to match on both sides, but T must still be in kelvin. Check: PV = nRT with n = 1, T = 273 K and P = 100&nbsp;000 Pa gives <span class="nw">V = 8.31 × 273 ÷ 100&nbsp;000</span> = 0.0227 m<sup>3</sup> = 22.7 dm<sup>3</sup>, the molar volume at STP.</p>
+  <div class="worked"><b>Worked example 8 (combined gas law).</b> 150 cm<sup>3</sup> of gas at 27 °C and 101 kPa is heated to 87 °C and compressed to 202 kPa. Find the new volume.
+    <ol>
+      <li>Kelvin: T<sub>1</sub> = 300 K, T<sub>2</sub> = 360 K.</li>
+      <li>Rearrange: <span class="nw">V<sub>2</sub> = V<sub>1</sub> × <span class="frac"><span>P<sub>1</sub></span><span>P<sub>2</sub></span></span> × <span class="frac"><span>T<sub>2</sub></span><span>T<sub>1</sub></span></span></span> = <span class="nw">150 × <span class="frac"><span>101</span><span>202</span></span> × <span class="frac"><span>360</span><span>300</span></span></span> = <b>90.0 cm<sup>3</sup></b>.</li>
+      <li>Sense check: the pressure doubles (halves V) and the temperature rises by a factor of 1.2 (V × 1.2), so 150 × 0.5 × 1.2 = 90.</li>
+    </ol>
+  </div>
+  <div class="worked"><b>Worked example 9 (molar mass from PV = nRT).</b> 0.500 g of a gas occupies 193 cm<sup>3</sup> at 25 °C and 1.00 × 10<sup>5</sup> Pa. Find its molar mass and suggest what it is.
+    <ol>
+      <li>SI units: V = 193 × 10<sup>−6</sup> = 1.93 × 10<sup>−4</sup> m<sup>3</sup>; T = 298 K; P = 1.00 × 10<sup>5</sup> Pa.</li>
+      <li>n = <span class="nw">PV ÷ RT</span> = <span class="nw">(1.00 × 10<sup>5</sup> × 1.93 × 10<sup>−4</sup>)</span> <span class="nw">÷ (8.31 × 298)</span> = 19.3 ÷ 2476 = 7.79 × 10<sup>−3</sup> mol.</li>
+      <li>M = m ÷ n = 0.500 ÷ 7.79 × 10<sup>−3</sup> = <b>64.2 g mol<sup>−1</sup></b>, close to SO<sub>2</sub> (64.07). (In one line: <span class="nw">M = mRT ÷ PV</span>.)</li>
+    </ol>
+  </div>
+  <div class="tip"><b>Exam trap.</b> The three classic slips: temperature left in °C (27 °C is 300 K, and doubling 20 °C to 40 °C does not double anything); volume left in cm<sup>3</sup> or dm<sup>3</sup> with P in Pa; pressure in kPa with V in m<sup>3</sup>. Write the converted values in a list before substituting.</div>
+
+  <h3 id="group">Group task, your version</h3>
+  <p>The <a href="https://drive.google.com/file/d/1qkp0lJM4ExBWV7rCkRYP6D65Rq-EZuRb/view">S1.5 group work task</a> gave each group one question set. Check your answers here.</p>
+  <details><summary>Group 1: real gas against ideal gas (check after you have written yours)</summary>
+    <ul>
+      <li>Assumptions: see 1.5.1 above (random motion, negligible particle volume, no intermolecular forces, elastic collisions).</li>
+      <li>Particle volume: at <b>high pressure</b> a real gas is <b>less</b> ideal (particle volume becomes a bigger fraction); at <b>high temperature</b> it is <b>more</b> ideal; a gas with <b>larger particles</b> is <b>less</b> ideal.</li>
+      <li>Intermolecular forces: at high pressure, less ideal (particles close, attractions matter); at high temperature, more ideal (fast particles, attractions have little effect); <b>polar</b> particles are <b>less</b> ideal than non-polar ones (stronger attractions).</li>
+    </ul>
+  </details>
+  <details><summary>Groups 2 to 5: the four relationships</summary>
+    <div class="tablewrap"><table>
+      <tr><th>Group (law name, not assessed)</th><th>Kept constant</th><th>Relationship</th><th>Particle explanation</th></tr>
+      <tr><td>2 (Boyle's law)</td><td>T, n</td><td><span class="nw">PV = constant</span>, <span class="nw">P<sub>1</sub>V<sub>1</sub> = P<sub>2</sub>V<sub>2</sub></span>; graph a and b</td><td>Smaller volume: the same particles hit each square metre of wall more often, so the pressure rises.</td></tr>
+      <tr><td>3 (Charles's law)</td><td>P, n</td><td><span class="nw">V/T = constant</span>; graph c and d</td><td>Hotter particles move faster and hit harder, so the gas expands until the pressure is back to its old value.</td></tr>
+      <tr><td>4 (Gay-Lussac's law)</td><td>V, n</td><td><span class="nw">P/T = constant</span></td><td>In a fixed volume, faster particles hit the walls more often and harder, so the pressure rises.</td></tr>
+      <tr><td>5 (Avogadro's law)</td><td>P, T</td><td><span class="nw">V/n = constant</span></td><td>More particles need more space to keep the same pressure; at a given T and P each mole takes V<sub>m</sub>.</td></tr>
+    </table></div>
+    <p>Real-life examples you could give: a syringe with a blocked end is hard to push in (P and V); a balloon shrinks in the freezer (V and T); an aerosol can must not be heated (P and T); blowing up a balloon adds moles and the volume grows (V and n).</p>
+  </details>
+
+  <details><summary>Self-check S1.5</summary>
+    <ol>
+      <li>State two reasons why a real gas deviates from ideal behaviour at high pressure.</li>
+      <li>What volume does 0.0100 mol of an ideal gas occupy at STP, in cm<sup>3</sup>?</li>
+      <li>A rigid sealed can holds gas at 1.00 × 10<sup>5</sup> Pa and 20 °C. It is heated to 313 °C. What is the new pressure?</li>
+      <li>How many moles of gas are in 500 cm<sup>3</sup> at 100 kPa and 300 K?</li>
+    </ol>
+    <p><b>Answers.</b> 1: the volume of the particles is no longer negligible compared with the container; the particles are close, so intermolecular attractions are no longer negligible. 2: 0.0100 × 22.7 = 0.227 dm<sup>3</sup> = 227 cm<sup>3</sup>. 3: V constant, so P<sub>2</sub> = P<sub>1</sub> × T<sub>2</sub>/T<sub>1</sub> = 1.00 × 10<sup>5</sup> × 586 ÷ 293 = 2.00 × 10<sup>5</sup> Pa (the kelvin temperature doubled; the Celsius numbers mislead). 4: n = PV ÷ RT = (1.00 × 10<sup>5</sup> × 5.00 × 10<sup>−4</sup>) ÷ (8.31 × 300) = 0.0201 mol.</p>
+  </details>
+
+  <h3 id="avogadro">Avogadro practice set (the answers-only file)</h3>
+  <p>The folder has the <a href="https://drive.google.com/file/d/1OQ-yVYvsWOKy-R0_mc3sAJJQYJJvWIhy/view">S1.4 to 1.5 Avogadro answers</a>, but not the question sheet. The questions below were rebuilt from the worked answers, so the wording is ours and the numbers are the sheet's. Do them on paper first, then compare with the answer of the same number on the sheet. (The sheet writes "x" for ×. In answer 5, "1.00 x 105" is a typing slip on the sheet for 1.00 × 10<sup>5</sup> Pa.) Use R = 8.31 J K<sup>−1</sup> mol<sup>−1</sup>.</p>
+  <ol>
+    <li>A gas occupies 67.2 cm<sup>3</sup> at 22 °C and 9.38 × 10<sup>4</sup> Pa. What volume does it occupy at 29 °C and 1.06 × 10<sup>5</sup> Pa? (The sheet does not show the starting volume; 67.2 cm<sup>3</sup> is worked backwards from its answer.)</li>
+    <li>4.59 g of a gas occupies 2.50 dm<sup>3</sup> at 292 K and 1.01 × 10<sup>5</sup> Pa. Calculate its molar mass.</li>
+    <li>200 cm<sup>3</sup> of a gaseous hydrocarbon C<sub>x</sub>H<sub>y</sub> is burned completely in 1500 cm<sup>3</sup> of oxygen (an excess). After cooling to the starting conditions (water is liquid) the gas volume is 1000 cm<sup>3</sup>, of which 800 cm<sup>3</sup> is CO<sub>2</sub>. Deduce the molecular formula.</li>
+    <li>3.01 g of zinc is added to 50.0 cm<sup>3</sup> of 1.00 mol dm<sup>−3</sup> hydrochloric acid: <span class="nw">Zn(s) + 2HCl(aq) → ZnCl<sub>2</sub>(aq) + H<sub>2</sub>(g)</span>. Identify the limiting reactant and calculate the volume of hydrogen at 298 K and 1.03 × 10<sup>5</sup> Pa. (Do this in Block 4, after R2.1.)</li>
+    <li>An airbag contains 130 g of sodium azide, which decomposes: <span class="nw">2NaN<sub>3</sub>(s) → 2Na(s) + 3N<sub>2</sub>(g)</span>. Calculate the volume of nitrogen at 293 K and 1.00 × 10<sup>5</sup> Pa. (Extra.)</li>
+  </ol>
+  <p style="font-size:.95rem;color:var(--ink-soft)">How to mark: your final answer should agree to 3 significant figures, with the right unit. If it does not, find the first line where your working differs from the sheet's and write that step into the Error log (it is usually a unit conversion or a mole ratio).</p>
+</section>
+
+<!-- =============================== R2.1 =============================== -->
+<section class="topic" id="r21">
+  <div class="kicker">Reactivity 2.1</div>
+  <h2>How much? The amount of chemical change</h2>
+  <p class="guiding">Guiding question: how are chemical equations used to calculate reacting ratios?</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="r211"><span>Deduce chemical equations, with state symbols, when reactants and products are specified (2.1.1)</span></label>
+    <label><input type="checkbox" data-k="r212"><span>Calculate reacting masses and/or volumes and concentrations of reactants and products from the mole ratio of an equation (2.1.2)</span></label>
+    <label><input type="checkbox" data-k="r213"><span>Identify the limiting and excess reactants from given data, and distinguish the theoretical yield from the experimental yield (2.1.3)</span></label>
+    <label><input type="checkbox" data-k="r214"><span>Solve problems involving reacting quantities, limiting and excess reactants, and theoretical, experimental and percentage yields (2.1.4)</span></label>
+    <label><input type="checkbox" data-k="r215"><span>Calculate the atom economy from the stoichiometry of a reaction, and discuss the inverse relationship between atom economy and wastage in industry (2.1.5)</span></label>
+  </div>
+
+  <h3>2.1.1 Writing and balancing equations</h3>
+  <p>A balanced equation shows the <b>mole ratio</b> of reactants and products. Write correct formulas first, then balance only by changing the numbers in front (never the subscripts). Add state symbols: (s), (l), (g), (aq).</p>
+  <div class="worked"><b>Worked example 10.</b> Butane burns completely in oxygen.
+    <ol>
+      <li>Skeleton: C<sub>4</sub>H<sub>10</sub> + O<sub>2</sub> → CO<sub>2</sub> + H<sub>2</sub>O.</li>
+      <li>Carbon: 4CO<sub>2</sub>. Hydrogen: 10 H, so 5H<sub>2</sub>O.</li>
+      <li>Oxygen on the right: 8 + 5 = 13 atoms, so <span class="frac"><span>13</span><span>2</span></span>O<sub>2</sub>. Double everything to clear the fraction.</li>
+      <li><b><span class="nw">2C<sub>4</sub>H<sub>10</sub>(g) + 13O<sub>2</sub>(g)</span> <span class="nw">→ 8CO<sub>2</sub>(g) + 10H<sub>2</sub>O(l)</span></b>. Count: C 8 = 8, H 20 = 20, O 26 = 26.</li>
+    </ol>
+    Order that works for most combustions: C, then H, then O last (oxygen appears alone as O<sub>2</sub>).
+  </div>
+
+  <h3>2.1.2 Reacting masses, volumes and concentrations</h3>
+  <p>Every calculation follows the bridge in the picture at the top <span class="learn">Learn</span>:</p>
+  <ol>
+    <li><b>Moles of what you know</b>: n = m/M, n = CV, n = V/V<sub>m</sub> or n = PV/RT.</li>
+    <li><b>Cross the bridge</b>: <span class="nw">n(B) = n(A) × <span class="frac"><span>b</span><span>a</span></span></span>, where A is the substance you know, B the one you want, and a and b are their coefficients in the equation.</li>
+    <li><b>Convert</b> to what the question asks: mass, gas volume or concentration.</li>
+  </ol>
+  <div class="worked"><b>Worked example 11.</b> 0.486 g of magnesium reacts with hydrochloric acid: <span class="nw">Mg(s) + 2HCl(aq) → MgCl<sub>2</sub>(aq) + H<sub>2</sub>(g)</span>. (a) What volume of hydrogen forms at STP? (b) What volume of 0.100 mol dm<sup>−3</sup> HCl reacts exactly with the magnesium?
+    <ol>
+      <li>n(Mg) = 0.486 ÷ 24.31 = 0.0200 mol.</li>
+      <li>(a) Ratio Mg : H<sub>2</sub> = 1 : 1, so n(H<sub>2</sub>) = 0.0200 mol; V = 0.0200 × 22.7 = 0.454 dm<sup>3</sup> = <b>454 cm<sup>3</sup></b>.</li>
+      <li>(b) Ratio Mg : HCl = 1 : 2, so n(HCl) = 0.0400 mol; V = n ÷ C = 0.0400 ÷ 0.100 = 0.400 dm<sup>3</sup> = <b>400 cm<sup>3</sup></b>.</li>
+    </ol>
+  </div>
+  <div class="worked"><b>Worked example 12 (two solutions).</b> 25.0 cm<sup>3</sup> of 0.100 mol dm<sup>−3</sup> Na<sub>2</sub>CO<sub>3</sub> reacts exactly with 22.40 cm<sup>3</sup> of hydrochloric acid: <span class="nw">Na<sub>2</sub>CO<sub>3</sub>(aq) + 2HCl(aq)</span> <span class="nw">→ 2NaCl(aq) + H<sub>2</sub>O(l) + CO<sub>2</sub>(g)</span>. Find [HCl].
+    <ol>
+      <li>n(Na<sub>2</sub>CO<sub>3</sub>) = 0.0250 × 0.100 = 2.50 × 10<sup>−3</sup> mol.</li>
+      <li>n(HCl) = 2 × 2.50 × 10<sup>−3</sup> = 5.00 × 10<sup>−3</sup> mol.</li>
+      <li>[HCl] = 5.00 × 10<sup>−3</sup> ÷ 0.02240 = <b>0.223 mol dm<sup>−3</sup></b>.</li>
+    </ol>
+    This is the calculation behind a titration; titration practice comes in a later session.
+  </div>
+  <div class="tip"><b>Exam trap.</b> The ratio goes the right way round: wanted over given. For 2HCl per Mg you multiply moles of Mg by 2 to get HCl, and divide moles of HCl by 2 to get Mg. Write the ratio as words ("2 HCl for every 1 Mg") before you multiply.</div>
+
+  <h3>2.1.3 The limiting reactant</h3>
+  <p>The <b>limiting reactant</b> is used up first and decides the most product you can make, the <b>theoretical yield</b>. Every other reactant is in excess. Test <span class="learn">Learn</span>: divide the moles of each reactant by its coefficient in the equation; the <b>smallest</b> result is the limiting reactant. The <b>experimental yield</b> is what you actually obtain.</p>
+  <div class="worked"><b>Worked example 13.</b> 10.0 g of aluminium is heated with 35.0 g of chlorine: <span class="nw">2Al(s) + 3Cl<sub>2</sub>(g) → 2AlCl<sub>3</sub>(s)</span>. Find the limiting reactant, the theoretical yield, and the mass of excess reactant left.
+    <ol>
+      <li>n(Al) = 10.0 ÷ 26.98 = 0.3706 mol; n(Cl<sub>2</sub>) = 35.0 ÷ 70.90 = 0.4937 mol.</li>
+      <li>Divide by coefficients: Al 0.3706 ÷ 2 = 0.1853; Cl<sub>2</sub> 0.4937 ÷ 3 = 0.1646. Chlorine is smaller, so <b>Cl<sub>2</sub> is limiting</b>, even though there are more moles of it.</li>
+      <li>n(AlCl<sub>3</sub>) = 0.4937 × <span class="frac"><span>2</span><span>3</span></span> = 0.3291 mol; M(AlCl<sub>3</sub>) = 26.98 + 3 × 35.45 = 133.33; theoretical yield = 0.3291 × 133.33 = <b>43.9 g</b>.</li>
+      <li>Al used = 0.3291 mol × 26.98 = 8.88 g, so <b>1.12 g</b> of Al is left over.</li>
+    </ol>
+  </div>
+
+  <h3>2.1.4 Percentage yield</h3>
+  <div class="fbox">
+    <div class="formula"><span class="nw">% yield = <span class="frac"><span>experimental yield</span><span>theoretical yield</span></span> × 100</span> <span class="learn">Learn</span></div>
+  </div>
+  <p>Continuing worked example 13: if 38.5 g of AlCl<sub>3</sub> is collected, <span class="nw">% yield = 38.5 ÷ 43.9 × 100</span> = <b>87.7%</b> (from unrounded 43.88 g). Use the same units top and bottom (both g or both mol).</p>
+  <p>Why the experimental yield is usually lower: the reaction is incomplete or reversible, side reactions make other products, and product is lost when transferring, filtering or purifying. Why it can come out higher than 100%: the product is still wet or contains impurities. A result above 100% always means an error, never a better reaction.</p>
+
+  <h3>2.1.5 Atom economy</h3>
+  <div class="fbox">
+    <div class="formula">atom economy = <span class="frac"><span>molar mass of desired product</span><span>total molar mass of all reactants</span></span> × 100 <span class="fb">In booklet</span></div>
+  </div>
+  <p>Use the coefficients of the balanced equation (2 mol of product counts twice). Atom economy measures how much of the starting material ends up in the product you want, so it is a measure of efficiency in <b>green chemistry</b>. The <b>higher the atom economy, the less waste</b>: the two are inversely related. Atom economy comes from the equation alone, so it does not depend on the yield: a reaction can have a 100% yield and still a low atom economy.</p>
+  <div class="worked"><b>Worked example 14.</b> Two routes to ethanol, C<sub>2</sub>H<sub>5</sub>OH (M = 46.08).
+    <ol>
+      <li>Fermentation: <span class="nw">C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> → 2C<sub>2</sub>H<sub>5</sub>OH + 2CO<sub>2</sub></span>. Atom economy = <span class="nw">2 × 46.08 ÷ 180.18 × 100</span> = <b>51.1%</b>. Nearly half the mass leaves as CO<sub>2</sub>.</li>
+      <li>Hydration of ethene: <span class="nw">C<sub>2</sub>H<sub>4</sub> + H<sub>2</sub>O → C<sub>2</sub>H<sub>5</sub>OH</span>. Reactants 28.06 + 18.02 = 46.08, all of it in the product: <b>100%</b>. Any reaction with a single product (an addition reaction) has 100% atom economy.</li>
+    </ol>
+  </div>
+  <div class="tip"><b>Exam trap.</b> In atom economy, include <b>every</b> reactant with its coefficient on the bottom, and only the desired product (with its coefficient) on top. Do not use the mass of products on the bottom, and do not confuse atom economy with percentage yield.</div>
+
+  <details><summary>Self-check R2.1</summary>
+    <ol>
+      <li>Balance: NH<sub>3</sub>(g) + O<sub>2</sub>(g) → NO(g) + H<sub>2</sub>O(g).</li>
+      <li>What mass of CO<sub>2</sub> forms when 1.00 g of propane, C<sub>3</sub>H<sub>8</sub>, burns completely?</li>
+      <li>4.00 g of H<sub>2</sub> and 16.0 g of O<sub>2</sub> react: 2H<sub>2</sub>(g) + O<sub>2</sub>(g) → 2H<sub>2</sub>O(l). Which is limiting, and what mass of water can form?</li>
+      <li>A student reports a 112% yield of a dried precipitate. Suggest a reason.</li>
+    </ol>
+    <p><b>Answers.</b> 1: <span class="nw">4NH<sub>3</sub> + 5O<sub>2</sub> → 4NO + 6H<sub>2</sub>O</span>. 2: M(C<sub>3</sub>H<sub>8</sub>) = 44.11, n = 0.02267 mol; CO<sub>2</sub> = 3 × 0.02267 = 0.06801 mol; m = 0.06801 × 44.01 = 2.99 g. 3: H<sub>2</sub> 4.00 ÷ 2.02 = 1.980 mol, ÷ 2 = 0.990; O<sub>2</sub> 16.0 ÷ 32.00 = 0.500 mol, ÷ 1 = 0.500; O<sub>2</sub> is limiting. n(H<sub>2</sub>O) = 2 × 0.500 = 1.00 mol = 18.0 g. 4: the precipitate was not fully dry (water adds mass) or contains impurities.</p>
+  </details>
+</section>
+
+<!-- =============================== QUIZ =============================== -->
+<section class="topic quiz" id="quiz">
+  <h2>Quick quiz (Paper 1A style)</h2>
+  <p>Click an answer. Use a calculator and the values on this page, as you would the data booklet. Wrong answers explain the trap. Write any you miss into the Error log.</p>
+
+  <div class="q" data-a="1"><p>1. How many atoms in total are there in 0.100 mol of ammonia, NH<sub>3</sub>?</p>
+    <button>A. 6.02 × 10<sup>22</sup></button>
+    <button>B. 2.41 × 10<sup>23</sup></button>
+    <button>C. 1.81 × 10<sup>23</sup></button>
+    <button>D. 2.41 × 10<sup>22</sup></button>
+    <div class="why">Each NH<sub>3</sub> has 4 atoms: 4 × 0.100 × 6.02 × 10<sup>23</sup> = 2.41 × 10<sup>23</sup>. A counts molecules only; C counts only the hydrogen atoms; D has the right digits but loses a power of ten.</div></div>
+
+  <div class="q" data-a="2"><p>2. What is the relative formula mass of magnesium nitrate, Mg(NO<sub>3</sub>)<sub>2</sub>?</p>
+    <button>A. 86.32</button>
+    <button>B. 134.32</button>
+    <button>C. 148.33</button>
+    <button>D. 116.33</button>
+    <div class="why">24.31 + 2(14.01 + 48.00) = 148.33, with no units. A ignores the bracket (MgNO<sub>3</sub>); B doubles the oxygens but not the nitrogen; D is Mg(NO<sub>2</sub>)<sub>2</sub>.</div></div>
+
+  <div class="q" data-a="1"><p>3. A hydrocarbon is 85.6% carbon by mass and has a molar mass of 56.12 g mol<sup>−1</sup>. What is its molecular formula?</p>
+    <button>A. CH<sub>2</sub></button>
+    <button>B. C<sub>4</sub>H<sub>8</sub></button>
+    <button>C. C<sub>4</sub>H<sub>10</sub></button>
+    <button>D. C<sub>3</sub>H<sub>6</sub></button>
+    <div class="why">C 85.6 ÷ 12.01 = 7.13, H 14.4 ÷ 1.01 = 14.26: ratio 1 : 2, so the empirical formula is CH<sub>2</sub> (M = 14.03). 56.12 ÷ 14.03 = 4, so C<sub>4</sub>H<sub>8</sub>. A stops at the empirical formula; C (58.14) and D (42.09) do not match the molar mass.</div></div>
+
+  <div class="q" data-a="1"><p>4. 50.0 cm<sup>3</sup> of 0.200 mol dm<sup>−3</sup> MgCl<sub>2</sub>(aq) is diluted with water to 250.0 cm<sup>3</sup>. What is the concentration of chloride ions in the diluted solution?</p>
+    <button>A. 0.0400 mol dm<sup>−3</sup></button>
+    <button>B. 0.0800 mol dm<sup>−3</sup></button>
+    <button>C. 0.400 mol dm<sup>−3</sup></button>
+    <button>D. 2.00 mol dm<sup>−3</sup></button>
+    <div class="why">n(MgCl<sub>2</sub>) = 0.0500 × 0.200 = 0.0100 mol, so n(Cl<sup>−</sup>) = 0.0200 mol in 0.2500 dm<sup>3</sup>: 0.0800 mol dm<sup>−3</sup>. A forgets that each MgCl<sub>2</sub> gives two Cl<sup>−</sup>; C forgets the dilution; D dilutes the wrong way (multiplies by 5).</div></div>
+
+  <div class="q" data-a="3"><p>5. 30 cm<sup>3</sup> of methane is burned in 100 cm<sup>3</sup> of oxygen: CH<sub>4</sub>(g) + 2O<sub>2</sub>(g) → CO<sub>2</sub>(g) + 2H<sub>2</sub>O(l). All volumes are measured at the same room temperature and pressure. What is the total volume of gas at the end?</p>
+    <button>A. 40 cm<sup>3</sup></button>
+    <button>B. 130 cm<sup>3</sup></button>
+    <button>C. 90 cm<sup>3</sup></button>
+    <button>D. 70 cm<sup>3</sup></button>
+    <div class="why">30 cm<sup>3</sup> CH<sub>4</sub> uses 60 cm<sup>3</sup> O<sub>2</sub>, leaving 40 cm<sup>3</sup> O<sub>2</sub>, and makes 30 cm<sup>3</sup> CO<sub>2</sub>: 40 + 30 = 70 cm<sup>3</sup>. A forgets the CO<sub>2</sub>; B counts the liquid water as 60 cm<sup>3</sup> of gas; C counts CO<sub>2</sub> and water but forgets the excess oxygen.</div></div>
+
+  <div class="q" data-a="1"><p>6. Under which conditions does a real gas behave most like an ideal gas?</p>
+    <button>A. High temperature and high pressure</button>
+    <button>B. High temperature and low pressure</button>
+    <button>C. Low temperature and high pressure</button>
+    <button>D. Low temperature and low pressure</button>
+    <div class="why">Low pressure: particles far apart, so their volume and their attractions are negligible. High temperature: particles move fast, so attractions have little effect. C is the worst case: this is where real gases deviate most.</div></div>
+
+  <div class="q" data-a="1"><p>7. What volume does 0.200 mol of an ideal gas occupy at 27 °C and 150 kPa? (R = 8.31 J K<sup>−1</sup> mol<sup>−1</sup>)</p>
+    <button>A. 0.299 dm<sup>3</sup></button>
+    <button>B. 3.32 dm<sup>3</sup></button>
+    <button>C. 3320 dm<sup>3</sup></button>
+    <button>D. 4.54 dm<sup>3</sup></button>
+    <div class="why">V = nRT ÷ P = 0.200 × 8.31 × 300 ÷ 150&nbsp;000 = 3.32 × 10<sup>−3</sup> m<sup>3</sup> = 3.32 dm<sup>3</sup>. A uses 27 instead of 300 K; C uses P in kPa but treats the answer as m<sup>3</sup>; D uses 22.7 dm<sup>3</sup> mol<sup>−1</sup>, which only applies at STP.</div></div>
+
+  <div class="q" data-a="2"><p>8. A fixed mass of gas has a volume of 2.0 dm<sup>3</sup> at 300 K. The pressure is doubled and the temperature is raised to 450 K. What is the new volume?</p>
+    <button>A. 0.67 dm<sup>3</sup></button>
+    <button>B. 6.0 dm<sup>3</sup></button>
+    <button>C. 1.5 dm<sup>3</sup></button>
+    <button>D. 3.0 dm<sup>3</sup></button>
+    <div class="why">V<sub>2</sub> = 2.0 × <span class="frac"><span>1</span><span>2</span></span> × <span class="frac"><span>450</span><span>300</span></span> = 1.5 dm<sup>3</sup>. A divides by the temperature factor instead of multiplying; B doubles the volume when the pressure doubles; D ignores the pressure change.</div></div>
+
+  <div class="q" data-a="0"><p>9. 0.30 mol of N<sub>2</sub> and 0.60 mol of H<sub>2</sub> react: N<sub>2</sub>(g) + 3H<sub>2</sub>(g) → 2NH<sub>3</sub>(g). 5.11 g of NH<sub>3</sub> (M = 17.04 g mol<sup>−1</sup>) is obtained. What is the percentage yield?</p>
+    <button>A. 75.0%</button>
+    <button>B. 50.0%</button>
+    <button>C. 133%</button>
+    <button>D. 150%</button>
+    <div class="why">Divide by coefficients: N<sub>2</sub> 0.30, H<sub>2</sub> 0.60 ÷ 3 = 0.20, so H<sub>2</sub> is limiting. Theoretical NH<sub>3</sub> = 0.60 × <span class="frac"><span>2</span><span>3</span></span> = 0.40 mol = 6.82 g; 5.11 ÷ 6.82 × 100 = 75.0%. B treats N<sub>2</sub> as limiting because it has fewer moles; C divides theoretical by experimental; D forgets the 2 in 2NH<sub>3</sub>. A yield over 100% is a warning sign.</div></div>
+
+  <div class="q" data-a="3"><p>10. Oxygen can be made by heating potassium chlorate: 2KClO<sub>3</sub>(s) → 2KCl(s) + 3O<sub>2</sub>(g). M(KClO<sub>3</sub>) = 122.55 g mol<sup>−1</sup>, M(O<sub>2</sub>) = 32.00 g mol<sup>−1</sup>. What is the atom economy for making oxygen?</p>
+    <button>A. 13.1%</button>
+    <button>B. 60.8%</button>
+    <button>C. 26.1%</button>
+    <button>D. 39.2%</button>
+    <div class="why">3 × 32.00 ÷ (2 × 122.55) × 100 = 96.00 ÷ 245.10 × 100 = 39.2%. A ignores the 3 in front of O<sub>2</sub>; B is the share of the unwanted product KCl; C ignores both coefficients.</div></div>
+
+  <div class="score" id="score">Score: 0 / 10 answered 0</div>
+</section>
+
+<section class="end" id="end">
+  <h2 style="font-size:1.4rem">Before you close this</h2>
+  <ul>
+    <li>Tick the "I can" boxes you are confident about. The unticked ones are the first ten minutes of your next chemistry session.</li>
+    <li>Mark all the handout questions you did against the answers in the handouts (<a href="https://drive.google.com/file/d/1ud6MEr1gO9nnaX7pk7NjkBTyhpfKwnCp/view">S1.4</a>, <a href="https://drive.google.com/file/d/1TAYUtJuBRPfFFDx83it0Xl14lGn-sx-4/view">R2.1</a>) and the <a href="https://drive.google.com/file/d/1OQ-yVYvsWOKy-R0_mc3sAJJQYJJvWIhy/view">Avogadro answers sheet</a>: check the working and the units, not only the final number.</li>
+    <li>Open the study sheet, <b>Error log</b> tab, and write one row for every mistake from the handouts, the Avogadro set and the quiz: what went wrong, and the rule that fixes it (for example "left T in °C in PV = nRT").</li>
+    <li>Still to come in R2.1: titration calculations (R2.1 handout, before "Exercise 16.3"). On Saturday 14 November the timed set covers back titration and water of crystallisation, which build on today's n = CV and mole ratios. Ask the teacher for the Avogadro question sheet and a clean data booklet.</li>
+    <li>Also on the study site: <a href="../flashcards.html">flashcards</a> (5 to 10 minutes a day), <a href="../exam-chemistry-hl.html">exam technique</a> for this subject, and your <a href="../progress.html">progress page</a>, which turns green as you tick the "I can" boxes and pass the quiz.</li>
+  </ul>
+</section>
+
+</main>
+
+<script>
+(function(){
+  // remember ticked "I can" boxes on this device; fails quietly where storage is unavailable
+  var key='ib-chem-s14-15-r21-ican';
+  var boxes=document.querySelectorAll('.ican input');
+  try{ var saved=JSON.parse(localStorage.getItem(key)||'{}'); boxes.forEach(function(b){ if(saved[b.dataset.k]) b.checked=true; }); }catch(e){}
+  boxes.forEach(function(b){ b.addEventListener('change',function(){ try{ var s={}; boxes.forEach(function(x){ if(x.checked) s[x.dataset.k]=1; }); localStorage.setItem(key,JSON.stringify(s)); }catch(e){} }); });
+
+  // quiz
+  var qs=document.querySelectorAll('.quiz .q'); var right=0, done=0, total=qs.length;
+  qs.forEach(function(q){
+    var a=parseInt(q.dataset.a,10); var btns=q.querySelectorAll('button');
+    btns.forEach(function(b,i){ b.addEventListener('click',function(){
+      if(q.classList.contains('done')) return;
+      q.classList.add('done'); done++;
+      if(i===a){ b.classList.add('right'); right++; } else { b.classList.add('wrong'); btns[a].classList.add('right'); }
+      document.getElementById('score').textContent='Score: '+right+' / '+total+' answered '+done+(done===total?(right>=8?'. Good. Log the ones you missed.':'. Re-read the sections for the ones you missed, then log them.'):'');
+      if(done===qs.length){ try{ var KQ='ib-quiz-guide-2026-11-09'; var prev=JSON.parse(localStorage.getItem(KQ)||'null'); localStorage.setItem(KQ,JSON.stringify({right:right,total:qs.length,date:new Date().toISOString().slice(0,10),best:Math.max(right,prev&&prev.best||0)})); }catch(e){} }
+    }); });
+  });
+})();
+</script>
+</body>
+</html>
