@@ -1,19 +1,107 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Jamila IB study guides</title>
-<style>body{font:17px/1.6 "Segoe UI",Helvetica,Arial,sans-serif;max-width:720px;margin:40px auto;padding:0 20px;color:#1E2A33;background:#F5F7F4}h1,h2{font-family:"Iowan Old Style",Palatino,Georgia,serif}h2{font-size:1.3rem;margin-top:1.8em}a{color:#2F47A6}li{margin:8px 0}.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:12px 0;padding:0;list-style:none}.tools li{margin:0;background:#fff;border:1px solid #D6DCD8;border-left:5px solid #2F47A6;padding:10px 12px}.tools b{display:block}.tools span{font-size:.9rem;color:#4A5862}</style></head>
-<body><h1>Jamila IB study guides</h1><p>One self-contained guide per study day. Each follows the IB syllabus statements for that day's topics and ends with a quiz.</p>
-<ul class="tools">
-<li><a href="progress.html"><b>Progress</b></a><span>Every syllabus topic, coloured by how far you have got</span></li>
-<li><a href="flashcards.html"><b>Flashcards</b></a><span>Formulas, definitions and exam rules to learn by heart, 5 to 10 minutes a day</span></li>
-<li><a href="exam-maths-aa-sl.html"><b>Exam technique: Maths AA SL</b></a><span>Papers, habits that win marks, command terms</span></li>
-<li><a href="exam-chemistry-hl.html"><b>Exam technique: Chemistry HL</b></a><span>Papers, habits that win marks, command terms</span></li>
-</ul>
-<h2>Daily guides</h2>
-<ul>
-<li><a href="guides/2026-11-03-chemistry-s1.1-s1.3.html">Tue 3 Nov 2026: Chemistry HL, S1.1 to S1.3 (particles, nuclear atom, electron configurations)</a></li>
-<li><a href="guides/2026-11-04-maths-aa-sl-1.2-1.6.html">Wed 4 Nov 2026: Maths AA SL, 1.2 to 1.6 (arithmetic and geometric sequences, sum to infinity, compound interest, simple proof)</a></li>
-</ul>
-<h2>Weekly reviews (Sundays)</h2>
-<ul>
-<li><a href="review/2026-11-08-week-1.html">Sun 8 Nov 2026: Week 1 review (Error log top 3, 20-question mixed quiz, flashcards, plan next week)</a></li>
-</ul></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jamila IB study plan</title>
+<style>
+  :root{--paper:#F5F7F4;--ink:#1E2A33;--ink-soft:#4A5862;--rule:#D6DCD8;--indigo:#2F47A6;--indigo-soft:#E6EAF7;--amber:#B8761A;--amber-soft:#FBF1DF;--green:#2E7D4F;--green-soft:#E3F2E8;--red:#B23A3A;--red-soft:#F8E4E4;--grey:#8A949B;--card:#FFFFFF}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;overflow-wrap:break-word}
+  h1,h2,h3{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;line-height:1.2;margin:0 0 .4em;font-weight:600}
+  h1{font-size:2.1rem} h2{font-size:1.5rem;margin-top:1.6em} h3{font-size:1.15rem;margin-top:1.4em}
+  p{margin:0 0 1em} a{color:var(--indigo)}
+  sup,sub{line-height:0}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
+  .top{background:#0B0F1A;color:#fff;padding:26px 0 22px}
+  .top h1{color:#fff} .top p{color:#C9D1E6;max-width:660px;margin-bottom:0}
+  .top .crumb{font-size:.9rem;margin-bottom:8px} .top .crumb a{color:#F2C46D}
+  table{border-collapse:collapse;width:100%;margin:12px 0 20px;font-size:.95rem;background:var(--card)}
+  th,td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#EDF0EC}
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .card{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:12px 0}
+  .tip{background:var(--amber-soft);border-left:5px solid var(--amber);padding:12px 16px;margin:18px 0}
+  .tip b:first-child{color:var(--amber)}
+  .step{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);padding:12px 16px;margin:12px 0}
+  .step .bh{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-bottom:4px}
+  .step .bh b{font-size:1.15rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+  .step .bh span{font-weight:700;color:var(--indigo)}
+  .step ol{margin:6px 0 0;padding-left:22px} .step li{margin:4px 0}
+  .t{color:var(--ink-soft);font-size:.88rem;white-space:nowrap}
+  .tag{display:inline-block;font-size:.72rem;font-weight:700;padding:1px 7px;border-radius:3px;color:#fff;vertical-align:middle;white-space:nowrap}
+  .quiz .q{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:12px 0}
+  .quiz .q > p{font-weight:600;margin-bottom:8px}
+  .quiz .subj{display:inline-block;font-size:.75rem;font-weight:700;color:var(--indigo);background:var(--indigo-soft);padding:1px 7px;border-radius:3px;margin-right:6px;vertical-align:middle}
+  .quiz button{display:block;width:100%;text-align:left;background:#F3F5F2;border:1px solid var(--rule);padding:8px 12px;margin:6px 0;border-radius:6px;font:inherit;cursor:pointer;color:var(--ink)}
+  .quiz button:hover,.quiz button:focus-visible{border-color:var(--indigo);outline:none}
+  .quiz button.right{background:var(--green-soft);border-color:var(--green)}
+  .quiz button.wrong{background:var(--red-soft);border-color:var(--red)}
+  .quiz .why{display:none;margin-top:8px;font-size:.95rem;color:var(--ink-soft)}
+  .quiz .q.done .why{display:block}
+  .score{font-weight:700;margin-top:14px}
+  .frac{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;font-size:.92em;line-height:1.15;margin:0 2px}
+  .frac>span:first-child{border-bottom:1px solid currentColor;padding:0 3px}
+  .frac>span:last-child{padding:0 3px}
+  .nw{white-space:nowrap}
+  @media (max-width:600px){h1{font-size:1.7rem}body{font-size:16px}th,td{padding:6px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap" style="padding-bottom:0">
+  
+  <h1>Jamila's IB study plan</h1>
+  <p>Every planned day from 3 November to 4 December 2026. Today's day is highlighted; each day links to its study guide once it is ready.</p>
+</div></header>
+<main class="wrap">
+
+<div id="today"></div>
+<div class="tools">
+  <a class="tl" href="progress.html"><b>Progress</b><span>Every syllabus topic, coloured by how far you have got</span></a>
+  <a class="tl" href="flashcards.html"><b>Flashcards</b><span>Learn-by-heart cards, 5 to 10 minutes a day</span></a>
+  <a class="tl" href="exam-maths-aa-sl.html"><b>Exam technique: Maths</b><span>Papers, habits, command terms</span></a>
+  <a class="tl" href="exam-chemistry-hl.html"><b>Exam technique: Chemistry</b><span>Papers, habits, command terms</span></a>
+  <a class="tl" href="https://docs.google.com/spreadsheets/d/14eB8zIWZMuldcvLXTYNA4Q77jad3siDgHOK3mMrUCX8/edit"><b>Study sheet</b><span>Daily plan, files and the Error log</span></a>
+</div>
+<div id="plan"></div>
+<style>
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:18px 0 6px}
+.tl{display:block;background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);padding:10px 12px;text-decoration:none;color:var(--ink)}
+.tl b{display:block;color:var(--indigo)} .tl span{font-size:.88rem;color:var(--ink-soft)}
+.wk{margin-top:26px} .wk h2{margin:0 0 8px;font-size:1.25rem}
+.day{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;background:var(--card);border:1px solid var(--rule);padding:10px 14px;margin:6px 0}
+.day .d{min-width:92px;font-weight:700} .day .s{min-width:150px;color:var(--indigo);font-weight:700} .day .k{flex:1 1 260px;font-size:.92rem;color:var(--ink-soft)}
+.day .g{flex-basis:100%;font-size:.95rem}
+.day.today{border:2px solid var(--amber);background:var(--amber-soft)} .day.past{opacity:.7}
+.pill{display:inline-block;font-size:.78rem;font-weight:700;padding:1px 8px;border-radius:999px;margin-left:6px;vertical-align:1px}
+.p-done{background:var(--green-soft);color:var(--green)} .p-soon{background:#EDF0EC;color:var(--grey)}
+.hero{background:var(--card);border:1px solid var(--rule);border-left:6px solid var(--amber);padding:14px 16px;margin-top:22px}
+.hero h2{margin:0 0 6px;font-size:1.3rem} .hero .go{display:inline-block;margin-top:8px;background:var(--indigo);color:#fff;padding:8px 14px;border-radius:6px;text-decoration:none;font-weight:700}
+</style>
+
+</main>
+<script>
+var PLAN=[{"iso": "2026-11-03", "date": "3 Nov", "day": "Tue", "week": "Week 1", "subject": "Chemistry", "task": "S1.1 to S1.3 from the handouts; S1.2 worksheets (SL then AHL); S1.1 exam-style questions"}, {"iso": "2026-11-04", "date": "4 Nov", "day": "Wed", "week": "Week 1", "subject": "Maths", "task": "Sequences and series: work the IB Questionbank pack, mark with the mark scheme; proof pack"}, {"iso": "2026-11-05", "date": "5 Nov", "day": "Thu", "week": "Week 1", "subject": "Biology", "task": "A1.1 Water and A1.2 Nucleic acids from the teacher deck; HL past-paper packs, mark with mark schemes"}, {"iso": "2026-11-06", "date": "6 Nov", "day": "Fri", "week": "Week 1", "subject": "Business + French (30 min)", "task": "Unit 1 from Hoang ch. 1.1 to 1.6; redo Priyanka Chopra case study against mark scheme. French: ask teacher for scope, vocabulary"}, {"iso": "2026-11-07", "date": "7 Nov", "day": "Sat", "week": "Week 1", "subject": "English + timed practice + EE", "task": "Read Persepolis; do the visual thinking assignment; start Purple Hibiscus with the context research questions. Timed set: Maths sequences (no calculator). Email DP coordinator re EE, CAS, TOK"}, {"iso": "2026-11-08", "date": "8 Nov", "day": "Sun", "week": "Week 1", "subject": "Error log review + plan next week + CAS", "task": "Review error logs for all subjects; plan week 2; log first CAS idea"}, {"iso": "2026-11-09", "date": "9 Nov", "day": "Mon", "week": "Week 2", "subject": "Chemistry", "task": "S1.4 the mole, S1.5 ideal gases (group task, Avogadro answers); R2.1 stoichiometry"}, {"iso": "2026-11-10", "date": "10 Nov", "day": "Tue", "week": "Week 2", "subject": "Maths", "task": "Functions 2.3 to 2.5 with the functions toolkit pack; check against the solutions version"}, {"iso": "2026-11-11", "date": "11 Nov", "day": "Wed", "week": "Week 2", "subject": "Biology", "task": "B1.1 Carbohydrates and lipids from the deck; D1.1 DNA replication slides; summary notes per subtopic"}, {"iso": "2026-11-12", "date": "12 Nov", "day": "Thu", "week": "Week 2", "subject": "Business + French (30 min)", "task": "Unit 2 HRM 2.1 to 2.4 from the deck and textbook; one 10-mark stakeholders answer timed. French: short writing task"}, {"iso": "2026-11-13", "date": "13 Nov", "day": "Fri", "week": "Week 2", "subject": "English + French (30 min)", "task": "Purple Hibiscus reading (aim for half). French: 30 min reading"}, {"iso": "2026-11-14", "date": "14 Nov", "day": "Sat", "week": "Week 2", "subject": "Timed practice + English / EE", "task": "Timed set: Chemistry titration and back titration concept check, water of crystallisation worksheet. Learner portfolio entry (100 Photographs). EE: subject choice and 3 candidate research questions"}, {"iso": "2026-11-15", "date": "15 Nov", "day": "Sun", "week": "Week 2", "subject": "Error log review + plan next week + CAS", "task": "Review error logs; plan week 3; CAS experience"}, {"iso": "2026-11-16", "date": "16 Nov", "day": "Mon", "week": "Week 3", "subject": "Chemistry", "task": "S2.1 ionic model; S2.2 Lewis structures and formal charge worksheet"}, {"iso": "2026-11-17", "date": "17 Nov", "day": "Tue", "week": "Week 3", "subject": "Maths", "task": "2.6 to 2.7 transformations and asymptotes pack; mixed revision of Topic 1"}, {"iso": "2026-11-18", "date": "18 Nov", "day": "Wed", "week": "Week 3", "subject": "Biology", "task": "C1.3 Photosynthesis handouts; make notes"}, {"iso": "2026-11-19", "date": "19 Nov", "day": "Thu", "week": "Week 3", "subject": "Business + French (30 min)", "task": "Toolkit: SWOT, Ansoff, STEEPLE on one real company; remaining Unit 2 sections. French: past-paper style reading set"}, {"iso": "2026-11-20", "date": "20 Nov", "day": "Fri", "week": "Week 3", "subject": "English + French (30 min)", "task": "Finish Purple Hibiscus. French: listening set"}, {"iso": "2026-11-21", "date": "21 Nov", "day": "Sat", "week": "Week 3", "subject": "Timed practice + English / EE", "task": "Sit Chemistry Quiz 1 HL and Formative Assessment 1 timed, mark with mark schemes; sit Biology Grade 11 combined paper. English: one Paper 1 style analysis of a photo or advert. EE: agree research question with supervisor"}, {"iso": "2026-11-22", "date": "22 Nov", "day": "Sun", "week": "Week 3", "subject": "Error log review + plan next week + CAS", "task": "Review all error logs; build exam-fortnight revision list; log CAS"}, {"iso": "2026-11-23", "date": "23 Nov", "day": "Mon", "week": "Exam window", "subject": "Chemistry", "task": "Chemistry: redo wrong answers from error log; no new topics"}, {"iso": "2026-11-24", "date": "24 Nov", "day": "Tue", "week": "Exam window", "subject": "Maths", "task": "Maths: redo wrong answers; formula booklet fluency"}, {"iso": "2026-11-25", "date": "25 Nov", "day": "Wed", "week": "Exam window", "subject": "Biology", "task": "Biology: error log review; key diagrams from memory"}, {"iso": "2026-11-26", "date": "26 Nov", "day": "Thu", "week": "Exam window", "subject": "Business + French (30 min)", "task": "Business: rehearse Paper 1 answer structure (define, apply, analyse, evaluate). French: daily habit only"}, {"iso": "2026-11-27", "date": "27 Nov", "day": "Fri", "week": "Exam window", "subject": "English + French (30 min)", "task": "English: re-read key chapters and notes. French: daily habit only"}, {"iso": "2026-11-28", "date": "28 Nov", "day": "Sat", "week": "Exam window", "subject": "Revision", "task": "Light mixed revision, one timed section max; rest"}, {"iso": "2026-11-29", "date": "29 Nov", "day": "Sun", "week": "Exam window", "subject": "Revision", "task": "Rest; plan the exam week; sleep"}, {"iso": "2026-11-30", "date": "30 Nov", "day": "Mon", "week": "Exam window", "subject": "Chemistry", "task": "Chemistry: redo wrong answers from error log; no new topics"}, {"iso": "2026-12-01", "date": "1 Dec", "day": "Tue", "week": "Exam window", "subject": "Maths", "task": "Maths: redo wrong answers; formula booklet fluency"}, {"iso": "2026-12-02", "date": "2 Dec", "day": "Wed", "week": "Exam window", "subject": "Biology", "task": "Biology: error log review; key diagrams from memory"}, {"iso": "2026-12-03", "date": "3 Dec", "day": "Thu", "week": "Exam window", "subject": "Business + French (30 min)", "task": "Business: rehearse Paper 1 answer structure (define, apply, analyse, evaluate). French: daily habit only"}, {"iso": "2026-12-04", "date": "4 Dec", "day": "Fri", "week": "Exam window", "subject": "English + French (30 min)", "task": "English: re-read key chapters and notes. French: daily habit only"}], LINKS={"2026-11-03": {"url": "guides/2026-11-03-chemistry-s1.1-s1.3.html", "label": "Chemistry HL S1.1 to S1.3", "quiz": "ib-quiz-guide-2026-11-03"}, "2026-11-04": {"url": "guides/2026-11-04-maths-aa-sl-1.2-1.6.html", "label": "Maths AA SL 1.2 to 1.6", "quiz": "ib-quiz-guide-2026-11-04"}, "2026-11-08": {"url": "review/2026-11-08-week-1.html", "label": "Week 1 review", "quiz": "ib-quiz-review-2026-11-08"}};
+function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+function quiz(k){try{return JSON.parse(localStorage.getItem(k)||'null');}catch(e){return null;}}
+var now=new Date(), today=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0');
+function guideHtml(p){var l=LINKS[p.iso]; if(!l) return '<span class="pill p-soon">guide coming</span>';
+  var q=quiz(l.quiz); return '<a href="'+l.url+'">Open: '+esc(l.label)+'</a>'+(q?'<span class="pill p-done">quiz '+(q.best||q.right)+'/'+q.total+'</span>':'');}
+// today card: today's row, or the next planned day
+var cur=PLAN.filter(function(p){return p.iso>=today;})[0];
+var t=document.getElementById('today');
+if(cur){var isToday=cur.iso===today;
+  t.innerHTML='<div class="hero"><div style="font-size:.85rem;font-weight:700;color:var(--amber)">'+(isToday?'TODAY':'NEXT UP')+'</div><h2>'+esc(cur.day)+' '+esc(cur.date)+': '+esc(cur.subject)+'</h2><div>'+esc(cur.task)+'</div>'+
+  (LINKS[cur.iso]?'<a class="go" href="'+LINKS[cur.iso].url+'">Open today\'s guide</a>':'<div style="margin-top:8px"><span class="pill p-soon" style="margin-left:0">guide coming</span> Use the files linked on this day in the <a href="https://docs.google.com/spreadsheets/d/14eB8zIWZMuldcvLXTYNA4Q77jad3siDgHOK3mMrUCX8/edit">study sheet</a>.</div>')+'</div>';}
+else{t.innerHTML='<div class="hero"><h2>The plan has finished</h2><div>All planned days are done. Check the progress page for what to revise.</div></div>';}
+// all days grouped by week
+var out='', wk=null;
+PLAN.forEach(function(p){ if(p.week!==wk){ if(wk!==null) out+='</div>'; wk=p.week; out+='<div class="wk"><h2>'+esc(wk)+'</h2>'; }
+  var cls='day'+(p.iso===today?' today':(p.iso<today?' past':''));
+  out+='<div class="'+cls+'" id="d'+p.iso+'"><span class="d">'+esc(p.day)+' '+esc(p.date)+'</span><span class="s">'+esc(p.subject)+'</span><span class="k">'+esc(p.task)+'</span><span class="g">'+guideHtml(p)+'</span></div>';});
+document.getElementById('plan').innerHTML=out+'</div>';
+// a link like index.html#d2026-11-03 opens the plan at that day
+if(location.hash){var el=document.getElementById(location.hash.slice(1)); if(el){el.style.outline='3px solid var(--indigo)'; el.scrollIntoView({block:'center'});}}
+</script>
+</body>
+</html>
