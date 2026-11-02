@@ -759,6 +759,8 @@
     <li>Mark the pack questions you did against the mark scheme, including the method marks (M1) and not just the answers.</li>
     <li>Open the study sheet, <b>Error log</b> tab, and write one row for every mistake from the pack questions and the quiz: what went wrong, and the rule that fixes it (for example "used n instead of n − 1 in u<sub>n</sub>").</li>
     <li>Still to come in Topic 1 at school: the binomial theorem (official SL 1.9). Laws of exponents and logarithms (official SL 1.5 and 1.7) come with exponential functions in Topic 2.</li>
+  
+    <li>Also on the study site: <a href="../flashcards.html">flashcards</a> (5 to 10 minutes a day), <a href="../exam-maths-aa-sl.html">exam technique</a> for this subject, and your <a href="../progress.html">progress page</a>, which turns green as you tick the "I can" boxes and pass the quiz.</li>
   </ul>
 </section>
 
@@ -781,6 +783,7 @@
       q.classList.add('done'); done++;
       if(i===a){ b.classList.add('right'); right++; } else { b.classList.add('wrong'); btns[a].classList.add('right'); }
       document.getElementById('score').textContent='Score: '+right+' / '+total+' answered '+done+(done===total?(right>=8?'. Good. Log the ones you missed.':'. Re-read the sections for the ones you missed, then log them.'):'');
+      if(done===qs.length){ try{ var KQ='ib-quiz-guide-2026-11-04'; var prev=JSON.parse(localStorage.getItem(KQ)||'null'); localStorage.setItem(KQ,JSON.stringify({right:right,total:qs.length,date:new Date().toISOString().slice(0,10),best:Math.max(right,prev&&prev.best||0)})); }catch(e){} }
     }); });
   });
 })();

@@ -1,0 +1,54 @@
+#separator:tab
+#html:true
+#tags column:3
+How do you test whether a sequence is arithmetic?	Check the differences are equal: u<sub>2</sub> − u<sub>1</sub> = u<sub>3</sub> − u<sub>2</sub>. That constant is d.	IB::Maths SL_1.2
+n<sup>th</sup> term of an arithmetic sequence	u<sub>n</sub> = u<sub>1</sub> + (n − 1)d (in the formula booklet). n − 1 steps, not n.	IB::Maths SL_1.2
+Sum of the first n terms of an arithmetic sequence (two forms)	S<sub>n</sub> = n/2 (2u<sub>1</sub> + (n − 1)d) = n/2 (u<sub>1</sub> + u<sub>n</sub>) (both in the booklet).	IB::Maths SL_1.2
+How many terms in a sigma sum from r = a to r = b?	b − a + 1. From r = 3 to r = 12 is 10 terms, not 9.	IB::Maths SL_1.2
+You are given S<sub>n</sub>. How do you find u<sub>n</sub> and u<sub>1</sub>?	u<sub>n</sub> = S<sub>n</sub> − S<sub>n−1</sub>, and u<sub>1</sub> = S<sub>1</sub>.	IB::Maths SL_1.2
+Simple interest: arithmetic or geometric?	Arithmetic: the same amount is added every year (for example 5000 + 189n).	IB::Maths SL_1.2
+Data is nearly but not exactly arithmetic. How do you model it?	Approximate d by the average step: (last − first) ÷ (number of gaps). Predictions far outside the data are less reliable.	IB::Maths SL_1.2
+How do you test whether a sequence is geometric?	Check the ratios are equal: u<sub>2</sub>/u<sub>1</sub> = u<sub>3</sub>/u<sub>2</sub>. That constant is r.	IB::Maths SL_1.3
+n<sup>th</sup> term of a geometric sequence	u<sub>n</sub> = u<sub>1</sub>r<sup>n−1</sup> (in the booklet).	IB::Maths SL_1.3
+Sum of the first n terms of a geometric sequence	S<sub>n</sub> = u<sub>1</sub>(r<sup>n</sup> − 1)/(r − 1) = u<sub>1</sub>(1 − r<sup>n</sup>)/(1 − r), r ≠ 1 (in the booklet).	IB::Maths SL_1.3
+Two terms of a geometric sequence are given. Fastest way to find r?	Divide them: u<sub>5</sub>/u<sub>2</sub> = r<sup>3</sup>. Remember r<sup>2</sup> = 3 gives r = ±√3.	IB::Maths SL_1.3
+Grows by 2.5% a year. Multiplier? After n years or in year n?	× 1.025. After n years: × 1.025<sup>n</sup>. In year n when year 1 is the start: × 1.025<sup>n−1</sup>.	IB::Maths SL_1.3
+Sum to infinity and its condition	S<sub>∞</sub> = u<sub>1</sub>/(1 − r), only if |r| &lt; 1 (in the booklet). Always write the check.	IB::Maths SL_1.8
+First term of the sum from r = 1 of 5(1/4)<sup>r</sup>?	Put r = 1: 5 × 1/4 = 5/4, not 5.	IB::Maths SL_1.8
+Ball dropped from h, each bounce reaches r of the last. Total distance?	h + 2 × hr/(1 − r). The first drop counts once, every later height twice.	IB::Maths SL_1.8
+Compound interest formula	FV = PV × (1 + r/(100k))<sup>kn</sup> (in the booklet). k = 1 yearly, 2 half-yearly, 4 quarterly, 12 monthly.	IB::Maths SL_1.4
+Depreciation by r% a year for n years	Value = original × (1 − r/100)<sup>n</sup>.	IB::Maths SL_1.4
+Real value of an investment with inflation i% a year	Divide the nominal value by (1 + i/100)<sup>n</sup>. Quick method: use the rate r − i.	IB::Maths SL_1.4
+GDC financial app: the sign rule	PV and FV must have opposite signs (money paid in is negative).	IB::Maths SL_1.4
+= or ≡ ?	= is true for some values (x + 2 = 5). ≡ is true for every value (an identity).	IB::Maths SL_1.6
+How to lay out an LHS to RHS proof	Start from one side only, change it step by step, reach the other side, write "= RHS" and a concluding sentence.	IB::Maths SL_1.6
+Algebraic form of an even and of an odd integer	Even 2k, odd 2k + 1. Two different odd numbers: 2a + 1 and 2b + 1.	IB::Maths SL_1.6
+Command term "Write down"	Obtain the answer, usually by extracting information. Little or no calculation; working does not need to be shown.	IB::Maths Exam
+Command term "Hence"	Use the preceding work to obtain the required result. Another method scores nothing.	IB::Maths Exam
+Paper 1 and Paper 2: calculator?	Paper 1: no calculator. Paper 2: GDC required. Both 90 minutes, 80 marks.	IB::Maths Exam
+Element, compound, mixture	Element: one kind of atom, cannot be broken down chemically. Compound: different elements chemically bonded in a fixed ratio. Mixture: not chemically bonded, no fixed ratio, separable by physical methods.	IB::Chemistry S1.1
+Homogeneous vs heterogeneous mixture	Homogeneous: uniform composition, one phase (salt water, air). Heterogeneous: not uniform, more than one phase (sand in water).	IB::Chemistry S1.1
+The six separation techniques in the IB guide	Solvation, filtration, recrystallisation, evaporation, distillation, paper chromatography.	IB::Chemistry S1.1
+What property does each use: distillation, filtration, paper chromatography?	Distillation: boiling point. Filtration: particle size (insoluble solid). Chromatography: different attraction to the stationary and mobile phase.	IB::Chemistry S1.1
+Name the six changes of state	Melting, freezing, vaporisation (evaporation and boiling), condensation, sublimation (solid to gas), deposition (gas to solid).	IB::Chemistry S1.1
+Why does temperature stay constant while a liquid boils?	Energy goes into overcoming forces between particles (potential energy rises), not into kinetic energy, so average kinetic energy and temperature stay the same.	IB::Chemistry S1.1
+What does temperature in kelvin measure? Convert °C to K.	The average kinetic energy of the particles. T(K) = T(°C) + 273.	IB::Chemistry S1.1
+Relative mass and charge of proton, neutron, electron	Proton 1, +1. Neutron 1, 0. Electron negligible (1/1836), −1.	IB::Chemistry S1.2
+In the nuclear symbol, what are A and Z?	A (top left): mass number = protons + neutrons. Z (bottom left): atomic number = protons.	IB::Chemistry S1.2
+Electrons in an ion	Z − charge. Fe<sup>3+</sup>: 26 − 3 = 23. Cl<sup>−</sup>: 17 + 1 = 18.	IB::Chemistry S1.2
+Isotopes: definition, and why the same chemistry?	Atoms of the same element with different numbers of neutrons. Same chemistry because they have the same number and arrangement of electrons; different mass, so different physical properties.	IB::Chemistry S1.2
+Relative atomic mass from abundances	A<sub>r</sub> = Σ(isotope mass × % abundance) ÷ 100. If the abundances do not add to 100, divide by their total.	IB::Chemistry S1.2
+(HL) Mass spectrum: what do peak position and height tell you?	Position (m/z) identifies the isotope; height gives its relative abundance.	IB::Chemistry S1.2
+Continuous vs line spectrum	Continuous: all wavelengths, no gaps. Line: only certain wavelengths, separate lines on a dark background.	IB::Chemistry S1.3
+Why is the hydrogen line spectrum evidence for energy levels?	Only certain photon energies are emitted, so electrons can only have certain (discrete) energies. The lines converge because the levels converge.	IB::Chemistry S1.3
+Hydrogen: falls to n = 1, n = 2, n = 3 give which region?	n = 1: ultraviolet. n = 2: visible. n = 3: infrared.	IB::Chemistry S1.3
+Maximum electrons in main level n, and in s, p, d, f	2n<sup>2</sup>. s 2, p 6, d 10, f 14.	IB::Chemistry S1.3
+Aufbau, Pauli, Hund in one line each	Aufbau: fill lowest energy first. Pauli: max 2 electrons per orbital, opposite spins. Hund: single electrons with parallel spins in degenerate orbitals before pairing.	IB::Chemistry S1.3
+Configurations of Cr and Cu	Cr [Ar] 4s<sup>1</sup> 3d<sup>5</sup>. Cu [Ar] 4s<sup>1</sup> 3d<sup>10</sup>.	IB::Chemistry S1.3
+Transition metal ions lose which electrons first?	4s, even though 4s filled first. Fe<sup>2+</sup> is [Ar] 3d<sup>6</sup>.	IB::Chemistry S1.3
+(HL) Definition of first ionisation energy	The minimum energy to remove one mole of electrons from one mole of gaseous atoms to form one mole of gaseous 1+ ions. M(g) → M<sup>+</sup>(g) + e<sup>−</sup>.	IB::Chemistry S1.3
+(HL) What does the convergence limit correspond to?	Ionisation: the electron is removed completely (n = ∞).	IB::Chemistry S1.3
+(HL) First IE across a period and down a group	Across: increases (nuclear charge up, shielding about the same). Down: decreases (outer electron further away and more shielded).	IB::Chemistry S1.3
+(HL) The two dips in first IE across period 2	B lower than Be (removing a higher-energy p electron). O lower than N (removing the first paired p electron; pair repulsion).	IB::Chemistry S1.3
+(HL) How do successive IEs give the group?	Count the electrons removed before the first big jump: that is the number of outer electrons, so the group.	IB::Chemistry S1.3
+Paper 1A: wrong answers?	40 multiple-choice questions and no marks deducted for wrong answers, so never leave one blank.	IB::Chemistry Exam
