@@ -12,11 +12,16 @@ GUIDES=[
  dict(subject="Chemistry HL", title="Tue 3 Nov: S1.1 to S1.3", link="guides/2026-11-03-chemistry-s1.1-s1.3.html", ican="ib-chem-s11-13-ican", quiz="ib-quiz-guide-2026-11-03",
       map={"S1.1":["s111","s112","s113"],"S1.2":["s121","s122","s123"],"S1.3":["s131","s132","s133","s134","s135","s136","s137"]},
       anchors={"S1.1":"#s11","S1.2":"#s12","S1.3":"#s13"}),
+ dict(subject="Business Management SL", title="Fri 6 Nov: Unit 1, 1.1 to 1.6", link="guides/2026-11-06-business-sl-1.1-1.6.html", ican="ib-business-sl-11-16-ican", quiz="ib-quiz-guide-2026-11-06",
+      map={"1.1":["b11a","b11b","b11c","b11d"],"1.2":["b12a","b12b","b12c","b12d"],"1.3":["b13a","b13b","b13c","b13d"],"1.4":["b14a","b14b"],"1.5":["b15a","b15b","b15c","b15d","b15e"],"1.6":["b16a","b16b"]},
+      anchors={"1.1":"#s11","1.2":"#s12","1.3":"#s13","1.4":"#s14","1.5":"#s15","1.6":"#s16"}),
  dict(subject="Maths AA SL", title="Wed 4 Nov: 1.2 to 1.6", link="guides/2026-11-04-maths-aa-sl-1.2-1.6.html", ican="ib-maths-aa-sl-12-16-ican", quiz="ib-quiz-guide-2026-11-04",
       map={"SL 1.2":["a1","a2","a3","a4"],"SL 1.3":["g1","g2","g3"],"SL 1.8":["i1","i2"],"SL 1.4":["f1","f2","f3","f4"],"SL 1.6":["p1","p2","p3","p4"]},
       anchors={"SL 1.2":"#s12","SL 1.3":"#s13","SL 1.8":"#s18","SL 1.4":"#s14","SL 1.6":"#s16"}),
 ]
 REVIEWS=[dict(title="Week 1 review (Sun 8 Nov)", link="review/2026-11-08-week-1.html", quiz="ib-quiz-review-2026-11-08")]
+# timed practice pages save {score,max,date} under ib-timed-YYYY-MM-DD
+TIMED=[]
 BM=[("1.1","What is a business?"),("1.2","Types of business entities"),("1.3","Business objectives"),("1.4","Stakeholders"),("1.5","Growth and evolution"),("1.6","Multinational companies (MNCs)"),
 ("2.1","Introduction to human resource management"),("2.2","Organizational structure"),("2.3","Leadership and management"),("2.4","Motivation and demotivation"),("2.6","Communication"),
 ("3.1","Introduction to finance"),("3.2","Sources of finance"),("3.3","Costs and revenues"),("3.4","Final accounts"),("3.5","Profitability and liquidity ratio analysis"),("3.7","Cash flow"),("3.8","Investment appraisal"),
@@ -43,7 +48,7 @@ body='''
 .sum{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.9rem;margin:4px 0 10px}</style>
 '''
 script='''
-var SUBJECTS=__S__, GUIDES=__G__, REVIEWS=__R__;
+var SUBJECTS=__S__, GUIDES=__G__, REVIEWS=__R__, TIMED=__T__;
 function get(k){try{return JSON.parse(localStorage.getItem(k)||'null');}catch(e){return null;}}
 var COL={g:'var(--green)',a:'var(--amber)',r:'var(--red)',n:'#C3C9CD'};
 var info={};
@@ -54,6 +59,7 @@ GUIDES.forEach(function(g){var t=get(g.ican)||{}, q=get(g.quiz);
     info[g.subject+'|'+code]={st:st,ev:n+'/'+ks.length+' ticked'+(q?(' · quiz best '+best+'/'+tot):' · quiz not done'),link:g.link+(g.anchors[code]||'')};});});
 var qd=document.getElementById('quizzes'); var h='<h2>Quiz scores</h2><div class="card">';
 GUIDES.concat(REVIEWS).forEach(function(g){var q=get(g.quiz); h+='<div class="trow"><div class="name"><a href="'+g.link+(g.ican?'#quiz':'#quiz')+'">'+(g.subject?g.subject+': ':'')+g.title+'</a></div><div class="ev">'+(q?('best '+(q.best||q.right)+'/'+q.total+', last '+q.right+'/'+q.total+' on '+q.date):'not done yet')+'</div></div>';});
+TIMED.forEach(function(g){var q=get(g.key); h+='<div class="trow"><div class="name"><a href="'+g.link+'">'+g.title+'</a></div><div class="ev">'+(q?('score '+q.score+'/'+q.max+' on '+q.date):'not done yet')+'</div></div>';});
 qd.innerHTML=h+'</div>';
 var sd=document.getElementById('subjects'), out='';
 SUBJECTS.forEach(function(s){var c={g:0,a:0,r:0,n:0}, rows='';
@@ -61,6 +67,6 @@ SUBJECTS.forEach(function(s){var c={g:0,a:0,r:0,n:0}, rows='';
     rows+='<div class="trow"><span class="dot" style="background:'+COL[i.st]+';margin-top:7px"></span><div class="code">'+t[0]+'</div><div class="name">'+(i.link?'<a href="'+i.link+'">'+t[1]+'</a>':t[1])+'</div><div class="ev">'+i.ev+'</div></div>';});
   out+='<h2>'+s.name+'</h2><div class="sum"><span><span class="dot" style="background:var(--green)"></span>'+c.g+' secure</span><span><span class="dot" style="background:var(--amber)"></span>'+c.a+' in progress</span><span><span class="dot" style="background:var(--red)"></span>'+c.r+' to do</span><span><span class="dot" style="background:#C3C9CD"></span>'+c.n+' not covered yet</span></div><div class="card" style="padding-top:4px">'+rows+'</div>';});
 sd.innerHTML=out+'<p style="font-size:.9rem;color:var(--ink-soft)">Biology, English and French appear here once their official subject guides are in the folder. Topic codes and order are the official IB ones. Maths AA section names are short summaries of the content of each section, because the IB guide numbers those sections without giving them titles; Chemistry and Business Management names are the official IB titles (Business: SL sub-topics only).</p>';
-'''.replace('__S__',json.dumps(SUBJECTS)).replace('__G__',json.dumps(GUIDES)).replace('__R__',json.dumps(REVIEWS))
+'''.replace('__S__',json.dumps(SUBJECTS)).replace('__G__',json.dumps(GUIDES)).replace('__R__',json.dumps(REVIEWS)).replace('__T__',json.dumps(TIMED))
 open(out+'/progress.html','w').write(page("Progress: IB study","index.html","Progress","Every syllabus topic for each subject, coloured by how far Jamila has got. Tick the \"I can\" boxes in the guides and do the quizzes, and this page updates itself.",body,script))
 print("progress ok")

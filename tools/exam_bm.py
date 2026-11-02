@@ -78,6 +78,7 @@ body=f'''
 <li>Average rate of return = ((total returns − capital cost) ÷ years of use) ÷ capital cost × 100%</li>
 </ul></div>
 
+<p>Worked examples for each formula, and the finance and break-even items that are not on the sheet: <a href="given-business-management-sl.html">given vs learn</a>.</p>
 <h2>Command terms</h2>
 <p>The level is the assessment objective: AO1 knowledge (short), AO2 application and analysis, AO3 synthesis and evaluation (judgements with evidence), AO4 skills such as calculating and drawing. A question can never use a harder command term than its syllabus topic allows, so "evaluate" only appears where the syllabus says AO3.</p>
 <div class="tablewrap"><table><tr><th>Command term</th><th>Level</th><th>What the IB means (official definition)</th></tr>{tt}</table></div>

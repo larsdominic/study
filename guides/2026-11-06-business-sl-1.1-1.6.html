@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Business Management SL study guide: Unit 1, 1.1 to 1.6 (Fri 6 Nov 2026)</title>
+<!--
+  Syllabus wording: IB Business management guide, first assessment 2024, Unit 1 "Introduction to business management",
+  content statements 1.1 to 1.6 with their depth of teaching (AO1/AO2/AO3), taken from the extracted guide text (pages 23 to 24).
+  HL-only check: the guide marks HL-only content in bold. In Unit 1 NO content statement is bold (checked in the PDF with
+  pdftohtml), and Unit 1 has the same 20 teaching hours at SL and HL. The only HL-only items in Unit 1 are two suggested
+  toolkit tools: "Porter's generic strategies (HL only)" and "simple linear regression (HL only)". They are left out of this page.
+  Formula sheet: none of the formulae on the official formula sheet (ratios, ARR; NPV, efficiency ratios, capacity
+  utilization and productivity are HL only) belongs to Unit 1, so every definition here is marked "Learn".
+  Textbook: the Hoang 5th edition PDF in the Drive folder returned no text (probably scanned or too large), so its page numbers
+  and chapter titles could not be checked. The plan assumes its chapters are numbered 1.1 to 1.6 like the syllabus (unverified).
+  Stakeholder mapping (power and interest) is mentioned in 1.4 as a way of thinking only: it is NOT in the official 2024 toolkit list.
+-->
+<style>
+  :root{
+    --paper:#F5F7F4; --ink:#1E2A33; --ink-soft:#4A5862; --rule:#D6DCD8;
+    --indigo:#2F47A6; --indigo-soft:#E6EAF7; --amber:#B8761A; --amber-soft:#FBF1DF;
+    --green:#2E7D4F; --green-soft:#E3F2E8; --red:#B23A3A; --red-soft:#F8E4E4;
+    --card:#FFFFFF;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;overflow-wrap:break-word}
+  h1,h2,h3,h4{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;line-height:1.2;margin:0 0 .4em;font-weight:600}
+  h1{font-size:2.3rem}
+  h2{font-size:1.75rem;margin-top:0}
+  h3{font-size:1.25rem;margin-top:1.8em}
+  h4{font-size:1.05rem;margin-top:1.4em;font-family:inherit;font-weight:700}
+  p{margin:0 0 1em}
+  a{color:var(--indigo)}
+  sup,sub{line-height:0}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
+
+  /* hero: a stakeholder map. The business in the middle, internal stakeholders inside the inner ring,
+     external stakeholders outside it: the day's 1.4 content and the frame for the 10-mark answer. */
+  .hero{background:#0B0F1A;color:#fff;padding:0 0 28px}
+  .map{display:block;width:100%;height:auto;max-height:320px;margin:0 auto}
+  .hero .wrap{padding-top:18px;padding-bottom:0}
+  .hero h1{color:#fff}
+  .hero p{color:#C9D1E6;max-width:660px}
+  .hero .key{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.92rem;color:#C9D1E6;margin:0 0 12px}
+  .meta{display:flex;flex-wrap:wrap;gap:8px 22px;color:#C9D1E6;font-size:.95rem;margin-top:8px}
+
+  nav.toc{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+  nav.toc .wrap{display:flex;gap:4px;flex-wrap:wrap;padding:8px 20px}
+  nav.toc a{text-decoration:none;color:var(--ink-soft);padding:6px 10px;border-radius:6px;font-size:.92rem}
+  nav.toc a:hover,nav.toc a:focus-visible{background:var(--indigo-soft);color:var(--indigo);outline:none}
+
+  .plan{display:grid;grid-template-columns:1fr;gap:12px;margin:22px 0 8px}
+  .plan > div{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);padding:12px 16px}
+  .plan .bh{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-bottom:4px}
+  .plan .bh b{font-size:1.2rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+  .plan .bh span{font-weight:700;color:var(--indigo)}
+  .plan ol{margin:6px 0 0;padding-left:22px}
+  .plan li{margin:4px 0}
+  .plan .t{color:var(--ink-soft);font-size:.88rem;white-space:nowrap}
+  .files{margin:16px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+  .files li a{display:inline-block;background:var(--card);border:1px solid var(--rule);padding:5px 10px;border-radius:999px;font-size:.9rem;text-decoration:none}
+  .files li a:hover{border-color:var(--indigo)}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 20px;background:var(--card);border:1px solid var(--rule);padding:10px 14px;font-size:.92rem;margin:16px 0}
+  .french{background:var(--green-soft);border-left:5px solid var(--green);padding:12px 16px;margin:18px 0}
+
+  section.topic{margin-top:56px;padding-top:28px;border-top:3px solid var(--ink)}
+  .kicker{color:var(--indigo);font-weight:700;letter-spacing:.01em;margin-bottom:4px}
+  .guiding{font-style:italic;color:var(--ink-soft);margin-bottom:18px}
+
+  .ican{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:0 0 24px}
+  .ican p{margin:0 0 8px;font-weight:700}
+  .ican label{display:flex;gap:10px;align-items:flex-start;padding:5px 0;cursor:pointer}
+  .ican input{margin-top:6px;width:16px;height:16px;flex:none;accent-color:var(--indigo)}
+  .ao{color:var(--ink-soft);font-size:.85rem;white-space:nowrap}
+
+  /* formula sheet markers */
+  .fb,.learn{display:inline-block;font-size:.72rem;font-weight:700;padding:1px 7px;border-radius:3px;vertical-align:middle;margin-left:6px;white-space:nowrap;font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.01em}
+  .fb{background:var(--green);color:#fff}
+  .learn{background:var(--amber);color:#fff}
+
+  .terms{background:var(--card);border:1px solid var(--rule);padding:6px 16px 10px;margin:14px 0}
+  .terms dt{font-weight:700;margin-top:10px}
+  .terms dd{margin:2px 0 0}
+
+  table{border-collapse:collapse;width:100%;margin:12px 0 20px;font-size:.95rem;background:var(--card)}
+  th,td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#EDF0EC}
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table.wide{min-width:640px}
+
+  figure{margin:20px 0;background:var(--card);border:1px solid var(--rule);padding:12px}
+  figure svg{display:block;width:100%;height:auto}
+  figcaption{font-size:.9rem;color:var(--ink-soft);margin-top:8px}
+  .keyrow{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.9rem;margin-top:6px}
+  .sw{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-2px;margin-right:6px}
+
+  .tip{background:var(--amber-soft);border-left:5px solid var(--amber);padding:12px 16px;margin:18px 0}
+  .tip b:first-child{color:var(--amber)}
+  .worked{background:var(--indigo-soft);border-left:5px solid var(--indigo);padding:12px 16px;margin:18px 0}
+  .worked > b:first-child{color:var(--indigo)}
+  .worked ol{margin:6px 0 0;padding-left:22px}
+  .worked li{margin:3px 0}
+  .formula{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:1.2rem;text-align:center;margin:12px 0;line-height:2}
+  .nw{white-space:nowrap}
+  .fbox{background:var(--card);border:1px solid var(--rule);padding:6px 14px;margin:14px 0}
+  .frac{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;font-size:.92em;line-height:1.15;margin:0 2px}
+  .frac>span:first-child{border-bottom:1px solid currentColor;padding:0 3px}
+  .frac>span:last-child{padding:0 3px}
+
+  .model{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--green);padding:12px 16px;margin:14px 0}
+  .model p{margin:0 0 .8em}
+  .model .tag{display:inline-block;font-size:.75rem;font-weight:700;color:var(--green);background:var(--green-soft);padding:1px 7px;border-radius:3px;margin-right:6px;vertical-align:middle;white-space:nowrap}
+  .case{background:var(--card);border:1px dashed var(--ink-soft);padding:12px 16px;margin:14px 0}
+  .steps{counter-reset:st;list-style:none;padding:0;margin:12px 0}
+  .steps li{position:relative;padding:8px 12px 8px 46px;background:var(--card);border:1px solid var(--rule);margin:6px 0}
+  .steps li::before{counter-increment:st;content:counter(st);position:absolute;left:10px;top:8px;width:26px;height:26px;border-radius:50%;background:var(--indigo);color:#fff;font-weight:700;text-align:center;line-height:26px;font-size:.9rem}
+
+  details{background:var(--card);border:1px solid var(--rule);padding:10px 14px;margin:10px 0}
+  summary{cursor:pointer;font-weight:600}
+  details[open] summary{margin-bottom:8px}
+
+  .quiz .q{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:12px 0}
+  .quiz .q > p{font-weight:600;margin-bottom:8px}
+  .quiz button{display:block;width:100%;text-align:left;background:#F3F5F2;border:1px solid var(--rule);padding:8px 12px;margin:6px 0;border-radius:6px;font:inherit;cursor:pointer;color:var(--ink)}
+  .quiz button:hover,.quiz button:focus-visible{border-color:var(--indigo);outline:none}
+  .quiz button.right{background:var(--green-soft);border-color:var(--green)}
+  .quiz button.wrong{background:var(--red-soft);border-color:var(--red)}
+  .quiz .why{display:none;margin-top:8px;font-size:.95rem;color:var(--ink-soft)}
+  .quiz .q.done .why{display:block}
+  .score{font-weight:700;margin-top:14px}
+
+  .end{margin-top:56px;background:var(--card);border:1px solid var(--rule);padding:18px 20px}
+  .end ul{margin:8px 0 0;padding-left:20px}
+  @media (max-width:600px){h1{font-size:1.8rem}body{font-size:16px}th,td{padding:6px}.formula{font-size:1.08rem}}
+  @media print{nav.toc{position:static}details{break-inside:avoid}.quiz button{border:1px solid #999}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="map" viewBox="0 0 700 345" aria-label="Stakeholder map: the business in the centre, employees, managers and shareholders inside the inner ring as internal stakeholders, and customers, suppliers, government, lenders, the community, competitors and pressure groups outside it as external stakeholders">
+    <rect width="700" height="345" fill="#0B0F1A"/>
+    <g stroke="#3A4560" stroke-width="1.5">
+      <line x1="350" y1="172" x2="60" y2="34"/><line x1="350" y1="172" x2="640" y2="34"/><line x1="350" y1="172" x2="70" y2="172"/><line x1="350" y1="172" x2="640" y2="172"/>
+      <line x1="350" y1="172" x2="70" y2="312"/><line x1="350" y1="172" x2="350" y2="312"/><line x1="350" y1="172" x2="600" y2="312"/>
+    </g>
+    <ellipse cx="350" cy="172" rx="205" ry="135" fill="#141B2E" stroke="#F2C46D" stroke-width="2" stroke-dasharray="6 6"/>
+    <circle cx="350" cy="172" r="56" fill="#2F47A6"/>
+    <g font-family="Arial" font-size="22" text-anchor="middle">
+      <text x="350" y="180" fill="#fff" font-weight="bold">Business</text>
+      <g fill="#F2C46D"><text x="350" y="92">Employees</text><text x="252" y="236">Managers</text><text x="448" y="236">Shareholders</text></g>
+    </g>
+    <g font-family="Arial" font-size="22" fill="#C9D1E6">
+      <rect x="4" y="18" width="116" height="30" fill="#0B0F1A"/><text x="10" y="40">Customers</text>
+      <rect x="586" y="18" width="110" height="30" fill="#0B0F1A"/><text x="690" y="40" text-anchor="end">Suppliers</text>
+      <rect x="4" y="158" width="134" height="30" fill="#0B0F1A"/><text x="10" y="180">Government</text>
+      <rect x="600" y="158" width="96" height="30" fill="#0B0F1A"/><text x="690" y="180" text-anchor="end">Lenders</text>
+      <rect x="4" y="306" width="122" height="30" fill="#0B0F1A"/><text x="10" y="328">Community</text>
+      <rect x="282" y="312" width="136" height="30" fill="#0B0F1A"/><text x="350" y="334" text-anchor="middle">Competitors</text>
+      <rect x="510" y="306" width="186" height="30" fill="#0B0F1A"/><text x="690" y="328" text-anchor="end">Pressure groups</text>
+    </g>
+  </svg>
+  <div class="wrap">
+    <div class="key"><span><span class="sw" style="background:#F2C46D"></span>inside the ring: internal stakeholders</span><span><span class="sw" style="background:#C9D1E6"></span>outside the ring: external stakeholders</span></div>
+    <h1>Business Management SL: Unit 1, introduction to business management</h1>
+    <p>Study guide for Friday 6 November 2026. Every decision a business makes lands on the people in this map, and they rarely want the same thing. Today you learn what a business is, the forms it can take, what it aims for, who it affects, how it grows and what happens when it crosses borders. Then you use the map to write your first full 10-mark answer.</p>
+    <div class="meta"><span>About 2 hours of Business, then 30 minutes of French admin</span><span>Official syllabus 1.1 to 1.6 (SL)</span><span>Source: IB Business management guide (first assessment 2024) and the class case studies</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <a href="../index.html" style="font-weight:700;color:var(--indigo)">All days</a><a href="#plan">Plan</a><a href="#s11">1.1 Business</a><a href="#s12">1.2 Entities</a><a href="#s13">1.3 Objectives</a><a href="#s14">1.4 Stakeholders</a><a href="#s15">1.5 Growth</a><a href="#s16">1.6 MNCs</a><a href="#ten">10-mark answer</a><a href="#quiz">Quiz</a><a href="#end">Finish</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section id="plan">
+  <h2 style="margin-top:28px">How to spend about two hours (130 minutes)</h2>
+  <p style="margin:10px 0 0">Four blocks, 130 minutes in all. Do them in order and tick each step off on paper. The page links take you straight to each file; the section links jump down this page. Keep the study sheet open for the <a href="https://docs.google.com/spreadsheets/d/14eB8zIWZMuldcvLXTYNA4Q77jad3siDgHOK3mMrUCX8/edit">Error log</a>.</p>
+  <div class="plan">
+    <div>
+      <div class="bh"><b>Block 1 · 30 min</b><span>1.1 What is a business? and 1.2 Types of business entities</span></div>
+      <ol>
+        <li>Read the <a href="#s11">1.1 section</a> below. Learn the four sectors and the key terms; say each definition out loud with the page covered. <span class="t">(9 min)</span></li>
+        <li>Read the <a href="#s12">1.2 section</a>. Copy the comparison table of the four legal forms onto one page of your notes from memory, then check it. <span class="t">(10 min)</span></li>
+        <li>Open the <a href="https://drive.google.com/file/d/1XIDfaZDoemgup3rDoX2XT9xGT5ZaSAvk/view">Hoang textbook</a> at chapters 1.1 and 1.2. Skim only the headings and the key terms, and add any term that is not on this page to your notes with a one-line definition in your own words. <span class="t">(6 min)</span></li>
+        <li>Do the self-checks for 1.1 and 1.2 on paper, then open them to check. Write each miss into the Error log. <span class="t">(5 min)</span></li>
+      </ol>
+    </div>
+    <div>
+      <div class="bh"><b>Block 2 · 35 min</b><span>1.3 Business objectives, then redo the Priyanka Chopra case study</span></div>
+      <ol>
+        <li>Read the <a href="#s13">1.3 section</a> and do its self-check. <span class="t">(9 min)</span></li>
+        <li>Close this page. Open the <a href="https://drive.google.com/file/d/1ZVjAM4Z7AjHCoqmuQlhdKJ7yvLcSd1MJ/view">Priyanka Chopra case study</a>, read it once and answer <b>all five questions, (a) to (e), 20 marks</b>, on paper with no notes. Use the case in every answer from (c) on: a fact or number from the text in each point. <span class="t">(18 min)</span></li>
+        <li>Open the <a href="https://drive.google.com/file/d/1PrAQJWFJJx2FlWp9loFdll8pCa4SMPHp/view">Chopra mark scheme</a> and mark yourself. (a) is 1 mark for a partial outline, 2 for a full, clear one; (b) is 1 + 1; (c) is 2 + 2 (1 mark for naming the characteristic, 1 for explaining it). (d) and (e) use bands: 1 to 2, 3 to 4, 5 to 6. Give yourself 5 to 6 only if you used business terms throughout <b>and</b> the case throughout. Note: the mark scheme says "Outline" for (a) where the question sheet says "Explain"; answer at the level of the question sheet. <span class="t">(6 min)</span></li>
+        <li>Write your score out of 20 at the top and log every lost mark in the Error log, for example "(d): listed problems without linking them to the case". <span class="t">(2 min)</span></li>
+      </ol>
+    </div>
+    <div>
+      <div class="bh"><b>Block 3 · 30 min</b><span>1.4 Stakeholders, 1.5 Growth and evolution, 1.6 MNCs, then the quiz</span></div>
+      <ol>
+        <li>Read the <a href="#s14">1.4 section</a>. Draw the stakeholder map from the banner from memory, with one interest next to each group. <span class="t">(5 min)</span></li>
+        <li>Read the <a href="#s15">1.5 section</a>. Cover worked example 1 and calculate the three average costs yourself first. <span class="t">(8 min)</span></li>
+        <li>Read the <a href="#s16">1.6 section</a>. <span class="t">(5 min)</span></li>
+        <li>Do the self-checks for 1.4, 1.5 and 1.6 on paper, then open them to check. <span class="t">(5 min)</span></li>
+        <li>Do the <a href="#quiz">quiz</a> at the bottom of the page and log every miss. If a term is still unclear, look it up in the <a href="https://drive.google.com/file/d/1XIDfaZDoemgup3rDoX2XT9xGT5ZaSAvk/view">Hoang textbook</a> chapter with the same number (1.4, 1.5 or 1.6) another day. <span class="t">(7 min)</span></li>
+      </ol>
+    </div>
+    <div>
+      <div class="bh"><b>Block 4 · 35 min</b><span>Your first 10-mark answer: 1.4 Stakeholders, Question 1</span></div>
+      <ol>
+        <li>Read <a href="#ten">How to write a 10-mark answer</a>, including the model answer on Tala Tea. Notice how each paragraph is tagged with the frame step it covers; the table above it links each step to the markband line it earns. <span class="t">(7 min)</span></li>
+        <li>Open the <a href="https://drive.google.com/file/d/1xV4IhtaXFgdR0Uutez3cXfqVZm5BgEQt/view">1.4 Stakeholders Paper 1 practice questions</a> and answer <b>Question 1 only</b> (Bright Steps Childcare, "Discuss", 10 marks). Spend 3 minutes on a plan with the seven frame steps, then write. Keep the frame open; do not look at the model answer while you write. <span class="t">(22 min)</span></li>
+        <li>There is <b>no mark scheme</b> for these questions. Mark yourself with the <a href="#selfmark">self-check list</a> in the 10-mark section and give yourself a band (1 to 2, 3 to 4, 5 to 6, 7 to 8 or 9 to 10). <span class="t">(4 min)</span></li>
+        <li>Log the band and the one thing that would move you up a band in the Error log. <span class="t">(2 min)</span></li>
+      </ol>
+      <p style="margin:8px 0 0;font-size:.95rem;color:var(--ink-soft)">Question 2 of the same file (NorthStar Dairies, "evaluate", with data) is saved for Thursday 12 November, when the plan asks for one timed 10-mark stakeholders answer. Its check figures are in the <a href="#s14">1.4 section</a>; open them only after you have done your own.</p>
+    </div>
+  </div>
+  <p><b>Files for today in the IB folder</b></p>
+  <ul class="files">
+    <li><a href="https://drive.google.com/file/d/1ZVjAM4Z7AjHCoqmuQlhdKJ7yvLcSd1MJ/view">Priyanka Chopra case study</a></li>
+    <li><a href="https://drive.google.com/file/d/1PrAQJWFJJx2FlWp9loFdll8pCa4SMPHp/view">Its mark scheme</a></li>
+    <li><a href="https://drive.google.com/file/d/1xV4IhtaXFgdR0Uutez3cXfqVZm5BgEQt/view">1.4 Stakeholders Paper 1 questions (no mark scheme)</a></li>
+    <li><a href="https://drive.google.com/file/d/1XIDfaZDoemgup3rDoX2XT9xGT5ZaSAvk/view">Hoang textbook (5th edition)</a></li>
+    <li><a href="https://drive.google.com/file/d/1DO0yC9MM9GSi3ecg6vMTTV17vDLaAqEv/view">IB Business management guide</a></li>
+    <li><a href="https://docs.google.com/spreadsheets/d/14eB8zIWZMuldcvLXTYNA4Q77jad3siDgHOK3mMrUCX8/edit">Study sheet (Error log tab)</a></li>
+  </ul>
+  <div class="legend" aria-label="Legend for the formula sheet markers">
+    <span><span class="fb" style="margin-left:0">On formula sheet</span> given on the exam formula sheet: know how to use it, no need to memorise it</span>
+    <span><span class="learn" style="margin-left:0">Learn</span> not on the formula sheet: you must remember it</span>
+  </div>
+  <p style="font-size:.95rem;color:var(--ink-soft)">Nothing in Unit 1 is on the formula sheet: for SL the sheet only has the ratio and investment appraisal formulae from Unit 3 (its Unit 5 formulae, capacity utilisation and productivity, are HL only). So every definition and the one formula on this page (average cost) are marked <span class="learn" style="margin-left:0">Learn</span>.</p>
+  <p style="font-size:.95rem;color:var(--ink-soft)">Numbering: this page, your case studies and the exam all use the official IB numbers 1.1 to 1.6. Each "I can" line ends with the depth the IB sets for it: AO1 means know and describe, AO2 means explain and apply to a case, AO3 means evaluate, discuss or recommend. A question never uses a harder command term than its topic allows, so "evaluate" or "discuss" only appears on AO3 topics: those are the ones to expect in 10-mark questions.</p>
+  <p style="font-size:.95rem;color:var(--ink-soft)">Exam format: Paper 1 (90 minutes, 30 marks) is based on a pre-released statement and an unseen case study; Paper 2 (90 minutes, 40 marks) has a quantitative focus. Both end with a 10-mark extended answer marked with markbands. Neither paper is multiple choice; the quiz at the end uses multiple choice only so the page can mark it for you. More on the <a href="../exam-business-management-sl.html">exam technique page</a>.</p>
+</section>
+
+<!-- =============================== 1.1 =============================== -->
+<section class="topic" id="s11">
+  <div class="kicker">1.1</div>
+  <h2>What is a business?</h2>
+  <p class="guiding">Resources go in, something people want comes out, and value is added on the way.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="b11a"><span>Describe the nature of business: inputs, processes, outputs, adding value and the four business functions <span class="ao">AO1</span></span></label>
+    <label><input type="checkbox" data-k="b11b"><span>Explain the primary, secondary, tertiary and quaternary sectors and place a business in the right one <span class="ao">AO2</span></span></label>
+    <label><input type="checkbox" data-k="b11c"><span>Explain entrepreneurship and apply it to a case <span class="ao">AO2</span></span></label>
+    <label><input type="checkbox" data-k="b11d"><span>Explain the challenges and opportunities for starting up a business, using a case <span class="ao">AO2</span></span></label>
+  </div>
+
+  <h3>The nature of business</h3>
+  <p>A business takes <b>inputs</b> (resources), turns them into something in a <b>process</b>, and sells the <b>output</b>: a physical <b>good</b> such as a phone, or a <b>service</b> such as a haircut. Economists group the inputs into four <b>factors of production</b>: land (natural resources), labour (people's work), capital (man-made tools, machines, buildings) and enterprise (the person who takes the risk and organises the other three).</p>
+  <p>Every business, from a market stall to an airline, has the same four <b>functions</b>, and they are Units 2 to 5 of your course: human resources (the people), finance and accounts (the money), marketing (the customers) and operations (making the product).</p>
+
+  <dl class="terms">
+    <dt>Business <span class="learn">Learn</span></dt><dd>An organisation that uses resources to provide goods or services that people need or want, usually in exchange for money.</dd>
+    <dt>Added value <span class="learn">Learn</span></dt><dd>The difference between the price a business sells its output for and the cost of the materials and services it bought in to make it. Wages, rent and profit all have to come out of it, so added value is not the same as profit.</dd>
+    <dt>Entrepreneur <span class="learn">Learn</span></dt><dd>A person who spots a business opportunity, brings together the resources to act on it and accepts the risk that it may fail.</dd>
+    <dt>Intrapreneur <span class="learn">Learn</span></dt><dd>An employee who acts like an entrepreneur inside an existing organisation, for example by developing a new product, using the organisation's money rather than their own.</dd>
+  </dl>
+
+  <div class="worked"><b>Worked example 1: added value.</b> A café pays $1.10 for the beans, milk and cup in one flat white and sells it for $4.00. Find the added value per cup and say what it has to pay for.
+    <ol>
+      <li>Added value = selling price − cost of bought-in inputs.</li>
+      <li>= 4.00 − 1.10 = <b>$2.90 per cup</b>.</li>
+      <li>The $2.90 is not profit: the barista's wages, the rent and the electricity are paid from it, and only what is left after those is profit.</li>
+      <li>Ways to add more value: a higher price through branding or a better experience, or cheaper inputs (for example a bulk deal on beans).</li>
+    </ol></div>
+
+  <h3>The four sectors of the economy</h3>
+  <figure>
+    <svg viewBox="0 0 700 170" aria-label="Chain of production for chocolate: a cocoa farm in the primary sector, a factory in the secondary sector, a café in the tertiary sector and sales data in the quaternary sector">
+      <g font-family="Arial" text-anchor="middle">
+        <g stroke-width="2">
+          <rect x="6" y="20" width="152" height="120" rx="8" fill="#E3F2E8" stroke="#2E7D4F"/>
+          <rect x="185" y="20" width="152" height="120" rx="8" fill="#FBF1DF" stroke="#B8761A"/>
+          <rect x="364" y="20" width="152" height="120" rx="8" fill="#E6EAF7" stroke="#2F47A6"/>
+          <rect x="543" y="20" width="152" height="120" rx="8" fill="#F1E6F5" stroke="#7A3E91"/>
+        </g>
+        <g fill="#1E2A33" stroke="#1E2A33" stroke-width="2">
+          <line x1="160" y1="80" x2="176" y2="80"/><path d="M176,73 L184,80 L176,87 Z"/>
+          <line x1="339" y1="80" x2="355" y2="80"/><path d="M355,73 L363,80 L355,87 Z"/>
+          <line x1="518" y1="80" x2="534" y2="80"/><path d="M534,73 L542,80 L534,87 Z"/>
+        </g>
+        <g font-size="24" font-weight="bold" fill="#1E2A33">
+          <text x="82" y="62">Primary</text><text x="261" y="62">Secondary</text><text x="440" y="62">Tertiary</text><text x="619" y="62">Quaternary</text>
+        </g>
+        <g font-size="22" fill="#4A5862">
+          <text x="82" y="110">cocoa farm</text><text x="261" y="110">factory</text><text x="440" y="110">café</text><text x="619" y="110">sales data</text>
+        </g>
+      </g>
+    </svg>
+    <figcaption>One product, four sectors. Cocoa is grown (primary), turned into chocolate bars (secondary), sold in a café (tertiary), and a data firm analyses the café's sales to tell the factory which flavours to make (quaternary).</figcaption>
+  </figure>
+  <div class="tablewrap"><table>
+    <tr><th>Sector</th><th>What it does</th><th>Examples</th></tr>
+    <tr><td>Primary <span class="learn">Learn</span></td><td>Takes natural resources from the land or sea</td><td>farming, fishing, forestry, mining, oil drilling</td></tr>
+    <tr><td>Secondary <span class="learn">Learn</span></td><td>Turns raw materials into products: manufacturing and construction</td><td>car plants, bakeries, oil refineries, house builders</td></tr>
+    <tr><td>Tertiary <span class="learn">Learn</span></td><td>Provides services to people and businesses</td><td>shops, banks, hotels, hospitals, transport, hairdressers</td></tr>
+    <tr><td>Quaternary <span class="learn">Learn</span></td><td>Knowledge-based services: information, ICT, research and development</td><td>software and data firms, consultancies, research labs</td></tr>
+  </table></div>
+  <p><b>Sectoral change.</b> As a country develops, the share of jobs and output moves from primary to secondary (industrialisation), and later from secondary to tertiary and quaternary (deindustrialisation). Machines and imports replace farm and factory jobs, and richer people spend more on services. For a business this changes where it finds workers, which skills are scarce and which markets grow.</p>
+
+  <h3>Entrepreneurship, and starting up</h3>
+  <p>People start businesses to be their own boss, to earn more, to turn a skill or hobby into income, to fill a gap in the market they have noticed, because they cannot find a job, or to solve a social problem. Writing a <b>business plan</b> (a toolkit tool) forces the founder to set out the idea, the target market, the costs, the finance needed and the forecast, and banks usually ask for one before they lend.</p>
+  <div class="tablewrap"><table>
+    <tr><th>Common challenges for a start-up</th><th>Common opportunities</th></tr>
+    <tr><td>Raising enough finance; banks see a new firm as risky<br>Cash flow: costs arrive before customers do<br>No brand and no customer base yet<br>Competition from established firms with lower costs<br>Lack of experience in managing, marketing or accounts<br>Legal paperwork, licences and taxes<br>Finding a good location at an affordable rent</td><td>A gap in the market that big firms ignore<br>Technology and e-commerce cut start-up costs (sell online before renting a shop)<br>Government grants, cheap loans or advice for new firms<br>Being small: flexible, close to customers, quick to decide<br>Social media for low-cost marketing<br>Personal satisfaction and independence</td></tr>
+  </table></div>
+
+  <div class="worked"><b>Worked example 2: a 4-mark "explain" answer on start-up challenges.</b> <i>Noor, 24, plans to open a bike-repair stall at a train station. She has $3&nbsp;000 of savings; the stall costs $9&nbsp;000 to set up. A chain store two streets away offers repairs too.</i> Explain two challenges Noor may face. [4 marks]
+    <ol>
+      <li>Read the marks: 4 marks for two challenges means 2 + 2, one mark for naming each, one for explaining it with the case.</li>
+      <li><b>Challenge 1, finance.</b> Noor has only $3&nbsp;000 of the $9&nbsp;000 she needs, so she must borrow $6&nbsp;000. As a new business with no trading record, a bank may refuse or charge a high interest rate, which raises her costs from the first month.</li>
+      <li><b>Challenge 2, competition.</b> The chain store nearby is already known to cyclists and may be able to charge less because it buys parts in bulk, so Noor may struggle to win customers until she builds a reputation.</li>
+      <li>Check: each point names the challenge, uses a fact from the case ($6&nbsp;000 gap, the chain two streets away) and says what it means for Noor.</li>
+    </ol></div>
+
+  <div class="tip"><b>Exam traps.</b> (1) Calling a bank or a hospital "quaternary": serving people face to face is tertiary; quaternary is about knowledge and information. (2) Treating added value as profit. (3) Writing a list of challenges with no link to the case: "lack of finance" on its own earns the identification mark only. (4) The Chopra case study tests entrepreneurs and start-up problems: do it before you look back at this section, so you know what you really remember.</div>
+
+  <details><summary>Self-check 1.1 (answer in your head, then open)</summary>
+    <ol>
+      <li>Place each in its sector: an oil drilling platform, an oil refinery, a petrol station, a firm that writes software to forecast oil prices.</li>
+      <li>A baker pays $0.80 for the flour, yeast and packaging in one loaf and sells it for $3.00. What is the added value per loaf?</li>
+      <li>What is the difference between an entrepreneur and an intrapreneur?</li>
+      <li>Give one reason the tertiary sector usually grows as a country gets richer.</li>
+    </ol>
+    <p><b>Answers.</b> 1: primary, secondary, tertiary, quaternary. 2: 3.00 − 0.80 = $2.20 per loaf (wages, rent and profit come out of this). 3: an entrepreneur risks their own resources to start a business; an intrapreneur shows the same creativity and initiative as an employee inside an existing organisation, using its resources. 4: richer households spend a larger share of income on services (travel, eating out, healthcare), and machines and imports reduce the jobs in farming and manufacturing.</p>
+  </details>
+</section>
+
+<!-- =============================== 1.2 =============================== -->
+<section class="topic" id="s12">
+  <div class="kicker">1.2</div>
+  <h2>Types of business entities</h2>
+  <p class="guiding">Who owns it, who is liable for its debts, and what it exists for.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="b12a"><span>Distinguish between the private and the public sectors <span class="ao">AO2</span></span></label>
+    <label><input type="checkbox" data-k="b12b"><span>Evaluate the main features of sole traders, partnerships, privately held companies and publicly held companies <span class="ao">AO3</span></span></label>
+    <label><input type="checkbox" data-k="b12c"><span>Evaluate the main features of for-profit social enterprises: private sector companies, public sector companies and cooperatives <span class="ao">AO3</span></span></label>
+    <label><input type="checkbox" data-k="b12d"><span>Evaluate the main features of non-governmental organisations (NGOs), a non-profit social enterprise <span class="ao">AO3</span></span></label>
+  </div>
+
+  <h3>Private sector and public sector</h3>
+  <p>The <b>private sector</b> is every organisation owned by private individuals or groups: from a one-person stall to a global company. Most aim to make a profit. The <b>public sector</b> is every organisation owned or controlled by the government, such as state schools, public hospitals or a state railway. These usually aim to provide a service for everyone, paid for mainly by taxes.</p>
+
+  <dl class="terms">
+    <dt>Unlimited liability <span class="learn">Learn</span></dt><dd>The owner is personally responsible for all the business's debts, so their own house, car and savings can be taken to pay them.</dd>
+    <dt>Limited liability <span class="learn">Learn</span></dt><dd>The owners (shareholders) can lose at most the money they put into the business; their personal belongings are safe.</dd>
+    <dt>Incorporated business <span class="learn">Learn</span></dt><dd>A company that is a separate legal person from its owners: it can own property, sign contracts, sue and be sued in its own name, and it continues if an owner dies or sells.</dd>
+    <dt>Social enterprise <span class="learn">Learn</span></dt><dd>An organisation whose main purpose is social or environmental, which earns revenue like a business and puts most of its surplus back into that purpose.</dd>
+    <dt>NGO <span class="learn">Learn</span></dt><dd>A non-governmental organisation: a non-profit social enterprise, independent of government, run for a social, humanitarian or environmental cause and funded mainly by donations, grants and fundraising.</dd>
+  </dl>
+
+  <h3>The four for-profit legal forms</h3>
+  <div class="tablewrap"><table class="wide">
+    <tr><th></th><th>Sole trader</th><th>Partnership</th><th>Privately held company</th><th>Publicly held company</th></tr>
+    <tr><th>Owners</th><td>One person (may employ staff)</td><td>Two or more partners; some countries set an upper limit (often 20)</td><td>Shareholders; shares sold privately, only with the agreement of the other owners</td><td>Shareholders; shares sold to the general public on a stock exchange</td></tr>
+    <tr><th>Liability</th><td>Unlimited</td><td>Usually unlimited</td><td>Limited</td><td>Limited</td></tr>
+    <tr><th>Separate legal person?</th><td>No</td><td>No</td><td>Yes (incorporated)</td><td>Yes (incorporated)</td></tr>
+    <tr><th>Strengths</th><td>Easy and cheap to set up; full control; keeps all the profit; private</td><td>More capital and skills; workload and risk shared</td><td>Limited liability; more capital from selling shares; owners keep control over who joins</td><td>Can raise very large sums by selling shares; high profile; easier to borrow</td></tr>
+    <tr><th>Weaknesses</th><td>Unlimited liability; limited finance; long hours; no one to cover illness</td><td>Disagreements; profits shared; each partner liable for the others' business decisions</td><td>Must publish some accounts; legal costs to set up; cannot sell shares to the public</td><td>Expensive to set up; accounts fully public; risk of takeover; owners (shareholders) and managers can want different things</td></tr>
+  </table></div>
+  <p>Partnerships usually write a <b>deed of partnership</b>: an agreement on how profits are shared, who decides what, and what happens if a partner leaves. In the UK a privately held company is written "Ltd" and a publicly held company "plc"; other countries use their own labels (in the USA "Inc." is used by both kinds). The first sale of shares to the public is an initial public offering (IPO).</p>
+
+  <div class="worked"><b>Worked example 1: what limited liability means in numbers.</b> A business closes owing $80&nbsp;000. Selling everything the business owns raises $30&nbsp;000. Compare Ana, a sole trader, with Ben, who paid $20&nbsp;000 for shares in a privately held company in the same position.
+    <ol>
+      <li>Debt left after selling the business's assets: 80&nbsp;000 − 30&nbsp;000 = $50&nbsp;000.</li>
+      <li>Ana has unlimited liability: she must find the <b>$50&nbsp;000</b> from her own savings, car or home.</li>
+      <li>Ben has limited liability: he loses the <b>$20&nbsp;000</b> he paid for his shares and nothing more. The company's lenders, not Ben, bear the rest.</li>
+      <li>This is why owners of risky or growing businesses often change from sole trader to company.</li>
+    </ol></div>
+
+  <h3>Social enterprises</h3>
+  <p>The syllabus splits social enterprises into for-profit ones (they make a profit, but use most of it for their social purpose) and one non-profit type, the NGO.</p>
+  <div class="tablewrap"><table>
+    <tr><th>Type</th><th>Main features</th></tr>
+    <tr><td>Private sector company (for-profit social enterprise)</td><td>Owned privately, trades like any company, but its main aim is social or environmental, for example a firm that employs and trains people who were homeless. Most profit is reinvested in the cause.</td></tr>
+    <tr><td>Public sector company (for-profit social enterprise)</td><td>Owned by the government but run as a commercial business that sells to customers, such as a state-owned energy or postal company. It aims to cover its costs or make a profit while serving a public purpose, for example keeping a service available in remote areas.</td></tr>
+    <tr><td>Cooperative (for-profit social enterprise)</td><td>Owned and run by its members (workers, customers or producers such as farmers). Each member usually has one vote, whatever they invested, and profits are shared among members or reinvested. Strong member loyalty and motivation, but decisions can be slow and raising large amounts of finance is hard.</td></tr>
+    <tr><td>NGO (non-profit social enterprise)</td><td>Independent of government, set up for a cause (health, the environment, human rights, disaster relief). It may sell goods or services, but any surplus goes to the cause, never to owners. Relies on donations and grants, which can rise and fall; must show donors it uses money well.</td></tr>
+  </table></div>
+
+  <div class="worked"><b>Worked example 2: recommend a legal form.</b> <i>Lina and Marco, both graphic designers, want to open a studio. They need $40&nbsp;000 for computers and a lease. Lina's parents will invest $15&nbsp;000 but want a say and do not want to risk more than that.</i> Which legal form suits them?
+    <ol>
+      <li>Two owners rules out a sole trader. Outside investors who want a share and a say point to a company, not a partnership.</li>
+      <li>The parents want to risk no more than $15&nbsp;000: only limited liability guarantees that, so a company.</li>
+      <li>Private or public? They need $40&nbsp;000, not millions, and want to control who owns shares, so a <b>privately held company</b>.</li>
+      <li>Downside to mention: set-up costs and published accounts, which a partnership would avoid. A judgement always weighs the cost.</li>
+    </ol></div>
+
+  <div class="tip"><b>Exam traps.</b> (1) A "publicly held company" is in the <b>private</b> sector: "public" refers to who can buy its shares, not to government ownership. (2) "Non-profit" does not mean an NGO earns no money; it means no profit goes to owners. (3) Saying a sole trader works alone: it has one owner but can employ many staff. (4) Forgetting that in a cooperative votes go per member, not per share.</div>
+
+  <details><summary>Self-check 1.2</summary>
+    <ol>
+      <li>A state-owned railway and a publicly held airline: which sector is each in?</li>
+      <li>Give two reasons a successful sole trader might become a privately held company.</li>
+      <li>How does voting in a cooperative differ from voting in a publicly held company?</li>
+      <li>Name two ways an NGO can raise money, and one risk of depending on them.</li>
+    </ol>
+    <p><b>Answers.</b> 1: the railway is public sector (government-owned); the airline is private sector (owned by its shareholders, even though anyone can buy shares). 2: limited liability protects the owner's personal assets; selling shares to family or friends brings in more capital; the company continues if the owner leaves. 3: cooperative, usually one member one vote; publicly held company, one vote per share, so large shareholders have more say. 4: donations, grants, fundraising events, selling goods; donations can fall in a recession or after bad publicity, so income is uncertain.</p>
+  </details>
+</section>
+
+<!-- =============================== 1.3 =============================== -->
+<section class="topic" id="s13">
+  <div class="kicker">1.3</div>
+  <h2>Business objectives</h2>
+  <p class="guiding">Where the business wants to be, and the targets that get it there.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="b13a"><span>Explain the difference between a vision statement and a mission statement, and apply them to a business <span class="ao">AO2</span></span></label>
+    <label><input type="checkbox" data-k="b13b"><span>Explain common business objectives: growth, profit, protecting shareholder value and ethical objectives <span class="ao">AO2</span></span></label>
+    <label><input type="checkbox" data-k="b13c"><span>Evaluate strategic and tactical objectives <span class="ao">AO3</span></span></label>
+    <label><input type="checkbox" data-k="b13d"><span>Evaluate corporate social responsibility (CSR) <span class="ao">AO3</span></span></label>
+  </div>
+
+  <dl class="terms">
+    <dt>Vision statement <span class="learn">Learn</span></dt><dd>A short statement of what the organisation hopes to become or achieve in the long term: its ideal future. Inspiring, not measurable.</dd>
+    <dt>Mission statement <span class="learn">Learn</span></dt><dd>A statement of the organisation's purpose now: what it does, for whom and what it values. It guides everyday decisions.</dd>
+    <dt>Objectives <span class="learn">Learn</span></dt><dd>Specific targets the business sets to achieve its aims, ideally SMART: specific, measurable, achievable, realistic and time-bound.</dd>
+    <dt>Strategic objective <span class="learn">Learn</span></dt><dd>A long-term target for the whole organisation, set by senior managers (for example a market share to reach in five years).</dd>
+    <dt>Tactical objective <span class="learn">Learn</span></dt><dd>A shorter-term target, usually for one department or area, that helps to achieve a strategic objective (for example a monthly sales target for one region).</dd>
+    <dt>Corporate social responsibility (CSR) <span class="learn">Learn</span></dt><dd>A business choosing to act in the interests of society and the environment, beyond what the law requires, and taking responsibility for the effects of its decisions.</dd>
+  </dl>
+
+  <h3>Common objectives</h3>
+  <ul>
+    <li><b>Growth</b>: more sales, outlets, market share or countries. Brings economies of scale (1.5) and more security, but needs finance and can cost control.</li>
+    <li><b>Profit</b>: rewards owners and funds investment. A business may accept low profit for a while to grow first.</li>
+    <li><b>Protecting shareholder value</b>: keeping the share price and dividends rising, so owners stay and investors keep putting money in. Mainly an objective for companies with shareholders.</li>
+    <li><b>Ethical objectives</b>: acting on moral principles, such as fair wages in the supply chain, honest marketing or cutting emissions, even when the law does not demand it.</li>
+  </ul>
+  <p>Objectives change over time because of <b>internal</b> factors (a new owner or chief executive, the firm's stage of growth, its finances) and <b>external</b> factors (a recession, new competitors, new laws, changing customer attitudes). A STEEPLE analysis (social, technological, economic, environmental, political, legal, ethical) is the toolkit tool for spotting the external ones.</p>
+
+  <div class="worked"><b>Worked example 1: from vision down to tactics.</b> <i>Pedal, a bike-sharing firm in one city with 400 bikes.</i> Write a vision, a mission, one strategic and one tactical objective.
+    <ol>
+      <li>Vision (the ideal future): "A city where nobody needs a car for a short trip."</li>
+      <li>Mission (purpose now): "Clean, cheap bikes within five minutes' walk of every home in the city, for every resident."</li>
+      <li>Strategic objective (whole firm, long term, SMART): "Grow to 2&nbsp;000 bikes and 30% of all short city trips by 2030."</li>
+      <li>Tactical objective (one area, shorter term, supports step 3): "Cut the average repair time in the workshop from 5 days to 2 days by June."</li>
+      <li>Check the link: faster repairs keep more bikes on the road, which supports the market share target, which moves the firm towards its vision.</li>
+    </ol></div>
+
+  <h3>Corporate social responsibility</h3>
+  <div class="tablewrap"><table>
+    <tr><th>Possible benefits of CSR</th><th>Possible drawbacks or limits</th></tr>
+    <tr><td>Better image and customer loyalty; customers may pay more<br>Easier to recruit and keep motivated staff<br>Less risk of pressure-group campaigns, fines or new laws<br>Investors increasingly look for responsible firms</td><td>Costs money and can cut short-term profit and dividends<br>Shareholders may disagree with how much is spent<br>Hard to measure the benefit<br>Accusations of "greenwashing" if claims are not backed by action</td></tr>
+  </table></div>
+
+  <div class="worked"><b>Worked example 2: putting a number on a CSR choice.</b> <i>A clothing company sells 200&nbsp;000 shirts a year. A certified fair-wage factory charges $0.40 more per shirt.</i>
+    <ol>
+      <li>Extra cost per year: 200&nbsp;000 × $0.40 = <b>$80&nbsp;000</b>.</li>
+      <li>Against it: lower profit this year, which shareholders may resist.</li>
+      <li>For it: protection from a scandal about supplier working conditions, and a story to tell customers that may justify a slightly higher price.</li>
+      <li>Judgement: worth it if the brand sells on values to customers who care, less so for a budget brand competing only on price. "It depends on..." plus a reason is how AO3 answers end.</li>
+    </ol></div>
+
+  <div class="tip"><b>Exam traps.</b> (1) Swapping vision and mission: vision is the future dream, mission is today's purpose. (2) A "tactical objective" with no time limit or number is not SMART. (3) CSR means going <b>beyond</b> the law; obeying the law is the minimum, not CSR. (4) Writing that a mission statement is "useful" without saying for whom (staff, customers, investors) and how.</div>
+
+  <details><summary>Self-check 1.3</summary>
+    <ol>
+      <li>Vision or mission? (a) "To be the most loved airline in Asia." (b) "We fly people safely and on time at fair prices, with friendly service."</li>
+      <li>Rewrite "increase sales" as a SMART tactical objective for one shop.</li>
+      <li>Strategic or tactical? "Enter two new countries within four years."</li>
+      <li>Give one internal and one external reason a business might change its objectives.</li>
+    </ol>
+    <p><b>Answers.</b> 1: (a) vision, (b) mission. 2: for example "Increase sales at the Main Street shop by 10% compared with last year, by the end of March." 3: strategic: whole organisation, long term. 4: internal: a new chief executive, the business running short of cash; external: a recession, a new competitor, a new environmental law.</p>
+  </details>
+</section>
+
+<!-- =============================== 1.4 =============================== -->
+<section class="topic" id="s14">
+  <div class="kicker">1.4</div>
+  <h2>Stakeholders</h2>
+  <p class="guiding">Everyone with an interest in what the business does, and why they disagree.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="b14a"><span>Explain who the internal and external stakeholders are and what each wants, applied to a case <span class="ao">AO2</span></span></label>
+    <label><input type="checkbox" data-k="b14b"><span>Explain conflict between stakeholders, and how a business can reduce it <span class="ao">AO2</span></span></label>
+  </div>
+
+  <dl class="terms">
+    <dt>Stakeholder <span class="learn">Learn</span></dt><dd>Any person or group who affects, or is affected by, what a business does.</dd>
+    <dt>Internal stakeholder <span class="learn">Learn</span></dt><dd>A stakeholder who is part of the organisation: employees, managers and directors, and shareholders (the owners).</dd>
+    <dt>External stakeholder <span class="learn">Learn</span></dt><dd>A stakeholder outside the organisation: customers, suppliers, lenders, the government, the local community, pressure groups and competitors.</dd>
+    <dt>Shareholder <span class="learn">Learn</span></dt><dd>An owner of part of a company through its shares. Every shareholder is a stakeholder, but not every stakeholder is a shareholder.</dd>
+  </dl>
+
+  <div class="tablewrap"><table>
+    <tr><th>Stakeholder</th><th>Main interests</th></tr>
+    <tr><td>Employees (internal)</td><td>Fair pay, job security, safe conditions, training and promotion</td></tr>
+    <tr><td>Managers and directors (internal)</td><td>Pay and bonuses, power, meeting targets, the firm's growth</td></tr>
+    <tr><td>Shareholders (internal)</td><td>Profit, dividends, a rising share price</td></tr>
+    <tr><td>Customers</td><td>Quality, low prices, choice, good service</td></tr>
+    <tr><td>Suppliers</td><td>Regular, large orders; prompt payment; a long relationship</td></tr>
+    <tr><td>Lenders (banks)</td><td>Loans repaid on time with interest, so the firm can pay (liquidity)</td></tr>
+    <tr><td>Government</td><td>Jobs, tax revenue, firms obeying the law</td></tr>
+    <tr><td>Local community</td><td>Local jobs, little noise, traffic or pollution</td></tr>
+    <tr><td>Pressure groups</td><td>Change in the firm's behaviour on their issue (environment, animal welfare, workers' rights)</td></tr>
+    <tr><td>Competitors</td><td>Fair competition; they watch and react to the firm's moves</td></tr>
+  </table></div>
+
+  <h3>Conflict between stakeholders</h3>
+  <p>Stakeholders conflict because a gain for one is often a cost for another. Higher wages please employees but cut profit for shareholders. A new factory pleases the government (jobs) but worries the community (traffic). Lower prices please customers but may mean squeezing suppliers. Not every decision is a conflict, though: a well-trained, well-paid workforce can raise quality, which pleases customers and lifts profit for shareholders too.</p>
+  <p>Ways a business can reduce conflict: talk to and consult the groups early; compromise (for example a smaller pay rise plus extra training); share gains (profit-related pay, employee share schemes); and decide whose concerns matter most. A useful way to think about the last one is to ask how much <b>power</b> each group has over the decision and how much <b>interest</b> it has in it: the group with high power and high interest has to be persuaded first.</p>
+
+  <div class="worked"><b>Worked example: interests and a conflict in a short case.</b> <i>Riverside Hotel, a privately held company, wants to turn its car park into a 40-room extension. Building will take a year. Guests would have to park in the town centre.</i> Explain one conflict between two stakeholders. [4 marks]
+    <ol>
+      <li>Pick two groups the decision affects in opposite ways: shareholders and the local community.</li>
+      <li><b>Shareholders</b> gain: 40 more rooms means more revenue and, in time, higher profit and dividends.</li>
+      <li><b>The local community</b> loses: a year of building noise, and hotel guests taking parking spaces in the town centre.</li>
+      <li>The conflict: the more the hotel grows, the more the residents bear the cost. The hotel could reduce it by limiting building hours or renting a separate car park for guests, at a cost to profit.</li>
+    </ol></div>
+
+  <div class="tip"><b>Exam traps.</b> (1) Writing "stakeholders" when you mean "shareholders" or the other way round. (2) Listing every stakeholder with one line each: in a 10-mark answer, choose the three or four most affected and explain each with the case. (3) Saying a decision is bad for "all stakeholders": usually some gain and some lose, and the answer must show both. (4) Forgetting that one group can be split: part-time and full-time staff, or loyal and new customers, may react differently.</div>
+
+  <details><summary>Self-check 1.4</summary>
+    <ol>
+      <li>Internal or external: managers, a bank that lent money, a pressure group, shareholders?</li>
+      <li>A supermarket chain cuts prices by paying farmers less. Which stakeholders gain and which lose?</li>
+      <li>Give one way to reduce conflict between employees and shareholders over pay.</li>
+    </ol>
+    <p><b>Answers.</b> 1: internal, external, external, internal. 2: customers gain (lower prices) and, if sales rise enough, shareholders; farmers (suppliers) lose income and may later cut quality or switch buyers; the local farming community and pressure groups may campaign against the chain. 3: profit-related pay or an employee share scheme, so staff earn more when profit rises; or consultation and a compromise rise linked to productivity.</p>
+  </details>
+
+  <h3>The 1.4 Paper 1 practice questions</h3>
+  <p>Your folder has <a href="https://drive.google.com/file/d/1xV4IhtaXFgdR0Uutez3cXfqVZm5BgEQt/view">two 10-mark stakeholder questions</a> and <b>no mark scheme</b>. Today (Block 4) you do Question 1 on Bright Steps Childcare with the <a href="#ten">10-mark frame</a> and mark it with the <a href="#selfmark">self-check list</a>. Question 2 on NorthStar Dairies is for Thursday 12 November, timed.</p>
+  <p style="font-size:.95rem;color:var(--ink-soft)">Note on command terms: 1.4 is an AO2 topic, so a real IB question cannot ask you to "discuss" or "evaluate" stakeholders on their own. In the exam, stakeholders come in as the tool you use inside a 10-mark question on a decision from an AO3 topic (a growth method, CSR, a change of legal form). Your teacher's two questions are built the same way, a decision plus its stakeholders, so they are good practice for the real thing.</p>
+  <details><summary>Question 2 check figures (open only after you have done your own calculation)</summary>
+    <p>Using only the table, for next year:</p>
+    <div class="tablewrap"><table>
+      <tr><th></th><th>Glass bottles</th><th>Cartons</th></tr>
+      <tr><td>Revenue (4&nbsp;800&nbsp;000 litres × price)</td><td>$6&nbsp;480&nbsp;000</td><td>$6&nbsp;336&nbsp;000</td></tr>
+      <tr><td>Packaging cost (litres × cost per litre)</td><td>$1&nbsp;056&nbsp;000</td><td>$720&nbsp;000</td></tr>
+      <tr><td>Bottle-washing labour</td><td>$390&nbsp;000</td><td>$120&nbsp;000</td></tr>
+      <tr><td>Other operating costs</td><td>$4&nbsp;950&nbsp;000</td><td>$4&nbsp;950&nbsp;000</td></tr>
+      <tr><td>Total costs</td><td>$6&nbsp;396&nbsp;000</td><td>$5&nbsp;790&nbsp;000</td></tr>
+      <tr><td><b>Profit</b></td><td><b>$84&nbsp;000</b></td><td><b>$546&nbsp;000</b></td></tr>
+      <tr><td>Production employees</td><td>68</td><td>57 (11 fewer)</td></tr>
+      <tr><td>Packaging water use</td><td>9&nbsp;600&nbsp;000 litres</td><td>2&nbsp;400&nbsp;000 litres (7&nbsp;200&nbsp;000 less)</td></tr>
+      <tr><td>Customer satisfaction</td><td>82</td><td>76 (6 points lower)</td></tr>
+    </table></div>
+    <p>Difference: profit $462&nbsp;000 higher with cartons; packaging water use 75% lower. These numbers only check your calculation: the evaluation (which stakeholders gain or lose, and what the table does not tell you) is yours to write.</p>
+  </details>
+</section>
+
+<!-- =============================== 1.5 =============================== -->
+<section class="topic" id="s15">
+  <div class="kicker">1.5</div>
+  <h2>Growth and evolution</h2>
+  <p class="guiding">Bigger can be cheaper per unit, up to a point. And there are two very different ways to get bigger.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="b15a"><span>Explain internal and external economies and diseconomies of scale <span class="ao">AO2</span></span></label>
+    <label><input type="checkbox" data-k="b15b"><span>Explain the difference between internal and external growth <span class="ao">AO2</span></span></label>
+    <label><input type="checkbox" data-k="b15c"><span>Evaluate reasons for businesses to grow <span class="ao">AO3</span></span></label>
+    <label><input type="checkbox" data-k="b15d"><span>Evaluate reasons for businesses to stay small <span class="ao">AO3</span></span></label>
+    <label><input type="checkbox" data-k="b15e"><span>Evaluate external growth methods: mergers and acquisitions, takeovers, joint ventures, strategic alliances and franchising <span class="ao">AO3</span></span></label>
+  </div>
+
+  <div class="fbox">
+    <div class="formula"><span class="nw">average cost = <span class="frac"><span>total cost</span><span>output</span></span></span> <span class="learn">Learn</span></div>
+    <p style="margin:0 0 8px;font-size:.95rem">Not on the formula sheet. Average cost (also called unit cost) is what one unit costs to make on average.</p>
+  </div>
+  <dl class="terms">
+    <dt>Economies of scale <span class="learn">Learn</span></dt><dd>Falls in average cost that come from producing on a larger scale.</dd>
+    <dt>Diseconomies of scale <span class="learn">Learn</span></dt><dd>Rises in average cost when a business, or an industry, grows too big to run efficiently.</dd>
+    <dt>Internal economies or diseconomies <span class="learn">Learn</span></dt><dd>Caused by the growth of the business itself.</dd>
+    <dt>External economies or diseconomies <span class="learn">Learn</span></dt><dd>Caused by the growth of the whole industry or area, outside any one firm's control.</dd>
+  </dl>
+
+  <figure>
+    <svg viewBox="0 0 700 300" aria-label="U-shaped average cost curve: average cost falls with output because of economies of scale, reaches a lowest point, then rises because of diseconomies of scale">
+      <g font-family="Arial" font-size="22" fill="#1E2A33">
+        <line x1="70" y1="250" x2="680" y2="250" stroke="#1E2A33" stroke-width="2"/>
+        <line x1="70" y1="250" x2="70" y2="20" stroke="#1E2A33" stroke-width="2"/>
+        <path d="M95,50 Q330,330 600,60" fill="none" stroke="#2F47A6" stroke-width="4"/>
+        <line x1="345" y1="190" x2="345" y2="250" stroke="#4A5862" stroke-dasharray="5 5"/>
+        <circle cx="345" cy="190" r="6" fill="#B8761A"/>
+        <text x="375" y="282" text-anchor="middle">Output</text>
+        <text x="80" y="20">Average cost</text>
+        <text x="610" y="88" fill="#2F47A6">AC</text>
+        <text x="130" y="230" fill="#2E7D4F" font-weight="bold">EoS</text>
+        <text x="530" y="230" fill="#B23A3A" font-weight="bold">DoS</text>
+        <path d="M190,215 L250,215" stroke="#2E7D4F" stroke-width="3"/><path d="M250,208 L262,215 L250,222 Z" fill="#2E7D4F"/>
+        <path d="M450,215 L510,215" stroke="#B23A3A" stroke-width="3"/><path d="M510,208 L522,215 L510,222 Z" fill="#B23A3A"/>
+      </g>
+    </svg>
+    <div class="keyrow"><span><span class="sw" style="background:#2E7D4F"></span>EoS: economies of scale, average cost falling</span><span><span class="sw" style="background:#B23A3A"></span>DoS: diseconomies of scale, average cost rising</span><span><span class="sw" style="background:#B8761A"></span>lowest average cost</span></div>
+    <figcaption>Growth lowers the cost of each unit until the business becomes hard to manage; after the lowest point, more output makes each unit dearer.</figcaption>
+  </figure>
+
+  <div class="tablewrap"><table>
+    <tr><th></th><th>Internal (the firm grows)</th><th>External (the industry or area grows)</th></tr>
+    <tr><th>Economies</th><td><b>Purchasing</b>: bulk discounts<br><b>Technical</b>: bigger, faster machines used fully<br><b>Financial</b>: banks lend more cheaply to big firms<br><b>Marketing</b>: one advert spread over more sales<br><b>Managerial</b>: specialist managers<br><b>Risk-bearing</b>: many products and markets, so one failure hurts less</td><td>A pool of skilled workers nearby<br>Specialist suppliers and services set up close by<br>Better roads, ports and internet built for the industry<br>Shared research, training colleges and reputation of the area</td></tr>
+    <tr><th>Diseconomies</th><td><b>Communication</b>: more layers, messages slower and distorted<br><b>Coordination and control</b>: harder to manage many sites<br><b>Motivation</b>: staff feel like a number<br><b>Bureaucracy</b>: more rules and paperwork slow decisions</td><td>Traffic congestion raises transport time and cost<br>Land and rent prices rise in the area<br>Firms compete for the same skilled workers, pushing up wages<br>Pressure on shared resources such as water or power</td></tr>
+  </table></div>
+
+  <div class="worked"><b>Worked example 1: economies, then diseconomies.</b> A bakery's weekly total cost at three levels of output:
+    <div class="tablewrap"><table style="margin:8px 0">
+      <tr><th>Loaves per week</th><th>Total cost</th><th>Average cost</th></tr>
+      <tr><td>2&nbsp;000</td><td>$3&nbsp;000</td><td>3&nbsp;000 ÷ 2&nbsp;000 = $1.50</td></tr>
+      <tr><td>5&nbsp;000</td><td>$6&nbsp;000</td><td>6&nbsp;000 ÷ 5&nbsp;000 = $1.20</td></tr>
+      <tr><td>12&nbsp;000</td><td>$16&nbsp;800</td><td>16&nbsp;800 ÷ 12&nbsp;000 = $1.40</td></tr>
+    </table></div>
+    <ol>
+      <li>From 2&nbsp;000 to 5&nbsp;000 loaves, total cost doubles but average cost <b>falls</b> by $0.30: economies of scale (for example a bigger oven used fully, flour bought in bulk).</li>
+      <li>From 5&nbsp;000 to 12&nbsp;000, average cost <b>rises</b> by $0.20: diseconomies of scale (for example a second shift that is harder to supervise, more waste).</li>
+      <li>Total cost always rises with output; the question is always what happens to the cost <b>per loaf</b>.</li>
+    </ol></div>
+
+  <h3>Internal and external growth</h3>
+  <p><b>Internal (organic) growth</b>: the business grows by itself, by selling more, opening new branches, launching new products or entering new markets, usually financed from its own profit or loans. It is slower and safer, and the owners keep control and the firm's culture. <b>External (inorganic) growth</b>: the business grows by joining with or working through other organisations. It is faster and buys instant market share, skills or brands, but costs more, is riskier and can bring culture clashes.</p>
+  <div class="tablewrap"><table class="wide">
+    <tr><th>External method</th><th>What it is <span class="learn">Learn</span></th><th>Main advantage</th><th>Main risk</th></tr>
+    <tr><td>Merger</td><td>Two firms agree to combine into one new firm with shared ownership</td><td>Fast growth, shared resources, economies of scale</td><td>Culture clash; job losses; disagreements over who leads</td></tr>
+    <tr><td>Acquisition</td><td>One firm buys a controlling interest (more than half the shares) in another, with the agreement of its board</td><td>Control of an existing brand, customers and staff</td><td>Expensive; may pay too much; integration problems</td></tr>
+    <tr><td>Takeover</td><td>An acquisition against the wishes of the target firm's managers (a hostile acquisition)</td><td>Gains control even when the target refuses</td><td>Very costly; resentment and staff leaving after the deal</td></tr>
+    <tr><td>Joint venture</td><td>Two or more firms create a new, separate business together, sharing its costs, risks, control and profits</td><td>Shared cost and risk; local knowledge of a partner</td><td>Partners disagree; profits are shared</td></tr>
+    <tr><td>Strategic alliance</td><td>Firms cooperate on an agreed project but stay independent; no new business is created</td><td>Cheap and flexible; easy to end</td><td>Less commitment; partners may learn each other's secrets</td></tr>
+    <tr><td>Franchising</td><td>The franchisor sells franchisees the right to trade under its brand and system, for an initial fee plus royalties (a share of sales)</td><td>Rapid growth paid for largely by franchisees</td><td>Less control over quality; one bad franchisee harms the whole brand</td></tr>
+  </table></div>
+  <p>Mergers and acquisitions are described by direction: <b>horizontal</b> (same stage of production, such as two supermarkets), <b>vertical backward</b> (towards suppliers: a supermarket buys a dairy), <b>vertical forward</b> (towards customers: a dairy buys shops) and <b>conglomerate</b> (unrelated industries).</p>
+
+  <h3>Grow, or stay small?</h3>
+  <div class="tablewrap"><table>
+    <tr><th>Reasons to grow</th><th>Reasons to stay small</th></tr>
+    <tr><td>Economies of scale, so lower average cost<br>More market share and power over prices and suppliers<br>Survival: harder to be taken over or pushed out<br>Spreading risk across more products or countries<br>Brand recognition<br>Higher rewards for owners and managers</td><td>The owner keeps control and personal contact with customers<br>Avoids diseconomies of scale<br>Serves a niche market that is small by nature<br>Flexible and quick to adapt<br>Limited finance, or the owner does not want debt or the risk<br>Some governments give small firms tax breaks or grants<br>Personal service and a local reputation that customers value</td></tr>
+  </table></div>
+
+  <div class="worked"><b>Worked example 2: name the growth method.</b>
+    <ol>
+      <li>A carmaker and a battery maker set up a new company, owned 50:50, to build batteries: <b>joint venture</b> (a new separate business).</li>
+      <li>An airline and a hotel group agree to give each other's customers loyalty points, each staying independent: <b>strategic alliance</b>.</li>
+      <li>A large café chain buys 70% of a rival's shares after the rival's board rejected its offer: <b>takeover</b> (hostile) and horizontal.</li>
+      <li>A gym chain lets local owners open gyms under its name for a fee and 6% of their sales: <b>franchising</b>.</li>
+    </ol></div>
+
+  <div class="tip"><b>Exam traps.</b> (1) Economies of scale lower <b>average</b> cost, not total cost. (2) Two different "externals": external economies come from the industry growing; external growth is joining with other firms. (3) Joint venture versus strategic alliance: only the joint venture creates a new business. (4) In franchising, money flows from the franchisee to the franchisor, never the other way. (5) "Growth is always good" answers stay in the low bands; say when staying small is the better choice.</div>
+
+  <details><summary>Self-check 1.5</summary>
+    <ol>
+      <li>Total cost is $90&nbsp;000 for 30&nbsp;000 units. Find the average cost.</li>
+      <li>A supermarket chain doubles its stores and its suppliers now give it a 10% discount. Which type of economy of scale is this?</li>
+      <li>Software firms cluster in one city, so a new firm there finds skilled programmers easily. Internal or external economy?</li>
+      <li>Give two reasons a successful restaurant owner might choose to stay with one restaurant.</li>
+    </ol>
+    <p><b>Answers.</b> 1: 90&nbsp;000 ÷ 30&nbsp;000 = $3 per unit. 2: an internal purchasing economy (bulk buying). 3: external: it comes from the industry in the area, not from the firm's own size. 4: for example keeping personal control of quality, avoiding the debt and risk of a second site, a loyal local customer base that values the personal service.</p>
+  </details>
+</section>
+
+<!-- =============================== 1.6 =============================== -->
+<section class="topic" id="s16">
+  <div class="kicker">1.6</div>
+  <h2>Multinational companies (MNCs)</h2>
+  <p class="guiding">When a company sets up in your country, who gains and who pays?</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="b16a"><span>Explain the positive and negative impacts of MNCs on the host countries <span class="ao">AO2</span></span></label>
+    <label><input type="checkbox" data-k="b16b"><span>Evaluate the overall impact of an MNC on a host country, using a case, and reach a judgement <span class="ao">AO3</span></span></label>
+  </div>
+  <p style="font-size:.95rem;color:var(--ink-soft)">The official statement is one line, "The impact of MNCs on the host countries", at AO3 depth. It is split into two boxes here: knowing the impacts, then weighing them.</p>
+
+  <dl class="terms">
+    <dt>Multinational company (MNC) <span class="learn">Learn</span></dt><dd>A company with its head office in one country that produces goods or services (not just sells them) in more than one country.</dd>
+    <dt>Home country / host country <span class="learn">Learn</span></dt><dd>The home country is where the MNC has its head office; a host country is any other country where it operates.</dd>
+    <dt>Foreign direct investment (FDI) <span class="learn">Learn</span></dt><dd>Money a company from one country invests in buildings, equipment or businesses in another country.</dd>
+  </dl>
+
+  <div class="tablewrap"><table>
+    <tr><th>Possible benefits for the host country</th><th>Possible costs for the host country</th></tr>
+    <tr><td>Jobs, often paying more than local firms<br>Investment (FDI) in factories and infrastructure<br>New skills, training and technology spread to local firms and staff<br>Tax revenue for the government<br>Orders for local suppliers<br>More choice, quality and competition for consumers<br>Exports that earn foreign currency</td><td>Local firms cannot compete and close<br>Profits sent back to the home country<br>Top jobs go to staff from the home country<br>Pressure on wages, working conditions or the environment where laws are weak<br>Large MNCs can lobby the government for favours (tax breaks, weaker rules)<br>"Footloose": may leave quickly for a cheaper country<br>Local culture and tastes pushed aside</td></tr>
+  </table></div>
+  <p>Whether the overall impact is positive <b>depends on</b>: how many and what kind of jobs go to locals; how much the MNC buys from local suppliers; the tax it actually pays after any tax holiday; how well the host government enforces labour and environmental laws; and how long the MNC is likely to stay.</p>
+
+  <div class="worked"><b>Worked example: weighing an MNC's impact.</b> <i>VoltaCell, a battery maker based in South Korea, plans a factory in a host country with high youth unemployment. It promises 1&nbsp;500 jobs and has been offered a 10-year tax holiday. It will import most parts. The factory needs a lot of water in a dry region.</i>
+    <ol>
+      <li><b>Benefit, with the case:</b> 1&nbsp;500 jobs in a country with high youth unemployment, plus training in battery technology that local firms could use later.</li>
+      <li><b>Cost, with the case:</b> a 10-year tax holiday means little tax revenue for a decade, and imported parts mean few orders for local suppliers.</li>
+      <li><b>Cost, with the case:</b> heavy water use in a dry region could harm farmers and the community.</li>
+      <li><b>Limitations:</b> the case does not say how many of the 1&nbsp;500 jobs are skilled, or whether VoltaCell commits to staying after the tax holiday ends.</li>
+      <li><b>Judgement:</b> positive in the short term because of the jobs, but only good in the long term if the government sets conditions (local hiring and suppliers, water limits) in return for the tax holiday.</li>
+    </ol></div>
+
+  <div class="tip"><b>Exam traps.</b> (1) Writing about the MNC's benefits (cheap labour, new markets) when the question asks about the <b>host country</b>. (2) Mixing up home and host country. (3) One-sided answers ("MNCs exploit poor countries") with no evidence from the case. (4) No judgement: AO3 means you must say whether the impact is positive overall, and what it depends on.</div>
+
+  <details><summary>Self-check 1.6</summary>
+    <ol>
+      <li>A US coffee chain opens 200 cafés in Vietnam. Which is the home and which the host country?</li>
+      <li>Give two reasons the jobs an MNC creates might benefit the host country less than the headline number suggests.</li>
+      <li>Why might profits being sent back to the home country matter to the host country?</li>
+    </ol>
+    <p><b>Answers.</b> 1: home, the USA; host, Vietnam. 2: for example the senior jobs go to staff from the home country, the jobs are low-skilled with little training, or local cafés close and their jobs are lost. 3: money earned in the host country leaves it instead of being reinvested or spent there, so less of the MNC's success stays in the host economy.</p>
+  </details>
+</section>
+
+<!-- =============================== 10-MARK ANSWER =============================== -->
+<section class="topic" id="ten">
+  <div class="kicker">Exam skill for every unit</div>
+  <h2>How to write a 10-mark answer</h2>
+  <p class="guiding">Paper 1 section B and Paper 2 section B end with one 10-mark question, marked with the same five markbands.</p>
+
+  <p>Command terms in 10-mark questions are AO3: <b>discuss</b> (a balanced review with a clear conclusion), <b>evaluate</b> (weigh strengths and limitations), <b>examine</b>, <b>to what extent</b>, <b>recommend</b> or <b>justify</b>. The examiner finds the band that fits your answer best, using four things: how well you answer the actual question, your business tools and theory, how you use the case, and how substantiated and balanced your arguments are.</p>
+
+  <h3>The frame: seven steps</h3>
+  <ol class="steps">
+    <li><b>Decode the question.</b> Underline the command term, the exact decision or issue, and whose point of view (the business? its stakeholders? the host country?). Write a one-line plan for each step below. <span class="t">(3 min in the exam)</span></li>
+    <li><b>Introduce and define.</b> One or two sentences: define the key term(s) precisely and say what the business is deciding, with one fact from the case.</li>
+    <li><b>Use a tool or theory.</b> Name it and apply it: stakeholder interests (1.4), economies of scale (1.5), CSR (1.3), SWOT, STEEPLE, a calculation from the data. A tool you name but do not apply earns little.</li>
+    <li><b>Arguments for</b> (two paragraphs). Each one: point, evidence from the case (numbers, quotes, facts beyond the company's name), then the chain of reasoning: "this means... which leads to... so...". That is what "substantiated" means.</li>
+    <li><b>Arguments against</b> (two paragraphs), built the same way. This is the "balance" in the top bands.</li>
+    <li><b>Limitations of the case or data.</b> One or two sentences on what is missing or uncertain: only one year of figures, a forecast not a fact, no information about competitors, a source that may be biased. The 9 to 10 band asks for this explicitly.</li>
+    <li><b>Conclusion with a judgement.</b> Answer the question in one clear sentence, give the main reason, and say what it depends on (short term versus long term, or a condition). Do not add new points here.</li>
+  </ol>
+
+  <div class="tablewrap"><table>
+    <tr><th>Markband line (official, SL)</th><th>What it needs for 9 to 10</th><th>Frame step</th></tr>
+    <tr><td>Demands of the question</td><td>"Clear focus on addressing the demands of the question"</td><td>1, 7</td></tr>
+    <tr><td>Business management tools and theories</td><td>"Relevant and accurate use of business management tools and theories"</td><td>2, 3</td></tr>
+    <tr><td>Stimulus material (the case)</td><td>"Relevant information from the stimulus material is integrated effectively to support the argument"</td><td>2, 4, 5</td></tr>
+    <tr><td>Arguments</td><td>"Arguments are substantiated and balanced, with an explanation of the limitations of the case study or stimulus material"</td><td>4, 5, 6</td></tr>
+  </table></div>
+  <p style="font-size:.95rem;color:var(--ink-soft)">The bands below the top one show the usual reasons answers fall short: 7 to 8 has arguments with "some balance"; 5 to 6 is "mostly one-sided"; 3 to 4 uses the case only superficially, "often not going beyond the name of the person(s) or name of the organization"; 1 to 2 makes no arguments. The full band descriptors are on the <a href="../exam-business-management-sl.html">exam technique page</a>.</p>
+
+  <h3>A model answer on a case written for this page</h3>
+  <div class="case">
+    <p><b>Tala Tea</b> is a privately held company owned by two founders, with four bubble-tea cafés in one city. Last year its revenue was $1.2 million and its profit $180&nbsp;000. Customers queue at weekends, and its online rating is 4.7 out of 5.</p>
+    <p>The founders want to grow. Option A: borrow $400&nbsp;000 from a bank to open four more cafés themselves. Option B: franchise. Twelve local entrepreneurs have asked to open Tala Tea cafés; each would pay a $25&nbsp;000 fee and royalties of 6% of revenue. The founders are worried about quality: last year a friend who ran a pop-up stall under the Tala name received hygiene complaints.</p>
+    <p style="margin:0"><b>Evaluate whether Tala Tea should grow by franchising rather than by opening its own cafés. [10 marks]</b></p>
+  </div>
+
+  <div class="model">
+    <p><span class="tag">Steps 1 and 2: focus, definition, case</span>Franchising is a form of external growth in which a business (the franchisor) sells other people (franchisees) the right to trade under its brand and methods, in return for a fee and royalties. Tala Tea must choose between this and internal growth: opening four cafés of its own with a $400&nbsp;000 loan.</p>
+    <p><span class="tag">Step 3: tool, a calculation</span>Tala Tea's four cafés earn $1.2 million, so about $300&nbsp;000 each, and $45&nbsp;000 profit each. Four new own cafés might add about 4 × $45&nbsp;000 = $180&nbsp;000 profit a year, before interest on the loan. Twelve franchises would bring 12 × $25&nbsp;000 = $300&nbsp;000 in fees at once, and if each franchise sells as much as an existing café, royalties of 6% × $300&nbsp;000 × 12 = $216&nbsp;000 a year, with no loan.</p>
+    <p><span class="tag">Step 4: argument for, substantiated</span>The strongest argument for franchising is speed with little financial risk. The franchisees pay for their own cafés, so Tala Tea does not take on $400&nbsp;000 of debt, which for a firm making $180&nbsp;000 a year would be over two years of profit. Twelve outlets instead of four would also make the brand known faster and give Tala Tea purchasing economies of scale on tea and cups.</p>
+    <p><span class="tag">Step 4: second argument for</span>Franchisees are owners, so they have a strong incentive to work hard, which suits a business where the weekend queues show demand is already there.</p>
+    <p><span class="tag">Step 5: argument against, substantiated</span>However, Tala Tea's 4.7 rating is its main asset, and franchising means losing direct control of quality. The pop-up stall that drew hygiene complaints shows the risk: one badly run franchise could damage the reputation of all sixteen cafés, including the founders' own.</p>
+    <p><span class="tag">Step 5: second argument against</span>Opening its own cafés keeps all the profit and the culture under the founders' control. Franchising also has costs the case does not mention: training, inspections and support for twelve new owners, which a two-person management team may struggle to provide.</p>
+    <p><span class="tag">Step 6: limitations</span>The royalty figure assumes franchised cafés sell as much as the current ones, which is uncertain because franchisees are new to the business. The case gives only one year of results and no interest rate for the loan, so the cost of Option A is not known.</p>
+    <p><span class="tag">Step 7: judgement</span>On balance, Tala Tea should franchise, because it brings faster growth and more income without debt. This depends on quality control: it should start with a few franchisees, write strict standards into the contracts and inspect regularly before adding more.</p>
+  </div>
+  <p style="font-size:.95rem;color:var(--ink-soft)">Fairly short for an exam answer, but every markband line is met. Notice that every argument uses a number or a fact from the case, and that the judgement names a condition.</p>
+
+  <div class="tip"><b>Exam traps.</b> (1) Describing theory with no case: the markbands cap that at the low bands. (2) Two arguments for and none against: "mostly one-sided" is the 5 to 6 band. (3) A conclusion that sits on the fence ("there are pros and cons") is not a judgement. (4) Forgetting the limitations sentence, which is the difference between 7 to 8 and 9 to 10. (5) Spending 40 minutes on it in Paper 1: aim for about 30 minutes including the plan.</div>
+
+  <h3 id="selfmark">Self-check list for your Bright Steps answer (no mark scheme exists)</h3>
+  <p>There is no mark scheme for the <a href="https://drive.google.com/file/d/1xV4IhtaXFgdR0Uutez3cXfqVZm5BgEQt/view">1.4 Stakeholders questions</a>, so mark Question 1 against the official markbands with these checks. Tick each one you can point to in your answer.</p>
+  <ol>
+    <li>Did I answer "discuss the possible effects of the 12% fee increase on its stakeholders", and not something else (for example whether childcare is a good business)?</li>
+    <li>Did I define "stakeholder" accurately and use stakeholder theory: internal versus external, their different interests, the conflict between them?</li>
+    <li>Did I cover at least three stakeholder groups named or implied in the case (parents as customers, the 42 nursery assistants, the directors or owners, the food supplier) and explain how the decision affects each?</li>
+    <li>Did every paragraph use a fact from the case beyond the name "BC": the 12% rise, part-time staff, rising rent and wage costs, parents' complaints, the plan to fund training and better staff-to-child ratios?</li>
+    <li>Was each argument substantiated with a chain of reasoning ("this means... so...")?</li>
+    <li>Was it balanced: effects that are good and bad for the same group (for example staff get training but fear job losses if parents leave), and stakeholders who gain as well as those who lose?</li>
+    <li>Did I explain at least one limitation of the case (for example no figures on how many parents might leave, or on how much revenue the rise brings)?</li>
+    <li>Did my conclusion give a clear judgement on the overall effect and what it depends on?</li>
+  </ol>
+  <p><b>Rough band:</b> checks 1 to 4 met and 5 partly, but not 6 or 7: about 5 to 6. All of 1 to 6 met: 7 to 8. All eight met, with the case woven through every paragraph: 9 to 10.</p>
+</section>
+
+<!-- =============================== QUIZ =============================== -->
+<section class="topic quiz" id="quiz">
+  <div class="kicker">Ten questions on Unit 1 concepts and definitions</div>
+  <h2>Quick quiz</h2>
+  <p>The real Business Management papers are not multiple choice: they use structured questions and a 10-mark extended answer. The quiz uses multiple choice only so the page can mark it for you. Decide on your answer before you click. Every question explains the trap after you answer. Write any you miss into the Error log.</p>
+
+  <div class="q" data-a="2"><p>1. Which business operates in the quaternary sector?</p>
+    <button>A bank branch serving customers at the counter</button>
+    <button>A car assembly plant</button>
+    <button>A firm that analyses data and sells market research reports</button>
+    <button>A copper mine</button>
+    <div class="why">Quaternary activity is knowledge and information work. A bank branch serving customers is tertiary (a service to people), the car plant is secondary and the mine is primary. The trap is thinking every modern-sounding service is quaternary.</div></div>
+
+  <div class="q" data-a="1"><p>2. "Limited liability" means that</p>
+    <button>the business can only borrow up to a limit set by law</button>
+    <button>the owners can lose at most the money they invested in the business</button>
+    <button>the company's profits are capped</button>
+    <button>the owner is personally responsible for all the business's debts</button>
+    <div class="why">Limited liability protects owners' personal assets: the most a shareholder can lose is what they paid for their shares. The last option describes the opposite, unlimited liability, which sole traders and most partners have.</div></div>
+
+  <div class="q" data-a="0"><p>3. The key difference between a publicly held and a privately held company is that a publicly held company</p>
+    <button>can sell its shares to the general public on a stock exchange</button>
+    <button>is owned by the government</button>
+    <button>has unlimited liability</button>
+    <button>does not have to publish its accounts</button>
+    <div class="why">"Publicly held" refers to who can buy the shares. It is still in the private sector, not owned by the government (the trap). Both kinds of company have limited liability, and the publicly held one must publish the most information.</div></div>
+
+  <div class="q" data-a="3"><p>4. Which statement about an NGO is correct?</p>
+    <button>It is a government department</button>
+    <button>It is not allowed to sell goods or services</button>
+    <button>Its profits are shared among its members, one vote each</button>
+    <button>Any surplus it makes is used for its cause, not paid to owners</button>
+    <div class="why">An NGO is a non-profit social enterprise, independent of government. It can earn money (charity shops, events), but any surplus goes back into the cause. Sharing profit among members with one vote each describes a cooperative.</div></div>
+
+  <div class="q" data-a="1"><p>5. Which of these is a vision statement?</p>
+    <button>"We bake fresh bread every morning with local flour and serve it with a smile."</button>
+    <button>"To be the bakery every family in the region thinks of first."</button>
+    <button>"Increase sales by 8% at the high-street shop by December."</button>
+    <button>"Reduce flour waste by 15% this quarter."</button>
+    <div class="why">A vision is the long-term ideal future. The first option describes what the bakery does now and what it values: a mission statement. The last two are objectives (tactical ones), with numbers and deadlines.</div></div>
+
+  <div class="q" data-a="2"><p>6. Which is a tactical objective rather than a strategic one?</p>
+    <button>Become the market leader in Europe within six years</button>
+    <button>Double the company's number of countries by 2031</button>
+    <button>Cut delivery times at the Lisbon depot to two days by March</button>
+    <button>Change the whole company to renewable energy over the next decade</button>
+    <div class="why">Tactical objectives are shorter term and cover one part of the business (one depot), helping achieve a strategic aim. The others are long term and for the whole organisation, so strategic.</div></div>
+
+  <div class="q" data-a="0"><p>7. Which group is an internal stakeholder?</p>
+    <button>Shareholders</button>
+    <button>Customers</button>
+    <button>Suppliers</button>
+    <button>The local community</button>
+    <div class="why">Internal stakeholders are part of the organisation: employees, managers and the owners (shareholders). The trap is to think shareholders are external because they do not work there; they own it. Customers, suppliers and the community are external.</div></div>
+
+  <div class="q" data-a="1"><p>8. A firm's output rises from 10&nbsp;000 to 25&nbsp;000 units and its total cost rises from $50&nbsp;000 to $100&nbsp;000. What happens to its average cost?</p>
+    <button>It rises, because total cost has doubled</button>
+    <button>It falls from $5 to $4, a sign of economies of scale</button>
+    <button>It falls from $5 to $2.50</button>
+    <button>It stays the same</button>
+    <div class="why">Average cost = total cost ÷ output: 50&nbsp;000 ÷ 10&nbsp;000 = $5 and 100&nbsp;000 ÷ 25&nbsp;000 = $4. Total cost always rises with output; economies of scale are about the cost per unit. $2.50 comes from halving $5 because output more than doubled, without doing the division.</div></div>
+
+  <div class="q" data-a="3"><p>9. Two firms set up a new company, owned by both, to develop a product. They share its costs, control and profits. This is</p>
+    <button>a merger</button>
+    <button>a strategic alliance</button>
+    <button>a takeover</button>
+    <button>a joint venture</button>
+    <div class="why">A joint venture creates a new, separate business that the partners own together. In a strategic alliance the firms cooperate but no new business is created (the trap); in a merger the two firms themselves become one; a takeover is one firm buying control of another against its managers' wishes.</div></div>
+
+  <div class="q" data-a="2"><p>10. Which impact of a multinational company on its host country is most likely to be negative?</p>
+    <button>Local workers learn new technical skills</button>
+    <button>The government collects more tax</button>
+    <button>Profits are sent back to the home country</button>
+    <button>Consumers get more choice</button>
+    <div class="why">Profit repatriation means the money earned in the host country leaves it. The other three are common benefits. The trap is answering from the MNC's point of view; the question asks about the host country.</div></div>
+
+  <div class="score" id="score">Score: 0 / 10 answered 0</div>
+</section>
+
+<section class="end" id="end">
+  <h2 style="font-size:1.4rem">Before you close this</h2>
+  <ul>
+    <li>Tick the "I can" boxes you are confident about. The unticked ones are the first ten minutes of your next Business session (Thursday 12 November).</li>
+    <li>Mark the Chopra case study against its <a href="https://drive.google.com/file/d/1PrAQJWFJJx2FlWp9loFdll8pCa4SMPHp/view">mark scheme</a> and your Bright Steps answer against the <a href="#selfmark">self-check list</a>, and write both scores at the top of the page.</li>
+    <li>Open the study sheet, <b>Error log</b> tab, and write one row for every mistake from the case study, the 10-mark answer and the quiz: what went wrong, and the rule that fixes it (for example "10-mark answer was one-sided: two arguments against needed").</li>
+    <li>Next Business session: Unit 2 human resource management, and a timed 10-mark answer on Question 2 of the <a href="https://drive.google.com/file/d/1xV4IhtaXFgdR0Uutez3cXfqVZm5BgEQt/view">stakeholders file</a> (NorthStar Dairies) using today's frame.</li>
+    <li>Also on the study site: <a href="../flashcards.html">flashcards</a> (5 to 10 minutes a day), <a href="../exam-business-management-sl.html">exam technique</a> for this subject, and your <a href="../progress.html">progress page</a>, which turns green as you tick the "I can" boxes and pass the quiz.</li>
+  </ul>
+  <div class="french"><b>French B (30 minutes, after Business).</b> Ask your French teacher for the scope of the next French assessment (which topics, texts and skills it covers) and for the vocabulary list. Put what you get, or a photo of it, in the <a href="https://drive.google.com/drive/folders/18SUa8uYEoJSF2uZtKjZXnc8hvv0ZAG7U">French B SL folder</a> in the IB Drive, so the French guides can be built from it. If the teacher is not available today, write the email now and send it.</div>
+</section>
+
+</main>
+
+<script>
+(function(){
+  // remember ticked "I can" boxes on this device; fails quietly where storage is unavailable
+  var key='ib-business-sl-11-16-ican';
+  var boxes=document.querySelectorAll('.ican input');
+  try{ var saved=JSON.parse(localStorage.getItem(key)||'{}'); boxes.forEach(function(b){ if(saved[b.dataset.k]) b.checked=true; }); }catch(e){}
+  boxes.forEach(function(b){ b.addEventListener('change',function(){ try{ var s={}; boxes.forEach(function(x){ if(x.checked) s[x.dataset.k]=1; }); localStorage.setItem(key,JSON.stringify(s)); }catch(e){} }); });
+
+  // quiz
+  var qs=document.querySelectorAll('.quiz .q'); var right=0, done=0, total=qs.length;
+  qs.forEach(function(q){
+    var a=parseInt(q.dataset.a,10); var btns=q.querySelectorAll('button');
+    btns.forEach(function(b,i){ b.addEventListener('click',function(){
+      if(q.classList.contains('done')) return;
+      q.classList.add('done'); done++;
+      if(i===a){ b.classList.add('right'); right++; } else { b.classList.add('wrong'); btns[a].classList.add('right'); }
+      document.getElementById('score').textContent='Score: '+right+' / '+total+' answered '+done+(done===total?(right>=8?'. Good. Log the ones you missed.':'. Re-read the sections for the ones you missed, then log them.'):'');
+      if(done===qs.length){ try{ var KQ='ib-quiz-guide-2026-11-06'; var prev=JSON.parse(localStorage.getItem(KQ)||'null'); localStorage.setItem(KQ,JSON.stringify({right:right,total:qs.length,date:new Date().toISOString().slice(0,10),best:Math.max(right,prev&&prev.best||0)})); }catch(e){} }
+    }); });
+  });
+})();
+</script>
+</body>
+</html>

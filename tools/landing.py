@@ -7,6 +7,7 @@ PLAN=json.load(open(sys.argv[1]+'/plan.json'))
 LINKS={
  "2026-11-03":dict(url="guides/2026-11-03-chemistry-s1.1-s1.3.html",label="Chemistry HL S1.1 to S1.3",quiz="ib-quiz-guide-2026-11-03"),
  "2026-11-04":dict(url="guides/2026-11-04-maths-aa-sl-1.2-1.6.html",label="Maths AA SL 1.2 to 1.6",quiz="ib-quiz-guide-2026-11-04"),
+ "2026-11-06":dict(url="guides/2026-11-06-business-sl-1.1-1.6.html",label="Business Management SL Unit 1, 1.1 to 1.6",quiz="ib-quiz-guide-2026-11-06"),
  "2026-11-08":dict(url="review/2026-11-08-week-1.html",label="Week 1 review",quiz="ib-quiz-review-2026-11-08"),
 }
 body=f'''
@@ -39,7 +40,7 @@ function esc(s){var d=document.createElement('div');d.textContent=s;return d.inn
 function quiz(k){try{return JSON.parse(localStorage.getItem(k)||'null');}catch(e){return null;}}
 var now=new Date(), today=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0');
 function guideHtml(p){var l=LINKS[p.iso]; if(!l) return '<span class="pill p-soon">guide coming</span>';
-  var q=quiz(l.quiz); return '<a href="'+l.url+'">Open: '+esc(l.label)+'</a>'+(q?'<span class="pill p-done">quiz '+(q.best||q.right)+'/'+q.total+'</span>':'');}
+  var q=quiz(l.quiz); var badge=''; if(q&&q.total) badge='<span class="pill p-done">quiz '+(q.best||q.right)+'/'+q.total+'</span>'; else if(q&&q.max) badge='<span class="pill p-done">score '+q.score+'/'+q.max+'</span>'; return '<a href="'+l.url+'">Open: '+esc(l.label)+'</a>'+badge;}
 // today card: today's row, or the next planned day
 var cur=PLAN.filter(function(p){return p.iso>=today;})[0];
 var t=document.getElementById('today');
