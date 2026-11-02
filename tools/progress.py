@@ -27,7 +27,9 @@ GUIDES=[
 ]
 REVIEWS=[dict(title="Week 1 review (Sun 8 Nov)", link="review/2026-11-08-week-1.html", quiz="ib-quiz-review-2026-11-08")]
 # timed practice pages save {score,max,date} under ib-timed-YYYY-MM-DD
-TIMED=[]
+TIMED=[dict(title="Sat 7 Nov: timed set, Maths sequences", link="practice/2026-11-07-timed-maths-sequences.html", key="ib-timed-2026-11-07"),
+       dict(title="Sat 14 Nov: timed set, Chemistry titration", link="practice/2026-11-14-timed-chemistry-titration.html", key="ib-timed-2026-11-14"),
+       dict(title="Sat 21 Nov: mock papers", link="practice/2026-11-21-mock-papers.html", key="ib-timed-2026-11-21")]
 BM=[("1.1","What is a business?"),("1.2","Types of business entities"),("1.3","Business objectives"),("1.4","Stakeholders"),("1.5","Growth and evolution"),("1.6","Multinational companies (MNCs)"),
 ("2.1","Introduction to human resource management"),("2.2","Organizational structure"),("2.3","Leadership and management"),("2.4","Motivation and demotivation"),("2.6","Communication"),
 ("3.1","Introduction to finance"),("3.2","Sources of finance"),("3.3","Costs and revenues"),("3.4","Final accounts"),("3.5","Profitability and liquidity ratio analysis"),("3.7","Cash flow"),("3.8","Investment appraisal"),

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mock papers: Chemistry, Biology, English (Sat 21 Nov 2026)</title>
+<style>
+  :root{--paper:#F5F7F4;--ink:#1E2A33;--ink-soft:#4A5862;--rule:#D6DCD8;--indigo:#2F47A6;--indigo-soft:#E6EAF7;--amber:#B8761A;--amber-soft:#FBF1DF;--green:#2E7D4F;--green-soft:#E3F2E8;--red:#B23A3A;--red-soft:#F8E4E4;--grey:#8A949B;--card:#FFFFFF}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;overflow-wrap:break-word}
+  h1,h2,h3{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;line-height:1.2;margin:0 0 .4em;font-weight:600}
+  h1{font-size:2.1rem} h2{font-size:1.5rem;margin-top:1.6em} h3{font-size:1.15rem;margin-top:1.4em}
+  p{margin:0 0 1em} a{color:var(--indigo)}
+  sup,sub{line-height:0}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
+  .top{background:#0B0F1A;color:#fff;padding:26px 0 22px}
+  .top h1{color:#fff} .top p{color:#C9D1E6;max-width:660px;margin-bottom:0}
+  .top .crumb{font-size:.9rem;margin-bottom:8px} .top .crumb a{color:#F2C46D}
+  table{border-collapse:collapse;width:100%;margin:12px 0 20px;font-size:.95rem;background:var(--card)}
+  th,td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#EDF0EC}
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .card{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:12px 0}
+  .tip{background:var(--amber-soft);border-left:5px solid var(--amber);padding:12px 16px;margin:18px 0}
+  .tip b:first-child{color:var(--amber)}
+  .step{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);padding:12px 16px;margin:12px 0}
+  .step .bh{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-bottom:4px}
+  .step .bh b{font-size:1.15rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+  .step .bh span{font-weight:700;color:var(--indigo)}
+  .step ol{margin:6px 0 0;padding-left:22px} .step li{margin:4px 0}
+  .t{color:var(--ink-soft);font-size:.88rem;white-space:nowrap}
+  .tag{display:inline-block;font-size:.72rem;font-weight:700;padding:1px 7px;border-radius:3px;color:#fff;vertical-align:middle;white-space:nowrap}
+  .quiz .q{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:12px 0}
+  .quiz .q > p{font-weight:600;margin-bottom:8px}
+  .quiz .subj{display:inline-block;font-size:.75rem;font-weight:700;color:var(--indigo);background:var(--indigo-soft);padding:1px 7px;border-radius:3px;margin-right:6px;vertical-align:middle}
+  .quiz button{display:block;width:100%;text-align:left;background:#F3F5F2;border:1px solid var(--rule);padding:8px 12px;margin:6px 0;border-radius:6px;font:inherit;cursor:pointer;color:var(--ink)}
+  .quiz button:hover,.quiz button:focus-visible{border-color:var(--indigo);outline:none}
+  .quiz button.right{background:var(--green-soft);border-color:var(--green)}
+  .quiz button.wrong{background:var(--red-soft);border-color:var(--red)}
+  .quiz .why{display:none;margin-top:8px;font-size:.95rem;color:var(--ink-soft)}
+  .quiz .q.done .why{display:block}
+  .score{font-weight:700;margin-top:14px}
+  .frac{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;font-size:.92em;line-height:1.15;margin:0 2px}
+  .frac>span:first-child{border-bottom:1px solid currentColor;padding:0 3px}
+  .frac>span:last-child{padding:0 3px}
+  .nw{white-space:nowrap}
+  @media (max-width:600px){h1{font-size:1.7rem}body{font-size:16px}th,td{padding:6px}}
+
+  .timer{background:var(--card);border:1px solid var(--rule);border-top:6px solid var(--indigo);padding:16px;margin:16px 0;text-align:center}
+  .timer .tlabel{font-weight:700;margin-bottom:2px}
+  .timer .tdisp{font:700 4.2rem/1.1 "SF Mono",Menlo,Consolas,monospace;letter-spacing:.02em;margin:6px 0;color:var(--ink);font-variant-numeric:tabular-nums}
+  .timer .tstat{color:var(--ink-soft);font-size:.95rem;min-height:1.5em}
+  .timer .tbtns{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:10px}
+  .timer button,.btn{font:inherit;font-weight:700;padding:10px 20px;border-radius:6px;border:1px solid var(--indigo);background:var(--indigo);color:#fff;cursor:pointer;min-width:96px}
+  .timer button.sec,.btn.sec{background:#fff;color:var(--indigo)}
+  .timer button:disabled{opacity:.4;cursor:default}
+  .timer.low{border-top-color:var(--amber)} .timer.low .tdisp{color:var(--amber)}
+  .timer.up{border-top-color:var(--red);background:var(--red-soft)} .timer.up .tdisp{color:var(--red)} .timer.up .tstat{color:var(--red);font-weight:700}
+  details{background:var(--card);border:1px solid var(--rule);padding:10px 14px;margin:10px 0}
+  summary{cursor:pointer;font-weight:600} details[open] summary{margin-bottom:8px}
+  .score-t input{font:inherit;width:4.6em;padding:4px 6px;border:1px solid var(--grey);border-radius:4px}
+  .score-t td{vertical-align:middle}
+  .saved{font-weight:700;margin:6px 0 0}
+  .miss{background:var(--red-soft);border-left:5px solid var(--red);padding:12px 16px;margin:14px 0}
+  .ok{background:var(--green-soft);border-left:5px solid var(--green);padding:12px 16px;margin:14px 0}
+  .card ul,.card ol{margin:4px 0;padding-left:22px} .card li{margin:4px 0}
+  .muted{color:var(--ink-soft);font-size:.92rem}
+  @media (max-width:600px){.timer .tdisp{font-size:3.4rem}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap" style="padding-bottom:0">
+  <div class="crumb"><a href="../index.html">All days</a></div>
+  <h1>Mock papers: Chemistry, Biology and English</h1>
+  <p>Saturday 21 November 2026. Sit Chemistry Quiz 1 and Formative Assessment 1 under timed conditions, then the Biology Grade 11 combined paper and one English Paper 1 style analysis. Mark each straight away and log your mistakes. Then agree your Extended Essay research question with your supervisor.</p>
+</div></header>
+<main class="wrap">
+
+<p style="margin-top:22px">Up to five papers today (four if the Formative Assessment 1 Paper 2 questions do not arrive). Do not sit them all in one go. A plan that works: <b>morning</b> chemistry (Quiz 1, a 10 minute break, Formative Assessment 1 Paper 1, and Paper 2 after another break if you have it), marking each straight away; <b>afternoon</b> Biology, then the English analysis. Each paper has its own timer below; pause it only for a real interruption.</p>
+
+<h2>Before you start</h2>
+<div class="card"><ul>
+<li><b>Paper and pen</b>, pencil, ruler. Answer on paper.</li>
+<li><b>Calculator: yes</b> for chemistry and biology. Not needed for English.</li>
+<li><b>Chemistry data booklet:</b> required for the chemistry papers (the Formative Assessment 1 front page says so). It is not in the Drive folder, so use your school copy.</li>
+<li><b>Files:</b> <a href="https://drive.google.com/file/d/183UXkkDOuRylI5n6vU2jLntfpblOAX7b/view">Quiz 1 Paper 2 HL</a>, <a href="https://drive.google.com/file/d/1PyUubsdFfMqX9EnS9ymPrr6jOizFpWcT/view">Formative Assessment 1 Paper 1A and 1B HL</a>, <a href="https://drive.google.com/file/d/16z2TwiUy5JZkPv-Hqi4AD6R5H_6wYBiw/view">Biology Grade 11 combined paper HL</a> (the original, not the "(duplicate)" copy), and for English the <a href="https://www.nytimes.com/2020/10/01/learning/40-more-intriguing-photos-to-make-students-think.html">New York Times photo collection</a> linked in your <a href="https://docs.google.com/document/d/1JcbnbbYzezkn4WONBbGmhMqPm7Fx7UE__bsN45fkxc4/edit">visual thinking assignment</a>.</li>
+<li><b>Sticky notes or strips of paper</b> to cover answers (see "What is missing" below), or ask someone to do it before you start.</li>
+<li><b>How long:</b> about 3 hours of papers (nearly 4 with Formative Assessment 1 Paper 2), plus about an hour of marking and Error log over the day.</li>
+<li>The timers work offline and keep the right time if the phone screen locks.</li>
+</ul></div>
+
+<h2>What is missing, and what to do about it</h2>
+<div class="ok"><b>Quiz 1 Paper 2 HL: complete.</b> The questions are on pages 1 to 3 and the mark scheme is on page 4 of the same file. Stop before page 4. Two oddities: question 2 (b) (ii) says "in 5(e)" and the mark scheme labels question 2 as e, f(i), f(ii). The question was taken from an old IB paper where it was question 5: read "5(e)" as your answer to 2 (a), and e, f(i), f(ii) as 2 (a), (b)(i), (b)(ii).</div>
+<div class="miss"><b>Formative Assessment 1 Paper 1A and 1B HL: no mark scheme in the folder, and the copy is not clean.</b> The Drive copy already has handwritten working and circled answers on it. What to do: on Monday 16 November ask your chemistry teacher for a clean copy and the mark scheme. If you get no clean copy, print the annotated one and cover the handwriting and highlights with sticky notes before you start, or simply sit it as a re-sit and note in the Error log that you had seen the answers. To mark it without the official scheme, use my key below: I worked out all 20 Paper 1A answers myself and they match the circled answers on the copy. For Paper 1B I give the points I would expect, but the school mark scheme decides.</div>
+<div class="miss"><b>Formative Assessment 1 Paper 2 HL: the mark scheme is there, the question paper is not.</b> The file is a set of mark scheme extracts from IB past papers (May 2021 and May 2022 HL Paper 2). Ask your chemistry teacher for the question paper on Monday 16 November. <b>Do not read the mark scheme before you have the questions</b>: that would spoil the paper. No questions by Saturday? Skip this paper and leave its score row empty (it then does not count).</div>
+<div class="miss"><b>Biology Grade 11 combined paper HL: the only file is the mark scheme, but it contains every question.</b> Each question (with its diagrams) is followed straight away by a grey "Markscheme" box with the answer. Before you start, print it and cover every grey box with a sticky note, or on screen scroll with a sheet of paper held over everything below the question you are on. No time is printed on it.</div>
+
+<h2>1. Chemistry Quiz 1 Paper 2 HL (12 marks)</h2>
+<div class="timer" data-id="chem-quiz1" data-sec="1200"><div class="tlabel">Chemistry Quiz 1 Paper 2 HL</div><div class="tdisp" aria-live="off">20:00</div><div class="tstat">Ready.</div><div class="tbtns"><button class="tstart">Start</button><button class="tpause sec">Pause</button><button class="treset sec">Reset</button></div></div><p class="muted">The paper prints no time. At HL Paper 2 pace (150 minutes for 90 marks, 100 seconds a mark): 12 marks = 20 minutes.</p>
+<p><a href="https://drive.google.com/file/d/183UXkkDOuRylI5n6vU2jLntfpblOAX7b/view">Quiz 1 Paper 2 HL</a>: question 1 (chlorine: electron configuration, radius, mass spectrum, 7 marks) and question 2 (titration of vinegar with KOH and a systematic error, 5 marks).</p>
+<div class="step"><div class="bh"><b>Mark it</b><span>about 10 min</span></div><ol>
+<li>Turn to page 4 of the same file: that is the mark scheme. A ✓ is one mark. Words in «» are not needed for the mark; OR gives alternatives.</li>
+<li>Check 1 (a)(i) carefully: the full configuration is required, a condensed one like [Ne] 3s<sup>2</sup> 3p<sup>5</sup> gets 0.</li>
+<li>Question 2 (a): 0.02075 dm<sup>3</sup> × 1.00 = 0.0208 mol, ÷ 0.02500 dm<sup>3</sup> = 0.830 mol dm<sup>−3</sup> (I checked this). Two marks for the right final answer.</li></ol></div>
+
+<h2>2. Formative Assessment 1 Paper 1A and 1B HL (30 marks)</h2>
+<div class="timer" data-id="chem-fa1-p1" data-sec="3000"><div class="tlabel">FA1 Paper 1A and 1B HL</div><div class="tdisp" aria-live="off">50:00</div><div class="tstat">Ready.</div><div class="tbtns"><button class="tstart">Start</button><button class="tpause sec">Pause</button><button class="treset sec">Reset</button></div></div><p class="muted">Time from the front page: 50 minutes for 30 marks (20 multiple choice, 10 written). Calculator and data booklet required.</p>
+<p><a href="https://drive.google.com/file/d/1PyUubsdFfMqX9EnS9ymPrr6jOizFpWcT/view">Formative Assessment 1 Paper 1A and 1B HL</a> (S1.1 to S1.5; questions 14 and 15, reacting masses and the limiting reactant, are R2.1). Paper 1A: 20 multiple-choice questions. Paper 1B: one data-based question about separating sand, salt and iron (10 marks).</p>
+<div class="step"><div class="bh"><b>Mark it</b><span>about 10 min</span></div><ol>
+<li>If your teacher gave you the mark scheme, use that. Otherwise use the key below.</li>
+<li>Paper 1A: one mark each. Paper 1B: give yourself a mark only for a point that matches one in the key or says the same thing in other words.</li>
+<li>Ask your teacher about any 1B answer you are unsure of.</li></ol></div>
+<details><summary>Answer key Paper 1A (my own, checked; not the school mark scheme)</summary>
+<div class="tablewrap"><table><tr><th>Q</th><th>Answer</th><th>Why</th></tr><tr><td>1</td><td><b>D</b></td><td>M(C<sub>60</sub>) = 60 × 12.01 = 720.6 g mol<sup>−1</sup>; 720.6 ÷ (6.0 × 10<sup>23</sup>) = 1.2 × 10<sup>−21</sup> g</td></tr><tr><td>2</td><td><b>D</b></td><td>10 cm<sup>3</sup> of A reacted with 20 cm<sup>3</sup> of B to give 10 cm<sup>3</sup> of product: A + 2B → AB<sub>2</sub></td></tr><tr><td>3</td><td><b>A</b></td><td>pV = nRT is constant at fixed T and n: a horizontal line</td></tr><tr><td>4</td><td><b>A</b></td><td>2s paired; the two 2p electrons in separate orbitals with parallel spins (Hund)</td></tr><tr><td>5</td><td><b>C</b></td><td>big jump after the 3rd electron: 3 outer electrons, Al</td></tr><tr><td>6</td><td><b>B</b></td><td>molecular formula = actual number of each atom (A is the empirical formula)</td></tr><tr><td>7</td><td><b>A</b></td><td>masses of Zn and oxide give % composition and empirical formula; zinc oxide is ionic (a lattice, not molecules), so it has no molecular formula</td></tr><tr><td>8</td><td><b>A</b></td><td>M = mRT ÷ pV with p in kPa, V in dm<sup>3</sup> (0.220) and T in K (290)</td></tr><tr><td>9</td><td><b>C</b></td><td>2n<sup>2</sup> = 2 × 16 = 32</td></tr><tr><td>10</td><td><b>B</b></td><td>S has one paired 3p orbital, and the repulsion makes it easier to remove an electron</td></tr><tr><td>11</td><td><b>A</b></td><td>period number = highest occupied level n, and level n has n sub-levels; outer electrons come from the group</td></tr><tr><td>12</td><td><b>D</b></td><td>all three are single-phase mixtures (pentane and hexane mix, ethanol and water mix)</td></tr><tr><td>13</td><td><b>B</b></td><td>emission: electrons fall to lower levels and release photons</td></tr><tr><td>14</td><td><b>B</b></td><td>2.67 ÷ 267.21 = 9.99 × 10<sup>−3</sup> mol; × 223.20 = 2.23 g of PbO</td></tr><tr><td>15</td><td><b>A</b></td><td>n(HCl) = 0.0100 mol; 0.02 mol Zn would need 0.04 mol HCl, so HCl is limiting; H<sub>2</sub> = 0.0100 ÷ 2 = 0.005 mol</td></tr><tr><td>16</td><td><b>B</b></td><td>N 5.6 g ÷ 14.01 = 0.40; O 3.2 ÷ 16.00 = 0.20; ratio 2 : 1, N<sub>2</sub>O</td></tr><tr><td>17</td><td><b>C</b></td><td>71x + 69(1 − x) = 69.72 gives x = 0.36, so <sup>69</sup>Ga is 64%, about 60%</td></tr><tr><td>18</td><td><b>A</b></td><td>big jump after the 3rd electron: group 13</td></tr><tr><td>19</td><td><b>C</b></td><td>the dumbbell (figure-of-eight) shape</td></tr><tr><td>20</td><td><b>B</b></td><td>2− means two electrons gained</td></tr></table></div>
+<p class="muted">Relative atomic masses used: C 12.01, O 16.00, N 14.01, Pb 207.20. Question 11 is the least clear-cut: A is the intended answer, because a period-n element fills level n, which has n sub-levels.</p></details>
+<details><summary>Expected points Paper 1B (my own; the school mark scheme decides)</summary>
+<ul>
+<li>(a) [4] One mark per step: pull out the iron filings with a magnet; add water and stir until the salt dissolves; filter, so the sand stays on the filter paper (rinse and dry it); evaporate or crystallise the filtrate to get the salt.</li>
+<li>(b) [1] iron <span class="nw">2.17 ÷ 5.62 × 100 = 38.6%</span>; sand <span class="nw">1.98 ÷ 5.62 × 100 = 35.2%</span>.</li>
+<li>(c) [2] Error: the separated solids were still wet, or carried other material (for example sand stuck to the iron, or the iron oxidised), so 2.17 + 1.98 + 1.80 = 5.95 g is more than 5.62 g. Reduce it: dry each solid to constant mass (heat, weigh, repeat until the mass stops changing) before weighing.</li>
+<li>(d) [1] The hypothesis judged by how much space the iron took up, but iron is much denser than sand and salt, so a small volume of iron has a large mass.</li>
+<li>(e) [2] Fractional distillation; the two liquids have different boiling points (methanol about 65 °C, butan-1-ol about 118 °C).</li>
+</ul></details>
+
+<h2>3. Formative Assessment 1 Paper 2 HL (only if you have the questions)</h2>
+<div class="timer" data-id="chem-fa1-p2" data-sec="3000"><div class="tlabel">FA1 Paper 2 HL</div><div class="tdisp" aria-live="off">50:00</div><div class="tstat">Ready.</div><div class="tbtns"><button class="tstart">Start</button><button class="tpause sec">Pause</button><button class="treset sec">Reset</button></div></div><p class="muted">The mark scheme totals 29 marks (counted from its Total column; one row shows no total and is counted as 1). At HL Paper 2 pace that is 48 min 20 s; 50 minutes matches the Paper 1 of the same assessment.</p>
+<div class="step"><div class="bh"><b>Mark it</b><span>about 10 min</span></div><ol>
+<li>Use the <a href="https://drive.google.com/file/d/1U5rjK07YmiJS4EeiWaUjRx3qX-hs6kCl/view">FA1 Paper 2 HL mark scheme</a>. Its question numbers come from the original past papers, so match the parts by their content.</li>
+<li>The "Out of" box for this paper below can be changed: if your question paper shows a different total, type that in.</li></ol></div>
+
+<h2>4. Biology Grade 11 combined paper HL (30 marks)</h2>
+<div class="timer" data-id="bio-combined" data-sec="2160"><div class="tlabel">Biology combined paper 1A, 1B and 2 HL</div><div class="tdisp" aria-live="off">36:00</div><div class="tstat">Ready.</div><div class="tbtns"><button class="tstart">Start</button><button class="tpause sec">Pause</button><button class="treset sec">Reset</button></div></div><p class="muted">No time is printed, so 1.2 minutes a mark: 30 marks = 36 minutes.</p>
+<p><a href="https://drive.google.com/file/d/16z2TwiUy5JZkPv-Hqi4AD6R5H_6wYBiw/view">Grade 11 combined paper HL</a> (A1.1 water, A1.2 nucleic acids, B1.1 carbohydrates and lipids, B1.2 proteins, plus two questions, 7 and 8, on cell respiration, C1.2): questions 1 to 10 are multiple choice (10 marks), questions 11 to 14 are written (20 marks). Cover the grey answer boxes first.</p>
+<div class="step"><div class="bh"><b>Mark it</b><span>about 10 min</span></div><ol>
+<li>Uncover the grey boxes one at a time. For written answers each mark point ends with a semicolon; "OWTTE" means "or words to that effect", so your wording can differ if the meaning is the same.</li>
+<li>Do not go over the mark shown in brackets: question 12 (b) is worth [2] even though its notes mention 3 marks.</li>
+<li>Names must be in full where the scheme says so (11 (a)(i): "thymine", not "T").</li></ol></div>
+
+<h2>5. English: one Paper 1 style analysis</h2>
+<div class="timer" data-id="eng-p1" data-sec="4050"><div class="tlabel">English Paper 1 style analysis, one text</div><div class="tdisp" aria-live="off">67:30</div><div class="tstat">Ready.</div><div class="tbtns"><button class="tstart">Start</button><button class="tpause sec">Pause</button><button class="treset sec">Reset</button></div></div><p class="muted">HL Paper 1 is 2 hours 15 minutes for two texts, so one text gets 67 min 30 s (about 10 minutes of that for reading, annotating and planning).</p>
+<div class="step"><div class="bh"><b>The task</b><span>67 min 30 s</span></div><ol>
+<li>Choose one photograph from the <a href="https://www.nytimes.com/2020/10/01/learning/40-more-intriguing-photos-to-make-students-think.html">New York Times collection</a> (a different one from your visual thinking assignment), or a print advert you can see in full.</li>
+<li>Use a guiding question as in the exam, for example: "How does the photographer use composition and framing to shape the viewer's response?" or "How do the image and the words in this advert work together to persuade its audience?"</li>
+<li>Write a guided analysis: an introduction with your overall reading, then paragraphs that each make a point about a technique (framing, angle, focus, colour, layout, typography, slogan), quote or describe the evidence, and explain its effect on the audience. End with a short conclusion.</li></ol></div>
+<div class="step"><div class="bh"><b>Mark it</b><span>about 10 min</span></div><ol>
+<li>A Paper 1 analysis is marked out of 20: four criteria worth 5 each (A understanding and interpretation, B analysis and evaluation, C focus and organisation, D language).</li>
+<li>Give yourself a rough mark per criterion, then hand it to your English teacher for a real mark. Enter the teacher's mark when you have it.</li></ol></div>
+<!-- Unverified: the English A criteria names and 5 marks each are from memory of the Language and Literature guide (first assessment 2021); no English subject guide is in the Drive folder. The 2 h 15 min HL timing was confirmed in published exam-format summaries. -->
+
+<h2>Your scores</h2>
+<p class="muted">Leave a row empty if you did not sit that paper; it then does not count in the total.</p>
+<div class="tablewrap"><table class="score-t"><tr><th>Item</th><th>Marks gained</th><th>Out of</th></tr>
+<tr data-item="chem-quiz1"><td>Chemistry Quiz 1 Paper 2 HL</td><td><input class="sc" type="number" min="0" max="12" step="1" inputmode="numeric" aria-label="marks gained, Chemistry Quiz 1 Paper 2 HL"></td><td><span class="mx" data-max="12">12</span></td></tr>
+<tr data-item="chem-fa1-1a"><td>FA1 Paper 1A (multiple choice)</td><td><input class="sc" type="number" min="0" max="20" step="1" inputmode="numeric" aria-label="marks gained, FA1 Paper 1A (multiple choice)"></td><td><span class="mx" data-max="20">20</span></td></tr>
+<tr data-item="chem-fa1-1b"><td>FA1 Paper 1B</td><td><input class="sc" type="number" min="0" max="10" step="1" inputmode="numeric" aria-label="marks gained, FA1 Paper 1B"></td><td><span class="mx" data-max="10">10</span></td></tr>
+<tr data-item="chem-fa1-p2"><td>FA1 Paper 2 (if you had the questions)</td><td><input class="sc" type="number" min="0" max="29" step="1" inputmode="numeric" aria-label="marks gained, FA1 Paper 2 (if you had the questions)"></td><td><input class="mx" type="number" min="1" step="1" value="29" aria-label="maximum marks for FA1 Paper 2 (if you had the questions)"></td></tr>
+<tr data-item="bio-combined"><td>Biology combined paper HL</td><td><input class="sc" type="number" min="0" max="30" step="1" inputmode="numeric" aria-label="marks gained, Biology combined paper HL"></td><td><span class="mx" data-max="30">30</span></td></tr>
+<tr data-item="eng-p1"><td>English Paper 1 analysis (teacher or self mark)</td><td><input class="sc" type="number" min="0" max="20" step="1" inputmode="numeric" aria-label="marks gained, English Paper 1 analysis (teacher or self mark)"></td><td><span class="mx" data-max="20">20</span></td></tr></table></div><p><button class="btn" id="savebtn">Save score</button></p><p class="saved" id="saved"></p>
+
+<h2>Error log</h2>
+<div class="step"><div class="bh"><b>Error log</b><span>about 10 min</span></div><ol>
+<li>Open the <a href="https://docs.google.com/spreadsheets/d/14eB8zIWZMuldcvLXTYNA4Q77jad3siDgHOK3mMrUCX8/edit">study sheet</a>, <b>Error log</b> tab.</li>
+<li>Write one row for every mark you lost: the date, the subject, the question (for example "FA1 Paper 1A Q11"), what went wrong, and the rule that fixes it.</li>
+<li>Say what kind of mistake it was: <b>did not know it</b> (go back to the guide or handout), <b>wrong method</b>, <b>careless slip</b> (copying, signs, units) or <b>ran out of time</b>. Four careless slips in one set is a pattern worth a rule of its own.</li>
+<li>Timing: write down which question you were on when the timer ended. If you finished in extra time, how many minutes did it take? Speed problems and knowledge problems need different fixes.</li>
+<li>Add the papers to the Error log by subject. Then pick the three topics where you lost most marks today: they go first in next week&apos;s plan.</li></ol></div>
+
+<h2>Not timed: Extended Essay</h2>
+<div class="step"><div class="bh"><b>Meeting</b><span>agree the research question</span></div><ol>
+<li>Take the three research questions from Saturday 14 November to your supervisor.</li>
+<li>Ask: which is the most focused? Does it fit the subject&apos;s EE requirements? Is 4,000 words enough, or too much? What should you read or do first?</li>
+<li>Write the agreed question and the next steps in a document in your <a href="https://drive.google.com/drive/folders/1IrGGlBxw5M16BDi4OFg60SbLcaYl1Zd0">EE folder</a> straight after the meeting.</li></ol></div>
+<p>Also on the study site: <a href="../flashcards.html">flashcards</a>, <a href="../exam-chemistry-hl.html">exam technique for Chemistry HL</a>, <a href="../exam.html">exam technique</a> and your <a href="../progress.html">progress page</a>.</p>
+
+</main>
+<script>(function(){
+  var PAGE="2026-11-21";
+  var store=true; try{localStorage.setItem("_t","1");localStorage.removeItem("_t");}catch(e){store=false;}
+  function load(k){ if(!store) return null; try{ return JSON.parse(localStorage.getItem(k)); }catch(e){ return null; } }
+  function save(k,v){ if(!store) return; try{ localStorage.setItem(k,JSON.stringify(v)); }catch(e){} }
+  function pad(n){ return (n<10?"0":"")+n; }
+  function fmt(ms){ var s=Math.ceil(Math.max(ms,0)/1000); return pad(Math.floor(s/60))+":"+pad(s%60); }
+  var ac=null;
+  function unlock(){ try{ if(!ac){ var C=window.AudioContext||window.webkitAudioContext; if(C) ac=new C(); } if(ac&&ac.state==="suspended") ac.resume(); }catch(e){} }
+  function beep(){ if(!ac) return; try{ var t0=ac.currentTime+0.05; for(var i=0;i<3;i++){ var o=ac.createOscillator(), g=ac.createGain(); o.frequency.value=880; o.connect(g); g.connect(ac.destination); var t=t0+i*0.5; g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(0.3,t+0.02); g.gain.exponentialRampToValueAtTime(0.0001,t+0.35); o.start(t); o.stop(t+0.4); } }catch(e){} }
+  var timers=[]; var baseTitle=document.title;
+  // The timer stores the moment it was started (Date.now()), never a tick count,
+  // so it stays correct when the phone screen sleeps or the page is reloaded.
+  document.querySelectorAll(".timer").forEach(function(el){
+    var t={el:el, dur:parseInt(el.getAttribute("data-sec"),10)*1000, key:"ib-timer-"+PAGE+"-"+el.getAttribute("data-id"),
+      st:{start:null, used:0, alerted:false},
+      disp:el.querySelector(".tdisp"), stat:el.querySelector(".tstat"),
+      bStart:el.querySelector(".tstart"), bPause:el.querySelector(".tpause"), bReset:el.querySelector(".treset")};
+    var s=load(t.key); if(s && typeof s.used==="number") t.st=s;
+    t.bStart.addEventListener("click",function(){ unlock(); if(t.st.start) return; t.st.start=Date.now(); save(t.key,t.st); render(t); });
+    t.bPause.addEventListener("click",function(){ if(!t.st.start) return; t.st.used+=Date.now()-t.st.start; t.st.start=null; save(t.key,t.st); render(t); });
+    t.bReset.addEventListener("click",function(){ t.st={start:null, used:0, alerted:false}; save(t.key,t.st); render(t); });
+    timers.push(t);
+  });
+  function used(t){ return t.st.used+(t.st.start?Date.now()-t.st.start:0); }
+  function render(t){
+    var r=t.dur-used(t), running=!!t.st.start;
+    t.bStart.disabled=running; t.bPause.disabled=!running;
+    t.bStart.textContent=(t.st.used>0&&!running&&r>0)?"Resume":"Start";
+    if(r>0){
+      t.el.classList.remove("up"); t.el.classList.toggle("low", r<=300000);
+      t.disp.textContent=fmt(r);
+      if(running){ var end=new Date(Date.now()+r); t.stat.textContent="Running. Ends at "+pad(end.getHours())+":"+pad(end.getMinutes())+"."; }
+      else t.stat.textContent=t.st.used>0?"Paused.":"Ready. Press Start when you turn the paper over.";
+    } else {
+      t.el.classList.remove("low"); t.el.classList.add("up"); t.disp.textContent="00:00";
+      t.stat.textContent="Time is up. Pens down."+(running?" Over by "+fmt(-r)+".":"");
+      if(!t.st.alerted){ t.st.alerted=true; save(t.key,t.st); beep(); try{ if(navigator.vibrate) navigator.vibrate([400,200,400]); }catch(e){} }
+    }
+  }
+  function all(){ var up=false; timers.forEach(function(t){ render(t); if(t.st.start && used(t)>=t.dur) up=true; }); document.title=(up?"Time is up | ":"")+baseTitle; }
+  all(); setInterval(all,250);
+  document.addEventListener("visibilitychange",all); window.addEventListener("focus",all); window.addEventListener("pageshow",all);
+
+  // score entry: one row per item; total saved as {score, max, date, items}
+  var KEY="ib-timed-"+PAGE, rows=document.querySelectorAll(".score-t tr[data-item]"), out=document.getElementById("saved");
+  function maxOf(r){ var m=r.querySelector(".mx"); return parseFloat(m.tagName==="INPUT"?m.value:m.getAttribute("data-max")); }
+  function today(){ var d=new Date(); return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate()); }
+  function show(rec){ out.textContent=rec?("Saved on this device: "+rec.score+" / "+rec.max+" ("+Math.round(100*rec.score/rec.max)+"%), "+rec.date+"."):"Nothing saved yet. Rows you leave empty do not count."; }
+  function saveScore(){
+    var items={}, sc=0, mx=0, any=false;
+    rows.forEach(function(r){ var v=r.querySelector(".sc").value, m=maxOf(r);
+      if(v!=="" && !isNaN(parseFloat(v)) && m>0){ var x=Math.min(Math.max(parseFloat(v),0),m); if(x!==parseFloat(v)) r.querySelector(".sc").value=x; items[r.getAttribute("data-item")]={s:x,m:m}; sc+=x; mx+=m; any=true; } });
+    if(!any){ if(store){ try{ localStorage.removeItem(KEY); }catch(e){} } show(null); return; }
+    var rec={score:sc, max:mx, date:today(), items:items}; save(KEY,rec); show(rec);
+  }
+  var rec=load(KEY);
+  if(rec && rec.items){ rows.forEach(function(r){ var it=rec.items[r.getAttribute("data-item")]; if(it){ r.querySelector(".sc").value=it.s; var m=r.querySelector(".mx"); if(m.tagName==="INPUT") m.value=it.m; } }); }
+  show(rec && rec.items ? rec : null);
+  rows.forEach(function(r){ r.querySelectorAll("input").forEach(function(i){ i.addEventListener("change",saveScore); }); });
+  document.getElementById("savebtn").addEventListener("click",saveScore);
+  if(!store) out.textContent="This browser is not letting the page save (private mode?). Write your score on paper.";
+})();</script>
+</body>
+</html>

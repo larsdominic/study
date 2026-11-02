@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Timed set: Chemistry titration (Sat 14 Nov 2026)</title>
+<style>
+  :root{--paper:#F5F7F4;--ink:#1E2A33;--ink-soft:#4A5862;--rule:#D6DCD8;--indigo:#2F47A6;--indigo-soft:#E6EAF7;--amber:#B8761A;--amber-soft:#FBF1DF;--green:#2E7D4F;--green-soft:#E3F2E8;--red:#B23A3A;--red-soft:#F8E4E4;--grey:#8A949B;--card:#FFFFFF}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;overflow-wrap:break-word}
+  h1,h2,h3{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;line-height:1.2;margin:0 0 .4em;font-weight:600}
+  h1{font-size:2.1rem} h2{font-size:1.5rem;margin-top:1.6em} h3{font-size:1.15rem;margin-top:1.4em}
+  p{margin:0 0 1em} a{color:var(--indigo)}
+  sup,sub{line-height:0}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
+  .top{background:#0B0F1A;color:#fff;padding:26px 0 22px}
+  .top h1{color:#fff} .top p{color:#C9D1E6;max-width:660px;margin-bottom:0}
+  .top .crumb{font-size:.9rem;margin-bottom:8px} .top .crumb a{color:#F2C46D}
+  table{border-collapse:collapse;width:100%;margin:12px 0 20px;font-size:.95rem;background:var(--card)}
+  th,td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#EDF0EC}
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .card{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:12px 0}
+  .tip{background:var(--amber-soft);border-left:5px solid var(--amber);padding:12px 16px;margin:18px 0}
+  .tip b:first-child{color:var(--amber)}
+  .step{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);padding:12px 16px;margin:12px 0}
+  .step .bh{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-bottom:4px}
+  .step .bh b{font-size:1.15rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+  .step .bh span{font-weight:700;color:var(--indigo)}
+  .step ol{margin:6px 0 0;padding-left:22px} .step li{margin:4px 0}
+  .t{color:var(--ink-soft);font-size:.88rem;white-space:nowrap}
+  .tag{display:inline-block;font-size:.72rem;font-weight:700;padding:1px 7px;border-radius:3px;color:#fff;vertical-align:middle;white-space:nowrap}
+  .quiz .q{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:12px 0}
+  .quiz .q > p{font-weight:600;margin-bottom:8px}
+  .quiz .subj{display:inline-block;font-size:.75rem;font-weight:700;color:var(--indigo);background:var(--indigo-soft);padding:1px 7px;border-radius:3px;margin-right:6px;vertical-align:middle}
+  .quiz button{display:block;width:100%;text-align:left;background:#F3F5F2;border:1px solid var(--rule);padding:8px 12px;margin:6px 0;border-radius:6px;font:inherit;cursor:pointer;color:var(--ink)}
+  .quiz button:hover,.quiz button:focus-visible{border-color:var(--indigo);outline:none}
+  .quiz button.right{background:var(--green-soft);border-color:var(--green)}
+  .quiz button.wrong{background:var(--red-soft);border-color:var(--red)}
+  .quiz .why{display:none;margin-top:8px;font-size:.95rem;color:var(--ink-soft)}
+  .quiz .q.done .why{display:block}
+  .score{font-weight:700;margin-top:14px}
+  .frac{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;font-size:.92em;line-height:1.15;margin:0 2px}
+  .frac>span:first-child{border-bottom:1px solid currentColor;padding:0 3px}
+  .frac>span:last-child{padding:0 3px}
+  .nw{white-space:nowrap}
+  @media (max-width:600px){h1{font-size:1.7rem}body{font-size:16px}th,td{padding:6px}}
+
+  .timer{background:var(--card);border:1px solid var(--rule);border-top:6px solid var(--indigo);padding:16px;margin:16px 0;text-align:center}
+  .timer .tlabel{font-weight:700;margin-bottom:2px}
+  .timer .tdisp{font:700 4.2rem/1.1 "SF Mono",Menlo,Consolas,monospace;letter-spacing:.02em;margin:6px 0;color:var(--ink);font-variant-numeric:tabular-nums}
+  .timer .tstat{color:var(--ink-soft);font-size:.95rem;min-height:1.5em}
+  .timer .tbtns{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:10px}
+  .timer button,.btn{font:inherit;font-weight:700;padding:10px 20px;border-radius:6px;border:1px solid var(--indigo);background:var(--indigo);color:#fff;cursor:pointer;min-width:96px}
+  .timer button.sec,.btn.sec{background:#fff;color:var(--indigo)}
+  .timer button:disabled{opacity:.4;cursor:default}
+  .timer.low{border-top-color:var(--amber)} .timer.low .tdisp{color:var(--amber)}
+  .timer.up{border-top-color:var(--red);background:var(--red-soft)} .timer.up .tdisp{color:var(--red)} .timer.up .tstat{color:var(--red);font-weight:700}
+  details{background:var(--card);border:1px solid var(--rule);padding:10px 14px;margin:10px 0}
+  summary{cursor:pointer;font-weight:600} details[open] summary{margin-bottom:8px}
+  .score-t input{font:inherit;width:4.6em;padding:4px 6px;border:1px solid var(--grey);border-radius:4px}
+  .score-t td{vertical-align:middle}
+  .saved{font-weight:700;margin:6px 0 0}
+  .miss{background:var(--red-soft);border-left:5px solid var(--red);padding:12px 16px;margin:14px 0}
+  .ok{background:var(--green-soft);border-left:5px solid var(--green);padding:12px 16px;margin:14px 0}
+  .card ul,.card ol{margin:4px 0;padding-left:22px} .card li{margin:4px 0}
+  .muted{color:var(--ink-soft);font-size:.92rem}
+  @media (max-width:600px){.timer .tdisp{font-size:3.4rem}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap" style="padding-bottom:0">
+  <div class="crumb"><a href="../index.html">All days</a></div>
+  <h1>Timed set: Chemistry titration and back titration</h1>
+  <p>Saturday 14 November 2026. Two timed chemistry sets (a back titration question and the water of crystallisation worksheet with practice data), each marked straight afterwards. Then two untimed tasks: an English learner portfolio entry and choosing your Extended Essay subject.</p>
+</div></header>
+<main class="wrap">
+
+<h2>Before you start</h2>
+<div class="card"><ul>
+<li><b>Paper and pen</b>, a ruler, and one sheet of graph or squared paper (for the graph in set B).</li>
+<li><b>Calculator: yes.</b> Both IB chemistry papers allow one.</li>
+<li><b>Data booklet:</b> use your school copy of the IB chemistry data booklet (it is not in the Drive folder). If you do not have it, these are the relative atomic masses you need today, to two decimal places as in the booklet: H 1.01, C 12.01, O 16.00, S 32.07, Ca 40.08, Cu 63.55.</li>
+<li><b>Open:</b> the <a href="https://drive.google.com/file/d/13LgqwVvlh2mMyONXTCfLCQFK6YHub8IF/view">back titration concept check</a> and the <a href="https://drive.google.com/file/d/19665yTxY6MkADedj2PvO-o0JKmE_yQeF/view">water of crystallisation worksheet</a>. Keep the <a href="https://drive.google.com/file/d/1DPChl8qQvp6OeEuFGL0LN2AwUlt0BFOd/view">answers</a> closed until the first timer ends.</li>
+<li><b>How long:</b> set A 18 min 20 s, set B 45 min, plus about 25 minutes for marking and the Error log. About 1.5 hours with a short break. The English and EE tasks at the bottom are not timed.</li>
+<li>The timers work offline and keep the right time if the phone screen locks.</li>
+</ul></div>
+<p class="muted">Revise first if you need to: R2.1 <a href="https://drive.google.com/file/d/1TAYUtJuBRPfFFDx83it0Xl14lGn-sx-4/view">stoichiometry handout</a> and the <a href="https://drive.google.com/file/d/1x2mKoF4Nj0YWStNWQd6kwp6dzr8y8KoV/view">standard solutions slides</a> (titration calculations).</p>
+
+<h2>Set A: back titration concept check</h2>
+<div class="timer" data-id="chem-bt" data-sec="1100"><div class="tlabel">Set A: back titration, 11 marks</div><div class="tdisp" aria-live="off">18:20</div><div class="tstat">Ready.</div><div class="tbtns"><button class="tstart">Start</button><button class="tpause sec">Pause</button><button class="treset sec">Reset</button></div></div><p class="muted">Why 18 min 20 s: HL Paper 2 gives 150 minutes for 90 marks, which is 100 seconds a mark. 11 marks × 100 s = 1100 s.</p>
+<p>Open the <a href="https://drive.google.com/file/d/13LgqwVvlh2mMyONXTCfLCQFK6YHub8IF/view">back titration concept check</a> and answer every part, (a) to (g), 11 marks. It is one question about eggshell: excess hydrochloric acid reacts with the calcium carbonate, and the acid left over is titrated with sodium hydroxide. Show every step with units; the marks are for the working.</p>
+<div class="tip"><b>The idea in one line.</b> acid reacted with the solid = acid added − acid left over (found by the titration). Then use the equation ratio to get from moles of HCl to moles of CaCO<sub>3</sub>.</div>
+
+<h3>Mark set A</h3>
+<div class="step"><div class="bh"><b>Marking</b><span>about 8 min</span></div><ol>
+<li>Open the <a href="https://drive.google.com/file/d/1DPChl8qQvp6OeEuFGL0LN2AwUlt0BFOd/view">answers</a>. They are written like a mark scheme: [1] next to each mark point, and the notes in italics say what else is accepted.</li>
+<li>Note the rules it uses: forgetting to divide cm<sup>3</sup> by 1000 is penalised only once in (a) and (b); in (d) one mark is for the right formulas and one for balancing; in (f) the percentage can be anything from 79.8% to 81.5%.</li>
+<li>I recalculated every number in the answers and they are right: 5.44 × 10<sup>−3</sup>, 2.38 × 10<sup>−3</sup>, 3.06 × 10<sup>−3</sup> and 1.53 × 10<sup>−3</sup> mol; 0.153 g; 81.4% or 81.5% (depending on whether you round the mass first).</li></ol></div>
+
+<h2>Set B: water of crystallisation worksheet</h2>
+<div class="timer" data-id="chem-woc" data-sec="2700"><div class="tlabel">Set B: water of crystallisation, 45 min</div><div class="tdisp" aria-live="off">45:00</div><div class="tstat">Ready.</div><div class="tbtns"><button class="tstart">Start</button><button class="tpause sec">Pause</button><button class="treset sec">Reset</button></div></div><p class="muted">This one is not an exam paper, so it has no marks to convert. 45 minutes: about 25 for the write-up sections and 20 for the calculations.</p>
+<p>The <a href="https://drive.google.com/file/d/19665yTxY6MkADedj2PvO-o0JKmE_yQeF/view">worksheet</a> is not a question sheet: it is the write-up template for the practical where you heat hydrated copper(II) sulfate, CuSO<sub>4</sub>·xH<sub>2</sub>O, to find x. It has headings (research question, background, method, risk assessment, results tables, graph, conclusion) but no numbers and no answer sheet. So the timed task is:</p>
+<ol>
+<li><b>About 25 min:</b> write the <b>Background</b>, the <b>Method</b> (with variables, how you know dehydration is complete, repeats) and the <b>risk assessment</b> table, in note form, following the prompts in the worksheet.</li>
+<li><b>About 20 min:</b> process the practice data below with <b>Method A</b> (x for each trial, then a mean) and <b>Method B</b> (a graph of moles of water against moles of CuSO<sub>4</sub>; the gradient is x). Then answer the research question: how close is your x to the accepted value of 5, and why is it different?</li>
+</ol>
+<p>If you did this practical in class, use your own results for part 2 instead.</p>
+<h3>Practice data (made up for this exercise, not real results)</h3>
+<div class="tablewrap"><table>
+<tr><th>Trial</th><th>Crucible + lid / g ± 0.01</th><th>Crucible + lid + hydrated salt / g ± 0.01</th><th>Crucible + lid + residue after heating / g ± 0.01</th></tr>
+<tr><td>1</td><td>24.53</td><td>25.55</td><td>25.21</td></tr><tr><td>2</td><td>25.10</td><td>26.61</td><td>26.10</td></tr><tr><td>3</td><td>24.87</td><td>26.91</td><td>26.22</td></tr><tr><td>4</td><td>25.34</td><td>27.83</td><td>26.99</td></tr><tr><td>5</td><td>24.96</td><td>27.97</td><td>26.95</td></tr></table></div>
+<p class="muted">Two small slips in the worksheet, so they do not confuse you: the "Choose your data-analysis approach" box says "hydrated cobalt(II) chloride", but everything else in the worksheet is about copper(II) sulfate; and the results table row "Mass of hydrated CuSO4.H2O" means CuSO<sub>4</sub>·xH<sub>2</sub>O.</p>
+
+<h3>Mark set B</h3>
+<p>There is no answer sheet in the folder, so here is my own worked key. Every number was calculated in Python and checked by hand. Mark yourself with the 10-point checklist at the end of the key.</p>
+<details><summary>Worked answer key: water of crystallisation (open after the timer)</summary>
+<p><b>Values used:</b> relative atomic masses to two decimal places as in the IB data booklet: Cu 63.55, S 32.07, O 16.00, H 1.01.</p>
+<ul>
+<li><span class="nw">M(CuSO<sub>4</sub>)</span> = <span class="nw">63.55 + 32.07</span> <span class="nw">+ 4 × 16.00</span> = <span class="nw">159.62 g mol<sup>−1</sup></span></li>
+<li><span class="nw">M(H<sub>2</sub>O)</span> = <span class="nw">2 × 1.01 + 16.00</span> = <span class="nw">18.02 g mol<sup>−1</sup></span></li>
+<li>If x = 5: <span class="nw">M(CuSO<sub>4</sub>·5H<sub>2</sub>O)</span> = <span class="nw">159.62 + 5 × 18.02</span> = <span class="nw">249.72 g mol<sup>−1</sup></span>, so water is <span class="nw">90.10 ÷ 249.72 = 36.08%</span> of the mass.</li>
+<li>Equation: <span class="nw">CuSO<sub>4</sub>·5H<sub>2</sub>O(s) →</span> <span class="nw">CuSO<sub>4</sub>(s) + 5H<sub>2</sub>O(g)</span>. Blue crystals turn to a white powder.</li>
+</ul>
+<p><b>Method A, trial 1 step by step:</b></p>
+<ol>
+<li>mass of hydrated salt = 25.55 − 24.53 = 1.02 g</li>
+<li>mass of anhydrous CuSO<sub>4</sub> = 25.21 − 24.53 = 0.68 g</li>
+<li>mass of water lost = 25.55 − 25.21 = 0.34 g</li>
+<li>n(CuSO<sub>4</sub>) = 0.68 ÷ 159.62 = 0.00426 mol; n(H<sub>2</sub>O) = 0.34 ÷ 18.02 = 0.0189 mol</li>
+<li>x = n(H<sub>2</sub>O) ÷ n(CuSO<sub>4</sub>) = 0.0189 ÷ 0.00426 = 4.43 (from the unrounded moles; dividing the rounded ones gives 4.44, also fine)</li>
+</ol>
+<div class="tablewrap"><table>
+<tr><th>Trial</th><th>Hydrated / g</th><th>Anhydrous / g</th><th>Water / g</th><th>n(CuSO<sub>4</sub>) / mol</th><th>n(H<sub>2</sub>O) / mol</th><th>x</th><th>% uncertainty in x</th></tr>
+<tr><td>1</td><td>1.02</td><td>0.68</td><td>0.34</td><td>0.00426</td><td>0.0189</td><td>4.43</td><td>8.8%</td></tr><tr><td>2</td><td>1.51</td><td>1.00</td><td>0.51</td><td>0.00626</td><td>0.0283</td><td>4.52</td><td>5.9%</td></tr><tr><td>3</td><td>2.04</td><td>1.35</td><td>0.69</td><td>0.00846</td><td>0.0383</td><td>4.53</td><td>4.4%</td></tr><tr><td>4</td><td>2.49</td><td>1.65</td><td>0.84</td><td>0.0103</td><td>0.0466</td><td>4.51</td><td>3.6%</td></tr><tr><td>5</td><td>3.01</td><td>1.99</td><td>1.02</td><td>0.0125</td><td>0.0566</td><td>4.54</td><td>3.0%</td></tr></table></div>
+<ul>
+<li><b>Mean x = 4.50</b> (4.51 if you average the rounded values; either is fine). Two or three significant figures are justified, because the smallest masses have only two.</li>
+<li><b>Uncertainty:</b> each mass is a difference of two readings, so ±0.02 g. % uncertainty in x = % uncertainty in the water mass + % uncertainty in the anhydrous mass. Trial 1: <span class="nw">0.02 ÷ 0.34 = 5.9%</span> plus <span class="nw">0.02 ÷ 0.68 = 2.9%</span>, so 8.8%. The bigger samples (trial 5, 3.0%) are more precise.</li>
+<li><b>Percentage error</b> of the mean: <span class="nw">(4.50 − 5) ÷ 5 × 100 = −9.9%</span>, about −10%.</li>
+<li><b>Method B:</b> plot n(H<sub>2</sub>O) (y) against n(CuSO<sub>4</sub>) (x). The best-fit line has a gradient of about 4.6 (4.58 by least squares) and passes very close to the origin (intercept −0.0005 mol). Gradient = moles of water per mole of CuSO<sub>4</sub> = x. Accept 4.4 to 4.7 from a hand-drawn line. (The worksheet mentions a "mass fraction": if you plot mass of water against mass of CuSO<sub>4</sub> instead, the gradient is 0.517, and x = 0.517 × 159.62 ÷ 18.02 = 4.58, the same answer.)</li>
+<li><b>Conclusion:</b> x ≈ 4.5, about 10% below the literature value of 5. The error (10%) is larger than the random uncertainty (3% to 9%), so random error cannot explain it: there is a systematic error.</li>
+<li><b>Most likely cause:</b> incomplete dehydration. Water left in the residue makes the residue too heavy and the water lost too small, so x comes out too low. Fix: heat, cool and weigh again until two masses agree within 0.01 g (heating to constant mass).</li>
+<li><b>Other errors and their direction:</b> the anhydrous salt absorbing water from the air while it cools makes x too low (cool it in a desiccator, with the lid on); solid spitting out of the crucible makes x too high (lid partly on, heat gently at first); heating far too strongly can decompose CuSO<sub>4</sub> further (the residue goes grey or black), which also makes x too high.</li>
+</ul>
+<p><b>Background should cover:</b> what water of crystallisation is; the formula CuSO<sub>4</sub>·xH<sub>2</sub>O and that x is a whole number of water molecules per formula unit; the dehydration equation and colour change; the assumption that all mass lost is water and the residue is pure anhydrous CuSO<sub>4</sub>; how x = n(H<sub>2</sub>O) ÷ n(CuSO<sub>4</sub>).</p>
+<p><b>Method should cover:</b> independent variable (initial mass of hydrated salt, for Method B), dependent variable (mass lost), controls (same balance, same crucible and lid, same heating method); weigh the empty crucible and lid, add salt, weigh, heat gently then strongly, cool in a desiccator, weigh, repeat to constant mass; at least five trials. Risk table: copper(II) sulfate is harmful if swallowed and irritates eyes and skin (goggles, wash hands); hot crucible (tongs, let it cool); copper compounds are toxic to aquatic life, so collect the residue for disposal and do not pour it down the sink.</p>
+<p><b>Self-check, 1 point each (10 in total):</b> (1) balanced equation; (2) both molar masses right; (3) masses of water and anhydrous salt for all five trials; (4) moles for all five trials; (5) x for each trial between 4.4 and 4.6; (6) a mean of about 4.5 with sensible significant figures; (7) a graph with labelled axes and a gradient of 4.4 to 4.7; (8) percentage error about −10%; (9) incomplete dehydration named as the main cause, with the direction (x too low); (10) one realistic improvement (heat to constant mass, or cool in a desiccator).</p>
+</details>
+
+<h2>Your score</h2>
+<div class="tablewrap"><table class="score-t"><tr><th>Item</th><th>Marks gained</th><th>Out of</th></tr>
+<tr data-item="backtitration"><td>Set A: back titration concept check</td><td><input class="sc" type="number" min="0" max="11" step="1" inputmode="numeric" aria-label="marks gained, Set A: back titration concept check"></td><td><span class="mx" data-max="11">11</span></td></tr>
+<tr data-item="woc"><td>Set B: water of crystallisation (self-check points)</td><td><input class="sc" type="number" min="0" max="10" step="1" inputmode="numeric" aria-label="marks gained, Set B: water of crystallisation (self-check points)"></td><td><span class="mx" data-max="10">10</span></td></tr></table></div><p><button class="btn" id="savebtn">Save score</button></p><p class="saved" id="saved"></p>
+
+<h2>Error log</h2>
+<div class="step"><div class="bh"><b>Error log</b><span>about 10 min</span></div><ol>
+<li>Open the <a href="https://docs.google.com/spreadsheets/d/14eB8zIWZMuldcvLXTYNA4Q77jad3siDgHOK3mMrUCX8/edit">study sheet</a>, <b>Error log</b> tab.</li>
+<li>Write one row for every mark you lost: the date, the subject, the question (for example "Back titration (e)"), what went wrong, and the rule that fixes it.</li>
+<li>Say what kind of mistake it was: <b>did not know it</b> (go back to the guide or handout), <b>wrong method</b>, <b>careless slip</b> (copying, signs, units) or <b>ran out of time</b>. Four careless slips in one set is a pattern worth a rule of its own.</li>
+<li>Timing: write down which question you were on when the timer ended. If you finished in extra time, how many minutes did it take? Speed problems and knowledge problems need different fixes.</li>
+<li>For set B, log any step of the calculation you could not do without the key, and any section of the write-up you left empty.</li></ol></div>
+
+<h2>Not timed: English learner portfolio entry</h2>
+<div class="step"><div class="bh"><b>About 35 min</b><span>100 Photographs That Changed the World</span></div><ol>
+<li>Open the <a href="https://docs.google.com/document/d/1cyauXBdiIVs5cH8AI-b4MTVe2_RpGEXIDfkCsrlo8Kk/edit">learner portfolio entry instructions</a>.</li>
+<li>Put in the entry: the photograph your group worked on (image, or a description if you cannot attach it), your original caption, the global issue with a one-sentence explanation of the connection, and the real historical caption.</li>
+<li>Write the reflection, 150 to 250 words: what changed between your caption and the real one, and what that shows about how word choice and framing shape meaning; which global issue field it fits (culture, identity and community; politics, power and justice; art, creativity and imagination; science, technology and environment; beliefs, values and education); and whether it could help your Individual Oral.</li>
+<li>Tag it: Non-literary texts, Global Issues, Framing &amp; Perspective. Keep the focus on language choices and meaning, not a summary of the lesson.</li>
+<li>If you missed the lesson where groups chose photographs, ask the English teacher which photograph to use.</li></ol></div>
+
+<h2>Not timed: Extended Essay, subject and three research questions</h2>
+<div class="step"><div class="bh"><b>About 30 min</b><span>EE planning</span></div><ol>
+<li>Choose the EE subject. Most students pick a subject they take and enjoy, ideally one where they already know how to find sources or collect data. Write two sentences on why.</li>
+<li>Write three candidate research questions in that subject. A good one is a real question (not "describe ..."), narrow enough for 4,000 words, and answerable with sources or data you can actually get.</li>
+<li>Test each: Is it focused? Can it be argued, with more than one possible answer? Can you name two sources or a data method for it today? Is it safe and ethical? Cross out or rewrite any that fail.</li>
+<li>Save the three questions in your <a href="https://drive.google.com/drive/folders/1IrGGlBxw5M16BDi4OFg60SbLcaYl1Zd0">EE folder</a> on Drive (it is empty now). You will agree one with your supervisor on Saturday 21 November.</li></ol></div>
+<p>Also on the study site: the <a href="../guides/2026-11-03-chemistry-s1.1-s1.3.html">chemistry guide for S1.1 to S1.3</a>, <a href="../flashcards.html">flashcards</a>, <a href="../exam-chemistry-hl.html">exam technique for Chemistry HL</a> and your <a href="../progress.html">progress page</a>.</p>
+
+</main>
+<script>(function(){
+  var PAGE="2026-11-14";
+  var store=true; try{localStorage.setItem("_t","1");localStorage.removeItem("_t");}catch(e){store=false;}
+  function load(k){ if(!store) return null; try{ return JSON.parse(localStorage.getItem(k)); }catch(e){ return null; } }
+  function save(k,v){ if(!store) return; try{ localStorage.setItem(k,JSON.stringify(v)); }catch(e){} }
+  function pad(n){ return (n<10?"0":"")+n; }
+  function fmt(ms){ var s=Math.ceil(Math.max(ms,0)/1000); return pad(Math.floor(s/60))+":"+pad(s%60); }
+  var ac=null;
+  function unlock(){ try{ if(!ac){ var C=window.AudioContext||window.webkitAudioContext; if(C) ac=new C(); } if(ac&&ac.state==="suspended") ac.resume(); }catch(e){} }
+  function beep(){ if(!ac) return; try{ var t0=ac.currentTime+0.05; for(var i=0;i<3;i++){ var o=ac.createOscillator(), g=ac.createGain(); o.frequency.value=880; o.connect(g); g.connect(ac.destination); var t=t0+i*0.5; g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(0.3,t+0.02); g.gain.exponentialRampToValueAtTime(0.0001,t+0.35); o.start(t); o.stop(t+0.4); } }catch(e){} }
+  var timers=[]; var baseTitle=document.title;
+  // The timer stores the moment it was started (Date.now()), never a tick count,
+  // so it stays correct when the phone screen sleeps or the page is reloaded.
+  document.querySelectorAll(".timer").forEach(function(el){
+    var t={el:el, dur:parseInt(el.getAttribute("data-sec"),10)*1000, key:"ib-timer-"+PAGE+"-"+el.getAttribute("data-id"),
+      st:{start:null, used:0, alerted:false},
+      disp:el.querySelector(".tdisp"), stat:el.querySelector(".tstat"),
+      bStart:el.querySelector(".tstart"), bPause:el.querySelector(".tpause"), bReset:el.querySelector(".treset")};
+    var s=load(t.key); if(s && typeof s.used==="number") t.st=s;
+    t.bStart.addEventListener("click",function(){ unlock(); if(t.st.start) return; t.st.start=Date.now(); save(t.key,t.st); render(t); });
+    t.bPause.addEventListener("click",function(){ if(!t.st.start) return; t.st.used+=Date.now()-t.st.start; t.st.start=null; save(t.key,t.st); render(t); });
+    t.bReset.addEventListener("click",function(){ t.st={start:null, used:0, alerted:false}; save(t.key,t.st); render(t); });
+    timers.push(t);
+  });
+  function used(t){ return t.st.used+(t.st.start?Date.now()-t.st.start:0); }
+  function render(t){
+    var r=t.dur-used(t), running=!!t.st.start;
+    t.bStart.disabled=running; t.bPause.disabled=!running;
+    t.bStart.textContent=(t.st.used>0&&!running&&r>0)?"Resume":"Start";
+    if(r>0){
+      t.el.classList.remove("up"); t.el.classList.toggle("low", r<=300000);
+      t.disp.textContent=fmt(r);
+      if(running){ var end=new Date(Date.now()+r); t.stat.textContent="Running. Ends at "+pad(end.getHours())+":"+pad(end.getMinutes())+"."; }
+      else t.stat.textContent=t.st.used>0?"Paused.":"Ready. Press Start when you turn the paper over.";
+    } else {
+      t.el.classList.remove("low"); t.el.classList.add("up"); t.disp.textContent="00:00";
+      t.stat.textContent="Time is up. Pens down."+(running?" Over by "+fmt(-r)+".":"");
+      if(!t.st.alerted){ t.st.alerted=true; save(t.key,t.st); beep(); try{ if(navigator.vibrate) navigator.vibrate([400,200,400]); }catch(e){} }
+    }
+  }
+  function all(){ var up=false; timers.forEach(function(t){ render(t); if(t.st.start && used(t)>=t.dur) up=true; }); document.title=(up?"Time is up | ":"")+baseTitle; }
+  all(); setInterval(all,250);
+  document.addEventListener("visibilitychange",all); window.addEventListener("focus",all); window.addEventListener("pageshow",all);
+
+  // score entry: one row per item; total saved as {score, max, date, items}
+  var KEY="ib-timed-"+PAGE, rows=document.querySelectorAll(".score-t tr[data-item]"), out=document.getElementById("saved");
+  function maxOf(r){ var m=r.querySelector(".mx"); return parseFloat(m.tagName==="INPUT"?m.value:m.getAttribute("data-max")); }
+  function today(){ var d=new Date(); return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate()); }
+  function show(rec){ out.textContent=rec?("Saved on this device: "+rec.score+" / "+rec.max+" ("+Math.round(100*rec.score/rec.max)+"%), "+rec.date+"."):"Nothing saved yet. Rows you leave empty do not count."; }
+  function saveScore(){
+    var items={}, sc=0, mx=0, any=false;
+    rows.forEach(function(r){ var v=r.querySelector(".sc").value, m=maxOf(r);
+      if(v!=="" && !isNaN(parseFloat(v)) && m>0){ var x=Math.min(Math.max(parseFloat(v),0),m); if(x!==parseFloat(v)) r.querySelector(".sc").value=x; items[r.getAttribute("data-item")]={s:x,m:m}; sc+=x; mx+=m; any=true; } });
+    if(!any){ if(store){ try{ localStorage.removeItem(KEY); }catch(e){} } show(null); return; }
+    var rec={score:sc, max:mx, date:today(), items:items}; save(KEY,rec); show(rec);
+  }
+  var rec=load(KEY);
+  if(rec && rec.items){ rows.forEach(function(r){ var it=rec.items[r.getAttribute("data-item")]; if(it){ r.querySelector(".sc").value=it.s; var m=r.querySelector(".mx"); if(m.tagName==="INPUT") m.value=it.m; } }); }
+  show(rec && rec.items ? rec : null);
+  rows.forEach(function(r){ r.querySelectorAll("input").forEach(function(i){ i.addEventListener("change",saveScore); }); });
+  document.getElementById("savebtn").addEventListener("click",saveScore);
+  if(!store) out.textContent="This browser is not letting the page save (private mode?). Write your score on paper.";
+})();</script>
+</body>
+</html>

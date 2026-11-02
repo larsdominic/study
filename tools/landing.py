@@ -10,6 +10,9 @@ LINKS={
  "2026-11-06":dict(url="guides/2026-11-06-business-sl-1.1-1.6.html",label="Business Management SL Unit 1, 1.1 to 1.6",quiz="ib-quiz-guide-2026-11-06"),
  "2026-11-09":dict(url="guides/2026-11-09-chemistry-s1.4-s1.5-r2.1.html",label="Chemistry HL S1.4, S1.5 and R2.1",quiz="ib-quiz-guide-2026-11-09"),
  "2026-11-10":dict(url="guides/2026-11-10-maths-aa-sl-2.2-2.5.html",label="Maths AA SL 2.2 to 2.5 (functions)",quiz="ib-quiz-guide-2026-11-10"),
+ "2026-11-07":dict(url="practice/2026-11-07-timed-maths-sequences.html",label="Timed set: Maths sequences (no calculator)",quiz="ib-timed-2026-11-07"),
+ "2026-11-14":dict(url="practice/2026-11-14-timed-chemistry-titration.html",label="Timed set: Chemistry titration and water of crystallisation",quiz="ib-timed-2026-11-14"),
+ "2026-11-21":dict(url="practice/2026-11-21-mock-papers.html",label="Mock papers: Chemistry, Biology, English",quiz="ib-timed-2026-11-21"),
  "2026-11-08":dict(url="review/2026-11-08-week-1.html",label="Week 1 review",quiz="ib-quiz-review-2026-11-08"),
 }
 body=f'''

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Timed set: Maths sequences, no calculator (Sat 7 Nov 2026)</title>
+<style>
+  :root{--paper:#F5F7F4;--ink:#1E2A33;--ink-soft:#4A5862;--rule:#D6DCD8;--indigo:#2F47A6;--indigo-soft:#E6EAF7;--amber:#B8761A;--amber-soft:#FBF1DF;--green:#2E7D4F;--green-soft:#E3F2E8;--red:#B23A3A;--red-soft:#F8E4E4;--grey:#8A949B;--card:#FFFFFF}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;overflow-wrap:break-word}
+  h1,h2,h3{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;line-height:1.2;margin:0 0 .4em;font-weight:600}
+  h1{font-size:2.1rem} h2{font-size:1.5rem;margin-top:1.6em} h3{font-size:1.15rem;margin-top:1.4em}
+  p{margin:0 0 1em} a{color:var(--indigo)}
+  sup,sub{line-height:0}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
+  .top{background:#0B0F1A;color:#fff;padding:26px 0 22px}
+  .top h1{color:#fff} .top p{color:#C9D1E6;max-width:660px;margin-bottom:0}
+  .top .crumb{font-size:.9rem;margin-bottom:8px} .top .crumb a{color:#F2C46D}
+  table{border-collapse:collapse;width:100%;margin:12px 0 20px;font-size:.95rem;background:var(--card)}
+  th,td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#EDF0EC}
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .card{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:12px 0}
+  .tip{background:var(--amber-soft);border-left:5px solid var(--amber);padding:12px 16px;margin:18px 0}
+  .tip b:first-child{color:var(--amber)}
+  .step{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);padding:12px 16px;margin:12px 0}
+  .step .bh{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-bottom:4px}
+  .step .bh b{font-size:1.15rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+  .step .bh span{font-weight:700;color:var(--indigo)}
+  .step ol{margin:6px 0 0;padding-left:22px} .step li{margin:4px 0}
+  .t{color:var(--ink-soft);font-size:.88rem;white-space:nowrap}
+  .tag{display:inline-block;font-size:.72rem;font-weight:700;padding:1px 7px;border-radius:3px;color:#fff;vertical-align:middle;white-space:nowrap}
+  .quiz .q{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:12px 0}
+  .quiz .q > p{font-weight:600;margin-bottom:8px}
+  .quiz .subj{display:inline-block;font-size:.75rem;font-weight:700;color:var(--indigo);background:var(--indigo-soft);padding:1px 7px;border-radius:3px;margin-right:6px;vertical-align:middle}
+  .quiz button{display:block;width:100%;text-align:left;background:#F3F5F2;border:1px solid var(--rule);padding:8px 12px;margin:6px 0;border-radius:6px;font:inherit;cursor:pointer;color:var(--ink)}
+  .quiz button:hover,.quiz button:focus-visible{border-color:var(--indigo);outline:none}
+  .quiz button.right{background:var(--green-soft);border-color:var(--green)}
+  .quiz button.wrong{background:var(--red-soft);border-color:var(--red)}
+  .quiz .why{display:none;margin-top:8px;font-size:.95rem;color:var(--ink-soft)}
+  .quiz .q.done .why{display:block}
+  .score{font-weight:700;margin-top:14px}
+  .frac{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;font-size:.92em;line-height:1.15;margin:0 2px}
+  .frac>span:first-child{border-bottom:1px solid currentColor;padding:0 3px}
+  .frac>span:last-child{padding:0 3px}
+  .nw{white-space:nowrap}
+  @media (max-width:600px){h1{font-size:1.7rem}body{font-size:16px}th,td{padding:6px}}
+
+  .timer{background:var(--card);border:1px solid var(--rule);border-top:6px solid var(--indigo);padding:16px;margin:16px 0;text-align:center}
+  .timer .tlabel{font-weight:700;margin-bottom:2px}
+  .timer .tdisp{font:700 4.2rem/1.1 "SF Mono",Menlo,Consolas,monospace;letter-spacing:.02em;margin:6px 0;color:var(--ink);font-variant-numeric:tabular-nums}
+  .timer .tstat{color:var(--ink-soft);font-size:.95rem;min-height:1.5em}
+  .timer .tbtns{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:10px}
+  .timer button,.btn{font:inherit;font-weight:700;padding:10px 20px;border-radius:6px;border:1px solid var(--indigo);background:var(--indigo);color:#fff;cursor:pointer;min-width:96px}
+  .timer button.sec,.btn.sec{background:#fff;color:var(--indigo)}
+  .timer button:disabled{opacity:.4;cursor:default}
+  .timer.low{border-top-color:var(--amber)} .timer.low .tdisp{color:var(--amber)}
+  .timer.up{border-top-color:var(--red);background:var(--red-soft)} .timer.up .tdisp{color:var(--red)} .timer.up .tstat{color:var(--red);font-weight:700}
+  details{background:var(--card);border:1px solid var(--rule);padding:10px 14px;margin:10px 0}
+  summary{cursor:pointer;font-weight:600} details[open] summary{margin-bottom:8px}
+  .score-t input{font:inherit;width:4.6em;padding:4px 6px;border:1px solid var(--grey);border-radius:4px}
+  .score-t td{vertical-align:middle}
+  .saved{font-weight:700;margin:6px 0 0}
+  .miss{background:var(--red-soft);border-left:5px solid var(--red);padding:12px 16px;margin:14px 0}
+  .ok{background:var(--green-soft);border-left:5px solid var(--green);padding:12px 16px;margin:14px 0}
+  .card ul,.card ol{margin:4px 0;padding-left:22px} .card li{margin:4px 0}
+  .muted{color:var(--ink-soft);font-size:.92rem}
+  @media (max-width:600px){.timer .tdisp{font-size:3.4rem}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap" style="padding-bottom:0">
+  <div class="crumb"><a href="../index.html">All days</a></div>
+  <h1>Timed set: Maths sequences (no calculator)</h1>
+  <p>Saturday 7 November 2026. 40 minutes under exam conditions: five questions (35 marks) from your sequences pack, no calculator, then mark them with the mark scheme and log your mistakes.</p>
+</div></header>
+<main class="wrap">
+
+<h2>Before you start</h2>
+<div class="card"><ul>
+<li><b>Paper and pen</b>, plus a pencil and ruler. Write on paper, not on screen.</li>
+<li><b>No calculator.</b> Put it in another room. Maths AA Paper 1 is the no-calculator paper, and every question below can be done by hand.</li>
+<li><b>Formula booklet: yes.</b> You get it in every IB maths exam. Open the <a href="https://drive.google.com/file/d/1yofdn_7Gu3pb2O5G6iHhrXVgRUQ1Qldz/view">formula booklet</a> at the sequences page (u<sub>n</sub>, S<sub>n</sub> and S<sub>∞</sub> for arithmetic and geometric sequences are all there).</li>
+<li><b>The question paper:</b> the <a href="https://drive.google.com/file/d/1V3p4Y01JZwk-t3oGevgKyf5KzY8Kj1kf/view">sequences and series practice pack</a> (on screen or printed). Do <b>not</b> open the mark scheme until the timer has ended.</li>
+<li><b>How long:</b> 40 minutes on the timer, then about 15 minutes to mark and 10 minutes for the Error log. About 65 minutes in all.</li>
+<li>Phone on silent. You can keep this page open on the phone: the timer works offline and stays correct if the screen locks (it counts from the time you pressed Start).</li>
+</ul></div>
+
+<h2>Timer</h2>
+<div class="timer" data-id="maths" data-sec="2400"><div class="tlabel">Maths sequences, no calculator</div><div class="tdisp" aria-live="off">40:00</div><div class="tstat">Ready.</div><div class="tbtns"><button class="tstart">Start</button><button class="tpause sec">Pause</button><button class="treset sec">Reset</button></div></div><p class="muted">Why 40 minutes: Paper 1 gives 90 minutes for 80 marks, about 67.5 seconds a mark. 35 marks × 67.5 s = 2362.5 s, which is 39 min 22.5 s, rounded up to 40 minutes.</p>
+
+<h2>The questions</h2>
+<p>All from the <a href="https://drive.google.com/file/d/1V3p4Y01JZwk-t3oGevgKyf5KzY8Kj1kf/view">practice pack</a>. Work in this order. If you are stuck for more than two minutes, leave a gap and move on: that is exam technique, not giving up.</p>
+<div class="tablewrap"><table>
+<tr><th>Pack question</th><th>What it is about</th><th>Marks</th></tr>
+<tr><td>4</td><td>Find u<sub>1</sub> and d from u<sub>7</sub> = 6 and u<sub>6</sub> + u<sub>12</sub> = 24</td><td>5</td></tr>
+<tr><td>11</td><td>u<sub>10</sub> = 16 and S<sub>25</sub> = 100: find k with u<sub>k</sub> = 0</td><td>6</td></tr>
+<tr><td>16</td><td><span class="nw">S<sub>n</sub> = pn<sup>2</sup> − qn</span> with S<sub>5</sub> = 65 and S<sub>6</sub> = 96: find p, q and u<sub>6</sub></td><td>7</td></tr>
+<tr><td>20</td><td>u<sub>1</sub> = 0.6, u<sub>4</sub> = 0.15, then a probability table</td><td>6</td></tr>
+<tr><td>31, parts (c) to (g) only</td><td>Fuel pumped into a tank each hour (arithmetic sequence)</td><td>11</td></tr>
+<tr><th colspan="2">Total</th><th>35</th></tr></table></div>
+<div class="tip"><b>Read this first.</b> Question 20 (b) uses a probability table. The only fact you need is that the probabilities in the table add up to 1 (you meet this properly in Topic 4). In question 31, skip parts (a) and (b): they need a calculator. Start at (c) and use the volume 624&nbsp;000 m<sup>3</sup> that part (b) gives you.</div>
+<p class="muted">Why these questions: Wednesday's <a href="../guides/2026-11-04-maths-aa-sl-1.2-1.6.html">sequences guide</a> already uses most of the pack. Of the questions it does not use, only 20 and 31 (c) to (g) work without a calculator: 6, 29 and 31 (a) to (b) need a GDC, and 25 needs logarithms, which you have not covered yet. So the set also repeats three of Wednesday's no-calculator homework questions (4, 11 and 16). Do them again from a blank page without looking at Wednesday's work. Getting them right a second time, and faster, is the point.</p>
+<p>Write every step. Most marks are for method (M1), so a correct method with a slip in the arithmetic still scores.</p>
+
+<h2>Mark it</h2>
+<div class="step"><div class="bh"><b>Marking</b><span>about 15 min</span></div><ol>
+<li>When the timer ends, draw a line under your work. If you want to finish a question, carry on in a different colour: anything after the line scores 0 in an exam, but it shows you what you know.</li>
+<li>Open the <a href="https://drive.google.com/file/d/1_hgaTyeVEmk8O4pm8H4E86H7Kp7VsBQZ/view">mark scheme</a> at questions 4, 11, 16, 20 and 31 (c) to (g). Go line by line.</li>
+<li>How to read it: <b>M1</b> is a method mark, <b>A1</b> a mark for a correct answer or line, <b>R1</b> a mark for a reason (31 (g) needs the sentence comparing the total with 624&nbsp;000 m<sup>3</sup>). Marks in brackets, like <b>(M1)</b> or <b>(A1)</b>, can be given even if that line is missing, when a later correct answer shows you must have done it. <b>AG</b> means "answer given": no extra mark, you only have to reach it. <b>ft</b> (follow through) means you keep later marks if you used an earlier wrong answer correctly.</li>
+<li>In question 20 (b) the table entries are u<sub>n</sub> divided by k (the PDF shows them as fractions).</li>
+<li>Add up your marks per question and enter them below.</li></ol></div>
+<details><summary>Quick check: final answers (worked out again by hand and with Python)</summary>
+<ul>
+<li>4: u<sub>1</sub> = −12, d = 3</li>
+<li>11: d = −4, u<sub>1</sub> = 52, k = 14</li>
+<li>16: p = 3, q = 2, u<sub>6</sub> = 31</li>
+<li>20: d = −0.15, k = 1.5</li>
+<li>31: (c) d = −1800; (d) u<sub>13</sub> = 23&nbsp;400 m<sup>3</sup>; (e) n = 26, so the pump worked for 25 hours; (f) S<sub>8</sub> = 309&nbsp;600 m<sup>3</sup>; (g) S<sub>25</sub> = 585&nbsp;000 m<sup>3</sup>, which is less than 624&nbsp;000 m<sup>3</sup>, so the tank is never full.</li>
+</ul><p class="muted">Use the mark scheme for the marks; this list only tells you whether the final answer was right.</p></details>
+
+<h2>Your score</h2>
+<div class="tablewrap"><table class="score-t"><tr><th>Item</th><th>Marks gained</th><th>Out of</th></tr>
+<tr data-item="q4"><td>Question 4</td><td><input class="sc" type="number" min="0" max="5" step="1" inputmode="numeric" aria-label="marks gained, Question 4"></td><td><span class="mx" data-max="5">5</span></td></tr>
+<tr data-item="q11"><td>Question 11</td><td><input class="sc" type="number" min="0" max="6" step="1" inputmode="numeric" aria-label="marks gained, Question 11"></td><td><span class="mx" data-max="6">6</span></td></tr>
+<tr data-item="q16"><td>Question 16</td><td><input class="sc" type="number" min="0" max="7" step="1" inputmode="numeric" aria-label="marks gained, Question 16"></td><td><span class="mx" data-max="7">7</span></td></tr>
+<tr data-item="q20"><td>Question 20</td><td><input class="sc" type="number" min="0" max="6" step="1" inputmode="numeric" aria-label="marks gained, Question 20"></td><td><span class="mx" data-max="6">6</span></td></tr>
+<tr data-item="q31"><td>Question 31 (c) to (g)</td><td><input class="sc" type="number" min="0" max="11" step="1" inputmode="numeric" aria-label="marks gained, Question 31 (c) to (g)"></td><td><span class="mx" data-max="11">11</span></td></tr></table></div><p><button class="btn" id="savebtn">Save score</button></p><p class="saved" id="saved"></p>
+
+<h2>Error log</h2>
+<div class="step"><div class="bh"><b>Error log</b><span>about 10 min</span></div><ol>
+<li>Open the <a href="https://docs.google.com/spreadsheets/d/14eB8zIWZMuldcvLXTYNA4Q77jad3siDgHOK3mMrUCX8/edit">study sheet</a>, <b>Error log</b> tab.</li>
+<li>Write one row for every mark you lost: the date, the subject, the question (for example "Seq pack 16 (a)"), what went wrong, and the rule that fixes it.</li>
+<li>Say what kind of mistake it was: <b>did not know it</b> (go back to the guide or handout), <b>wrong method</b>, <b>careless slip</b> (copying, signs, units) or <b>ran out of time</b>. Four careless slips in one set is a pattern worth a rule of its own.</li>
+<li>Timing: write down which question you were on when the timer ended. If you finished in extra time, how many minutes did it take? Speed problems and knowledge problems need different fixes.</li>
+<li>If you lost marks on 4, 11 or 16 again, write "repeat" in the row. A mistake made twice is a habit: turn its rule into a flashcard.</li></ol></div>
+<p>Also on the study site: the <a href="../guides/2026-11-04-maths-aa-sl-1.2-1.6.html">sequences guide</a> for anything you could not do, the <a href="../flashcards.html">flashcards</a>, <a href="../exam-maths-aa-sl.html">exam technique for Maths AA</a> and your <a href="../progress.html">progress page</a>.</p>
+
+</main>
+<script>(function(){
+  var PAGE="2026-11-07";
+  var store=true; try{localStorage.setItem("_t","1");localStorage.removeItem("_t");}catch(e){store=false;}
+  function load(k){ if(!store) return null; try{ return JSON.parse(localStorage.getItem(k)); }catch(e){ return null; } }
+  function save(k,v){ if(!store) return; try{ localStorage.setItem(k,JSON.stringify(v)); }catch(e){} }
+  function pad(n){ return (n<10?"0":"")+n; }
+  function fmt(ms){ var s=Math.ceil(Math.max(ms,0)/1000); return pad(Math.floor(s/60))+":"+pad(s%60); }
+  var ac=null;
+  function unlock(){ try{ if(!ac){ var C=window.AudioContext||window.webkitAudioContext; if(C) ac=new C(); } if(ac&&ac.state==="suspended") ac.resume(); }catch(e){} }
+  function beep(){ if(!ac) return; try{ var t0=ac.currentTime+0.05; for(var i=0;i<3;i++){ var o=ac.createOscillator(), g=ac.createGain(); o.frequency.value=880; o.connect(g); g.connect(ac.destination); var t=t0+i*0.5; g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(0.3,t+0.02); g.gain.exponentialRampToValueAtTime(0.0001,t+0.35); o.start(t); o.stop(t+0.4); } }catch(e){} }
+  var timers=[]; var baseTitle=document.title;
+  // The timer stores the moment it was started (Date.now()), never a tick count,
+  // so it stays correct when the phone screen sleeps or the page is reloaded.
+  document.querySelectorAll(".timer").forEach(function(el){
+    var t={el:el, dur:parseInt(el.getAttribute("data-sec"),10)*1000, key:"ib-timer-"+PAGE+"-"+el.getAttribute("data-id"),
+      st:{start:null, used:0, alerted:false},
+      disp:el.querySelector(".tdisp"), stat:el.querySelector(".tstat"),
+      bStart:el.querySelector(".tstart"), bPause:el.querySelector(".tpause"), bReset:el.querySelector(".treset")};
+    var s=load(t.key); if(s && typeof s.used==="number") t.st=s;
+    t.bStart.addEventListener("click",function(){ unlock(); if(t.st.start) return; t.st.start=Date.now(); save(t.key,t.st); render(t); });
+    t.bPause.addEventListener("click",function(){ if(!t.st.start) return; t.st.used+=Date.now()-t.st.start; t.st.start=null; save(t.key,t.st); render(t); });
+    t.bReset.addEventListener("click",function(){ t.st={start:null, used:0, alerted:false}; save(t.key,t.st); render(t); });
+    timers.push(t);
+  });
+  function used(t){ return t.st.used+(t.st.start?Date.now()-t.st.start:0); }
+  function render(t){
+    var r=t.dur-used(t), running=!!t.st.start;
+    t.bStart.disabled=running; t.bPause.disabled=!running;
+    t.bStart.textContent=(t.st.used>0&&!running&&r>0)?"Resume":"Start";
+    if(r>0){
+      t.el.classList.remove("up"); t.el.classList.toggle("low", r<=300000);
+      t.disp.textContent=fmt(r);
+      if(running){ var end=new Date(Date.now()+r); t.stat.textContent="Running. Ends at "+pad(end.getHours())+":"+pad(end.getMinutes())+"."; }
+      else t.stat.textContent=t.st.used>0?"Paused.":"Ready. Press Start when you turn the paper over.";
+    } else {
+      t.el.classList.remove("low"); t.el.classList.add("up"); t.disp.textContent="00:00";
+      t.stat.textContent="Time is up. Pens down."+(running?" Over by "+fmt(-r)+".":"");
+      if(!t.st.alerted){ t.st.alerted=true; save(t.key,t.st); beep(); try{ if(navigator.vibrate) navigator.vibrate([400,200,400]); }catch(e){} }
+    }
+  }
+  function all(){ var up=false; timers.forEach(function(t){ render(t); if(t.st.start && used(t)>=t.dur) up=true; }); document.title=(up?"Time is up | ":"")+baseTitle; }
+  all(); setInterval(all,250);
+  document.addEventListener("visibilitychange",all); window.addEventListener("focus",all); window.addEventListener("pageshow",all);
+
+  // score entry: one row per item; total saved as {score, max, date, items}
+  var KEY="ib-timed-"+PAGE, rows=document.querySelectorAll(".score-t tr[data-item]"), out=document.getElementById("saved");
+  function maxOf(r){ var m=r.querySelector(".mx"); return parseFloat(m.tagName==="INPUT"?m.value:m.getAttribute("data-max")); }
+  function today(){ var d=new Date(); return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate()); }
+  function show(rec){ out.textContent=rec?("Saved on this device: "+rec.score+" / "+rec.max+" ("+Math.round(100*rec.score/rec.max)+"%), "+rec.date+"."):"Nothing saved yet. Rows you leave empty do not count."; }
+  function saveScore(){
+    var items={}, sc=0, mx=0, any=false;
+    rows.forEach(function(r){ var v=r.querySelector(".sc").value, m=maxOf(r);
+      if(v!=="" && !isNaN(parseFloat(v)) && m>0){ var x=Math.min(Math.max(parseFloat(v),0),m); if(x!==parseFloat(v)) r.querySelector(".sc").value=x; items[r.getAttribute("data-item")]={s:x,m:m}; sc+=x; mx+=m; any=true; } });
+    if(!any){ if(store){ try{ localStorage.removeItem(KEY); }catch(e){} } show(null); return; }
+    var rec={score:sc, max:mx, date:today(), items:items}; save(KEY,rec); show(rec);
+  }
+  var rec=load(KEY);
+  if(rec && rec.items){ rows.forEach(function(r){ var it=rec.items[r.getAttribute("data-item")]; if(it){ r.querySelector(".sc").value=it.s; var m=r.querySelector(".mx"); if(m.tagName==="INPUT") m.value=it.m; } }); }
+  show(rec && rec.items ? rec : null);
+  rows.forEach(function(r){ r.querySelectorAll("input").forEach(function(i){ i.addEventListener("change",saveScore); }); });
+  document.getElementById("savebtn").addEventListener("click",saveScore);
+  if(!store) out.textContent="This browser is not letting the page save (private mode?). Write your score on paper.";
+})();</script>
+</body>
+</html>
