@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maths AA SL study guide: sequences, series and proof (Wed 4 Nov 2026)</title>
+<!--
+  Syllabus numbering used here is the official one from the IB Mathematics: analysis and approaches guide
+  (first assessment 2021): SL 1.2 arithmetic, SL 1.3 geometric, SL 1.4 financial applications,
+  SL 1.6 simple deductive proof, SL 1.8 sum of infinite convergent geometric sequences.
+  Official SL 1.5 is "laws of exponents with integer exponents; introduction to logarithms with base 10 and e",
+  which is NOT about sequences, so it is not covered in this guide. The day's brief said "1.2 to 1.5 ... and 1.6",
+  which matches the school programme of study numbering (1.2 sequences in general, 1.3 arithmetic, 1.4 geometric,
+  1.5 applications of G.S., 1.7 deductive proof), not the official numbering. The file name keeps "1.2-1.6" as requested.
+-->
+<style>
+  :root{
+    --paper:#F5F7F4; --ink:#1E2A33; --ink-soft:#4A5862; --rule:#D6DCD8;
+    --indigo:#2F47A6; --indigo-soft:#E6EAF7; --amber:#B8761A; --amber-soft:#FBF1DF;
+    --green:#2E7D4F; --green-soft:#E3F2E8; --red:#B23A3A; --red-soft:#F8E4E4;
+    --card:#FFFFFF;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;overflow-wrap:break-word}
+  h1,h2,h3,h4{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;line-height:1.2;margin:0 0 .4em;font-weight:600}
+  h1{font-size:2.3rem}
+  h2{font-size:1.75rem;margin-top:0}
+  h3{font-size:1.25rem;margin-top:1.8em}
+  h4{font-size:1.05rem;margin-top:1.4em;font-family:inherit;font-weight:700}
+  p{margin:0 0 1em}
+  a{color:var(--indigo)}
+  code,.mono{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;font-size:.95em}
+  sup,sub{line-height:0}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
+
+  /* hero: a ball dropped from 10 m that bounces back to 2/3 of its height each time.
+     The peak heights are a geometric sequence and the total distance is a sum to infinity: the day's content. */
+  .hero{background:#0B0F1A;color:#fff;padding:0 0 28px}
+  .bounce{display:block;width:100%;height:auto;max-height:190px}
+  .hero .wrap{padding-top:18px;padding-bottom:0}
+  .hero h1{color:#fff}
+  .hero p{color:#C9D1E6;max-width:660px}
+  .hero .series{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:1.15rem;color:#F2C46D;margin:0 0 14px}
+  .meta{display:flex;flex-wrap:wrap;gap:8px 22px;color:#C9D1E6;font-size:.95rem;margin-top:8px}
+
+  nav.toc{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+  nav.toc .wrap{display:flex;gap:4px;flex-wrap:wrap;padding:8px 20px}
+  nav.toc a{text-decoration:none;color:var(--ink-soft);padding:6px 10px;border-radius:6px;font-size:.92rem}
+  nav.toc a:hover,nav.toc a:focus-visible{background:var(--indigo-soft);color:var(--indigo);outline:none}
+
+  .plan{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:22px 0 8px}
+  .plan div{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);padding:10px 12px;font-size:.95rem}
+  .plan b{display:block;font-size:1.15rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+  .plan small{display:block;color:var(--ink-soft);margin-top:4px;font-size:.85rem}
+  .files{margin:16px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+  .files li a{display:inline-block;background:var(--card);border:1px solid var(--rule);padding:5px 10px;border-radius:999px;font-size:.9rem;text-decoration:none}
+  .files li a:hover{border-color:var(--indigo)}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 20px;background:var(--card);border:1px solid var(--rule);padding:10px 14px;font-size:.92rem;margin:16px 0}
+
+  section.topic{margin-top:56px;padding-top:28px;border-top:3px solid var(--ink)}
+  .kicker{color:var(--indigo);font-weight:700;letter-spacing:.01em;margin-bottom:4px}
+  .guiding{font-style:italic;color:var(--ink-soft);margin-bottom:18px}
+
+  .ican{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:0 0 24px}
+  .ican p{margin:0 0 8px;font-weight:700}
+  .ican label{display:flex;gap:10px;align-items:flex-start;padding:5px 0;cursor:pointer}
+  .ican input{margin-top:6px;width:16px;height:16px;flex:none;accent-color:var(--indigo)}
+
+  /* formula booklet markers */
+  .fb,.learn{display:inline-block;font-size:.72rem;font-weight:700;padding:1px 7px;border-radius:3px;vertical-align:middle;margin-left:6px;white-space:nowrap;font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.01em}
+  .fb{background:var(--green);color:#fff}
+  .learn{background:var(--amber);color:#fff}
+
+  table{border-collapse:collapse;width:100%;margin:12px 0 20px;font-size:.95rem;background:var(--card)}
+  th,td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#EDF0EC}
+  td.c,th.c{text-align:center}
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+  figure{margin:20px 0;background:var(--card);border:1px solid var(--rule);padding:12px}
+  figure svg{display:block;width:100%;height:auto}
+  figcaption{font-size:.9rem;color:var(--ink-soft);margin-top:8px}
+  .keyrow{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.9rem;margin-top:6px}
+  .sw{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-2px;margin-right:6px}
+
+  .tip{background:var(--amber-soft);border-left:5px solid var(--amber);padding:12px 16px;margin:18px 0}
+  .tip b:first-child{color:var(--amber)}
+  .worked{background:var(--indigo-soft);border-left:5px solid var(--indigo);padding:12px 16px;margin:18px 0}
+  .worked > b:first-child{color:var(--indigo)}
+  .worked ol{margin:6px 0 0;padding-left:22px}
+  .worked li{margin:3px 0}
+  .formula{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:1.2rem;text-align:center;margin:12px 0;line-height:2}
+  .nw{white-space:nowrap}
+  .fbox{background:var(--card);border:1px solid var(--rule);padding:6px 14px;margin:14px 0}
+  .fbox .formula{margin:8px 0}
+
+  /* stacked fractions and sigma with limits, all in HTML so they wrap */
+  .frac{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;font-size:.92em;line-height:1.15;margin:0 2px}
+  .frac>span:first-child{border-bottom:1px solid currentColor;padding:0 3px}
+  .frac>span:last-child{padding:0 3px}
+  .sig{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;line-height:1;margin:0 3px}
+  .sig small{font-size:.62em}
+  .sig b{font-weight:400;font-size:1.35em;line-height:1.05}
+
+  .proof{background:var(--card);border:1px solid var(--rule);padding:12px 16px;margin:12px 0;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:1.08rem}
+  .proof div{padding:2px 0;display:flex;flex-wrap:wrap;align-items:center;gap:2px 12px}
+  .proof .m{white-space:nowrap}
+  .proof .note{font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.88rem;color:var(--ink-soft)}
+
+  details{background:var(--card);border:1px solid var(--rule);padding:10px 14px;margin:10px 0}
+  summary{cursor:pointer;font-weight:600}
+  details[open] summary{margin-bottom:8px}
+
+  .quiz .q{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:12px 0}
+  .quiz .q > p{font-weight:600;margin-bottom:8px}
+  .quiz button{display:block;width:100%;text-align:left;background:#F3F5F2;border:1px solid var(--rule);padding:8px 12px;margin:6px 0;border-radius:6px;font:inherit;cursor:pointer;color:var(--ink)}
+  .quiz button:hover,.quiz button:focus-visible{border-color:var(--indigo);outline:none}
+  .quiz button.right{background:var(--green-soft);border-color:var(--green)}
+  .quiz button.wrong{background:var(--red-soft);border-color:var(--red)}
+  .quiz .why{display:none;margin-top:8px;font-size:.95rem;color:var(--ink-soft)}
+  .quiz .q.done .why{display:block}
+  .score{font-weight:700;margin-top:14px}
+
+  .end{margin-top:56px;background:var(--card);border:1px solid var(--rule);padding:18px 20px}
+  .end ul{margin:8px 0 0;padding-left:20px}
+  @media (max-width:600px){h1{font-size:1.8rem}body{font-size:16px}th,td{padding:6px}.formula{font-size:1.08rem}}
+  @media print{nav.toc{position:static}details{break-inside:avoid}.quiz button{border:1px solid #999}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="bounce" viewBox="0 -12 1000 202" aria-label="A ball dropped from 10 metres bouncing along the ground, each bounce reaching two thirds of the height of the one before">
+    <rect y="-12" width="1000" height="202" fill="#0B0F1A"/>
+    <line x1="20" y1="165" x2="980" y2="165" stroke="#3A4560" stroke-width="2"/>
+    <!-- peak heights 10, 20/3, 40/9, ... scaled to 145 px for 10 m; time of flight scales with the square root of the height -->
+    <g stroke="#3A4560" stroke-width="1" stroke-dasharray="3 5">
+      <line x1="40" y1="20" x2="40" y2="165"/><line x1="185.3" y1="68.3" x2="185.3" y2="165"/><line x1="304" y1="100.6" x2="304" y2="165"/><line x1="400.9" y1="122" x2="400.9" y2="165"/><line x1="480" y1="136.4" x2="480" y2="165"/><line x1="544.5" y1="145.9" x2="544.5" y2="165"/>
+    </g>
+    <path d="M40,20 Q80.0,20 120.0,165 Q185.3,-28.3 250.6,165 Q304.0,36.1 357.3,165 Q400.9,79.1 444.4,165 Q480.0,107.7 515.5,165 Q544.5,126.8 573.6,165 Q597.3,139.5 621.0,165 Q640.3,148.0 659.7,165 Q675.5,153.7 691.3,165 Q704.2,157.5 717.1,165 Q727.6,160.0 738.2,165 Q746.8,161.6 755.4,165 Q762.4,162.8 769.4,165 Q775.2,163.5 780.9,165" fill="none" stroke="#F2C46D" stroke-width="2.5"/>
+    <g fill="#F2C46D">
+      <circle cx="40" cy="20" r="7"/><circle cx="185.3" cy="68.3" r="5"/><circle cx="304" cy="100.6" r="4.5"/><circle cx="400.9" cy="122" r="4"/><circle cx="480" cy="136.4" r="3.5"/><circle cx="544.5" cy="145.9" r="3"/><circle cx="597.3" cy="152.3" r="2.5"/><circle cx="640.3" cy="156.5" r="2"/>
+    </g>
+    <g fill="#8F9BB8" font-family="Arial" font-size="22">
+      <text x="54" y="22">10</text><text x="197" y="62">6.67</text><text x="316" y="94">4.44</text><text x="413" y="116">2.96</text>
+    </g>
+  </svg>
+  <div class="wrap">
+    <p class="series"><span class="nw">Total distance</span> <span class="nw">= 10 + 2(6.67 + 4.44 + 2.96 + …)</span> <span class="nw">= 10 + 2 × <span class="frac"><span>20/3</span><span>1 − 2/3</span></span></span> <span class="nw">= 50 m</span></p>
+    <h1>Maths AA SL: sequences, series and simple proof</h1>
+    <p>Study guide for Wednesday 4 November 2026. The ball above is dropped from 10 m and each bounce reaches two thirds of the previous height. The peak heights in metres form a geometric sequence, and the line above adds up the whole infinite journey. By the end of today you will be able to write every step of that line yourself (it is question 9 of your practice pack).</p>
+    <div class="meta"><span>About 2 hours</span><span>Official syllabus SL 1.2, 1.3, 1.4, 1.8 and 1.6</span><span>Source: IB Maths AA guide (first assessment 2021), formula booklet and the class practice packs</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <a href="#plan">Plan</a><a href="#s12">1.2 Arithmetic</a><a href="#s13">1.3 Geometric</a><a href="#s18">1.8 Sum to infinity</a><a href="#s14">1.4 Finance</a><a href="#s16">1.6 Proof</a><a href="#quiz">Quiz</a><a href="#end">Finish</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section id="plan">
+  <h2 style="margin-top:28px">How to spend the two hours</h2>
+  <div class="plan">
+    <div><b>30 min</b>SL 1.2 arithmetic: read, self-check, then pack questions 3, 13 and 23<small>Sequences pack</small></div>
+    <div><b>35 min</b>SL 1.3 geometric and SL 1.8 sum to infinity: read, self-checks, then pack questions 30 and 26<small>Sequences pack</small></div>
+    <div><b>20 min</b>SL 1.4 compound interest and depreciation: read, then pack question 15<small>Calculator allowed</small></div>
+    <div><b>35 min</b>SL 1.6 proof: read, do proof pack Medium 1 to 5, then the quiz and the Error log<small>Proof pack</small></div>
+  </div>
+  <p style="margin-top:14px">Read each section once, then try the self-check without looking back. Do the pack questions on paper and mark them with the mark scheme. Anything you got wrong goes into the Error log tab of the study sheet the same evening.</p>
+  <p><b>Files for today in the IB folder</b></p>
+  <ul class="files">
+    <li><a href="https://drive.google.com/file/d/1V3p4Y01JZwk-t3oGevgKyf5KzY8Kj1kf/view">Sequences and series practice pack</a></li>
+    <li><a href="https://drive.google.com/file/d/1_hgaTyeVEmk8O4pm8H4E86H7Kp7VsBQZ/view">Its mark scheme</a></li>
+    <li><a href="https://drive.google.com/file/d/1Uv7FizEvzK_RgY6G-v0HYa3i-lQCvsYs/view">Proof and reasoning pack</a></li>
+    <li><a href="https://drive.google.com/file/d/1yofdn_7Gu3pb2O5G6iHhrXVgRUQ1Qldz/view">Formula booklet</a></li>
+    <li><a href="https://drive.google.com/file/d/1QEKfLslMdDBj1lHfmenCX7V887rTu_IN/view">IB Maths AA subject guide</a></li>
+    <li><a href="https://drive.google.com/file/d/1KXqPygfpTbZf2ibmm7PvfnC09yizSzKW/view">School programme of study</a></li>
+  </ul>
+  <div class="legend" aria-label="Legend for the formula markers">
+    <span><span class="fb" style="margin-left:0">In booklet</span> given in the exam formula booklet: know how to use it, no need to memorise it</span>
+    <span><span class="learn" style="margin-left:0">Learn</span> not in the booklet: you must remember it</span>
+  </div>
+  <h4>Your class numbers these topics differently</h4>
+  <p>The school programme counts its own lessons; exam papers, the mark schemes and this guide use the official IB numbers. Same content, different labels.</p>
+  <div class="tablewrap"><table>
+    <tr><th>Content</th><th class="c">Official IB number</th><th class="c">School programme</th></tr>
+    <tr><td>Sequences in general, sigma notation</td><td class="c">inside SL 1.2 and 1.3</td><td class="c">1.2</td></tr>
+    <tr><td>Arithmetic sequences and series</td><td class="c">SL 1.2</td><td class="c">1.3</td></tr>
+    <tr><td>Geometric sequences and series</td><td class="c">SL 1.3</td><td class="c">1.4</td></tr>
+    <tr><td>Compound interest and depreciation</td><td class="c">SL 1.4</td><td class="c">1.5</td></tr>
+    <tr><td>Simple deductive proof</td><td class="c">SL 1.6</td><td class="c">1.7</td></tr>
+    <tr><td>Sum to infinity</td><td class="c">SL 1.8</td><td class="c">with geometric</td></tr>
+  </table></div>
+  <p style="font-size:.95rem;color:var(--ink-soft)">Not in today's guide: official SL 1.5 (laws of exponents, introduction to logarithms), which your class covers in Topic 2, and the binomial theorem (official SL 1.9, school 1.6).</p>
+  <p style="font-size:.95rem;color:var(--ink-soft)">Exam format: Paper 1 is 90 minutes with no calculator; Paper 2 is 90 minutes with a graphic display calculator (GDC). Both are worth 80 marks, with short questions in section A and longer ones in section B. Neither paper is multiple choice; the quiz at the end uses multiple choice only so the page can mark it for you.</p>
+</section>
+
+<!-- =============================== SL 1.2 =============================== -->
+<section class="topic" id="s12">
+  <div class="kicker">SL 1.2</div>
+  <h2>Arithmetic sequences and series</h2>
+  <p class="guiding">The pattern: add the same number every time.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="a1"><span>Use the formulae for the n<sup>th</sup> term and the sum of the first n terms of an arithmetic sequence</span></label>
+    <label><input type="checkbox" data-k="a2"><span>Use sigma notation for sums of arithmetic sequences</span></label>
+    <label><input type="checkbox" data-k="a3"><span>Apply arithmetic sequences to real situations, including simple interest over a number of years</span></label>
+    <label><input type="checkbox" data-k="a4"><span>Analyse, interpret and make predictions when a real-life pattern is not perfectly arithmetic, by approximating the common difference</span></label>
+  </div>
+
+  <h3>The words and the notation</h3>
+  <p>A <b>sequence</b> is an ordered list of numbers called <b>terms</b>. The n<sup>th</sup> term is written u<sub>n</sub>, so u<sub>1</sub> is the first term and n is its position (always a positive integer). A <b>series</b> is what you get when you add terms: S<sub>n</sub> means the sum of the first n terms.</p>
+  <p>A sequence is <b>arithmetic</b> when the difference between consecutive terms is constant. That constant is the <b>common difference</b> d, and it can be negative or a fraction.</p>
+  <p>Test for arithmetic <span class="learn">Learn</span>: u<sub>2</sub> − u<sub>1</sub> = u<sub>3</sub> − u<sub>2</sub>. Example: 7, 11, 15, 19 has d = 4. Example: 60, 57.5, 55 has d = −2.5.</p>
+
+  <div class="fbox">
+    <div class="formula"><span class="nw">u<sub>n</sub> = u<sub>1</sub> + (n − 1)d</span> <span class="fb">In booklet</span></div>
+    <div class="formula"><span class="nw">S<sub>n</sub> = <span class="frac"><span>n</span><span>2</span></span>(2u<sub>1</sub> + (n − 1)d)</span> &nbsp; or &nbsp; <span class="nw">S<sub>n</sub> = <span class="frac"><span>n</span><span>2</span></span>(u<sub>1</sub> + u<sub>n</sub>)</span> <span class="fb">In booklet</span></div>
+  </div>
+  <p>Why it is (n − 1)d and not nd: to get from u<sub>1</sub> to u<sub>5</sub> you take 4 steps, not 5. Why the sum works: write the series forwards and backwards, and every pair adds to the same total.</p>
+  <figure>
+    <svg viewBox="30 10 600 165" aria-label="The series 3 plus 7 plus 11 plus 15 plus 19 written forwards and backwards; each column adds to 22">
+      <g font-family="Arial" font-size="26" fill="#1E2A33" text-anchor="middle">
+        <g fill="#E6EAF7" stroke="#2F47A6" stroke-width="1.5">
+          <rect x="120" y="20" width="90" height="40"/><rect x="220" y="20" width="90" height="40"/><rect x="320" y="20" width="90" height="40"/><rect x="420" y="20" width="90" height="40"/><rect x="520" y="20" width="90" height="40"/>
+        </g>
+        <g fill="#FBF1DF" stroke="#B8761A" stroke-width="1.5">
+          <rect x="120" y="70" width="90" height="40"/><rect x="220" y="70" width="90" height="40"/><rect x="320" y="70" width="90" height="40"/><rect x="420" y="70" width="90" height="40"/><rect x="520" y="70" width="90" height="40"/>
+        </g>
+        <text x="165" y="49">3</text><text x="265" y="49">7</text><text x="365" y="49">11</text><text x="465" y="49">15</text><text x="565" y="49">19</text>
+        <text x="165" y="99">19</text><text x="265" y="99">15</text><text x="365" y="99">11</text><text x="465" y="99">7</text><text x="565" y="99">3</text>
+        <line x1="120" y1="122" x2="610" y2="122" stroke="#1E2A33" stroke-width="1.5"/>
+        <g font-weight="bold" fill="#2E7D4F"><text x="165" y="155">22</text><text x="265" y="155">22</text><text x="365" y="155">22</text><text x="465" y="155">22</text><text x="565" y="155">22</text></g>
+        <text x="70" y="49" font-size="26" fill="#2F47A6">S</text>
+        <text x="70" y="99" font-size="26" fill="#B8761A">S</text>
+        <text x="70" y="155" font-size="26" fill="#2E7D4F">2S</text>
+      </g>
+    </svg>
+    <figcaption>Both rows add to S, so 2S = 5 × 22 = 110 and S = 55. In general 2S<sub>n</sub> = n(u<sub>1</sub> + u<sub>n</sub>), which is the second booklet formula. Check: 3 + 7 + 11 + 15 + 19 = 55.</figcaption>
+  </figure>
+
+  <div class="worked"><b>Worked example 1: two terms given (pack question 3).</b> The 1<sup>st</sup> and 5<sup>th</sup> terms of an arithmetic sequence are 36 and 12. Find u<sub>13</sub>, then the n for which S<sub>n</sub> = 0.
+    <ol>
+      <li>Write u<sub>5</sub> with the formula: 36 + 4d = 12.</li>
+      <li>So 4d = −24 and d = −6.</li>
+      <li>u<sub>13</sub> = 36 + 12 × (−6) = 36 − 72 = <b>−36</b>.</li>
+      <li>Set the sum to zero: <span class="frac"><span>n</span><span>2</span></span>(2 × 36 + (n − 1)(−6)) = 0.</li>
+      <li>n ≠ 0, so 72 − 6n + 6 = 0, which gives 6n = 78 and <b>n = 13</b>.</li>
+      <li>Sense check: the terms run 36, 30, …, 0, …, −30, −36, symmetric about 0, and u<sub>13</sub> = −36, so 13 terms cancel exactly.</li>
+    </ol></div>
+
+  <div class="worked"><b>Worked example 2: a term and a sum given (pack question 10).</b> u<sub>10</sub> = 14 and S<sub>25</sub> = 200. Find k such that u<sub>k</sub> = 0.
+    <ol>
+      <li>From the term: u<sub>1</sub> + 9d = 14.</li>
+      <li>From the sum: <span class="frac"><span>25</span><span>2</span></span>(2u<sub>1</sub> + 24d) = 200, so 2u<sub>1</sub> + 24d = 16, so u<sub>1</sub> + 12d = 8.</li>
+      <li>Subtract the first equation from the second: 3d = −6, so d = −2.</li>
+      <li>Then u<sub>1</sub> = 14 − 9 × (−2) = 32.</li>
+      <li>Solve 32 + (k − 1)(−2) = 0: k − 1 = 16, so <b>k = 17</b>.</li>
+    </ol></div>
+
+  <h3>Sigma notation</h3>
+  <p><span class="sig"><small>20</small><b>Σ</b><small>r = 1</small></span>(3r + 2) means: put r = 1, 2, 3, …, 20 into 3r + 2 and add the results. The number under Σ is where r starts, the number on top is where it stops. <span class="learn">Learn</span> the count of terms: <b>top − bottom + 1</b>.</p>
+  <div class="worked"><b>Worked example 3: evaluate a sigma sum without listing.</b> Find <span class="sig"><small>20</small><b>Σ</b><small>r = 1</small></span>(3r + 2).
+    <ol>
+      <li>Number of terms: 20 − 1 + 1 = 20.</li>
+      <li>First term (r = 1): 3 + 2 = 5. Last term (r = 20): 60 + 2 = 62.</li>
+      <li>It is arithmetic because r goes up by 1 each time, so the terms go up by 3 (d = 3).</li>
+      <li>S<sub>20</sub> = <span class="frac"><span>20</span><span>2</span></span>(5 + 62) = 10 × 67 = <b>670</b>.</li>
+    </ol></div>
+
+  <h3>When you are given S<sub>n</sub> instead of u<sub>n</sub></h3>
+  <p><span class="learn">Learn</span> u<sub>1</sub> = S<sub>1</sub>, and u<sub>n</sub> = S<sub>n</sub> − S<sub>n−1</sub>. The sum of the first six terms minus the sum of the first five leaves exactly the sixth term.</p>
+  <div class="worked"><b>Worked example 4 (pack question 19).</b> S<sub>n</sub> = n² + 4n. Find u<sub>1</sub>, u<sub>6</sub> and a formula for u<sub>n</sub>.
+    <ol>
+      <li>u<sub>1</sub> = S<sub>1</sub> = 1 + 4 = <b>5</b>.</li>
+      <li>S<sub>6</sub> = 36 + 24 = 60 and S<sub>5</sub> = 25 + 20 = 45, so u<sub>6</sub> = 60 − 45 = <b>15</b>.</li>
+      <li>From u<sub>1</sub> = 5 and u<sub>6</sub> = u<sub>1</sub> + 5d = 15: 5d = 10, so d = 2.</li>
+      <li>u<sub>n</sub> = 5 + 2(n − 1) = <b>2n + 3</b>. Check: n = 6 gives 15.</li>
+    </ol></div>
+
+  <h3>Applications, including simple interest</h3>
+  <p><b>Simple interest</b> pays the same amount every year, calculated on the original amount only, so the balance grows arithmetically. In pack question 5, Andy earns 0.315% of $5000 each month: 5000 × 0.00315 = $15.75 a month, which is $189 a year. After n years he has 5000 + 189n dollars: an arithmetic sequence with d = 189.</p>
+  <p><b>A model that is not perfectly arithmetic.</b> Real data rarely goes up by exactly the same amount. The guide expects you to approximate the common difference and use it to predict, then say how reliable the prediction is.</p>
+  <div class="worked"><b>Worked example 5: approximate d.</b> A runner's long run in weeks 1 to 5 is 12.1, 13.9, 16.2, 17.8 and 20.0 km. Predict week 10.
+    <ol>
+      <li>The differences are 1.8, 2.3, 1.6 and 2.2: not constant, but close.</li>
+      <li>Approximate d by the average step: (20.0 − 12.1) ÷ 4 = 7.9 ÷ 4 = 1.975, about 2.0 km per week.</li>
+      <li>Model: u<sub>n</sub> ≈ 12.1 + 1.975(n − 1).</li>
+      <li>Week 10: 12.1 + 9 × 1.975 = 29.875, so about <b>29.9 km</b>.</li>
+      <li>Comment: week 10 is outside the data (extrapolation), and a runner cannot keep adding 2 km a week for ever, so the prediction is less reliable the further ahead you go.</li>
+    </ol></div>
+
+  <div class="tip"><b>Exam traps.</b> (1) Writing nd instead of (n − 1)d. (2) Mixing up a term and a sum: "how much in the 13<sup>th</sup> hour" is u<sub>13</sub>, "how much in the first 8 hours" is S<sub>8</sub>. (3) n must be a positive integer: if solving gives n = 21.86 for "how many complete rows can be built", the answer is 21, not 22 (pack question 8(d)); if the question asks when a total first exceeds something, round up. (4) Counting sigma terms as top − bottom instead of top − bottom + 1.</div>
+
+  <details><summary>Self-check SL 1.2 (answer in your head, then open)</summary>
+    <ol>
+      <li>The 2<sup>nd</sup> term is 10 and the 4<sup>th</sup> term is 22. Find d and an expression for u<sub>n</sub>. (pack question 13)</li>
+      <li>u<sub>n</sub> = 15 − 3n. State u<sub>1</sub>, find n when u<sub>n</sub> = −33, and state d. (pack question 23)</li>
+      <li>u<sub>8</sub> = S<sub>8</sub> = 8. Find u<sub>1</sub> and d. (pack question 27)</li>
+      <li>First term 60, common difference −2.5. Find k when u<sub>k</sub> = 0, and the maximum value of S<sub>n</sub>. (pack question 28)</li>
+    </ol>
+    <p><b>Answers.</b> 1: 2d = 22 − 10 = 12, d = 6, u<sub>1</sub> = 4, u<sub>n</sub> = 6n − 2. 2: u<sub>1</sub> = 12; 15 − 3n = −33 gives n = 16; d = −3. 3: S<sub>8</sub> = 4(u<sub>1</sub> + 8) = 8 gives u<sub>1</sub> = −6; then −6 + 7d = 8, d = 2. 4: 60 − 2.5(k − 1) = 0 gives k = 25; the sum stops growing once the terms reach 0, so the maximum is S<sub>25</sub> = <span class="frac"><span>25</span><span>2</span></span>(60 + 0) = 750 (S<sub>24</sub> is also 750, because u<sub>25</sub> = 0).</p>
+  </details>
+</section>
+
+<!-- =============================== SL 1.3 =============================== -->
+<section class="topic" id="s13">
+  <div class="kicker">SL 1.3</div>
+  <h2>Geometric sequences and series</h2>
+  <p class="guiding">The pattern: multiply by the same number every time.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="g1"><span>Use the formulae for the n<sup>th</sup> term and the sum of the first n terms of a geometric sequence</span></label>
+    <label><input type="checkbox" data-k="g2"><span>Use sigma notation for sums of geometric sequences</span></label>
+    <label><input type="checkbox" data-k="g3"><span>Apply geometric sequences to real situations such as the spread of disease, salary increases and decreases, and population growth</span></label>
+  </div>
+
+  <p>A sequence is <b>geometric</b> when each term is the previous one multiplied by the same <b>common ratio</b> r (r ≠ 0). Test <span class="learn">Learn</span>: <span class="frac"><span>u<sub>2</sub></span><span>u<sub>1</sub></span></span> = <span class="frac"><span>u<sub>3</sub></span><span>u<sub>2</sub></span></span>. If r is negative the signs alternate: 3, −6, 12, −24 has r = −2.</p>
+
+  <figure>
+    <svg viewBox="0 0 700 262" aria-label="Bar chart comparing the arithmetic sequence 2, 5, 8, 11, 14, 17 with the geometric sequence 2, 4, 8, 16, 32, 64">
+      <g font-family="Arial" font-size="16" fill="#1E2A33">
+        <line x1="50" y1="220" x2="680" y2="220" stroke="#1E2A33" stroke-width="1.5"/>
+        <!-- scale: 3 px per unit, baseline 220 -->
+        <g fill="#2F47A6">
+          <rect x="70" y="214" width="34" height="6"/><rect x="170" y="205" width="34" height="15"/><rect x="270" y="196" width="34" height="24"/><rect x="370" y="187" width="34" height="33"/><rect x="470" y="178" width="34" height="42"/><rect x="570" y="169" width="34" height="51"/>
+        </g>
+        <g fill="#B8761A">
+          <rect x="108" y="214" width="34" height="6"/><rect x="208" y="208" width="34" height="12"/><rect x="308" y="196" width="34" height="24"/><rect x="408" y="172" width="34" height="48"/><rect x="508" y="124" width="34" height="96"/><rect x="608" y="28" width="34" height="192"/>
+        </g>
+        <g font-size="24" text-anchor="middle"><text x="106" y="250">n = 1</text><text x="206" y="250">2</text><text x="306" y="250">3</text><text x="406" y="250">4</text><text x="506" y="250">5</text><text x="606" y="250">6</text></g>
+        <g font-size="24" text-anchor="middle"><text x="587" y="160" fill="#2F47A6">17</text><text x="625" y="22" fill="#B8761A">64</text></g>
+      </g>
+    </svg>
+    <div class="keyrow"><span><span class="sw" style="background:#2F47A6"></span>arithmetic 2, 5, 8, 11, 14, 17 (add 3)</span><span><span class="sw" style="background:#B8761A"></span>geometric 2, 4, 8, 16, 32, 64 (multiply by 2)</span></div>
+    <figcaption>Adding gives a straight-line pattern; multiplying gives growth that keeps speeding up. With positive terms, any ratio above 1 overtakes any arithmetic sequence in the end, which is the whole of pack questions 2 and 5.</figcaption>
+  </figure>
+
+  <div class="fbox">
+    <div class="formula"><span class="nw">u<sub>n</sub> = u<sub>1</sub>r<sup>n−1</sup></span> <span class="fb">In booklet</span></div>
+    <div class="formula"><span class="nw">S<sub>n</sub> = <span class="frac"><span>u<sub>1</sub>(r<sup>n</sup> − 1)</span><span>r − 1</span></span></span> <span class="nw">= <span class="frac"><span>u<sub>1</sub>(1 − r<sup>n</sup>)</span><span>1 − r</span></span>,</span> <span class="nw">r ≠ 1</span> <span class="fb">In booklet</span></div>
+  </div>
+  <p>Both sum formulas give the same answer. Use the first when r &gt; 1 and the second when r &lt; 1, so you work with positive numbers.</p>
+
+  <div class="worked"><b>Worked example 1: two terms given, then a sum (pack question 30).</b> The volumes of pie slices form a geometric sequence. The 2<sup>nd</sup> slice is 30 cm³ and the 5<sup>th</sup> is 240 cm³. The pie is 61&nbsp;425 cm³. How many slices?
+    <ol>
+      <li>u<sub>2</sub> = u<sub>1</sub>r = 30 and u<sub>5</sub> = u<sub>1</sub>r<sup>4</sup> = 240.</li>
+      <li>Divide: r<sup>3</sup> = 240 ÷ 30 = 8, so <b>r = 2</b>. (Dividing two terms removes u<sub>1</sub>; this is the fastest method.)</li>
+      <li>u<sub>1</sub> = 30 ÷ 2 = <b>15</b>.</li>
+      <li>Sum: <span class="frac"><span>15(2<sup>n</sup> − 1)</span><span>2 − 1</span></span> = 61&nbsp;425, so 2<sup>n</sup> − 1 = 4095 and 2<sup>n</sup> = 4096.</li>
+      <li>4096 = 2<sup>12</sup>, so <b>n = 12 slices</b>.</li>
+    </ol></div>
+
+  <div class="worked"><b>Worked example 2: when does a sum pass a value? (pack question 21, calculator)</b> First term 50, fourth term 86.4. Find the smallest n with S<sub>n</sub> &gt; 33&nbsp;500.
+    <ol>
+      <li>50r<sup>3</sup> = 86.4, so r<sup>3</sup> = 1.728 and r = 1.2.</li>
+      <li>S<sub>n</sub> = <span class="frac"><span>50(1.2<sup>n</sup> − 1)</span><span>0.2</span></span> = 250(1.2<sup>n</sup> − 1).</li>
+      <li>Solve 250(1.2<sup>n</sup> − 1) &gt; 33&nbsp;500: 1.2<sup>n</sup> &gt; 135.</li>
+      <li>With the GDC (table or graph) or logarithms: n &gt; 26.90, and check either side: S<sub>26</sub> ≈ 28&nbsp;369 is too small, S<sub>27</sub> ≈ 34&nbsp;093 is enough.</li>
+      <li><b>n = 27</b>. Always give the whole number and show the values either side.</li>
+    </ol></div>
+
+  <div class="worked"><b>Worked example 3: a negative ratio (pack question 19, parts d and e).</b> A geometric sequence has v<sub>2</sub> = 5 and v<sub>4</sub> = 15, and v<sub>99</sub> &lt; 0. Find r and v<sub>5</sub>.
+    <ol>
+      <li>v<sub>4</sub> = v<sub>2</sub>r<sup>2</sup>, so r<sup>2</sup> = 3 and <b>r = ±√3</b>. Both are possible until you use more information.</li>
+      <li>v<sub>99</sub> = v<sub>2</sub>r<sup>97</sup>. v<sub>2</sub> is positive and 97 is odd, so v<sub>99</sub> &lt; 0 needs r &lt; 0: r = −√3.</li>
+      <li>v<sub>5</sub> = v<sub>4</sub> × r = 15 × (−√3) = <b>−15√3</b>.</li>
+    </ol></div>
+
+  <h3>Sigma notation and real situations</h3>
+  <p><span class="sig"><small>10</small><b>Σ</b><small>r = 1</small></span>3(2)<sup>r−1</sup> is the geometric series 3 + 6 + 12 + … with 10 terms, first term 3 and ratio 2, so it equals <span class="frac"><span>3(2<sup>10</sup> − 1)</span><span>2 − 1</span></span> = 3069. If a calculator question gives a sigma sum, identify the first term and the ratio first: the guide says you are expected to.</p>
+  <p>Growth by a percentage is geometric: grow by 3% means multiply by 1.03; fall by 15% means multiply by 0.85. A town of 12&nbsp;000 people growing by 2.5% a year has 12&nbsp;000 × 1.025<sup>10</sup> ≈ 15&nbsp;361 people <b>after 10 years</b>. In <b>year 10</b> of a list that starts with year 1 at 12&nbsp;000, the population is 12&nbsp;000 × 1.025<sup>9</sup> ≈ 14&nbsp;986. Read which one the question means.</p>
+
+  <div class="tip"><b>Exam traps.</b> (1) Power n instead of n − 1 for u<sub>n</sub>. (2) Taking only the positive root when r<sup>2</sup> or r<sup>4</sup> is known: r = ±. (3) "At the start of the 10<sup>th</sup> year" means 9 complete years have passed (pack question 2(d) wants S<sub>9</sub>; using n = 10 loses most of the marks). (4) 1.03<sup>n</sup> for "after n years" but 1.03<sup>n−1</sup> for "in year n" when year 1 is the starting value.</div>
+
+  <details><summary>Self-check SL 1.3</summary>
+    <ol>
+      <li>Find u<sub>7</sub> for 3, −6, 12, …</li>
+      <li>In the sequence a, s, t (geometric, all non-zero), show that s<sup>2</sup> = at. (pack question 14(b))</li>
+      <li>Jane earns $70&nbsp;000 in year 1 and gets 3% more each year. Write J<sub>n</sub> and state r. (pack question 2)</li>
+      <li>Find <span class="sig"><small>6</small><b>Σ</b><small>r = 1</small></span>2(3)<sup>r−1</sup>.</li>
+    </ol>
+    <p><b>Answers.</b> 1: r = −2, u<sub>7</sub> = 3 × (−2)<sup>6</sup> = 192. 2: the ratio is the same, so <span class="frac"><span>s</span><span>a</span></span> = <span class="frac"><span>t</span><span>s</span></span>; multiply both sides by as to get s<sup>2</sup> = at. 3: J<sub>n</sub> = 70&nbsp;000 × 1.03<sup>n−1</sup>, r = 1.03. 4: first term 2, ratio 3, six terms: <span class="frac"><span>2(3<sup>6</sup> − 1)</span><span>3 − 1</span></span> = 729 − 1 = 728.</p>
+  </details>
+</section>
+
+<!-- =============================== SL 1.8 =============================== -->
+<section class="topic" id="s18">
+  <div class="kicker">SL 1.8 (taught together with geometric sequences)</div>
+  <h2>Sum to infinity</h2>
+  <p class="guiding">How can infinitely many numbers add up to something finite?</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="i1"><span>Find the sum of an infinite convergent geometric sequence</span></label>
+    <label><input type="checkbox" data-k="i2"><span>Use the condition |r| &lt; 1 and modulus notation to decide whether the sum exists</span></label>
+  </div>
+
+  <p>If −1 &lt; r &lt; 1, the powers r<sup>n</sup> get closer and closer to 0 as n grows. So in S<sub>n</sub> = <span class="frac"><span>u<sub>1</sub>(1 − r<sup>n</sup>)</span><span>1 − r</span></span> the r<sup>n</sup> disappears, and the series has a finite total: it <b>converges</b>. If |r| ≥ 1 the terms do not shrink, and there is no sum to infinity.</p>
+  <div class="fbox">
+    <div class="formula"><span class="nw">S<sub>∞</sub> = <span class="frac"><span>u<sub>1</sub></span><span>1 − r</span></span>,</span> &nbsp; <span class="nw">|r| &lt; 1</span> <span class="fb">In booklet</span></div>
+  </div>
+  <p>|r| is the modulus of r: its size without the sign. |r| &lt; 1 means the same as −1 &lt; r &lt; 1.</p>
+  <figure>
+    <svg viewBox="0 0 700 300" aria-label="A unit square split into a half, a quarter, an eighth, a sixteenth and smaller pieces that together fill the whole square">
+      <g font-family="Arial" fill="#1E2A33" text-anchor="middle">
+        <rect x="200" y="20" width="260" height="260" fill="#fff" stroke="#1E2A33" stroke-width="2"/>
+        <rect x="200" y="20" width="130" height="260" fill="#2F47A6"/>
+        <rect x="330" y="20" width="130" height="130" fill="#5468BE"/>
+        <rect x="330" y="150" width="65" height="130" fill="#7C8CD0"/>
+        <rect x="395" y="150" width="65" height="65" fill="#A5B1E2"/>
+        <rect x="395" y="215" width="32.5" height="65" fill="#C6CEEE"/>
+        <rect x="427.5" y="215" width="32.5" height="32.5" fill="#DDE2F5"/>
+        <rect x="427.5" y="247.5" width="16.25" height="32.5" fill="#E9ECF8"/>
+        <g fill="#fff" font-size="34"><text x="265" y="162">1/2</text><text x="395" y="97">1/4</text></g>
+        <g fill="#1E2A33"><text x="362" y="224" font-size="26">1/8</text><text x="427" y="189" font-size="18">1/16</text></g>
+      </g>
+    </svg>
+    <figcaption><span class="frac"><span>1</span><span>2</span></span> + <span class="frac"><span>1</span><span>4</span></span> + <span class="frac"><span>1</span><span>8</span></span> + … fills the square without ever spilling over. With u<sub>1</sub> = <span class="frac"><span>1</span><span>2</span></span> and r = <span class="frac"><span>1</span><span>2</span></span>, the formula gives <span class="frac"><span>1/2</span><span>1/2</span></span> = 1, the area of the square.</figcaption>
+  </figure>
+
+  <div class="worked"><b>Worked example 1: sigma starting at r = 1 (pack question 26).</b> Find <span class="sig"><small>∞</small><b>Σ</b><small>r = 1</small></span><span class="frac"><span>2</span><span>3</span></span>(<span class="frac"><span>7</span><span>8</span></span>)<sup>r</sup>.
+    <ol>
+      <li>First term: put r = 1, so u<sub>1</sub> = <span class="frac"><span>2</span><span>3</span></span> × <span class="frac"><span>7</span><span>8</span></span> = <span class="frac"><span>14</span><span>24</span></span> = <span class="frac"><span>7</span><span>12</span></span>. It is not <span class="frac"><span>2</span><span>3</span></span>.</li>
+      <li>Ratio: r = <span class="frac"><span>7</span><span>8</span></span>, and |<span class="frac"><span>7</span><span>8</span></span>| &lt; 1, so the sum exists.</li>
+      <li>S<sub>∞</sub> = <span class="frac"><span>7/12</span><span>1 − 7/8</span></span> = <span class="frac"><span>7</span><span>12</span></span> × 8 = <span class="frac"><span>56</span><span>12</span></span> = <b><span class="frac"><span>14</span><span>3</span></span></b>.</li>
+    </ol></div>
+
+  <div class="worked"><b>Worked example 2: the bouncing ball in the banner (pack question 9).</b> A ball is dropped from 10 m and each bounce reaches <span class="frac"><span>2</span><span>3</span></span> of the previous height. Find the total distance travelled.
+    <ol>
+      <li>The ball falls 10 m once. After that, every peak is travelled twice: up and down.</li>
+      <li>The peaks are 10 × <span class="frac"><span>2</span><span>3</span></span> = <span class="frac"><span>20</span><span>3</span></span>, then <span class="frac"><span>40</span><span>9</span></span>, and so on: geometric with u<sub>1</sub> = <span class="frac"><span>20</span><span>3</span></span> and r = <span class="frac"><span>2</span><span>3</span></span>.</li>
+      <li>Sum of the peaks: <span class="frac"><span>20/3</span><span>1 − 2/3</span></span> = <span class="frac"><span>20</span><span>3</span></span> × 3 = 20 m.</li>
+      <li>Total: 10 + 2 × 20 = <b>50 m</b>. For a drop from x metres the same steps give 5x, which is part (c) of the pack question.</li>
+    </ol></div>
+
+  <div class="worked"><b>Worked example 3: when does the sum exist?</b> For which x does 1 + 2x + 4x<sup>2</sup> + … have a sum to infinity? Find the sum when x = <span class="frac"><span>1</span><span>4</span></span>.
+    <ol>
+      <li>Ratio: r = <span class="frac"><span>2x</span><span>1</span></span> = 2x.</li>
+      <li>Condition: |2x| &lt; 1, so |x| &lt; <span class="frac"><span>1</span><span>2</span></span>, that is −<span class="frac"><span>1</span><span>2</span></span> &lt; x &lt; <span class="frac"><span>1</span><span>2</span></span>.</li>
+      <li>x = <span class="frac"><span>1</span><span>4</span></span> is inside, r = <span class="frac"><span>1</span><span>2</span></span>, so S<sub>∞</sub> = <span class="frac"><span>1</span><span>1 − 1/2</span></span> = <b>2</b>.</li>
+    </ol></div>
+
+  <div class="tip"><b>Exam traps.</b> (1) Using S<sub>∞</sub> without checking |r| &lt; 1: always write the check, it is often a mark. (2) Wrong first term when the sigma has a power r instead of r − 1, as in (<span class="frac"><span>7</span><span>8</span></span>)<sup>r</sup> (worked example 1): put r = 1 to find u<sub>1</sub>. (3) Bouncing-ball questions: the first drop is counted once, every later height twice. (4) Dividing by r or by 1 + r instead of 1 − r.</div>
+
+  <details><summary>Self-check SL 1.8</summary>
+    <ol>
+      <li>Find S<sub>∞</sub> for 12 + 8 + <span class="frac"><span>16</span><span>3</span></span> + …</li>
+      <li>Does 2 − 4 + 8 − … have a sum to infinity? Why?</li>
+      <li>A geometric series has S<sub>∞</sub> = 40 and r = <span class="frac"><span>3</span><span>4</span></span>. Find u<sub>1</sub>.</li>
+    </ol>
+    <p><b>Answers.</b> 1: r = <span class="frac"><span>2</span><span>3</span></span>, S<sub>∞</sub> = <span class="frac"><span>12</span><span>1/3</span></span> = 36. 2: no; r = −2 and |−2| = 2 is not less than 1, so the terms grow. 3: 40 = <span class="frac"><span>u<sub>1</sub></span><span>1/4</span></span>, so u<sub>1</sub> = 10.</p>
+  </details>
+</section>
+
+<!-- =============================== SL 1.4 =============================== -->
+<section class="topic" id="s14">
+  <div class="kicker">SL 1.4</div>
+  <h2>Financial applications: compound interest and depreciation</h2>
+  <p class="guiding">Money that grows or shrinks by a percentage is a geometric sequence.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="f1"><span>Calculate compound interest paid yearly, half-yearly, quarterly or monthly, with the formula and with the GDC financial app</span></label>
+    <label><input type="checkbox" data-k="f2"><span>Calculate annual depreciation</span></label>
+    <label><input type="checkbox" data-k="f3"><span>Contrast simple interest (arithmetic) with compound interest (geometric)</span></label>
+    <label><input type="checkbox" data-k="f4"><span>Calculate the real value of an investment given an interest rate and an inflation rate</span></label>
+  </div>
+
+  <div class="fbox">
+    <div class="formula"><span class="nw">FV = PV × (1 + <span class="frac"><span>r</span><span>100k</span></span>)<sup>kn</sup></span> <span class="fb">In booklet</span></div>
+    <p style="margin:0 0 8px;font-size:.95rem">FV is the future value, PV the present value, n the number of years, k the number of compounding periods per year (1 yearly, 2 half-yearly, 4 quarterly, 12 monthly), r% the nominal annual interest rate.</p>
+    <div class="formula"><span class="nw">value after n years</span> <span class="nw">= original × (1 − <span class="frac"><span>r</span><span>100</span></span>)<sup>n</sup></span> <span class="learn">Learn</span></div>
+    <p style="margin:0 0 8px;font-size:.95rem">Depreciation is the same idea with a decrease: this is the booklet formula with k = 1 and −r in place of r. The guide says exam questions will not ask you to derive the formula, and may expect the GDC financial app.</p>
+  </div>
+
+  <figure>
+    <svg viewBox="0 0 700 310" aria-label="Graph of Andy's simple interest balance as a straight line and Jess's compound interest balance as a curve that overtakes it after 17 years">
+      <g font-family="Arial" font-size="22" fill="#1E2A33">
+        <line x1="70" y1="250" x2="680" y2="250" stroke="#1E2A33" stroke-width="1.5"/>
+        <line x1="70" y1="250" x2="70" y2="20" stroke="#1E2A33" stroke-width="1.5"/>
+        <g stroke="#D6DCD8"><line x1="70" y1="176.7" x2="680" y2="176.7"/><line x1="70" y1="103.3" x2="680" y2="103.3"/><line x1="70" y1="30" x2="680" y2="30"/></g>
+        <g text-anchor="end"><text x="64" y="257">5000</text><text x="64" y="184">7000</text><text x="64" y="110">9000</text><text x="64" y="37">11000</text></g>
+        <g text-anchor="middle"><text x="70" y="276">0</text><text x="190" y="276">5</text><text x="310" y="276">10</text><text x="430" y="276">15</text><text x="550" y="276">20</text><text x="670" y="276">25</text></g>
+        <text x="375" y="302" text-anchor="middle">years</text>
+        <line x1="70" y1="250" x2="670" y2="76.8" stroke="#2F47A6" stroke-width="3"/>
+        <polyline points="70,250.0 94,244.5 118,238.8 142,233.0 166,227.0 190,220.8 214,214.4 238,207.9 262,201.1 286,194.1 310,186.9 334,179.6 358,171.9 382,164.1 406,156.0 430,147.7 454,139.1 478,130.3 502,121.2 526,111.9 550,102.2 574,92.3 598,82.0 622,71.5 646,60.7 670,49.5" fill="none" stroke="#B8761A" stroke-width="3"/>
+        <line x1="478" y1="250" x2="478" y2="130" stroke="#4A5862" stroke-dasharray="4 4"/>
+        <text x="496" y="240" text-anchor="middle" font-size="20" fill="#4A5862">17</text>
+      </g>
+    </svg>
+    <div class="keyrow"><span><span class="sw" style="background:#2F47A6"></span>Andy, simple interest: 5000 + 189n</span><span><span class="sw" style="background:#B8761A"></span>Jess, 3% compounded yearly: 5000 × 1.03<sup>n</sup></span></div>
+    <figcaption>Pack question 5. The straight line is arithmetic, the curve is geometric. After 16 years Andy still leads ($8024 against $8023.53); after 17 years Jess is ahead ($8264.24 against $8213), so the answer is 17 complete years.</figcaption>
+  </figure>
+
+  <div class="worked"><b>Worked example 1: yearly compounding (pack question 5(b)).</b> Jess invests $5000 at 3% compounded annually. Find the value after 5 years and the interest earned.
+    <ol>
+      <li>PV = 5000, r = 3, k = 1, n = 5.</li>
+      <li>FV = 5000 × <span class="nw">(1 + <span class="frac"><span>3</span><span>100</span></span>)<sup>5</sup></span> = 5000 × 1.03<sup>5</sup> = 5796.37…</li>
+      <li>To the nearest dollar: <b>$5796</b>. Interest = 5796.37 − 5000 = <b>$796</b>.</li>
+    </ol></div>
+
+  <div class="worked"><b>Worked example 2: monthly compounding (pack question 17).</b> Sorin invests $160&nbsp;000 at a nominal 5% a year, compounded monthly. Find the value after 6 months.
+    <ol>
+      <li>k = 12, so each month multiplies by <span class="nw">1 + <span class="frac"><span>5</span><span>1200</span></span></span>.</li>
+      <li>After n years: 160&nbsp;000 × <span class="nw">(1 + <span class="frac"><span>5</span><span>1200</span></span>)<sup>12n</sup></span>. Six months is n = 0.5, so the power is 12 × 0.5 = 6.</li>
+      <li>160&nbsp;000 × <span class="nw">(1 + <span class="frac"><span>5</span><span>1200</span></span>)<sup>6</sup></span> = <b>$164&nbsp;041.89</b> to two decimal places.</li>
+      <li>On the GDC financial app: N = 0.5 (years), I% = 5, PV = −160&nbsp;000, PMT = 0, P/Y = 1, C/Y = 12, solve FV. PV and FV must have opposite signs (money paid in is negative).</li>
+    </ol></div>
+
+  <div class="worked"><b>Worked example 3: depreciation in two stages (pack question 15).</b> A car bought for $35&nbsp;000 loses 15% in the first year, then 11% in each later year. Find its value 10 years after purchase.
+    <ol>
+      <li>End of year 1: 35&nbsp;000 × 0.85 = $29&nbsp;750.</li>
+      <li>Ten years after purchase means nine more years at 11%: multiply by 0.89 nine times, not ten.</li>
+      <li>29&nbsp;750 × 0.89<sup>9</sup> = 10&nbsp;423.10…, so <b>$10&nbsp;423</b> to the nearest dollar.</li>
+      <li>Part (c), less than 10% of the original ($3500): solve 29&nbsp;750 × 0.89<sup>n−1</sup> &lt; 3500 with a table. n = 19 gives $3651.80, n = 20 gives $3250.10, so <b>n = 20</b>.</li>
+    </ol></div>
+
+  <div class="worked"><b>Worked example 4: find the rate (pack question 17(d)).</b> $30&nbsp;000 grows to $41&nbsp;000 in six years with interest compounded quarterly. Find r.
+    <ol>
+      <li>30&nbsp;000 × <span class="nw">(1 + <span class="frac"><span>r</span><span>400</span></span>)<sup>24</sup></span> = 41&nbsp;000 (k = 4, kn = 24).</li>
+      <li>Solve with the GDC (solver or financial app): r = 5.2403…</li>
+      <li><b>r = 5.24%</b> to two decimal places, as the question asks.</li>
+    </ol></div>
+
+  <h3>Real value and inflation</h3>
+  <p>Inflation means prices rise, so the same amount of money buys less. The <b>real value</b> of an investment is what it is worth in today's prices.</p>
+  <div class="worked"><b>Worked example 5.</b> $1000 is invested for 10 years at 5% compounded yearly. Inflation is 2% a year. Find the real value.
+    <ol>
+      <li>Nominal value: 1000 × 1.05<sup>10</sup> = $1628.89.</li>
+      <li>Remove 10 years of 2% inflation: 1628.89 ÷ 1.02<sup>10</sup> = <b>$1336.26</b> in today's money.</li>
+      <li>Quick method many textbooks and mark schemes use: real rate ≈ 5% − 2% = 3%, so 1000 × 1.03<sup>10</sup> = $1343.92. Use the method your teacher showed and say which one you used.</li>
+    </ol></div>
+  <!-- Uncertain detail: the IB guide says "Calculate the real value of an investment with an interest rate and an inflation rate" but does not
+       specify the method. Mark schemes commonly use the approximation real rate = interest rate - inflation rate in the compound interest
+       formula; dividing by (1 + i/100)^n is exact. Both are shown so Jamila can follow whichever her teacher uses. -->
+
+  <div class="tip"><b>Exam traps.</b> (1) Wrong k or forgetting to multiply n by k: monthly for 3 years is a power of 36. (2) "After 10 years" counted from the wrong starting value, as in worked example 3. (3) Rounding money too early or to the wrong accuracy: the first answer given to the wrong number of decimal places loses a mark (pack question 17's note). (4) GDC: PV and FV with the same sign gives an error or a nonsense answer.</div>
+
+  <details><summary>Self-check SL 1.4</summary>
+    <ol>
+      <li>Daniela's Option B pays $1500 in the first month and 4% more each month for 36 months. Find the total. (pack question 17(a)(ii))</li>
+      <li>Gemma earns $45&nbsp;000 in 2011 and gets 2% more on 1 January each year. Find her 2021 salary to the nearest dollar. (pack question 24(a))</li>
+      <li>A laptop bought for $2000 depreciates by 20% a year. Find its value after 3 years.</li>
+    </ol>
+    <p><b>Answers.</b> 1: geometric sum, <span class="frac"><span>1500(1.04<sup>36</sup> − 1)</span><span>1.04 − 1</span></span> = $116&nbsp;397.47. 2: 2021 is 10 years after 2011: 45&nbsp;000 × 1.02<sup>10</sup> = $54&nbsp;855. 3: 2000 × 0.8<sup>3</sup> = 2000 × 0.512 = $1024.</p>
+  </details>
+</section>
+
+<!-- =============================== SL 1.6 =============================== -->
+<section class="topic" id="s16">
+  <div class="kicker">SL 1.6</div>
+  <h2>Simple deductive proof</h2>
+  <p class="guiding">A proof shows something is true for every case, not just the cases you tried.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="p1"><span>Write a simple deductive proof, numerical or algebraic</span></label>
+    <label><input type="checkbox" data-k="p2"><span>Lay out a left-hand side to right-hand side (LHS to RHS) proof</span></label>
+    <label><input type="checkbox" data-k="p3"><span>Use the symbols for equality (=) and identity (≡) correctly</span></label>
+    <label><input type="checkbox" data-k="p4"><span>Check a result, including my own answers</span></label>
+  </div>
+
+  <h3>Equality and identity</h3>
+  <p><b>=</b> (equals) is true for some values: x + 2 = 5 only when x = 3. <b>≡</b> (is identical to) is true for every value of the variable: (x + 1)<sup>2</sup> ≡ x<sup>2</sup> + 2x + 1 for all x. Most "show that" algebra questions are identities. <span class="learn">Learn</span> the symbol and when to use it.</p>
+
+  <h3>How to lay out an LHS to RHS proof</h3>
+  <ol>
+    <li>Start with one side only, usually the more complicated one.</li>
+    <li>Change it one step at a time with algebra you can justify (expand, factorise, common denominator).</li>
+    <li>Stop when you reach exactly the other side. Write "= RHS" and a short concluding sentence.</li>
+  </ol>
+  <p>Never start from the statement you are trying to prove and work on both sides at once: that assumes the answer.</p>
+
+  <div class="worked"><b>Worked example 1: the guide's own example.</b> Show that (x − 3)<sup>2</sup> + 5 ≡ x<sup>2</sup> − 6x + 14.
+    <div class="proof">
+      <div><span class="m">LHS = (x − 3)<sup>2</sup> + 5</span></div>
+      <div><span class="m">&nbsp;&nbsp;&nbsp;&nbsp;= x<sup>2</sup> − 6x + 9 + 5</span><span class="note">expand the bracket</span></div>
+      <div><span class="m">&nbsp;&nbsp;&nbsp;&nbsp;= x<sup>2</sup> − 6x + 14 = RHS</span><span class="note">collect terms</span></div>
+    </div>
+    Check, as the guide asks: put x = 0. LHS = 9 + 5 = 14 and RHS = 14. A check is not a proof, but it catches slips.</div>
+
+  <div class="worked"><b>Worked example 2: numerical, then algebraic (also from the guide).</b> Show that <span class="frac"><span>1</span><span>4</span></span> + <span class="frac"><span>1</span><span>12</span></span> = <span class="frac"><span>1</span><span>3</span></span>, then that <span class="frac"><span>1</span><span>m + 1</span></span> + <span class="frac"><span>1</span><span>m<sup>2</sup> + m</span></span> ≡ <span class="frac"><span>1</span><span>m</span></span>.
+    <div class="proof">
+      <div><span class="m">LHS = <span class="frac"><span>1</span><span>4</span></span> + <span class="frac"><span>1</span><span>12</span></span> = <span class="frac"><span>3</span><span>12</span></span> + <span class="frac"><span>1</span><span>12</span></span></span><span class="note">common denominator</span></div>
+      <div><span class="m">&nbsp;&nbsp;&nbsp;&nbsp;= <span class="frac"><span>4</span><span>12</span></span> = <span class="frac"><span>1</span><span>3</span></span> = RHS</span></div>
+    </div>
+    <div class="proof">
+      <div><span class="m">LHS = <span class="frac"><span>1</span><span>m + 1</span></span> + <span class="frac"><span>1</span><span>m(m + 1)</span></span></span><span class="note">factorise m<sup>2</sup> + m</span></div>
+      <div><span class="m">&nbsp;&nbsp;&nbsp;&nbsp;= <span class="frac"><span>m</span><span>m(m + 1)</span></span> + <span class="frac"><span>1</span><span>m(m + 1)</span></span></span><span class="note">common denominator</span></div>
+      <div><span class="m">&nbsp;&nbsp;&nbsp;&nbsp;= <span class="frac"><span>m + 1</span><span>m(m + 1)</span></span> = <span class="frac"><span>1</span><span>m</span></span> = RHS</span><span class="note">cancel m + 1</span></div>
+    </div>
+    With m = 3 this is exactly the numerical line. It holds for every m except 0 and −1, where a denominator would be zero (proof pack Easy 2(a)(ii) and Hard 5(b) ask you to state such cases).</div>
+
+  <div class="worked"><b>Worked example 3: a statement about all integers (proof pack Medium 4).</b> Prove that the sum of any three consecutive integers is divisible by 3.
+    <ol>
+      <li>Let the integers be n, n + 1 and n + 2, where n is any integer. (Letters, not examples: 4 + 5 + 6 = 15 proves nothing about other cases.)</li>
+      <li>Sum = n + (n + 1) + (n + 2) = 3n + 3.</li>
+      <li>= 3(n + 1).</li>
+      <li>n + 1 is an integer, so the sum is 3 times an integer: divisible by 3.</li>
+    </ol>
+    Useful forms <span class="learn">Learn</span>: an even integer is 2k, an odd integer is 2k + 1. For two different odd numbers use different letters, 2a + 1 and 2b + 1.</div>
+
+  <div class="worked"><b>Worked example 4: proof inside a sequences question (sequences pack question 1).</b> The first three terms of an arithmetic sequence are u<sub>1</sub>, 5u<sub>1</sub> − 8 and 3u<sub>1</sub> + 8. Show that u<sub>1</sub> = 4, then prove that S<sub>n</sub> is always a square number.
+    <ol>
+      <li>Equal differences: (5u<sub>1</sub> − 8) − u<sub>1</sub> = (3u<sub>1</sub> + 8) − (5u<sub>1</sub> − 8).</li>
+      <li>4u<sub>1</sub> − 8 = −2u<sub>1</sub> + 16, so 6u<sub>1</sub> = 24 and u<sub>1</sub> = 4.</li>
+      <li>The terms are 4, 12, 20, so d = 8.</li>
+      <li>S<sub>n</sub> = <span class="frac"><span>n</span><span>2</span></span>(2 × 4 + 8(n − 1)) = <span class="frac"><span>n</span><span>2</span></span>(8n) = 4n<sup>2</sup> = (2n)<sup>2</sup>.</li>
+      <li>2n is an integer, so S<sub>n</sub> is a square number. The mark scheme gives the last mark only for saying why 4n<sup>2</sup> is a square.</li>
+    </ol></div>
+
+  <div class="worked"><b>Worked example 5: always positive (proof pack Medium 2).</b> Show that x<sup>2</sup> − 3x + 3 &gt; 0 for all x.
+    <ol>
+      <li>Complete the square: x<sup>2</sup> − 3x + 3 = <span class="nw">(x − <span class="frac"><span>3</span><span>2</span></span>)<sup>2</sup></span> − <span class="frac"><span>9</span><span>4</span></span> + 3 = <span class="nw">(x − <span class="frac"><span>3</span><span>2</span></span>)<sup>2</sup></span> + <span class="frac"><span>3</span><span>4</span></span>.</li>
+      <li>A square is never negative: <span class="nw">(x − <span class="frac"><span>3</span><span>2</span></span>)<sup>2</sup></span> ≥ 0.</li>
+      <li>So the expression is at least <span class="frac"><span>3</span><span>4</span></span>, which is greater than 0, for every x.</li>
+    </ol></div>
+
+  <div class="tip"><b>Exam traps.</b> (1) Testing a few numbers instead of using letters: examples are a check, never a proof. (2) Working on both sides at once, or starting from the statement to be proved. (3) Using the same letter for two different numbers (2n + 1 and 2n + 1 are the same odd number). (4) Stopping at "= 3n + 3" without the final sentence: the conclusion line is often the last mark. (5) Writing = when the question wants ≡, or the other way round.</div>
+
+  <details><summary>Self-check SL 1.6</summary>
+    <ol>
+      <li>Show that (a − b)<sup>2</sup> − (a + b)<sup>2</sup> ≡ −4ab. (proof pack Medium 3)</li>
+      <li>Prove that the square of any even integer is divisible by 4. (Medium 5)</li>
+      <li>Prove that the sum of any three consecutive even integers is divisible by 6. (Medium 15)</li>
+      <li>Prove that the product of any two odd integers is odd. (Hard 2)</li>
+    </ol>
+    <p><b>Answers.</b> 1: LHS = a<sup>2</sup> − 2ab + b<sup>2</sup> − (a<sup>2</sup> + 2ab + b<sup>2</sup>) = −4ab = RHS. 2: (2k)<sup>2</sup> = 4k<sup>2</sup>, and k<sup>2</sup> is an integer, so it is divisible by 4. 3: 2n + (2n + 2) + (2n + 4) = 6n + 6 = 6(n + 1), and n + 1 is an integer. 4: (2a + 1)(2b + 1) = 4ab + 2a + 2b + 1 = 2(2ab + a + b) + 1, which is 2 times an integer plus 1, so odd.</p>
+  </details>
+</section>
+
+<!-- =============================== QUIZ =============================== -->
+<section class="topic quiz" id="quiz">
+  <div class="kicker">Ten questions, Paper 1 style (no calculator)</div>
+  <h2>Quick quiz</h2>
+  <p>Work each one out on paper first, then click your answer. Every question explains the trap after you answer. Write any you miss into the Error log.</p>
+
+  <div class="q" data-a="2"><p>1. The arithmetic sequence 7, 11, 15, … has 20<sup>th</sup> term</p>
+    <button>80</button>
+    <button>87</button>
+    <button>83</button>
+    <button>76</button>
+    <div class="why">u<sub>20</sub> = 7 + 19 × 4 = 83. The trap is 87, from 7 + 20 × 4: there are only 19 steps from the 1<sup>st</sup> term to the 20<sup>th</sup>.</div></div>
+
+  <div class="q" data-a="1"><p>2. <span class="sig"><small>12</small><b>Σ</b><small>r = 3</small></span>(2r − 1) equals</p>
+    <button>135</button>
+    <button>140</button>
+    <button>144</button>
+    <button>280</button>
+    <div class="why">There are 12 − 3 + 1 = 10 terms, from 5 (r = 3) to 23 (r = 12), so the sum is <span class="frac"><span>10</span><span>2</span></span>(5 + 23) = 140. 135 uses only 9 terms (12 − 3); 144 starts at r = 1 instead of r = 3; 280 forgets to halve, 10 × 28.</div></div>
+
+  <div class="q" data-a="0"><p>3. In an arithmetic sequence u<sub>3</sub> = 11 and u<sub>8</sub> = 26. The first term is</p>
+    <button>5</button>
+    <button>2</button>
+    <button>8</button>
+    <button>3</button>
+    <div class="why">From u<sub>3</sub> to u<sub>8</sub> is 5 steps: 5d = 15, d = 3. Then u<sub>3</sub> = u<sub>1</sub> + 2d gives u<sub>1</sub> = 11 − 6 = 5. The trap is 2, from u<sub>3</sub> = u<sub>1</sub> + 3d; d itself (3) is another tempting slip.</div></div>
+
+  <div class="q" data-a="3"><p>4. The sum of the first n terms of a sequence is S<sub>n</sub> = 2n<sup>2</sup> + n. The 5<sup>th</sup> term is</p>
+    <button>55</button>
+    <button>11</button>
+    <button>36</button>
+    <button>19</button>
+    <div class="why">u<sub>5</sub> = S<sub>5</sub> − S<sub>4</sub> = 55 − 36 = 19. 55 is S<sub>5</sub>, the sum of five terms, not the fifth term; 11 is the average of the first five terms.</div></div>
+
+  <div class="q" data-a="1"><p>5. The 7<sup>th</sup> term of the geometric sequence 3, −6, 12, … is</p>
+    <button>−192</button>
+    <button>192</button>
+    <button>−384</button>
+    <button>384</button>
+    <div class="why">r = −2 and u<sub>7</sub> = 3 × (−2)<sup>6</sup> = 3 × 64 = 192. An even power of a negative number is positive. ±384 come from using the power 7 instead of 6.</div></div>
+
+  <div class="q" data-a="2"><p>6. A geometric sequence has u<sub>2</sub> = 6 and u<sub>5</sub> = 162. The sum of the first four terms is</p>
+    <button>54</button>
+    <button>242</button>
+    <button>80</button>
+    <button>40</button>
+    <div class="why">r<sup>3</sup> = 162 ÷ 6 = 27, so r = 3 and u<sub>1</sub> = 2. S<sub>4</sub> = 2 + 6 + 18 + 54 = 80. 54 is the 4<sup>th</sup> term, not the sum; 242 is S<sub>5</sub>.</div></div>
+
+  <div class="q" data-a="3"><p>7. The sum to infinity of 12 + 8 + <span class="frac"><span>16</span><span>3</span></span> + … is</p>
+    <button>18</button>
+    <button>7.2</button>
+    <button>24</button>
+    <button>36</button>
+    <div class="why">r = <span class="frac"><span>8</span><span>12</span></span> = <span class="frac"><span>2</span><span>3</span></span>, |r| &lt; 1, S<sub>∞</sub> = <span class="frac"><span>12</span><span>1 − 2/3</span></span> = 12 × 3 = 36. 18 divides by r instead of 1 − r; 7.2 divides by 1 + r.</div></div>
+
+  <div class="q" data-a="0"><p>8. <span class="sig"><small>∞</small><b>Σ</b><small>r = 1</small></span>5(<span class="frac"><span>1</span><span>4</span></span>)<sup>r</sup> equals</p>
+    <button><span class="frac"><span>5</span><span>3</span></span></button>
+    <button><span class="frac"><span>20</span><span>3</span></span></button>
+    <button><span class="frac"><span>5</span><span>4</span></span></button>
+    <button>4</button>
+    <div class="why">The first term is r = 1: 5 × <span class="frac"><span>1</span><span>4</span></span> = <span class="frac"><span>5</span><span>4</span></span>, not 5. S<sub>∞</sub> = <span class="frac"><span>5/4</span><span>3/4</span></span> = <span class="frac"><span>5</span><span>3</span></span>. <span class="frac"><span>20</span><span>3</span></span> comes from using 5 as the first term; <span class="frac"><span>5</span><span>4</span></span> is only the first term.</div></div>
+
+  <div class="q" data-a="2"><p>9. A car worth $20&nbsp;000 loses 10% of its value each year. Its value after 2 years is</p>
+    <button>$16&nbsp;000</button>
+    <button>$18&nbsp;000</button>
+    <button>$16&nbsp;200</button>
+    <button>$16&nbsp;400</button>
+    <div class="why">20&nbsp;000 × 0.9<sup>2</sup> = 20&nbsp;000 × 0.81 = $16&nbsp;200. $16&nbsp;000 takes 10% of the original price twice, which is simple (arithmetic) depreciation; each year's 10% is of the value at that time.</div></div>
+
+  <div class="q" data-a="3"><p>10. Which is a valid proof that the sum of any two odd integers is even?</p>
+    <button>3 + 5 = 8 and 7 + 9 = 16, which are both even</button>
+    <button>Let both odd integers be 2n + 1; then the sum is 4n + 2 = 2(2n + 1), which is even</button>
+    <button>Assume the sum is even; then 2k = odd + odd, so the statement holds</button>
+    <button>Let the integers be 2a + 1 and 2b + 1, with a and b integers; the sum is 2a + 2b + 2 = 2(a + b + 1), which is 2 times an integer, so even</button>
+    <div class="why">Examples (option 1) prove nothing about other cases. One letter for both numbers (option 2) only covers adding an odd number to itself. Option 3 assumes what it is trying to prove. Option 4 uses two independent letters and ends with the reason.</div></div>
+
+  <div class="score" id="score">Score: 0 / 10 answered 0</div>
+</section>
+
+<section class="end" id="end">
+  <h2 style="font-size:1.4rem">Before you close this</h2>
+  <ul>
+    <li>Tick the "I can" boxes you are confident about. The unticked ones are the first ten minutes of your next maths session.</li>
+    <li>Mark the pack questions you did against the mark scheme, including the method marks (M1) and not just the answers.</li>
+    <li>Open the study sheet, <b>Error log</b> tab, and write one row for every mistake from the pack questions and the quiz: what went wrong, and the rule that fixes it (for example "used n instead of n − 1 in u<sub>n</sub>").</li>
+    <li>Still to come in Topic 1 at school: the binomial theorem (official SL 1.9). Laws of exponents and logarithms (official SL 1.5 and 1.7) come with exponential functions in Topic 2.</li>
+  </ul>
+</section>
+
+</main>
+
+<script>
+(function(){
+  // remember ticked "I can" boxes on this device; fails quietly where storage is unavailable
+  var key='ib-maths-aa-sl-12-16-ican';
+  var boxes=document.querySelectorAll('.ican input');
+  try{ var saved=JSON.parse(localStorage.getItem(key)||'{}'); boxes.forEach(function(b){ if(saved[b.dataset.k]) b.checked=true; }); }catch(e){}
+  boxes.forEach(function(b){ b.addEventListener('change',function(){ try{ var s={}; boxes.forEach(function(x){ if(x.checked) s[x.dataset.k]=1; }); localStorage.setItem(key,JSON.stringify(s)); }catch(e){} }); });
+
+  // quiz
+  var qs=document.querySelectorAll('.quiz .q'); var right=0, done=0, total=qs.length;
+  qs.forEach(function(q){
+    var a=parseInt(q.dataset.a,10); var btns=q.querySelectorAll('button');
+    btns.forEach(function(b,i){ b.addEventListener('click',function(){
+      if(q.classList.contains('done')) return;
+      q.classList.add('done'); done++;
+      if(i===a){ b.classList.add('right'); right++; } else { b.classList.add('wrong'); btns[a].classList.add('right'); }
+      document.getElementById('score').textContent='Score: '+right+' / '+total+' answered '+done+(done===total?(right>=8?'. Good. Log the ones you missed.':'. Re-read the sections for the ones you missed, then log them.'):'');
+    }); });
+  });
+})();
+</script>
+</body>
+</html>
