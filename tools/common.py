@@ -41,7 +41,7 @@ CSS = r'''
   .nw{white-space:nowrap}
   @media (max-width:600px){h1{font-size:1.7rem}body{font-size:16px}th,td{padding:6px}}
 '''
-def page(title, crumb, h1, intro, body, script=""):
+def page(title, crumb, h1, intro, body, script="", crumb_label="All study pages"):
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,7 +52,7 @@ def page(title, crumb, h1, intro, body, script=""):
 </head>
 <body>
 <header class="top"><div class="wrap" style="padding-bottom:0">
-  <div class="crumb"><a href="{crumb}">All study pages</a></div>
+  <div class="crumb"><a href="{crumb}">{crumb_label}</a></div>
   <h1>{h1}</h1>
   <p>{intro}</p>
 </div></header>

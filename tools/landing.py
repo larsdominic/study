@@ -14,8 +14,7 @@ body=f'''
 <div class="tools">
   <a class="tl" href="progress.html"><b>Progress</b><span>Every syllabus topic, coloured by how far you have got</span></a>
   <a class="tl" href="flashcards.html"><b>Flashcards</b><span>Learn-by-heart cards, 5 to 10 minutes a day</span></a>
-  <a class="tl" href="exam-maths-aa-sl.html"><b>Exam technique: Maths</b><span>Papers, habits, command terms</span></a>
-  <a class="tl" href="exam-chemistry-hl.html"><b>Exam technique: Chemistry</b><span>Papers, habits, command terms</span></a>
+  <a class="tl" href="exam.html"><b>Exam technique</b><span>Pick a subject: papers, habits that win marks, command terms</span></a>
   <a class="tl" href="{SHEET}"><b>Study sheet</b><span>Daily plan, files and the Error log</span></a>
 </div>
 <div id="plan"></div>

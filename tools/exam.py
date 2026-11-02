@@ -1,5 +1,6 @@
-import sys; sys.path.insert(0,sys.argv[1]); from common import *
+import sys, os; sys.path.insert(0,sys.argv[1]); from common import *
 out=sys.argv[2]
+BM_PAGE="exam-business-management-sl.html" if os.path.exists(os.path.join(sys.argv[1],"exam_bm.py")) else None
 def terms_table(rows):
     tr=''.join(f'<tr><td><b>{a}</b></td><td>{b}</td></tr>' for a,b in rows)
     return f'<div class="tablewrap"><table><tr><th>Command term</th><th>What the IB means (official definition)</th></tr>{tr}</table></div>'
@@ -69,7 +70,7 @@ maths_body=f'''
 {terms_table(M_TERMS)}
 <p style="font-size:.9rem;color:var(--ink-soft)">Source: the "Glossary of command terms" in the IB Mathematics: analysis and approaches guide (<a href="{DRIVE('1QEKfLslMdDBj1lHfmenCX7V887rTu_IN')}">in your folder</a>). The formula booklet is <a href="{DRIVE('1yofdn_7Gu3pb2O5G6iHhrXVgRUQ1Qldz')}">here</a>.</p>
 '''
-open(out+'/exam-maths-aa-sl.html','w').write(page("Exam technique: Maths AA SL","index.html","Exam technique: Maths AA SL","How the two papers work, the habits that win marks, and what every command word asks for.",maths_body))
+open(out+'/exam-maths-aa-sl.html','w').write(page("Exam technique: Maths AA SL","exam.html","Exam technique: Maths AA SL","How the two papers work, the habits that win marks, and what every command word asks for.",maths_body,crumb_label="Exam technique: all subjects"))
 
 C_TERMS=[("Draw","Represent by means of a labelled, accurate diagram or graph, using a pencil. A ruler (straight edge) should be used for straight lines. Diagrams should be drawn to scale. Graphs should have points correctly plotted (if appropriate) and joined in a straight line or smooth curve.","1"),
 ("State","Give a specific name, value or other brief answer without explanation or calculation.","1"),
@@ -117,5 +118,27 @@ chem_body=f'''
 <div class="tablewrap"><table><tr><th>Command term</th><th>Level</th><th>What the IB means (official definition)</th></tr>{ctr}</table></div>
 <p style="font-size:.9rem;color:var(--ink-soft)">Source: the "Glossary of command terms" and assessment outline in the IB Chemistry guide, first assessment 2025 (<a href="{DRIVE('1Blcb2xlieXOizwTcIWsH7w5WwMsX-YtB')}">in your folder</a>).</p>
 '''
-open(out+'/exam-chemistry-hl.html','w').write(page("Exam technique: Chemistry HL","index.html","Exam technique: Chemistry HL","How the HL papers work, the habits that win marks, and what every command word asks for.",chem_body))
+open(out+'/exam-chemistry-hl.html','w').write(page("Exam technique: Chemistry HL","exam.html","Exam technique: Chemistry HL","How the HL papers work, the habits that win marks, and what every command word asks for.",chem_body,crumb_label="Exam technique: all subjects"))
+
+# ---------- hub: one card per subject; add new subjects here ----------
+SUBJ=[("Maths AA SL","exam-maths-aa-sl.html","Paper 1 (no calculator) and Paper 2 (GDC), mark codes M1 A1 R1, all 36 command terms"),
+      ("Chemistry HL","exam-chemistry-hl.html","Paper 1A multiple choice, 1B data-based, Paper 2, all 18 command terms"),
+      ("Business Management SL",BM_PAGE,"Papers, case study, markbands and command terms"),
+      ("Biology HL",None,"Needs the official IB Biology guide (not in the folder yet: ask the school)"),
+      ("English A HL",None,"Needs the official IB English A guide (not in the folder yet: ask the school)"),
+      ("French B SL",None,"Needs the official IB Language B guide (not in the folder yet: ask the school)")]
+cards=''
+for name,link,desc in SUBJ:
+    if link: cards+=f'<a class="sc" href="{link}"><b>{name}</b><span>{desc}</span></a>'
+    else: cards+=f'<div class="sc off"><b>{name}</b><span class="soon">coming</span><span>{desc}</span></div>'
+hub=f'''
+<p style="margin-top:24px">Pick a subject. Each page covers how its exam papers work, the habits that win marks, and what every command word asks for, all taken from the official IB subject guide.</p>
+<div class="grid">{cards}</div>
+<style>.grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:16px 0}}
+.sc{{display:block;background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);padding:12px 14px;text-decoration:none;color:var(--ink)}}
+.sc b{{display:block;color:var(--indigo);font-size:1.1rem}} .sc span{{display:block;font-size:.9rem;color:var(--ink-soft);margin-top:2px}}
+.sc.off{{border-left-color:#C3C9CD}} .sc.off b{{color:var(--ink-soft)}} .sc .soon{{display:inline-block;font-size:.75rem;font-weight:700;background:#EDF0EC;color:var(--grey);padding:1px 8px;border-radius:999px;margin:4px 0}}</style>
+<p style="font-size:.92rem;color:var(--ink-soft)">Grey subjects get their page as soon as their official subject guide is in the IB folder.</p>
+'''
+open(out+'/exam.html','w').write(page("Exam technique: all subjects","index.html","Exam technique","Choose a subject.",hub))
 print("exam ok")
