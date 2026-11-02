@@ -17,7 +17,12 @@ GUIDES=[
       anchors={"SL 1.2":"#s12","SL 1.3":"#s13","SL 1.8":"#s18","SL 1.4":"#s14","SL 1.6":"#s16"}),
 ]
 REVIEWS=[dict(title="Week 1 review (Sun 8 Nov)", link="review/2026-11-08-week-1.html", quiz="ib-quiz-review-2026-11-08")]
-SUBJECTS=[dict(name="Maths AA SL",topics=MATHS),dict(name="Chemistry HL",topics=CHEM)]
+BM=[("1.1","What is a business?"),("1.2","Types of business entities"),("1.3","Business objectives"),("1.4","Stakeholders"),("1.5","Growth and evolution"),("1.6","Multinational companies (MNCs)"),
+("2.1","Introduction to human resource management"),("2.2","Organizational structure"),("2.3","Leadership and management"),("2.4","Motivation and demotivation"),("2.6","Communication"),
+("3.1","Introduction to finance"),("3.2","Sources of finance"),("3.3","Costs and revenues"),("3.4","Final accounts"),("3.5","Profitability and liquidity ratio analysis"),("3.7","Cash flow"),("3.8","Investment appraisal"),
+("4.1","Introduction to marketing"),("4.2","Marketing planning"),("4.4","Market research"),("4.5","The seven Ps of the marketing mix"),
+("5.1","Introduction to operations management"),("5.2","Operations methods"),("5.4","Location"),("5.5","Break-even analysis")]  # SL sub-topics only (HL-only 2.5, 2.7, 3.6, 3.9, 4.3, 4.6, 5.3, 5.6-5.9 left out)
+SUBJECTS=[dict(name="Maths AA SL",topics=MATHS),dict(name="Chemistry HL",topics=CHEM),dict(name="Business Management SL",topics=BM)]
 body='''
 <div class="card" style="margin-top:24px">
   <b>What the colours mean</b>
@@ -55,7 +60,7 @@ SUBJECTS.forEach(function(s){var c={g:0,a:0,r:0,n:0}, rows='';
   s.topics.forEach(function(t){var i=info[s.name+'|'+t[0]]||{st:'n',ev:'',link:null}; c[i.st]++;
     rows+='<div class="trow"><span class="dot" style="background:'+COL[i.st]+';margin-top:7px"></span><div class="code">'+t[0]+'</div><div class="name">'+(i.link?'<a href="'+i.link+'">'+t[1]+'</a>':t[1])+'</div><div class="ev">'+i.ev+'</div></div>';});
   out+='<h2>'+s.name+'</h2><div class="sum"><span><span class="dot" style="background:var(--green)"></span>'+c.g+' secure</span><span><span class="dot" style="background:var(--amber)"></span>'+c.a+' in progress</span><span><span class="dot" style="background:var(--red)"></span>'+c.r+' to do</span><span><span class="dot" style="background:#C3C9CD"></span>'+c.n+' not covered yet</span></div><div class="card" style="padding-top:4px">'+rows+'</div>';});
-sd.innerHTML=out+'<p style="font-size:.9rem;color:var(--ink-soft)">Biology, Business, English and French appear here once they have study guides. Topic codes and order are the official IB ones. Maths AA section names are short summaries of the content of each section, because the IB guide numbers those sections without giving them titles; Chemistry names are the official IB titles.</p>';
+sd.innerHTML=out+'<p style="font-size:.9rem;color:var(--ink-soft)">Biology, English and French appear here once their official subject guides are in the folder. Topic codes and order are the official IB ones. Maths AA section names are short summaries of the content of each section, because the IB guide numbers those sections without giving them titles; Chemistry and Business Management names are the official IB titles (Business: SL sub-topics only).</p>';
 '''.replace('__S__',json.dumps(SUBJECTS)).replace('__G__',json.dumps(GUIDES)).replace('__R__',json.dumps(REVIEWS))
 open(out+'/progress.html','w').write(page("Progress: IB study","index.html","Progress","Every syllabus topic for each subject, coloured by how far Jamila has got. Tick the \"I can\" boxes in the guides and do the quizzes, and this page updates itself.",body,script))
 print("progress ok")
