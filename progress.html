@@ -92,7 +92,7 @@ SUBJECTS.forEach(function(s){var c={g:0,a:0,r:0,n:0}, rows='';
   s.topics.forEach(function(t){var i=info[s.name+'|'+t[0]]||{st:'n',ev:'',link:null}; c[i.st]++;
     rows+='<div class="trow"><span class="dot" style="background:'+COL[i.st]+';margin-top:7px"></span><div class="code">'+t[0]+'</div><div class="name">'+(i.link?'<a href="'+i.link+'">'+t[1]+'</a>':t[1])+'</div><div class="ev">'+i.ev+'</div></div>';});
   out+='<h2>'+s.name+'</h2><div class="sum"><span><span class="dot" style="background:var(--green)"></span>'+c.g+' secure</span><span><span class="dot" style="background:var(--amber)"></span>'+c.a+' in progress</span><span><span class="dot" style="background:var(--red)"></span>'+c.r+' to do</span><span><span class="dot" style="background:#C3C9CD"></span>'+c.n+' not covered yet</span></div><div class="card" style="padding-top:4px">'+rows+'</div>';});
-sd.innerHTML=out+'<p style="font-size:.9rem;color:var(--ink-soft)">Biology, Business, English and French appear here once they have study guides. Topic lists follow the official IB subject guides.</p>';
+sd.innerHTML=out+'<p style="font-size:.9rem;color:var(--ink-soft)">Biology, Business, English and French appear here once they have study guides. Topic codes and order are the official IB ones. Maths AA section names are short summaries of each section's content, because the IB guide numbers those sections without giving them titles; Chemistry names are the official IB titles.</p>';
 </script>
 </body>
 </html>
