@@ -39,9 +39,14 @@
   nav.toc a{text-decoration:none;color:var(--ink-soft);padding:6px 10px;border-radius:6px;font-size:.92rem}
   nav.toc a:hover,nav.toc a:focus-visible{background:var(--indigo-soft);color:var(--indigo);outline:none}
 
-  .plan{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:22px 0 8px}
-  .plan div{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);padding:10px 12px;font-size:.95rem}
-  .plan b{display:block;font-size:1.15rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+  .plan{display:grid;grid-template-columns:1fr;gap:12px;margin:22px 0 8px}
+  .plan > div{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);padding:12px 16px}
+  .plan .bh{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-bottom:4px}
+  .plan .bh b{font-size:1.2rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+  .plan .bh span{font-weight:700;color:var(--indigo)}
+  .plan ol{margin:6px 0 0;padding-left:22px}
+  .plan li{margin:4px 0}
+  .plan .t{color:var(--ink-soft);font-size:.88rem;white-space:nowrap}
   .files{margin:16px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
   .files li a{display:inline-block;background:var(--card);border:1px solid var(--rule);padding:5px 10px;border-radius:999px;font-size:.9rem;text-decoration:none}
   .files li a:hover{border-color:var(--indigo)}
@@ -60,6 +65,8 @@
   th,td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
   th{background:#EDF0EC}
   td.c,th.c{text-align:center}
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0 20px}
+  .tablewrap table{margin:0}
 
   figure{margin:20px 0;background:var(--card);border:1px solid var(--rule);padding:12px}
   figure svg{display:block;width:100%;height:auto}
@@ -68,6 +75,15 @@
   .states b{display:block;margin-bottom:2px}
   @media (max-width:600px){.states{grid-template-columns:1fr}}
 
+  .nm{position:relative;height:1.5em;color:#C9D1E6;font-size:.85rem}
+  .nm span{position:absolute;top:2px;transform:translateX(-50%);white-space:nowrap}
+  .ends{display:flex;justify-content:space-between;gap:16px;color:#8F9BB8;font-size:.85rem;padding:2px 12px 0}
+  .ends span:last-child{text-align:right}
+  .keyrow{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.9rem;margin-top:6px}
+  .sw{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-2px;margin-right:6px}
+  .key{margin:8px 0 0;padding-left:20px;font-size:.92rem}
+  .key li{margin:2px 0}
+  figure svg.small{max-width:380px;margin:0 auto}
   .tip{background:var(--amber-soft);border-left:5px solid var(--amber);padding:12px 16px;margin:18px 0}
   .tip b:first-child{color:var(--amber)}
   .worked{background:var(--indigo-soft);border-left:5px solid var(--indigo);padding:12px 16px;margin:18px 0}
@@ -105,13 +121,9 @@
     <rect x="286" y="0" width="4" height="120" fill="#3EC6E0"/>
     <rect x="113" y="0" width="3" height="120" fill="#5B5BFF"/>
     <rect x="33" y="0" width="3" height="120" fill="#8A3FFF"/>
-    <text x="862" y="112" fill="#C9D1E6" font-size="13" font-family="Arial">656 nm</text>
-    <text x="295" y="112" fill="#C9D1E6" font-size="13" font-family="Arial">486 nm</text>
-    <text x="121" y="112" fill="#C9D1E6" font-size="13" font-family="Arial">434</text>
-    <text x="41" y="112" fill="#C9D1E6" font-size="13" font-family="Arial">410</text>
-    <text x="20" y="22" fill="#8F9BB8" font-size="13" font-family="Arial">higher energy, higher frequency, shorter wavelength</text>
-    <text x="760" y="22" fill="#8F9BB8" font-size="13" font-family="Arial">lower energy, longer wavelength</text>
   </svg>
+  <div class="nm" aria-hidden="true"><span style="left:3.4%">410</span><span style="left:11.4%">434</span><span style="left:28.8%">486 nm</span><span style="left:85.5%">656 nm</span></div>
+  <div class="ends"><span>violet end: higher energy, higher frequency, shorter wavelength</span><span>red end: lower energy, longer wavelength</span></div>
   <div class="wrap">
     <h1>Chemistry HL: atoms, isotopes and where the electrons are</h1>
     <p>Study guide for Tuesday 3 November 2026. It covers IB Chemistry Structure 1.1, 1.2 and 1.3 at the depth your class reached, with the HL extras marked. The coloured lines above are the hydrogen emission spectrum; by the end of S1.3 you should be able to explain every one of them.</p>
@@ -129,20 +141,50 @@
 
 <section id="plan">
   <h2 style="margin-top:28px">How to spend the two hours</h2>
+  <p style="margin:10px 0 0">Four blocks. Do them in order and tick each step off on paper. The page links take you straight to each file; the section links jump down this page.</p>
   <div class="plan">
-    <div><b>25 min</b>S1.1 read, then self-check</div>
-    <div><b>35 min</b>S1.2 read, worked examples, then the two worksheets</div>
-    <div><b>50 min</b>S1.3 read carefully, do the configurations drill</div>
-    <div><b>10 min</b>Quiz, then write mistakes into the Error log tab</div>
+    <div>
+      <div class="bh"><b>Block 1 · 25 min</b><span>S1.1 Particles, mixtures and changes of state</span></div>
+      <ol>
+        <li>Read the <a href="#s11">S1.1 section</a> below. <span class="t">(12 min)</span></li>
+        <li>Open "Self-check S1.1", answer in your head or on paper, then check. <span class="t">(3 min)</span></li>
+        <li>Open the <a href="https://drive.google.com/file/d/1p-ultvuEhOJmswAPShhNXegPNjC2CJew/view">S1.1 exam-style questions</a> deck. Do the questions on paper first, then check them with the answers in the same deck. <span class="t">(8 min)</span></li>
+        <li>Log anything you got wrong in the Error log tab. <span class="t">(2 min)</span></li>
+      </ol>
+    </div>
+    <div>
+      <div class="bh"><b>Block 2 · 35 min</b><span>S1.2 The nuclear atom (HL: mass spectra)</span></div>
+      <ol>
+        <li>Read the <a href="#s12">S1.2 section</a>, including the HL part on mass spectra. Try each worked example before reading its steps. <span class="t">(15 min)</span></li>
+        <li>Do "Self-check S1.2", then check. <span class="t">(5 min)</span></li>
+        <li>Extra practice from the class answer sheets (<a href="https://drive.google.com/file/d/1cLizX65Mhy05O09PYOzYw_tqROsJDlAG/view">SL</a>, then <a href="https://drive.google.com/file/d/1ws3qrbP5P8kNzLpWmLPHSrvI4lQAueg8/view">AHL</a>). The folder only has the answers, not the questions. For each answer, read just its first line to see what was asked (for example "Ar(Cr) from detector currents"), cover the rest, work it out yourself, then compare. <span class="t">(13 min)</span></li>
+        <li>Log mistakes. Ask the teacher for the S1.2 question sheets. <span class="t">(2 min)</span></li>
+      </ol>
+    </div>
+    <div>
+      <div class="bh"><b>Block 3 · 50 min</b><span>S1.3 Electron configurations (HL: ionisation energies)</span></div>
+      <ol>
+        <li>Read the <a href="#s13">S1.3 section</a> slowly; it is the longest. The HL parts 1.3.6 and 1.3.7 come at the end. <span class="t">(25 min)</span></li>
+        <li>Do the <a href="#drill">configurations drill</a>: 12 species, written from memory, then check with its answers. <span class="t">(15 min)</span></li>
+        <li>Do "Self-check S1.3", then check. <span class="t">(8 min)</span></li>
+        <li>Log mistakes. <span class="t">(2 min)</span></li>
+      </ol>
+    </div>
+    <div>
+      <div class="bh"><b>Block 4 · 10 min</b><span>Quiz and Error log</span></div>
+      <ol>
+        <li>Do the <a href="#quiz">quiz</a>. Work each question out before you click. <span class="t">(8 min)</span></li>
+        <li>Write every mistake from today into the Error log tab of the study sheet. <span class="t">(2 min)</span></li>
+      </ol>
+    </div>
   </div>
-  <p style="margin-top:14px">Read each section once, then try the self-check without looking back. Do the worksheets from the folder on paper and mark them against the answer sheets. Anything you got wrong goes into the Error log tab of the study sheet the same evening.</p>
   <p><b>Files for today in the IB folder</b></p>
   <ul class="files">
     <li><a href="https://drive.google.com/file/d/1IzF_xYMfTKJdKkjEFSOOTBr1E1a4wJSS/view">S1.1 Slides</a></li>
     <li><a href="https://drive.google.com/file/d/1p-ultvuEhOJmswAPShhNXegPNjC2CJew/view">S1.1 Exam-style questions</a></li>
     <li><a href="https://drive.google.com/file/d/1vnR3k-SIroX2Zw5svY_dwQcS01qp6hwa/view">S1.2 Handout</a></li>
-    <li><a href="https://drive.google.com/file/d/1cLizX65Mhy05O09PYOzYw_tqROsJDlAG/view">S1.2 Worksheet (answers)</a></li>
-    <li><a href="https://drive.google.com/file/d/1ws3qrbP5P8kNzLpWmLPHSrvI4lQAueg8/view">S1.2 AHL worksheet (answers)</a></li>
+    <li><a href="https://drive.google.com/file/d/1cLizX65Mhy05O09PYOzYw_tqROsJDlAG/view">S1.2 answer sheet</a></li>
+    <li><a href="https://drive.google.com/file/d/1ws3qrbP5P8kNzLpWmLPHSrvI4lQAueg8/view">S1.2 AHL answer sheet</a></li>
     <li><a href="https://drive.google.com/file/d/1gouGSSZwpBmRDh9ZolCKO66lSS72ZLkw/view">S1.3 Handout part 1</a></li>
     <li><a href="https://drive.google.com/file/d/1IaXcH4eU18cX7SnJRgHqzuu1pIH8AYfc/view">Part 2</a></li>
     <li><a href="https://drive.google.com/file/d/1ilNX_m1MW_NvWB38kws2bkSyV8tbORC5/view">Part 3</a></li>
@@ -166,16 +208,16 @@
   </div>
 
   <h3>1.1.1 Elements, compounds and mixtures</h3>
-  <table>
+  <div class="tablewrap"><table>
     <tr><th></th><th>Element</th><th>Compound</th><th>Mixture</th></tr>
     <tr><td>What it is</td><td>One kind of atom only. Cannot be broken down chemically into anything simpler.</td><td>Atoms of two or more elements chemically bonded in a fixed ratio (H<sub>2</sub>O is always 2:1).</td><td>Two or more elements or compounds in no fixed ratio, not chemically bonded.</td></tr>
     <tr><td>Properties</td><td>Those of the element.</td><td>Different from the elements in it (sodium and chlorine versus table salt).</td><td>Each component keeps its own properties.</td></tr>
     <tr><td>How to separate</td><td>Not possible by physical or chemical means into simpler substances.</td><td>Only by a chemical reaction (electrolysis of water).</td><td>By physical methods, because nothing is bonded.</td></tr>
-  </table>
+  </table></div>
   <p>A <b>homogeneous</b> mixture has a uniform composition throughout and one visible phase (salt water, air, an alloy). A <b>heterogeneous</b> mixture has regions with different composition and more than one phase (sand in water, oil and water, granite).</p>
 
   <h4>Separation techniques the guide names</h4>
-  <table>
+  <div class="tablewrap"><table>
     <tr><th>Technique</th><th>What it exploits</th><th>Typical use</th></tr>
     <tr><td>Solvation (dissolving)</td><td>One component dissolves in a chosen solvent, the other does not</td><td>Salt and sand: add water, salt dissolves, sand does not</td></tr>
     <tr><td>Filtration</td><td>Particle size: an insoluble solid is held back by the filter paper</td><td>Remove the sand from the salt solution</td></tr>
@@ -184,7 +226,7 @@
     <tr><td>Distillation</td><td>Different boiling points; vapour is condensed and collected</td><td>Pure water from sea water; separating ethanol from water (fractional)</td></tr>
     <tr><td>Paper chromatography</td><td>Components move at different speeds because they have different attractions to the paper (stationary phase) and the solvent (mobile phase)</td><td>Separating the dyes in an ink; comparing with known substances</td></tr>
     <tr><td>Solvent extraction</td><td>Two immiscible liquids in a separating funnel; the substance moves into the solvent it dissolves in better; the denser layer is run off first</td><td>Extracting an organic product from an aqueous solution</td></tr>
-  </table>
+  </table></div>
   <div class="tip"><b>Exam trap.</b> When asked to choose a method, state the physical property that differs: boiling point, solubility, particle size, attraction to the stationary phase. "Filter it" with no reason does not score the explanation mark.</div>
 
   <h3>1.1.2 The kinetic molecular theory and states of matter</h3>
@@ -221,7 +263,7 @@
     <figcaption>In exam answers, describe both the arrangement and the motion of the particles, and the forces between them.</figcaption>
   </figure>
   <h4>Changes of state (learn all six names)</h4>
-  <table>
+  <div class="tablewrap"><table>
     <tr><th>Change</th><th>From</th><th>To</th><th>Energy</th></tr>
     <tr><td>Melting</td><td>solid</td><td>liquid</td><td>absorbed (endothermic)</td></tr>
     <tr><td>Freezing</td><td>liquid</td><td>solid</td><td>released (exothermic)</td></tr>
@@ -229,7 +271,7 @@
     <tr><td>Condensation</td><td>gas</td><td>liquid</td><td>released</td></tr>
     <tr><td>Sublimation</td><td>solid</td><td>gas</td><td>absorbed</td></tr>
     <tr><td>Deposition</td><td>gas</td><td>solid</td><td>released</td></tr>
-  </table>
+  </table></div>
   <p><b>State symbols</b> go in every equation: (s) solid, (l) liquid, (g) gas, (aq) dissolved in water. Example: NaCl(s) → Na<sup>+</sup>(aq) + Cl<sup>-</sup>(aq). Forgetting (aq) on dissolved ions is a common lost mark.</p>
 
   <h3>1.1.3 Temperature and kinetic energy</h3>
@@ -238,24 +280,21 @@
   <p>25 °C = 298 K. 373 K = 100 °C. A rise of 20 °C is a rise of 20 K.</p>
   <p>Because average kinetic energy depends only on temperature, two different gases at the same temperature have the <b>same average kinetic energy</b>. Since E<sub>k</sub> = ½mv², the lighter particles must be moving faster on average. This is why hydrogen effuses faster than oxygen at the same temperature.</p>
   <figure>
-    <svg viewBox="0 0 700 260" aria-label="Heating curve of a pure substance with two flat sections at the melting and boiling points">
-      <g font-family="Arial" font-size="14" fill="#1E2A33">
-        <line x1="60" y1="220" x2="680" y2="220" stroke="#1E2A33" stroke-width="1.5"/>
-        <line x1="60" y1="220" x2="60" y2="20" stroke="#1E2A33" stroke-width="1.5"/>
-        <text x="330" y="250">Energy added (time of heating)</text>
-        <text x="18" y="130" transform="rotate(-90 18 130)">Temperature</text>
-        <polyline points="60,200 160,150 300,150 400,80 560,80 660,35" fill="none" stroke="#2F47A6" stroke-width="3"/>
-        <line x1="60" y1="150" x2="300" y2="150" stroke="#B8761A" stroke-dasharray="4 4"/>
-        <line x1="60" y1="80" x2="560" y2="80" stroke="#B8761A" stroke-dasharray="4 4"/>
-        <text x="64" y="145" fill="#B8761A">melting point</text>
-        <text x="64" y="75" fill="#B8761A">boiling point</text>
-        <text x="100" y="192">solid heating</text>
-        <text x="190" y="170">melting</text>
-        <text x="300" y="120">liquid heating</text>
-        <text x="450" y="100">boiling</text>
-        <text x="580" y="60">gas heating</text>
+    <svg viewBox="0 0 700 300" aria-label="Heating curve of a pure substance with two flat sections at the melting and boiling points">
+      <g font-family="Arial" font-size="24" fill="#1E2A33">
+        <line x1="70" y1="240" x2="680" y2="240" stroke="#1E2A33" stroke-width="1.5"/>
+        <line x1="70" y1="240" x2="70" y2="20" stroke="#1E2A33" stroke-width="1.5"/>
+        <text x="375" y="282" text-anchor="middle">Energy added</text>
+        <text x="40" y="130" text-anchor="middle" transform="rotate(-90 40 130)">Temperature</text>
+        <line x1="70" y1="165" x2="310" y2="165" stroke="#B8761A" stroke-dasharray="5 5"/>
+        <line x1="70" y1="85" x2="570" y2="85" stroke="#B8761A" stroke-dasharray="5 5"/>
+        <polyline points="70,220 170,165 310,165 410,85 570,85 670,40" fill="none" stroke="#2F47A6" stroke-width="4"/>
+        <text x="80" y="156" fill="#B8761A">m.p.</text>
+        <text x="80" y="76" fill="#B8761A">b.p.</text>
+        <g font-weight="bold" fill="#2F47A6" font-size="28"><text x="138" y="222">A</text><text x="232" y="153">B</text><text x="378" y="148">C</text><text x="482" y="73">D</text><text x="636" y="96">E</text></g>
       </g>
     </svg>
+    <ul class="key"><li><b>A</b> solid warming up</li><li><b>B</b> melting at the melting point (m.p.): temperature constant</li><li><b>C</b> liquid warming up</li><li><b>D</b> boiling at the boiling point (b.p.): temperature constant</li><li><b>E</b> gas warming up</li></ul>
     <figcaption>On the flat sections the temperature does not rise even though energy is added: the energy is used to overcome forces between particles (potential energy increases), not to make them move faster (kinetic energy unchanged). A cooling curve is the mirror image.</figcaption>
   </figure>
   <div class="tip"><b>Exam trap.</b> "Explain why the temperature stays constant during boiling" wants: energy is used to break intermolecular forces, so potential energy increases while average kinetic energy, and therefore temperature, stays the same.</div>
@@ -286,31 +325,27 @@
 
   <h3>1.2.1 Protons, neutrons, electrons and the nuclear symbol</h3>
   <p>An atom has a tiny, dense, positively charged nucleus of protons and neutrons (together called nucleons). Electrons occupy the space outside the nucleus. Almost all the mass is in the nucleus; almost all the volume is the electron region.</p>
-  <table>
+  <div class="tablewrap"><table>
     <tr><th>Particle</th><th class="c">Relative mass</th><th class="c">Relative charge</th><th>Where</th></tr>
     <tr><td>Proton</td><td class="c">1</td><td class="c">+1</td><td>nucleus</td></tr>
     <tr><td>Neutron</td><td class="c">1</td><td class="c">0</td><td>nucleus</td></tr>
     <tr><td>Electron</td><td class="c">1/1836 (negligible)</td><td class="c">−1</td><td>outside the nucleus</td></tr>
-  </table>
+  </table></div>
   <figure>
-    <svg viewBox="0 0 700 170" aria-label="Nuclear symbol notation with mass number top left, atomic number bottom left, charge top right">
+    <svg class="small" viewBox="0 0 450 190" aria-label="Nuclear symbol of the chloride ion: mass number 37 top left, atomic number 17 bottom left, charge minus top right">
       <g font-family="Georgia, serif" fill="#1E2A33">
-        <text x="150" y="60" font-size="34">37</text>
-        <text x="150" y="128" font-size="34">17</text>
-        <text x="205" y="110" font-size="86">Cl</text>
-        <text x="300" y="60" font-size="34">−</text>
+        <text x="150" y="72" font-size="42" text-anchor="end">37</text>
+        <text x="150" y="150" font-size="42" text-anchor="end">17</text>
+        <text x="158" y="132" font-size="100">Cl</text>
+        <text x="272" y="72" font-size="42">−</text>
       </g>
-      <g font-family="Arial" font-size="15" fill="#2F47A6">
-        <text x="10" y="40">mass number A = protons + neutrons</text>
-        <line x1="135" y1="46" x2="146" y2="50" stroke="#2F47A6" stroke-width="1.5"/>
-        <text x="10" y="150">atomic number Z = protons (identifies the element)</text>
-        <line x1="135" y1="138" x2="146" y2="125" stroke="#2F47A6" stroke-width="1.5"/>
-        <text x="340" y="40">charge: electrons = Z − charge</text>
-        <text x="340" y="75" fill="#1E2A33">This chloride ion has 17 protons,</text>
-        <text x="340" y="97" fill="#1E2A33">37 − 17 = 20 neutrons,</text>
-        <text x="340" y="119" fill="#1E2A33">17 + 1 = 18 electrons.</text>
+      <g font-family="Arial" font-size="28" fill="#2F47A6" font-weight="bold">
+        <text x="20" y="70">A</text><line x1="48" y1="60" x2="96" y2="60" stroke="#2F47A6" stroke-width="2"/>
+        <text x="20" y="148">Z</text><line x1="48" y1="138" x2="96" y2="138" stroke="#2F47A6" stroke-width="2"/>
+        <line x1="300" y1="60" x2="330" y2="60" stroke="#2F47A6" stroke-width="2"/><text x="336" y="70" font-size="24">charge</text>
       </g>
     </svg>
+    <ul class="key"><li><b>A</b>, mass number = protons + neutrons</li><li><b>Z</b>, atomic number = protons (identifies the element)</li><li><b>charge</b>: electrons = Z − charge</li><li>This chloride ion has 17 protons, 37 − 17 = 20 neutrons and 17 + 1 = 18 electrons.</li></ul>
     <figcaption>A top left, Z bottom left. Many students swap them. For a positive ion subtract the charge from Z to get the electrons (Fe<sup>3+</sup>: 26 − 3 = 23 electrons); for a negative ion add it.</figcaption>
   </figure>
   <div class="worked"><b>Worked example.</b> <sup>64</sup>Cu<sup>2+</sup>: Z = 29, so 29 protons; 64 − 29 = 35 neutrons; 29 − 2 = 27 electrons. <sup>19</sup>F<sup>−</sup>: 9 protons, 10 neutrons, 10 electrons.</div>
@@ -319,47 +354,46 @@
   <p><b>Isotopes</b> are atoms of the same element (same Z) with different numbers of neutrons (different A). They have the <b>same chemical properties</b> because chemical behaviour depends on the number and arrangement of electrons, which is identical. They have slightly <b>different physical properties</b> that depend on mass: density, rate of diffusion, boiling and melting point.</p>
   <p>The <b>relative atomic mass</b> A<sub>r</sub> is the weighted average mass of the atoms of an element on a scale where one atom of <sup>12</sup>C is exactly 12. It is weighted by abundance, which is why it is usually not a whole number.</p>
   <div class="formula">A<sub>r</sub> = Σ (isotope mass × % abundance) ÷ 100</div>
-  <div class="worked"><b>Worked example (from the class handout).</b> Chlorine is 75.77% <sup>35</sup>Cl and 24.23% <sup>37</sup>Cl.<br>A<sub>r</sub> = (35 × 75.77 + 37 × 24.23) ÷ 100 = (2652.0 + 896.5) ÷ 100 = <b>35.48</b> (to 4 significant figures with these masses; the data booklet value 35.45 uses exact isotopic masses).</div>
-  <div class="worked"><b>Worked example, reversed: find the abundances.</b> Chlorine has A<sub>r</sub> = 35.45 and isotopes of mass 35 and 37. Let the percentage of <sup>37</sup>Cl be x.
+  <div class="worked"><b>Worked example (from the <a href="https://drive.google.com/file/d/1vnR3k-SIroX2Zw5svY_dwQcS01qp6hwa/view">S1.2 handout</a>).</b> Chlorine is 75.77% <sup>35</sup>Cl and 24.23% <sup>37</sup>Cl.<br>A<sub>r</sub> = (35 × 75.77 + 37 × 24.23) ÷ 100 = (2652.0 + 896.5) ÷ 100 = <b>35.48</b> (to 4 significant figures with these masses; the data booklet value 35.45 uses exact isotopic masses).</div>
+  <div class="worked"><b>Worked example, reversed: find the abundances.</b> Lithium has A<sub>r</sub> = 6.94 and isotopes of mass 6 and 7. Let the percentage of <sup>7</sup>Li be x.
     <ol>
-      <li>35(100 − x) + 37x = 35.45 × 100 = 3545</li>
-      <li>3500 − 35x + 37x = 3545, so 2x = 45, x = 22.5</li>
-      <li><sup>37</sup>Cl = 22.5%, <sup>35</sup>Cl = 77.5%</li>
+      <li>6(100 − x) + 7x = 6.94 × 100 = 694</li>
+      <li>600 − 6x + 7x = 694, so x = 94</li>
+      <li><sup>7</sup>Li = 94%, <sup>6</sup>Li = 6% (with whole-number masses; the exact masses give about 92.4% and 7.6%)</li>
     </ol>
-    Quick check: the answer must sit closer to the mass of the more abundant isotope. 35.45 is close to 35, so <sup>35</sup>Cl must dominate. Yes.</div>
+    Quick check: the answer must sit closer to the mass of the more abundant isotope. 6.94 is close to 7, so <sup>7</sup>Li must dominate. Yes. The <a href="https://drive.google.com/file/d/1ws3qrbP5P8kNzLpWmLPHSrvI4lQAueg8/view">AHL answer sheet</a> does the same for chlorine (question 2(ii)).</div>
   <div class="tip"><b>Exam traps.</b> (1) A<sub>r</sub> is a weighted average, never a mass number; "chlorine atoms have mass 35.45" is wrong, no single atom does. (2) If the abundances are given as detector currents or ratios that do not add to 100, divide by their total instead of 100. (3) Keep 4 significant figures in the working; round only at the end.</div>
 
   <h3>1.2.3 Mass spectra <span class="hl">HL</span></h3>
   <p>A mass spectrometer ionises a sample and sorts the ions by mass-to-charge ratio (m/z). You are not assessed on how the instrument works, only on reading the spectrum: each peak is an isotope (for a 1+ ion, m/z equals the isotope mass) and the peak height is its relative abundance.</p>
   <figure>
-    <svg viewBox="0 0 700 260" aria-label="Mass spectrum of chlorine showing peaks at m/z 35 and 37 for atoms and at 70, 72 and 74 for Cl2 molecular ions">
-      <g font-family="Arial" font-size="14" fill="#1E2A33">
-        <line x1="60" y1="210" x2="680" y2="210" stroke="#1E2A33" stroke-width="1.5"/>
-        <line x1="60" y1="210" x2="60" y2="20" stroke="#1E2A33" stroke-width="1.5"/>
-        <text x="300" y="248">m/z</text>
-        <text x="18" y="140" transform="rotate(-90 18 140)">relative abundance</text>
-        <rect x="200" y="40" width="10" height="170" fill="#2F47A6"/><text x="188" y="230">35</text><text x="170" y="34">100 (75%)</text>
-        <rect x="240" y="155" width="10" height="55" fill="#2F47A6"/><text x="228" y="230">37</text><text x="222" y="149">32 (25%)</text>
-        <rect x="470" y="110" width="10" height="100" fill="#B8761A"/><text x="458" y="230">70</text><text x="430" y="104">9</text>
-        <rect x="510" y="143" width="10" height="67" fill="#B8761A"/><text x="498" y="230">72</text><text x="528" y="138">6</text>
-        <rect x="550" y="199" width="10" height="11" fill="#B8761A"/><text x="538" y="230">74</text><text x="566" y="196">1</text>
-        <text x="380" y="60" fill="#B8761A">Cl<tspan baseline-shift="sub" font-size="10">2</tspan><tspan baseline-shift="super" font-size="10">+</tspan> molecular ions: 35+35, 35+37, 37+37</text>
-        <text x="380" y="80" fill="#B8761A">ratio 9 : 6 : 1 from (3:1) squared</text>
+    <svg viewBox="0 0 700 290" aria-label="Mass spectrum of chlorine showing peaks at m/z 35 and 37 for atoms and at 70, 72 and 74 for Cl2 molecular ions">
+      <g font-family="Arial" font-size="24" fill="#1E2A33" text-anchor="middle">
+        <line x1="80" y1="230" x2="680" y2="230" stroke="#1E2A33" stroke-width="1.5"/>
+        <line x1="80" y1="230" x2="80" y2="20" stroke="#1E2A33" stroke-width="1.5"/>
+        <text x="640" y="282">m/z</text>
+        <text x="44" y="125" transform="rotate(-90 44 125)">abundance</text>
+        <rect x="190" y="50" width="20" height="180" fill="#2F47A6"/><text x="200" y="258">35</text><text x="200" y="42">100</text>
+        <rect x="250" y="172" width="20" height="58" fill="#2F47A6"/><text x="260" y="258">37</text><text x="260" y="164">32</text>
+        <rect x="460" y="122" width="20" height="108" fill="#B8761A"/><text x="470" y="258">70</text><text x="470" y="114">9</text>
+        <rect x="520" y="158" width="20" height="72" fill="#B8761A"/><text x="530" y="258">72</text><text x="530" y="150">6</text>
+        <rect x="580" y="218" width="20" height="12" fill="#B8761A"/><text x="590" y="258">74</text><text x="590" y="210">1</text>
       </g>
     </svg>
-    <figcaption>Chlorine. Atomic peaks at 35 and 37 in a 3 : 1 ratio. In a spectrum of Cl<sub>2</sub> gas there are also peaks at 70, 72 and 74. The 74 peak (<sup>37</sup>Cl<sup>37</sup>Cl) is the smallest because <sup>37</sup>Cl is the least abundant isotope, so two of them meeting in one molecule is the least likely combination. This was Quiz 1, question 1(v).</figcaption>
+    <div class="keyrow"><span><span class="sw" style="background:#2F47A6"></span>Cl<sup>+</sup> atoms: 35 and 37, heights 100 : 32, about 3 : 1 (75% and 25%)</span><span><span class="sw" style="background:#B8761A"></span>Cl<sub>2</sub><sup>+</sup> molecules: 35+35, 35+37, 37+37, ratio 9 : 6 : 1, which is (3 : 1) squared</span></div>
+    <figcaption>Chlorine. Atomic peaks at 35 and 37 in a 3 : 1 ratio. In a spectrum of Cl<sub>2</sub> gas there are also peaks at 70, 72 and 74. The 74 peak (<sup>37</sup>Cl<sup>37</sup>Cl) is the smallest because <sup>37</sup>Cl is the least abundant isotope, so two of them meeting in one molecule is the least likely combination. This was <a href="https://drive.google.com/file/d/183UXkkDOuRylI5n6vU2jLntfpblOAX7b/view">Quiz 1</a>, question 1(v).</figcaption>
   </figure>
-  <div class="worked"><b>Worked example (handout, copper).</b> Peak A at m/z 63 has height 5.2, peak B at 65 has height 2.3. The heights do not add to 100, so divide by their sum.<br>A<sub>r</sub>(Cu) = (63 × 5.2 + 65 × 2.3) ÷ (5.2 + 2.3) = (327.6 + 149.5) ÷ 7.5 = <b>63.6</b></div>
+  <div class="worked"><b>Worked example (<a href="https://drive.google.com/file/d/1vnR3k-SIroX2Zw5svY_dwQcS01qp6hwa/view">S1.2 handout</a>, copper).</b> Peak A at m/z 63 has height 5.2, peak B at 65 has height 2.3. The heights do not add to 100, so divide by their sum.<br>A<sub>r</sub>(Cu) = (63 × 5.2 + 65 × 2.3) ÷ (5.2 + 2.3) = (327.6 + 149.5) ÷ 7.5 = <b>63.6</b></div>
   <div class="tip"><b>How to answer "explain the peak at m/z = 74".</b> Two marks: (1) it is a Cl<sub>2</sub><sup>+</sup> molecule made of two <sup>37</sup>Cl atoms; (2) its abundance is low because <sup>37</sup>Cl is the less abundant isotope, so the probability of two <sup>37</sup>Cl atoms in one molecule is small.</div>
 
   <details><summary>Self-check S1.2</summary>
     <ol>
       <li>How many protons, neutrons and electrons in <sup>81</sup>Br<sup>−</sup>?</li>
-      <li>Why do <sup>125</sup>I and <sup>131</sup>I react identically with sodium but have different densities?</li>
+      <li>Why do <sup>35</sup>Cl and <sup>37</sup>Cl react identically with sodium but diffuse at different rates?</li>
       <li>Boron is 19.9% <sup>10</sup>B and 80.1% <sup>11</sup>B. Calculate A<sub>r</sub>.</li>
       <li>(HL) A mass spectrum of an element shows peaks at m/z 24 (79%), 25 (10%) and 26 (11%). Identify the element and calculate A<sub>r</sub>.</li>
     </ol>
-    <p><b>Answers.</b> 1: 35 p, 46 n, 36 e. 2: same number and arrangement of electrons, so same chemistry; different mass, so different physical properties. 3: (10 × 19.9 + 11 × 80.1) ÷ 100 = 10.80. 4: magnesium (Z = 12 is deduced from the periodic table; a mass of about 24.3); A<sub>r</sub> = (24 × 79 + 25 × 10 + 26 × 11) ÷ 100 = 24.32.</p>
+    <p><b>Answers.</b> 1: 35 p, 46 n, 36 e. 2: same number and arrangement of electrons, so same chemistry; different mass, so different physical properties such as the rate of diffusion (lighter <sup>35</sup>Cl diffuses faster). 3: (10 × 19.9 + 11 × 80.1) ÷ 100 = 10.80. 4: magnesium (Z = 12 is deduced from the periodic table; a mass of about 24.3); A<sub>r</sub> = (24 × 79 + 25 × 10 + 26 × 11) ÷ 100 = 24.32.</p>
   </details>
 </section>
 
@@ -388,80 +422,75 @@
 
   <h3>1.3.2 The hydrogen spectrum as evidence for energy levels</h3>
   <figure>
-    <svg viewBox="0 0 760 330" aria-label="Energy level diagram of hydrogen showing transitions to n equals 1, 2 and 3 and the levels converging">
-      <g font-family="Arial" font-size="14" fill="#1E2A33">
-        <!-- levels: spacing decreases upward -->
-        <line x1="80" y1="300" x2="520" y2="300" stroke="#1E2A33" stroke-width="2"/><text x="530" y="305">n = 1</text>
-        <line x1="80" y1="150" x2="520" y2="150" stroke="#1E2A33" stroke-width="2"/><text x="530" y="155">n = 2</text>
-        <line x1="80" y1="95" x2="520" y2="95" stroke="#1E2A33" stroke-width="2"/><text x="530" y="100">n = 3</text>
-        <line x1="80" y1="68" x2="520" y2="68" stroke="#1E2A33" stroke-width="2"/><text x="530" y="73">n = 4</text>
-        <line x1="80" y1="53" x2="520" y2="53" stroke="#1E2A33" stroke-width="1.5"/><text x="530" y="58">n = 5</text>
-        <line x1="80" y1="44" x2="520" y2="44" stroke="#1E2A33" stroke-width="1.2"/>
-        <line x1="80" y1="38" x2="520" y2="38" stroke="#1E2A33" stroke-width="1"/>
-        <line x1="80" y1="30" x2="520" y2="30" stroke="#1E2A33" stroke-width="2" stroke-dasharray="6 4"/><text x="530" y="34">n = ∞ (ionised)</text>
-        <!-- UV transitions to n=1 -->
-        <g stroke="#7B3FE4" stroke-width="2.5" fill="#7B3FE4">
-          <line x1="130" y1="150" x2="130" y2="300"/><polygon points="130,300 125,288 135,288"/>
-          <line x1="155" y1="95" x2="155" y2="300"/><polygon points="155,300 150,288 160,288"/>
-          <line x1="180" y1="68" x2="180" y2="300"/><polygon points="180,300 175,288 185,288"/>
+    <svg viewBox="0 0 760 350" aria-label="Energy level diagram of hydrogen showing transitions to n equals 1, 2 and 3 and the levels converging">
+      <g font-family="Arial" font-size="24" fill="#1E2A33">
+        <line x1="80" y1="300" x2="560" y2="300" stroke="#1E2A33" stroke-width="2"/><text x="575" y="308">n = 1</text>
+        <line x1="80" y1="150" x2="560" y2="150" stroke="#1E2A33" stroke-width="2"/><text x="575" y="158">n = 2</text>
+        <line x1="80" y1="95" x2="560" y2="95" stroke="#1E2A33" stroke-width="2"/><text x="575" y="103">n = 3</text>
+        <line x1="80" y1="68" x2="560" y2="68" stroke="#1E2A33" stroke-width="2"/><text x="575" y="70">n = 4</text>
+        <line x1="80" y1="53" x2="560" y2="53" stroke="#1E2A33" stroke-width="1.5"/>
+        <line x1="80" y1="44" x2="560" y2="44" stroke="#1E2A33" stroke-width="1.2"/>
+        <line x1="80" y1="38" x2="560" y2="38" stroke="#1E2A33" stroke-width="1"/>
+        <line x1="80" y1="30" x2="560" y2="30" stroke="#1E2A33" stroke-width="2" stroke-dasharray="6 4"/><text x="575" y="34">n = ∞</text>
+        <g stroke="#7B3FE4" stroke-width="3" fill="#7B3FE4">
+          <line x1="130" y1="150" x2="130" y2="300"/><polygon points="130,300 124,286 136,286"/>
+          <line x1="160" y1="95" x2="160" y2="300"/><polygon points="160,300 154,286 166,286"/>
+          <line x1="190" y1="68" x2="190" y2="300"/><polygon points="190,300 184,286 196,286"/>
         </g>
-        <text x="110" y="322" fill="#7B3FE4">to n = 1: ultraviolet</text>
-        <!-- visible to n=2 -->
-        <g stroke-width="2.5">
-          <line x1="280" y1="95" x2="280" y2="150" stroke="#FF3B30"/><polygon points="280,150 275,138 285,138" fill="#FF3B30"/>
-          <line x1="305" y1="68" x2="305" y2="150" stroke="#3EC6E0"/><polygon points="305,150 300,138 310,138" fill="#3EC6E0"/>
-          <line x1="330" y1="53" x2="330" y2="150" stroke="#5B5BFF"/><polygon points="330,150 325,138 335,138" fill="#5B5BFF"/>
-          <line x1="355" y1="44" x2="355" y2="150" stroke="#8A3FFF"/><polygon points="355,150 350,138 360,138" fill="#8A3FFF"/>
+        <text x="160" y="336" fill="#7B3FE4" text-anchor="middle">UV</text>
+        <g stroke-width="3">
+          <line x1="290" y1="95" x2="290" y2="150" stroke="#FF3B30"/><polygon points="290,150 284,137 296,137" fill="#FF3B30"/>
+          <line x1="320" y1="68" x2="320" y2="150" stroke="#3EC6E0"/><polygon points="320,150 314,137 326,137" fill="#3EC6E0"/>
+          <line x1="350" y1="53" x2="350" y2="150" stroke="#5B5BFF"/><polygon points="350,150 344,137 356,137" fill="#5B5BFF"/>
+          <line x1="380" y1="44" x2="380" y2="150" stroke="#8A3FFF"/><polygon points="380,150 374,137 386,137" fill="#8A3FFF"/>
         </g>
-        <text x="255" y="175" fill="#2F47A6">to n = 2: visible</text>
-        <!-- IR to n=3 -->
-        <g stroke="#B23A3A" stroke-width="2.5" fill="#B23A3A">
-          <line x1="440" y1="68" x2="440" y2="95"/><polygon points="440,95 435,84 445,84"/>
-          <line x1="465" y1="53" x2="465" y2="95"/><polygon points="465,95 460,84 470,84"/>
+        <text x="335" y="184" fill="#2F47A6" text-anchor="middle">visible</text>
+        <g stroke="#B23A3A" stroke-width="3" fill="#B23A3A">
+          <line x1="470" y1="68" x2="470" y2="95"/><polygon points="470,95 464,84 476,84"/>
+          <line x1="500" y1="53" x2="500" y2="95"/><polygon points="500,95 494,84 506,84"/>
         </g>
-        <text x="420" y="120" fill="#B23A3A">to n = 3: infrared</text>
-        <text x="20" y="180" transform="rotate(-90 20 180)">energy</text>
+        <text x="485" y="128" fill="#B23A3A" text-anchor="middle">IR</text>
+        <text x="32" y="170" text-anchor="middle" transform="rotate(-90 32 170)">energy</text>
       </g>
     </svg>
-    <figcaption>Energy levels get closer together as n increases (they converge). Falls to n = 1 release the most energy (UV); falls to n = 2 give the four visible lines in the banner at the top of this page; falls to n = 3 give infrared. Within each series the lines also converge at the high-frequency end. The series names (Lyman, Balmer, Paschen) are not assessed.</figcaption>
+    <figcaption>The dashed line at the top is n = ∞, where the electron has left the atom (ionised). Energy levels get closer together as n increases (they converge). Falls to n = 1 release the most energy (UV); falls to n = 2 give the four visible lines in the banner at the top of this page; falls to n = 3 give infrared. Within each series the lines also converge at the high-frequency end. The series names (Lyman, Balmer, Paschen) are not assessed.</figcaption>
   </figure>
   <p>Why this is evidence for energy levels: if electrons could have any energy, every transition would be possible and the spectrum would be continuous. The fact that only discrete lines appear means the electron can only have certain fixed energies. The convergence of the lines shows that the levels themselves converge at higher energy.</p>
   <div class="tip"><b>Exam phrasing that scores.</b> "Electrons in excited states fall to lower energy levels and emit photons of energy equal to the difference between the levels. Since the energy levels are discrete, only certain frequencies are emitted, giving a line spectrum. The lines converge because the energy levels converge." Four ideas, four marks.</div>
 
   <h3>1.3.3 and 1.3.4 Main energy levels, sublevels and orbitals</h3>
-  <table>
+  <div class="tablewrap"><table>
     <tr><th class="c">Main level n</th><th>Sublevels present</th><th>Orbitals</th><th class="c">Maximum electrons (2n²)</th></tr>
     <tr><td class="c">1</td><td>1s</td><td>1</td><td class="c">2</td></tr>
     <tr><td class="c">2</td><td>2s, 2p</td><td>1 + 3 = 4</td><td class="c">8</td></tr>
     <tr><td class="c">3</td><td>3s, 3p, 3d</td><td>1 + 3 + 5 = 9</td><td class="c">18</td></tr>
     <tr><td class="c">4</td><td>4s, 4p, 4d, 4f</td><td>1 + 3 + 5 + 7 = 16</td><td class="c">32</td></tr>
-  </table>
+  </table></div>
   <p>Sublevel capacities: s holds 2, p holds 6, d holds 10, f holds 14. Within one main level the energy order is s &lt; p &lt; d &lt; f. An <b>orbital</b> is a region of space where there is a high probability (about 90%) of finding an electron; each orbital holds at most two electrons. Orbitals in the same sublevel have the same energy and are called <b>degenerate</b>. The period number of an element equals the main energy level of its outermost electrons.</p>
   <figure>
     <svg viewBox="0 0 760 230" aria-label="Shapes of an s orbital, spherical, and the three p orbitals, dumbbell shaped along x, y and z">
-      <g font-family="Arial" font-size="14" fill="#1E2A33">
-        <circle cx="110" cy="105" r="60" fill="#E6EAF7" stroke="#2F47A6" stroke-width="2"/>
-        <circle cx="110" cy="105" r="3" fill="#1E2A33"/>
-        <text x="90" y="200">s orbital</text><text x="60" y="218" font-size="12">spherical, one per sublevel</text>
-        <!-- px -->
-        <g transform="translate(300,105)">
+      <g font-family="Arial" font-size="28" fill="#1E2A33" text-anchor="middle">
+        <circle cx="110" cy="100" r="60" fill="#E6EAF7" stroke="#2F47A6" stroke-width="2"/>
+        <circle cx="110" cy="100" r="3" fill="#1E2A33"/>
+        <text x="110" y="215">s</text>
+        <g transform="translate(300,100)">
           <ellipse cx="-38" cy="0" rx="36" ry="22" fill="#E6EAF7" stroke="#2F47A6" stroke-width="2"/>
           <ellipse cx="38" cy="0" rx="36" ry="22" fill="#E6EAF7" stroke="#2F47A6" stroke-width="2"/>
-          <circle r="3" fill="#1E2A33"/><text x="-10" y="60">p<tspan baseline-shift="sub" font-size="10">x</tspan></text>
+          <circle r="3" fill="#1E2A33"/><text x="0" y="115">p<tspan baseline-shift="sub" font-size="18">x</tspan></text>
         </g>
-        <g transform="translate(470,105)">
+        <g transform="translate(470,100)">
           <ellipse cx="0" cy="-38" rx="22" ry="36" fill="#E6EAF7" stroke="#2F47A6" stroke-width="2"/>
           <ellipse cx="0" cy="38" rx="22" ry="36" fill="#E6EAF7" stroke="#2F47A6" stroke-width="2"/>
-          <circle r="3" fill="#1E2A33"/><text x="-10" y="95">p<tspan baseline-shift="sub" font-size="10">y</tspan></text>
+          <circle r="3" fill="#1E2A33"/><text x="0" y="115">p<tspan baseline-shift="sub" font-size="18">y</tspan></text>
         </g>
-        <g transform="translate(640,105)">
+        <g transform="translate(640,100)">
           <ellipse cx="-27" cy="-27" rx="34" ry="20" transform="rotate(-45 -27 -27)" fill="#E6EAF7" stroke="#2F47A6" stroke-width="2"/>
           <ellipse cx="27" cy="27" rx="34" ry="20" transform="rotate(-45 27 27)" fill="#E6EAF7" stroke="#2F47A6" stroke-width="2"/>
-          <circle r="3" fill="#1E2A33"/><text x="-10" y="95">p<tspan baseline-shift="sub" font-size="10">z</tspan></text>
+          <circle r="3" fill="#1E2A33"/><text x="0" y="115">p<tspan baseline-shift="sub" font-size="18">z</tspan></text>
         </g>
-        <text x="330" y="200">p orbitals</text><text x="260" y="218" font-size="12">dumbbell shaped, three per sublevel at right angles to each other, same energy</text>
       </g>
     </svg>
+    <ul class="key"><li><b>s orbital</b>: spherical, one per sublevel.</li><li><b>p orbitals</b>: dumbbell shaped, three per sublevel (p<sub>x</sub>, p<sub>y</sub>, p<sub>z</sub>) at right angles to each other, all the same energy.</li></ul>
     <figcaption>You may be asked to sketch these. Draw the nucleus at the centre and label the axes; the two lobes of a p orbital are one orbital, not two.</figcaption>
   </figure>
 
@@ -473,44 +502,38 @@
     <li><b>Hund's rule:</b> in degenerate orbitals (the three p or five d), electrons occupy separate orbitals with parallel spins before any orbital gets a second electron.</li>
   </ol>
   <figure>
-    <svg viewBox="0 0 760 300" aria-label="Arrow-in-box orbital diagrams for nitrogen and iron">
-      <g font-family="Arial" font-size="14" fill="#1E2A33">
-        <text x="20" y="30" font-weight="bold">Nitrogen, Z = 7: 1s² 2s² 2p³</text>
-        <g stroke="#1E2A33" stroke-width="1.5" fill="#fff">
-          <rect x="20" y="45" width="34" height="34"/><rect x="90" y="45" width="34" height="34"/>
-          <rect x="160" y="45" width="34" height="34"/><rect x="194" y="45" width="34" height="34"/><rect x="228" y="45" width="34" height="34"/>
-        </g>
-        <g font-size="22" fill="#2F47A6"><text x="25" y="71">↑↓</text><text x="95" y="71">↑↓</text><text x="169" y="71">↑</text><text x="203" y="71">↑</text><text x="237" y="71">↑</text></g>
-        <text x="30" y="98">1s</text><text x="100" y="98">2s</text><text x="200" y="98">2p</text>
-        <text x="300" y="60" font-size="13" fill="#4A5862">Hund: three single electrons with parallel spins,</text>
-        <text x="300" y="78" font-size="13" fill="#4A5862">not a pair plus a single. A common lost mark.</text>
-
-        <text x="20" y="150" font-weight="bold">Iron, Z = 26: 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶, condensed [Ar] 4s² 3d⁶</text>
-        <g stroke="#1E2A33" stroke-width="1.5" fill="#fff">
-          <rect x="20" y="170" width="34" height="34"/>
-          <rect x="90" y="170" width="34" height="34"/><rect x="124" y="170" width="34" height="34"/><rect x="158" y="170" width="34" height="34"/><rect x="192" y="170" width="34" height="34"/><rect x="226" y="170" width="34" height="34"/>
-        </g>
-        <g font-size="22" fill="#2F47A6"><text x="25" y="196">↑↓</text><text x="95" y="196">↑↓</text><text x="133" y="196">↑</text><text x="167" y="196">↑</text><text x="201" y="196">↑</text><text x="235" y="196">↑</text></g>
-        <text x="30" y="223">4s</text><text x="160" y="223">3d</text>
-        <text x="300" y="185" font-size="13" fill="#4A5862">Only the outer part is drawn here; the [Ar] core is full.</text>
-        <text x="300" y="203" font-size="13" fill="#4A5862">Sixth d electron pairs up in the first d orbital.</text>
-        <text x="20" y="262" font-size="13" fill="#4A5862">Either order is accepted in the exam: [Ar] 4s² 3d⁶ (filling order) or [Ar] 3d⁶ 4s² (energy order once filled). Be consistent within an answer.</text>
+    <p style="margin:4px 0 6px"><b>Nitrogen, Z = 7: 1s² 2s² 2p³</b></p>
+    <svg class="small" viewBox="0 0 350 100" aria-label="Orbital diagram of nitrogen: 1s paired, 2s paired, three 2p orbitals each with one electron, parallel spins">
+      <g font-family="Arial" text-anchor="middle">
+        <g stroke="#1E2A33" stroke-width="2" fill="#fff"><rect x="10" y="8" width="50" height="50"/><rect x="100" y="8" width="50" height="50"/><rect x="190" y="8" width="50" height="50"/><rect x="240" y="8" width="50" height="50"/><rect x="290" y="8" width="50" height="50"/></g>
+        <g font-size="30" fill="#2F47A6"><text x="35" y="44">↑↓</text><text x="125" y="44">↑↓</text><text x="215" y="44">↑</text><text x="265" y="44">↑</text><text x="315" y="44">↑</text></g>
+        <g font-size="24" fill="#1E2A33"><text x="35" y="90">1s</text><text x="125" y="90">2s</text><text x="265" y="90">2p</text></g>
       </g>
     </svg>
+    <p style="margin:6px 0 16px;font-size:.92rem;color:var(--ink-soft)">Hund's rule: three single electrons with parallel spins, not a pair plus a single. A common lost mark.</p>
+    <p style="margin:4px 0 6px"><b>Iron, Z = 26: 1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d⁶, condensed [Ar] 4s² 3d⁶</b></p>
+    <svg class="small" viewBox="0 0 360 100" aria-label="Orbital diagram of the outer part of iron: 4s paired, then 3d with one pair and four single electrons">
+      <g font-family="Arial" text-anchor="middle">
+        <g stroke="#1E2A33" stroke-width="2" fill="#fff"><rect x="10" y="8" width="50" height="50"/><rect x="100" y="8" width="50" height="50"/><rect x="150" y="8" width="50" height="50"/><rect x="200" y="8" width="50" height="50"/><rect x="250" y="8" width="50" height="50"/><rect x="300" y="8" width="50" height="50"/></g>
+        <g font-size="30" fill="#2F47A6"><text x="35" y="44">↑↓</text><text x="125" y="44">↑↓</text><text x="175" y="44">↑</text><text x="225" y="44">↑</text><text x="275" y="44">↑</text><text x="325" y="44">↑</text></g>
+        <g font-size="24" fill="#1E2A33"><text x="35" y="90">4s</text><text x="225" y="90">3d</text></g>
+      </g>
+    </svg>
+    <p style="margin:6px 0 0;font-size:.92rem;color:var(--ink-soft)">Only the outer part is drawn; the [Ar] core is full. The sixth d electron pairs up in the first d orbital. Either order is accepted in the exam: [Ar] 4s² 3d⁶ (filling order) or [Ar] 3d⁶ 4s² (energy order once filled). Be consistent within an answer.</p>
     <figcaption>Arrow-in-box (orbital) diagrams. Boxes are orbitals, arrows are electrons, opposite arrows in one box show opposite spins.</figcaption>
   </figure>
   <h4>Full and condensed configurations up to Z = 36</h4>
-  <table>
+  <div class="tablewrap"><table>
     <tr><th>Species</th><th>Full configuration</th><th>Condensed (noble gas core)</th><th>Note</th></tr>
     <tr><td>C (6)</td><td>1s² 2s² 2p²</td><td>[He] 2s² 2p²</td><td>two unpaired p electrons</td></tr>
-    <tr><td>Cl (17)</td><td>1s² 2s² 2p⁶ 3s² 3p⁵</td><td>[Ne] 3s² 3p⁵</td><td>Quiz 1 asked for the full form: do not give the condensed one when "full" is asked</td></tr>
+    <tr><td>Cl (17)</td><td>1s² 2s² 2p⁶ 3s² 3p⁵</td><td>[Ne] 3s² 3p⁵</td><td><a href="https://drive.google.com/file/d/183UXkkDOuRylI5n6vU2jLntfpblOAX7b/view">Quiz 1</a> asked for the full form: do not give the condensed one when "full" is asked</td></tr>
     <tr><td>Ca (20)</td><td>1s² 2s² 2p⁶ 3s² 3p⁶ 4s²</td><td>[Ar] 4s²</td><td>4s fills before 3d</td></tr>
     <tr><td>V (23)</td><td>1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d³</td><td>[Ar] 4s² 3d³</td><td></td></tr>
     <tr><td>Cr (24)</td><td>1s² 2s² 2p⁶ 3s² 3p⁶ 4s¹ 3d⁵</td><td>[Ar] 4s¹ 3d⁵</td><td><b>exception</b>: half-filled d is more stable than 4s² 3d⁴</td></tr>
     <tr><td>Cu (29)</td><td>1s² 2s² 2p⁶ 3s² 3p⁶ 4s¹ 3d¹⁰</td><td>[Ar] 4s¹ 3d¹⁰</td><td><b>exception</b>: full d is more stable than 4s² 3d⁹</td></tr>
     <tr><td>As (33)</td><td>1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p³</td><td>[Ar] 4s² 3d¹⁰ 4p³</td><td>period 4, group 15</td></tr>
     <tr><td>Br (35)</td><td>1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁵</td><td>[Ar] 4s² 3d¹⁰ 4p⁵</td><td></td></tr>
-  </table>
+  </table></div>
   <h4>Ions</h4>
   <p>Negative ions: add electrons to the next available orbital. O<sup>2−</sup> is 1s² 2s² 2p⁶, the same as neon. Positive ions of main-group elements: remove from the outermost sublevel. Al<sup>3+</sup> is 1s² 2s² 2p⁶.</p>
   <p><b>Transition metal ions lose their 4s electrons first</b>, even though 4s filled first. Once the 3d orbitals are occupied they drop below 4s in energy. So Fe is [Ar] 4s² 3d⁶ but Fe<sup>2+</sup> is [Ar] 3d⁶ and Fe<sup>3+</sup> is [Ar] 3d⁵. V<sup>2+</sup> is [Ar] 3d³. Cu<sup>+</sup> is [Ar] 3d¹⁰.</p>
@@ -537,17 +560,15 @@
   </ul>
   <figure>
     <svg viewBox="0 0 760 300" aria-label="First ionisation energies of the period 2 elements lithium to neon showing a general rise with dips at boron and oxygen">
-      <g font-family="Arial" font-size="14" fill="#1E2A33">
+      <g font-family="Arial" font-size="22" fill="#1E2A33" text-anchor="middle">
         <line x1="70" y1="250" x2="730" y2="250" stroke="#1E2A33" stroke-width="1.5"/>
-        <line x1="70" y1="250" x2="70" y2="20" stroke="#1E2A33" stroke-width="1.5"/>
-        <text x="14" y="150" transform="rotate(-90 14 150)">first IE / kJ mol⁻¹</text>
+        <line x1="70" y1="250" x2="70" y2="10" stroke="#1E2A33" stroke-width="1.5"/>
+        <text x="30" y="140" transform="rotate(-90 30 140)" font-size="20">first IE / kJ mol⁻¹</text>
         <!-- values Li 520, Be 900, B 801, C 1086, N 1402, O 1314, F 1681, Ne 2081; scale 0.1 px per kJ, baseline 250 -->
-        <polyline points="110,198 190,160 270,170 350,141 430,110 510,119 590,82 670,42" fill="none" stroke="#2F47A6" stroke-width="2.5"/>
-        <g fill="#2F47A6"><circle cx="110" cy="198" r="5"/><circle cx="190" cy="160" r="5"/><circle cx="270" cy="170" r="5"/><circle cx="350" cy="141" r="5"/><circle cx="430" cy="110" r="5"/><circle cx="510" cy="119" r="5"/><circle cx="590" cy="82" r="5"/><circle cx="670" cy="42" r="5"/></g>
-        <text x="103" y="272">Li</text><text x="182" y="272">Be</text><text x="265" y="272">B</text><text x="344" y="272">C</text><text x="424" y="272">N</text><text x="504" y="272">O</text><text x="585" y="272">F</text><text x="662" y="272">Ne</text>
-        <text x="95" y="190" font-size="12">520</text><text x="175" y="152" font-size="12">900</text><text x="258" y="190" font-size="12">801</text><text x="333" y="133" font-size="12">1086</text><text x="413" y="102" font-size="12">1402</text><text x="498" y="140" font-size="12">1314</text><text x="573" y="74" font-size="12">1681</text><text x="653" y="34" font-size="12">2081</text>
-        <text x="250" y="215" fill="#B8761A" font-size="13">p electron, higher energy</text>
-        <text x="470" y="160" fill="#B8761A" font-size="13">first paired p electron</text>
+        <polyline points="110,198 190,160 270,170 350,141 430,110 510,119 590,82 670,42" fill="none" stroke="#2F47A6" stroke-width="3"/>
+        <g fill="#2F47A6"><circle cx="110" cy="198" r="6"/><circle cx="190" cy="160" r="6"/><circle cx="270" cy="170" r="6"/><circle cx="350" cy="141" r="6"/><circle cx="430" cy="110" r="6"/><circle cx="510" cy="119" r="6"/><circle cx="590" cy="82" r="6"/><circle cx="670" cy="42" r="6"/></g>
+        <g font-size="20"><text x="110" y="228">520</text><text x="190" y="144">900</text><text x="270" y="200">801</text><text x="350" y="125">1086</text><text x="430" y="94">1402</text><text x="510" y="148">1314</text><text x="590" y="66">1681</text><text x="670" y="26">2081</text></g>
+        <text x="110" y="276">Li</text><text x="190" y="276">Be</text><text x="270" y="276">B</text><text x="350" y="276">C</text><text x="430" y="276">N</text><text x="510" y="276">O</text><text x="590" y="276">F</text><text x="670" y="276">Ne</text>
       </g>
     </svg>
     <figcaption>Period 2. The general rise is the increasing nuclear charge with similar shielding; the two dips are the s-to-p change at boron and the first pairing at oxygen. The same pattern repeats in period 3 (Mg to Al, P to S).</figcaption>
@@ -557,28 +578,48 @@
   <p>Removing electrons one after another from the same atom gives successive ionisation energies. Each one is larger than the last, because the electron is being removed from an increasingly positive ion with less electron-electron repulsion. A <b>large jump</b> appears when the next electron has to come from an inner main energy level: closer to the nucleus and much less shielded.</p>
   <p>The position of the first big jump gives the group: the number of electrons removed before the jump equals the number of outer electrons.</p>
   <figure>
-    <svg viewBox="0 0 760 300" aria-label="Successive ionisation energies of calcium on a logarithmic scale showing a jump after the second electron and after the tenth">
-      <g font-family="Arial" font-size="14" fill="#1E2A33">
+    <svg viewBox="0 0 760 310" aria-label="Successive ionisation energies of calcium on a logarithmic scale showing a jump after the second electron and after the tenth">
+      <g font-family="Arial" font-size="22" fill="#1E2A33" text-anchor="middle">
         <line x1="70" y1="250" x2="730" y2="250" stroke="#1E2A33" stroke-width="1.5"/>
         <line x1="70" y1="250" x2="70" y2="20" stroke="#1E2A33" stroke-width="1.5"/>
-        <text x="14" y="160" transform="rotate(-90 14 160)">log (IE)</text>
-        <text x="330" y="285">electron removed</text>
-        <!-- calcium successive IEs (approx, kJ/mol): 590,1145,4912,6491,8153,10496,12270,14206,18191,20385,57048,63333 ... plotted on log scale, baseline 250 top 20 for log 2.5 to 5 -->
+        <text x="32" y="150" transform="rotate(-90 32 150)">log (IE)</text>
+        <text x="400" y="302">electron removed</text>
+        <!-- calcium successive IEs (approx, kJ/mol): 590,1145,4912,6491,8153,10496,12270,14206,18191,20385,57048,63333 on a log scale -->
+        <line x1="185" y1="240" x2="185" y2="120" stroke="#B8761A" stroke-width="2" stroke-dasharray="5 5"/>
+        <line x1="585" y1="240" x2="585" y2="35" stroke="#B8761A" stroke-width="2" stroke-dasharray="5 5"/>
+        <polyline points="110,229 160,203 210,147 260,136 310,127 360,118 410,112 460,106 510,97 560,92 610,54 660,50" fill="none" stroke="#2F47A6" stroke-width="2.5"/>
         <g fill="#2F47A6">
-          <circle cx="110" cy="229" r="5"/><circle cx="160" cy="203" r="5"/><circle cx="210" cy="147" r="5"/><circle cx="260" cy="136" r="5"/><circle cx="310" cy="127" r="5"/><circle cx="360" cy="118" r="5"/><circle cx="410" cy="112" r="5"/><circle cx="460" cy="106" r="5"/><circle cx="510" cy="97" r="5"/><circle cx="560" cy="92" r="5"/><circle cx="610" cy="54" r="5"/><circle cx="660" cy="50" r="5"/>
+          <circle cx="110" cy="229" r="6"/><circle cx="160" cy="203" r="6"/><circle cx="210" cy="147" r="6"/><circle cx="260" cy="136" r="6"/><circle cx="310" cy="127" r="6"/><circle cx="360" cy="118" r="6"/><circle cx="410" cy="112" r="6"/><circle cx="460" cy="106" r="6"/><circle cx="510" cy="97" r="6"/><circle cx="560" cy="92" r="6"/><circle cx="610" cy="54" r="6"/><circle cx="660" cy="50" r="6"/>
         </g>
-        <polyline points="110,229 160,203 210,147 260,136 310,127 360,118 410,112 460,106 510,97 560,92 610,54 660,50" fill="none" stroke="#2F47A6" stroke-width="2"/>
-        <text x="105" y="270">1</text><text x="155" y="270">2</text><text x="205" y="270">3</text><text x="255" y="270">4</text><text x="305" y="270">5</text><text x="355" y="270">6</text><text x="405" y="270">7</text><text x="455" y="270">8</text><text x="505" y="270">9</text><text x="553" y="270">10</text><text x="603" y="270">11</text><text x="653" y="270">12</text>
-        <text x="100" y="180" fill="#B8761A" font-size="13">4s²: two outer electrons</text>
-        <text x="270" y="170" fill="#B8761A" font-size="13">3s² 3p⁶: next eight, steady rise</text>
-        <text x="560" y="80" fill="#B8761A" font-size="13">2p: big jump</text>
-        <line x1="185" y1="240" x2="185" y2="130" stroke="#B8761A" stroke-dasharray="4 4"/>
-        <line x1="585" y1="240" x2="585" y2="45" stroke="#B8761A" stroke-dasharray="4 4"/>
+        <g font-size="20"><text x="110" y="274">1</text><text x="160" y="274">2</text><text x="210" y="274">3</text><text x="260" y="274">4</text><text x="310" y="274">5</text><text x="360" y="274">6</text><text x="410" y="274">7</text><text x="460" y="274">8</text><text x="510" y="274">9</text><text x="560" y="274">10</text><text x="610" y="274">11</text><text x="660" y="274">12</text></g>
       </g>
     </svg>
+    <ul class="key"><li>Electrons 1 and 2: the two 4s electrons, removed fairly easily.</li><li>First dashed line: big jump, the next electron comes from the full n = 3 level (3s² 3p⁶). Electrons 3 to 10 rise steadily.</li><li>Second dashed line: another big jump, electron 11 comes from 2p, closer to the nucleus.</li></ul>
     <figcaption>Calcium. Two electrons come off relatively easily (590 and 1150 kJ mol<sup>−1</sup>), then the third needs 4940: the jump after electron 2 shows calcium is in group 2. The next jump after electron 10 marks the end of the n = 3 level. Log scales are used because the values span several orders of magnitude.</figcaption>
   </figure>
   <div class="worked"><b>Worked example.</b> An element has successive IEs (kJ mol<sup>−1</sup>) 578, 1817, 2745, 11578, 14831. The first big jump is between the 3rd and 4th values, so three electrons are in the outer level: group 13. (It is aluminium.)</div>
+
+  <div class="worked" id="drill"><b>Configurations drill (about 15 minutes).</b> Cover the table above. Write the condensed configuration of each species, then open the answers. For Ti, Mn<sup>2+</sup> and Se also draw the orbital diagram of the outer sublevels and count the unpaired electrons.
+    <p style="margin:8px 0 0">K, Sc, Ti, Mn, Mn<sup>2+</sup>, Zn, Zn<sup>2+</sup>, Ga, Se, Cr<sup>3+</sup>, Cu<sup>2+</sup>, S<sup>2−</sup></p>
+  </div>
+  <details><summary>Answers to the configurations drill</summary>
+    <div class="tablewrap"><table>
+      <tr><th>Species</th><th>Condensed configuration</th><th>Why</th></tr>
+      <tr><td>K (19)</td><td>[Ar] 4s¹</td><td>4s fills before 3d</td></tr>
+      <tr><td>Sc (21)</td><td>[Ar] 4s² 3d¹</td><td>first d-block element</td></tr>
+      <tr><td>Ti (22)</td><td>[Ar] 4s² 3d²</td><td>2 unpaired electrons, in separate 3d orbitals (Hund)</td></tr>
+      <tr><td>Mn (25)</td><td>[Ar] 4s² 3d⁵</td><td></td></tr>
+      <tr><td>Mn<sup>2+</sup></td><td>[Ar] 3d⁵</td><td>4s electrons lost first; 5 unpaired electrons</td></tr>
+      <tr><td>Zn (30)</td><td>[Ar] 4s² 3d¹⁰</td><td></td></tr>
+      <tr><td>Zn<sup>2+</sup></td><td>[Ar] 3d¹⁰</td><td>4s lost first</td></tr>
+      <tr><td>Ga (31)</td><td>[Ar] 4s² 3d¹⁰ 4p¹</td><td>p block starts after 3d is full</td></tr>
+      <tr><td>Se (34)</td><td>[Ar] 4s² 3d¹⁰ 4p⁴</td><td>4p: ↑↓ ↑ ↑, so 2 unpaired electrons</td></tr>
+      <tr><td>Cr<sup>3+</sup></td><td>[Ar] 3d³</td><td>Cr is [Ar] 4s¹ 3d⁵; remove the 4s electron, then two 3d</td></tr>
+      <tr><td>Cu<sup>2+</sup></td><td>[Ar] 3d⁹</td><td>Cu is [Ar] 4s¹ 3d¹⁰; remove the 4s electron, then one 3d</td></tr>
+      <tr><td>S<sup>2−</sup></td><td>[Ne] 3s² 3p⁶, the same as [Ar]</td><td>two electrons added to 3p</td></tr>
+    </table></div>
+    <p>Check each one by adding the superscripts: the total must equal the number of electrons (Z for an atom, Z − charge for an ion).</p>
+  </details>
 
   <details><summary>Self-check S1.3</summary>
     <ol>
@@ -675,7 +716,7 @@
   <h2 style="font-size:1.4rem">Before you close this</h2>
   <ul>
     <li>Tick the "I can" boxes you are confident about. The unticked ones are tomorrow's first ten minutes.</li>
-    <li>Do the S1.2 worksheet and the AHL worksheet on paper, then mark them with the answer sheets in the folder.</li>
+    <li>Do the <a href="https://drive.google.com/file/d/1p-ultvuEhOJmswAPShhNXegPNjC2CJew/view">S1.1 exam-style questions</a> and the <a href="#drill">configurations drill</a> if you have not yet. Ask the teacher for the S1.2 question sheets; the folder only has the <a href="https://drive.google.com/file/d/1cLizX65Mhy05O09PYOzYw_tqROsJDlAG/view">answers</a> (<a href="https://drive.google.com/file/d/1ws3qrbP5P8kNzLpWmLPHSrvI4lQAueg8/view">AHL answers</a>).</li>
     <li>Open the study sheet, Error log tab, and write one row for every mistake from the worksheets and the quiz: what went wrong, and the rule that fixes it.</li>
     <li>Tomorrow is Maths (sequences and series). Chemistry continues on Monday 9 Nov with S1.4 the mole and S1.5 gases, which build directly on today's A<sub>r</sub> work.</li>
   </ul>
