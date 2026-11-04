@@ -36,7 +36,10 @@ Read this whole file before writing anything. It collects every rule Lars has gi
 - Keep formulas from breaking mid-expression: wrap them in `<span class="nw">` (see the maths guide), use `&nbsp;` as thousands separator.
 - JavaScript strings: never put an unescaped apostrophe inside a single-quoted JS string.
 
+9. Background words and ideas (Lars 4 Nov, all subjects): after the page is written, follow `tools/TERMS_BRIEF.md` to make `tools/terms/<guide>.json` (tap-to-explain words + "Before you start" box) and run `python3 tools/terms.py`. Jamila must be able to work through the page without looking anything up. Write the explanations in the page itself in everyday words too: never explain a word with another hard word.
+
 ## Checks before you report back
+- `python3 tools/check_terms.py <absolute path to your html>` must end with OK.
 - `python3 tools/check_layout.py <absolute path to your html>` must print `[width, []] []` for 380, 390, 600, 1000, 1200 (last list = JS errors). Fix anything else.
 - Render with Python Playwright (plain `python3`, chromium installed) at 390 and 1000 px, look at the screenshots, fix layout problems.
 - Run the quiz once in Playwright: answer all, confirm the score text and that `localStorage['ib-quiz-guide-YYYY-MM-DD']` is set.

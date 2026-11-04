@@ -1,0 +1,798 @@
+{
+ "minutes": 9,
+ "background": [
+  {
+   "title": "Substituting into a formula",
+   "html": "<p>A formula is a rule written with letters. To <b>substitute</b> means to replace each letter with its number, then work it out.</p><p>Example: u<sub>n</sub> = u<sub>1</sub> + (n − 1)d with u<sub>1</sub> = 36, n = 13 and d = −6.</p><ul><li>Write it out with brackets: 36 + (13 − 1) × (−6)</li><li>Brackets first: 13 − 1 = 12</li><li>Then multiply: 12 × (−6) = −72</li><li>Then add: 36 + (−72) = −36</li></ul><p>The same works for an expression such as 6n − 2: with n = 4 it is 24 − 2 = 22.</p><p>The order is always: brackets, then powers, then × and ÷, then + and −. Put negative numbers in brackets so the minus sign is not lost. The small letter in u<sub>n</sub> is not a power: it just says which position the number is in.</p>"
+  },
+  {
+   "title": "Powers (indices): what 2<sup>5</sup>, (−2)<sup>6</sup> and 2<sup>−1</sup> mean",
+   "html": "<p>The small raised number says how many times to multiply: 2<sup>5</sup> = 2 × 2 × 2 × 2 × 2 = 32, the product of five 2s.</p><ul><li>A negative number to an <b>even</b> power is positive: (−2)<sup>6</sup> = 64. To an <b>odd</b> power it stays negative: (−2)<sup>3</sup> = −8.</li><li>Anything (except 0) to the power 0 is 1.</li><li>A negative power means 1 divided by: 2<sup>−1</sup> = <sup>1</sup>/<sub>2</sub> and 2<sup>−3</sup> = <sup>1</sup>/<sub>8</sub>.</li><li>A fraction power means a root: 9<sup>1/2</sup> = √9 = 3 and 8<sup>1/3</sup> = 2, because 2 × 2 × 2 = 8.</li></ul><p>Going backwards: if r<sup>3</sup> = 8 then r = 2. If r<sup>2</sup> = 3 then r = √3 <b>or</b> r = −√3, because a negative number squared is also positive. On the calculator use the ^ key: 1.03^10 ≈ 1.344.</p>"
+  },
+  {
+   "title": "Solving equations, and a pair of equations together",
+   "html": "<p>Solving means finding the value of the letter. Do the same thing to both sides until the letter is alone: 36 + 4d = 12, take 36 from both sides: 4d = −24, divide both sides by 4: d = −6.</p><p>Sometimes you have two equations with the same two letters (called <b>simultaneous equations</b>). If both have exactly one u<sub>1</sub>, subtract one equation from the other and u<sub>1</sub> disappears:</p><table><tr><td>u<sub>1</sub> + 12d = 8</td></tr><tr><td>u<sub>1</sub> + 9d = 14</td></tr><tr><td>subtract: 3d = −6, so d = −2</td></tr></table><p>Then put d = −2 back into either equation: u<sub>1</sub> = 14 − 9 × (−2) = 32. For geometric sequences you <b>divide</b> one equation by the other instead: u<sub>1</sub>r<sup>4</sup> ÷ u<sub>1</sub>r = r<sup>3</sup>.</p>"
+  },
+  {
+   "title": "Percentages as multipliers",
+   "html": "<p>A percentage is a number out of 100: 3% = 0.03. So 3% of $5000 is 0.03 × 5000 = $150.</p><p>To increase or decrease by a percentage in one step, multiply by one number:</p><table><tr><td>increase by 3%</td><td>100% + 3% = 103%</td><td>× 1.03</td></tr><tr><td>decrease by 15%</td><td>100% − 15% = 85%</td><td>× 0.85</td></tr><tr><td>decrease by 20%</td><td>100% − 20% = 80%</td><td>× 0.8</td></tr></table><p>Doing it again each year means multiplying again: 3 years at 3% is × 1.03 × 1.03 × 1.03 = × 1.03<sup>3</sup>. Two falls of 10% is × 0.9<sup>2</sup> = × 0.81, a 19% fall, not 20%, because the second 10% is taken from the smaller value. This is how a salary that rises by 3% a year is worked out, and why money that grows by a percentage is a geometric sequence.</p>"
+  },
+  {
+   "title": "Fractions: dividing by a fraction, and adding fractions",
+   "html": "<p>The sum to infinity formula often gives a fraction divided by a fraction.</p><ul><li>Dividing by a fraction is the same as multiplying by it upside down: 12 ÷ <sup>1</sup>/<sub>3</sub> = 12 × 3 = 36.</li><li>Take a fraction from 1 by writing 1 as a fraction: 1 − <sup>2</sup>/<sub>3</sub> = <sup>3</sup>/<sub>3</sub> − <sup>2</sup>/<sub>3</sub> = <sup>1</sup>/<sub>3</sub>.</li><li>To add fractions, give them the same bottom number first: <sup>1</sup>/<sub>4</sub> + <sup>1</sup>/<sub>12</sub> = <sup>3</sup>/<sub>12</sub> + <sup>1</sup>/<sub>12</sub> = <sup>4</sup>/<sub>12</sub> = <sup>1</sup>/<sub>3</sub>.</li></ul><p>Putting it together: (<sup>7</sup>/<sub>12</sub>) ÷ (1 − <sup>7</sup>/<sub>8</sub>) = <sup>7</sup>/<sub>12</sub> ÷ <sup>1</sup>/<sub>8</sub> = <sup>7</sup>/<sub>12</sub> × 8 = <sup>56</sup>/<sub>12</sub> = <sup>14</sup>/<sub>3</sub>. Paper 1 has no calculator, so practise these by hand.</p>"
+  },
+  {
+   "title": "Rounding: decimal places and significant figures",
+   "html": "<p><b>Decimal places</b> (d.p.) count digits after the decimal point. <b>Significant figures</b> (s.f.) count digits from the first one that is not zero.</p><table><tr><td>5796.3703…</td><td>2 d.p.</td><td>5796.37</td></tr><tr><td>5796.3703…</td><td>nearest dollar</td><td>5796</td></tr><tr><td>5796.3703…</td><td>3 s.f.</td><td>5800</td></tr></table><p>IB rule: unless the question says otherwise, give answers exactly or correct to 3 significant figures. Money questions usually ask for 2 d.p. or the nearest dollar: read the question and do what it says.</p><p>Keep the full calculator value until the very last line. Rounding in the middle of a calculation changes the final answer and can lose the answer mark.</p>"
+  },
+  {
+   "title": "What a proof is, and why it uses letters",
+   "html": "<p>Trying examples (2 + 3 = 5, 4 + 5 = 9) only shows a statement works for the numbers you tried. There are infinitely many integers to try. A <b>proof</b> uses letters that stand for <b>any</b> integer, so one argument covers every case.</p><ul><li>Any even integer can be written 2k, and any odd integer 2k + 1, where k is an integer.</li><li>Expanding a squared bracket: (x − 3)<sup>2</sup> = (x − 3)(x − 3) = x<sup>2</sup> − 3x − 3x + 9 = x<sup>2</sup> − 6x + 9. It is not x<sup>2</sup> + 9.</li><li>Command words: <b>state</b> means give the answer, no working needed; <b>show that</b> means the answer is already given and the marks are for the steps.</li><li>Each line must follow from the line before by correct algebra, and the last line says in words why the statement is true.</li></ul>"
+  }
+ ],
+ "terms": [
+  {
+   "key": "sequence",
+   "word": "sequence",
+   "match": [
+    "sequence",
+    "sequences"
+   ],
+   "def": "A list of numbers in a set order, usually made by a rule. Example: 2, 5, 8, 11, … (add 3 each time)."
+  },
+  {
+   "key": "series",
+   "word": "series",
+   "match": [
+    "series"
+   ],
+   "def": "The total you get when you add up the numbers of a sequence. 2, 5, 8 is a sequence; 2 + 5 + 8 is a series."
+  },
+  {
+   "key": "arithmetic",
+   "word": "arithmetic sequence",
+   "match": [
+    "arithmetic sequence",
+    "arithmetic",
+    "arithmetically"
+   ],
+   "def": "A sequence where you <b>add</b> the same number each time to get the next one. Example: 7, 11, 15, 19 (add 4). Growing arithmetically means growing by the same amount each time."
+  },
+  {
+   "key": "geometric",
+   "word": "geometric sequence",
+   "match": [
+    "geometric sequence",
+    "geometric"
+   ],
+   "def": "A sequence where you <b>multiply</b> by the same number each time to get the next one. Example: 2, 4, 8, 16 (multiply by 2)."
+  },
+  {
+   "key": "infinite",
+   "word": "infinite",
+   "match": [
+    "infinite",
+    "infinitely"
+   ],
+   "def": "Going on for ever, with no last one. An infinite sequence never ends."
+  },
+  {
+   "key": "finite",
+   "word": "finite",
+   "match": [
+    "finite"
+   ],
+   "def": "Having an end or a fixed size; the opposite of infinite. A finite total is an ordinary number, like 50."
+  },
+  {
+   "key": "sum to infinity",
+   "word": "sum to infinity (S<sub>∞</sub>)",
+   "match": [
+    "sum to infinity",
+    "infinity",
+    "∞"
+   ],
+   "def": "∞ is the symbol for infinity, meaning 'for ever'. The sum to infinity, S<sub>∞</sub>, is the total of <i>all</i> the terms of a geometric sequence that never ends. It only exists when the terms shrink towards 0."
+  },
+  {
+   "key": "mark scheme",
+   "word": "mark scheme",
+   "match": [
+    "mark scheme",
+    "mark schemes"
+   ],
+   "def": "The examiners' answer sheet. It shows the correct answers and which steps of working earn marks."
+  },
+  {
+   "key": "formula booklet",
+   "word": "formula booklet",
+   "match": [
+    "formula booklet"
+   ],
+   "def": "A booklet of formulas the IB gives you in the exam. This page marks those formulas 'In booklet'; the others you must learn."
+  },
+  {
+   "key": "formula",
+   "word": "formula (plural: formulae)",
+   "match": [
+    "formulae",
+    "formula",
+    "formulas"
+   ],
+   "def": "A rule written with letters that tells you how to work out a value. Example: u<sub>n</sub> = u<sub>1</sub> + (n − 1)d."
+  },
+  {
+   "key": "gdc",
+   "word": "GDC",
+   "match": [
+    "GDC",
+    "graphic display calculator"
+   ],
+   "def": "Graphic display calculator: the graphing calculator allowed in Paper 2. It can draw graphs, make tables of values and solve equations for you."
+  },
+  {
+   "key": "sigma",
+   "word": "Σ (sigma notation)",
+   "match": [
+    "sigma notation",
+    "sigma",
+    "Σ"
+   ],
+   "def": "Σ is the Greek capital letter sigma. In maths it means 'add up'. The number below it says where the counting starts, the number on top where it stops."
+  },
+  {
+   "key": "positive integer",
+   "word": "positive integer",
+   "match": [
+    "positive integer",
+    "positive integers"
+   ],
+   "def": "A whole number above zero: 1, 2, 3, 4, … A position in a sequence is always one of these."
+  },
+  {
+   "key": "integer",
+   "word": "integer",
+   "match": [
+    "integer",
+    "integers"
+   ],
+   "def": "A whole number: positive, negative or zero. Examples: −3, 0, 7. 2.5 is not an integer."
+  },
+  {
+   "key": "consecutive",
+   "word": "consecutive",
+   "match": [
+    "consecutive"
+   ],
+   "def": "Coming one straight after another, with no gaps. 4, 5, 6 are consecutive integers; u<sub>2</sub> and u<sub>3</sub> are consecutive terms."
+  },
+  {
+   "key": "constant",
+   "word": "constant",
+   "match": [
+    "constant"
+   ],
+   "def": "Staying the same; not changing."
+  },
+  {
+   "key": "common difference",
+   "word": "common difference (d)",
+   "match": [
+    "common difference"
+   ],
+   "def": "In an arithmetic sequence, the fixed amount added each time, called d. In 7, 11, 15 it is 4. In 60, 57.5, 55 it is −2.5."
+  },
+  {
+   "key": "common ratio",
+   "word": "common ratio (r)",
+   "match": [
+    "common ratio"
+   ],
+   "def": "In a geometric sequence, the fixed number you multiply by each time, called r. In 3, 6, 12 it is 2. Find it by dividing a term by the one before."
+  },
+  {
+   "key": "ratio",
+   "word": "ratio",
+   "match": [
+    "ratio"
+   ],
+   "def": "What you get when you divide one number by another. It says how many times bigger (or smaller) the first is: the ratio of 12 to 3 is 12 ÷ 3 = 4. Here it usually means the common ratio r."
+  },
+  {
+   "key": "expression",
+   "word": "expression",
+   "match": [
+    "expression",
+    "expressions"
+   ],
+   "def": "A piece of maths made of numbers and letters joined by +, −, × or ÷, with no = sign. Example: 6n − 2."
+  },
+  {
+   "key": "variable",
+   "word": "variable",
+   "match": [
+    "variable",
+    "variables"
+   ],
+   "def": "A letter that stands for a number that can change, like x, m or n."
+  },
+  {
+   "key": "power",
+   "word": "power",
+   "match": [
+    "power",
+    "powers",
+    "exponent",
+    "exponents"
+   ],
+   "def": "The small raised number that says how many times to multiply: in 2<sup>5</sup> = 2 × 2 × 2 × 2 × 2 = 32 the power is 5. It is also called an index or exponent. An even power is 2, 4, 6, …"
+  },
+  {
+   "key": "root",
+   "word": "root",
+   "match": [
+    "root"
+   ],
+   "def": "Going back from a power. 3 and −3 are the square roots of 9, because 3 × 3 = 9 and (−3) × (−3) = 9. The sign √ means only the positive one: √9 = 3. If r<sup>3</sup> = 8, r is the cube root of 8, which is 2."
+  },
+  {
+   "key": "logarithm",
+   "word": "logarithm",
+   "match": [
+    "logarithms",
+    "logarithm"
+   ],
+   "def": "A way to find an unknown power. log<sub>2</sub> 8 = 3 because 2<sup>3</sup> = 8. Your class meets it properly in Topic 2; today the GDC can do the same job."
+  },
+  {
+   "key": "evaluate",
+   "word": "evaluate",
+   "match": [
+    "evaluate"
+   ],
+   "def": "In maths: work out the value. 'Evaluate the sum' means find the single number it equals. (In other IB subjects 'evaluate' means weigh up the good and bad points.)"
+  },
+  {
+   "key": "state",
+   "word": "state (command term)",
+   "match": [
+    "state"
+   ],
+   "def": "IB command term: give the answer or a short fact. No working or explanation is needed."
+  },
+  {
+   "key": "show that",
+   "word": "show that (command term)",
+   "match": [
+    "show that"
+   ],
+   "def": "IB command term: get to the result you are given, with every step written. The answer is already on the paper, so all the marks are for the working."
+  },
+  {
+   "key": "proof",
+   "word": "proof, prove",
+   "match": [
+    "proof",
+    "proofs",
+    "prove"
+   ],
+   "def": "A proof is a chain of correct steps that shows a statement is true in <i>every</i> possible case, not just in some examples. To prove is to write one."
+  },
+  {
+   "key": "deductive",
+   "word": "deductive",
+   "match": [
+    "deductive"
+   ],
+   "def": "Going step by step from things you know are true to a result that must then also be true."
+  },
+  {
+   "key": "statement",
+   "word": "statement",
+   "match": [
+    "statement"
+   ],
+   "def": "A sentence in maths that is either true or false, such as 'the sum of two odd numbers is even'."
+  },
+  {
+   "key": "identity",
+   "word": "identity (≡)",
+   "match": [
+    "identity",
+    "identities",
+    "identical",
+    "≡"
+   ],
+   "def": "An equation that is true for <i>every</i> value of the letter, written with ≡. Example: (x + 1)<sup>2</sup> ≡ x<sup>2</sup> + 2x + 1 for any x you choose."
+  },
+  {
+   "key": "lhs",
+   "word": "LHS",
+   "match": [
+    "LHS",
+    "left-hand side"
+   ],
+   "def": "Left-hand side: everything to the left of the = or ≡ sign."
+  },
+  {
+   "key": "rhs",
+   "word": "RHS",
+   "match": [
+    "RHS",
+    "right-hand side"
+   ],
+   "def": "Right-hand side: everything to the right of the = or ≡ sign."
+  },
+  {
+   "key": "expand",
+   "word": "expand",
+   "match": [
+    "expand"
+   ],
+   "def": "Multiply out the brackets. Example: 3(x + 2) becomes 3x + 6."
+  },
+  {
+   "key": "factorise",
+   "word": "factorise",
+   "match": [
+    "factorise"
+   ],
+   "def": "The opposite of expand: take out a number or letter that divides every part, and put the rest in brackets. Example: 3n + 3 = 3(n + 1)."
+  },
+  {
+   "key": "common denominator",
+   "word": "common denominator",
+   "match": [
+    "common denominator"
+   ],
+   "def": "One bottom number shared by fractions, so they can be added. For <sup>1</sup>/<sub>4</sub> + <sup>1</sup>/<sub>12</sub> use twelfths: <sup>3</sup>/<sub>12</sub> + <sup>1</sup>/<sub>12</sub> = <sup>4</sup>/<sub>12</sub>."
+  },
+  {
+   "key": "denominator",
+   "word": "denominator",
+   "match": [
+    "denominator",
+    "denominators"
+   ],
+   "def": "The bottom number of a fraction. In <sup>3</sup>/<sub>4</sub> it is 4. A denominator can never be zero."
+  },
+  {
+   "key": "cancel",
+   "word": "cancel",
+   "match": [
+    "cancel",
+    "cancels"
+   ],
+   "def": "Remove something that is both on the top and the bottom of a fraction, because it divides to 1. Example: <sup>2 × 5</sup>/<sub>2 × 7</sub> = <sup>5</sup>/<sub>7</sub>. 'Cancel exactly' can also mean positive and negative numbers add to 0."
+  },
+  {
+   "key": "collect terms",
+   "word": "collect terms",
+   "match": [
+    "collect terms"
+   ],
+   "def": "Add together the parts of an expression that are alike: 9 + 5 = 14, and 2x + 3x = 5x."
+  },
+  {
+   "key": "complete the square",
+   "word": "complete the square",
+   "match": [
+    "complete the square"
+   ],
+   "def": "Rewrite x<sup>2</sup> + bx + c as (x + p)<sup>2</sup> + q. It helps because a square, (x + p)<sup>2</sup>, can never be negative."
+  },
+  {
+   "key": "divisible",
+   "word": "divisible",
+   "match": [
+    "divisible"
+   ],
+   "def": "Divisible by 3 means it divides by 3 exactly, with nothing left over. 15 is divisible by 3; 16 is not."
+  },
+  {
+   "key": "square number",
+   "word": "square number",
+   "match": [
+    "square number"
+   ],
+   "def": "An integer times itself: 1, 4, 9, 16, 25, … (1 × 1, 2 × 2, 3 × 3, …)."
+  },
+  {
+   "key": "product",
+   "word": "product",
+   "match": [
+    "product"
+   ],
+   "def": "The answer when you multiply. The product of 3 and 5 is 15."
+  },
+  {
+   "key": "modulus",
+   "word": "modulus |r|",
+   "match": [
+    "modulus",
+    "|r|"
+   ],
+   "def": "The size of a number without its sign, written with two straight lines. |−2| = 2 and |2| = 2. |r| &lt; 1 means r is between −1 and 1."
+  },
+  {
+   "key": "converge",
+   "word": "converge",
+   "match": [
+    "converges",
+    "convergent",
+    "converge"
+   ],
+   "def": "A series converges when its running total gets closer and closer to one fixed number, so the sum to infinity exists."
+  },
+  {
+   "key": "approx",
+   "word": "≈",
+   "match": [
+    "≈"
+   ],
+   "def": "'Is approximately equal to': close to, but rounded."
+  },
+  {
+   "key": "plusminus",
+   "word": "±",
+   "match": [
+    "±"
+   ],
+   "def": "'Plus or minus': both answers are possible. r = ±√3 means r = √3 or r = −√3."
+  },
+  {
+   "key": "notequal",
+   "word": "≠",
+   "match": [
+    "≠"
+   ],
+   "def": "'Is not equal to'. r ≠ 0 means r cannot be 0."
+  },
+  {
+   "key": "geq",
+   "word": "≥",
+   "match": [
+    "≥"
+   ],
+   "def": "'Is greater than or equal to'. ≤ means 'is less than or equal to'. Without the line, &gt; and &lt; mean greater than and less than."
+  },
+  {
+   "key": "interest",
+   "word": "interest",
+   "match": [
+    "interest"
+   ],
+   "def": "Money a bank pays you for keeping your money there (or you pay for borrowing). It is usually a percentage per year."
+  },
+  {
+   "key": "simple interest",
+   "word": "simple interest",
+   "match": [
+    "simple interest"
+   ],
+   "def": "Interest worked out on the starting amount only, so you get the same amount every year. The total grows like an arithmetic sequence."
+  },
+  {
+   "key": "compound interest",
+   "word": "compound interest",
+   "match": [
+    "compound interest"
+   ],
+   "def": "Interest that is added to the money in the account, so next time you also earn interest on the interest. The total grows like a geometric sequence."
+  },
+  {
+   "key": "compounded",
+   "word": "compounded",
+   "match": [
+    "compounded",
+    "compounding periods",
+    "compounding"
+   ],
+   "def": "'Compounded monthly' means the interest is worked out and added to the account every month. A compounding period is the time between two such additions."
+  },
+  {
+   "key": "nominal",
+   "word": "nominal",
+   "match": [
+    "nominal"
+   ],
+   "def": "The figure as stated, before anything is changed or taken off. A nominal 5% a year compounded monthly means <sup>5</sup>/<sub>12</sub>% each month. A nominal value is the amount of money before removing the effect of inflation."
+  },
+  {
+   "key": "depreciation",
+   "word": "depreciation",
+   "match": [
+    "depreciation",
+    "depreciates",
+    "depreciate"
+   ],
+   "def": "When something loses value over time, like a car that is worth less each year. Losing 15% a year means multiplying by 0.85 each year."
+  },
+  {
+   "key": "invest",
+   "word": "invest",
+   "match": [
+    "invests",
+    "invested",
+    "invest",
+    "investment"
+   ],
+   "def": "Put money somewhere, such as a bank account, so that it grows. The money put in is the investment."
+  },
+  {
+   "key": "annual",
+   "word": "annual",
+   "match": [
+    "annual",
+    "annually"
+   ],
+   "def": "Yearly; once a year. Compounded annually means interest is added once a year."
+  },
+  {
+   "key": "quarterly",
+   "word": "quarterly, half-yearly",
+   "match": [
+    "quarterly",
+    "half-yearly"
+   ],
+   "def": "Quarterly: four times a year, every 3 months. Half-yearly: twice a year, every 6 months."
+  },
+  {
+   "key": "balance",
+   "word": "balance",
+   "match": [
+    "balance"
+   ],
+   "def": "The amount of money in an account at a given time."
+  },
+  {
+   "key": "salary",
+   "word": "salary",
+   "match": [
+    "salary"
+   ],
+   "def": "The fixed amount a person is paid for their job, usually given per year."
+  },
+  {
+   "key": "purchase",
+   "word": "purchase",
+   "match": [
+    "purchase"
+   ],
+   "def": "Buying something. '10 years after purchase' means 10 years after it was bought."
+  },
+  {
+   "key": "financial app",
+   "word": "financial app",
+   "match": [
+    "financial app"
+   ],
+   "def": "A program on the GDC for money questions. You enter what you know and it finds the missing value. N = years, I% = yearly rate, PMT = regular payment (0 here), P/Y and C/Y = payments and compounding periods per year."
+  },
+  {
+   "key": "solver",
+   "word": "solver",
+   "match": [
+    "solver"
+   ],
+   "def": "A GDC tool: you type in an equation and it finds the value of the unknown letter."
+  },
+  {
+   "key": "decimal places",
+   "word": "decimal places",
+   "match": [
+    "decimal places"
+   ],
+   "def": "The digits after the decimal point. 5.2403 to two decimal places is 5.24."
+  },
+  {
+   "key": "approximate",
+   "word": "approximate",
+   "match": [
+    "approximate",
+    "approximating",
+    "approximately"
+   ],
+   "def": "Close to the true value but not exact. To approximate is to find such a value, for example by rounding or averaging."
+  },
+  {
+   "key": "model",
+   "word": "model",
+   "match": [
+    "a model"
+   ],
+   "def": "A formula that describes a real situation well enough to make predictions, even if it does not fit perfectly."
+  },
+  {
+   "key": "extrapolation",
+   "word": "extrapolation",
+   "match": [
+    "extrapolation"
+   ],
+   "def": "Predicting a value outside the range of the numbers you have, such as week 10 when you only know weeks 1 to 5. It is less reliable than predicting inside that range."
+  },
+  {
+   "key": "reliable",
+   "word": "reliable",
+   "match": [
+    "reliable"
+   ],
+   "def": "Likely to be correct, so you can trust it."
+  },
+  {
+   "key": "symmetric",
+   "word": "symmetric",
+   "match": [
+    "symmetric"
+   ],
+   "def": "The same on both sides of a middle point. 36, 30, …, −30, −36 is symmetric about 0: each number has a partner with the opposite sign."
+  },
+  {
+   "key": "alternate",
+   "word": "alternate",
+   "match": [
+    "alternate"
+   ],
+   "def": "Switch back and forth every time: +, −, +, −, …"
+  },
+  {
+   "key": "derive",
+   "word": "derive",
+   "match": [
+    "derive"
+   ],
+   "def": "Work out a formula yourself, step by step, from things you already know."
+  },
+  {
+   "key": "justify",
+   "word": "justify",
+   "match": [
+    "justify"
+   ],
+   "def": "Give a correct reason why a step is allowed."
+  },
+  {
+   "key": "assume",
+   "word": "assume",
+   "match": [
+    "assumes",
+    "assume"
+   ],
+   "def": "Treat something as true without having shown it is true."
+  },
+  {
+   "key": "conclusion",
+   "word": "conclusion, concluding sentence",
+   "match": [
+    "concluding sentence",
+    "conclusion line",
+    "conclusion"
+   ],
+   "def": "The last line of a proof: a sentence that says what you have shown and why it is true."
+  },
+  {
+   "key": "valid",
+   "word": "valid",
+   "match": [
+    "valid"
+   ],
+   "def": "Correct and acceptable. A valid proof really does prove the statement for every case."
+  },
+  {
+   "key": "exceeds",
+   "word": "exceeds",
+   "match": [
+    "exceeds",
+    "exceed"
+   ],
+   "def": "Goes above; is more than."
+  },
+  {
+   "key": "notation",
+   "word": "notation",
+   "match": [
+    "notation"
+   ],
+   "def": "The symbols and way of writing that maths uses, such as u<sub>n</sub> for a term or Σ for 'add up'."
+  },
+  {
+   "key": "algebra",
+   "word": "algebra, algebraic",
+   "match": [
+    "algebraic",
+    "algebra"
+   ],
+   "def": "Maths with letters that stand for numbers. An algebraic proof uses letters, so it covers every number; a numerical one uses actual numbers."
+  },
+  {
+   "key": "condition",
+   "word": "condition",
+   "match": [
+    "condition"
+   ],
+   "def": "A rule that must be true. 'The condition |r| &lt; 1' means the sum to infinity only exists when r is between −1 and 1."
+  },
+  {
+   "key": "inflation",
+   "word": "inflation",
+   "match": [
+    "inflation"
+   ],
+   "def": "Prices going up over time, so the same money buys less. 2% inflation means things cost 2% more each year."
+  },
+  {
+   "key": "real value",
+   "word": "real value",
+   "match": [
+    "real value"
+   ],
+   "def": "What an amount of money is worth in today's prices, after taking off the effect of inflation."
+  },
+  {
+   "key": "calculate",
+   "word": "calculate (command term)",
+   "match": [
+    "calculate"
+   ],
+   "def": "IB command term: get a number as the answer, and show the steps of working that lead to it."
+  },
+  {
+   "key": "contrast",
+   "word": "contrast (command term)",
+   "match": [
+    "contrast"
+   ],
+   "def": "IB command term: describe the differences between two things, talking about both of them."
+  },
+  {
+   "key": "analyse",
+   "word": "analyse",
+   "match": [
+    "analyse"
+   ],
+   "def": "Break something down into its parts to see how it works. Here: look closely at the numbers to find the pattern."
+  },
+  {
+   "key": "interpret",
+   "word": "interpret (command term)",
+   "match": [
+    "interpret"
+   ],
+   "def": "IB command term: use what you know to spot patterns and say what the results mean in the real situation."
+  },
+  {
+   "key": "comment",
+   "word": "comment (command term)",
+   "match": [
+    "comment"
+   ],
+   "def": "IB command term: give a short judgement about a result, for example whether it is sensible or how far you can trust it."
+  },
+  {
+   "key": "independent",
+   "word": "independent",
+   "match": [
+    "independent"
+   ],
+   "def": "Not linked to each other. Two independent letters, a and b, can each be any integer, so the two numbers can be different."
+  },
+  {
+   "key": "find",
+   "word": "find (command term)",
+   "match": [
+    "find"
+   ],
+   "def": "IB command term: get the answer and show the steps of working that lead to it. A bare answer may not get all the marks."
+  },
+  {
+   "key": "predict",
+   "word": "predict (command term)",
+   "match": [
+    "predictions",
+    "prediction",
+    "predict"
+   ],
+   "def": "IB command term: say what result you expect, for example a value for week 10 worked out from the pattern so far."
+  }
+ ]
+}

@@ -9,3 +9,6 @@ Run from the repo root: `python3 tools/<script>.py tools .` (first argument: thi
 - `check_layout.py <file.html>` → overflow check at 380 to 1200 px (needs Python Playwright).
 
 Every guide's quiz saves `ib-quiz-guide-YYYY-MM-DD` in localStorage; every guide's "I can" boxes save under their own key. The progress page reads both.
+
+## Background words (4 Nov)
+- `tools/terms/<guide>.json` holds the tap-to-explain words and the "Before you start" box for each guide; `python3 tools/terms.py guides/<guide>.html tools/terms/<guide>.json` adds them to the page (safe to rerun). `python3 tools/check_terms.py <abs path>` tests them. How to write them: `tools/TERMS_BRIEF.md`.
