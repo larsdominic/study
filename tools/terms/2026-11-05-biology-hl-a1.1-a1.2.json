@@ -1,0 +1,975 @@
+{
+ "minutes": 8,
+ "background": [
+  {
+   "title": "Atoms, elements and molecules",
+   "html": "<p>Everything is made of tiny particles called <b>atoms</b>. An <b>element</b> is a substance made of only one kind of atom. Living things are built mainly from hydrogen (H), carbon (C), nitrogen (N), oxygen (O), phosphorus (P) and sulfur (S).</p><p>Each atom has a tiny positive centre, with even smaller negative <b>electrons</b> moving around it.</p><p>Atoms join together to make <b>molecules</b>. A formula tells you which atoms: H<sub>2</sub>O is 2 hydrogen atoms and 1 oxygen atom. The small low number after a symbol counts the atoms of that element. Water is a tiny molecule; DNA and proteins contain thousands or millions of atoms.</p>"
+  },
+  {
+   "title": "Bonds: strong ones and weak ones",
+   "html": "<p>A <b>bond</b> is what holds particles together. Two kinds matter today:</p><ul><li><b>Covalent bond</b>: two atoms <i>share</i> a pair of electrons. It is strong and holds the atoms of one molecule together. Drawn as a solid line, for example O-H.</li><li><b>Hydrogen bond</b>: a weak attraction <i>between</i> molecules (or between two distant parts of one big molecule). Drawn as a dashed line. About 20 times weaker than a covalent bond, but there are huge numbers of them.</li></ul><p>Rule of thumb: strong covalent bonds build a molecule; weak hydrogen bonds decide how molecules stick to each other, and so how a substance behaves.</p>"
+  },
+  {
+   "title": "Charges, ions and polarity",
+   "html": "<p>Electric charge comes in two kinds, positive (+) and negative (−). <b>Opposite charges attract; like charges repel</b> (push apart).</p><p>An <b>ion</b> carries a full charge because it has lost or gained electrons: Na<sup>+</sup>, Cl<sup>−</sup>.</p><p>In some covalent bonds the electrons are shared unevenly. Oxygen pulls them harder than hydrogen, so in water the O end becomes slightly negative (<b>δ−</b>) and each H end slightly positive (<b>δ+</b>). The Greek letter δ (delta) means \"a little\". A molecule with δ+ and δ− ends is <b>polar</b>. When electrons are shared evenly, as in oils and fats, there are no charged ends: <b>non-polar</b>.</p><p>Polar things attract polar and charged things. Non-polar things do not mix with them.</p>"
+  },
+  {
+   "title": "Dissolving",
+   "html": "<p>When a substance <b>dissolves</b>, it breaks up into single molecules or ions that spread evenly through a liquid. The liquid is the <b>solvent</b>, the substance that dissolves is the <b>solute</b>, and the mixture is a <b>solution</b>. Sugar (solute) in tea (solvent) makes a solution.</p><p>\"Like dissolves like\": water is polar, so it dissolves ions and polar molecules, but not non-polar ones such as oil, which stays as a separate layer.</p><p>Inside cells and in blood, almost everything that moves around or reacts is dissolved in water.</p>"
+  },
+  {
+   "title": "Heat, temperature and energy units",
+   "html": "<p><b>Energy</b> is measured in joules (J); 1 kJ = 1&nbsp;000 J. <b>Temperature</b> (in °C) tells you how fast the particles are moving on average. Heating gives the particles energy, so they move faster and the temperature rises.</p><p>Water exists as solid ice (below 0 °C), liquid water, and a gas called water vapour. At 100 °C it boils. Liquid turning into gas at the surface is evaporating; gas turning back into liquid is condensing.</p><p>In units, a power of −1 means \"per\": J kg<sup>−1</sup> °C<sup>−1</sup> is read \"joules per kilogram per degree Celsius\".</p>"
+  },
+  {
+   "title": "Cells and the big molecules of life",
+   "html": "<p>All living things are made of <b>cells</b>. A cell has a thin outer membrane and watery cytoplasm inside. Animal, plant and fungus cells also have a nucleus that holds the DNA; bacteria are simpler cells with no nucleus.</p><p>Four groups of large molecules do most of the work in cells:</p><ul><li><b>carbohydrates</b>: sugars, starch, cellulose</li><li><b>lipids</b>: fats, oils, phospholipids</li><li><b>proteins</b>: chains of amino acids; enzymes are proteins</li><li><b>nucleic acids</b>: DNA and RNA</li></ul><p>Many large molecules are <b>polymers</b>: long chains of small repeating units (monomers), like beads on a string.</p>"
+  },
+  {
+   "title": "Isotopes: what <sup>32</sup>P and <sup>35</sup>S mean",
+   "html": "<p>The centre of an atom contains particles called protons and neutrons. All atoms of one element have the same number of protons, but the number of neutrons can differ. These different forms of the same element are <b>isotopes</b>.</p><p>The small raised number is the <b>mass number</b> (protons + neutrons). <sup>32</sup>P is phosphorus with mass number 32; <sup>35</sup>S is sulfur with mass number 35.</p><p>Both are <b>radioactive</b>: they give off radiation that a detector can measure. Living things use them just like normal phosphorus and sulfur, so they work as tags to follow one kind of molecule through an experiment.</p>"
+  },
+  {
+   "title": "Powers, percentages and ratios",
+   "html": "<p><b>Powers</b>: 4<sup>3</sup> means 4 × 4 × 4 = 64. The small raised number says how many 4s are multiplied together, so 4<sup>n</sup> means n fours multiplied, where n can be any whole number.</p><p><b>Percentages</b>: \"per cent\" means \"out of 100\". All the parts of a whole add up to 100%. To find 28% of 4&nbsp;000, work out 0.28 × 4&nbsp;000 = 1&nbsp;120.</p><p>A <b>ratio</b> such as A : T compares two amounts. Dividing one by the other gives a single number; an answer close to 1 means the two amounts are almost equal.</p>"
+  }
+ ],
+ "terms": [
+  {
+   "key": "molecule",
+   "word": "molecule",
+   "match": [
+    "molecule",
+    "molecules"
+   ],
+   "def": "A group of atoms held together by covalent bonds, behaving as one particle. A water molecule, H<sub>2</sub>O, is one oxygen atom joined to two hydrogen atoms."
+  },
+  {
+   "key": "electron",
+   "word": "electron",
+   "match": [
+    "electron",
+    "electrons"
+   ],
+   "def": "A very small particle with a negative charge that moves around the centre of an atom. Bonds form when atoms share or pass on electrons."
+  },
+  {
+   "key": "mass number",
+   "word": "mass number",
+   "match": [
+    "mass number"
+   ],
+   "def": "The number of heavy particles (protons and neutrons) in the centre of an atom. It is written small and raised before the symbol: <sup>32</sup>P has mass number 32."
+  },
+  {
+   "key": "covalent bond",
+   "word": "covalent bond",
+   "match": [
+    "covalent bond",
+    "covalent bonds",
+    "covalent"
+   ],
+   "def": "A strong bond in which two atoms share a pair of electrons. Covalent bonds hold the atoms of one molecule together. Drawn as a solid line."
+  },
+  {
+   "key": "polar covalent bond",
+   "word": "polar covalent bond",
+   "match": [
+    "polar covalent bond",
+    "polar covalent bonds"
+   ],
+   "def": "A covalent bond in which one atom pulls the shared electrons harder, so one end is slightly negative (δ−) and the other slightly positive (δ+). The O-H bonds in water are polar."
+  },
+  {
+   "key": "electronegative",
+   "word": "electronegative",
+   "match": [
+    "electronegative"
+   ],
+   "def": "Pulling shared electrons strongly towards itself. Oxygen is more electronegative than hydrogen, so in an O-H bond the electrons sit closer to the oxygen."
+  },
+  {
+   "key": "charge",
+   "word": "charge",
+   "match": [
+    "charge",
+    "charges",
+    "charged"
+   ],
+   "def": "Electric charge is either positive (+) or negative (−). Opposite charges attract each other; like charges (+ and +, or − and −) push each other away."
+  },
+  {
+   "key": "partial charge",
+   "word": "δ+ and δ−",
+   "match": [
+    "δ+",
+    "δ−"
+   ],
+   "def": "Say \"delta plus\" and \"delta minus\". A small positive or negative charge, much smaller than the full charge of an ion. It appears at the ends of a polar bond."
+  },
+  {
+   "key": "polar",
+   "word": "polar",
+   "match": [
+    "polar",
+    "polarity"
+   ],
+   "def": "Having a slightly positive end and a slightly negative end, because electrons are shared unevenly. Water is polar. Polarity means being polar."
+  },
+  {
+   "key": "non-polar",
+   "word": "non-polar",
+   "match": [
+    "non-polar"
+   ],
+   "def": "Having no charged ends, because the electrons are shared evenly. Oils, fats and waxes are non-polar, so water is not attracted to them."
+  },
+  {
+   "key": "hydrogen bond",
+   "word": "hydrogen bond",
+   "match": [
+    "hydrogen bond",
+    "hydrogen bonds"
+   ],
+   "def": "A weak attraction between a δ+ hydrogen atom (one bonded to O or N) and a δ− oxygen or nitrogen atom nearby, usually on a neighbouring molecule (in DNA, on the other strand). Drawn as a dashed line."
+  },
+  {
+   "key": "ion",
+   "word": "ion",
+   "match": [
+    "ion",
+    "ions"
+   ],
+   "def": "An atom or group of atoms that has lost or gained electrons, so it carries a full charge. Na<sup>+</sup> has lost one electron; Cl<sup>−</sup> has gained one. Salt is made of these two ions."
+  },
+  {
+   "key": "-oh group",
+   "word": "-OH group",
+   "match": [
+    "-OH group",
+    "-OH groups",
+    "-OH"
+   ],
+   "def": "An oxygen atom bonded to a hydrogen atom, sticking out from a bigger molecule (also called a hydroxyl group). The O-H bond is polar, so -OH groups form hydrogen bonds with water."
+  },
+  {
+   "key": "approx",
+   "word": "≈",
+   "match": [
+    "≈"
+   ],
+   "def": "Means \"is approximately equal to\": almost the same amount."
+  },
+  {
+   "key": "cohesion",
+   "word": "cohesion",
+   "match": [
+    "cohesion"
+   ],
+   "def": "Water molecules sticking to each other, because of the hydrogen bonds between them."
+  },
+  {
+   "key": "adhesion",
+   "word": "adhesion",
+   "match": [
+    "adhesion"
+   ],
+   "def": "Water molecules sticking to a different substance that is polar or charged, such as glass or cellulose."
+  },
+  {
+   "key": "solvent",
+   "word": "solvent",
+   "match": [
+    "solvent"
+   ],
+   "def": "A liquid that other substances dissolve in. Water is the solvent in blood, sea water and the cytoplasm of cells."
+  },
+  {
+   "key": "soluble",
+   "word": "soluble",
+   "match": [
+    "soluble"
+   ],
+   "def": "Able to dissolve in a liquid. \"Slightly soluble\" means only a small amount can dissolve."
+  },
+  {
+   "key": "hydrophilic",
+   "word": "hydrophilic",
+   "match": [
+    "hydrophilic"
+   ],
+   "def": "\"Water-loving\": attracted to water, so it dissolves in or mixes with water. Ions and polar molecules are hydrophilic."
+  },
+  {
+   "key": "hydrophobic",
+   "word": "hydrophobic",
+   "match": [
+    "hydrophobic"
+   ],
+   "def": "\"Water-hating\": not attracted to water, so it does not dissolve but clusters together instead. Non-polar substances such as oils are hydrophobic."
+  },
+  {
+   "key": "amphipathic",
+   "word": "amphipathic",
+   "match": [
+    "amphipathic"
+   ],
+   "def": "Having a hydrophilic part and a hydrophobic part in the same molecule. A phospholipid is the main example."
+  },
+  {
+   "key": "thermal",
+   "word": "thermal",
+   "match": [
+    "thermal properties",
+    "thermally"
+   ],
+   "def": "To do with heat. Thermal properties are how a substance behaves when it is heated or cooled. \"Thermally stable\" means its temperature hardly changes."
+  },
+  {
+   "key": "thermal conductivity",
+   "word": "thermal conductivity",
+   "match": [
+    "thermal conductivity"
+   ],
+   "def": "How fast heat passes through a material. Water's is about 24 times higher than air's, so a body loses heat much faster in cold water. Fat and still air have low ones."
+  },
+  {
+   "key": "specific heat capacity",
+   "word": "specific heat capacity",
+   "match": [
+    "specific heat capacity"
+   ],
+   "def": "The energy needed to warm 1 kg of a substance by 1 °C. Water's is high (about 4&nbsp;200 J), because heat must first break hydrogen bonds, so water heats up and cools down slowly."
+  },
+  {
+   "key": "j kg-1 °c-1",
+   "word": "J kg−1 °C−1",
+   "match": [
+    "J kg"
+   ],
+   "def": "Say \"joules per kilogram per degree Celsius\". A power of −1 means \"per\": kg<sup>−1</sup> is per kilogram. So 4&nbsp;200 J kg<sup>−1</sup> °C<sup>−1</sup> means 4&nbsp;200 joules warm 1 kg by 1 °C."
+  },
+  {
+   "key": "buoyancy",
+   "word": "buoyancy",
+   "match": [
+    "buoyancy",
+    "buoyant"
+   ],
+   "def": "The upward push of a liquid or gas on an object in it. Buoyancy is why you feel lighter in a swimming pool."
+  },
+  {
+   "key": "viscosity",
+   "word": "viscosity",
+   "match": [
+    "viscosity",
+    "viscous"
+   ],
+   "def": "How thick a liquid or gas is: how much it resists flowing. Honey has a high viscosity, water a lower one, air a much lower one."
+  },
+  {
+   "key": "density",
+   "word": "density",
+   "match": [
+    "density",
+    "dense",
+    "denser"
+   ],
+   "def": "How heavy a substance is for its size. A litre of water weighs about 1 kg, a litre of air about 1 g, so water is far denser."
+  },
+  {
+   "key": "drag",
+   "word": "drag",
+   "match": [
+    "drag"
+   ],
+   "def": "The force that pushes back on something moving through water or air and slows it down."
+  },
+  {
+   "key": "aquatic",
+   "word": "aquatic",
+   "match": [
+    "aquatic"
+   ],
+   "def": "Living in water, or to do with water. An aquatic habitat (the place where something lives) is a lake, river or sea."
+  },
+  {
+   "key": "lattice",
+   "word": "lattice",
+   "match": [
+    "lattice"
+   ],
+   "def": "A regular, repeating arrangement of particles in three dimensions, like a climbing frame. In ice the lattice is open, with gaps between the molecules."
+  },
+  {
+   "key": "condense",
+   "word": "condenses",
+   "match": [
+    "condenses",
+    "condensing"
+   ],
+   "def": "To change from a gas into a liquid. Water vapour (water as a gas) condenses into droplets on a cold window."
+  },
+  {
+   "key": "tension",
+   "word": "tension",
+   "match": [
+    "tension"
+   ],
+   "def": "A pulling force that stretches something, like a rope being pulled tight. Water in the xylem is pulled from the top, so it is under tension."
+  },
+  {
+   "key": "surface tension",
+   "word": "surface tension",
+   "match": [
+    "surface tension"
+   ],
+   "def": "The \"skin\" at the surface of water: hydrogen bonds pull the surface molecules inwards and sideways, so the surface resists being broken. Pond skaters can stand on it."
+  },
+  {
+   "key": "capillary action",
+   "word": "capillary action",
+   "match": [
+    "capillary action"
+   ],
+   "def": "Water moving by itself along very narrow spaces, even upwards: adhesion pulls it along the sides, and cohesion pulls more water along behind."
+  },
+  {
+   "key": "solution",
+   "word": "solution",
+   "match": [
+    "solution"
+   ],
+   "def": "A liquid with something dissolved in it, such as salt water. \"In solution\" means dissolved in water."
+  },
+  {
+   "key": "medium",
+   "word": "medium",
+   "match": [
+    "medium"
+   ],
+   "def": "Here: the substance in which something lives or happens. Water is the medium for life because cells live in it and their reactions happen in it."
+  },
+  {
+   "key": "cytoplasm",
+   "word": "cytoplasm",
+   "match": [
+    "cytoplasm"
+   ],
+   "def": "Everything inside a cell's membrane except the nucleus: a watery fluid (the cytosol) with the cell's small structures in it."
+  },
+  {
+   "key": "membrane",
+   "word": "membrane",
+   "match": [
+    "membrane",
+    "membranes"
+   ],
+   "def": "A very thin layer around a cell, and around some structures inside it, that controls what goes in and out. It is made mainly of phospholipids."
+  },
+  {
+   "key": "metabolism",
+   "word": "metabolism",
+   "match": [
+    "metabolism"
+   ],
+   "def": "All the chemical reactions going on in a living thing, such as breaking down glucose to release energy or building proteins."
+  },
+  {
+   "key": "chemical reaction",
+   "word": "chemical reaction",
+   "match": [
+    "chemical reaction",
+    "chemical reactions",
+    "reaction",
+    "reactions"
+   ],
+   "def": "A change in which substances break apart or join up to make new substances. The starting substances are reactants; the new ones are products."
+  },
+  {
+   "key": "hydrolysis",
+   "word": "hydrolysis",
+   "match": [
+    "hydrolysis"
+   ],
+   "def": "A reaction that uses a water molecule to break a covalent bond, splitting a large molecule into smaller ones. \"Hydro\" means water, \"lysis\" means splitting."
+  },
+  {
+   "key": "condensation reaction",
+   "word": "condensation reaction",
+   "match": [
+    "condensation reaction",
+    "condensation reactions",
+    "condensation"
+   ],
+   "def": "A reaction that joins two molecules with a covalent bond and releases a molecule of water. It is the opposite of hydrolysis. (Not the same as water vapour condensing.)"
+  },
+  {
+   "key": "respiration",
+   "word": "respiration",
+   "match": [
+    "respiration"
+   ],
+   "def": "The process in every cell that releases energy from glucose. With oxygen it produces carbon dioxide and water. It is not the same as breathing."
+  },
+  {
+   "key": "xylem",
+   "word": "xylem",
+   "match": [
+    "xylem"
+   ],
+   "def": "Tubes in a plant, made of dead, hollow cells with strong walls, that carry water and dissolved minerals up from the roots to the leaves."
+  },
+  {
+   "key": "phloem",
+   "word": "phloem",
+   "match": [
+    "phloem"
+   ],
+   "def": "Tubes in a plant, made of living cells, that carry dissolved sugar (sucrose) from the leaves to the rest of the plant."
+  },
+  {
+   "key": "cell wall",
+   "word": "cell wall",
+   "match": [
+    "cell wall",
+    "cell walls"
+   ],
+   "def": "A stiff layer outside the membrane of plant cells (and of bacteria and fungi) that gives the cell its shape and strength. In plants it is made of cellulose."
+  },
+  {
+   "key": "cellulose",
+   "word": "cellulose",
+   "match": [
+    "cellulose"
+   ],
+   "def": "A tough fibre made of long chains of glucose. It is the main material of plant cell walls, and of paper and cotton."
+  },
+  {
+   "key": "lignified",
+   "word": "lignified",
+   "match": [
+    "lignified"
+   ],
+   "def": "Strengthened with lignin, a hard, woody substance. Lignified xylem walls are strong enough not to collapse."
+  },
+  {
+   "key": "amino acid",
+   "word": "amino acid",
+   "match": [
+    "amino acid",
+    "amino acids"
+   ],
+   "def": "The small building blocks of proteins. There are 20 kinds; a protein is a long chain of them in a particular order."
+  },
+  {
+   "key": "protein",
+   "word": "protein",
+   "match": [
+    "protein",
+    "proteins"
+   ],
+   "def": "A large molecule made of one or more chains of amino acids, folded into a particular shape. Enzymes and haemoglobin are proteins."
+  },
+  {
+   "key": "enzyme",
+   "word": "enzyme",
+   "match": [
+    "enzyme",
+    "enzymes"
+   ],
+   "def": "A protein that speeds up one particular chemical reaction in a living thing without being used up."
+  },
+  {
+   "key": "substrate",
+   "word": "substrate",
+   "match": [
+    "substrate",
+    "substrates"
+   ],
+   "def": "The molecule that an enzyme acts on."
+  },
+  {
+   "key": "phospholipid",
+   "word": "phospholipid",
+   "match": [
+    "phospholipid",
+    "phospholipids"
+   ],
+   "def": "A fat-like molecule with a water-loving phosphate head and two water-hating fatty acid tails. Phospholipids form the double layer of every cell membrane."
+  },
+  {
+   "key": "fatty acid",
+   "word": "fatty acid",
+   "match": [
+    "fatty acid",
+    "fatty acids"
+   ],
+   "def": "A long chain of carbon and hydrogen atoms with an acid group at one end. The chain is non-polar, so it is hydrophobic. Fats and phospholipids are built from fatty acids."
+  },
+  {
+   "key": "plasma",
+   "word": "plasma",
+   "match": [
+    "plasma"
+   ],
+   "def": "The pale yellow liquid part of blood, mostly water, in which the blood cells float."
+  },
+  {
+   "key": "haemoglobin",
+   "word": "haemoglobin",
+   "match": [
+    "haemoglobin"
+   ],
+   "def": "The red protein inside red blood cells. It picks up oxygen in the lungs and releases it in the body."
+  },
+  {
+   "key": "goldilocks zone",
+   "word": "Goldilocks zone",
+   "match": [
+    "Goldilocks zone"
+   ],
+   "def": "The range of distances from a star where a planet is neither too hot nor too cold, so liquid water can exist on its surface."
+  },
+  {
+   "key": "nucleic acid",
+   "word": "nucleic acid",
+   "match": [
+    "nucleic acid",
+    "nucleic acids"
+   ],
+   "def": "The family of large molecules that store and use genetic information: DNA and RNA."
+  },
+  {
+   "key": "genetic material",
+   "word": "genetic material",
+   "match": [
+    "genetic material",
+    "genetic information"
+   ],
+   "def": "The instructions for building and running an organism, passed on to its offspring. They are stored as the order of bases in DNA (in some viruses, RNA)."
+  },
+  {
+   "key": "gene",
+   "word": "gene",
+   "match": [
+    "gene",
+    "genes"
+   ],
+   "def": "A section of DNA that carries the instructions for one product, usually a protein."
+  },
+  {
+   "key": "polymer",
+   "word": "polymer",
+   "match": [
+    "polymer",
+    "polymers"
+   ],
+   "def": "A large molecule made of many similar small units (monomers) joined in a chain. Starch, proteins and DNA are polymers."
+  },
+  {
+   "key": "monomer",
+   "word": "monomer",
+   "match": [
+    "monomer",
+    "monomers"
+   ],
+   "def": "One of the small units that join in a chain to make a polymer. Nucleotides are the monomers of DNA and RNA."
+  },
+  {
+   "key": "nucleotide",
+   "word": "nucleotide",
+   "match": [
+    "nucleotide",
+    "nucleotides"
+   ],
+   "def": "The building block (monomer) of DNA and RNA: a phosphate, a sugar with 5 carbon atoms, and a base, joined together."
+  },
+  {
+   "key": "phosphate",
+   "word": "phosphate",
+   "match": [
+    "phosphate",
+    "phosphates"
+   ],
+   "def": "A small group of atoms: one phosphorus atom surrounded by four oxygen atoms, with a negative charge. It is part of every nucleotide and every phospholipid."
+  },
+  {
+   "key": "base",
+   "word": "base",
+   "match": [
+    "base",
+    "bases"
+   ],
+   "def": "In DNA and RNA: the nitrogen-containing part of a nucleotide, one of A, C, G, T or U. The order of bases carries the information. (Different from a \"base\" in chemistry.)"
+  },
+  {
+   "key": "base pair",
+   "word": "base pair",
+   "match": [
+    "base pair",
+    "base pairs"
+   ],
+   "def": "Two bases, one on each strand of DNA, held together by hydrogen bonds: A with T, or G with C. One base pair is two nucleotides."
+  },
+  {
+   "key": "strand",
+   "word": "strand",
+   "match": [
+    "strand",
+    "strands"
+   ],
+   "def": "One long chain of nucleotides. RNA is one strand; DNA is two strands paired together."
+  },
+  {
+   "key": "antiparallel",
+   "word": "antiparallel",
+   "match": [
+    "antiparallel"
+   ],
+   "def": "Side by side but running in opposite directions. In DNA one strand runs 5′ to 3′ and its partner runs 3′ to 5′."
+  },
+  {
+   "key": "double helix",
+   "word": "double helix",
+   "match": [
+    "double helix"
+   ],
+   "def": "The shape of DNA: two strands twisted around each other like a twisted ladder. The sugar-phosphate backbones are the sides; the base pairs are the rungs."
+  },
+  {
+   "key": "complementary",
+   "word": "complementary",
+   "match": [
+    "complementary"
+   ],
+   "def": "Fitting together as a matching pair. In DNA, A always pairs with T and G with C, so the sequence of one strand fixes the sequence of the other."
+  },
+  {
+   "key": "prime",
+   "word": "5′ and 3′",
+   "match": [
+    "5′ to 3′",
+    "5′ and 3′",
+    "1′ to 5′",
+    "5′ end",
+    "3′ end"
+   ],
+   "def": "Say \"five prime\" and \"three prime\". The carbon atoms of the sugar are numbered 1′ to 5′; the ′ shows they are sugar carbons. A strand's 5′ end has a phosphate; its 3′ end has a free -OH."
+  },
+  {
+   "key": "genetic code",
+   "word": "genetic code",
+   "match": [
+    "genetic code"
+   ],
+   "def": "The rule for which group of three bases (a triplet) stands for which amino acid. It is almost the same in every living thing."
+  },
+  {
+   "key": "codon",
+   "word": "codon",
+   "match": [
+    "codon",
+    "codons"
+   ],
+   "def": "A group of three bases in messenger RNA that codes for one amino acid."
+  },
+  {
+   "key": "anticodon",
+   "word": "anticodon",
+   "match": [
+    "anticodon",
+    "anticodons"
+   ],
+   "def": "Three bases on a transfer RNA molecule that are complementary to, and pair with, a codon on messenger RNA."
+  },
+  {
+   "key": "template",
+   "word": "template",
+   "match": [
+    "template"
+   ],
+   "def": "A pattern used to make a matching copy. A DNA strand is the template for a new complementary strand."
+  },
+  {
+   "key": "expression",
+   "word": "expression",
+   "match": [
+    "expression",
+    "expressed"
+   ],
+   "def": "Gene expression: using the information in a gene to make its product, usually a protein. A gene that is used is \"expressed\". It happens in two steps: transcription, then translation."
+  },
+  {
+   "key": "transcription",
+   "word": "transcription",
+   "match": [
+    "transcription"
+   ],
+   "def": "Making an RNA copy of a gene, using one strand of DNA as the template. The copy is messenger RNA."
+  },
+  {
+   "key": "translation",
+   "word": "translation",
+   "match": [
+    "translation"
+   ],
+   "def": "Making a protein at a ribosome by reading messenger RNA one codon (three bases) at a time."
+  },
+  {
+   "key": "messenger rna",
+   "word": "messenger RNA",
+   "match": [
+    "messenger RNA"
+   ],
+   "def": "An RNA copy of a gene that carries its instructions from the DNA to a ribosome, where the protein is made."
+  },
+  {
+   "key": "transfer rna",
+   "word": "transfer RNA",
+   "match": [
+    "transfer RNA"
+   ],
+   "def": "Small RNA molecules that each bring one amino acid to the ribosome. Each has an anticodon that pairs with a codon."
+  },
+  {
+   "key": "ribosome",
+   "word": "ribosome",
+   "match": [
+    "ribosome",
+    "ribosomes"
+   ],
+   "def": "A tiny structure in the cytoplasm where proteins are made, by joining amino acids in the order messenger RNA gives."
+  },
+  {
+   "key": "common ancestor",
+   "word": "common ancestor",
+   "match": [
+    "common ancestor",
+    "common ancestry"
+   ],
+   "def": "A common ancestor is an organism from which several groups of organisms are all descended. Universal common ancestry means all life comes from one shared ancestor."
+  },
+  {
+   "key": "conserved",
+   "word": "conserved",
+   "match": [
+    "conserved",
+    "conservation"
+   ],
+   "def": "Kept the same over a very long time of evolution. Conservation means being kept the same: the genetic code has hardly changed in billions of years."
+  },
+  {
+   "key": "mitochondria",
+   "word": "mitochondria",
+   "match": [
+    "mitochondria"
+   ],
+   "def": "Small structures in the cells of animals, plants and fungi where respiration releases most of the energy. They have their own small DNA."
+  },
+  {
+   "key": "genetic engineering",
+   "word": "genetic engineering",
+   "match": [
+    "genetic engineering"
+   ],
+   "def": "Changing an organism's DNA, often by moving a gene from one organism into another. For example, bacteria given the human gene for insulin (a hormone) make human insulin."
+  },
+  {
+   "key": "arbitrary",
+   "word": "arbitrary",
+   "match": [
+    "arbitrary"
+   ],
+   "def": "Not fixed by any reason or rule: it could just as well have been different."
+  },
+  {
+   "key": "eukaryote",
+   "word": "eukaryotes",
+   "match": [
+    "eukaryotes"
+   ],
+   "def": "Organisms whose cells have a nucleus: animals, plants and fungi."
+  },
+  {
+   "key": "prokaryote",
+   "word": "prokaryotes",
+   "match": [
+    "prokaryotes"
+   ],
+   "def": "Organisms whose cells have no nucleus, such as bacteria. Their DNA lies loose in the cytoplasm."
+  },
+  {
+   "key": "dna polymerase",
+   "word": "DNA polymerase",
+   "match": [
+    "DNA polymerase"
+   ],
+   "def": "The enzyme that builds a new DNA strand, adding one nucleotide at a time."
+  },
+  {
+   "key": "nm",
+   "word": "nm",
+   "match": [
+    "nm"
+   ],
+   "def": "Nanometre: one millionth of a millimetre. DNA is about 2 nm wide."
+  },
+  {
+   "key": "electron microscope",
+   "word": "electron microscope",
+   "match": [
+    "electron microscope"
+   ],
+   "def": "A microscope that uses a beam of electrons instead of light, so it can show things far too small for an ordinary microscope."
+  },
+  {
+   "key": "radioactive",
+   "word": "radioactive",
+   "match": [
+    "radioactive",
+    "radioactivity"
+   ],
+   "def": "A radioactive atom is unstable and gives off radiation that a detector can measure. Scientists use such atoms as labels to track where a substance goes."
+  },
+  {
+   "key": "isotope",
+   "word": "isotopes",
+   "match": [
+    "isotopes"
+   ],
+   "def": "Forms of one element whose atoms differ in mass (they have different mass numbers). Some are radioactive. <sup>32</sup>P is a radioactive form of phosphorus; 32 is its mass number."
+  },
+  {
+   "key": "centrifuge",
+   "word": "centrifuge",
+   "match": [
+    "centrifuge",
+    "centrifuging"
+   ],
+   "def": "A machine that spins tubes very fast, so heavier things sink to the bottom as a pellet and lighter things stay in the liquid above."
+  },
+  {
+   "key": "purine",
+   "word": "purine",
+   "match": [
+    "purine",
+    "purines"
+   ],
+   "def": "One of the two shapes of base: a larger base with two rings of atoms. Adenine (A) and guanine (G) are purines."
+  },
+  {
+   "key": "pyrimidine",
+   "word": "pyrimidine",
+   "match": [
+    "pyrimidine",
+    "pyrimidines"
+   ],
+   "def": "One of the two shapes of base: a smaller base with one ring of atoms. Cytosine (C), thymine (T) and uracil (U) are pyrimidines."
+  },
+  {
+   "key": "tetranucleotide hypothesis",
+   "word": "tetranucleotide hypothesis",
+   "match": [
+    "tetranucleotide hypothesis"
+   ],
+   "def": "An old, wrong idea (before about 1950) that DNA is the same group of four nucleotides, one with each base, repeated again and again. It predicted 25% of each base in every organism."
+  },
+  {
+   "key": "falsified",
+   "word": "falsified",
+   "match": [
+    "falsified"
+   ],
+   "def": "Shown by evidence to be wrong."
+  },
+  {
+   "key": "explain",
+   "word": "explain",
+   "match": [
+    "explain"
+   ],
+   "def": "IB command term: give a detailed account including reasons or causes. Say why or how, not only what (use \"because\" and \"so\")."
+  },
+  {
+   "key": "describe",
+   "word": "describe",
+   "match": [
+    "describe"
+   ],
+   "def": "To say what something is like. As an IB command term: give a detailed account of what something is like or what happens. Reasons are not needed."
+  },
+  {
+   "key": "outline",
+   "word": "outline",
+   "match": [
+    "outline"
+   ],
+   "def": "IB command term: give a brief account, with the main points only. Shorter than describe or explain."
+  },
+  {
+   "key": "state",
+   "word": "state",
+   "match": [
+    "state"
+   ],
+   "def": "IB command term: give a specific name, value or other short answer, without explanation or calculation."
+  },
+  {
+   "key": "draw",
+   "word": "draw",
+   "match": [
+    "draw"
+   ],
+   "def": "As an IB command term: make a clear, accurate diagram with labels, in pencil, using a ruler for straight lines."
+  },
+  {
+   "key": "compare",
+   "word": "compare",
+   "match": [
+    "compare"
+   ],
+   "def": "To look at two or more things side by side. As an IB command term: give the similarities, mentioning all the things in each point. \"Compare and contrast\" asks for the differences too."
+  },
+  {
+   "key": "suggest",
+   "word": "suggest",
+   "match": [
+    "suggest"
+   ],
+   "def": "IB command term: give a possible answer or explanation that makes sense, using what you know, even for a situation you have not been taught."
+  },
+  {
+   "key": "define",
+   "word": "define",
+   "match": [
+    "define"
+   ],
+   "def": "IB command term: give the precise meaning of a word or phrase."
+  },
+  {
+   "key": "predict",
+   "word": "predict",
+   "match": [
+    "predict"
+   ],
+   "def": "To say what result you expect before you check. As an IB command term: give an expected result, based on what you know."
+  },
+  {
+   "key": "analyse",
+   "word": "analyse",
+   "match": [
+    "analyse"
+   ],
+   "def": "IB command term: break data or information down to bring out the key parts or patterns."
+  },
+  {
+   "key": "calculate",
+   "word": "calculate",
+   "match": [
+    "calculate"
+   ],
+   "def": "IB command term: work out a number answer, showing the steps of your working."
+  }
+ ]
+}
