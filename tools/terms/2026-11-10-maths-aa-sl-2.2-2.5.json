@@ -1,0 +1,771 @@
+{
+ "minutes": 8,
+ "background": [
+  {
+   "title": "Coordinates and reading a graph",
+   "html": "<p>A graph has two number lines: the <b>x-axis</b> going across and the <b>y-axis</b> going up. They cross at the point (0, 0). A point is written (x, y): first go across, then up. (3, 7) is 3 right and 7 up; (−2, 4) is 2 left and 4 up.</p><p>For a function, the y-value is the output. The point (a, b) is on the graph of y&nbsp;= f(x) exactly when f(a)&nbsp;= b. So when the page says <i>read the domain off the x-axis</i>, it means: which x-values does the graph use? <i>Read the range off the y-axis</i> means: which y-values (heights) does the graph reach?</p><p>When a question says <i>write down</i> the coordinates of a point on a graph, you read them off the graph or the given information, with little or no working.</p>"
+  },
+  {
+   "title": "Straight lines: y = mx + c",
+   "html": "<p>Every straight line that is not vertical has an equation y&nbsp;= mx&nbsp;+&nbsp;c.</p><ul><li><b>m</b> is the <b>gradient</b>: how much y changes when x goes up by 1. Through two points, m&nbsp;= (y<sub>2</sub>&nbsp;−&nbsp;y<sub>1</sub>)&nbsp;÷&nbsp;(x<sub>2</sub>&nbsp;−&nbsp;x<sub>1</sub>).</li><li><b>c</b> is where the line crosses the y-axis, at the point (0, c).</li></ul><p>Example: through (0, −4) and (3, 8), m&nbsp;= 12&nbsp;÷&nbsp;3&nbsp;= 4 and c&nbsp;= −4, so y&nbsp;= 4x&nbsp;−&nbsp;4. A negative m means the line goes down from left to right. A horizontal line has the equation y&nbsp;= b and a vertical line x&nbsp;= a. A function whose graph is a straight line is called <b>linear</b>.</p>"
+  },
+  {
+   "title": "Putting numbers into a formula",
+   "html": "<p>For f(x)&nbsp;= x<sup>2</sup>&nbsp;+&nbsp;1, f(3) means: put 3 in place of x. So f(3)&nbsp;= 3<sup>2</sup>&nbsp;+&nbsp;1&nbsp;= 10.</p><p>Put negative numbers in brackets: f(−2)&nbsp;= (−2)<sup>2</sup>&nbsp;+&nbsp;1&nbsp;= 4&nbsp;+&nbsp;1&nbsp;= 5, because a negative times a negative is positive. Careful: −x<sup>2</sup> at x&nbsp;= 3 means −(3<sup>2</sup>)&nbsp;= −9, not 9. The square is done before the minus.</p><p>Order of work: brackets first, then powers, then&nbsp;×&nbsp;and ÷, then&nbsp;+&nbsp;and −. So 2&nbsp;×&nbsp;4&nbsp;−&nbsp;16&nbsp;+&nbsp;1&nbsp;= 8&nbsp;−&nbsp;16&nbsp;+&nbsp;1&nbsp;= −7.</p>"
+  },
+  {
+   "title": "Solving and rearranging equations",
+   "html": "<p>An equation stays true if you do the same thing to both sides. To solve it, undo what was done to x, in reverse order:</p><p>2x&nbsp;+&nbsp;3&nbsp;= 10 → subtract 3 from both sides: 2x&nbsp;= 7 → divide both sides by 2: x&nbsp;= 3.5.</p><p>Rearranging works the same way when there are only letters. To get y on its own in x&nbsp;= (2y&nbsp;+&nbsp;5)&nbsp;÷&nbsp;3:</p><ul><li>multiply both sides by 3: 3x&nbsp;= 2y&nbsp;+&nbsp;5;</li><li>subtract 5: 3x&nbsp;−&nbsp;5&nbsp;= 2y;</li><li>divide by 2: y&nbsp;= (3x&nbsp;−&nbsp;5)&nbsp;÷&nbsp;2.</li></ul><p>This is exactly how you will find an inverse function today.</p>"
+  },
+  {
+   "title": "Inequalities and the number line",
+   "html": "<ul><li><b>&lt;</b> less than, <b>≤</b> less than or equal to</li><li><b>&gt;</b> greater than, <b>≥</b> greater than or equal to</li><li><b>≠</b> not equal to</li></ul><p>x&nbsp;≥&nbsp;−3 means every number from −3 upwards, including −3 itself. 2&nbsp;&lt;&nbsp;x&nbsp;&lt;&nbsp;5 means every number between 2 and 5, but not 2 or 5.</p><p>Solve an inequality like an equation, with one extra rule: when you multiply or divide both sides by a <b>negative</b> number, flip the sign. 2&nbsp;−&nbsp;x&nbsp;≥&nbsp;0 → −x&nbsp;≥&nbsp;−2 → divide by −1 and flip: x&nbsp;≤&nbsp;2.</p><p>On a number line or graph, a solid dot means the end is included (≤, ≥) and an open dot means it is not (&lt;, &gt;).</p>"
+  },
+  {
+   "title": "Square roots and dividing by zero",
+   "html": "<p>√9&nbsp;= 3, because 3&nbsp;×&nbsp;3&nbsp;= 9. The √ sign always means the positive root (or 0), so a square root is never negative. But the equation x<sup>2</sup>&nbsp;= 9 has two answers, 3 and −3, written x&nbsp;= ±3.</p><p>A negative number has no square root on the number line: √(−1) does not exist, because any number times itself is 0 or positive.</p><p>The <b>reciprocal</b> of a number is 1 divided by it: the reciprocal of 4 is 1/4. You cannot divide by zero, so 1/0 does not exist.</p><p>These two facts (no square root of a negative, no dividing by zero) decide almost every domain on this page.</p>"
+  },
+  {
+   "title": "Expanding brackets and factorising quadratics",
+   "html": "<p><b>Expanding:</b> multiply every part of one bracket by every part of the other. (x&nbsp;−&nbsp;3)(x&nbsp;+&nbsp;1)&nbsp;= x<sup>2</sup>&nbsp;+&nbsp;x&nbsp;−&nbsp;3x&nbsp;−&nbsp;3&nbsp;= x<sup>2</sup>&nbsp;−&nbsp;2x&nbsp;−&nbsp;3.</p><p><b>Factorising</b> goes backwards. For x<sup>2</sup>&nbsp;−&nbsp;2x&nbsp;−&nbsp;3, find two numbers that multiply to −3 and add to −2: they are −3 and 1. So x<sup>2</sup>&nbsp;−&nbsp;2x&nbsp;−&nbsp;3&nbsp;= (x&nbsp;−&nbsp;3)(x&nbsp;+&nbsp;1).</p><p>To solve (x&nbsp;−&nbsp;3)(x&nbsp;+&nbsp;1)&nbsp;= 0: if two numbers multiply to 0, one of them must be 0, so x&nbsp;= 3 or x&nbsp;= −1.</p><p>Squaring a bracket: (x&nbsp;−&nbsp;1)<sup>2</sup>&nbsp;= (x&nbsp;−&nbsp;1)(x&nbsp;−&nbsp;1)&nbsp;= x<sup>2</sup>&nbsp;−&nbsp;2x&nbsp;+&nbsp;1, not x<sup>2</sup>&nbsp;+&nbsp;1.</p><p>The Khan Academy page uses American words: <i>factor</i> means factorise, and a <b>binomial</b> is a bracket with two parts, like (x&nbsp;+&nbsp;1).</p>",
+   "link": {
+    "url": "https://www.khanacademy.org/math/get-ready-for-geometry/x8a652ce72bd83eb2:get-ready-for-conic-sections/x8a652ce72bd83eb2:factoring-quadratics-intro/a/factoring-simple-quadratics-review",
+    "label": "Khan Academy: Factoring simple quadratics review (with practice)"
+   }
+  }
+ ],
+ "terms": [
+  {
+   "key": "function",
+   "word": "function",
+   "match": [
+    "functions",
+    "function"
+   ],
+   "def": "A rule that gives every allowed input exactly one output. f(x) = 2x + 3 is a function: it sends 4 to 11."
+  },
+  {
+   "key": "domain",
+   "word": "domain",
+   "match": [
+    "domain",
+    "domains"
+   ],
+   "def": "All the inputs (x-values) a function is allowed to take. For √x the domain is x ≥ 0."
+  },
+  {
+   "key": "range",
+   "word": "range",
+   "match": [
+    "range",
+    "ranges"
+   ],
+   "def": "All the outputs (y-values, f(x)) a function actually gives. For √x the range is f(x) ≥ 0. Always write it with f(x) or y, not x."
+  },
+  {
+   "key": "inverse",
+   "word": "inverse function",
+   "match": [
+    "inverse functions",
+    "inverse function",
+    "inverses",
+    "inverse"
+   ],
+   "def": "The function that undoes f, written f<sup>−1</sup>. If f sends 2 to 7, then f<sup>−1</sup> sends 7 back to 2. The −1 here is a label, not a power."
+  },
+  {
+   "key": "one-to-one",
+   "word": "one-to-one",
+   "match": [
+    "one-to-one"
+   ],
+   "def": "A function where every output comes from only one input. f(x) = 2x is one-to-one; f(x) = x<sup>2</sup> is not, because f(−2) = f(2) = 4."
+  },
+  {
+   "key": "composite",
+   "word": "composite function",
+   "match": [
+    "composite functions",
+    "composite function",
+    "composite"
+   ],
+   "def": "Two functions done one after the other: the output of the first is the input of the second. (f ∘ g)(x) = f(g(x)): do g first, then f."
+  },
+  {
+   "key": "piecewise",
+   "word": "piecewise function",
+   "match": [
+    "piecewise function",
+    "piecewise"
+   ],
+   "def": "A function made of different rules on different parts of its domain, for example f(x) = x + 1 for x &lt; 0 and f(x) = 1 − x for x ≥ 0. Its graph is made of pieces."
+  },
+  {
+   "key": "reflect",
+   "word": "reflect, reflection",
+   "match": [
+    "reflection",
+    "reflections",
+    "reflect",
+    "reflected",
+    "reflecting"
+   ],
+   "def": "Flip a picture over a line, like a mirror. Reflecting in the line y = x swaps the two coordinates: (3, 7) becomes (7, 3)."
+  },
+  {
+   "key": "coordinates",
+   "word": "coordinates",
+   "match": [
+    "coordinates",
+    "coordinate",
+    "y-coordinate",
+    "x-coordinate"
+   ],
+   "def": "The pair of numbers (x, y) that says where a point is: x steps across, then y steps up, starting from (0, 0). The y-coordinate of (1, −4) is −4."
+  },
+  {
+   "key": "axes",
+   "word": "axes",
+   "match": [
+    "axes",
+    "x-axis",
+    "y-axis"
+   ],
+   "def": "The two number lines of a graph: the x-axis going across and the y-axis going up. One is called an axis. They cross at (0, 0)."
+  },
+  {
+   "key": "intercept",
+   "word": "intercept",
+   "match": [
+    "intercepts",
+    "intercept",
+    "y-intercept",
+    "y-intercepts",
+    "x-intercept",
+    "x-intercepts"
+   ],
+   "def": "Where a graph meets an axis. The y-intercept: put x = 0. The x-intercepts: where y = 0. Give them as points, like (0, 3)."
+  },
+  {
+   "key": "zeros",
+   "word": "zeros, roots",
+   "match": [
+    "zeros",
+    "roots"
+   ],
+   "def": "The zeros of a function are the x-values where its output is 0: solve f(x) = 0. Those solutions are also called the roots of the equation. On the graph, that is where it meets the x-axis."
+  },
+  {
+   "key": "gradient",
+   "word": "gradient",
+   "match": [
+    "gradient",
+    "gradients"
+   ],
+   "def": "How steep a line is: how much y goes up when x goes up by 1. Gradient = (change in y) ÷ (change in x). A negative gradient means the line goes down."
+  },
+  {
+   "key": "linear",
+   "word": "linear",
+   "match": [
+    "linear"
+   ],
+   "def": "A linear function has the form f(x) = mx + c, so its graph is a straight line. Example: f(x) = 4x − 4."
+  },
+  {
+   "key": "quadratic",
+   "word": "quadratic",
+   "match": [
+    "quadratics",
+    "quadratic"
+   ],
+   "def": "A function or equation where the highest power of x is x<sup>2</sup>. It is written ax<sup>2</sup> + bx + c: a is the number in front of x<sup>2</sup>, b the number in front of x, c the number on its own. Its graph is a parabola."
+  },
+  {
+   "key": "parabola",
+   "word": "parabola",
+   "match": [
+    "parabola",
+    "parabolas"
+   ],
+   "def": "The U-shaped curve you get from a quadratic ax<sup>2</sup> + bx + c. It opens upwards (U) when a, the number in front of x<sup>2</sup>, is positive and downwards (∩) when a is negative."
+  },
+  {
+   "key": "vertex",
+   "word": "vertex",
+   "match": [
+    "vertex"
+   ],
+   "def": "The turning point of a parabola: its lowest point (a minimum) if it opens upwards, its highest point (a maximum) if it opens downwards."
+  },
+  {
+   "key": "turning point",
+   "word": "turning point",
+   "match": [
+    "turning points",
+    "turning point"
+   ],
+   "def": "A point where a graph stops going up and starts going down (a maximum point), or the other way round (a minimum point)."
+  },
+  {
+   "key": "axis of symmetry",
+   "word": "axis of symmetry",
+   "match": [
+    "axis of symmetry"
+   ],
+   "def": "A line that cuts a graph into two mirror-image halves. For a parabola y = ax<sup>2</sup> + bx + c it is the vertical line through the vertex, x = −b ÷ (2a). Example: y = x<sup>2</sup> − 2x − 3 gives x = 1."
+  },
+  {
+   "key": "symmetric",
+   "word": "symmetric, symmetry",
+   "match": [
+    "symmetric",
+    "symmetry"
+   ],
+   "def": "A graph is symmetric about a line if folding along that line makes the two halves land exactly on each other."
+  },
+  {
+   "key": "asymptote",
+   "word": "asymptote",
+   "match": [
+    "asymptotes",
+    "asymptote"
+   ],
+   "def": "A straight line that a graph gets closer and closer to, without reaching it, as the graph heads far out (x or y very large, positive or negative). It is drawn dashed and labelled with its equation, such as x = 2 or y = 1."
+  },
+  {
+   "key": "denominator",
+   "word": "denominator",
+   "match": [
+    "denominator",
+    "denominators"
+   ],
+   "def": "The bottom part of a fraction. In 3/(x − 2) the denominator is x − 2. It may never be 0."
+  },
+  {
+   "key": "intersection",
+   "word": "intersection",
+   "match": [
+    "points of intersection",
+    "intersections",
+    "intersection"
+   ],
+   "def": "A point where two graphs meet or cross. There both graphs have the same x and the same y."
+  },
+  {
+   "key": "expression",
+   "word": "expression",
+   "match": [
+    "expression",
+    "expressions"
+   ],
+   "def": "A piece of maths made of numbers, letters and operations, with no = sign. Examples: 2 − x and x<sup>2</sup> + 1."
+  },
+  {
+   "key": "power",
+   "word": "power (exponent)",
+   "match": [
+    "power",
+    "powers",
+    "exponents"
+   ],
+   "def": "The small raised number, also called an exponent: x<sup>3</sup> = x × x × x. Negative and fraction powers exist too: x<sup>−1</sup> = 1/x and x<sup>1/2</sup> = √x, so x<sup>−1/2</sup> = 1/√x."
+  },
+  {
+   "key": "reciprocal",
+   "word": "reciprocal",
+   "match": [
+    "reciprocal"
+   ],
+   "def": "One divided by a number: the reciprocal of 4 is 1/4, and of f(x) is 1/f(x). The inverse f<sup>−1</sup>(x) is NOT the reciprocal."
+  },
+  {
+   "key": "operation",
+   "word": "operation",
+   "match": [
+    "operations",
+    "operation"
+   ],
+   "def": "Something you do to a number: add, subtract, multiply, divide, square or take a square root."
+  },
+  {
+   "key": "rearrange",
+   "word": "rearrange",
+   "match": [
+    "rearrange",
+    "rearranging",
+    "rearranged"
+   ],
+   "def": "Change an equation into a different form by doing the same thing to both sides, for example until it reads y = ..."
+  },
+  {
+   "key": "subject",
+   "word": "subject (of a formula)",
+   "match": [
+    "the subject"
+   ],
+   "def": "The letter on its own on one side of a formula. In y = 3x − 5, y is the subject. 'Make y the subject' means rearrange until it reads y = ..."
+  },
+  {
+   "key": "in terms of",
+   "word": "in terms of",
+   "match": [
+    "in terms of"
+   ],
+   "def": "'Write P in terms of A' means write a formula for P that uses only A and numbers, like P = 4√A."
+  },
+  {
+   "key": "given that",
+   "word": "given that",
+   "match": [
+    "given that"
+   ],
+   "def": "Introduces a fact you must take as true and use. 'Given that f(2) = 5' means use f(2) = 5 in your working."
+  },
+  {
+   "key": "complete the square",
+   "word": "complete the square",
+   "match": [
+    "complete the square",
+    "completing the square"
+   ],
+   "def": "Rewrite a quadratic with a squared bracket: x<sup>2</sup> + 6x + 1 = (x + 3)<sup>2</sup> − 8. Half the number in front of x goes in the bracket; then subtract that half squared (here 9). If x<sup>2</sup> has a number in front, take it out first."
+  },
+  {
+   "key": "quadratic formula",
+   "word": "quadratic formula",
+   "match": [
+    "quadratic formula"
+   ],
+   "def": "x = (−b ± √(b<sup>2</sup> − 4ac)) ÷ (2a) solves any equation ax<sup>2</sup> + bx + c = 0. It is in the formula booklet."
+  },
+  {
+   "key": "decreasing",
+   "word": "decreasing",
+   "match": [
+    "decreasing"
+   ],
+   "def": "A decreasing function goes down as x goes up: a bigger input gives a smaller output. f(x) = −6x − 3 is decreasing."
+  },
+  {
+   "key": "strict",
+   "word": "strict (inequality)",
+   "match": [
+    "strict"
+   ],
+   "def": "A strict inequality uses &lt; or &gt;, so the end value is not included. ≤ and ≥ are not strict: the end value is included."
+  },
+  {
+   "key": "restrict",
+   "word": "restrict (a domain)",
+   "match": [
+    "restrict",
+    "restricted",
+    "restriction",
+    "restricting"
+   ],
+   "def": "Allow only some inputs, for example only x ≥ 1. This is often done so that a function becomes one-to-one and has an inverse."
+  },
+  {
+   "key": "model",
+   "word": "mathematical model",
+   "match": [
+    "mathematical model",
+    "model"
+   ],
+   "def": "A formula or function that describes a real situation, like C(n) = 5n for the cost of n items at $5 each."
+  },
+  {
+   "key": "velocity",
+   "word": "velocity",
+   "match": [
+    "velocity"
+   ],
+   "def": "Speed in a given direction, for example 5 metres per second to the right."
+  },
+  {
+   "key": "perimeter",
+   "word": "perimeter",
+   "match": [
+    "perimeter"
+   ],
+   "def": "The total distance around the edge of a shape. A square with side x has perimeter 4x."
+  },
+  {
+   "key": "logarithm",
+   "word": "logarithm",
+   "match": [
+    "logarithms",
+    "logarithm"
+   ],
+   "def": "The opposite of a power, coming later in Topic 2: log<sub>10</sub> 100 = 2 because 10<sup>2</sup> = 100. Not needed today."
+  },
+  {
+   "key": "significant figures",
+   "word": "significant figures",
+   "match": [
+    "significant figures"
+   ],
+   "def": "The digits of a number counted from the first one that is not 0. To 3 significant figures, 3.14159 is 3.14 and 0.004567 is 0.00457."
+  },
+  {
+   "key": "exact",
+   "word": "exact",
+   "match": [
+    "exact"
+   ],
+   "def": "An exact answer has no rounding: √2 or 1/3, not 1.41 or 0.333."
+  },
+  {
+   "key": "real numbers",
+   "word": "real numbers",
+   "match": [
+    "real numbers",
+    "real number"
+   ],
+   "def": "All the numbers on the number line: whole numbers, negatives, fractions, decimals and numbers like √2 and π. The symbol is ℝ."
+  },
+  {
+   "key": "ℝ",
+   "word": "ℝ",
+   "match": [
+    "ℝ"
+   ],
+   "def": "The set (collection) of all real numbers. 'x ∈ ℝ' means x can be any number on the number line."
+  },
+  {
+   "key": "∈",
+   "word": "∈",
+   "match": [
+    "∈"
+   ],
+   "def": "Means 'is in' or 'belongs to'. x ∈ ℝ means x is a real number."
+  },
+  {
+   "key": "∞",
+   "word": "∞ (infinity)",
+   "match": [
+    "∞"
+   ],
+   "def": "Infinity: not a number, but the idea of going on without end. [1, ∞[ means every number from 1 upwards, with no top end."
+  },
+  {
+   "key": "±",
+   "word": "±",
+   "match": [
+    "±"
+   ],
+   "def": "'Plus or minus': both signs. y = ±3 means y = 3 or y = −3."
+  },
+  {
+   "key": "∘",
+   "word": "∘",
+   "match": [
+    "∘"
+   ],
+   "def": "The ring sign for a composite function. (f ∘ g)(x) means f(g(x)), read 'f of g of x': g acts first, then f."
+  },
+  {
+   "key": "↦",
+   "word": "↦",
+   "match": [
+    "↦"
+   ],
+   "def": "Means 'is sent to'. x ↦ x + 1 is the rule that sends each input x to x + 1."
+  },
+  {
+   "key": "≠",
+   "word": "≠",
+   "match": [
+    "≠"
+   ],
+   "def": "'Is not equal to'. x ≠ 5 means x can be any number except 5."
+  },
+  {
+   "key": "notation",
+   "word": "notation",
+   "match": [
+    "notation"
+   ],
+   "def": "The symbols used to write maths. In function notation, f(x) means 'the output of f when the input is x'."
+  },
+  {
+   "key": "context",
+   "word": "context",
+   "match": [
+    "context",
+    "contexts"
+   ],
+   "def": "The real situation a question is about, such as a ball being thrown or the cost of items in a shop."
+  },
+  {
+   "key": "gdc",
+   "word": "GDC",
+   "match": [
+    "GDC"
+   ],
+   "def": "Graphic display calculator: the graphing calculator allowed in Paper 2, for example the TI-84 Plus CE or the Casio fx-CG50."
+  },
+  {
+   "key": "window",
+   "word": "window (GDC)",
+   "match": [
+    "window"
+   ],
+   "def": "The part of a graph the GDC screen shows, set by the smallest and largest x-values and y-values. A small window can hide a feature."
+  },
+  {
+   "key": "to scale",
+   "word": "to scale",
+   "match": [
+    "to scale"
+   ],
+   "def": "Drawn with equal, measured steps along the axes, so positions on the paper match the numbers exactly."
+  },
+  {
+   "key": "difference",
+   "word": "sum, difference, product",
+   "match": [
+    "sums and differences",
+    "differences",
+    "sum",
+    "product"
+   ],
+   "def": "The answer to an addition is a sum, to a subtraction a difference, to a multiplication a product. For 7 and 3: the sum is 10, the difference is 7 − 3 = 4, the product is 21."
+  },
+  {
+   "key": "sl",
+   "word": "SL",
+   "match": [
+    "SL"
+   ],
+   "def": "Standard Level, the IB maths course you take. 'SL 2.2' is the official number of a topic in the IB syllabus (the list of what the course covers)."
+  },
+  {
+   "key": "hl",
+   "word": "HL",
+   "match": [
+    "HL"
+   ],
+   "def": "Higher Level, the longer IB maths course. HL-only content is not on your SL exam."
+  },
+  {
+   "key": "ahl",
+   "word": "AHL",
+   "match": [
+    "AHL"
+   ],
+   "def": "Additional Higher Level: the topics only HL students study. 'AHL 2.14' is an HL-only topic, not on your exam."
+  },
+  {
+   "key": "command term",
+   "word": "command term",
+   "match": [
+    "command terms",
+    "command term"
+   ],
+   "def": "The IB word at the start of a question, like 'find', 'state' or 'sketch'. It tells you exactly what kind of answer gets the marks."
+  },
+  {
+   "key": "find",
+   "word": "find (command term)",
+   "match": [
+    "find the largest",
+    "find f(x)",
+    "find vertical",
+    "find and use",
+    "find the smallest"
+   ],
+   "def": "IB command term: work out the answer and show the main steps of your working."
+  },
+  {
+   "key": "write down",
+   "word": "write down (command term)",
+   "match": [
+    "write down"
+   ],
+   "def": "IB command term: give the answer with little or no calculation. You do not need to show working."
+  },
+  {
+   "key": "hence",
+   "word": "hence (command term)",
+   "match": [
+    "hence"
+   ],
+   "def": "IB command term: use the answer you have just found to get the next result. 'Hence or otherwise' also allows a different method."
+  },
+  {
+   "key": "show",
+   "word": "show (command term)",
+   "match": [
+    "show two functions"
+   ],
+   "def": "IB command term: give the steps of a calculation that lead to the result. In 'show that' the answer is given, so the marks are for the working."
+  },
+  {
+   "key": "state",
+   "word": "state (command term)",
+   "match": [
+    "state"
+   ],
+   "def": "IB command term: give a short answer (a name, a value or a fact) without explanation or calculation."
+  },
+  {
+   "key": "sketch",
+   "word": "sketch (command term)",
+   "match": [
+    "sketch",
+    "sketches"
+   ],
+   "def": "IB command term: draw the general shape with its key points labelled (intercepts, turning points, asymptotes). It does not need to be to scale."
+  },
+  {
+   "key": "draw",
+   "word": "draw (command term)",
+   "match": [
+    "draw"
+   ],
+   "def": "IB command term: an accurate, labelled graph in pencil, to scale, with points plotted correctly and a ruler for straight lines."
+  },
+  {
+   "key": "solve",
+   "word": "solve (command term)",
+   "match": [
+    "solve"
+   ],
+   "def": "IB command term: find the value or values that make an equation true, using algebra, a graph or the GDC."
+  },
+  {
+   "key": "identity function",
+   "word": "identity function",
+   "match": [
+    "identity function",
+    "identity"
+   ],
+   "def": "The function that changes nothing: it sends every x to x itself, written x ↦ x. A function followed by its inverse is the identity: f(f<sup>−1</sup>(x)) = x."
+  },
+  {
+   "key": "explain",
+   "word": "explain (command term)",
+   "match": [
+    "explain"
+   ],
+   "def": "IB command term: give a full answer that includes the reasons why, not just the result."
+  },
+  {
+   "key": "determine",
+   "word": "determine (command term)",
+   "match": [
+    "determine"
+   ],
+   "def": "IB command term: work out the one correct answer. In everyday words: find."
+  },
+  {
+   "key": "not defined",
+   "word": "not defined",
+   "match": [
+    "not defined"
+   ],
+   "def": "A function is not defined at a value when it gives no output there, for example 3/(x − 2) at x = 2, because you cannot divide by 0."
+  },
+  {
+   "key": "tends to",
+   "word": "tends to",
+   "match": [
+    "tends to"
+   ],
+   "def": "Gets closer and closer to. 'As x gets very large, 1/x tends to 0' means 1/x gets as close to 0 as you like."
+  },
+  {
+   "key": "constant function",
+   "word": "constant function",
+   "match": [
+    "constant function"
+   ],
+   "def": "A function with the same output for every input, like f(x) = 5. Its graph is a horizontal line."
+  },
+  {
+   "key": "set",
+   "word": "set",
+   "match": [
+    "the set"
+   ],
+   "def": "In maths, a collection of numbers (or other things). 'The set of all outputs' means every output, collected together."
+  },
+  {
+   "key": "interval notation",
+   "word": "interval notation",
+   "match": [
+    "interval notation"
+   ],
+   "def": "A short way to write all the numbers between two ends. [a, b] includes both ends; ]a, b[ includes neither (the bracket turns away from an end that is left out). So [1, 5] is 1 ≤ x ≤ 5 and ]1, 5[ is 1 &lt; x &lt; 5."
+  },
+  {
+   "key": "plot",
+   "word": "plot",
+   "match": [
+    "plotted"
+   ],
+   "def": "Mark a point on a graph at its exact coordinates, for example the point (2, 5): 2 across, 5 up."
+  },
+  {
+   "key": "technology",
+   "word": "technology",
+   "match": [
+    "graphing technology",
+    "technology"
+   ],
+   "def": "In IB maths, technology means your GDC (or graphing software) used to draw graphs and find values such as zeros and intersections."
+  },
+  {
+   "key": "in the form",
+   "word": "in the form",
+   "match": [
+    "in the form"
+   ],
+   "def": "Write it in exactly that shape and find the numbers that the letters stand for. x<sup>2</sup> + 12x + 24 in the form (x + h)<sup>2</sup> + k is (x + 6)<sup>2</sup> − 12, so h = 6 and k = −12."
+  },
+  {
+   "key": "vertical",
+   "word": "vertical, horizontal",
+   "match": [
+    "vertical",
+    "horizontal"
+   ],
+   "def": "Vertical means straight up and down, like the y-axis or the line x = 2. Horizontal means flat, left to right, like the x-axis or the line y = 1."
+  },
+  {
+   "key": "maximum",
+   "word": "maximum, minimum",
+   "match": [
+    "maximum",
+    "minimum"
+   ],
+   "def": "The maximum is the largest value a function reaches, the minimum the smallest. The maximum point is where it happens on the graph, like (1, 4); the maximum value is its y-coordinate, 4."
+  },
+  {
+   "key": "rational function",
+   "word": "rational function",
+   "match": [
+    "rational functions"
+   ],
+   "def": "A fraction with x in the bottom, like 1/(x − 2) or (2x + 1)/(x − 3). Its graph has asymptotes. It comes later in the course (SL 2.8)."
+  },
+  {
+   "key": "transformation",
+   "word": "transformation",
+   "match": [
+    "transformations"
+   ],
+   "def": "Moving, stretching or flipping a graph, for example moving y = x<sup>2</sup> up by 3 gives y = x<sup>2</sup> + 3. It comes later in the course (SL 2.11)."
+  },
+  {
+   "key": "binomial",
+   "word": "binomial",
+   "match": [
+    "binomial"
+   ],
+   "def": "A word the Khan Academy page uses: an expression with two parts added or subtracted, like x + 1. (x + 1)(x + 2) is a product of two binomials."
+  }
+ ]
+}

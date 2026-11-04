@@ -131,6 +131,29 @@
   .end ul{margin:8px 0 0;padding-left:20px}
   @media (max-width:600px){h1{font-size:1.8rem}body{font-size:16px}th,td{padding:6px}.formula{font-size:1.08rem}}
   @media print{nav.toc{position:static}details{break-inside:avoid}.quiz button{border:1px solid #999}}
+
+
+
+
+
+
+
+/*terms:start*/
+.term{border-bottom:2px dotted var(--indigo);cursor:pointer;border-radius:2px}
+.term:hover,.term:focus{background:var(--indigo-soft);outline:none}
+#termbox{display:none;position:fixed;left:10px;right:10px;bottom:10px;max-width:640px;margin:0 auto;background:var(--card);border:2px solid var(--indigo);border-radius:12px;padding:14px 16px 12px;box-shadow:0 8px 28px rgba(0,0,0,.22);z-index:60;max-height:60vh;overflow:auto}
+#termbox.on{display:block}
+#termbox .tb-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+#termbox .tb-h b{font-size:1.1rem;color:var(--indigo)}
+#termbox button{font:inherit;border:1px solid var(--rule);background:var(--paper);border-radius:8px;padding:4px 12px;cursor:pointer;flex:none}
+#termbox .tb-d{margin:8px 0 0;line-height:1.5}
+.before .bgi{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);border-radius:10px;padding:12px 16px;margin:12px 0}
+.before .bgi h3{margin:0 0 6px;font-size:1.08rem}
+.before .bgi p{margin:6px 0}
+.before .bgi svg{max-width:100%;height:auto;display:block;margin:8px auto}
+.before .more{font-size:.95rem;color:var(--ink-soft)}
+.before .stuck{background:var(--amber-soft);border-radius:10px;padding:10px 14px}
+/*terms:end*/
 </style>
 </head>
 <body>
@@ -184,18 +207,37 @@
 
 <nav class="toc" aria-label="Sections">
   <div class="wrap">
-    <a href="../index.html" style="font-weight:700;color:var(--indigo)">All days</a><a href="#plan">Plan</a><a href="#s22">2.2 Functions</a><a href="#s23">2.3 Graphs</a><a href="#s24">2.4 Key features</a><a href="#s25">2.5 Composite and inverse</a><a href="#quiz">Quiz</a><a href="#end">Finish</a>
+    <a href="../index.html" style="font-weight:700;color:var(--indigo)">All days</a><!--terms:start--><a href="#before">Before you start</a><!--terms:end--><a href="#plan">Plan</a><a href="#s22">2.2 Functions</a><a href="#s23">2.3 Graphs</a><a href="#s24">2.4 Key features</a><a href="#s25">2.5 Composite and inverse</a><a href="#quiz">Quiz</a><a href="#end">Finish</a>
   </div>
 </nav>
 
 <main class="wrap">
 
+
+
+
+
+
+
+
+
+
+
+
+
+<!--terms:start--><section id="before" class="before">
+  <h2 style="margin-top:28px">Before you start (about 8 min)</h2>
+  <p style="margin:10px 0 0">This page builds on the ideas below. Read them first so you do not have to stop later. Words with a <span style="border-bottom:2px dotted var(--indigo)">dotted underline</span> anywhere on the page: tap them for a short explanation.</p>
+  <div class="bgi"><h3>Coordinates and reading a graph</h3><p>A graph has two number lines: the <b><span class="term" data-t="axes" tabindex="0" role="button">x-axis</span></b> going across and the <b>y-axis</b> going up. They cross at the point (0, 0). A point is written (x, y): first go across, then up. (3, 7) is 3 right and 7 up; (−2, 4) is 2 left and 4 up.</p><p>For a <span class="term" data-t="function" tabindex="0" role="button">function</span>, the y-value is the output. The point (a, b) is on the graph of y&nbsp;= f(x) exactly when f(a)&nbsp;= b. So when the page says <i>read the <span class="term" data-t="domain" tabindex="0" role="button">domain</span> off the x-axis</i>, it means: which x-values does the graph use? <i>Read the <span class="term" data-t="range" tabindex="0" role="button">range</span> off the y-axis</i> means: which y-values (heights) does the graph reach?</p><p>When a question says <i><span class="term" data-t="write down" tabindex="0" role="button">write down</span></i> the <span class="term" data-t="coordinates" tabindex="0" role="button">coordinates</span> of a point on a graph, you read them off the graph or the given information, with little or no working.</p></div><div class="bgi"><h3>Straight lines: y = mx + c</h3><p>Every straight line that is not <span class="term" data-t="vertical" tabindex="0" role="button">vertical</span> has an equation y&nbsp;= mx&nbsp;+&nbsp;c.</p><ul><li><b>m</b> is the <b><span class="term" data-t="gradient" tabindex="0" role="button">gradient</span></b>: how much y changes when x goes up by 1. Through two points, m&nbsp;= (y<sub>2</sub>&nbsp;−&nbsp;y<sub>1</sub>)&nbsp;÷&nbsp;(x<sub>2</sub>&nbsp;−&nbsp;x<sub>1</sub>).</li><li><b>c</b> is where the line crosses the y-axis, at the point (0, c).</li></ul><p>Example: through (0, −4) and (3, 8), m&nbsp;= 12&nbsp;÷&nbsp;3&nbsp;= 4 and c&nbsp;= −4, so y&nbsp;= 4x&nbsp;−&nbsp;4. A negative m means the line goes down from left to right. A horizontal line has the equation y&nbsp;= b and a vertical line x&nbsp;= a. A function whose graph is a straight line is called <b><span class="term" data-t="linear" tabindex="0" role="button">linear</span></b>.</p></div><div class="bgi"><h3>Putting numbers into a formula</h3><p>For f(x)&nbsp;= x<sup>2</sup>&nbsp;+&nbsp;1, f(3) means: put 3 in place of x. So f(3)&nbsp;= 3<sup>2</sup>&nbsp;+&nbsp;1&nbsp;= 10.</p><p>Put negative numbers in brackets: f(−2)&nbsp;= (−2)<sup>2</sup>&nbsp;+&nbsp;1&nbsp;= 4&nbsp;+&nbsp;1&nbsp;= 5, because a negative times a negative is positive. Careful: −x<sup>2</sup> at x&nbsp;= 3 means −(3<sup>2</sup>)&nbsp;= −9, not 9. The square is done before the minus.</p><p>Order of work: brackets first, then <span class="term" data-t="power" tabindex="0" role="button">powers</span>, then&nbsp;×&nbsp;and ÷, then&nbsp;+&nbsp;and −. So 2&nbsp;×&nbsp;4&nbsp;−&nbsp;16&nbsp;+&nbsp;1&nbsp;= 8&nbsp;−&nbsp;16&nbsp;+&nbsp;1&nbsp;= −7.</p></div><div class="bgi"><h3>Solving and rearranging equations</h3><p>An equation stays true if you do the same thing to both sides. To <span class="term" data-t="solve" tabindex="0" role="button">solve</span> it, undo what was done to x, in reverse order:</p><p>2x&nbsp;+&nbsp;3&nbsp;= 10 → subtract 3 from both sides: 2x&nbsp;= 7 → divide both sides by 2: x&nbsp;= 3.5.</p><p><span class="term" data-t="rearrange" tabindex="0" role="button">Rearranging</span> works the same way when there are only letters. To get y on its own in x&nbsp;= (2y&nbsp;+&nbsp;5)&nbsp;÷&nbsp;3:</p><ul><li>multiply both sides by 3: 3x&nbsp;= 2y&nbsp;+&nbsp;5;</li><li>subtract 5: 3x&nbsp;−&nbsp;5&nbsp;= 2y;</li><li>divide by 2: y&nbsp;= (3x&nbsp;−&nbsp;5)&nbsp;÷&nbsp;2.</li></ul><p>This is exactly how you will find an <span class="term" data-t="inverse" tabindex="0" role="button">inverse function</span> today.</p></div><div class="bgi"><h3>Inequalities and the number line</h3><ul><li><b>&lt;</b> less than, <b>≤</b> less than or equal to</li><li><b>&gt;</b> greater than, <b>≥</b> greater than or equal to</li><li><b><span class="term" data-t="≠" tabindex="0" role="button">≠</span></b> not equal to</li></ul><p>x&nbsp;≥&nbsp;−3 means every number from −3 upwards, including −3 itself. 2&nbsp;&lt;&nbsp;x&nbsp;&lt;&nbsp;5 means every number between 2 and 5, but not 2 or 5.</p><p>Solve an inequality like an equation, with one extra rule: when you multiply or divide both sides by a <b>negative</b> number, flip the sign. 2&nbsp;−&nbsp;x&nbsp;≥&nbsp;0 → −x&nbsp;≥&nbsp;−2 → divide by −1 and flip: x&nbsp;≤&nbsp;2.</p><p>On a number line or graph, a solid dot means the end is included (≤, ≥) and an open dot means it is not (&lt;, &gt;).</p></div><div class="bgi"><h3>Square roots and dividing by zero</h3><p>√9&nbsp;= 3, because 3&nbsp;×&nbsp;3&nbsp;= 9. The √ sign always means the positive root (or 0), so a square root is never negative. But the equation x<sup>2</sup>&nbsp;= 9 has two answers, 3 and −3, written x&nbsp;= ±3.</p><p>A negative number has no square root on the number line: √(−1) does not exist, because any number times itself is 0 or positive.</p><p>The <b><span class="term" data-t="reciprocal" tabindex="0" role="button">reciprocal</span></b> of a number is 1 divided by it: the reciprocal of 4 is 1/4. You cannot divide by zero, so 1/0 does not exist.</p><p>These two facts (no square root of a negative, no dividing by zero) decide almost every domain on this page.</p></div><div class="bgi"><h3>Expanding brackets and factorising quadratics</h3><p><b>Expanding:</b> multiply every part of one bracket by every part of the other. (x&nbsp;−&nbsp;3)(x&nbsp;+&nbsp;1)&nbsp;= x<sup>2</sup>&nbsp;+&nbsp;x&nbsp;−&nbsp;3x&nbsp;−&nbsp;3&nbsp;= x<sup>2</sup>&nbsp;−&nbsp;2x&nbsp;−&nbsp;3.</p><p><b>Factorising</b> goes backwards. For x<sup>2</sup>&nbsp;−&nbsp;2x&nbsp;−&nbsp;3, find two numbers that multiply to −3 and add to −2: they are −3 and 1. So x<sup>2</sup>&nbsp;−&nbsp;2x&nbsp;−&nbsp;3&nbsp;= (x&nbsp;−&nbsp;3)(x&nbsp;+&nbsp;1).</p><p>To solve (x&nbsp;−&nbsp;3)(x&nbsp;+&nbsp;1)&nbsp;= 0: if two numbers multiply to 0, one of them must be 0, so x&nbsp;= 3 or x&nbsp;= −1.</p><p>Squaring a bracket: (x&nbsp;−&nbsp;1)<sup>2</sup>&nbsp;= (x&nbsp;−&nbsp;1)(x&nbsp;−&nbsp;1)&nbsp;= x<sup>2</sup>&nbsp;−&nbsp;2x&nbsp;+&nbsp;1, not x<sup>2</sup>&nbsp;+&nbsp;1.</p><p>The Khan Academy page uses American words: <i>factor</i> means factorise, and a <b><span class="term" data-t="binomial" tabindex="0" role="button">binomial</span></b> is a bracket with two parts, like (x&nbsp;+&nbsp;1).</p><p class="more">Want to see it explained another way? <a href="https://www.khanacademy.org/math/get-ready-for-geometry/x8a652ce72bd83eb2:get-ready-for-conic-sections/x8a652ce72bd83eb2:factoring-quadratics-intro/a/factoring-simple-quadratics-review" target="_blank" rel="noopener">Khan Academy: Factoring simple quadratics review (with practice)</a></p></div>
+  <p class="stuck"><b>Still stuck on a word?</b> Do not search for long. Write it in the <b>Error log</b> tab of the study sheet starting with "word:" (for example "word: composition") and carry on. It will be explained in the next guide.</p>
+</section><!--terms:end-->
+
 <section id="plan">
-  <h2 style="margin-top:28px">How to spend the two hours</h2>
+  <h2 style="margin-top:28px">How to spend the two hours</h2><!--terms:start--><p style="margin:10px 0 0"><b>First:</b> read <a href="#before">Before you start</a> (about 8 min). It is not counted in the blocks below.</p><!--terms:end-->
   <p style="margin:10px 0 0">Four blocks. Do them in order and tick each step off on paper. The page links take you straight to each file; the section links jump down this page. All pack questions are in the <a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">functions toolkit pack</a>; you check them with its <a href="https://drive.google.com/file/d/17i6FFlAOtJVleGT-KvN84niIrHyicNdj/view">"with Solutions" version</a>, which shows the full working and, under "Mark Scheme and Guidance", what each mark is for: M1&nbsp;= a method mark, A1&nbsp;= a correct-answer mark, R1&nbsp;= a mark for a correct reason. It is a Save My Exams file, not an official IB mark scheme, but it uses the same M1/A1/R1 style.</p>
   <div class="plan">
     <div>
-      <div class="bh"><b>Block 1 · 30 min</b><span>SL 2.2 Functions, domain, range and the idea of an inverse</span></div>
+      <div class="bh"><b>Block 1 · 30 min</b><span><span class="term" data-t="sl" tabindex="0" role="button">SL</span> 2.2 <span class="term" data-t="function" tabindex="0" role="button">Functions</span>, <span class="term" data-t="domain" tabindex="0" role="button">domain</span>, <span class="term" data-t="range" tabindex="0" role="button">range</span> and the idea of an <span class="term" data-t="inverse" tabindex="0" role="button">inverse</span></span></div>
       <ol>
         <li>Read the <a href="#s22">SL 2.2 section</a> below. Cover each worked example's steps and try it yourself first. <span class="t">(10 min)</span></li>
         <li>Do "Self-check SL 2.2" at the end of the section on paper, then open it to check. <span class="t">(4 min)</span></li>
@@ -204,27 +246,27 @@
       </ol>
     </div>
     <div>
-      <div class="bh"><b>Block 2 · 35 min</b><span>SL 2.3 Graphs and SL 2.4 Key features and intersections</span></div>
+      <div class="bh"><b>Block 2 · 35 min</b><span>SL 2.3 Graphs and SL 2.4 Key features and <span class="term" data-t="intersection" tabindex="0" role="button">intersections</span></span></div>
       <ol>
         <li>Read the <a href="#s23">SL 2.3 section</a> and the <a href="#s24">SL 2.4 section</a>. <span class="t">(12 min)</span></li>
         <li>Do both self-checks (SL 2.3 and SL 2.4) on paper, then open them to check. <span class="t">(4 min)</span></li>
-        <li>In the <a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">functions pack</a> do <b>Easy question 2</b> (sketch the inverse on paper by copying the graph roughly), <b>Hard question 3</b> and <b>Very Hard question 1</b>. Hard 3 is SL 2.4 thinking: find the smallest value of the expression under the root first. Very Hard 1 is about asymptotes: a power of −<span class="frac"><span>1</span><span>2</span></span> means one over a square root. <span class="t">(16 min)</span></li>
+        <li>In the <a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">functions pack</a> do <b>Easy question 2</b> (<span class="term" data-t="sketch" tabindex="0" role="button">sketch</span> the inverse on paper by copying the graph roughly), <b>Hard question 3</b> and <b>Very Hard question 1</b>. Hard 3 is SL 2.4 thinking: <span class="term" data-t="find" tabindex="0" role="button">find the smallest</span> value of the <span class="term" data-t="expression" tabindex="0" role="button">expression</span> under the root first. Very Hard 1 is about <span class="term" data-t="asymptote" tabindex="0" role="button">asymptotes</span>: a <span class="term" data-t="power" tabindex="0" role="button">power</span> of −<span class="frac"><span>1</span><span>2</span></span> means one over a square root. <span class="t">(16 min)</span></li>
         <li>Mark with the <a href="https://drive.google.com/file/d/17i6FFlAOtJVleGT-KvN84niIrHyicNdj/view">solutions version</a> (17 marks in total) and log what you lost. In Hard 3(b)⁠(ii) the R1 mark needs a reference to your answer to part (i). <span class="t">(3 min)</span></li>
       </ol>
     </div>
     <div>
-      <div class="bh"><b>Block 3 · 35 min</b><span>SL 2.5 Composite functions and finding the inverse</span></div>
+      <div class="bh"><b>Block 3 · 35 min</b><span>SL 2.5 <span class="term" data-t="composite" tabindex="0" role="button">Composite functions</span> and finding the inverse</span></div>
       <ol>
         <li>Read the <a href="#s25">SL 2.5 section</a>, especially worked examples 1, 3 and 4. <span class="t">(12 min)</span></li>
         <li>Do "Self-check SL 2.5" on paper, then open it to check. <span class="t">(4 min)</span></li>
-        <li>In the <a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">functions pack</a> do <b>Easy question 1</b>, <b>Medium question 7</b> and <b>Hard question 4</b>, no calculator. For each inverse, write the four steps (y =, swap, rearrange, f<sup>−1</sup>(x) =) and state the domain. <span class="t">(16 min)</span></li>
-        <li>Mark with the <a href="https://drive.google.com/file/d/17i6FFlAOtJVleGT-KvN84niIrHyicNdj/view">solutions version</a> (21 marks in total) and log what you lost. Hard 4 gives no mark for a ± sign in the inverse. <span class="t">(3 min)</span></li>
+        <li>In the <a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">functions pack</a> do <b>Easy question 1</b>, <b>Medium question 7</b> and <b>Hard question 4</b>, no calculator. For each inverse, write the four steps (y =, swap, <span class="term" data-t="rearrange" tabindex="0" role="button">rearrange</span>, f<sup>−1</sup>(x) =) and <span class="term" data-t="state" tabindex="0" role="button">state</span> the domain. <span class="t">(16 min)</span></li>
+        <li>Mark with the <a href="https://drive.google.com/file/d/17i6FFlAOtJVleGT-KvN84niIrHyicNdj/view">solutions version</a> (21 marks in total) and log what you lost. Hard 4 gives no mark for a <span class="term" data-t="±" tabindex="0" role="button">±</span> sign in the inverse. <span class="t">(3 min)</span></li>
       </ol>
     </div>
     <div>
       <div class="bh"><b>Block 4 · 20 min</b><span>Mixed question, then the quiz</span></div>
       <ol>
-        <li>In the <a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">functions pack</a> do <b>Medium question 8</b>: a piecewise function from a graph, then the sketch of its inverse. Reflect the three marked points by swapping their coordinates. <span class="t">(7 min)</span></li>
+        <li>In the <a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">functions pack</a> do <b>Medium question 8</b>: a <span class="term" data-t="piecewise" tabindex="0" role="button">piecewise function</span> from a graph, then the sketch of its inverse. <span class="term" data-t="reflect" tabindex="0" role="button">Reflect</span> the three marked points by swapping their <span class="term" data-t="coordinates" tabindex="0" role="button">coordinates</span>. <span class="t">(7 min)</span></li>
         <li>Mark it with the <a href="https://drive.google.com/file/d/17i6FFlAOtJVleGT-KvN84niIrHyicNdj/view">solutions version</a> (7 marks) and log what you lost. <span class="t">(2 min)</span></li>
         <li>Do the <a href="#quiz">quiz</a> at the bottom of the page. Work each question on paper before you click. <span class="t">(9 min)</span></li>
         <li>Write every mistake from today into the Error log tab. <span class="t">(2 min)</span></li>
@@ -244,39 +286,39 @@
     <span><span class="fb" style="margin-left:0">In booklet</span> given in the exam formula booklet: know how to use it, no need to memorise it</span>
     <span><span class="learn" style="margin-left:0">Learn</span> not in the booklet: you must remember it</span>
   </div>
-  <p style="font-size:.95rem">Today almost everything is <span class="learn" style="margin-left:0">Learn</span>: the formula booklet has nothing for official SL 2.2 to 2.5. The only booklet items you use today are the gradient formula and the equations of a straight line (listed under SL 2.1, for Self-check SL 2.2 question 1 and pack Medium 8) and the axis of symmetry of a quadratic and the quadratic formula (listed under SL 2.6 and 2.7 in the <a href="https://drive.google.com/file/d/1yofdn_7Gu3pb2O5G6iHhrXVgRUQ1Qldz/view">booklet</a>).</p>
+  <p style="font-size:.95rem">Today almost everything is <span class="learn" style="margin-left:0">Learn</span>: the formula booklet has nothing for official SL 2.2 to 2.5. The only booklet items you use today are the <span class="term" data-t="gradient" tabindex="0" role="button">gradient</span> formula and the equations of a straight line (listed under SL 2.1, for Self-check SL 2.2 question 1 and pack Medium 8) and the <span class="term" data-t="axis of symmetry" tabindex="0" role="button">axis of symmetry</span> of a <span class="term" data-t="quadratic" tabindex="0" role="button">quadratic</span> and the <span class="term" data-t="quadratic formula" tabindex="0" role="button">quadratic formula</span> (listed under SL 2.6 and 2.7 in the <a href="https://drive.google.com/file/d/1yofdn_7Gu3pb2O5G6iHhrXVgRUQ1Qldz/view">booklet</a>).</p>
   <h4>Your class numbers these topics differently</h4>
   <p>The school programme counts its own lessons; exam papers, the solutions file's mark lines and this guide use the official IB numbers. Same content, different labels.</p>
   <div class="tablewrap"><table>
     <tr><th>Content</th><th class="c">Official IB number</th><th class="c">School programme</th></tr>
-    <tr><td>Function, domain, range, graph, notation, function as a model</td><td class="c">SL 2.2</td><td class="c">2.3</td></tr>
-    <tr><td>The graph of a function, sketching, graphing with technology</td><td class="c">SL 2.3</td><td class="c">2.3</td></tr>
+    <tr><td>Function, domain, range, graph, <span class="term" data-t="notation" tabindex="0" role="button">notation</span>, function as a <span class="term" data-t="model" tabindex="0" role="button">model</span></td><td class="c">SL 2.2</td><td class="c">2.3</td></tr>
+    <tr><td>The graph of a function, sketching, graphing with <span class="term" data-t="technology" tabindex="0" role="button">technology</span></td><td class="c">SL 2.3</td><td class="c">2.3</td></tr>
     <tr><td>Key features of graphs, intersections</td><td class="c">SL 2.4</td><td class="c">2.3 (asymptotes again in 2.7)</td></tr>
     <tr><td>Composite functions</td><td class="c">SL 2.5</td><td class="c">2.4</td></tr>
     <tr><td>Inverse function: the idea and the reflection in y&nbsp;= x</td><td class="c">SL 2.2</td><td class="c">2.5</td></tr>
-    <tr><td>Identity function, finding f<sup>−1</sup>(x)</td><td class="c">SL 2.5</td><td class="c">2.5</td></tr>
+    <tr><td><span class="term" data-t="identity function" tabindex="0" role="button">Identity function</span>, finding f<sup>−1</sup>(x)</td><td class="c">SL 2.5</td><td class="c">2.5</td></tr>
   </table></div>
-  <p style="font-size:.95rem;color:var(--ink-soft)">Not in today's guide: lines (official SL 2.1, school 2.1), quadratics (official SL 2.6 and 2.7, school 2.2), transformations (official SL 2.11, school 2.6) and rational functions (official SL 2.8, school 2.7).</p>
-  <p style="font-size:.95rem;color:var(--ink-soft)">Exam format: Paper 1 is 90 minutes with no calculator; Paper 2 is 90 minutes with a graphic display calculator (GDC). Both are worth 80 marks, with short questions in section A and longer ones in section B. Neither paper is multiple choice; the quiz at the end uses multiple choice only so the page can mark it for you. The guide says the domain in an exam question is the largest possible one unless the question says otherwise.</p>
+  <p style="font-size:.95rem;color:var(--ink-soft)">Not in today's guide: lines (official SL 2.1, school 2.1), quadratics (official SL 2.6 and 2.7, school 2.2), <span class="term" data-t="transformation" tabindex="0" role="button">transformations</span> (official SL 2.11, school 2.6) and <span class="term" data-t="rational function" tabindex="0" role="button">rational functions</span> (official SL 2.8, school 2.7).</p>
+  <p style="font-size:.95rem;color:var(--ink-soft)">Exam format: Paper 1 is 90 minutes with no calculator; Paper 2 is 90 minutes with a graphic display calculator (<span class="term" data-t="gdc" tabindex="0" role="button">GDC</span>). Both are worth 80 marks, with short questions in section A and longer ones in section B. Neither paper is multiple choice; the quiz at the end uses multiple choice only so the page can mark it for you. The guide says the domain in an exam question is the largest possible one unless the question says otherwise.</p>
 </section>
 
 <!-- =============================== SL 2.2 =============================== -->
 <section class="topic" id="s22">
-  <div class="kicker">SL 2.2 (school 2.3 and 2.5)</div>
+  <div class="kicker"><span class="term" data-t="sl" tabindex="0" role="button">SL</span> 2.2 (school 2.3 and 2.5)</div>
   <h2>Functions, domain, range and the idea of an inverse</h2>
-  <p class="guiding">A function is a rule that gives every allowed input exactly one output.</p>
+  <p class="guiding">A <span class="term" data-t="function" tabindex="0" role="button">function</span> is a rule that gives every allowed input exactly one output.</p>
 
   <div class="ican">
     <p>By the end of this section I can</p>
-    <label><input type="checkbox" data-k="d1"><span>Explain the concept of a function, its domain, its range and its graph</span></label>
-    <label><input type="checkbox" data-k="d2"><span>Use function notation, for example f(x), v(t), C(n)</span></label>
-    <label><input type="checkbox" data-k="d3"><span>Use a function as a mathematical model of a real situation</span></label>
-    <label><input type="checkbox" data-k="d4"><span>Explain that an inverse function reverses or undoes the effect of a function, for example that solving f(x)&nbsp;= 10 is the same as finding f<sup>−1</sup>(10)</span></label>
-    <label><input type="checkbox" data-k="d5"><span>Use the notation f<sup>−1</sup>(x), see the inverse as a reflection in the line y&nbsp;= x, and know that an inverse exists only for a one-to-one function, with the domain of f<sup>−1</sup> equal to the range of f</span></label>
+    <label><input type="checkbox" data-k="d1"><span><span class="term" data-t="explain" tabindex="0" role="button">Explain</span> the concept of a function, its <span class="term" data-t="domain" tabindex="0" role="button">domain</span>, its <span class="term" data-t="range" tabindex="0" role="button">range</span> and its graph</span></label>
+    <label><input type="checkbox" data-k="d2"><span>Use function <span class="term" data-t="notation" tabindex="0" role="button">notation</span>, for example f(x), v(t), C(n)</span></label>
+    <label><input type="checkbox" data-k="d3"><span>Use a function as a <span class="term" data-t="model" tabindex="0" role="button">mathematical model</span> of a real situation</span></label>
+    <label><input type="checkbox" data-k="d4"><span>Explain that an <span class="term" data-t="inverse" tabindex="0" role="button">inverse function</span> reverses or undoes the effect of a function, for example that solving f(x)&nbsp;= 10 is the same as finding f<sup>−1</sup>(10)</span></label>
+    <label><input type="checkbox" data-k="d5"><span>Use the notation f<sup>−1</sup>(x), see the inverse as a <span class="term" data-t="reflect" tabindex="0" role="button">reflection</span> in the line y&nbsp;= x, and know that an inverse exists only for a <span class="term" data-t="one-to-one" tabindex="0" role="button">one-to-one</span> function, with the domain of f<sup>−1</sup> equal to the range of f</span></label>
   </div>
 
   <h3>The words and the notation</h3>
-  <p>A <b>function</b> takes each input x from its <b>domain</b> and gives exactly one output f(x). The set of all outputs is the <b>range</b>. f(3) means "put 3 in": if f(x)&nbsp;= x<sup>2</sup>&nbsp;+&nbsp;1 then f(3)&nbsp;= 10. The letters change with the context: v(t) is a velocity at time t, C(n) a cost for n items. The <b>graph</b> of f is every point (x, f(x)).</p>
+  <p>A <b>function</b> takes each input x from its <b>domain</b> and gives exactly one output f(x). <span class="term" data-t="set" tabindex="0" role="button">The set</span> of all outputs is the <b>range</b>. f(3) means "put 3 in": if f(x)&nbsp;= x<sup>2</sup>&nbsp;+&nbsp;1 then f(3)&nbsp;= 10. The letters change with the <span class="term" data-t="context" tabindex="0" role="button">context</span>: v(t) is a <span class="term" data-t="velocity" tabindex="0" role="button">velocity</span> at time t, C(n) a cost for n items. The <b>graph</b> of f is every point (x, f(x)).</p>
   <figure>
     <svg viewBox="0 0 720 290" aria-label="Three mapping diagrams. A: one-to-one. B: many-to-one, two inputs give 4. C: not a function, the input 4 has two outputs">
 <defs><marker id="ahm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2F47A6"/></marker></defs>
@@ -321,20 +363,20 @@
 </g>
     </svg>
     <div class="keyrow"><span><b>A</b> one-to-one: a function, and each output comes from one input (f(x)&nbsp;= 2x)</span><span><b>B</b> many-to-one: still a function (f(x)&nbsp;= x<sup>2</sup>), but 4 comes from −2 and from 2</span><span><b>C</b> not a function: the input 4 has two outputs</span></div>
-    <figcaption>Test on a graph <span class="learn">Learn</span>: a vertical line may cross the graph of a function at most once (each input, one output). A horizontal line may cross a one-to-one function at most once (each output, one input). Only one-to-one functions, like A, have an inverse.</figcaption>
+    <figcaption>Test on a graph <span class="learn">Learn</span>: a <span class="term" data-t="vertical" tabindex="0" role="button">vertical</span> line may cross the graph of a function at most once (each input, one output). A horizontal line may cross a one-to-one function at most once (each output, one input). Only one-to-one functions, like A, have an inverse.</figcaption>
   </figure>
 
   <h3>Domain and range</h3>
-  <p>In an exam the domain is the <b>largest possible domain</b> unless the question gives one. For today's functions there are two things that are not allowed <span class="learn">Learn</span> (logarithms add a third later in Topic 2):</p>
+  <p>In an exam the domain is the <b>largest possible domain</b> unless the question gives one. For today's functions there are two things that are not allowed <span class="learn">Learn</span> (<span class="term" data-t="logarithm" tabindex="0" role="button">logarithms</span> add a third later in Topic 2):</p>
   <ul>
-    <li>dividing by zero: <span class="nw">f(x)&nbsp;= <span class="frac"><span>1</span><span>x&nbsp;−&nbsp;5</span></span></span> needs x ≠ 5;</li>
+    <li>dividing by zero: <span class="nw">f(x)&nbsp;= <span class="frac"><span>1</span><span>x&nbsp;−&nbsp;5</span></span></span> needs x <span class="term" data-t="≠" tabindex="0" role="button">≠</span> 5;</li>
     <li>the square root of a negative number: <span class="nw">√(x&nbsp;+&nbsp;3)</span> needs x&nbsp;+&nbsp;3&nbsp;≥&nbsp;0, so x&nbsp;≥&nbsp;−3.</li>
   </ul>
-  <p>Write the domain with x (x&nbsp;≥&nbsp;−3) and the range with f(x) or y (f(x)&nbsp;≥&nbsp;0). Interval notation is also accepted <span class="learn">Learn</span>: [a, b] includes both ends, ]a, b[ includes neither, so x&nbsp;≥&nbsp;1 is [1, ∞[ and 2&nbsp;&lt;&nbsp;x&nbsp;&lt;&nbsp;5 is ]2, 5[.</p>
+  <p>Write the domain with x (x&nbsp;≥&nbsp;−3) and the range with f(x) or y (f(x)&nbsp;≥&nbsp;0). <span class="term" data-t="interval notation" tabindex="0" role="button">Interval notation</span> is also accepted <span class="learn">Learn</span>: [a, b] includes both ends, ]a, b[ includes neither, so x&nbsp;≥&nbsp;1 is [1, <span class="term" data-t="∞" tabindex="0" role="button">∞</span>[ and 2&nbsp;&lt;&nbsp;x&nbsp;&lt;&nbsp;5 is ]2, 5[.</p>
 
-  <div class="worked"><b>Worked example 1: the guide's own example.</b> Find the largest possible domain and the range of <span class="nw">f(x)&nbsp;= √(2&nbsp;−&nbsp;x)</span>.
+  <div class="worked"><b>Worked example 1: the guide's own example.</b> <span class="term" data-t="find" tabindex="0" role="button">Find the largest</span> possible domain and the range of <span class="nw">f(x)&nbsp;= √(2&nbsp;−&nbsp;x)</span>.
     <ol>
-      <li>The expression under the root cannot be negative: 2&nbsp;−&nbsp;x&nbsp;≥&nbsp;0.</li>
+      <li>The <span class="term" data-t="expression" tabindex="0" role="button">expression</span> under the root cannot be negative: 2&nbsp;−&nbsp;x&nbsp;≥&nbsp;0.</li>
       <li>So <b>x&nbsp;≤&nbsp;2</b>. Check one value either side: f(1)&nbsp;= √1&nbsp;= 1 works; f(3)&nbsp;= √(−1) does not exist.</li>
       <li>A square root is never negative, and f(2)&nbsp;= √0&nbsp;= 0, so the smallest output is 0.</li>
       <li>As x goes down (f(−2)&nbsp;= 2, f(−7)&nbsp;= 3), the output keeps growing without limit, so the range is <b>f(x)&nbsp;≥&nbsp;0</b>.</li>
@@ -392,7 +434,7 @@
 <text x="222.2" y="234.7" font-family="Arial" font-size="24" fill="#2F47A6" text-anchor="middle" font-weight="bold">domain</text>
 <text x="496.1" y="100.5" font-family="Arial" font-size="24" fill="#B8761A" text-anchor="start" font-weight="bold">range</text>
     </svg>
-    <div class="keyrow"><span><span class="sw" style="background:#2F47A6"></span>domain x&nbsp;≤&nbsp;2: the part of the x-axis the graph sits above</span><span><span class="sw" style="background:#B8761A"></span>range f(x)&nbsp;≥&nbsp;0: the part of the y-axis the graph reaches</span></div>
+    <div class="keyrow"><span><span class="sw" style="background:#2F47A6"></span>domain x&nbsp;≤&nbsp;2: the part of the <span class="term" data-t="axes" tabindex="0" role="button">x-axis</span> the graph sits above</span><span><span class="sw" style="background:#B8761A"></span>range f(x)&nbsp;≥&nbsp;0: the part of the y-axis the graph reaches</span></div>
     <figcaption>The guide says "a graph is helpful in visualizing the range": read the domain off the x-axis and the range off the y-axis. The end point (2, 0) is included, so it is a solid dot.</figcaption>
   </figure>
 
@@ -400,13 +442,13 @@
     <ol>
       <li>f(2)&nbsp;= −6&nbsp;×&nbsp;2&nbsp;−&nbsp;3&nbsp;= <b>−15</b>.</li>
       <li>−6x&nbsp;−&nbsp;3&nbsp;= 15, so −6x&nbsp;= 18 and <b>x&nbsp;= −3</b>. It is inside the domain, so it counts.</li>
-      <li>The graph is a straight line with a negative gradient, so the outputs run between the values at the two ends: f(−5)&nbsp;= 30&nbsp;−&nbsp;3&nbsp;= 27 and f(3)&nbsp;= −18&nbsp;−&nbsp;3&nbsp;= −21.</li>
+      <li>The graph is a straight line with a negative <span class="term" data-t="gradient" tabindex="0" role="button">gradient</span>, so the outputs run between the values at the two ends: f(−5)&nbsp;= 30&nbsp;−&nbsp;3&nbsp;= 27 and f(3)&nbsp;= −18&nbsp;−&nbsp;3&nbsp;= −21.</li>
       <li>Both ends are included (≤), so the range is <b>−21&nbsp;≤&nbsp;f(x)&nbsp;≤&nbsp;27</b>, smallest value first.</li>
       <li>The domain of f<sup>−1</sup> is the range of f: <b>−21&nbsp;≤&nbsp;x&nbsp;≤&nbsp;27</b>.</li>
     </ol></div>
 
   <h3>A function as a model</h3>
-  <div class="worked"><b>Worked example 3 (<a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">pack Hard 1</a>).</b> A square with side x has perimeter P&nbsp;= 4x and area A&nbsp;= x<sup>2</sup>. Write P in terms of A and A in terms of P. Then, given that P<sup>−1</sup>(40)&nbsp;= A(k), find k.
+  <div class="worked"><b>Worked example 3 (<a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">pack Hard 1</a>).</b> A square with side x has <span class="term" data-t="perimeter" tabindex="0" role="button">perimeter</span> P&nbsp;= 4x and area A&nbsp;= x<sup>2</sup>. Write P <span class="term" data-t="in terms of" tabindex="0" role="button">in terms of</span> A and A in terms of P. Then, <span class="term" data-t="given that" tabindex="0" role="button">given that</span> P<sup>−1</sup>(40)&nbsp;= A(k), find k.
     <ol>
       <li>From A&nbsp;= x<sup>2</sup>: x&nbsp;= √A (a length is positive). So <b>P&nbsp;= 4√A</b>.</li>
       <li>From P&nbsp;= 4x: x&nbsp;= <span class="frac"><span>P</span><span>4</span></span>. So <b>A&nbsp;= <span class="frac"><span>P<sup>2</sup></span><span>16</span></span></b>.</li>
@@ -416,53 +458,53 @@
     </ol></div>
 
   <h3>The inverse function: undo, and reflect in y&nbsp;= x</h3>
-  <p>f(x)&nbsp;= 2x&nbsp;+&nbsp;3 means "double, then add 3". To undo it, do the opposite operations in the opposite order: "subtract 3, then halve", so <span class="nw">f<sup>−1</sup>(x)&nbsp;= <span class="frac"><span>x&nbsp;−&nbsp;3</span><span>2</span></span></span>. f(4)&nbsp;= 11 and f<sup>−1</sup>(11)&nbsp;= 4.</p>
+  <p>f(x)&nbsp;= 2x&nbsp;+&nbsp;3 means "double, then add 3". To undo it, do the opposite <span class="term" data-t="operation" tabindex="0" role="button">operations</span> in the opposite order: "subtract 3, then halve", so <span class="nw">f<sup>−1</sup>(x)&nbsp;= <span class="frac"><span>x&nbsp;−&nbsp;3</span><span>2</span></span></span>. f(4)&nbsp;= 11 and f<sup>−1</sup>(11)&nbsp;= 4.</p>
   <p>The guide's example <span class="learn">Learn</span>: <b>solving f(x)&nbsp;= 10 is the same as finding f<sup>−1</sup>(10)</b>. Here 2x&nbsp;+&nbsp;3&nbsp;= 10 gives x&nbsp;= 3.5, and f<sup>−1</sup>(10)&nbsp;= <span class="frac"><span>10&nbsp;−&nbsp;3</span><span>2</span></span>&nbsp;= 3.5. You do not need the whole inverse to find one value of it.</p>
-  <p>Inputs and outputs swap, so every point (a, b) on y&nbsp;= f(x) becomes (b, a) on y&nbsp;= f<sup>−1</sup>(x). Swapping the coordinates is a <b>reflection in the line y&nbsp;= x</b> <span class="learn">Learn</span>: look at the banner, where (3, 7) on f matches (7, 3) on f<sup>−1</sup>. The same swap gives <span class="learn">Learn</span>: <b>domain of f<sup>−1</sup>&nbsp;= range of f</b>, and range of f<sup>−1</sup>&nbsp;= domain of f.</p>
-  <p>An inverse exists only for a <b>one-to-one</b> function. f(x)&nbsp;= x<sup>2</sup> on all real numbers has f(−2)&nbsp;= f(2)&nbsp;= 4, so "undo 4" has two answers and there is no inverse. Restrict the domain to x&nbsp;≥&nbsp;0 and the inverse is √x.</p>
+  <p>Inputs and outputs swap, so every point (a, b) on y&nbsp;= f(x) becomes (b, a) on y&nbsp;= f<sup>−1</sup>(x). Swapping the <span class="term" data-t="coordinates" tabindex="0" role="button">coordinates</span> is a <b>reflection in the line y&nbsp;= x</b> <span class="learn">Learn</span>: look at the banner, where (3, 7) on f matches (7, 3) on f<sup>−1</sup>. The same swap gives <span class="learn">Learn</span>: <b>domain of f<sup>−1</sup>&nbsp;= range of f</b>, and range of f<sup>−1</sup>&nbsp;= domain of f.</p>
+  <p>An inverse exists only for a <b>one-to-one</b> function. f(x)&nbsp;= x<sup>2</sup> on all <span class="term" data-t="real numbers" tabindex="0" role="button">real numbers</span> has f(−2)&nbsp;= f(2)&nbsp;= 4, so "undo 4" has two answers and there is no inverse. <span class="term" data-t="restrict" tabindex="0" role="button">Restrict</span> the domain to x&nbsp;≥&nbsp;0 and the inverse is √x.</p>
 
-  <div class="tip"><b>Exam traps.</b> (1) Writing the range with x ("x&nbsp;≥&nbsp;0"): the mark scheme does not accept it. (2) Strict or not, for a straight-line function: if the domain has &lt;, the matching end of the range has&nbsp;&lt;&nbsp;too; if it has ≤, keep ≤. (3) Range of a decreasing function: put the smaller value first, −21&nbsp;≤&nbsp;f(x)&nbsp;≤&nbsp;27, not 27&nbsp;≤&nbsp;f(x)&nbsp;≤&nbsp;−21. (4) f<sup>−1</sup>(x) is not <span class="frac"><span>1</span><span>f(x)</span></span>. (5) Forgetting that a solution must lie in the domain.</div>
+  <div class="tip"><b>Exam traps.</b> (1) Writing the range with x ("x&nbsp;≥&nbsp;0"): the mark scheme does not accept it. (2) <span class="term" data-t="strict" tabindex="0" role="button">Strict</span> or not, for a straight-line function: if the domain has &lt;, the matching end of the range has&nbsp;&lt;&nbsp;too; if it has ≤, keep ≤. (3) Range of a <span class="term" data-t="decreasing" tabindex="0" role="button">decreasing</span> function: put the smaller value first, −21&nbsp;≤&nbsp;f(x)&nbsp;≤&nbsp;27, not 27&nbsp;≤&nbsp;f(x)&nbsp;≤&nbsp;−21. (4) f<sup>−1</sup>(x) is not <span class="frac"><span>1</span><span>f(x)</span></span>. (5) Forgetting that a solution must lie in the domain.</div>
 
   <details><summary>Self-check SL 2.2 (answer on paper, then open)</summary>
     <ol>
-      <li>A table gives f(−2)&nbsp;= −12, f(0)&nbsp;= −4 and f(3)&nbsp;= 8. Find f<sup>−1</sup>(8). Given that f is linear, find f(x). (<a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">pack Easy 4(a) and (c)</a>)</li>
-      <li>f(x)&nbsp;= <span class="frac"><span>5&nbsp;−&nbsp;x<sup>2</sup></span><span>3</span></span> and g(x)&nbsp;= 4&nbsp;−&nbsp;<span class="frac"><span>3</span><span>x</span></span>, each with its largest possible domain. Write down the range of f, and the domain and range of g. (<a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">pack Medium 6(a) and (b)</a>)</li>
+      <li>A table gives f(−2)&nbsp;= −12, f(0)&nbsp;= −4 and f(3)&nbsp;= 8. Find f<sup>−1</sup>(8). Given that f is <span class="term" data-t="linear" tabindex="0" role="button">linear</span>, find f(x). (<a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">pack Easy 4(a) and (c)</a>)</li>
+      <li>f(x)&nbsp;= <span class="frac"><span>5&nbsp;−&nbsp;x<sup>2</sup></span><span>3</span></span> and g(x)&nbsp;= 4&nbsp;−&nbsp;<span class="frac"><span>3</span><span>x</span></span>, each with its largest possible domain. <span class="term" data-t="write down" tabindex="0" role="button">Write down</span> the range of f, and the domain and range of g. (<a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">pack Medium 6(a) and (b)</a>)</li>
       <li>f(x)&nbsp;= √(x&nbsp;−&nbsp;14) for x&nbsp;≥&nbsp;14. Find f<sup>−1</sup>(2). (<a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">pack Hard 2(a)</a>)</li>
       <li>Find the largest possible domain and the range of h(x)&nbsp;= √(x&nbsp;+&nbsp;3).</li>
     </ol>
-    <p><b>Answers.</b> 1: f(3)&nbsp;= 8, so f<sup>−1</sup>(8)&nbsp;= 3. Gradient through (0, −4) and (3, 8) is <span class="frac"><span>12</span><span>3</span></span>&nbsp;= 4, so f(x)&nbsp;= 4x&nbsp;−&nbsp;4 (check: 4&nbsp;×&nbsp;(−2)&nbsp;−&nbsp;4&nbsp;= −12). 2: x<sup>2</sup>&nbsp;≥&nbsp;0, so the largest value of f is f(0)&nbsp;= <span class="frac"><span>5</span><span>3</span></span>: range f(x)&nbsp;≤&nbsp;<span class="frac"><span>5</span><span>3</span></span>. g: domain x ≠ 0; <span class="frac"><span>3</span><span>x</span></span> can be any number except 0, so the range is g(x) ≠ 4. 3: solve √(x&nbsp;−&nbsp;14)&nbsp;= 2: x&nbsp;−&nbsp;14&nbsp;= 4, so f<sup>−1</sup>(2)&nbsp;= 18. 4: x&nbsp;+&nbsp;3&nbsp;≥&nbsp;0 gives x&nbsp;≥&nbsp;−3; range h(x)&nbsp;≥&nbsp;0.</p>
+    <p><b>Answers.</b> 1: f(3)&nbsp;= 8, so f<sup>−1</sup>(8)&nbsp;= 3. Gradient through (0, −4) and (3, 8) is <span class="frac"><span>12</span><span>3</span></span>&nbsp;= 4, so f(x)&nbsp;= 4x&nbsp;−&nbsp;4 (check: 4&nbsp;×&nbsp;(−2)&nbsp;−&nbsp;4&nbsp;= −12). 2: x<sup>2</sup>&nbsp;≥&nbsp;0, so the largest value of f is f(0)&nbsp;= <span class="frac"><span>5</span><span>3</span></span>: range f(x)&nbsp;≤&nbsp;<span class="frac"><span>5</span><span>3</span></span>. g: domain x ≠ 0; <span class="frac"><span>3</span><span>x</span></span> can be any number except 0, so the range is g(x) ≠ 4. 3: <span class="term" data-t="solve" tabindex="0" role="button">solve</span> √(x&nbsp;−&nbsp;14)&nbsp;= 2: x&nbsp;−&nbsp;14&nbsp;= 4, so f<sup>−1</sup>(2)&nbsp;= 18. 4: x&nbsp;+&nbsp;3&nbsp;≥&nbsp;0 gives x&nbsp;≥&nbsp;−3; range h(x)&nbsp;≥&nbsp;0.</p>
   </details>
 </section>
 
 <!-- =============================== SL 2.3 =============================== -->
 <section class="topic" id="s23">
-  <div class="kicker">SL 2.3 (school 2.3)</div>
+  <div class="kicker"><span class="term" data-t="sl" tabindex="0" role="button">SL</span> 2.3 (school 2.3)</div>
   <h2>The graph of a function</h2>
-  <p class="guiding">A graph is the function drawn: every point on it is an input and its output.</p>
+  <p class="guiding">A graph is the <span class="term" data-t="function" tabindex="0" role="button">function</span> drawn: every point on it is an input and its output.</p>
 
   <div class="ican">
     <p>By the end of this section I can</p>
     <label><input type="checkbox" data-k="s1"><span>Use the graph of a function and its equation y&nbsp;= f(x)</span></label>
-    <label><input type="checkbox" data-k="s2"><span>Create a sketch from given information or a context, including transferring a graph from screen to paper, with the axes and key features labelled, and know the difference between "draw" and "sketch"</span></label>
-    <label><input type="checkbox" data-k="s3"><span>Use technology to graph functions, including their sums and differences</span></label>
+    <label><input type="checkbox" data-k="s2"><span>Create a <span class="term" data-t="sketch" tabindex="0" role="button">sketch</span> from given information or a <span class="term" data-t="context" tabindex="0" role="button">context</span>, including transferring a graph from screen to paper, with the <span class="term" data-t="axes" tabindex="0" role="button">axes</span> and key features labelled, and know the difference between "<span class="term" data-t="draw" tabindex="0" role="button">draw</span>" and "sketch"</span></label>
+    <label><input type="checkbox" data-k="s3"><span>Use <span class="term" data-t="technology" tabindex="0" role="button">technology</span> to graph functions, including their <span class="term" data-t="difference" tabindex="0" role="button">sums and differences</span></span></label>
   </div>
 
   <p>The point (a, b) lies on the graph of y&nbsp;= f(x) exactly when f(a)&nbsp;= b. Example: (3, 5) is on y&nbsp;= x<sup>2</sup>&nbsp;−&nbsp;4 because 9&nbsp;−&nbsp;4&nbsp;= 5; (1, 2) is not, because 1&nbsp;−&nbsp;4&nbsp;= −3.</p>
 
   <h3>Draw or sketch? <span class="learn">Learn</span></h3>
   <div class="tablewrap"><table>
-    <tr><th>Command term</th><th>What the IB means</th></tr>
-    <tr><td><b>Draw</b></td><td>An accurate, labelled graph in pencil: to scale, points plotted correctly, a ruler for straight lines, joined by a straight line or a smooth curve.</td></tr>
+    <tr><th><span class="term" data-t="command term" tabindex="0" role="button">Command term</span></th><th>What the IB means</th></tr>
+    <tr><td><b>Draw</b></td><td>An accurate, labelled graph in pencil: <span class="term" data-t="to scale" tabindex="0" role="button">to scale</span>, points <span class="term" data-t="plot" tabindex="0" role="button">plotted</span> correctly, a ruler for straight lines, joined by a straight line or a smooth curve.</td></tr>
     <tr><td><b>Sketch</b></td><td>The general shape, labelled as appropriate, with the relevant features. Not to scale, but the features must be in the right places.</td></tr>
   </table></div>
-  <p>A sketch must still show <span class="learn">Learn</span>: labelled axes; intercepts with their coordinates; maximum and minimum points; asymptotes as dashed lines with their equations; end points if the domain is restricted (solid dot if included, open dot if not); and the right shape at both ends. When you copy a graph from the GDC screen to paper, note the window you used and read the key points with the GDC tools (zero, minimum, maximum, intersect) before you copy.</p>
+  <p>A sketch must still show <span class="learn">Learn</span>: labelled axes; <span class="term" data-t="intercept" tabindex="0" role="button">intercepts</span> with their <span class="term" data-t="coordinates" tabindex="0" role="button">coordinates</span>; <span class="term" data-t="maximum" tabindex="0" role="button">maximum</span> and minimum points; <span class="term" data-t="asymptote" tabindex="0" role="button">asymptotes</span> as dashed lines with their equations; end points if the <span class="term" data-t="domain" tabindex="0" role="button">domain</span> is <span class="term" data-t="restrict" tabindex="0" role="button">restricted</span> (solid dot if included, open dot if not); and the right shape at both ends. When you copy a graph from the <span class="term" data-t="gdc" tabindex="0" role="button">GDC</span> screen to paper, note the <span class="term" data-t="window" tabindex="0" role="button">window</span> you used and read the key points with the GDC tools (zero, minimum, maximum, intersect) before you copy.</p>
 
-  <div class="worked"><b>Worked example 1: a sketch from information.</b> A quadratic function has zeros at x&nbsp;= −1 and x&nbsp;= 3 and a maximum point at (1, 4). Find f(x) and sketch y&nbsp;= f(x).
+  <div class="worked"><b>Worked example 1: a sketch from information.</b> A <span class="term" data-t="quadratic" tabindex="0" role="button">quadratic</span> function has <span class="term" data-t="zeros" tabindex="0" role="button">zeros</span> at x&nbsp;= −1 and x&nbsp;= 3 and a maximum point at (1, 4). <span class="term" data-t="find" tabindex="0" role="button">Find f(x)</span> and sketch y&nbsp;= f(x).
     <ol>
       <li>Zeros at −1 and 3 mean f(x)&nbsp;= a(x&nbsp;+&nbsp;1)⁠(x&nbsp;−&nbsp;3) for some a.</li>
       <li>Use the maximum: f(1)&nbsp;= a(2)⁠(−2)&nbsp;= −4a&nbsp;= 4, so a&nbsp;= −1.</li>
       <li>f(x)&nbsp;= −(x&nbsp;+&nbsp;1)⁠(x&nbsp;−&nbsp;3)&nbsp;= <b>−x<sup>2</sup>&nbsp;+&nbsp;2x&nbsp;+&nbsp;3</b>. The y-intercept is f(0)&nbsp;= 3.</li>
-      <li>a&nbsp;&lt;&nbsp;0, so the parabola opens downwards. Mark and label (−1, 0), (3, 0), (0, 3) and (1, 4), and draw a smooth curve symmetric about x&nbsp;= 1.</li>
+      <li>a&nbsp;&lt;&nbsp;0, so the <span class="term" data-t="parabola" tabindex="0" role="button">parabola</span> opens downwards. Mark and label (−1, 0), (3, 0), (0, 3) and (1, 4), and draw a smooth curve <span class="term" data-t="symmetric" tabindex="0" role="button">symmetric</span> about x&nbsp;= 1.</li>
     </ol></div>
   <figure>
     <svg viewBox="0 0 700 340" aria-label="A sketch of the downward parabola y equals minus x squared plus 2x plus 3 with the points (minus 1, 0), (3, 0), (0, 3) and (1, 4) labelled and the axis of symmetry x equals 1 dashed">
@@ -499,7 +541,7 @@
     </table></div>
     <ol>
       <li>(f&nbsp;−&nbsp;g)⁠(x)&nbsp;= x<sup>2</sup>&nbsp;−&nbsp;2x, a parabola with zeros at 0 and 2 and minimum (1, −1).</li>
-      <li>f&nbsp;−&nbsp;g is zero exactly where f and g are equal: the graphs of f and g cross at x&nbsp;= 0 and x&nbsp;= 2. This is the link to intersections in SL 2.4.</li>
+      <li>f&nbsp;−&nbsp;g is zero exactly where f and g are equal: the graphs of f and g cross at x&nbsp;= 0 and x&nbsp;= 2. This is the link to <span class="term" data-t="intersection" tabindex="0" role="button">intersections</span> in SL 2.4.</li>
       <li>f&nbsp;−&nbsp;g is negative for 0&nbsp;&lt;&nbsp;x&nbsp;&lt;&nbsp;2, where the line g is above the curve f.</li>
     </ol></div>
   <figure>
@@ -548,12 +590,12 @@
     <figcaption>Where the blue and yellow graphs cross, the green graph is on the x-axis: at x&nbsp;= 2 both heights are 4, so the difference is 0.</figcaption>
   </figure>
 
-  <div class="tip"><b>Exam traps.</b> (1) A sketch without labelled intercepts or turning points loses marks even with a perfect shape. (2) Drawing past the end of a restricted domain: the graph must stop at its end point. (3) Copying from the GDC with a window that hides a feature: zoom out once to check nothing is missing. (4) Asymptotes drawn as solid lines or without their equations.</div>
+  <div class="tip"><b>Exam traps.</b> (1) A sketch without labelled intercepts or <span class="term" data-t="turning point" tabindex="0" role="button">turning points</span> loses marks even with a perfect shape. (2) Drawing past the end of a restricted domain: the graph must stop at its end point. (3) Copying from the GDC with a window that hides a feature: zoom out once to check nothing is missing. (4) Asymptotes drawn as solid lines or without their equations.</div>
 
   <details><summary>Self-check SL 2.3</summary>
     <ol>
       <li>Does (−2, 3) lie on y&nbsp;= x<sup>2</sup>&nbsp;−&nbsp;1? Does (2, 5)?</li>
-      <li>A ball's height is h(t)&nbsp;= 20t&nbsp;−&nbsp;5t<sup>2</sup> metres for 0&nbsp;≤&nbsp;t&nbsp;≤&nbsp;4 seconds. Which points would you label on a sketch? What is the range of h?</li>
+      <li>A ball's height is h(t)&nbsp;= 20t&nbsp;−&nbsp;5t<sup>2</sup> metres for 0&nbsp;≤&nbsp;t&nbsp;≤&nbsp;4 seconds. Which points would you label on a sketch? What is the <span class="term" data-t="range" tabindex="0" role="button">range</span> of h?</li>
       <li>"Draw" or "sketch": which one needs a scale and plotted points?</li>
       <li>f(x)&nbsp;= 3x and g(x)&nbsp;= x<sup>2</sup>. Find (f&nbsp;+&nbsp;g)⁠(2) and (f&nbsp;−&nbsp;g)⁠(2).</li>
     </ol>
@@ -563,25 +605,25 @@
 
 <!-- =============================== SL 2.4 =============================== -->
 <section class="topic" id="s24">
-  <div class="kicker">SL 2.4 (school 2.3, asymptotes also in 2.7)</div>
+  <div class="kicker"><span class="term" data-t="sl" tabindex="0" role="button">SL</span> 2.4 (school 2.3, <span class="term" data-t="asymptote" tabindex="0" role="button">asymptotes</span> also in 2.7)</div>
   <h2>Key features of graphs and intersections</h2>
   <p class="guiding">What to look for on any graph, and how to find where two graphs meet.</p>
 
   <div class="ican">
     <p>By the end of this section I can</p>
-    <label><input type="checkbox" data-k="k1"><span>Determine key features of graphs: maximum and minimum values, intercepts, symmetry, vertex, zeros of functions or roots of equations</span></label>
-    <label><input type="checkbox" data-k="k2"><span>Find vertical and horizontal asymptotes using graphing technology</span></label>
-    <label><input type="checkbox" data-k="k3"><span>Find the points of intersection of two curves or lines using technology</span></label>
+    <label><input type="checkbox" data-k="k1"><span><span class="term" data-t="determine" tabindex="0" role="button">Determine</span> key features of graphs: <span class="term" data-t="maximum" tabindex="0" role="button">maximum</span> and minimum values, <span class="term" data-t="intercept" tabindex="0" role="button">intercepts</span>, <span class="term" data-t="symmetric" tabindex="0" role="button">symmetry</span>, <span class="term" data-t="vertex" tabindex="0" role="button">vertex</span>, <span class="term" data-t="zeros" tabindex="0" role="button">zeros</span> of <span class="term" data-t="function" tabindex="0" role="button">functions</span> or roots of equations</span></label>
+    <label><input type="checkbox" data-k="k2"><span><span class="term" data-t="find" tabindex="0" role="button">Find vertical</span> and <span class="term" data-t="vertical" tabindex="0" role="button">horizontal</span> asymptotes using <span class="term" data-t="technology" tabindex="0" role="button">graphing technology</span></span></label>
+    <label><input type="checkbox" data-k="k3"><span>Find the <span class="term" data-t="intersection" tabindex="0" role="button">points of intersection</span> of two curves or lines using technology</span></label>
   </div>
 
   <h3>The key features <span class="learn">Learn</span></h3>
   <div class="tablewrap"><table>
     <tr><th>Feature</th><th>How to find it</th></tr>
     <tr><td>y-intercept</td><td>Put x&nbsp;= 0. Give the point (0, f(0)).</td></tr>
-    <tr><td>Zeros, roots, x-intercepts</td><td>The same x-values, three names: solve f(x)&nbsp;= 0. As points they are (x, 0).</td></tr>
-    <tr><td>Vertex, maximum or minimum</td><td>For a quadratic the vertex is on the axis of symmetry <span class="nw">x&nbsp;= −<span class="frac"><span>b</span><span>2a</span></span></span> <span class="fb">In booklet</span>. The maximum or minimum <b>value</b> is the y-coordinate.</td></tr>
-    <tr><td>Symmetry</td><td>A parabola is symmetric about its axis. A graph can also be symmetric about the y-axis, for example y&nbsp;= x<sup>2</sup>: it has the same height at x and at −x. (The names "odd" and "even" function are HL only, AHL 2.14.)</td></tr>
-    <tr><td>Vertical asymptote</td><td>A line x&nbsp;= a that the graph approaches but never reaches; usually where a denominator is zero.</td></tr>
+    <tr><td>Zeros, roots, x-intercepts</td><td>The same x-values, three names: <span class="term" data-t="solve" tabindex="0" role="button">solve</span> f(x)&nbsp;= 0. As points they are (x, 0).</td></tr>
+    <tr><td>Vertex, maximum or minimum</td><td>For a <span class="term" data-t="quadratic" tabindex="0" role="button">quadratic</span> the vertex is on the <span class="term" data-t="axis of symmetry" tabindex="0" role="button">axis of symmetry</span> <span class="nw">x&nbsp;= −<span class="frac"><span>b</span><span>2a</span></span></span> <span class="fb">In booklet</span>. The maximum or minimum <b>value</b> is the <span class="term" data-t="coordinates" tabindex="0" role="button">y-coordinate</span>.</td></tr>
+    <tr><td>Symmetry</td><td>A <span class="term" data-t="parabola" tabindex="0" role="button">parabola</span> is symmetric about its axis. A graph can also be symmetric about the <span class="term" data-t="axes" tabindex="0" role="button">y-axis</span>, for example y&nbsp;= x<sup>2</sup>: it has the same height at x and at −x. (The names "odd" and "even" function are <span class="term" data-t="hl" tabindex="0" role="button">HL</span> only, <span class="term" data-t="ahl" tabindex="0" role="button">AHL</span> 2.14.)</td></tr>
+    <tr><td>Vertical asymptote</td><td>A line x&nbsp;= a that the graph approaches but never reaches; usually where a <span class="term" data-t="denominator" tabindex="0" role="button">denominator</span> is zero.</td></tr>
     <tr><td>Horizontal asymptote</td><td>A line y&nbsp;= b that the graph approaches as x gets very large (positive or negative).</td></tr>
   </table></div>
 
@@ -591,11 +633,11 @@
       <li>Zeros: x<sup>2</sup>&nbsp;−&nbsp;2x&nbsp;−&nbsp;3&nbsp;= (x&nbsp;−&nbsp;3)⁠(x&nbsp;+&nbsp;1)&nbsp;= 0, so x&nbsp;= 3 or x&nbsp;= −1.</li>
       <li>Axis of symmetry: x&nbsp;= −<span class="frac"><span>−2</span><span>2&nbsp;×&nbsp;1</span></span>&nbsp;= 1 (halfway between the zeros, as a check).</li>
       <li>Vertex: f(1)&nbsp;= 1&nbsp;−&nbsp;2&nbsp;−&nbsp;3&nbsp;= −4, so (1, −4). a&nbsp;&gt;&nbsp;0, so it is a minimum and the minimum value is −4.</li>
-      <li>Range: f(x)&nbsp;≥&nbsp;−4.</li>
+      <li><span class="term" data-t="range" tabindex="0" role="button">Range</span>: f(x)&nbsp;≥&nbsp;−4.</li>
     </ol></div>
 
   <h3>Intersections</h3>
-  <p>Two graphs meet where they have the same y for the same x, so solve f(x)&nbsp;= g(x) <span class="learn">Learn</span>, then find y from either equation. On Paper 2 use the GDC: graph both and use the intersect tool (TI-84 Plus CE: 2nd, TRACE (CALC), 5: intersect; Casio fx-CG50: G-SOLV, then ISCT). Give answers to 3 significant figures unless they are exact.</p>
+  <p>Two graphs meet where they have the same y for the same x, so solve f(x)&nbsp;= g(x) <span class="learn">Learn</span>, then find y from either equation. On Paper 2 use the <span class="term" data-t="gdc" tabindex="0" role="button">GDC</span>: graph both and use the intersect tool (TI-84 Plus CE: 2nd, TRACE (CALC), 5: intersect; Casio fx-CG50: G-SOLV, then ISCT). Give answers to 3 <span class="term" data-t="significant figures" tabindex="0" role="button">significant figures</span> unless they are <span class="term" data-t="exact" tabindex="0" role="button">exact</span>.</p>
   <div class="worked"><b>Worked example 2: where a line meets the parabola.</b> Find the points where y&nbsp;= x<sup>2</sup>&nbsp;−&nbsp;2x&nbsp;−&nbsp;3 meets y&nbsp;= x&nbsp;+&nbsp;1.
     <ol>
       <li>Set equal: x<sup>2</sup>&nbsp;−&nbsp;2x&nbsp;−&nbsp;3&nbsp;= x&nbsp;+&nbsp;1.</li>
@@ -659,11 +701,11 @@
   <h3>Asymptotes</h3>
   <div class="worked"><b>Worked example 3: asymptotes and intercepts.</b> f(x)&nbsp;= 1&nbsp;+&nbsp;<span class="frac"><span>3</span><span>x&nbsp;−&nbsp;2</span></span>. Find the asymptotes and the axis intercepts.
     <ol>
-      <li>x&nbsp;−&nbsp;2&nbsp;= 0 at x&nbsp;= 2, where f is not defined: vertical asymptote <b>x&nbsp;= 2</b>.</li>
+      <li>x&nbsp;−&nbsp;2&nbsp;= 0 at x&nbsp;= 2, where f is <span class="term" data-t="not defined" tabindex="0" role="button">not defined</span>: vertical asymptote <b>x&nbsp;= 2</b>.</li>
       <li>When x is very large (positive or negative), <span class="frac"><span>3</span><span>x&nbsp;−&nbsp;2</span></span> gets close to 0, so f(x) gets close to 1: horizontal asymptote <b>y&nbsp;= 1</b>.</li>
       <li>y-intercept: f(0)&nbsp;= 1&nbsp;+&nbsp;<span class="frac"><span>3</span><span>−2</span></span>&nbsp;= −0.5, the point (0, −0.5).</li>
       <li>Zero: <span class="frac"><span>3</span><span>x&nbsp;−&nbsp;2</span></span>&nbsp;= −1, so x&nbsp;−&nbsp;2&nbsp;= −3 and x&nbsp;= −1, the point (−1, 0).</li>
-      <li>So the domain is x ≠ 2 and the range is f(x) ≠ 1. On the GDC you see the same: the graph runs along the dashed lines without touching them.</li>
+      <li>So the <span class="term" data-t="domain" tabindex="0" role="button">domain</span> is x <span class="term" data-t="≠" tabindex="0" role="button">≠</span> 2 and the range is f(x) ≠ 1. On the GDC you see the same: the graph runs along the dashed lines without touching them.</li>
     </ol></div>
   <figure>
     <svg viewBox="0 0 700 375" aria-label="Graph of y equals 1 plus 3 over x minus 2 in two branches, with the dashed asymptotes x equals 2 and y equals 1, and the intercepts (0, minus 0.5) and (minus 1, 0)">
@@ -716,7 +758,7 @@
     <ol>
       <li>Solve x<sup>2</sup>&nbsp;= 4x&nbsp;−&nbsp;3, then say what the answers mean for the graphs of y&nbsp;= x<sup>2</sup> and y&nbsp;= 4x&nbsp;−&nbsp;3. (<a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">pack Medium 1(c)</a>)</li>
       <li>f(x)&nbsp;= −2x<sup>2</sup>&nbsp;+&nbsp;8x&nbsp;−&nbsp;3. Find the axis of symmetry, the vertex, the y-intercept and the range.</li>
-      <li>Write down the asymptotes of y&nbsp;= 4&nbsp;−&nbsp;<span class="frac"><span>3</span><span>x</span></span>.</li>
+      <li><span class="term" data-t="write down" tabindex="0" role="button">Write down</span> the asymptotes of y&nbsp;= 4&nbsp;−&nbsp;<span class="frac"><span>3</span><span>x</span></span>.</li>
       <li>Find the points of intersection of y&nbsp;= 2x&nbsp;+&nbsp;1 and y&nbsp;= x<sup>2</sup>&nbsp;−&nbsp;2.</li>
     </ol>
     <p><b>Answers.</b> 1: x<sup>2</sup>&nbsp;−&nbsp;4x&nbsp;+&nbsp;3&nbsp;= (x&nbsp;−&nbsp;1)⁠(x&nbsp;−&nbsp;3)&nbsp;= 0, so x&nbsp;= 1 or 3: the line crosses the parabola at x&nbsp;= 1 and x&nbsp;= 3. 2: x&nbsp;= −<span class="frac"><span>8</span><span>−4</span></span>&nbsp;= 2; f(2)&nbsp;= −8&nbsp;+&nbsp;16&nbsp;−&nbsp;3&nbsp;= 5, so the vertex is the maximum (2, 5); y-intercept (0, −3); range f(x)&nbsp;≤&nbsp;5. 3: x&nbsp;= 0 and y&nbsp;= 4. 4: x<sup>2</sup>&nbsp;−&nbsp;2x&nbsp;−&nbsp;3&nbsp;= 0, x&nbsp;= 3 or −1, points (3, 7) and (−1, −1).</p>
@@ -725,15 +767,15 @@
 
 <!-- =============================== SL 2.5 =============================== -->
 <section class="topic" id="s25">
-  <div class="kicker">SL 2.5 (school 2.4 and 2.5)</div>
+  <div class="kicker"><span class="term" data-t="sl" tabindex="0" role="button">SL</span> 2.5 (school 2.4 and 2.5)</div>
   <h2>Composite functions and finding the inverse</h2>
-  <p class="guiding">Functions can be chained, and a function chained with its inverse does nothing at all.</p>
+  <p class="guiding"><span class="term" data-t="function" tabindex="0" role="button">Functions</span> can be chained, and a function chained with its <span class="term" data-t="inverse" tabindex="0" role="button">inverse</span> does nothing at all.</p>
 
   <div class="ican">
     <p>By the end of this section I can</p>
-    <label><input type="checkbox" data-k="c1"><span>Find and use composite functions, (f&nbsp;∘&nbsp;g)⁠(x)&nbsp;= f(g(x))</span></label>
-    <label><input type="checkbox" data-k="c2"><span>Use the identity function: (f&nbsp;∘&nbsp;f<sup>−1</sup>)⁠(x)&nbsp;= (f<sup>−1</sup>&nbsp;∘&nbsp;f)⁠(x)&nbsp;= x</span></label>
-    <label><input type="checkbox" data-k="c3"><span>Find the inverse function f<sup>−1</sup>(x), knowing that an inverse exists only for a one-to-one function</span></label>
+    <label><input type="checkbox" data-k="c1"><span><span class="term" data-t="find" tabindex="0" role="button">Find and use</span> <span class="term" data-t="composite" tabindex="0" role="button">composite functions</span>, (f&nbsp;<span class="term" data-t="∘" tabindex="0" role="button">∘</span>&nbsp;g)⁠(x)&nbsp;= f(g(x))</span></label>
+    <label><input type="checkbox" data-k="c2"><span>Use the <span class="term" data-t="identity function" tabindex="0" role="button">identity function</span>: (f&nbsp;∘&nbsp;f<sup>−1</sup>)⁠(x)&nbsp;= (f<sup>−1</sup>&nbsp;∘&nbsp;f)⁠(x)&nbsp;= x</span></label>
+    <label><input type="checkbox" data-k="c3"><span>Find the inverse function f<sup>−1</sup>(x), knowing that an inverse exists only for a <span class="term" data-t="one-to-one" tabindex="0" role="button">one-to-one</span> function</span></label>
   </div>
 
   <h3>Composite functions</h3>
@@ -773,27 +815,27 @@
       <li>(g&nbsp;∘&nbsp;f)⁠(x)&nbsp;= g(3x&nbsp;−&nbsp;1)&nbsp;= (3x&nbsp;−&nbsp;1)<sup>2</sup>&nbsp;+&nbsp;2.</li>
       <li>= 9x<sup>2</sup>&nbsp;−&nbsp;6x&nbsp;+&nbsp;1&nbsp;+&nbsp;2&nbsp;= <b>9x<sup>2</sup>&nbsp;−&nbsp;6x&nbsp;+&nbsp;3</b>. Check: 36&nbsp;−&nbsp;12&nbsp;+&nbsp;3&nbsp;= 27.</li>
     </ol></div>
-  <p>Domain of a composite: g's output must be an allowed input for f. With f(x)&nbsp;= √x and g(x)&nbsp;= x&nbsp;−&nbsp;4, (f&nbsp;∘&nbsp;g)⁠(x)&nbsp;= √(x&nbsp;−&nbsp;4) only exists for x&nbsp;≥&nbsp;4.</p>
+  <p><span class="term" data-t="domain" tabindex="0" role="button">Domain</span> of a composite: g's output must be an allowed input for f. With f(x)&nbsp;= √x and g(x)&nbsp;= x&nbsp;−&nbsp;4, (f&nbsp;∘&nbsp;g)⁠(x)&nbsp;= √(x&nbsp;−&nbsp;4) only exists for x&nbsp;≥&nbsp;4.</p>
 
   <h3>The identity function and the inverse</h3>
   <div class="fbox">
     <div class="formula"><span class="nw">(f&nbsp;∘&nbsp;f<sup>−1</sup>)⁠(x)&nbsp;= (f<sup>−1</sup>&nbsp;∘&nbsp;f)⁠(x)&nbsp;= x</span> <span class="learn">Learn</span></div>
-    <p style="margin:0 0 8px;font-size:.95rem">The function x&nbsp;↦&nbsp;x is the <b>identity function</b>: it changes nothing. A function followed by its inverse (in either order) is the identity. This is also the quickest check of an inverse you have found.</p>
+    <p style="margin:0 0 8px;font-size:.95rem">The function x&nbsp;<span class="term" data-t="↦" tabindex="0" role="button">↦</span>&nbsp;x is the <b>identity function</b>: it changes nothing. A function followed by its inverse (in either order) is the identity. This is also the quickest check of an inverse you have found.</p>
   </div>
-  <div class="worked"><b>Worked example 2: show two functions are inverses (<a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">pack Medium 2</a>).</b> f(x)&nbsp;= <span class="frac"><span>1</span><span>2</span></span>⁠(4x&nbsp;−&nbsp;3) and g(x)&nbsp;= 0.5x&nbsp;+&nbsp;0.75. Find (f&nbsp;∘&nbsp;g)⁠(x) and (g&nbsp;∘&nbsp;f)⁠(x), and hence write down f<sup>−1</sup>(x).
+  <div class="worked"><b>Worked example 2: <span class="term" data-t="show" tabindex="0" role="button">show two functions</span> are inverses (<a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">pack Medium 2</a>).</b> f(x)&nbsp;= <span class="frac"><span>1</span><span>2</span></span>⁠(4x&nbsp;−&nbsp;3) and g(x)&nbsp;= 0.5x&nbsp;+&nbsp;0.75. Find (f&nbsp;∘&nbsp;g)⁠(x) and (g&nbsp;∘&nbsp;f)⁠(x), and <span class="term" data-t="hence" tabindex="0" role="button">hence</span> <span class="term" data-t="write down" tabindex="0" role="button">write down</span> f<sup>−1</sup>(x).
     <ol>
       <li>(f&nbsp;∘&nbsp;g)⁠(x)&nbsp;= <span class="frac"><span>1</span><span>2</span></span>⁠(4(0.5x&nbsp;+&nbsp;0.75)&nbsp;−&nbsp;3)&nbsp;= <span class="frac"><span>1</span><span>2</span></span>⁠(2x&nbsp;+&nbsp;3&nbsp;−&nbsp;3)&nbsp;= <b>x</b>.</li>
       <li>(g&nbsp;∘&nbsp;f)⁠(x)&nbsp;= 0.5&nbsp;×&nbsp;<span class="frac"><span>1</span><span>2</span></span>⁠(4x&nbsp;−&nbsp;3)&nbsp;+&nbsp;0.75&nbsp;= x&nbsp;−&nbsp;0.75&nbsp;+&nbsp;0.75&nbsp;= <b>x</b>.</li>
       <li>Both orders give the identity, so g undoes f: <b>f<sup>−1</sup>(x)&nbsp;= 0.5x&nbsp;+&nbsp;0.75</b>.</li>
-      <li>f is linear on all real numbers, so its range is all real numbers: domain of f<sup>−1</sup> is x ∈ ℝ, and its range is ℝ too.</li>
+      <li>f is <span class="term" data-t="linear" tabindex="0" role="button">linear</span> on all <span class="term" data-t="real numbers" tabindex="0" role="button">real numbers</span>, so its <span class="term" data-t="range" tabindex="0" role="button">range</span> is all real numbers: domain of f<sup>−1</sup> is x <span class="term" data-t="∈" tabindex="0" role="button">∈</span> <span class="term" data-t="ℝ" tabindex="0" role="button">ℝ</span>, and its range is ℝ too.</li>
     </ol></div>
 
   <h3>Finding f<sup>−1</sup>(x) in four steps <span class="learn">Learn</span></h3>
   <ol>
     <li>Write y&nbsp;= f(x).</li>
     <li>Swap x and y.</li>
-    <li>Rearrange to make y the subject.</li>
-    <li>Write f<sup>−1</sup>(x)&nbsp;= … and state its domain, which is the range of f.</li>
+    <li><span class="term" data-t="rearrange" tabindex="0" role="button">Rearrange</span> to make y <span class="term" data-t="subject" tabindex="0" role="button">the subject</span>.</li>
+    <li>Write f<sup>−1</sup>(x)&nbsp;= … and <span class="term" data-t="state" tabindex="0" role="button">state</span> its domain, which is the range of f.</li>
   </ol>
   <div class="worked"><b>Worked example 3: a linear function.</b> f(x)&nbsp;= <span class="frac"><span>2x&nbsp;+&nbsp;5</span><span>3</span></span>. Find f<sup>−1</sup>(x).
     <ol>
@@ -803,19 +845,19 @@
       <li><b>f<sup>−1</sup>(x)&nbsp;= <span class="frac"><span>3x&nbsp;−&nbsp;5</span><span>2</span></span></b>, x ∈ ℝ. Check: f<sup>−1</sup>(4)&nbsp;= <span class="frac"><span>7</span><span>2</span></span> and f(<span class="frac"><span>7</span><span>2</span></span>)&nbsp;= <span class="frac"><span>7&nbsp;+&nbsp;5</span><span>3</span></span>&nbsp;= 4.</li>
     </ol></div>
 
-  <div class="worked"><b>Worked example 4: the banner, a restricted domain.</b> f(x)&nbsp;= (x&nbsp;−&nbsp;1)<sup>2</sup>&nbsp;+&nbsp;3 for x&nbsp;≥&nbsp;1. Find f<sup>−1</sup>(x) and its domain.
+  <div class="worked"><b>Worked example 4: the banner, a <span class="term" data-t="restrict" tabindex="0" role="button">restricted</span> domain.</b> f(x)&nbsp;= (x&nbsp;−&nbsp;1)<sup>2</sup>&nbsp;+&nbsp;3 for x&nbsp;≥&nbsp;1. Find f<sup>−1</sup>(x) and its domain.
     <ol>
-      <li>Why the restriction: on all real numbers f(0)&nbsp;= f(2)&nbsp;= 4, so f is not one-to-one. For x&nbsp;≥&nbsp;1 only the right half of the parabola is used, which is one-to-one. At SL the question gives you the restricted domain; choosing a restriction yourself is HL (AHL 2.14).</li>
+      <li>Why the restriction: on all real numbers f(0)&nbsp;= f(2)&nbsp;= 4, so f is not one-to-one. For x&nbsp;≥&nbsp;1 only the right half of the <span class="term" data-t="parabola" tabindex="0" role="button">parabola</span> is used, which is one-to-one. At SL the question gives you the restricted domain; choosing a restriction yourself is <span class="term" data-t="hl" tabindex="0" role="button">HL</span> (<span class="term" data-t="ahl" tabindex="0" role="button">AHL</span> 2.14).</li>
       <li>Range of f: (x&nbsp;−&nbsp;1)<sup>2</sup>&nbsp;≥&nbsp;0, so f(x)&nbsp;≥&nbsp;3.</li>
       <li>y&nbsp;= (x&nbsp;−&nbsp;1)<sup>2</sup>&nbsp;+&nbsp;3. Swap: x&nbsp;= (y&nbsp;−&nbsp;1)<sup>2</sup>&nbsp;+&nbsp;3.</li>
-      <li>(y&nbsp;−&nbsp;1)<sup>2</sup>&nbsp;= x&nbsp;−&nbsp;3, so y&nbsp;−&nbsp;1&nbsp;= ±√(x&nbsp;−&nbsp;3).</li>
+      <li>(y&nbsp;−&nbsp;1)<sup>2</sup>&nbsp;= x&nbsp;−&nbsp;3, so y&nbsp;−&nbsp;1&nbsp;= <span class="term" data-t="±" tabindex="0" role="button">±</span>√(x&nbsp;−&nbsp;3).</li>
       <li>Choose the sign: the range of f<sup>−1</sup> is the domain of f, y&nbsp;≥&nbsp;1, so take +.</li>
       <li><b>f<sup>−1</sup>(x)&nbsp;= 1&nbsp;+&nbsp;√(x&nbsp;−&nbsp;3), for x&nbsp;≥&nbsp;3</b>. Check: f(3)&nbsp;= 7 and f<sup>−1</sup>(7)&nbsp;= 1&nbsp;+&nbsp;2&nbsp;= 3.</li>
     </ol></div>
 
-  <div class="worked"><b>Worked example 5: find f when you know f&nbsp;∘&nbsp;g (<a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">pack Hard 5</a>).</b> Write x<sup>2</sup>&nbsp;+&nbsp;12x&nbsp;+&nbsp;24 in the form (x&nbsp;+&nbsp;h)<sup>2</sup>&nbsp;+&nbsp;k. Then, with g(x)&nbsp;= x&nbsp;+&nbsp;6 and (f&nbsp;∘&nbsp;g)⁠(x)&nbsp;= x<sup>2</sup>&nbsp;+&nbsp;12x&nbsp;+&nbsp;24, find f(x).
+  <div class="worked"><b>Worked example 5: find f when you know f&nbsp;∘&nbsp;g (<a href="https://drive.google.com/file/d/1r-gHUG3qsy1ND2d4WGvk4dcs3z49Ua-2/view">pack Hard 5</a>).</b> Write x<sup>2</sup>&nbsp;+&nbsp;12x&nbsp;+&nbsp;24 <span class="term" data-t="in the form" tabindex="0" role="button">in the form</span> (x&nbsp;+&nbsp;h)<sup>2</sup>&nbsp;+&nbsp;k. Then, with g(x)&nbsp;= x&nbsp;+&nbsp;6 and (f&nbsp;∘&nbsp;g)⁠(x)&nbsp;= x<sup>2</sup>&nbsp;+&nbsp;12x&nbsp;+&nbsp;24, find f(x).
     <ol>
-      <li>Complete the square: x<sup>2</sup>&nbsp;+&nbsp;12x&nbsp;+&nbsp;24&nbsp;= (x&nbsp;+&nbsp;6)<sup>2</sup>&nbsp;−&nbsp;36&nbsp;+&nbsp;24&nbsp;= <b>(x&nbsp;+&nbsp;6)<sup>2</sup>&nbsp;−&nbsp;12</b>.</li>
+      <li><span class="term" data-t="complete the square" tabindex="0" role="button">Complete the square</span>: x<sup>2</sup>&nbsp;+&nbsp;12x&nbsp;+&nbsp;24&nbsp;= (x&nbsp;+&nbsp;6)<sup>2</sup>&nbsp;−&nbsp;36&nbsp;+&nbsp;24&nbsp;= <b>(x&nbsp;+&nbsp;6)<sup>2</sup>&nbsp;−&nbsp;12</b>.</li>
       <li>(f&nbsp;∘&nbsp;g)⁠(x)&nbsp;= f(x&nbsp;+&nbsp;6), so f(x&nbsp;+&nbsp;6)&nbsp;= (x&nbsp;+&nbsp;6)<sup>2</sup>&nbsp;−&nbsp;12.</li>
       <li>f squares its input and subtracts 12: <b>f(x)&nbsp;= x<sup>2</sup>&nbsp;−&nbsp;12</b>.</li>
     </ol></div>
@@ -839,33 +881,33 @@
   <h2>Quick quiz</h2>
   <p>Work each one out on paper first, then click your answer. Every question explains the trap after you answer. Write any you miss into the Error log.</p>
 
-  <div class="q" data-a="1"><p>1. The largest possible domain of f(x)&nbsp;= √(5&nbsp;−&nbsp;x) is</p>
+  <div class="q" data-a="1"><p>1. The largest possible <span class="term" data-t="domain" tabindex="0" role="button">domain</span> of f(x)&nbsp;= √(5&nbsp;−&nbsp;x) is</p>
     <button>x&nbsp;≥&nbsp;5</button>
     <button>x&nbsp;≤&nbsp;5</button>
     <button>x&nbsp;&lt;&nbsp;5</button>
     <button>x&nbsp;≥&nbsp;0</button>
-    <div class="why">5&nbsp;−&nbsp;x&nbsp;≥&nbsp;0 gives x&nbsp;≤&nbsp;5. x&nbsp;&lt;&nbsp;5 wrongly leaves out x&nbsp;= 5, where f(5)&nbsp;= √0&nbsp;= 0 is fine. x&nbsp;≥&nbsp;5 comes from not flipping the sign when dividing by −1. x&nbsp;≥&nbsp;0 mixes the domain up with the range, which is f(x)&nbsp;≥&nbsp;0.</div></div>
+    <div class="why">5&nbsp;−&nbsp;x&nbsp;≥&nbsp;0 gives x&nbsp;≤&nbsp;5. x&nbsp;&lt;&nbsp;5 wrongly leaves out x&nbsp;= 5, where f(5)&nbsp;= √0&nbsp;= 0 is fine. x&nbsp;≥&nbsp;5 comes from not flipping the sign when dividing by −1. x&nbsp;≥&nbsp;0 mixes the domain up with the <span class="term" data-t="range" tabindex="0" role="button">range</span>, which is f(x)&nbsp;≥&nbsp;0.</div></div>
 
   <div class="q" data-a="3"><p>2. The point (k, 7) lies on the graph of y&nbsp;= 2x<sup>2</sup>&nbsp;−&nbsp;1, with k&nbsp;&gt;&nbsp;0. The value of k is</p>
     <button>4</button>
     <button>√3</button>
     <button>97</button>
     <button>2</button>
-    <div class="why">Put x&nbsp;= k and y&nbsp;= 7: 2k<sup>2</sup>&nbsp;−&nbsp;1&nbsp;= 7, so k<sup>2</sup>&nbsp;= 4 and k&nbsp;= 2 (k&nbsp;&gt;&nbsp;0). 4 is k<sup>2</sup>, not k; √3 comes from subtracting 1 instead of adding it; 97 is the y-value at x&nbsp;= 7, which swaps the coordinates.</div></div>
+    <div class="why">Put x&nbsp;= k and y&nbsp;= 7: 2k<sup>2</sup>&nbsp;−&nbsp;1&nbsp;= 7, so k<sup>2</sup>&nbsp;= 4 and k&nbsp;= 2 (k&nbsp;&gt;&nbsp;0). 4 is k<sup>2</sup>, not k; √3 comes from subtracting 1 instead of adding it; 97 is the y-value at x&nbsp;= 7, which swaps the <span class="term" data-t="coordinates" tabindex="0" role="button">coordinates</span>.</div></div>
 
   <div class="q" data-a="1"><p>3. f(x)&nbsp;= 2x&nbsp;+&nbsp;1. The value of f<sup>−1</sup>(9) is</p>
     <button>19</button>
     <button>4</button>
     <button><span class="frac"><span>1</span><span>19</span></span></button>
     <button>5</button>
-    <div class="why">f<sup>−1</sup>(9) is the input that f sends to 9: 2x&nbsp;+&nbsp;1&nbsp;= 9 gives x&nbsp;= 4. 19 is f(9); <span class="frac"><span>1</span><span>19</span></span> treats f<sup>−1</sup> as a reciprocal; 5 is <span class="frac"><span>9&nbsp;+&nbsp;1</span><span>2</span></span>, which undoes "+ 1" with another "+ 1".</div></div>
+    <div class="why">f<sup>−1</sup>(9) is the input that f sends to 9: 2x&nbsp;+&nbsp;1&nbsp;= 9 gives x&nbsp;= 4. 19 is f(9); <span class="frac"><span>1</span><span>19</span></span> treats f<sup>−1</sup> as a <span class="term" data-t="reciprocal" tabindex="0" role="button">reciprocal</span>; 5 is <span class="frac"><span>9&nbsp;+&nbsp;1</span><span>2</span></span>, which undoes "+ 1" with another "+ 1".</div></div>
 
-  <div class="q" data-a="2"><p>4. f(x)&nbsp;= x&nbsp;+&nbsp;5 and g(x)&nbsp;= x<sup>2</sup>. The value of (f&nbsp;∘&nbsp;g)⁠(3) is</p>
+  <div class="q" data-a="2"><p>4. f(x)&nbsp;= x&nbsp;+&nbsp;5 and g(x)&nbsp;= x<sup>2</sup>. The value of (f&nbsp;<span class="term" data-t="∘" tabindex="0" role="button">∘</span>&nbsp;g)⁠(3) is</p>
     <button>64</button>
     <button>17</button>
     <button>14</button>
     <button>72</button>
-    <div class="why">g acts first: g(3)&nbsp;= 9, then f(9)&nbsp;= 14. 64 is (g&nbsp;∘&nbsp;f)⁠(3)&nbsp;= 8<sup>2</sup>, the wrong order. 17 is f(3)&nbsp;+&nbsp;g(3) and 72 is f(3)&nbsp;×&nbsp;g(3): a composite is neither a sum nor a product.</div></div>
+    <div class="why">g acts first: g(3)&nbsp;= 9, then f(9)&nbsp;= 14. 64 is (g&nbsp;∘&nbsp;f)⁠(3)&nbsp;= 8<sup>2</sup>, the wrong order. 17 is f(3)&nbsp;+&nbsp;g(3) and 72 is f(3)&nbsp;×&nbsp;g(3): a <span class="term" data-t="composite" tabindex="0" role="button">composite</span> is neither a <span class="term" data-t="difference" tabindex="0" role="button">sum</span> nor a product.</div></div>
 
   <div class="q" data-a="0"><p>5. f(x)&nbsp;= <span class="frac"><span>x&nbsp;−&nbsp;2</span><span>3</span></span>. f<sup>−1</sup>(x) is</p>
     <button>3x&nbsp;+&nbsp;2</button>
@@ -881,26 +923,26 @@
     <button>(3, 9) only</button>
     <div class="why">x<sup>2</sup>&nbsp;= x&nbsp;+&nbsp;6 gives x<sup>2</sup>&nbsp;−&nbsp;x&nbsp;−&nbsp;6&nbsp;= (x&nbsp;−&nbsp;3)⁠(x&nbsp;+&nbsp;2)&nbsp;= 0, so x&nbsp;= 3 or −2, and y&nbsp;= x&nbsp;+&nbsp;6 gives 9 and 4. (−3, 9) and (2, 4) come from the wrong signs in the brackets; check: −3&nbsp;+&nbsp;6&nbsp;= 3, not 9. (3, 0) and (−2, 0) forget to find y. "(3, 9) only" drops the negative solution.</div></div>
 
-  <div class="q" data-a="2"><p>7. The graph of y&nbsp;= 2&nbsp;+&nbsp;<span class="frac"><span>1</span><span>x&nbsp;+&nbsp;3</span></span> has asymptotes</p>
+  <div class="q" data-a="2"><p>7. The graph of y&nbsp;= 2&nbsp;+&nbsp;<span class="frac"><span>1</span><span>x&nbsp;+&nbsp;3</span></span> has <span class="term" data-t="asymptote" tabindex="0" role="button">asymptotes</span></p>
     <button>x&nbsp;= 3 and y&nbsp;= 2</button>
     <button>x&nbsp;= −3 and y&nbsp;= 0</button>
     <button>x&nbsp;= −3 and y&nbsp;= 2</button>
     <button>x&nbsp;= 2 and y&nbsp;= −3</button>
-    <div class="why">The denominator is zero at x&nbsp;= −3, so x&nbsp;= −3 is vertical. For very large x the fraction tends to 0, so y tends to 2: y&nbsp;= 2 is horizontal. x&nbsp;= 3 has the wrong sign; y&nbsp;= 0 forgets the "2 +"; the last option swaps x and y.</div></div>
+    <div class="why">The <span class="term" data-t="denominator" tabindex="0" role="button">denominator</span> is zero at x&nbsp;= −3, so x&nbsp;= −3 is <span class="term" data-t="vertical" tabindex="0" role="button">vertical</span>. For very large x the fraction <span class="term" data-t="tends to" tabindex="0" role="button">tends to</span> 0, so y tends to 2: y&nbsp;= 2 is horizontal. x&nbsp;= 3 has the wrong sign; y&nbsp;= 0 forgets the "2 +"; the last option swaps x and y.</div></div>
 
-  <div class="q" data-a="3"><p>8. The vertex of y&nbsp;= 2x<sup>2</sup>&nbsp;−&nbsp;8x&nbsp;+&nbsp;1 is</p>
+  <div class="q" data-a="3"><p>8. The <span class="term" data-t="vertex" tabindex="0" role="button">vertex</span> of y&nbsp;= 2x<sup>2</sup>&nbsp;−&nbsp;8x&nbsp;+&nbsp;1 is</p>
     <button>(−2, 25)</button>
     <button>(2, −11)</button>
     <button>(4, 1)</button>
     <button>(2, −7)</button>
     <div class="why">Axis: x&nbsp;= −<span class="frac"><span>b</span><span>2a</span></span>&nbsp;= <span class="frac"><span>8</span><span>4</span></span>&nbsp;= 2 (in the booklet). y&nbsp;= 2&nbsp;×&nbsp;4&nbsp;−&nbsp;16&nbsp;+&nbsp;1&nbsp;= −7. (−2, 25) drops the minus in −b; (2, −11) forgets to multiply x<sup>2</sup> by 2; (4, 1) uses −<span class="frac"><span>b</span><span>a</span></span> instead of −<span class="frac"><span>b</span><span>2a</span></span>.</div></div>
 
-  <div class="q" data-a="2"><p>9. Which of these functions has an inverse function?</p>
+  <div class="q" data-a="2"><p>9. Which of these <span class="term" data-t="function" tabindex="0" role="button">functions</span> has an <span class="term" data-t="inverse" tabindex="0" role="button">inverse function</span>?</p>
     <button>f(x)&nbsp;= x<sup>2</sup>, x ∈ ℝ</button>
     <button>f(x)&nbsp;= x<sup>2</sup>&nbsp;−&nbsp;4x, x&nbsp;≥&nbsp;0</button>
     <button>f(x)&nbsp;= x<sup>2</sup>, x&nbsp;≥&nbsp;0</button>
     <button>f(x)&nbsp;= 5, x ∈ ℝ</button>
-    <div class="why">Only one-to-one functions have inverses. x<sup>2</sup> for x&nbsp;≥&nbsp;0 is one-to-one. x<sup>2</sup> on ℝ has f(−2)&nbsp;= f(2); x<sup>2</sup>&nbsp;−&nbsp;4x for x&nbsp;≥&nbsp;0 has f(0)&nbsp;= f(4)&nbsp;= 0 (its vertex is at x&nbsp;= 2, inside the domain); a constant function sends every input to 5.</div></div>
+    <div class="why">Only <span class="term" data-t="one-to-one" tabindex="0" role="button">one-to-one</span> functions have inverses. x<sup>2</sup> for x&nbsp;≥&nbsp;0 is one-to-one. x<sup>2</sup> on <span class="term" data-t="ℝ" tabindex="0" role="button">ℝ</span> has f(−2)&nbsp;= f(2); x<sup>2</sup>&nbsp;−&nbsp;4x for x&nbsp;≥&nbsp;0 has f(0)&nbsp;= f(4)&nbsp;= 0 (its vertex is at x&nbsp;= 2, inside the domain); a <span class="term" data-t="constant function" tabindex="0" role="button">constant function</span> sends every input to 5.</div></div>
 
   <div class="q" data-a="1"><p>10. f(x)&nbsp;= √(x&nbsp;−&nbsp;1)&nbsp;+&nbsp;2 for x&nbsp;≥&nbsp;1. The domain of f<sup>−1</sup> is</p>
     <button>x&nbsp;≥&nbsp;1</button>
@@ -917,8 +959,8 @@
   <ul>
     <li>Tick the "I can" boxes you are confident about. The unticked ones are the first ten minutes of your next maths session.</li>
     <li>Mark the pack questions you did against the <a href="https://drive.google.com/file/d/17i6FFlAOtJVleGT-KvN84niIrHyicNdj/view">solutions version</a>, including the method marks (M1) and reason marks (R1), not just the answers.</li>
-    <li>Open the study sheet, <b>Error log</b> tab, and write one row for every mistake from the pack questions and the quiz: what went wrong, and the rule that fixes it (for example "wrote the range with x instead of f(x)").</li>
-    <li>Still to come in Topic 2 at school: transformations (official SL 2.11), asymptotes of rational functions (official SL 2.8), then exponents and logarithms.</li>
+    <li>Open the study sheet, <b>Error log</b> tab, and write one row for every mistake from the pack questions and the quiz: what went wrong, and the rule that fixes it (for example "wrote the <span class="term" data-t="range" tabindex="0" role="button">range</span> with x instead of f(x)").</li>
+    <li>Still to come in Topic 2 at school: <span class="term" data-t="transformation" tabindex="0" role="button">transformations</span> (official <span class="term" data-t="sl" tabindex="0" role="button">SL</span> 2.11), <span class="term" data-t="asymptote" tabindex="0" role="button">asymptotes</span> of <span class="term" data-t="rational function" tabindex="0" role="button">rational functions</span> (official SL 2.8), then <span class="term" data-t="power" tabindex="0" role="button">exponents</span> and <span class="term" data-t="logarithm" tabindex="0" role="button">logarithms</span>.</li>
     <li>Also on the study site: <a href="../flashcards.html">flashcards</a> (5 to 10 minutes a day), <a href="../exam-maths-aa-sl.html">exam technique</a> for this subject, and your <a href="../progress.html">progress page</a>, which turns green as you tick the "I can" boxes and pass the quiz.</li>
   </ul>
 </section>
@@ -947,5 +989,34 @@
   });
 })();
 </script>
+
+
+
+
+
+
+<!--terms:start-->
+<div id="termbox" role="dialog" aria-live="polite"><div class="tb-h"><b></b><button type="button">Close</button></div><p class="tb-d"></p></div>
+<script id="terms-data" type="application/json">{"function": {"w": "function", "d": "A rule that gives every allowed input exactly one output. f(x) = 2x + 3 is a function: it sends 4 to 11."}, "domain": {"w": "domain", "d": "All the inputs (x-values) a function is allowed to take. For √x the domain is x ≥ 0."}, "range": {"w": "range", "d": "All the outputs (y-values, f(x)) a function actually gives. For √x the range is f(x) ≥ 0. Always write it with f(x) or y, not x."}, "inverse": {"w": "inverse function", "d": "The function that undoes f, written f<sup>−1<\/sup>. If f sends 2 to 7, then f<sup>−1<\/sup> sends 7 back to 2. The −1 here is a label, not a power."}, "one-to-one": {"w": "one-to-one", "d": "A function where every output comes from only one input. f(x) = 2x is one-to-one; f(x) = x<sup>2<\/sup> is not, because f(−2) = f(2) = 4."}, "composite": {"w": "composite function", "d": "Two functions done one after the other: the output of the first is the input of the second. (f ∘ g)(x) = f(g(x)): do g first, then f."}, "piecewise": {"w": "piecewise function", "d": "A function made of different rules on different parts of its domain, for example f(x) = x + 1 for x &lt; 0 and f(x) = 1 − x for x ≥ 0. Its graph is made of pieces."}, "reflect": {"w": "reflect, reflection", "d": "Flip a picture over a line, like a mirror. Reflecting in the line y = x swaps the two coordinates: (3, 7) becomes (7, 3)."}, "coordinates": {"w": "coordinates", "d": "The pair of numbers (x, y) that says where a point is: x steps across, then y steps up, starting from (0, 0). The y-coordinate of (1, −4) is −4."}, "axes": {"w": "axes", "d": "The two number lines of a graph: the x-axis going across and the y-axis going up. One is called an axis. They cross at (0, 0)."}, "intercept": {"w": "intercept", "d": "Where a graph meets an axis. The y-intercept: put x = 0. The x-intercepts: where y = 0. Give them as points, like (0, 3)."}, "zeros": {"w": "zeros, roots", "d": "The zeros of a function are the x-values where its output is 0: solve f(x) = 0. Those solutions are also called the roots of the equation. On the graph, that is where it meets the x-axis."}, "gradient": {"w": "gradient", "d": "How steep a line is: how much y goes up when x goes up by 1. Gradient = (change in y) ÷ (change in x). A negative gradient means the line goes down."}, "linear": {"w": "linear", "d": "A linear function has the form f(x) = mx + c, so its graph is a straight line. Example: f(x) = 4x − 4."}, "quadratic": {"w": "quadratic", "d": "A function or equation where the highest power of x is x<sup>2<\/sup>. It is written ax<sup>2<\/sup> + bx + c: a is the number in front of x<sup>2<\/sup>, b the number in front of x, c the number on its own. Its graph is a parabola."}, "parabola": {"w": "parabola", "d": "The U-shaped curve you get from a quadratic ax<sup>2<\/sup> + bx + c. It opens upwards (U) when a, the number in front of x<sup>2<\/sup>, is positive and downwards (∩) when a is negative."}, "vertex": {"w": "vertex", "d": "The turning point of a parabola: its lowest point (a minimum) if it opens upwards, its highest point (a maximum) if it opens downwards."}, "turning point": {"w": "turning point", "d": "A point where a graph stops going up and starts going down (a maximum point), or the other way round (a minimum point)."}, "axis of symmetry": {"w": "axis of symmetry", "d": "A line that cuts a graph into two mirror-image halves. For a parabola y = ax<sup>2<\/sup> + bx + c it is the vertical line through the vertex, x = −b ÷ (2a). Example: y = x<sup>2<\/sup> − 2x − 3 gives x = 1."}, "symmetric": {"w": "symmetric, symmetry", "d": "A graph is symmetric about a line if folding along that line makes the two halves land exactly on each other."}, "asymptote": {"w": "asymptote", "d": "A straight line that a graph gets closer and closer to, without reaching it, as the graph heads far out (x or y very large, positive or negative). It is drawn dashed and labelled with its equation, such as x = 2 or y = 1."}, "denominator": {"w": "denominator", "d": "The bottom part of a fraction. In 3/(x − 2) the denominator is x − 2. It may never be 0."}, "intersection": {"w": "intersection", "d": "A point where two graphs meet or cross. There both graphs have the same x and the same y."}, "expression": {"w": "expression", "d": "A piece of maths made of numbers, letters and operations, with no = sign. Examples: 2 − x and x<sup>2<\/sup> + 1."}, "power": {"w": "power (exponent)", "d": "The small raised number, also called an exponent: x<sup>3<\/sup> = x × x × x. Negative and fraction powers exist too: x<sup>−1<\/sup> = 1/x and x<sup>1/2<\/sup> = √x, so x<sup>−1/2<\/sup> = 1/√x."}, "reciprocal": {"w": "reciprocal", "d": "One divided by a number: the reciprocal of 4 is 1/4, and of f(x) is 1/f(x). The inverse f<sup>−1<\/sup>(x) is NOT the reciprocal."}, "operation": {"w": "operation", "d": "Something you do to a number: add, subtract, multiply, divide, square or take a square root."}, "rearrange": {"w": "rearrange", "d": "Change an equation into a different form by doing the same thing to both sides, for example until it reads y = ..."}, "subject": {"w": "subject (of a formula)", "d": "The letter on its own on one side of a formula. In y = 3x − 5, y is the subject. 'Make y the subject' means rearrange until it reads y = ..."}, "in terms of": {"w": "in terms of", "d": "'Write P in terms of A' means write a formula for P that uses only A and numbers, like P = 4√A."}, "given that": {"w": "given that", "d": "Introduces a fact you must take as true and use. 'Given that f(2) = 5' means use f(2) = 5 in your working."}, "complete the square": {"w": "complete the square", "d": "Rewrite a quadratic with a squared bracket: x<sup>2<\/sup> + 6x + 1 = (x + 3)<sup>2<\/sup> − 8. Half the number in front of x goes in the bracket; then subtract that half squared (here 9). If x<sup>2<\/sup> has a number in front, take it out first."}, "quadratic formula": {"w": "quadratic formula", "d": "x = (−b ± √(b<sup>2<\/sup> − 4ac)) ÷ (2a) solves any equation ax<sup>2<\/sup> + bx + c = 0. It is in the formula booklet."}, "decreasing": {"w": "decreasing", "d": "A decreasing function goes down as x goes up: a bigger input gives a smaller output. f(x) = −6x − 3 is decreasing."}, "strict": {"w": "strict (inequality)", "d": "A strict inequality uses &lt; or &gt;, so the end value is not included. ≤ and ≥ are not strict: the end value is included."}, "restrict": {"w": "restrict (a domain)", "d": "Allow only some inputs, for example only x ≥ 1. This is often done so that a function becomes one-to-one and has an inverse."}, "model": {"w": "mathematical model", "d": "A formula or function that describes a real situation, like C(n) = 5n for the cost of n items at $5 each."}, "velocity": {"w": "velocity", "d": "Speed in a given direction, for example 5 metres per second to the right."}, "perimeter": {"w": "perimeter", "d": "The total distance around the edge of a shape. A square with side x has perimeter 4x."}, "logarithm": {"w": "logarithm", "d": "The opposite of a power, coming later in Topic 2: log<sub>10<\/sub> 100 = 2 because 10<sup>2<\/sup> = 100. Not needed today."}, "significant figures": {"w": "significant figures", "d": "The digits of a number counted from the first one that is not 0. To 3 significant figures, 3.14159 is 3.14 and 0.004567 is 0.00457."}, "exact": {"w": "exact", "d": "An exact answer has no rounding: √2 or 1/3, not 1.41 or 0.333."}, "real numbers": {"w": "real numbers", "d": "All the numbers on the number line: whole numbers, negatives, fractions, decimals and numbers like √2 and π. The symbol is ℝ."}, "ℝ": {"w": "ℝ", "d": "The set (collection) of all real numbers. 'x ∈ ℝ' means x can be any number on the number line."}, "∈": {"w": "∈", "d": "Means 'is in' or 'belongs to'. x ∈ ℝ means x is a real number."}, "∞": {"w": "∞ (infinity)", "d": "Infinity: not a number, but the idea of going on without end. [1, ∞[ means every number from 1 upwards, with no top end."}, "±": {"w": "±", "d": "'Plus or minus': both signs. y = ±3 means y = 3 or y = −3."}, "∘": {"w": "∘", "d": "The ring sign for a composite function. (f ∘ g)(x) means f(g(x)), read 'f of g of x': g acts first, then f."}, "↦": {"w": "↦", "d": "Means 'is sent to'. x ↦ x + 1 is the rule that sends each input x to x + 1."}, "≠": {"w": "≠", "d": "'Is not equal to'. x ≠ 5 means x can be any number except 5."}, "notation": {"w": "notation", "d": "The symbols used to write maths. In function notation, f(x) means 'the output of f when the input is x'."}, "context": {"w": "context", "d": "The real situation a question is about, such as a ball being thrown or the cost of items in a shop."}, "gdc": {"w": "GDC", "d": "Graphic display calculator: the graphing calculator allowed in Paper 2, for example the TI-84 Plus CE or the Casio fx-CG50."}, "window": {"w": "window (GDC)", "d": "The part of a graph the GDC screen shows, set by the smallest and largest x-values and y-values. A small window can hide a feature."}, "to scale": {"w": "to scale", "d": "Drawn with equal, measured steps along the axes, so positions on the paper match the numbers exactly."}, "difference": {"w": "sum, difference, product", "d": "The answer to an addition is a sum, to a subtraction a difference, to a multiplication a product. For 7 and 3: the sum is 10, the difference is 7 − 3 = 4, the product is 21."}, "sl": {"w": "SL", "d": "Standard Level, the IB maths course you take. 'SL 2.2' is the official number of a topic in the IB syllabus (the list of what the course covers)."}, "hl": {"w": "HL", "d": "Higher Level, the longer IB maths course. HL-only content is not on your SL exam."}, "ahl": {"w": "AHL", "d": "Additional Higher Level: the topics only HL students study. 'AHL 2.14' is an HL-only topic, not on your exam."}, "command term": {"w": "command term", "d": "The IB word at the start of a question, like 'find', 'state' or 'sketch'. It tells you exactly what kind of answer gets the marks."}, "find": {"w": "find (command term)", "d": "IB command term: work out the answer and show the main steps of your working."}, "write down": {"w": "write down (command term)", "d": "IB command term: give the answer with little or no calculation. You do not need to show working."}, "hence": {"w": "hence (command term)", "d": "IB command term: use the answer you have just found to get the next result. 'Hence or otherwise' also allows a different method."}, "show": {"w": "show (command term)", "d": "IB command term: give the steps of a calculation that lead to the result. In 'show that' the answer is given, so the marks are for the working."}, "state": {"w": "state (command term)", "d": "IB command term: give a short answer (a name, a value or a fact) without explanation or calculation."}, "sketch": {"w": "sketch (command term)", "d": "IB command term: draw the general shape with its key points labelled (intercepts, turning points, asymptotes). It does not need to be to scale."}, "draw": {"w": "draw (command term)", "d": "IB command term: an accurate, labelled graph in pencil, to scale, with points plotted correctly and a ruler for straight lines."}, "solve": {"w": "solve (command term)", "d": "IB command term: find the value or values that make an equation true, using algebra, a graph or the GDC."}, "identity function": {"w": "identity function", "d": "The function that changes nothing: it sends every x to x itself, written x ↦ x. A function followed by its inverse is the identity: f(f<sup>−1<\/sup>(x)) = x."}, "explain": {"w": "explain (command term)", "d": "IB command term: give a full answer that includes the reasons why, not just the result."}, "determine": {"w": "determine (command term)", "d": "IB command term: work out the one correct answer. In everyday words: find."}, "not defined": {"w": "not defined", "d": "A function is not defined at a value when it gives no output there, for example 3/(x − 2) at x = 2, because you cannot divide by 0."}, "tends to": {"w": "tends to", "d": "Gets closer and closer to. 'As x gets very large, 1/x tends to 0' means 1/x gets as close to 0 as you like."}, "constant function": {"w": "constant function", "d": "A function with the same output for every input, like f(x) = 5. Its graph is a horizontal line."}, "set": {"w": "set", "d": "In maths, a collection of numbers (or other things). 'The set of all outputs' means every output, collected together."}, "interval notation": {"w": "interval notation", "d": "A short way to write all the numbers between two ends. [a, b] includes both ends; ]a, b[ includes neither (the bracket turns away from an end that is left out). So [1, 5] is 1 ≤ x ≤ 5 and ]1, 5[ is 1 &lt; x &lt; 5."}, "plot": {"w": "plot", "d": "Mark a point on a graph at its exact coordinates, for example the point (2, 5): 2 across, 5 up."}, "technology": {"w": "technology", "d": "In IB maths, technology means your GDC (or graphing software) used to draw graphs and find values such as zeros and intersections."}, "in the form": {"w": "in the form", "d": "Write it in exactly that shape and find the numbers that the letters stand for. x<sup>2<\/sup> + 12x + 24 in the form (x + h)<sup>2<\/sup> + k is (x + 6)<sup>2<\/sup> − 12, so h = 6 and k = −12."}, "vertical": {"w": "vertical, horizontal", "d": "Vertical means straight up and down, like the y-axis or the line x = 2. Horizontal means flat, left to right, like the x-axis or the line y = 1."}, "maximum": {"w": "maximum, minimum", "d": "The maximum is the largest value a function reaches, the minimum the smallest. The maximum point is where it happens on the graph, like (1, 4); the maximum value is its y-coordinate, 4."}, "rational function": {"w": "rational function", "d": "A fraction with x in the bottom, like 1/(x − 2) or (2x + 1)/(x − 3). Its graph has asymptotes. It comes later in the course (SL 2.8)."}, "transformation": {"w": "transformation", "d": "Moving, stretching or flipping a graph, for example moving y = x<sup>2<\/sup> up by 3 gives y = x<sup>2<\/sup> + 3. It comes later in the course (SL 2.11)."}, "binomial": {"w": "binomial", "d": "A word the Khan Academy page uses: an expression with two parts added or subtracted, like x + 1. (x + 1)(x + 2) is a product of two binomials."}}</script>
+<script>
+(function(){
+  // tap a dotted word to see what it means
+  var T={};
+  try{ T=JSON.parse(document.getElementById('terms-data').textContent); }catch(e){ return; }
+  var box=document.getElementById('termbox'), bt=box.querySelector('.tb-h b'), bd=box.querySelector('.tb-d');
+  function show(el){ var k=el.getAttribute('data-t'); if(!T[k]) return; bt.textContent=T[k].w; bd.innerHTML=T[k].d; box.classList.add('on'); }
+  function hide(){ box.classList.remove('on'); }
+  document.addEventListener('click',function(e){
+    var el=e.target.closest ? e.target.closest('.term') : null;
+    if(el){ e.preventDefault(); e.stopPropagation(); show(el); return; }
+    if(!box.contains(e.target)) hide();
+  },true);
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape') hide();
+    if((e.key==='Enter'||e.key===' ') && e.target.classList && e.target.classList.contains('term')){ e.preventDefault(); show(e.target); }
+  });
+  box.querySelector('button').addEventListener('click',hide);
+})();
+</script><!--terms:end-->
 </body>
 </html>
