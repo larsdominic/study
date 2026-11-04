@@ -1,0 +1,981 @@
+{
+ "minutes": 8,
+ "background": [
+  {
+   "title": "What a business is for",
+   "html": "<p>A business exists to provide <b>goods</b> (things you can touch) or <b>services</b> (things done for you) that people want, and customers pay for them. If more money comes in than goes out, the owners earn a reward for their effort and their risk.</p><p>Not every organisation is after money for its owners. State schools, public hospitals and charities also use people, money and buildings to provide something. The differences are <b>who owns them</b> and <b>what happens to any money left over</b>: that is section 1.2.</p><p>Every business has the same four jobs to do: look after the people (human resources), the money (finance), the customers (marketing) and making the product (operations).</p>"
+  },
+  {
+   "title": "Revenue, costs and profit",
+   "html": "<p>Three money words you will use in every unit:</p><ul><li><b>Revenue</b>: all the money from sales. Price × number sold.</li><li><b>Costs</b>: all the money paid out: materials, wages, rent, electricity, interest on loans. The everyday costs of running the business are its <b>operating costs</b>.</li><li><b>Profit</b> = revenue − costs. If costs are bigger, it is a <b>loss</b>.</li></ul><p>Example: a juice stall sells 500 cups at $3. Revenue = 500 × $3 = $1 500. Fruit, cups, a helper's pay and the pitch cost $1 100. Profit = 1 500 − 1 100 = $400.</p><p>Revenue is not profit. A firm with high sales can still lose money if its costs are even higher, and profit often falls in a <b>recession</b>, when customers spend less.</p>"
+  },
+  {
+   "title": "Owning a company: shares and shareholders",
+   "html": "<p>A company's ownership is split into equal parts called <b>shares</b>. Whoever holds shares is a <b>shareholder</b>: an owner of part of the company. Hold 10 of its 100 shares and you own 10% of it.</p><ul><li>Shareholders usually get one vote per share, for example to choose the <b>board of directors</b> who make the big decisions for them.</li><li>Part of the profit may be paid out to them as a <b>dividend</b>.</li><li>Shares can be sold to someone else. The price of one share (the <b>share price</b>) rises when people expect the company to do well.</li></ul><p>Selling new shares is a way for a company to raise money without borrowing it.</p>"
+  },
+  {
+   "title": "Borrowing, debts and who pays",
+   "html": "<p>A business often needs money before it earns any. It can use the owners' savings, sell shares, or take a <b>loan</b>: borrowed money that must be paid back, plus <b>interest</b>, an extra charge each year (for example 8% of what is owed).</p><p>Money still owed is a <b>debt</b>. Things the business owns, such as machines, a van or cash, are its <b>assets</b>. If a business closes owing money, its assets are sold to pay the debts.</p><p>The big question in 1.2: if that is not enough, does the owner have to pay the rest from their own pocket? That is what <b>liability</b> is about.</p>"
+  },
+  {
+   "title": "Government, laws and taxes",
+   "html": "<p>The <b>government</b> (also called <b>the state</b>) makes laws, collects taxes and uses the tax money for public services such as state schools and roads. Organisations it owns or controls are the <b>public sector</b>; everything owned by private people or firms is the <b>private sector</b>.</p><p>Laws set the minimum a business must do: keep workers safe, limit pollution, pay tax on its profit. Governments also try to attract businesses, for example with <b>grants</b> (money that is not paid back) or lower taxes, because businesses create jobs.</p><p>Choosing to do more than the law requires is <b>corporate social responsibility</b> (1.3).</p>"
+  },
+  {
+   "title": "Business across borders",
+   "html": "<p>Businesses buy and sell between countries. Goods bought from another country are <b>imports</b>; goods sold to another country are <b>exports</b>. Each country has its own money (<b>currency</b>), so trade means swapping one currency for another.</p><p>A big company may go further and <b>produce</b> in other countries: build factories, open offices and hire staff there. Its <b>home country</b> is where its head office is; the other countries it works in are <b>host countries</b>. Section 1.6 asks one question: is this good or bad for the host country and its <b>economy</b> (its jobs, firms and incomes)?</p>"
+  },
+  {
+   "title": "How Business exam questions work",
+   "html": "<p>Most IB Business questions are about a <b>case study</b>: a text about one business. The examiner wants you to use business ideas <b>on that business</b>, not in general.</p><ul><li>The <b>command term</b> (the instruction word: define, explain, evaluate...) tells you how deep to go. Tap any command term on this page to see its official meaning.</li><li>The <b>marks</b> tell you how much to write: \"explain two challenges [4 marks]\" means two points worth 2 marks each.</li><li>Every point needs a fact or number from the case, then \"this means... so...\".</li></ul><p>Long answers (10 marks) are marked with <b>markbands</b>: the examiner picks the level that best fits the whole answer.</p>"
+  }
+ ],
+ "terms": [
+  {
+   "key": "command term",
+   "word": "command term",
+   "match": [
+    "command term",
+    "command terms"
+   ],
+   "def": "The instruction word in an exam question, such as <i>explain</i> or <i>evaluate</i>. It tells you what kind of answer the examiner wants and how deep to go."
+  },
+  {
+   "key": "define",
+   "word": "define",
+   "match": [
+    "define"
+   ],
+   "def": "IB command term (AO1): give the precise meaning of a word or idea."
+  },
+  {
+   "key": "describe",
+   "word": "describe",
+   "match": [
+    "describe"
+   ],
+   "def": "IB command term (AO1): give a detailed account, that is, a full description of what something is or how it works."
+  },
+  {
+   "key": "outline",
+   "word": "outline",
+   "match": [
+    "outline"
+   ],
+   "def": "IB command term (AO1): give a brief account or summary. Shorter than <i>explain</i>."
+  },
+  {
+   "key": "explain",
+   "word": "explain",
+   "match": [
+    "explain"
+   ],
+   "def": "IB command term (AO2): give a detailed account including reasons or causes. Say what happens <b>and why</b>, linked to the case."
+  },
+  {
+   "key": "apply",
+   "word": "apply",
+   "match": [
+    "apply"
+   ],
+   "def": "IB command term (AO2): use an idea or theory on a given problem, here the business in the case."
+  },
+  {
+   "key": "evaluate",
+   "word": "evaluate",
+   "match": [
+    "evaluate"
+   ],
+   "def": "IB command term (AO3): weigh up the strengths and the limitations, then reach a judgement."
+  },
+  {
+   "key": "discuss",
+   "word": "discuss",
+   "match": [
+    "discuss"
+   ],
+   "def": "IB command term (AO3): give a balanced review with arguments on more than one side, and a clear conclusion backed by evidence."
+  },
+  {
+   "key": "examine",
+   "word": "examine",
+   "match": [
+    "examine"
+   ],
+   "def": "IB command term (AO3): look closely at an argument or idea to show what it takes for granted and how its parts link together."
+  },
+  {
+   "key": "recommend",
+   "word": "recommend",
+   "match": [
+    "recommend"
+   ],
+   "def": "IB command term (AO3): advise what the business should do, with evidence and reasons from the situation."
+  },
+  {
+   "key": "justify",
+   "word": "justify",
+   "match": [
+    "justify"
+   ],
+   "def": "IB command term (AO3): give valid reasons or evidence to support an answer or conclusion. In everyday use, to justify something is to be a good reason for it: a fair-wage story may justify a higher price."
+  },
+  {
+   "key": "to what extent",
+   "word": "to what extent",
+   "match": [
+    "to what extent"
+   ],
+   "def": "IB command term (AO3): consider how far an argument is true, looking at its strong and weak points, then give a clear conclusion backed by evidence and sound reasoning."
+  },
+  {
+   "key": "calculate",
+   "word": "calculate",
+   "match": [
+    "calculate"
+   ],
+   "def": "IB command term (AO4): get a number as the answer and show the steps of your working."
+  },
+  {
+   "key": "case study",
+   "word": "case study",
+   "match": [
+    "case study",
+    "case studies"
+   ],
+   "def": "A text about one business, real or made up, that exam questions are based on. You must use its facts and numbers in your answers."
+  },
+  {
+   "key": "pre-released statement",
+   "word": "pre-released statement",
+   "match": [
+    "pre-released statement"
+   ],
+   "def": "A short text the IB publishes before Paper 1: the start of the case study and some topics to research, so you know the background before the exam."
+  },
+  {
+   "key": "quantitative",
+   "word": "quantitative",
+   "match": [
+    "quantitative"
+   ],
+   "def": "To do with numbers: calculations, data and tables."
+  },
+  {
+   "key": "markband",
+   "word": "markbands",
+   "match": [
+    "markbands",
+    "markband"
+   ],
+   "def": "One of the levels (1 to 2, 3 to 4 ... 9 to 10) used to mark a long answer. Each band has a description, and your answer gets the band it fits best."
+  },
+  {
+   "key": "formulae",
+   "word": "formulae",
+   "match": [
+    "formulae"
+   ],
+   "def": "Plural of <b>formula</b>: a rule written with words or letters and symbols, such as average cost = total cost ÷ output."
+  },
+  {
+   "key": "investment appraisal",
+   "word": "investment appraisal",
+   "match": [
+    "investment appraisal"
+   ],
+   "def": "Methods (Unit 3) for deciding whether a big spend, such as a new machine, is worth it by comparing what it costs with what it will earn."
+  },
+  {
+   "key": "ratio",
+   "word": "ratios",
+   "match": [
+    "ratios",
+    "ratio"
+   ],
+   "def": "A comparison of two numbers. A staff-to-child ratio of 1 to 4 means one adult for every four children. In Unit 3, ratios compare figures from a firm's accounts."
+  },
+  {
+   "key": "productivity",
+   "word": "productivity",
+   "match": [
+    "productivity"
+   ],
+   "def": "How much each worker (or machine) produces in a given time. Higher productivity means more output from the same people."
+  },
+  {
+   "key": "toolkit",
+   "word": "toolkit",
+   "match": [
+    "toolkit"
+   ],
+   "def": "The IB business management toolkit: a set of methods for analysing a business and making decisions, such as SWOT, STEEPLE and the business plan. You use them in every unit."
+  },
+  {
+   "key": "swot",
+   "word": "SWOT",
+   "match": [
+    "SWOT"
+   ],
+   "def": "A toolkit tool that lists a firm's <b>s</b>trengths and <b>w</b>eaknesses (inside the firm) and the <b>o</b>pportunities and <b>t</b>hreats it faces (outside)."
+  },
+  {
+   "key": "substantiated",
+   "word": "substantiated",
+   "match": [
+    "substantiated"
+   ],
+   "def": "Backed up with evidence from the case and a clear chain of reasoning, not just stated."
+  },
+  {
+   "key": "judgement",
+   "word": "judgement",
+   "match": [
+    "judgement"
+   ],
+   "def": "Your final decision at the end of an evaluation, with the main reason and what it depends on: 'Yes, because..., but only if...'."
+  },
+  {
+   "key": "limitation",
+   "word": "limitations",
+   "match": [
+    "limitations",
+    "limitation"
+   ],
+   "def": "A weakness or missing piece in an argument or in the data, which means you cannot be fully sure. In a 10-mark answer: what the case does not tell you."
+  },
+  {
+   "key": "superficially",
+   "word": "superficially",
+   "match": [
+    "superficially"
+   ],
+   "def": "Only on the surface, without going any deeper."
+  },
+  {
+   "key": "integrate",
+   "word": "integrated",
+   "match": [
+    "integrated",
+    "integration"
+   ],
+   "def": "Joined so the parts work as one. After an acquisition (buying another firm): combining the two firms' systems and staff. In a 10-mark answer: weaving facts from the case into your arguments."
+  },
+  {
+   "key": "resources",
+   "word": "resources",
+   "match": [
+    "resources",
+    "resource"
+   ],
+   "def": "The things a business uses to make its product: materials, money, people's time and skills, machines and buildings."
+  },
+  {
+   "key": "goods",
+   "word": "goods",
+   "match": [
+    "goods",
+    "physical good"
+   ],
+   "def": "<b>Goods</b> are physical things you can touch, such as a phone or a loaf. <b>Services</b> are things done for you, such as a haircut or a bus ride."
+  },
+  {
+   "key": "capital",
+   "word": "capital",
+   "match": [
+    "capital"
+   ],
+   "def": "Two meanings. As a factor of production: man-made tools, machines and buildings. As money: what owners put into a business to start or grow it. 'More capital' on this page usually means more money."
+  },
+  {
+   "key": "human resources",
+   "word": "human resources",
+   "match": [
+    "human resources",
+    "human resource"
+   ],
+   "def": "The part of a business that deals with its people: hiring, training, pay and looking after staff. Often shortened to HR."
+  },
+  {
+   "key": "finance",
+   "word": "finance",
+   "match": [
+    "finance",
+    "financed"
+   ],
+   "def": "Money a business gets to start, run or grow, for example from the owner's savings, a bank loan or selling shares. 'Raising finance' means getting this money. As a business function (Unit 3), finance means managing the money."
+  },
+  {
+   "key": "accounts",
+   "word": "accounts",
+   "match": [
+    "accounts"
+   ],
+   "def": "The records of a business's money: what it sold, what it spent, its profit, and what it owns and owes. Companies must publish some of them for outsiders to see."
+  },
+  {
+   "key": "marketing",
+   "word": "marketing",
+   "match": [
+    "marketing"
+   ],
+   "def": "Everything a business does to find out what customers want and persuade them to buy: the product, its price, advertising and where it is sold."
+  },
+  {
+   "key": "operations",
+   "word": "operations",
+   "match": [
+    "operations"
+   ],
+   "def": "The part of a business that makes the good or delivers the service: production, quality and stock."
+  },
+  {
+   "key": "profit",
+   "word": "profit",
+   "match": [
+    "profit",
+    "profits"
+   ],
+   "def": "What is left from the money coming in after all the costs are paid: profit = revenue − costs. If the costs are bigger, it is a <b>loss</b>."
+  },
+  {
+   "key": "revenue",
+   "word": "revenue",
+   "match": [
+    "revenue"
+   ],
+   "def": "All the money a business receives from selling its products, before any costs are taken off: price × number sold. <b>Tax revenue</b> is the money a government collects in taxes."
+  },
+  {
+   "key": "bought-in",
+   "word": "bought-in",
+   "match": [
+    "bought-in"
+   ],
+   "def": "Bought from other businesses (suppliers), such as the coffee beans and cups a café buys."
+  },
+  {
+   "key": "brand",
+   "word": "brand",
+   "match": [
+    "brand",
+    "brands",
+    "branding"
+   ],
+   "def": "The name, logo and image that make customers recognise a product and trust it. <b>Branding</b> is building that image so people choose it and may pay more."
+  },
+  {
+   "key": "economy",
+   "word": "economy",
+   "match": [
+    "economy"
+   ],
+   "def": "All the making, buying, selling and working that goes on in a country or area."
+  },
+  {
+   "key": "sector",
+   "word": "sector",
+   "match": [
+    "sector",
+    "sectors"
+   ],
+   "def": "A part of the economy. The four sectors (primary to quaternary) group businesses by the kind of work; the private and public sectors group them by who owns them."
+  },
+  {
+   "key": "research and development",
+   "word": "research and development",
+   "match": [
+    "research and development"
+   ],
+   "def": "Work to invent new products or better ways of making them. Often shortened to R&amp;D."
+  },
+  {
+   "key": "consultancy",
+   "word": "consultancies",
+   "match": [
+    "consultancies"
+   ],
+   "def": "Firms that sell expert advice to other businesses, for example on how to cut costs."
+  },
+  {
+   "key": "industrialisation",
+   "word": "industrialisation",
+   "match": [
+    "industrialisation"
+   ],
+   "def": "When a country moves from mainly farming to mainly factories and manufacturing."
+  },
+  {
+   "key": "deindustrialisation",
+   "word": "deindustrialisation",
+   "match": [
+    "deindustrialisation"
+   ],
+   "def": "When manufacturing shrinks as a share of a country's jobs and output, and services grow instead."
+  },
+  {
+   "key": "market",
+   "word": "market",
+   "match": [
+    "markets"
+   ],
+   "def": "All the people or businesses who might buy a product, for example the market for bikes in one city. <b>Market research</b> is finding out what these customers want, for example with surveys or sales data."
+  },
+  {
+   "key": "gap in the market",
+   "word": "gap in the market",
+   "match": [
+    "gap in the market"
+   ],
+   "def": "A need that customers have and no business is meeting yet."
+  },
+  {
+   "key": "target market",
+   "word": "target market",
+   "match": [
+    "target market"
+   ],
+   "def": "The group of customers a business aims its product at, for example students or young parents."
+  },
+  {
+   "key": "interest rate",
+   "word": "interest rate",
+   "match": [
+    "interest rate",
+    "with interest",
+    "interest on the loan"
+   ],
+   "def": "Interest is the extra a borrower pays for a loan, given as a percentage per year (the interest rate). Borrowing $6 000 at 10% costs about $600 a year."
+  },
+  {
+   "key": "trading record",
+   "word": "trading record",
+   "match": [
+    "trading record"
+   ],
+   "def": "A history of a firm's past sales and of paying its bills on time. Lenders use it to judge how risky a loan is."
+  },
+  {
+   "key": "cash flow",
+   "word": "cash flow",
+   "match": [
+    "cash flow"
+   ],
+   "def": "The money moving into and out of a business over time. A cash flow problem means bills are due before customers have paid."
+  },
+  {
+   "key": "grant",
+   "word": "grants",
+   "match": [
+    "grants"
+   ],
+   "def": "Money given by a government or organisation that does not have to be paid back."
+  },
+  {
+   "key": "liability",
+   "word": "liable",
+   "match": [
+    "liable",
+    "liability"
+   ],
+   "def": "Being legally responsible for something, especially for paying debts. If you are <b>liable</b> for a debt, you can be made to pay it."
+  },
+  {
+   "key": "assets",
+   "word": "assets",
+   "match": [
+    "assets",
+    "asset"
+   ],
+   "def": "Things of value that a business or person owns, such as buildings, machines, cash or a car."
+  },
+  {
+   "key": "shareholder",
+   "word": "shareholders",
+   "match": [
+    "shareholders",
+    "shareholder"
+   ],
+   "def": "A person or organisation that owns shares in a company, so owns part of it. They vote on big decisions and may receive dividends."
+  },
+  {
+   "key": "shares",
+   "word": "shares",
+   "match": [
+    "shares"
+   ],
+   "def": "Equal parts of a company's ownership. If a company has 100 shares and you hold 10, you own 10% of it."
+  },
+  {
+   "key": "legal form",
+   "word": "legal forms",
+   "match": [
+    "legal forms",
+    "legal form"
+   ],
+   "def": "The type of business the law recognises, such as sole trader, partnership or company. It decides who owns the business and who must pay its debts."
+  },
+  {
+   "key": "state",
+   "word": "state-owned",
+   "match": [
+    "state-owned",
+    "state"
+   ],
+   "def": "In business, 'the state' means the government. <b>State-owned</b> means owned by the government."
+  },
+  {
+   "key": "surplus",
+   "word": "surplus",
+   "match": [
+    "surplus"
+   ],
+   "def": "Money left over after all costs are paid. In a non-profit organisation it is called a surplus, not profit, because none of it goes to owners."
+  },
+  {
+   "key": "humanitarian",
+   "word": "humanitarian",
+   "match": [
+    "humanitarian"
+   ],
+   "def": "To do with helping people in need and reducing suffering, for example after a war or a flood."
+  },
+  {
+   "key": "for-profit",
+   "word": "for-profit",
+   "match": [
+    "for-profit"
+   ],
+   "def": "Set up to make a profit. A for-profit social enterprise makes a profit but uses most of it for its social aim."
+  },
+  {
+   "key": "non-profit",
+   "word": "non-profit",
+   "match": [
+    "non-profit"
+   ],
+   "def": "Not run to make money for owners. It can still earn money, but any surplus goes back into its purpose."
+  },
+  {
+   "key": "takeover",
+   "word": "takeover",
+   "match": [
+    "takeover"
+   ],
+   "def": "When one company buys control of another (more than half its shares) even though the other company's managers do not want it. More in 1.5."
+  },
+  {
+   "key": "stock exchange",
+   "word": "stock exchange",
+   "match": [
+    "stock exchange"
+   ],
+   "def": "A market where shares in publicly held companies are bought and sold, such as the London Stock Exchange."
+  },
+  {
+   "key": "lease",
+   "word": "lease",
+   "match": [
+    "lease"
+   ],
+   "def": "A contract to rent a building or equipment for a fixed time."
+  },
+  {
+   "key": "investment",
+   "word": "investment",
+   "match": [
+    "investment",
+    "invest",
+    "invests",
+    "invested",
+    "investors",
+    "investor"
+   ],
+   "def": "To <b>invest</b> is to put money into something, such as shares, machines or a new shop, hoping to get more back later. <b>Investors</b> are people or firms who do this."
+  },
+  {
+   "key": "reinvested",
+   "word": "reinvested",
+   "match": [
+    "reinvested"
+   ],
+   "def": "Put back into the business or its cause instead of being paid out to owners."
+  },
+  {
+   "key": "commercial",
+   "word": "commercial",
+   "match": [
+    "commercial"
+   ],
+   "def": "Run as a business that sells to customers and aims to cover its costs or make a profit."
+  },
+  {
+   "key": "stakeholder",
+   "word": "stakeholders",
+   "match": [
+    "stakeholders",
+    "stakeholder"
+   ],
+   "def": "Any person or group who affects, or is affected by, what a business does, such as staff, customers, suppliers and the local community. Explained in 1.4."
+  },
+  {
+   "key": "economies of scale",
+   "word": "economies of scale",
+   "match": [
+    "economies of scale",
+    "economy of scale",
+    "external economy",
+    "purchasing economy"
+   ],
+   "def": "Falls in the cost of making each item when a business produces more, for example from buying in bulk. Explained in 1.5."
+  },
+  {
+   "key": "market share",
+   "word": "market share",
+   "match": [
+    "market share"
+   ],
+   "def": "One firm's sales as a percentage of all sales in its market. If customers buy 100 bikes and 30 are yours, your market share is 30%. The firm with the biggest share is the <b>market leader</b>."
+  },
+  {
+   "key": "senior managers",
+   "word": "senior managers",
+   "match": [
+    "senior managers",
+    "senior jobs"
+   ],
+   "def": "The people at the top of an organisation, such as directors, who make the big long-term decisions. Their jobs are the <b>senior jobs</b>."
+  },
+  {
+   "key": "share price",
+   "word": "share price",
+   "match": [
+    "share price"
+   ],
+   "def": "What one share of a company costs to buy right now. It rises when investors expect the company to do well."
+  },
+  {
+   "key": "dividend",
+   "word": "dividends",
+   "match": [
+    "dividends",
+    "dividend"
+   ],
+   "def": "The part of a company's profit paid out to its shareholders: the same amount for each share they own, so someone with more shares gets more. The amount can change from year to year."
+  },
+  {
+   "key": "supply chain",
+   "word": "supply chain",
+   "match": [
+    "supply chain"
+   ],
+   "def": "All the firms and steps involved in getting a product to the customer, from raw materials to the shop."
+  },
+  {
+   "key": "recession",
+   "word": "recession",
+   "match": [
+    "recession"
+   ],
+   "def": "A period when a country's economy shrinks: people spend less, firms sell less and more people lose their jobs."
+  },
+  {
+   "key": "outlet",
+   "word": "outlets",
+   "match": [
+    "outlets"
+   ],
+   "def": "Places where a business sells its products, such as shops, cafés or branches."
+  },
+  {
+   "key": "pressure group",
+   "word": "pressure groups",
+   "match": [
+    "pressure groups",
+    "pressure group",
+    "pressure-group"
+   ],
+   "def": "An organised group that campaigns to change what businesses or governments do on one issue, such as the environment or animal welfare."
+  },
+  {
+   "key": "greenwashing",
+   "word": "greenwashing",
+   "match": [
+    "greenwashing"
+   ],
+   "def": "Making a business look more environmentally friendly than it really is, through adverts or claims not backed by action."
+  },
+  {
+   "key": "budget brand",
+   "word": "budget brand",
+   "match": [
+    "budget brand"
+   ],
+   "def": "A brand that sells mainly on a low price, not on quality or values."
+  },
+  {
+   "key": "interests",
+   "word": "interests",
+   "match": [
+    "interests"
+   ],
+   "def": "What a person or group wants or cares about. Employees' interests include fair pay and job security. 'In the interests of society' means for the good of society."
+  },
+  {
+   "key": "liquidity",
+   "word": "liquidity",
+   "match": [
+    "liquidity"
+   ],
+   "def": "Having enough cash, or things quickly turned into cash, to pay bills when they are due."
+  },
+  {
+   "key": "profit-related pay",
+   "word": "profit-related pay",
+   "match": [
+    "profit-related pay"
+   ],
+   "def": "Extra pay for staff that goes up when the firm's profit goes up."
+  },
+  {
+   "key": "employee share scheme",
+   "word": "employee share schemes",
+   "match": [
+    "employee share schemes",
+    "employee share scheme"
+   ],
+   "def": "A plan that gives or sells staff shares in the company they work for, so they gain when it does well."
+  },
+  {
+   "key": "operating costs",
+   "word": "operating costs",
+   "match": [
+    "operating costs"
+   ],
+   "def": "The everyday costs of running a business, such as wages, rent, energy and transport."
+  },
+  {
+   "key": "per unit",
+   "word": "per unit",
+   "match": [
+    "per unit",
+    "unit cost"
+   ],
+   "def": "For each single item made. <b>Unit cost</b> is the cost of making one item, the same as average cost."
+  },
+  {
+   "key": "industry",
+   "word": "industry",
+   "match": [
+    "industry",
+    "industries"
+   ],
+   "def": "All the firms that make the same kind of product, for example the car industry or the software industry."
+  },
+  {
+   "key": "layers",
+   "word": "layers",
+   "match": [
+    "layers"
+   ],
+   "def": "Levels of management between the top of the business and the workers. More layers means a message passes through more people."
+  },
+  {
+   "key": "culture",
+   "word": "culture",
+   "match": [
+    "culture"
+   ],
+   "def": "A firm's <b>culture</b> is the shared values and ways of working of its people: 'how we do things here'. A culture clash is when two firms with different cultures are joined. <b>Local culture</b> means a country's way of life."
+  },
+  {
+   "key": "board",
+   "word": "board",
+   "match": [
+    "board"
+   ],
+   "def": "The board of directors: a small group chosen by the shareholders to make a company's biggest decisions and keep watch on its managers."
+  },
+  {
+   "key": "niche market",
+   "word": "niche market",
+   "match": [
+    "niche market"
+   ],
+   "def": "A small, specialised part of a market with particular needs, for example left-handed guitars."
+  },
+  {
+   "key": "infrastructure",
+   "word": "infrastructure",
+   "match": [
+    "infrastructure"
+   ],
+   "def": "The basic systems a country needs to work: roads, ports, power, water and internet."
+  },
+  {
+   "key": "lobby",
+   "word": "lobby",
+   "match": [
+    "lobby"
+   ],
+   "def": "To try to persuade politicians or the government to make decisions that help you."
+  },
+  {
+   "key": "tax break",
+   "word": "tax breaks",
+   "match": [
+    "tax breaks"
+   ],
+   "def": "A cut in tax that a government gives to some businesses or people."
+  },
+  {
+   "key": "tax holiday",
+   "word": "tax holiday",
+   "match": [
+    "tax holiday"
+   ],
+   "def": "A period when a government lets a business pay little or no tax, to persuade it to set up in the country."
+  },
+  {
+   "key": "enforce",
+   "word": "enforces",
+   "match": [
+    "enforces"
+   ],
+   "def": "Makes sure a law is obeyed, for example by inspecting firms and fining those that break it."
+  },
+  {
+   "key": "incentive",
+   "word": "incentive",
+   "match": [
+    "incentive"
+   ],
+   "def": "Something that encourages a person to act in a certain way, such as extra pay for hard work."
+  },
+  {
+   "key": "distinguish",
+   "word": "distinguish",
+   "match": [
+    "distinguish"
+   ],
+   "def": "IB command term (AO2): make clear the differences between two or more ideas or things. For example: private sector is owned by private people, public sector by the government."
+  },
+  {
+   "key": "ao",
+   "word": "AO1, AO2, AO3",
+   "match": [
+    "AO1",
+    "AO2",
+    "AO3"
+   ],
+   "def": "Assessment objective: how deep the IB goes on a topic. <b>AO1</b>: know and describe. <b>AO2</b>: explain and apply to a case. <b>AO3</b>: evaluate, discuss or recommend (weigh up and judge). <b>AO4</b>: calculate and use skills."
+  },
+  {
+   "key": "capacity utilisation",
+   "word": "capacity utilisation",
+   "match": [
+    "capacity utilisation"
+   ],
+   "def": "How much a firm actually produces, as a percentage of the most it could produce. A hotel with 80 of its 100 rooms full has 80% capacity utilisation. Unit 5, HL only."
+  },
+  {
+   "key": "steeple",
+   "word": "STEEPLE",
+   "match": [
+    "STEEPLE"
+   ],
+   "def": "A toolkit tool that lists the outside factors that can affect a business: social, technological, economic, environmental, political, legal and ethical."
+  },
+  {
+   "key": "demand",
+   "word": "demand",
+   "match": [
+    "demand"
+   ],
+   "def": "In business, <b>demand</b> is how much of a product customers want to buy and can pay for. Weekend queues show high demand. As a verb, to demand something is to insist on it: 'the law does not demand it'."
+  },
+  {
+   "key": "recruit",
+   "word": "recruit",
+   "match": [
+    "recruit"
+   ],
+   "def": "To find and hire new staff."
+  },
+  {
+   "key": "scarce",
+   "word": "scarce",
+   "match": [
+    "scarce"
+   ],
+   "def": "In short supply: there is not enough of it, so it is hard to find or costs more."
+  },
+  {
+   "key": "business entity",
+   "word": "business entities",
+   "match": [
+    "business entities"
+   ],
+   "def": "An organisation that does business. 'Types of business entities' means the different kinds: sole traders, partnerships, companies, cooperatives and NGOs."
+  },
+  {
+   "key": "high profile",
+   "word": "high profile",
+   "match": [
+    "high profile"
+   ],
+   "def": "Well known to the public and often in the news."
+  },
+  {
+   "key": "refinery",
+   "word": "refineries",
+   "match": [
+    "refineries",
+    "refinery"
+   ],
+   "def": "A factory that processes crude oil (oil as it comes out of the ground) into petrol, diesel and other products."
+  },
+  {
+   "key": "plant",
+   "word": "car plants",
+   "match": [
+    "car plants",
+    "car plant"
+   ],
+   "def": "A <b>plant</b> is a large factory. A car plant (or assembly plant) puts cars together from their parts."
+  },
+  {
+   "key": "distorted",
+   "word": "distorted",
+   "match": [
+    "distorted"
+   ],
+   "def": "Changed along the way, so the meaning is no longer accurate, like a message in a game of whispers."
+  },
+  {
+   "key": "headline number",
+   "word": "headline number",
+   "match": [
+    "headline number"
+   ],
+   "def": "The big number that is announced, such as '1 500 jobs', before you look at the details."
+  },
+  {
+   "key": "exploit",
+   "word": "exploit",
+   "match": [
+    "exploit"
+   ],
+   "def": "To use people or a place unfairly for your own gain, for example paying very low wages or polluting where laws are weak."
+  },
+  {
+   "key": "bear the cost",
+   "word": "bear the rest",
+   "match": [
+    "bear the rest",
+    "bear the cost"
+   ],
+   "def": "To <b>bear</b> a cost or loss is to carry it or suffer it. 'The lenders bear the rest' means the banks that lent the money lose it."
+  }
+ ]
+}
