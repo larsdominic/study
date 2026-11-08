@@ -1,0 +1,132 @@
+{
+ "2026-11-09": [
+  {
+   "url": "guides/2026-11-09-psychology-hl-frame-research-methods.html",
+   "label": "Psychology HL: course map and research methods",
+   "quiz": "ib-quiz-guide-2026-11-09"
+  }
+ ],
+ "2026-11-10": [
+  {
+   "url": "guides/2026-11-04-maths-aa-sl-1.2-1.6.html",
+   "label": "Maths AA SL 1.2 to 1.6 (sequences, series, proof)",
+   "quiz": "ib-quiz-guide-2026-11-04"
+  }
+ ],
+ "2026-11-11": [
+  {
+   "url": "guides/2026-11-05-biology-hl-a1.1-a1.2.html",
+   "label": "Biology HL A1.1 Water and A1.2 Nucleic acids",
+   "quiz": "ib-quiz-guide-2026-11-05"
+  }
+ ],
+ "2026-11-12": [
+  {
+   "url": "guides/2026-11-06-business-sl-1.1-1.6.html",
+   "label": "Business Management SL Unit 1, 1.1 to 1.6",
+   "quiz": "ib-quiz-guide-2026-11-06"
+  }
+ ],
+ "2026-11-14": [
+  {
+   "url": "practice/2026-11-07-timed-maths-sequences.html",
+   "label": "Timed set: Maths sequences (no calculator)",
+   "quiz": "ib-timed-2026-11-07"
+  }
+ ],
+ "2026-11-15": [
+  {
+   "url": "review/2026-11-08-week-1.html",
+   "label": "Week 1 review",
+   "quiz": "ib-quiz-review-2026-11-08"
+  }
+ ],
+ "2026-11-17": [
+  {
+   "url": "guides/2026-11-10-maths-aa-sl-2.2-2.5.html",
+   "label": "Maths AA SL 2.2 to 2.5 (functions)",
+   "quiz": "ib-quiz-guide-2026-11-10"
+  }
+ ],
+ "2026-11-21": [
+  {
+   "url": "practice/2026-11-21-mock-papers.html",
+   "label": "Mock papers: Biology, English, Psychology",
+   "quiz": "ib-timed-2026-11-21"
+  }
+ ],
+ "2026-11-23": [
+  {
+   "url": "guides/2026-11-09-psychology-hl-frame-research-methods.html",
+   "label": "Psychology: course map and research methods",
+   "quiz": "ib-quiz-guide-2026-11-09",
+   "review": true
+  }
+ ],
+ "2026-11-24": [
+  {
+   "url": "guides/2026-11-04-maths-aa-sl-1.2-1.6.html",
+   "label": "Maths 1.2 to 1.6",
+   "quiz": "ib-quiz-guide-2026-11-04",
+   "review": true
+  },
+  {
+   "url": "guides/2026-11-10-maths-aa-sl-2.2-2.5.html",
+   "label": "Maths 2.2 to 2.5",
+   "quiz": "ib-quiz-guide-2026-11-10",
+   "review": true
+  }
+ ],
+ "2026-11-25": [
+  {
+   "url": "guides/2026-11-05-biology-hl-a1.1-a1.2.html",
+   "label": "Biology A1.1 and A1.2",
+   "quiz": "ib-quiz-guide-2026-11-05",
+   "review": true
+  }
+ ],
+ "2026-11-26": [
+  {
+   "url": "guides/2026-11-06-business-sl-1.1-1.6.html",
+   "label": "Business Unit 1",
+   "quiz": "ib-quiz-guide-2026-11-06",
+   "review": true
+  }
+ ],
+ "2026-11-28": [
+  {
+   "url": "practice/2026-11-07-timed-maths-sequences.html",
+   "label": "Timed set: Maths sequences",
+   "quiz": "ib-timed-2026-11-07",
+   "review": true
+  },
+  {
+   "url": "review/2026-11-08-week-1.html",
+   "label": "Week 1 mixed quiz",
+   "quiz": "ib-quiz-review-2026-11-08",
+   "review": true
+  }
+ ],
+ "2026-12-01": [
+  {
+   "url": "guides/2026-11-04-maths-aa-sl-1.2-1.6.html",
+   "label": "Maths 1.2 to 1.6",
+   "quiz": "ib-quiz-guide-2026-11-04",
+   "review": true
+  },
+  {
+   "url": "guides/2026-11-10-maths-aa-sl-2.2-2.5.html",
+   "label": "Maths 2.2 to 2.5",
+   "quiz": "ib-quiz-guide-2026-11-10",
+   "review": true
+  }
+ ],
+ "2026-12-03": [
+  {
+   "url": "guides/2026-11-06-business-sl-1.1-1.6.html",
+   "label": "Business Unit 1",
+   "quiz": "ib-quiz-guide-2026-11-06",
+   "review": true
+  }
+ ]
+}

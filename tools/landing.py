@@ -1,21 +1,10 @@
 # Builds index.html: the landing page with every planned day.
-# PLAN comes from the study sheet ("Daily plan" tab, columns A to G); refresh it when the sheet changes.
-# LINKS: add the guide for each day as it is built (and the review page for each Sunday).
+# PLAN and LINKS are generated from tools/plan_data.py (the same data fills the study sheet).
 import sys, json, html; sys.path.insert(0,sys.argv[1]); from common import *
 out=sys.argv[2]
 PLAN=json.load(open(sys.argv[1]+'/plan.json'))
-LINKS={
- "2026-11-03":dict(url="guides/2026-11-03-chemistry-s1.1-s1.3.html",label="Chemistry HL S1.1 to S1.3",quiz="ib-quiz-guide-2026-11-03"),
- "2026-11-04":dict(url="guides/2026-11-04-maths-aa-sl-1.2-1.6.html",label="Maths AA SL 1.2 to 1.6",quiz="ib-quiz-guide-2026-11-04"),
- "2026-11-05":dict(url="guides/2026-11-05-biology-hl-a1.1-a1.2.html",label="Biology HL A1.1 Water and A1.2 Nucleic acids",quiz="ib-quiz-guide-2026-11-05"),
- "2026-11-06":dict(url="guides/2026-11-06-business-sl-1.1-1.6.html",label="Business Management SL Unit 1, 1.1 to 1.6",quiz="ib-quiz-guide-2026-11-06"),
- "2026-11-09":dict(url="guides/2026-11-09-chemistry-s1.4-s1.5-r2.1.html",label="Chemistry HL S1.4, S1.5 and R2.1",quiz="ib-quiz-guide-2026-11-09"),
- "2026-11-10":dict(url="guides/2026-11-10-maths-aa-sl-2.2-2.5.html",label="Maths AA SL 2.2 to 2.5 (functions)",quiz="ib-quiz-guide-2026-11-10"),
- "2026-11-07":dict(url="practice/2026-11-07-timed-maths-sequences.html",label="Timed set: Maths sequences (no calculator)",quiz="ib-timed-2026-11-07"),
- "2026-11-14":dict(url="practice/2026-11-14-timed-chemistry-titration.html",label="Timed set: Chemistry titration and water of crystallisation",quiz="ib-timed-2026-11-14"),
- "2026-11-21":dict(url="practice/2026-11-21-mock-papers.html",label="Mock papers: Chemistry, Biology, English",quiz="ib-timed-2026-11-21"),
- "2026-11-08":dict(url="review/2026-11-08-week-1.html",label="Week 1 review",quiz="ib-quiz-review-2026-11-08"),
-}
+# LINKS: day -> list of pages; generated with tools/plan.json from tools/plan_data.py (review=True shows 'Review:')
+LINKS=json.load(open(sys.argv[1]+'/links.json'))
 body=f'''
 <div id="today"></div>
 <div class="tools">
@@ -45,14 +34,15 @@ var PLAN=__P__, LINKS=__L__;
 function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML;}
 function quiz(k){try{return JSON.parse(localStorage.getItem(k)||'null');}catch(e){return null;}}
 var now=new Date(), today=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0');
-function guideHtml(p){var l=LINKS[p.iso]; if(!l) return '<span class="pill p-soon">guide coming</span>';
-  var q=quiz(l.quiz); var badge=''; if(q&&q.total) badge='<span class="pill p-done">quiz '+(q.best||q.right)+'/'+q.total+'</span>'; else if(q&&q.max) badge='<span class="pill p-done">score '+q.score+'/'+q.max+'</span>'; return '<a href="'+l.url+'">Open: '+esc(l.label)+'</a>'+badge;}
+function lst(iso){var l=LINKS[iso]; return !l?[]:(Array.isArray(l)?l:[l]);}
+function one(l){var q=quiz(l.quiz); var badge=''; if(q&&q.total) badge='<span class="pill p-done">quiz '+(q.best||q.right)+'/'+q.total+'</span>'; else if(q&&q.max) badge='<span class="pill p-done">score '+q.score+'/'+q.max+'</span>'; return '<a href="'+l.url+'">'+(l.review?'Review: ':'Open: ')+esc(l.label)+'</a>'+badge;}
+function guideHtml(p){var ls=lst(p.iso); if(!ls.length) return '<span class="pill p-soon">guide coming</span>'; return ls.map(one).join('<br>');}
 // today card: today's row, or the next planned day
 var cur=PLAN.filter(function(p){return p.iso>=today;})[0];
 var t=document.getElementById('today');
 if(cur){var isToday=cur.iso===today;
   t.innerHTML='<div class="hero"><div style="font-size:.85rem;font-weight:700;color:var(--amber)">'+(isToday?'TODAY':'NEXT UP')+'</div><h2>'+esc(cur.day)+' '+esc(cur.date)+': '+esc(cur.subject)+'</h2><div>'+esc(cur.task)+'</div>'+
-  (LINKS[cur.iso]?'<a class="go" href="'+LINKS[cur.iso].url+'">Open today\\'s guide</a>':'<div style="margin-top:8px"><span class="pill p-soon" style="margin-left:0">guide coming</span> Use the files linked on this day in the <a href="__SHEET__">study sheet</a>.</div>')+'</div>';}
+  (lst(cur.iso).length?lst(cur.iso).map(function(l){return '<a class="go" style="margin-right:8px" href="'+l.url+'">'+(l.review?'Review: '+esc(l.label):(isToday?'Open today\\'s guide':'Open the guide'))+'</a>';}).join(''):'<div style="margin-top:8px"><span class="pill p-soon" style="margin-left:0">guide coming</span> Use the files linked on this day in the <a href="__SHEET__">study sheet</a>.</div>')+'</div>';}
 else{t.innerHTML='<div class="hero"><h2>The plan has finished</h2><div>All planned days are done. Check the progress page for what to revise.</div></div>';}
 // all days grouped by week
 var out='', wk=null;
@@ -63,5 +53,5 @@ document.getElementById('plan').innerHTML=out+'</div>';
 // a link like index.html#d2026-11-03 opens the plan at that day
 if(location.hash){var el=document.getElementById(location.hash.slice(1)); if(el){el.style.outline='3px solid var(--indigo)'; el.scrollIntoView({block:'center'});}}
 '''.replace('__P__',json.dumps(PLAN,ensure_ascii=False)).replace('__L__',json.dumps(LINKS)).replace('__SHEET__',SHEET)
-open(out+'/index.html','w').write(page("Jamila IB study plan","index.html","Jamila's IB study plan","Every planned day from 3 November to 4 December 2026. Today's day is highlighted; each day links to its study guide once it is ready.",body,script).replace('<div class="crumb"><a href="index.html">All study pages</a></div>',''))
+open(out+'/index.html','w').write(page("Jamila IB study plan","index.html","Jamila's IB study plan","Every planned day from Monday 9 November to Friday 4 December 2026. Today's day is highlighted; each day links to its study guide once it is ready.",body,script).replace('<div class="crumb"><a href="index.html">All study pages</a></div>',''))
 print("landing ok", len(PLAN), "days")

@@ -64,4 +64,4 @@ def page(title, crumb, h1, intro, body, script="", crumb_label="All study pages"
 </html>
 '''
 DRIVE=lambda i:f'https://drive.google.com/file/d/{i}/view'
-SHEET='https://docs.google.com/spreadsheets/d/14eB8zIWZMuldcvLXTYNA4Q77jad3siDgHOK3mMrUCX8/edit'
+SHEET='https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit'

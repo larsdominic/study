@@ -1,4 +1,4 @@
-# Exam technique: Business Management SL. Source: IB Business management guide (first assessment 2024, updated July 2024), Drive 1DO0yC9MM9GSi3ecg6vMTTV17vDLaAqEv
+# Exam technique: Business Management SL. Source: IB Business management guide (first assessment 2024, updated July 2024), Drive 1KeX_WVc4uNQe-DdGS_7-1ITxBUqXveWD
 import sys; sys.path.insert(0,sys.argv[1]); from common import *
 out=sys.argv[2]
 TERMS=[("Analyse","AO2","Break down in order to bring out the essential elements or structure."),
@@ -82,7 +82,7 @@ body=f'''
 <h2>Command terms</h2>
 <p>The level is the assessment objective: AO1 knowledge (short), AO2 application and analysis, AO3 synthesis and evaluation (judgements with evidence), AO4 skills such as calculating and drawing. A question can never use a harder command term than its syllabus topic allows, so "evaluate" only appears where the syllabus says AO3.</p>
 <div class="tablewrap"><table><tr><th>Command term</th><th>Level</th><th>What the IB means (official definition)</th></tr>{tt}</table></div>
-<p style="font-size:.9rem;color:var(--ink-soft)">Source: the IB Business management guide, first assessment 2024 (updated July 2024), <a href="{DRIVE('1DO0yC9MM9GSi3ecg6vMTTV17vDLaAqEv')}">in your folder</a>: assessment outline, markbands, formulae appendix and glossary of command terms.</p>
+<p style="font-size:.9rem;color:var(--ink-soft)">Source: the IB Business management guide, first assessment 2024 (updated July 2024), <a href="{DRIVE('1KeX_WVc4uNQe-DdGS_7-1ITxBUqXveWD')}">in your folder</a>: assessment outline, markbands, formulae appendix and glossary of command terms.</p>
 '''
 open(out+'/exam-business-management-sl.html','w').write(page("Exam technique: Business Management SL","exam.html","Exam technique: Business Management SL","How the two SL papers work, how the 10-mark answers are marked, and what every command word asks for.",body,crumb_label="Exam technique: all subjects"))
 print("bm ok")

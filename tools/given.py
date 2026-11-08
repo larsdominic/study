@@ -2,9 +2,9 @@
 # Run from the repo root: python3 tools/given.py tools .
 # Sources:
 #  Maths: IB Mathematics: analysis and approaches SL formula booklet (first examinations 2021, version 1.0, (c) IBO 2023),
-#         Drive 1yofdn_7Gu3pb2O5G6iHhrXVgRUQ1Qldz, read from the PDF (pdftotext -layout plus rendered page images, so
+#         Drive 19EX75prXgep28AagsDaWsr3eM6O8rVDV, read from the PDF (pdftotext -layout plus rendered page images, so
 #         modulus bars and fractions were checked by eye); IB Maths AA guide (first assessment 2021) SL content statements.
-#  Business: IB Business management guide (first assessment 2024, updated July 2024), Drive 1DO0yC9MM9GSi3ecg6vMTTV17vDLaAqEv:
+#  Business: IB Business management guide (first assessment 2024, updated July 2024), Drive 1KeX_WVc4uNQe-DdGS_7-1ITxBUqXveWD:
 #         Appendices > Formulae (pp. 64 to 65, read from the page images), unit 3, unit 5.5 and the toolkit (figure 5).
 # Every worked example was computed with python before being written here.
 import sys; sys.path.insert(0, sys.argv[1]); from common import *
@@ -305,16 +305,16 @@ maths_body = f'''
   <span><span class="fb" style="margin-left:0">In booklet</span> printed in the formula booklet you get in both papers: know how to use it, no need to memorise it</span>
   <span><span class="learn" style="margin-left:0">Learn</span> not in the booklet: you must remember it</span>
 </div>
-<p>Left column: exactly what the SL formula booklet prints, with its own section numbers and labels (they match the official syllabus numbers, so 1.8 sits next to 1.3). Right column: what the official syllabus expects you to know that the booklet does not print, each with a one-line example. <a href="{DRIVE('1yofdn_7Gu3pb2O5G6iHhrXVgRUQ1Qldz')}">Open the booklet</a> next to this page the first time you read it.</p>
+<p>Left column: exactly what the SL formula booklet prints, with its own section numbers and labels (they match the official syllabus numbers, so 1.8 sits next to 1.3). Right column: what the official syllabus expects you to know that the booklet does not print, each with a one-line example. <a href="{DRIVE('19EX75prXgep28AagsDaWsr3eM6O8rVDV')}">Open the booklet</a> next to this page the first time you read it.</p>
 <div class="tip"><b>Five surprises.</b> Change of base <b>is</b> in the booklet (1.7). The <sup><i>n</i></sup>C<sub><i>r</i></sub> formula <b>is</b> in the booklet (1.9). The discriminant formula is printed but <b>not</b> what Δ &gt; 0, = 0, &lt; 0 mean. Velocity <i>v</i> = d<i>s</i>/d<i>t</i> is <b>not</b> printed (only acceleration). Exact trig values, laws of exponents and standard deviation are <b>not</b> printed.</div>
 <ul class="toc">
   <li><a href="#t1">1 Number and algebra</a></li><li><a href="#t2">2 Functions</a></li><li><a href="#t3">3 Geometry and trigonometry</a></li><li><a href="#t4">4 Statistics and probability</a></li><li><a href="#t5">5 Calculus</a></li>
 </ul>
 {TOPICS}
-<p class="note" style="margin-top:28px">Sources: the IB Mathematics: analysis and approaches SL formula booklet (first examinations 2021, version 1.0), <a href="{DRIVE('1yofdn_7Gu3pb2O5G6iHhrXVgRUQ1Qldz')}">in your folder</a>, checked against the printed pages; the "learn" items come from the SL content statements in the <a href="{DRIVE('1QEKfLslMdDBj1lHfmenCX7V887rTu_IN')}">IB Maths AA subject guide</a>. Exam habits: <a href="exam-maths-aa-sl.html">Exam technique: Maths AA SL</a>.</p>
+<p class="note" style="margin-top:28px">Sources: the IB Mathematics: analysis and approaches SL formula booklet (first examinations 2021, version 1.0), <a href="{DRIVE('19EX75prXgep28AagsDaWsr3eM6O8rVDV')}">in your folder</a>, checked against the printed pages; the "learn" items come from the SL content statements in the <a href="{DRIVE('19usrPWgR-_yAbEtM2QeF8vHtOR691ZXw')}">IB Maths AA subject guide</a>. Exam habits: <a href="exam-maths-aa-sl.html">Exam technique: Maths AA SL</a>.</p>
 '''
 maths_comment = '''<!-- given-maths-aa-sl: built by tools/given.py.
-Booklet: IB Maths AA SL formula booklet, first examinations 2021, version 1.0 (c) IBO 2023, Drive 1yofdn_7Gu3pb2O5G6iHhrXVgRUQ1Qldz.
+Booklet: IB Maths AA SL formula booklet, first examinations 2021, version 1.0 (c) IBO 2023, Drive 19EX75prXgep28AagsDaWsr3eM6O8rVDV.
 Read from the PDF with pdftotext -layout AND the rendered page images, because the Drive text loses modulus bars
 (|r| < 1 in 1.8, |v(t)| in 5.9, ln|x| in 5.10, |y| in 5.11) and fraction bars. All five were confirmed on the images.
 Uncertain / judgement calls:
@@ -443,7 +443,7 @@ bm_body = f'''
 {lgroup("Finance (unit 3): learn it", FIN, "fin")}
 {lgroup("Break-even analysis (5.5): learn it", BE, "be")}
 {lgroup("The SL toolkit: learn what each tool shows", TOOL, "tool")}
-<p class="note" style="margin-top:28px">Sources: the IB Business management guide, first assessment 2024 (updated July 2024), <a href="{DRIVE('1DO0yC9MM9GSi3ecg6vMTTV17vDLaAqEv')}">in your folder</a>: Appendices: Formulae; unit 3 (Finance and accounts); 5.5 Break-even analysis; the business management toolkit (figure 5). Exam habits: <a href="exam-business-management-sl.html">Exam technique: Business Management SL</a>.</p>
+<p class="note" style="margin-top:28px">Sources: the IB Business management guide, first assessment 2024 (updated July 2024), <a href="{DRIVE('1KeX_WVc4uNQe-DdGS_7-1ITxBUqXveWD')}">in your folder</a>: Appendices: Formulae; unit 3 (Finance and accounts); 5.5 Break-even analysis; the business management toolkit (figure 5). Exam habits: <a href="exam-business-management-sl.html">Exam technique: Business Management SL</a>.</p>
 '''
 bm_comment = '''<!-- given-business-management-sl: built by tools/given.py.
 Formula sheet: guide Appendices > Formulae (pp. 64 to 65), read from the page images: SL/HL = GPM, profit margin, ROCE (with capital employed),

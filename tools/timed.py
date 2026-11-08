@@ -7,19 +7,19 @@ sys.path.insert(0, sys.argv[1]); from common import *
 out = sys.argv[2]
 os.makedirs(out + '/practice', exist_ok=True)
 
-GDOC = lambda i: f'https://docs.google.com/document/d/{i}/edit'
-# Drive IDs (from the Drive map, 2 Nov 2026)
-M_PACK = DRIVE('1V3p4Y01JZwk-t3oGevgKyf5KzY8Kj1kf'); M_MS = DRIVE('1_hgaTyeVEmk8O4pm8H4E86H7Kp7VsBQZ')
-M_FB = DRIVE('1yofdn_7Gu3pb2O5G6iHhrXVgRUQ1Qldz')
-BT_Q = DRIVE('13LgqwVvlh2mMyONXTCfLCQFK6YHub8IF'); BT_A = DRIVE('1DPChl8qQvp6OeEuFGL0LN2AwUlt0BFOd')
-WOC = DRIVE('19665yTxY6MkADedj2PvO-o0JKmE_yQeF')
-STD_SOL = DRIVE('1x2mKoF4Nj0YWStNWQd6kwp6dzr8y8KoV'); R21_HO = DRIVE('1TAYUtJuBRPfFFDx83it0Xl14lGn-sx-4')
-LP_TASK = GDOC('1cyauXBdiIVs5cH8AI-b4MTVe2_RpGEXIDfkCsrlo8Kk'); VTP = GDOC('1JcbnbbYzezkn4WONBbGmhMqPm7Fx7UE__bsN45fkxc4')
-EE_FOLDER = 'https://drive.google.com/drive/folders/1IrGGlBxw5M16BDi4OFg60SbLcaYl1Zd0'
-Q1 = DRIVE('183UXkkDOuRylI5n6vU2jLntfpblOAX7b'); FA1P1 = DRIVE('1PyUubsdFfMqX9EnS9ymPrr6jOizFpWcT')
-FA1P2MS = DRIVE('1U5rjK07YmiJS4EeiWaUjRx3qX-hs6kCl'); BIO_MS = DRIVE('16z2TwiUy5JZkPv-Hqi4AD6R5H_6wYBiw')
-NYT = 'https://www.nytimes.com/2020/10/01/learning/40-more-intriguing-photos-to-make-students-think.html'
-MG = '../guides/2026-11-04-maths-aa-sl-1.2-1.6.html'; CG = '../guides/2026-11-03-chemistry-s1.1-s1.3.html'
+# Drive IDs (new upload, 8 Nov 2026; titles from the 8 Nov rename map)
+M_PACK = DRIVE('1HUMbO0pFdie-qUVSvB5vzkLBLLErWCnL'); M_MS = DRIVE('13_E6OeummnBtiEB9_BRN9tZCKe2HhilT')
+M_FB = DRIVE('19EX75prXgep28AagsDaWsr3eM6O8rVDV')
+BIO_MS = DRIVE('1-fhyVSaXdMn9DuMLD5SWpO5TV37zB8eW')   # combined paper HL: questions inside the mark scheme
+MOCK_Q = DRIVE('1S-X8BUmQiUTuiLWlr382zDg1dFsjcyLW'); MOCK_MS = DRIVE('1bS3dMIiu8HZOnYBdk5U3FvWgjHS5gJLe')
+EN_GUIDE = DRIVE('1Sk7GD4FmWcB_crdej9xiSiWgg1iFySKR'); EN_MODEL = DRIVE('1mSfhzzcuxkvOuk33g9wqVY3xyNvbx7nP')
+EN_BIG5 = DRIVE('1vXYq3D89JG8VLj2LIBcx1qnC-8RECXus')
+PS_GUIDE = DRIVE('1Khqsn6PrxoS5UXAEKBpu5G_XG5Viyvtq'); PS_SPEC = DRIVE('1KoOk8IT670o-bbr1HKc-Nw2Kub_Gf1Mr')
+PS_EX01 = DRIVE('1PRhaPPsIOqIk3SR-hFoj-ihbJioLIbcv'); PS_LC02 = DRIVE('18G55fgHqH329URQeM2Ykm0o_JpWRWZsf')
+PS_RM04 = DRIVE('1flZ_D46k42AkC-ctI-Syh2qtVWKygnG1'); PS_RM06 = DRIVE('1upA3pwuiQj7stqZapW62OuZ9wedazOW-')
+PS_MEAS = DRIVE('1exoZh04Ac6Wym__lOYzQ8CuMHCfVtALC')
+CFP = 'https://www.cartooningforpeace.org/en/'   # checked 8 Nov 2026: opens (200)
+MG = '../guides/2026-11-04-maths-aa-sl-1.2-1.6.html'
 
 EXTRA = r'''
   .timer{background:var(--card);border:1px solid var(--rule);border-top:6px solid var(--indigo);padding:16px;margin:16px 0;text-align:center}
@@ -139,15 +139,15 @@ def build(fname, title, h1, intro, body, page_date):
     open(out + '/practice/' + fname, 'w').write(html)
     print('wrote practice/' + fname)
 
-# ---------------------------------------------------------------- 1. Maths, Sat 7 Nov
+# ---------------------------------------------------------------- 1. Maths, Sat 14 Nov (file name and score key keep 7 Nov)
 u = lambda n: f'u<sub>{n}</sub>'; S = lambda n: f'S<sub>{n}</sub>'
 body1 = f'''
 <h2>Before you start</h2>
 <div class="card"><ul>
 <li><b>Paper and pen</b>, plus a pencil and ruler. Write on paper, not on screen.</li>
 <li><b>No calculator.</b> Put it in another room. Maths AA Paper 1 is the no-calculator paper, and every question below can be done by hand.</li>
-<li><b>Formula booklet: yes.</b> You get it in every IB maths exam. Open the <a href="{M_FB}">formula booklet</a> at the sequences page ({u('n')}, {S('n')} and {S('∞')} for arithmetic and geometric sequences are all there).</li>
-<li><b>The question paper:</b> the <a href="{M_PACK}">sequences and series practice pack</a> (on screen or printed). Do <b>not</b> open the mark scheme until the timer has ended.</li>
+<li><b>Formula booklet: yes.</b> You get it in every IB maths exam. Open the <a href="{M_FB}">formula booklet</a> (Drive file "REF - Maths AA SL Formula Booklet (official).pdf") at the sequences page ({u('n')}, {S('n')} and {S('∞')} for arithmetic and geometric sequences are all there).</li>
+<li><b>The question paper:</b> the <a href="{M_PACK}">sequences and series practice pack</a> (Drive file "1.2-1.4 + 1.8 Sequences and Series (school 1.2-1.5) - Practice Questions (IB Questionbank).pdf"; on screen or printed). Do <b>not</b> open the <a href="{M_MS}">mark scheme</a> (the file with the same name ending "- Mark Scheme (IB Questionbank).pdf") until the timer has ended.</li>
 <li><b>How long:</b> 40 minutes on the timer, then about 15 minutes to mark and 10 minutes for the Error log. About 65 minutes in all.</li>
 <li>Phone on silent. You can keep this page open on the phone: the timer works offline and stays correct if the screen locks (it counts from the time you pressed Start).</li>
 </ul></div>
@@ -166,7 +166,7 @@ body1 = f'''
 <tr><td>31, parts (c) to (g) only</td><td>Fuel pumped into a tank each hour (arithmetic sequence)</td><td>11</td></tr>
 <tr><th colspan="2">Total</th><th>35</th></tr></table></div>
 <div class="tip"><b>Read this first.</b> Question 20 (b) uses a probability table. The only fact you need is that the probabilities in the table add up to 1 (you meet this properly in Topic 4). In question 31, skip parts (a) and (b): they need a calculator. Start at (c) and use the volume 624&nbsp;000 m<sup>3</sup> that part (b) gives you.</div>
-<p class="muted">Why these questions: Wednesday's <a href="{MG}">sequences guide</a> already uses most of the pack. Of the questions it does not use, only 20 and 31 (c) to (g) work without a calculator: 6, 29 and 31 (a) to (b) need a GDC, and 25 needs logarithms, which you have not covered yet. So the set also repeats three of Wednesday's no-calculator homework questions (4, 11 and 16). Do them again from a blank page without looking at Wednesday's work. Getting them right a second time, and faster, is the point.</p>
+<p class="muted">Why these questions: Tuesday's <a href="{MG}">sequences guide</a> (10 November) already uses most of the pack. Of the questions it does not use, only 20 and 31 (c) to (g) work without a calculator: 6, 29 and 31 (a) to (b) need a GDC, and 25 needs logarithms, which you have not covered yet. So the set also repeats three of Tuesday's no-calculator homework questions (4, 11 and 16). Do them again from a blank page without looking at Tuesday's work. Getting them right a second time, and faster, is the point.</p>
 <p>Write every step. Most marks are for method (M1), so a correct method with a slip in the arithmetic still scores.</p>
 
 <h2>Mark it</h2>
@@ -192,233 +192,185 @@ body1 = f'''
 {errlog('<li>If you lost marks on 4, 11 or 16 again, write "repeat" in the row. A mistake made twice is a habit: turn its rule into a flashcard.</li>').replace('{q}','Seq pack 16 (a)')}
 <p>Also on the study site: the <a href="{MG}">sequences guide</a> for anything you could not do, the <a href="../flashcards.html">flashcards</a>, <a href="../exam-maths-aa-sl.html">exam technique for Maths AA</a> and your <a href="../progress.html">progress page</a>.</p>
 '''
-build('2026-11-07-timed-maths-sequences.html', 'Timed set: Maths sequences, no calculator (Sat 7 Nov 2026)',
+build('2026-11-07-timed-maths-sequences.html', 'Timed set: Maths sequences, no calculator (Sat 14 Nov 2026)',
       'Timed set: Maths sequences (no calculator)',
-      'Saturday 7 November 2026. 40 minutes under exam conditions: five questions (35 marks) from your sequences pack, no calculator, then mark them with the mark scheme and log your mistakes.',
+      'Saturday 14 November 2026. 40 minutes under exam conditions: five questions (35 marks) from your sequences pack, no calculator, then mark them with the mark scheme and log your mistakes.',
       body1, '2026-11-07')
 
-# ---------------------------------------------------------------- 2. Chemistry, Sat 14 Nov
-WOC_DATA = [(1, 24.53, 25.55, 25.21), (2, 25.10, 26.61, 26.10), (3, 24.87, 26.91, 26.22), (4, 25.34, 27.83, 26.99), (5, 24.96, 27.97, 26.95)]
-Ar = {'H': 1.01, 'O': 16.00, 'S': 32.07, 'Cu': 63.55}
-MC = round(Ar['Cu'] + Ar['S'] + 4 * Ar['O'], 2); MW = round(2 * Ar['H'] + Ar['O'], 2)
-proc = []
-for t, c, h, a in WOC_DATA:
-    mh = round(h - c, 2); ma = round(a - c, 2); mw = round(h - a, 2)
-    na = ma / MC; nw = mw / MW; proc.append((t, mh, ma, mw, na, nw, nw / na, 100 * 0.02 / mw + 100 * 0.02 / ma))
-mean_x = sum(p[6] for p in proc) / 5
-assert (MC, MW) == (159.62, 18.02) and abs(mean_x - 4.5047) < 1e-3
-raw_rows = ''.join(f'<tr><td>{t}</td><td>{c:.2f}</td><td>{h:.2f}</td><td>{a:.2f}</td></tr>' for t, c, h, a in WOC_DATA)
-sig = lambda v: f'{v:.3g}'
-key_rows = ''.join(f'<tr><td>{t}</td><td>{mh:.2f}</td><td>{ma:.2f}</td><td>{mw:.2f}</td><td>{sig(na)}</td><td>{sig(nw)}</td><td>{x:.2f}</td><td>{ux:.1f}%</td></tr>' for t, mh, ma, mw, na, nw, x, ux in proc)
-CU = 'CuSO<sub>4</sub>'; HY = 'CuSO<sub>4</sub>·5H<sub>2</sub>O'; XH = 'CuSO<sub>4</sub>·xH<sub>2</sub>O'; W2 = 'H<sub>2</sub>O'
-body2 = f'''
-<h2>Before you start</h2>
-<div class="card"><ul>
-<li><b>Paper and pen</b>, a ruler, and one sheet of graph or squared paper (for the graph in set B).</li>
-<li><b>Calculator: yes.</b> Both IB chemistry papers allow one.</li>
-<li><b>Data booklet:</b> use your school copy of the IB chemistry data booklet (it is not in the Drive folder). If you do not have it, these are the relative atomic masses you need today, to two decimal places as in the booklet: H 1.01, C 12.01, O 16.00, S 32.07, Ca 40.08, Cu 63.55.</li>
-<li><b>Open:</b> the <a href="{BT_Q}">back titration concept check</a> and the <a href="{WOC}">water of crystallisation worksheet</a>. Keep the <a href="{BT_A}">answers</a> closed until the first timer ends.</li>
-<li><b>How long:</b> set A 18 min 20 s, set B 45 min, plus about 25 minutes for marking and the Error log. About 1.5 hours with a short break. The English and EE tasks at the bottom are not timed.</li>
-<li>The timers work offline and keep the right time if the phone screen locks.</li>
-</ul></div>
-<p class="muted">Revise first if you need to: R2.1 <a href="{R21_HO}">stoichiometry handout</a> and the <a href="{STD_SOL}">standard solutions slides</a> (titration calculations).</p>
+# ---------------------------------------------------------------- 2. Mock papers, Sat 21 Nov
+# Saturday = 4 h: 2 h timed practice (Biology, English) + 2 h Psychology (audit 4.2, Session 4).
+# Minutes per block (each block must add up to 120)
+BIO_MIN, BIO_MARK = 36, 10          # combined paper: 30 marks x 1.2 min a mark = 36 min
+EN_READ, EN_PLAN, EN_WRITE, EN_CHECK, EN_MARK = 10, 10, 40, 7, 7   # HL timing per text from the class revision guide, step 7
+EN_MIN = EN_READ + EN_PLAN + EN_WRITE + EN_CHECK
+assert BIO_MIN == round(30 * 1.2) and EN_MIN == 67 and BIO_MIN + BIO_MARK + EN_MIN + EN_MARK == 120
+PS_P1, PS_RM, PS_P3, PS_MARK = 40, 25, 25, 30
+RM_READ, RM_Q5, RM_Q6, RM_MEAS = 3, 6, 6, 10
+assert RM_READ + RM_Q5 + RM_Q6 + RM_MEAS == PS_RM and PS_P1 + PS_RM + PS_P3 + PS_MARK == 120
+P1_PACE = 90 / 35; P3_PACE = 105 / 30          # official minutes per mark (guide: P1 1 h 30 for 35 marks, P3 1 h 45 for 30)
+assert round(P3_PACE * 9, 1) == 31.5 and round(P1_PACE * 16, 1) == 41.1
+# Optional Biology mock selection (biology audit, Sat 21 Nov proposal) without the C1.2 questions:
+# C1.2 is learnt on Sun 22 Nov, after this paper. Marks read from the question paper.
+# Every one of these is also a question in the HL topical packs (same SaveMyExams bank): pack = (topic, HL pack question).
+MOCK = [('22', 'B1.2', 8, ('B1.2', '6')), ('29', 'B1.2', 7, ('B1.2', '7')), ('25', 'B1.1', 6, None),
+        ('28', 'B1.1', 6, ('B1.1', '4')), ('35', 'C1.1', 6, ('C1.1', '6')), ('48', 'C1.1', 12, ('C1.1', '9'))]
+MOCK_MCQ = [('26', 'B1.1', ('B1.1', '3')), ('31', 'B1.2', ('B1.2', '8')), ('32', 'B1.1', ('B1.1', '5')),
+            ('38', 'C1.1', ('C1.1', '7')), ('39', 'C1.1', ('C1.1', '8')), ('41', 'B1.1', ('B1.1', '6'))]
+MOCK_MARKS = sum(m for _, _, m, _ in MOCK) + len(MOCK_MCQ)
+MOCK_SEC = round(MOCK_MARKS * 1.2 * 60)
+assert MOCK_MARKS == 51 and MOCK_SEC == 3672
+packref = lambda pk: f'{pk[0]} HL pack question {pk[1]}' if pk else 'not in the HL packs'
+mock_rows = ''.join(f'<tr><td>{q}</td><td>{t}</td><td>{m}</td><td>{packref(pk)}</td></tr>' for q, t, m, pk in MOCK)
+mock_rows += (f'<tr><td>{", ".join(q for q, _, _ in MOCK_MCQ)} (multiple choice)</td><td>B1.1, B1.2, C1.1</td><td>{len(MOCK_MCQ)}</td><td>'
+              + '; '.join(f'{q} = {packref(pk)}' for q, _, pk in MOCK_MCQ) + '</td></tr>')
+mock_rows += f'<tr><th colspan="2">Total</th><th>{MOCK_MARKS}</th><th></th></tr>'
+# P3 specimen source 2 (read from the specimen resource booklet): max, median, mean, SD, min; box plot min, Q1, median, Q3, max
+HS = dict(mx=21, med=10, mean=11.6, sd=3.87, mn=7, q1=9, q3=14); NS = dict(mx=25, med=15, mean=17.64, sd=4.48, mn=12, q1=14, q3=21)
+d_mean = round(NS['mean'] - HS['mean'], 2); d_med = NS['med'] - HS['med']
+r_hs = HS['mx'] - HS['mn']; r_ns = NS['mx'] - NS['mn']; iqr_hs = HS['q3'] - HS['q1']; iqr_ns = NS['q3'] - NS['q1']
+assert (d_mean, d_med, r_hs, r_ns, iqr_hs, iqr_ns) == (6.04, 5, 14, 13, 5, 7)
+# score table: one row per marked item
+SC_BIO = [('bio-combined', 'Biology combined paper, questions 1 to 6 and 9 to 14', 28, False),
+          ('bio-combined-c12', 'Biology combined paper, questions 7 and 8 (C1.2)', 2, False)]
+SC_EN = [('eng-p1', 'English Paper 1 cartoon analysis (self or teacher mark)', 20, False)]
+SC_PS = [('psy-p1a', 'Psychology Paper 1 (a): classical conditioning', 4, False), ('psy-p1b', 'Psychology Paper 1 (b): dog trainers, operant conditioning', 6, False),
+         ('psy-p1c', 'Psychology Paper 1 (c): specimen Q4, social learning theory', 6, False), ('psy-rm-q5', 'Evaluating research task Q5', 4, False),
+         ('psy-rm-q6', 'Evaluating research task Q6', 4, False), ('psy-p2-meas', 'Paper 2 style: measurement in your experiment', 4, False),
+         ('psy-p3-q1', 'Psychology specimen Paper 3 Q1', 3, False), ('psy-p3-q2', 'Psychology specimen Paper 3 Q2', 6, False)]
+SC_MOCK = [(f'bio-mock-{q}', f'Optional: Biology mock Q{q} ({t})', m, False) for q, t, m, _ in MOCK] + \
+          [('bio-mock-mcq', 'Optional: Biology mock multiple choice (' + ', '.join(q for q, _, _ in MOCK_MCQ) + ')', len(MOCK_MCQ), True)]
+tot = lambda rows: sum(r[2] for r in rows)
+T_BIO, T_EN, T_PS, T_MOCK = tot(SC_BIO), tot(SC_EN), tot(SC_PS), tot(SC_MOCK)
+assert (T_BIO, T_EN, T_PS, T_MOCK) == (30, 20, 37, 51) and T_PS == 4 + 6 + 6 + 4 + 4 + 4 + 3 + 6
+T_DAY = T_BIO + T_EN + T_PS; T_ALL = T_DAY + T_MOCK
+assert (T_DAY, T_ALL) == (87, 138)
 
-<h2>Set A: back titration concept check</h2>
-{timer('chem-bt', 'Set A: back titration, 11 marks', 1100, 'Why 18 min 20 s: HL Paper 2 gives 150 minutes for 90 marks, which is 100 seconds a mark. 11 marks × 100 s = 1100 s.')}
-<p>Open the <a href="{BT_Q}">back titration concept check</a> and answer every part, (a) to (g), 11 marks. It is one question about eggshell: excess hydrochloric acid reacts with the calcium carbonate, and the acid left over is titrated with sodium hydroxide. Show every step with units; the marks are for the working.</p>
-<div class="tip"><b>The idea in one line.</b> acid reacted with the solid = acid added − acid left over (found by the titration). Then use the equation ratio to get from moles of HCl to moles of CaCO<sub>3</sub>.</div>
-
-<h3>Mark set A</h3>
-<div class="step"><div class="bh"><b>Marking</b><span>about 8 min</span></div><ol>
-<li>Open the <a href="{BT_A}">answers</a>. They are written like a mark scheme: [1] next to each mark point, and the notes in italics say what else is accepted.</li>
-<li>Note the rules it uses: forgetting to divide cm<sup>3</sup> by 1000 is penalised only once in (a) and (b); in (d) one mark is for the right formulas and one for balancing; in (f) the percentage can be anything from 79.8% to 81.5%.</li>
-<li>I recalculated every number in the answers and they are right: 5.44 × 10<sup>−3</sup>, 2.38 × 10<sup>−3</sup>, 3.06 × 10<sup>−3</sup> and 1.53 × 10<sup>−3</sup> mol; 0.153 g; 81.4% or 81.5% (depending on whether you round the mass first).</li></ol></div>
-
-<h2>Set B: water of crystallisation worksheet</h2>
-{timer('chem-woc', 'Set B: water of crystallisation, 45 min', 2700, 'This one is not an exam paper, so it has no marks to convert. 45 minutes: about 25 for the write-up sections and 20 for the calculations.')}
-<p>The <a href="{WOC}">worksheet</a> is not a question sheet: it is the write-up template for the practical where you heat hydrated copper(II) sulfate, {XH}, to find x. It has headings (research question, background, method, risk assessment, results tables, graph, conclusion) but no numbers and no answer sheet. So the timed task is:</p>
-<ol>
-<li><b>About 25 min:</b> write the <b>Background</b>, the <b>Method</b> (with variables, how you know dehydration is complete, repeats) and the <b>risk assessment</b> table, in note form, following the prompts in the worksheet.</li>
-<li><b>About 20 min:</b> process the practice data below with <b>Method A</b> (x for each trial, then a mean) and <b>Method B</b> (a graph of moles of water against moles of {CU}; the gradient is x). Then answer the research question: how close is your x to the accepted value of 5, and why is it different?</li>
-</ol>
-<p>If you did this practical in class, use your own results for part 2 instead.</p>
-<h3>Practice data (made up for this exercise, not real results)</h3>
-<div class="tablewrap"><table>
-<tr><th>Trial</th><th>Crucible + lid / g ± 0.01</th><th>Crucible + lid + hydrated salt / g ± 0.01</th><th>Crucible + lid + residue after heating / g ± 0.01</th></tr>
-{raw_rows}</table></div>
-<p class="muted">Two small slips in the worksheet, so they do not confuse you: the "Choose your data-analysis approach" box says "hydrated cobalt(II) chloride", but everything else in the worksheet is about copper(II) sulfate; and the results table row "Mass of hydrated CuSO4.H2O" means {XH}.</p>
-
-<h3>Mark set B</h3>
-<p>There is no answer sheet in the folder, so here is my own worked key. Every number was calculated in Python and checked by hand. Mark yourself with the 10-point checklist at the end of the key.</p>
-<details><summary>Worked answer key: water of crystallisation (open after the timer)</summary>
-<p><b>Values used:</b> relative atomic masses to two decimal places as in the IB data booklet: Cu 63.55, S 32.07, O 16.00, H 1.01.</p>
-<ul>
-<li><span class="nw">M({CU})</span> = <span class="nw">63.55 + 32.07</span> <span class="nw">+ 4 × 16.00</span> = <span class="nw">159.62 g mol<sup>−1</sup></span></li>
-<li><span class="nw">M({W2})</span> = <span class="nw">2 × 1.01 + 16.00</span> = <span class="nw">18.02 g mol<sup>−1</sup></span></li>
-<li>If x = 5: <span class="nw">M({HY})</span> = <span class="nw">159.62 + 5 × 18.02</span> = <span class="nw">249.72 g mol<sup>−1</sup></span>, so water is <span class="nw">90.10 ÷ 249.72 = 36.08%</span> of the mass.</li>
-<li>Equation: <span class="nw">{HY}(s) →</span> <span class="nw">{CU}(s) + 5{W2}(g)</span>. Blue crystals turn to a white powder.</li>
-</ul>
-<p><b>Method A, trial 1 step by step:</b></p>
-<ol>
-<li>mass of hydrated salt = 25.55 − 24.53 = 1.02 g</li>
-<li>mass of anhydrous {CU} = 25.21 − 24.53 = 0.68 g</li>
-<li>mass of water lost = 25.55 − 25.21 = 0.34 g</li>
-<li>n({CU}) = 0.68 ÷ 159.62 = 0.00426 mol; n({W2}) = 0.34 ÷ 18.02 = 0.0189 mol</li>
-<li>x = n({W2}) ÷ n({CU}) = 0.0189 ÷ 0.00426 = 4.43 (from the unrounded moles; dividing the rounded ones gives 4.44, also fine)</li>
-</ol>
-<div class="tablewrap"><table>
-<tr><th>Trial</th><th>Hydrated / g</th><th>Anhydrous / g</th><th>Water / g</th><th>n({CU}) / mol</th><th>n({W2}) / mol</th><th>x</th><th>% uncertainty in x</th></tr>
-{key_rows}</table></div>
-<ul>
-<li><b>Mean x = 4.50</b> (4.51 if you average the rounded values; either is fine). Two or three significant figures are justified, because the smallest masses have only two.</li>
-<li><b>Uncertainty:</b> each mass is a difference of two readings, so ±0.02 g. % uncertainty in x = % uncertainty in the water mass + % uncertainty in the anhydrous mass. Trial 1: <span class="nw">0.02 ÷ 0.34 = 5.9%</span> plus <span class="nw">0.02 ÷ 0.68 = 2.9%</span>, so 8.8%. The bigger samples (trial 5, 3.0%) are more precise.</li>
-<li><b>Percentage error</b> of the mean: <span class="nw">(4.50 − 5) ÷ 5 × 100 = −9.9%</span>, about −10%.</li>
-<li><b>Method B:</b> plot n({W2}) (y) against n({CU}) (x). The best-fit line has a gradient of about 4.6 (4.58 by least squares) and passes very close to the origin (intercept −0.0005 mol). Gradient = moles of water per mole of {CU} = x. Accept 4.4 to 4.7 from a hand-drawn line. (The worksheet mentions a "mass fraction": if you plot mass of water against mass of {CU} instead, the gradient is 0.517, and x = 0.517 × 159.62 ÷ 18.02 = 4.58, the same answer.)</li>
-<li><b>Conclusion:</b> x ≈ 4.5, about 10% below the literature value of 5. The error (10%) is larger than the random uncertainty (3% to 9%), so random error cannot explain it: there is a systematic error.</li>
-<li><b>Most likely cause:</b> incomplete dehydration. Water left in the residue makes the residue too heavy and the water lost too small, so x comes out too low. Fix: heat, cool and weigh again until two masses agree within 0.01 g (heating to constant mass).</li>
-<li><b>Other errors and their direction:</b> the anhydrous salt absorbing water from the air while it cools makes x too low (cool it in a desiccator, with the lid on); solid spitting out of the crucible makes x too high (lid partly on, heat gently at first); heating far too strongly can decompose {CU} further (the residue goes grey or black), which also makes x too high.</li>
-</ul>
-<p><b>Background should cover:</b> what water of crystallisation is; the formula {XH} and that x is a whole number of water molecules per formula unit; the dehydration equation and colour change; the assumption that all mass lost is water and the residue is pure anhydrous {CU}; how x = n({W2}) ÷ n({CU}).</p>
-<p><b>Method should cover:</b> independent variable (initial mass of hydrated salt, for Method B), dependent variable (mass lost), controls (same balance, same crucible and lid, same heating method); weigh the empty crucible and lid, add salt, weigh, heat gently then strongly, cool in a desiccator, weigh, repeat to constant mass; at least five trials. Risk table: copper(II) sulfate is harmful if swallowed and irritates eyes and skin (goggles, wash hands); hot crucible (tongs, let it cool); copper compounds are toxic to aquatic life, so collect the residue for disposal and do not pour it down the sink.</p>
-<p><b>Self-check, 1 point each (10 in total):</b> (1) balanced equation; (2) both molar masses right; (3) masses of water and anhydrous salt for all five trials; (4) moles for all five trials; (5) x for each trial between 4.4 and 4.6; (6) a mean of about 4.5 with sensible significant figures; (7) a graph with labelled axes and a gradient of 4.4 to 4.7; (8) percentage error about −10%; (9) incomplete dehydration named as the main cause, with the direction (x too low); (10) one realistic improvement (heat to constant mass, or cool in a desiccator).</p>
-</details>
-
-<h2>Your score</h2>
-{score_table([('backtitration','Set A: back titration concept check',11,False),('woc','Set B: water of crystallisation (self-check points)',10,False)])}
-
-<h2>Error log</h2>
-{errlog('<li>For set B, log any step of the calculation you could not do without the key, and any section of the write-up you left empty.</li>').replace('{q}','Back titration (e)')}
-
-<h2>Not timed: English learner portfolio entry</h2>
-<div class="step"><div class="bh"><b>About 35 min</b><span>100 Photographs That Changed the World</span></div><ol>
-<li>Open the <a href="{LP_TASK}">learner portfolio entry instructions</a>.</li>
-<li>Put in the entry: the photograph your group worked on (image, or a description if you cannot attach it), your original caption, the global issue with a one-sentence explanation of the connection, and the real historical caption.</li>
-<li>Write the reflection, 150 to 250 words: what changed between your caption and the real one, and what that shows about how word choice and framing shape meaning; which global issue field it fits (culture, identity and community; politics, power and justice; art, creativity and imagination; science, technology and environment; beliefs, values and education); and whether it could help your Individual Oral.</li>
-<li>Tag it: Non-literary texts, Global Issues, Framing &amp; Perspective. Keep the focus on language choices and meaning, not a summary of the lesson.</li>
-<li>If you missed the lesson where groups chose photographs, ask the English teacher which photograph to use.</li></ol></div>
-
-<h2>Not timed: Extended Essay, subject and three research questions</h2>
-<div class="step"><div class="bh"><b>About 30 min</b><span>EE planning</span></div><ol>
-<li>Choose the EE subject. Most students pick a subject they take and enjoy, ideally one where they already know how to find sources or collect data. Write two sentences on why.</li>
-<li>Write three candidate research questions in that subject. A good one is a real question (not "describe ..."), narrow enough for 4,000 words, and answerable with sources or data you can actually get.</li>
-<li>Test each: Is it focused? Can it be argued, with more than one possible answer? Can you name two sources or a data method for it today? Is it safe and ethical? Cross out or rewrite any that fail.</li>
-<li>Save the three questions in your <a href="{EE_FOLDER}">EE folder</a> on Drive (it is empty now). You will agree one with your supervisor on Saturday 21 November.</li></ol></div>
-<p>Also on the study site: the <a href="{CG}">chemistry guide for S1.1 to S1.3</a>, <a href="../flashcards.html">flashcards</a>, <a href="../exam-chemistry-hl.html">exam technique for Chemistry HL</a> and your <a href="../progress.html">progress page</a>.</p>
-'''
-build('2026-11-14-timed-chemistry-titration.html', 'Timed set: Chemistry titration (Sat 14 Nov 2026)',
-      'Timed set: Chemistry titration and back titration',
-      'Saturday 14 November 2026. Two timed chemistry sets (a back titration question and the water of crystallisation worksheet with practice data), each marked straight afterwards. Then two untimed tasks: an English learner portfolio entry and choosing your Extended Essay subject.',
-      body2, '2026-11-14')
-
-# ---------------------------------------------------------------- 3. Mock papers, Sat 21 Nov
-FA1_KEY = [('1', 'D', 'M(C<sub>60</sub>) = 60 × 12.01 = 720.6 g mol<sup>−1</sup>; 720.6 ÷ (6.0 × 10<sup>23</sup>) = 1.2 × 10<sup>−21</sup> g'),
- ('2', 'D', '10 cm<sup>3</sup> of A reacted with 20 cm<sup>3</sup> of B to give 10 cm<sup>3</sup> of product: A + 2B → AB<sub>2</sub>'),
- ('3', 'A', 'pV = nRT is constant at fixed T and n: a horizontal line'),
- ('4', 'A', '2s paired; the two 2p electrons in separate orbitals with parallel spins (Hund)'),
- ('5', 'C', 'big jump after the 3rd electron: 3 outer electrons, Al'),
- ('6', 'B', 'molecular formula = actual number of each atom (A is the empirical formula)'),
- ('7', 'A', 'masses of Zn and oxide give % composition and empirical formula; zinc oxide is ionic (a lattice, not molecules), so it has no molecular formula'),
- ('8', 'A', 'M = mRT ÷ pV with p in kPa, V in dm<sup>3</sup> (0.220) and T in K (290)'),
- ('9', 'C', '2n<sup>2</sup> = 2 × 16 = 32'),
- ('10', 'B', 'S has one paired 3p orbital, and the repulsion makes it easier to remove an electron'),
- ('11', 'A', 'period number = highest occupied level n, and level n has n sub-levels; outer electrons come from the group'),
- ('12', 'D', 'all three are single-phase mixtures (pentane and hexane mix, ethanol and water mix)'),
- ('13', 'B', 'emission: electrons fall to lower levels and release photons'),
- ('14', 'B', '2.67 ÷ 267.21 = 9.99 × 10<sup>−3</sup> mol; × 223.20 = 2.23 g of PbO'),
- ('15', 'A', 'n(HCl) = 0.0100 mol; 0.02 mol Zn would need 0.04 mol HCl, so HCl is limiting; H<sub>2</sub> = 0.0100 ÷ 2 = 0.005 mol'),
- ('16', 'B', 'N 5.6 g ÷ 14.01 = 0.40; O 3.2 ÷ 16.00 = 0.20; ratio 2 : 1, N<sub>2</sub>O'),
- ('17', 'C', '71x + 69(1 − x) = 69.72 gives x = 0.36, so <sup>69</sup>Ga is 64%, about 60%'),
- ('18', 'A', 'big jump after the 3rd electron: group 13'),
- ('19', 'C', 'the dumbbell (figure-of-eight) shape'),
- ('20', 'B', '2− means two electrons gained')]
-fa1rows = ''.join(f'<tr><td>{q}</td><td><b>{a}</b></td><td>{w}</td></tr>' for q, a, w in FA1_KEY)
 body3 = f'''
-<p style="margin-top:22px">Up to five papers today (four if the Formative Assessment 1 Paper 2 questions do not arrive). Do not sit them all in one go. A plan that works: <b>morning</b> chemistry (Quiz 1, a 10 minute break, Formative Assessment 1 Paper 1, and Paper 2 after another break if you have it), marking each straight away; <b>afternoon</b> Biology, then the English analysis. Each paper has its own timer below; pause it only for a real interruption.</p>
+<p style="margin-top:22px">Four hours today, with a break in the middle. <b>First two hours:</b> timed practice, the Biology combined paper and one English Paper 1 style analysis of a satirical cartoon. <b>Second two hours:</b> timed Psychology practice. Mark each part straight after its timer, while you still remember your thinking.</p>
+<div class="tablewrap"><table>
+<tr><th>Block</th><th>What</th><th>Minutes</th></tr>
+<tr><td>1. Timed practice</td><td>Biology combined paper ({BIO_MIN}) and marking ({BIO_MARK}); English cartoon analysis ({EN_MIN}) and self-check ({EN_MARK})</td><td>{BIO_MIN + BIO_MARK + EN_MIN + EN_MARK}</td></tr>
+<tr><td>Break</td><td>Get up, eat, no screens</td><td>about 15</td></tr>
+<tr><td>2. Psychology</td><td>Paper 1 Sections A and B ({PS_P1}); research methods ({PS_RM}); Paper 3 questions 1 and 2 ({PS_P3}); marking with the markbands ({PS_MARK})</td><td>{PS_P1 + PS_RM + PS_P3 + PS_MARK}</td></tr>
+</table></div>
 
 <h2>Before you start</h2>
 <div class="card"><ul>
 <li><b>Paper and pen</b>, pencil, ruler. Answer on paper.</li>
-<li><b>Calculator: yes</b> for chemistry and biology. Not needed for English.</li>
-<li><b>Chemistry data booklet:</b> required for the chemistry papers (the Formative Assessment 1 front page says so). It is not in the Drive folder, so use your school copy.</li>
-<li><b>Files:</b> <a href="{Q1}">Quiz 1 Paper 2 HL</a>, <a href="{FA1P1}">Formative Assessment 1 Paper 1A and 1B HL</a>, <a href="{BIO_MS}">Biology Grade 11 combined paper HL</a> (the original, not the "(duplicate)" copy), and for English the <a href="{NYT}">New York Times photo collection</a> linked in your <a href="{VTP}">visual thinking assignment</a>.</li>
-<li><b>Sticky notes or strips of paper</b> to cover answers (see "What is missing" below), or ask someone to do it before you start.</li>
-<li><b>How long:</b> about 3 hours of papers (nearly 4 with Formative Assessment 1 Paper 2), plus about an hour of marking and Error log over the day.</li>
+<li><b>Calculator:</b> yes for Biology. Not needed for English or Psychology.</li>
+<li><b>Biology:</b> the <a href="{BIO_MS}">Grade 11 combined paper HL</a> (Drive file "Combined Paper Grade 11 HL (1A-1B-2, 30 marks) - Mark Scheme with Questions.pdf"), with the answer boxes covered (see below).</li>
+<li><b>English:</b> one satirical cartoon you have <b>not</b> seen before, chosen by someone else (see section 2), plus your class <a href="{EN_GUIDE}">Paper 1 satirical cartoons revision guide</a> and the <a href="{EN_MODEL}">Horsey model response</a> for the self-check afterwards. Read the Horsey model before today (it was on the plan for Friday 13 November), not during the timed part.</li>
+<li><b>Psychology:</b> the <a href="{PS_SPEC}">specimen papers</a> (Drive file "REF - Specimen papers 1, 2 and 3 with markschemes (official, first assessment 2027).pdf"), the <a href="{PS_EX01}">21 September exam practice sheet</a> and the <a href="{PS_RM04}">evaluating research task</a>. The specimen file has each markscheme straight after its paper: do not scroll into a markscheme before the marking block.</li>
+<li><b>Sticky notes or strips of paper</b> to cover answers, or ask someone to do it before you start.</li>
 <li>The timers work offline and keep the right time if the phone screen locks.</li>
 </ul></div>
 
-<h2>What is missing, and what to do about it</h2>
-<div class="ok"><b>Quiz 1 Paper 2 HL: complete.</b> The questions are on pages 1 to 3 and the mark scheme is on page 4 of the same file. Stop before page 4. Two oddities: question 2 (b) (ii) says "in 5(e)" and the mark scheme labels question 2 as e, f(i), f(ii). The question was taken from an old IB paper where it was question 5: read "5(e)" as your answer to 2 (a), and e, f(i), f(ii) as 2 (a), (b)(i), (b)(ii).</div>
-<div class="miss"><b>Formative Assessment 1 Paper 1A and 1B HL: no mark scheme in the folder, and the copy is not clean.</b> The Drive copy already has handwritten working and circled answers on it. What to do: on Monday 16 November ask your chemistry teacher for a clean copy and the mark scheme. If you get no clean copy, print the annotated one and cover the handwriting and highlights with sticky notes before you start, or simply sit it as a re-sit and note in the Error log that you had seen the answers. To mark it without the official scheme, use my key below: I worked out all 20 Paper 1A answers myself and they match the circled answers on the copy. For Paper 1B I give the points I would expect, but the school mark scheme decides.</div>
-<div class="miss"><b>Formative Assessment 1 Paper 2 HL: the mark scheme is there, the question paper is not.</b> The file is a set of mark scheme extracts from IB past papers (May 2021 and May 2022 HL Paper 2). Ask your chemistry teacher for the question paper on Monday 16 November. <b>Do not read the mark scheme before you have the questions</b>: that would spoil the paper. No questions by Saturday? Skip this paper and leave its score row empty (it then does not count).</div>
 <div class="miss"><b>Biology Grade 11 combined paper HL: the only file is the mark scheme, but it contains every question.</b> Each question (with its diagrams) is followed straight away by a grey "Markscheme" box with the answer. Before you start, print it and cover every grey box with a sticky note, or on screen scroll with a sheet of paper held over everything below the question you are on. No time is printed on it.</div>
 
-<h2>1. Chemistry Quiz 1 Paper 2 HL (12 marks)</h2>
-{timer('chem-quiz1', 'Chemistry Quiz 1 Paper 2 HL', 1200, 'The paper prints no time. At HL Paper 2 pace (150 minutes for 90 marks, 100 seconds a mark): 12 marks = 20 minutes.')}
-<p><a href="{Q1}">Quiz 1 Paper 2 HL</a>: question 1 (chlorine: electron configuration, radius, mass spectrum, 7 marks) and question 2 (titration of vinegar with KOH and a systematic error, 5 marks).</p>
-<div class="step"><div class="bh"><b>Mark it</b><span>about 10 min</span></div><ol>
-<li>Turn to page 4 of the same file: that is the mark scheme. A ✓ is one mark. Words in «» are not needed for the mark; OR gives alternatives.</li>
-<li>Check 1 (a)(i) carefully: the full configuration is required, a condensed one like [Ne] 3s<sup>2</sup> 3p<sup>5</sup> gets 0.</li>
-<li>Question 2 (a): 0.02075 dm<sup>3</sup> × 1.00 = 0.0208 mol, ÷ 0.02500 dm<sup>3</sup> = 0.830 mol dm<sup>−3</sup> (I checked this). Two marks for the right final answer.</li></ol></div>
-
-<h2>2. Formative Assessment 1 Paper 1A and 1B HL (30 marks)</h2>
-{timer('chem-fa1-p1', 'FA1 Paper 1A and 1B HL', 3000, 'Time from the front page: 50 minutes for 30 marks (20 multiple choice, 10 written). Calculator and data booklet required.')}
-<p><a href="{FA1P1}">Formative Assessment 1 Paper 1A and 1B HL</a> (S1.1 to S1.5; questions 14 and 15, reacting masses and the limiting reactant, are R2.1). Paper 1A: 20 multiple-choice questions. Paper 1B: one data-based question about separating sand, salt and iron (10 marks).</p>
-<div class="step"><div class="bh"><b>Mark it</b><span>about 10 min</span></div><ol>
-<li>If your teacher gave you the mark scheme, use that. Otherwise use the key below.</li>
-<li>Paper 1A: one mark each. Paper 1B: give yourself a mark only for a point that matches one in the key or says the same thing in other words.</li>
-<li>Ask your teacher about any 1B answer you are unsure of.</li></ol></div>
-<details><summary>Answer key Paper 1A (my own, checked; not the school mark scheme)</summary>
-<div class="tablewrap"><table><tr><th>Q</th><th>Answer</th><th>Why</th></tr>{fa1rows}</table></div>
-<p class="muted">Relative atomic masses used: C 12.01, O 16.00, N 14.01, Pb 207.20. Question 11 is the least clear-cut: A is the intended answer, because a period-n element fills level n, which has n sub-levels.</p></details>
-<details><summary>Expected points Paper 1B (my own; the school mark scheme decides)</summary>
-<ul>
-<li>(a) [4] One mark per step: pull out the iron filings with a magnet; add water and stir until the salt dissolves; filter, so the sand stays on the filter paper (rinse and dry it); evaporate or crystallise the filtrate to get the salt.</li>
-<li>(b) [1] iron <span class="nw">2.17 ÷ 5.62 × 100 = 38.6%</span>; sand <span class="nw">1.98 ÷ 5.62 × 100 = 35.2%</span>.</li>
-<li>(c) [2] Error: the separated solids were still wet, or carried other material (for example sand stuck to the iron, or the iron oxidised), so 2.17 + 1.98 + 1.80 = 5.95 g is more than 5.62 g. Reduce it: dry each solid to constant mass (heat, weigh, repeat until the mass stops changing) before weighing.</li>
-<li>(d) [1] The hypothesis judged by how much space the iron took up, but iron is much denser than sand and salt, so a small volume of iron has a large mass.</li>
-<li>(e) [2] Fractional distillation; the two liquids have different boiling points (methanol about 65 °C, butan-1-ol about 118 °C).</li>
-</ul></details>
-
-<h2>3. Formative Assessment 1 Paper 2 HL (only if you have the questions)</h2>
-{timer('chem-fa1-p2', 'FA1 Paper 2 HL', 3000, 'The mark scheme totals 29 marks (counted from its Total column; one row shows no total and is counted as 1). At HL Paper 2 pace that is 48 min 20 s; 50 minutes matches the Paper 1 of the same assessment.')}
-<div class="step"><div class="bh"><b>Mark it</b><span>about 10 min</span></div><ol>
-<li>Use the <a href="{FA1P2MS}">FA1 Paper 2 HL mark scheme</a>. Its question numbers come from the original past papers, so match the parts by their content.</li>
-<li>The "Out of" box for this paper below can be changed: if your question paper shows a different total, type that in.</li></ol></div>
-
-<h2>4. Biology Grade 11 combined paper HL (30 marks)</h2>
-{timer('bio-combined', 'Biology combined paper 1A, 1B and 2 HL', 2160, 'No time is printed, so 1.2 minutes a mark: 30 marks = 36 minutes.')}
-<p><a href="{BIO_MS}">Grade 11 combined paper HL</a> (A1.1 water, A1.2 nucleic acids, B1.1 carbohydrates and lipids, B1.2 proteins, plus two questions, 7 and 8, on cell respiration, C1.2): questions 1 to 10 are multiple choice (10 marks), questions 11 to 14 are written (20 marks). Cover the grey answer boxes first.</p>
-<div class="step"><div class="bh"><b>Mark it</b><span>about 10 min</span></div><ol>
+<h2>1. Biology Grade 11 combined paper HL (30 marks)</h2>
+{timer('bio-combined', 'Biology combined paper 1A, 1B and 2 HL', BIO_MIN * 60, 'No time is printed, so 1.2 minutes a mark: 30 marks = 36 minutes.')}
+<p><a href="{BIO_MS}">Grade 11 combined paper HL</a> (A1.1 water, A1.2 nucleic acids, B1.1 carbohydrates and lipids, B1.2 proteins, C1.1 enzymes in question 12, and two questions, 7 and 8, on cell respiration, C1.2): questions 1 to 10 are multiple choice (10 marks), questions 11 to 14 are written (20 marks). Cover the grey answer boxes first.</p>
+<div class="tip"><b>Questions 7 and 8.</b> They are on cell respiration (C1.2), which you learn on Sunday 22 November. Try them anyway: they are one mark each, and a reasoned guess is good practice. They have their own score row, so you can see them separately.</div>
+<div class="step"><div class="bh"><b>Mark it</b><span>about {BIO_MARK} min</span></div><ol>
 <li>Uncover the grey boxes one at a time. For written answers each mark point ends with a semicolon; "OWTTE" means "or words to that effect", so your wording can differ if the meaning is the same.</li>
 <li>Do not go over the mark shown in brackets: question 12 (b) is worth [2] even though its notes mention 3 marks.</li>
-<li>Names must be in full where the scheme says so (11 (a)(i): "thymine", not "T").</li></ol></div>
+<li>Names must be in full where the scheme says so (11 (a)(i): "thymine", not "T").</li>
+<li>Write one Error log row for every mark you lost (see the Error log at the end).</li></ol></div>
 
-<h2>5. English: one Paper 1 style analysis</h2>
-{timer('eng-p1', 'English Paper 1 style analysis, one text', 4050, 'HL Paper 1 is 2 hours 15 minutes for two texts, so one text gets 67 min 30 s (about 10 minutes of that for reading, annotating and planning).')}
-<div class="step"><div class="bh"><b>The task</b><span>67 min 30 s</span></div><ol>
-<li>Choose one photograph from the <a href="{NYT}">New York Times collection</a> (a different one from your visual thinking assignment), or a print advert you can see in full.</li>
-<li>Use a guiding question as in the exam, for example: "How does the photographer use composition and framing to shape the viewer's response?" or "How do the image and the words in this advert work together to persuade its audience?"</li>
-<li>Write a guided analysis: an introduction with your overall reading, then paragraphs that each make a point about a technique (framing, angle, focus, colour, layout, typography, slogan), quote or describe the evidence, and explain its effect on the audience. End with a short conclusion.</li></ol></div>
-<div class="step"><div class="bh"><b>Mark it</b><span>about 10 min</span></div><ol>
-<li>A Paper 1 analysis is marked out of 20: four criteria worth 5 each (A understanding and interpretation, B analysis and evaluation, C focus and organisation, D language).</li>
-<li>Give yourself a rough mark per criterion, then hand it to your English teacher for a real mark. Enter the teacher's mark when you have it.</li></ol></div>
-<!-- Unverified: the English A criteria names and 5 marks each are from memory of the Language and Literature guide (first assessment 2021); no English subject guide is in the Drive folder. The 2 h 15 min HL timing was confirmed in published exam-format summaries. -->
+<h2>2. English A: one Paper 1 style cartoon analysis (20 marks)</h2>
+<p>Paper 1 gives you unseen non-literary texts, and a satirical cartoon is one possible text type. Today you write one full analysis under time, using what you practised in your class <a href="{EN_GUIDE}">Paper 1 satirical cartoons revision guide</a> ("Paper 1 Satirical Cartoons - Revision Guide (research workbook).docx") and the <a href="{EN_MODEL}">Horsey "Modern Life" model response</a> ("Paper 1 Satirical Cartoons - Horsey Modern Life - Model Response and Answers (20 of 20).docx") as your model.</p>
+<div class="step"><div class="bh"><b>Get the cartoon ready</b><span>before today</span></div><ol>
+<li>Ask someone at home to choose <b>one</b> satirical (editorial) cartoon you have not seen, for example from <a href="{CFP}">Cartooning for Peace</a> or the Pulitzer Prize winners for Illustrated Reporting and Commentary (both are on the research list in your revision guide). Not one from your own cartoon bank (step 6): those you have already analysed.</li>
+<li>They save or print it with the cartoonist, the publication and the date, and do not show it to you before the timer starts.</li>
+<li>They write a guiding question on the back in the same form as the Horsey one: "How does the cartoonist use visual and linguistic features to comment on [the issue]?" If the cartoon has no words, "visual features" alone.</li></ol></div>
+{timer('eng-p1', 'English Paper 1 style analysis, one cartoon', EN_MIN * 60, f'Your revision guide (step 7) gives HL Paper 1 as 2 hours 15 minutes for two texts, and suggests per text: read and annotate {EN_READ} min, plan {EN_PLAN} min, write {EN_WRITE} min, check {EN_CHECK} min. That is {EN_MIN} minutes.')}
+<div class="step"><div class="bh"><b>The task</b><span>{EN_MIN} min</span></div><ol>
+<li><b>Read and annotate</b> <span class="t">({EN_READ} min)</span>. Read the guiding question first. Note the audience, the purpose and the target of the satire. Annotate the cartoon with the Big 5 (audience, purpose and context; content and theme; tone, mood and register; style; structure and layout) from your <a href="{EN_BIG5}">Big 5 slides</a>, and the conventions from steps 2 to 4 of the revision guide: caricature, exaggeration, symbolism, juxtaposition, scale and placement, caption, labels, irony, colour.</li>
+<li><b>Plan</b> <span class="t">({EN_PLAN} min)</span>. Write a one-sentence thesis that answers the guiding question. Choose 3 or 4 points and group them by argument, not in the order you noticed them. The Horsey model groups them as: the contrast between the figures; the central object and setting; the language and tone; words and image working together.</li>
+<li><b>Write</b> <span class="t">({EN_WRITE} min)</span>. Introduction: text type, cartoonist, publication, date, audience, purpose, then your thesis. Each body paragraph in PEEL, using the step 5 chain from the revision guide: spot it, explain it, the effect on the reader, the link to the purpose. Never stop at naming a technique. Conclusion: judge how well the cartoon works, not only what it means. The Horsey notes say 600 to 800 focused words can reach the top bands.</li>
+<li><b>Check</b> <span class="t">({EN_CHECK} min)</span>. Fix errors, sharpen your terms, and check that every topic sentence goes back to the guiding question.</li></ol></div>
+<div class="step"><div class="bh"><b>Self-check</b><span>about {EN_MARK} min</span></div><ol>
+<li>Fill in the "Check yourself against the criteria" table at the end of the revision guide (step 7): for A understanding and interpretation, B analysis and evaluation, C focus and organisation, D language, tick Not yet, Nearly or Secure.</li>
+<li>Compare with "What lifts this response to the top band" in the Horsey file. Tick each one you did: analysis, not description (every observation followed by "which suggests" or "so that"); words and image read together; one or two points most students would miss; a conclusion that evaluates.</li>
+<li>Underline your thesis and each topic sentence: do they all answer the guiding question (C)? Circle the subject terms you used (D) and compare with the Horsey ones (juxtaposition, lexis, semantic field, bathos, passive voice).</li>
+<li>Give yourself a rough mark out of 5 for each criterion, using the Horsey 5 out of 5 notes as the top. Enter the total out of 20 below, then hand the analysis to your English teacher and replace your mark with theirs when you get it.</li>
+<li>Write the weakest criterion in the Error log, with one thing you will do differently next time.</li></ol></div>
+<p class="muted">Where these figures come from: the 2 hours 15 minutes, 20 marks per text, 5 marks per criterion and the criteria A to D are all from your class revision guide (step 7) and the Horsey model. The official IB Language and Literature guide is not in your Drive, so check them with your teacher.</p>
+
+<h2>3. Psychology: timed practice (37 marks)</h2>
+<p>This is the fourth Psychology session: no notes, under time. The structure of each paper comes from the official guide (<a href="{PS_GUIDE}">IB Psychology guide, first assessment 2027</a>): Paper 1 is 1 hour 30 minutes for 35 marks (Section A two 4-mark questions, Section B two 6-mark questions applied to an unseen situation, Section C one 15-mark essay); Paper 2 Section A has four questions on your class practicals (4, 4, 6 and 6 marks); Paper 3 (HL only) is 1 hour 45 minutes for 30 marks, with questions of 3, 6, 6 and 15 marks on a set of sources.</p>
+
+<h3>Paper 1 Sections A and B (16 marks)</h3>
+{timer('psy-p1', 'Psychology Paper 1, Sections A and B', PS_P1 * 60, f'Your 21 September practice sheet allows 10 minutes for a 4-marker and 15 for a 6-marker: 10 + 15 + 15 = 40 minutes. The official pace is 90 minutes for 35 marks, so 16 marks would be {P1_PACE * 16:.1f} minutes.')}
+<div class="step"><div class="bh"><b>Three questions</b><span>{PS_P1} min</span></div><ol>
+<li><b>(a) [4]</b> "Describe classical conditioning with reference to one example." From the <a href="{PS_EX01}">21 September exam practice sheet</a>. You wrote this on Monday 16 November: do it again from a blank page, without looking at Monday&apos;s answer. Move on at 10 minutes.</li>
+<li><b>(b) [6]</b> The dog-trainer question on the same sheet: "Explain how dog trainers might use operant conditioning principles to teach specific behaviours or reduce problematic behaviours in dogs." Read the short scenario above it first. Move on at 25 minutes.</li>
+<li><b>(c) [6]</b> <a href="{PS_SPEC}">Specimen Paper 1</a>, question 4 (Section B, human development): as the school psychologist, explain how social learning theory could be used to promote empathy or prosocial behaviour among children. Stop at 40 minutes.</li></ol></div>
+
+<h3>Research methods (12 marks)</h3>
+{timer('psy-rm', 'Psychology research methods', PS_RM * 60, f'Plan: {RM_READ} min to re-read the study, {RM_Q5} min for Q5, {RM_Q6} min for Q6, {RM_MEAS} min for the 4-mark Paper 2 style question. The class task allowed 20 to 25 minutes for all six questions open book; the official pace (90 minutes for 35 marks) gives a 4-mark question about 10 minutes.')}
+<div class="step"><div class="bh"><b>Two tasks</b><span>{PS_RM} min</span></div><ol>
+<li><a href="{PS_RM04}">Evaluating research task</a> ("RM04 Research methodology - Evaluating research, breathing study - Application task (class).docx"): re-read Ms Patel&apos;s breathing study, then answer <b>Q5 [4]</b> (reliability and construct validity of her anxiety questionnaire, and one improvement) and <b>Q6 [4]</b> (her claim about "all IB students", with population validity and ecological validity). This time with no notes.</li>
+<li><b>Paper 2 Section A style [4]:</b> "Explain the concept of measurement in relation to your class practical." This is a question from your <a href="{PS_RM06}">class practical planning template</a>. If you did not take part in the class experiment, use a simple experiment you can describe, for example "Does background music affect how many words people remember?". Cover how the independent and dependent variables were operationalised, how they were measured, and one limitation of that measurement.</li></ol></div>
+
+<h3>Paper 3 (HL): questions 1 and 2 (9 marks)</h3>
+{timer('psy-p3', 'Psychology specimen Paper 3, Q1 and Q2', PS_P3 * 60, f'The official pace is 105 minutes for 30 marks, so 9 marks would be {P3_PACE * 9:.1f} minutes, but that time includes reading all five sources for question 4. You only need sources 1 and 2, so 25 minutes.')}
+<div class="step"><div class="bh"><b>Two questions</b><span>{PS_P3} min</span></div><ol>
+<li>In the <a href="{PS_SPEC}">specimen file</a>, find the Paper 3 question paper (it has source 1, a bar chart, and the four questions) and the resource booklet that follows it (source 2 is a table and a box plot).</li>
+<li><b>Q1 [3]</b> "Explain one issue that limits the interpretation of the data in source 1." Only your first issue counts, so pick one and explain it fully.</li>
+<li><b>Q2 [6]</b> "Analyse the findings from source 2 and state a conclusion linked to the claim that the use of technology in education may have a negative effect on the mental health of students." Use the numbers, and end with a conclusion that is clearly linked to them.</li>
+<li>Leave questions 3 and 4 for another day.</li></ol></div>
+
+<h3>Mark it with the markbands</h3>
+<div class="step"><div class="bh"><b>Marking</b><span>{PS_MARK} min</span></div><ol>
+<li><b>Paper 1 (a), (b), (c)</b> <span class="t">(10 min)</span>. The markbands are at the start of the specimen Paper 1 markscheme (also guide pages 45 to 46). Section A, out of 4: 1 to 2 limited knowledge, the example is relevant but not explained; 3 to 4 detailed knowledge, the example is relevant and explained. Section B, out of 6: 1 to 2 limited; 3 to 4 some detail, mostly accurate, application partly developed; 5 to 6 accurate and detailed, application well developed. For (a) also check the PEEL word guide on the <a href="{PS_EX01}">practice sheet</a> and the "examiner would be looking for" notes in the <a href="{PS_LC02}">classical conditioning slides</a>; for (b) the three Identify, Explain, Apply cycles on the same sheet; for (c) the notes under question 4 in the specimen markscheme (you must suggest a strategy, not only describe the theory).</li>
+<li><b>Research methods</b> <span class="t">(8 min)</span>. There is no mark scheme for the evaluating research task in your Drive, so use my points below. For the measurement question use the official markband for Paper 2 Section A question 2 (guide pages 47 to 48): 1 to 2 the concept is relevant but limited, with some links to the practical; 3 to 4 the concept is well developed, with clear and detailed links.</li>
+<li><b>Paper 3</b> <span class="t">(7 min)</span>. Specimen Paper 3 markscheme (also guide page 50): Q1 gives 1 if the issue is identified, 2 if clearly described, 3 if explained. Q2: 1 to 2 limited or inaccurate analysis; 3 to 4 accurate but lacking detail, with an unclear link to the conclusion; 5 to 6 analysed in detail, with a conclusion explicitly linked to the findings.</li>
+<li><b>Weak points</b> <span class="t">(5 min)</span>. Write your three weakest points in the Error log. They are what you fix first in the exam window.</li></ol></div>
+<details><summary>My points for the evaluating research task, Q5 and Q6 (not the teacher&apos;s mark scheme)</summary>
+<p><b>Q5 [4]:</b> one mark for each point that is explained and tied to Ms Patel&apos;s study.</p>
+<ul>
+<li>Reliability: she wrote the 5-item questionnaire herself and never tested it, for example by giving it twice to the same students to see if the scores stay the same (test-retest). So we do not know if it gives consistent scores.</li>
+<li>Construct validity: we do not know whether the items measure exam anxiety, the construct, rather than general stress or mood; it was never compared with an established, already tested anxiety measure.</li>
+<li>The students knew the aim, so their answers may show what they think she wants to hear, which also weakens what the scores mean.</li>
+<li>Improvement: use an established anxiety scale, or pilot her questionnaire, check test-retest reliability and compare its scores with an established scale.</li>
+</ul>
+<p><b>Q6 [4]:</b> about 2 marks for population validity and 2 for ecological validity, each 1 for the problem with evidence from the study and 1 for what it means for her claim.</p>
+<ul>
+<li>Population validity: 24 volunteers (self-selected through a library poster) from one Grade 11 class in one school, all her own students. Volunteers may be more interested in breathing exercises or more anxious, so the sample does not represent "all IB students".</li>
+<li>Ecological validity: a mock exam at school is quite close to real life, which is a strength, but a mock has lower stakes than a real IB exam, and the exercise was led by the students&apos; own teacher, so the effect may be different in real exams.</li>
+<li>Judgement: the claim is far too broad. At most the study suggests the exercise might help these students in this setting, and the word "cause" is not justified while order effects and her own marking are not controlled.</li>
+</ul></details>
+<details><summary>Numbers from specimen source 2, worked out to check your Q2 analysis (open after the timer)</summary>
+<ul>
+<li>25 students in each group; scores out of 30, and higher means better mental health.</li>
+<li>Mean: {HS['mean']} with high screen time against {NS['mean']} with no screen time, so {d_mean} points lower. Median: {HS['med']} against {NS['med']}, so {d_med} lower.</li>
+<li>Standard deviation: {HS['sd']} against {NS['sd']}, so the no screen time scores are a little more spread out.</li>
+<li>Range: {HS['mx']} − {HS['mn']} = {r_hs} and {NS['mx']} − {NS['mn']} = {r_ns}, about the same.</li>
+<li>Box plot: the middle half of the high screen time group runs from {HS['q1']} to {HS['q3']} and of the no screen time group from {NS['q1']} to {NS['q3']}, so the two boxes only meet at {HS['q3']}.</li>
+</ul><p class="muted">The markscheme decides the marks. A strong conclusion also says what the data cannot show: one day and one task only.</p></details>
+
+<h2>Optional: Biology mock paper selection ({MOCK_MARKS} marks)</h2>
+<p><b>Not part of today&apos;s four hours.</b> Do this only if you have a spare slot before the exam window starts on Monday 23 November. It uses the <a href="{MOCK_Q}">mock exam practice questions</a> ("Mock Exam Grade 11 Practice - Questions (SaveMyExams).pdf"), marked with the <a href="{MOCK_MS}">mock exam mark scheme</a> ("Mock Exam Grade 11 Practice - Mark Scheme (SaveMyExams).pdf"). You need graph paper for question 48 and a calculator.</p>
+{timer('bio-mock', 'Biology mock selection', MOCK_SEC, f'1.2 minutes a mark, as for the combined paper: {MOCK_MARKS} marks × 1.2 = {MOCK_MARKS * 1.2:.1f} minutes.')}
+<div class="tablewrap"><table>
+<tr><th>Mock question</th><th>Topic</th><th>Marks</th><th>Also in your topical packs as</th></tr>
+{mock_rows}</table></div>
+<div class="tip"><b>Seen it already?</b> The mock and your HL topical packs come from the same question bank, so most of these questions are also in the packs (last column). If you already did one of them on a Biology day, skip it here and leave its row empty (for the multiple choice row, lower its "Out of" box instead): a question you have seen is not a test. The cell respiration (C1.2) questions of the mock are left out, because you learn C1.2 on Sunday 22 November.</div>
+<div class="step"><div class="bh"><b>Mark it</b><span>about 15 min</span></div><ol>
+<li>Open the <a href="{MOCK_MS}">mark scheme</a> only after the timer. Give a mark only for a point that matches the scheme or says the same thing in other words.</li>
+<li>Question 29 has one mark for clarity of communication: give it only if your answer is clear and in a logical order.</li>
+<li>Write one Error log row for every mark you lost.</li></ol></div>
 
 <h2>Your scores</h2>
-<p class="muted">Leave a row empty if you did not sit that paper; it then does not count in the total.</p>
-{score_table([('chem-quiz1','Chemistry Quiz 1 Paper 2 HL',12,False),('chem-fa1-1a','FA1 Paper 1A (multiple choice)',20,False),('chem-fa1-1b','FA1 Paper 1B',10,False),('chem-fa1-p2','FA1 Paper 2 (if you had the questions)',29,True),('bio-combined','Biology combined paper HL',30,False),('eng-p1','English Paper 1 analysis (teacher or self mark)',20,False)])}
+<p class="muted">Leave a row empty if you did not do that part; it then does not count in the total. Today&apos;s papers add up to {T_BIO} (Biology) + {T_EN} (English) + {T_PS} (Psychology) = {T_DAY} marks; with the optional Biology selection ({T_MOCK}) the maximum is {T_ALL}.</p>
+{score_table(SC_BIO + SC_EN + SC_PS + SC_MOCK)}
 
 <h2>Error log</h2>
-{errlog('<li>Add the papers to the Error log by subject. Then pick the three topics where you lost most marks today: they go first in next week&apos;s plan.</li>').replace('{q}','FA1 Paper 1A Q11')}
-
-<h2>Not timed: Extended Essay</h2>
-<div class="step"><div class="bh"><b>Meeting</b><span>agree the research question</span></div><ol>
-<li>Take the three research questions from Saturday 14 November to your supervisor.</li>
-<li>Ask: which is the most focused? Does it fit the subject&apos;s EE requirements? Is 4,000 words enough, or too much? What should you read or do first?</li>
-<li>Write the agreed question and the next steps in a document in your <a href="{EE_FOLDER}">EE folder</a> straight after the meeting.</li></ol></div>
-<p>Also on the study site: <a href="../flashcards.html">flashcards</a>, <a href="../exam-chemistry-hl.html">exam technique for Chemistry HL</a>, <a href="../exam.html">exam technique</a> and your <a href="../progress.html">progress page</a>.</p>
+{errlog('<li>Add today&apos;s papers to the Error log by subject. Then pick the three topics where you lost most marks: they go first in the exam window plan.</li>').replace('{q}', 'Bio combined Q12 (b)')}
+<p>Also on the study site: <a href="../flashcards.html">flashcards</a>, <a href="../exam.html">exam technique</a> and your <a href="../progress.html">progress page</a>.</p>
 '''
-build('2026-11-21-mock-papers.html', 'Mock papers: Chemistry, Biology, English (Sat 21 Nov 2026)',
-      'Mock papers: Chemistry, Biology and English',
-      'Saturday 21 November 2026. Sit Chemistry Quiz 1 and Formative Assessment 1 under timed conditions, then the Biology Grade 11 combined paper and one English Paper 1 style analysis. Mark each straight away and log your mistakes. Then agree your Extended Essay research question with your supervisor.',
+build('2026-11-21-mock-papers.html', 'Mock papers: Biology, English, Psychology (Sat 21 Nov 2026)',
+      'Mock papers: Biology, English and Psychology',
+      'Saturday 21 November 2026. Four hours: two hours of timed practice (the Biology Grade 11 combined paper and one English Paper 1 style cartoon analysis), then two hours of timed Psychology practice. Mark each part straight away with the mark schemes and markbands, and log your mistakes.',
       body3, '2026-11-21')

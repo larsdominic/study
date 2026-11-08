@@ -26,32 +26,6 @@ Algebraic form of an even and of an odd integer	Even 2k, odd 2k + 1. Two differe
 Command term "Write down"	Obtain the answer, usually by extracting information. Little or no calculation; working does not need to be shown.	IB::Maths Exam
 Command term "Hence"	Use the preceding work to obtain the required result. Another method scores nothing.	IB::Maths Exam
 Paper 1 and Paper 2: calculator?	Paper 1: no calculator. Paper 2: GDC required. Both 90 minutes, 80 marks.	IB::Maths Exam
-Element, compound, mixture	Element: one kind of atom, cannot be broken down chemically. Compound: different elements chemically bonded in a fixed ratio. Mixture: not chemically bonded, no fixed ratio, separable by physical methods.	IB::Chemistry S1.1
-Homogeneous vs heterogeneous mixture	Homogeneous: uniform composition, one phase (salt water, air). Heterogeneous: not uniform, more than one phase (sand in water).	IB::Chemistry S1.1
-The six separation techniques in the IB guide	Solvation, filtration, recrystallisation, evaporation, distillation, paper chromatography.	IB::Chemistry S1.1
-What property does each use: distillation, filtration, paper chromatography?	Distillation: boiling point. Filtration: particle size (insoluble solid). Chromatography: different attraction to the stationary and mobile phase.	IB::Chemistry S1.1
-Name the six changes of state	Melting, freezing, vaporisation (evaporation and boiling), condensation, sublimation (solid to gas), deposition (gas to solid).	IB::Chemistry S1.1
-Why does temperature stay constant while a liquid boils?	Energy goes into overcoming forces between particles (potential energy rises), not into kinetic energy, so average kinetic energy and temperature stay the same.	IB::Chemistry S1.1
-What does temperature in kelvin measure? Convert °C to K.	The average kinetic energy of the particles. T(K) = T(°C) + 273.	IB::Chemistry S1.1
-Relative mass and charge of proton, neutron, electron	Proton 1, +1. Neutron 1, 0. Electron negligible (1/1836), −1.	IB::Chemistry S1.2
-In the nuclear symbol, what are A and Z?	A (top left): mass number = protons + neutrons. Z (bottom left): atomic number = protons.	IB::Chemistry S1.2
-Electrons in an ion	Z − charge. Fe<sup>3+</sup>: 26 − 3 = 23. Cl<sup>−</sup>: 17 + 1 = 18.	IB::Chemistry S1.2
-Isotopes: definition, and why the same chemistry?	Atoms of the same element with different numbers of neutrons. Same chemistry because they have the same number and arrangement of electrons; different mass, so different physical properties.	IB::Chemistry S1.2
-Relative atomic mass from abundances	A<sub>r</sub> = Σ(isotope mass × % abundance) ÷ 100. If the abundances do not add to 100, divide by their total.	IB::Chemistry S1.2
-(HL) Mass spectrum: what do peak position and height tell you?	Position (m/z) identifies the isotope; height gives its relative abundance.	IB::Chemistry S1.2
-Continuous vs line spectrum	Continuous: all wavelengths, no gaps. Line: only certain wavelengths, separate lines on a dark background.	IB::Chemistry S1.3
-Why is the hydrogen line spectrum evidence for energy levels?	Only certain photon energies are emitted, so electrons can only have certain (discrete) energies. The lines converge because the levels converge.	IB::Chemistry S1.3
-Hydrogen: falls to n = 1, n = 2, n = 3 give which region?	n = 1: ultraviolet. n = 2: visible. n = 3: infrared.	IB::Chemistry S1.3
-Maximum electrons in main level n, and in s, p, d, f	2n<sup>2</sup>. s 2, p 6, d 10, f 14.	IB::Chemistry S1.3
-Aufbau, Pauli, Hund in one line each	Aufbau: fill lowest energy first. Pauli: max 2 electrons per orbital, opposite spins. Hund: single electrons with parallel spins in degenerate orbitals before pairing.	IB::Chemistry S1.3
-Configurations of Cr and Cu	Cr [Ar] 4s<sup>1</sup> 3d<sup>5</sup>. Cu [Ar] 4s<sup>1</sup> 3d<sup>10</sup>.	IB::Chemistry S1.3
-Transition metal ions lose which electrons first?	4s, even though 4s filled first. Fe<sup>2+</sup> is [Ar] 3d<sup>6</sup>.	IB::Chemistry S1.3
-(HL) Definition of first ionisation energy	The minimum energy to remove one mole of electrons from one mole of gaseous atoms to form one mole of gaseous 1+ ions. M(g) → M<sup>+</sup>(g) + e<sup>−</sup>.	IB::Chemistry S1.3
-(HL) What does the convergence limit correspond to?	Ionisation: the electron is removed completely (n = ∞).	IB::Chemistry S1.3
-(HL) First IE across a period and down a group	Across: increases (nuclear charge up, shielding about the same). Down: decreases (outer electron further away and more shielded).	IB::Chemistry S1.3
-(HL) The two dips in first IE across period 2	B lower than Be (removing a higher-energy p electron). O lower than N (removing the first paired p electron; pair repulsion).	IB::Chemistry S1.3
-(HL) How do successive IEs give the group?	Count the electrons removed before the first big jump: that is the number of outer electrons, so the group.	IB::Chemistry S1.3
-Paper 1A: wrong answers?	40 multiple-choice questions and no marks deducted for wrong answers, so never leave one blank.	IB::Chemistry Exam
 Name the four sectors of the economy with one example each	Primary: takes natural resources (farm, mine). Secondary: manufacturing and construction (factory). Tertiary: services to people (shop, bank). Quaternary: knowledge and information (software, research).	IB::Business 1.1
 Added value	Selling price minus the cost of bought-in materials and services. Wages, rent and profit come out of it, so it is <b>not</b> profit.	IB::Business 1.1
 Entrepreneur vs intrapreneur	Entrepreneur: spots an opportunity, organises the resources and takes the risk of starting a business. Intrapreneur: an employee who acts entrepreneurially inside an existing organisation, using its resources.	IB::Business 1.1
@@ -88,24 +62,6 @@ Identity property of an inverse	(f ∘ f<sup>−1</sup>)(x) = (f<sup>−1</sup> 
 Four steps to find f<sup>−1</sup>(x)	Write y = f(x), swap x and y, make y the subject, write f<sup>−1</sup>(x) = ... and state its domain (the range of f).	IB::Maths SL_2.5
 Is f<sup>−1</sup>(x) the same as 1/f(x)?	No. f<sup>−1</sup> undoes f. For f(x) = 2x + 1, f<sup>−1</sup>(x) = (x − 1)/2, but 1/f(x) = 1/(2x + 1).	IB::Maths SL_2.5
 Inverse of f(x) = (x − 1)<sup>2</sup> + 3, x ≥ 1: plus or minus root?	Plus: f<sup>−1</sup>(x) = 1 + √(x − 3), x ≥ 3, because the range of f<sup>−1</sup> must be the domain of f (y ≥ 1).	IB::Maths SL_2.5
-What is one mole?	The amount of substance that contains exactly N<sub>A</sub> elementary entities (atoms, molecules, ions, electrons or a specified group). N<sub>A</sub> = 6.02 × 10<sup>23</sup> mol<sup>−1</sup> (in the data booklet).	IB::Chemistry S1.4
-Number of particles from moles	N = n × N<sub>A</sub>. Then multiply by the atoms or ions per formula if the question asks for those.	IB::Chemistry S1.4
-Units of A<sub>r</sub>, M<sub>r</sub> and molar mass M	A<sub>r</sub> and M<sub>r</sub>: no units (relative to <sup>12</sup>C). M: g mol<sup>−1</sup>, same number as M<sub>r</sub>.	IB::Chemistry S1.4
-Empirical formula vs molecular formula	Empirical: simplest whole-number ratio of atoms. Molecular: actual number of atoms in one molecule, a whole-number multiple of the empirical formula (multiple = M ÷ M of empirical formula).	IB::Chemistry S1.4
-Steps from % by mass to empirical formula	Divide each % by A<sub>r</sub>, divide by the smallest, then make whole numbers (1.33 → ×3, 1.5 → ×2). Do not round early.	IB::Chemistry S1.4
-Concentration units and conversion	mol dm<sup>−3</sup> and g dm<sup>−3</sup>. g dm<sup>−3</sup> = mol dm<sup>−3</sup> × M. Square brackets mean molar concentration: [NaCl]. n = CV with V in dm<sup>3</sup> (cm<sup>3</sup> ÷ 1000).	IB::Chemistry S1.4
-Avogadro's law	Equal volumes of all gases at the same temperature and pressure contain equal numbers of molecules, so for gases the volume ratio equals the mole ratio.	IB::Chemistry S1.4
-Four assumptions of the ideal gas model	Particles in constant random motion; negligible particle volume; no intermolecular forces; elastic collisions (no loss of total kinetic energy).	IB::Chemistry S1.5
-When do real gases deviate most, and why?	Low temperature and high pressure: particle volume is no longer negligible and intermolecular attractions matter. Larger and more polar molecules deviate more.	IB::Chemistry S1.5
-STP conditions and molar volume	STP: 273.15 K and 100 kPa (both in the data booklet; using 273 K is accepted). Molar volume of an ideal gas at STP: 22.7 dm<sup>3</sup> mol<sup>−1</sup> (in the data booklet).	IB::Chemistry S1.5
-Units for PV = nRT	SI only: P in Pa, V in m<sup>3</sup>, T in K, R = 8.31 J K<sup>−1</sup> mol<sup>−1</sup>. cm<sup>3</sup> × 10<sup>−6</sup> = m<sup>3</sup>; dm<sup>3</sup> × 10<sup>−3</sup> = m<sup>3</sup>; kPa × 10<sup>3</sup> = Pa.	IB::Chemistry S1.5
-Gas graphs: P against V, P against 1/V, V against T	P against V: curve. P against 1/V: straight line through the origin. V against T in K: straight line through the origin; against T in °C it meets the axis at −273 °C.	IB::Chemistry S1.5
-Molar mass of a gas from PV = nRT	M = mRT ÷ PV (or find n = PV ÷ RT, then M = m ÷ n).	IB::Chemistry S1.5
-Three steps of a reacting-amounts calculation	1. Moles of what you know. 2. Multiply by the mole ratio (wanted coefficient ÷ given coefficient). 3. Convert to mass, volume or concentration.	IB::Chemistry R2.1
-How to find the limiting reactant	Divide the moles of each reactant by its coefficient in the equation; the smallest result is limiting. It sets the theoretical yield; the others are in excess.	IB::Chemistry R2.1
-Theoretical vs experimental yield, and % yield	Theoretical: the most product possible from the limiting reactant. Experimental: what is actually obtained. % yield = experimental ÷ theoretical × 100 (learn).	IB::Chemistry R2.1
-Why can a % yield be below or above 100%?	Below: incomplete or reversible reaction, side reactions, losses in transfer or purification. Above: product wet or impure (always an error).	IB::Chemistry R2.1
-Atom economy	Molar mass of desired product ÷ total molar mass of all reactants × 100, using the equation coefficients (in the data booklet). Higher atom economy means less waste; an addition reaction with one product has 100%.	IB::Chemistry R2.1
 What is a hydrogen bond in water?	The attraction between a δ+ hydrogen of one water molecule and the δ− oxygen of a neighbouring molecule. It is between molecules; the O-H bonds inside a molecule are polar covalent.	IB::Biology A1.1
 Why is a water molecule polar?	Oxygen is more electronegative than hydrogen, so it pulls the shared electrons towards itself (O δ−, H δ+), and the bent shape (about 104.5°) stops the charges cancelling.	IB::Biology A1.1
 Cohesion vs adhesion	Cohesion: water sticking to water (hydrogen bonds between water molecules). Adhesion: water sticking to other polar or charged materials such as cellulose, xylem walls, glass, soil.	IB::Biology A1.1
@@ -129,3 +85,28 @@ Why is the universal genetic code evidence for common ancestry?	Which triplet co
 (HL) Structure of a nucleosome	DNA wound about twice round a core of eight histone proteins (two each of four types), held by an H1 histone, with linker DNA to the next nucleosome. Prokaryotes have none.	IB::Biology A1.2
 (HL) Hershey-Chase: labels and results	<sup>35</sup>S labels protein and ended in the supernatant (stayed outside). <sup>32</sup>P labels DNA and ended in the pellet (entered the bacteria). So DNA is the genetic material.	IB::Biology A1.2
 (HL) What did Chargaff find, and what did it falsify?	A ≈ T and G ≈ C, but the proportions differ between species and are not 25% each. This falsified the tetranucleotide hypothesis (four bases in equal, repeating amounts).	IB::Biology A1.2
+Psychology (class definition)	The scientific study of behaviour and mental processes.	IB::Psychology Frame
+The six concepts	Bias, causality, change, measurement, perspective, responsibility.	IB::Psychology Frame
+The four content areas	Biological, cognitive and sociocultural approaches, plus research methodology.	IB::Psychology Frame
+The four contexts	Health and well-being; human development; human relationships; learning and cognition.	IB::Psychology Frame
+The two HL extensions	The role of culture, motivation and technology in shaping human behaviour; data analysis and interpretation.	IB::Psychology Frame
+HL papers: time, marks, weight	P1 1 h 30, 35 marks, 25%. P2 1 h 30, 35 marks, 25%. P3 1 h 45, 30 marks, 30%.	IB::Psychology Frame
+The IA (HL)	Research proposal: design a study but do not carry it out. 24 marks, 20%, max 2 200 words.	IB::Psychology Frame
+Describe	Give a detailed account.	IB::Psychology Command_terms
+Explain	Give a detailed account including reasons or causes.	IB::Psychology Command_terms
+Evaluate	Make an appraisal by weighing up the strengths and limitations.	IB::Psychology Command_terms
+Discuss	Offer a considered and balanced review that includes a range of arguments, factors or hypotheses. Opinions or conclusions should be presented clearly and supported by appropriate evidence.	IB::Psychology Command_terms
+Compare and contrast	Give an account of similarities and differences between two (or more) items or situations, referring to both (all) of them throughout.	IB::Psychology Command_terms
+Bias (opening statement)	A bias is a limitation in objective thinking; it is a tendency to perceive information through a cognitive filter of experience and preference.	IB::Psychology Concepts
+Causality (opening statement)	Psychologists investigate the relationship between variables with the goal of determining cause-and-effect relationships.	IB::Psychology Concepts
+Change (opening statement)	A key focus of psychological research is how to apply theory and psychological findings with the goal of changing individual behaviours.	IB::Psychology Concepts
+Measurement (opening statement)	A fundamental challenge for psychologists is that human behaviour is difficult to observe and objectively measure.	IB::Psychology Concepts
+Perspective (opening statement)	No single perspective explains behaviour sufficiently on its own; each provides a means by which to interpret and examine behaviour.	IB::Psychology Concepts
+Responsibility (opening statement)	Psychologists rely on humans as participants in their research; the relationship between researchers and participants is based on the premise of treating each other with respect.	IB::Psychology Concepts
+Operationalisation (guide glossary)	Stating exactly how a variable will be manipulated or measured in experimental research.	IB::Psychology RM
+IV and DV	IV: what the researcher changes (at least two conditions). DV: what the researcher measures.	IB::Psychology RM
+True experiment (guide glossary)	A controlled experiment where researchers manipulate an independent variable to observe its impact on a dependent variable, using random allocation of participants to conditions to ensure causation.	IB::Psychology RM
+True vs quasi-experiment: the key difference	Random allocation. In a quasi-experiment the groups already exist (age, gender, diagnosis), so it cannot establish cause and effect.	IB::Psychology RM
+Extraneous vs confounding variable	Extraneous: anything other than the IV that could affect the DV. Confounding: an extraneous variable not controlled that differs between conditions.	IB::Psychology RM
+The five sampling techniques in the guide	Self-selected, opportunity, stratified, random, snowball.	IB::Psychology Sampling
+Random sampling vs random allocation	Random sampling: every member of the population has an equal chance of being in the study. Random allocation: chance decides each participant's condition.	IB::Psychology Sampling
