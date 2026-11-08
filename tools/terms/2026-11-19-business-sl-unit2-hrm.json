@@ -1,0 +1,617 @@
+{
+ "minutes": 7,
+ "background": [
+  {
+   "title": "People in a business",
+   "html": "<p>A business has <b>owners</b> (for a company, its <b>shareholders</b>), <b>managers</b> who run it day to day, and <b>staff</b> who do the work.</p><ul><li>An <b>employee</b> has a contract with the business: regular pay, set hours, rights such as holidays and sick pay.</li><li>A <b>self-employed</b> worker works for themselves and sells their work to the business, task by task, with no employee rights.</li></ul><p>Unit 2 is about how a business plans, organises, leads and motivates these people. Business calls them its <b>human resources</b>, because people are a resource, like money or machines, that must be managed well.</p>"
+  },
+  {
+   "title": "Pay, costs and profit",
+   "html": "<p>Money in: <b>revenue</b> = price × number sold. Money out: <b>costs</b>, such as materials, rent and pay. <b>Profit</b> = revenue − costs.</p><p>Staff pay is a cost. A <b>wage</b> is usually paid per hour or per item and often weekly; a <b>salary</b> is a fixed amount per year, paid monthly. A cleaner might earn a wage of $12 an hour; an accountant a salary of $48&nbsp;000 a year, which is $4&nbsp;000 a month.</p><p>That is why HR decisions are also money decisions: hiring, training and pay rises raise costs today, and the business hopes they raise output or quality, and so profit, later.</p>"
+  },
+  {
+   "title": "Who is in charge of whom",
+   "html": "<p>In most organisations people <b>report to</b> someone: their boss gives them work and checks it. In a school, teachers report to a head of department, who reports to the principal.</p><p>Bosses have <b>authority</b>: the right to give instructions and make decisions. The people who report to a manager are their <b>subordinates</b>.</p><p>Drawing all these links as boxes and lines gives an <b>organisation chart</b>: the top box is the most senior person, and each row below is one <b>level</b>. Section 2.2 uses this picture all the time, so try drawing your own school's chart.</p>"
+  },
+  {
+   "title": "Why people work",
+   "html": "<p>People work for money, but not only for money. Think of a part-time job: the pay matters, but so do friendly colleagues, being trusted with something important, being praised and learning new skills.</p><p>When people want to work well, managers say they are <b>motivated</b>. Motivated staff produce more, make fewer mistakes and stay longer, which saves the business money. When people stop caring, they are <b>demotivated</b>: they do the minimum, take more days off or leave.</p><p>Section 2.4 gives three theories that explain what motivates people at work, and the rewards a business can use.</p>"
+  },
+  {
+   "title": "How Business exam questions work",
+   "html": "<p>Most questions are about a <b>case</b>: a short text about one business. The examiner wants business ideas used <b>on that business</b>.</p><ul><li>The <b>command term</b> (explain, evaluate...) says how deep to go. Tap any command term on the page to see its meaning.</li><li>The <b>marks</b> say how much to write: \"explain two reasons [4]\" means two points of 2 marks each, one for the point and one for explaining it with the case.</li><li>Long answers (10 marks) need arguments on both sides and a <b>judgement</b>.</li></ul>"
+  }
+ ],
+ "terms": [
+  {
+   "key": "explain",
+   "word": "explain",
+   "match": [
+    "explain"
+   ],
+   "def": "IB command term (AO2): give a detailed account including reasons or causes. Say what happens <b>and why</b>, linked to the case."
+  },
+  {
+   "key": "evaluate",
+   "word": "evaluate",
+   "match": [
+    "evaluate"
+   ],
+   "def": "IB command term (AO3): weigh up the strengths and the limitations, then reach a judgement."
+  },
+  {
+   "key": "recommend",
+   "word": "recommend",
+   "match": [
+    "recommend"
+   ],
+   "def": "IB command term (AO3): advise what the business should do, with evidence and reasons from the case."
+  },
+  {
+   "key": "discuss",
+   "word": "discuss",
+   "match": [
+    "discuss"
+   ],
+   "def": "IB command term (AO3): give a balanced review with arguments on more than one side, and a clear conclusion backed by evidence."
+  },
+  {
+   "key": "ao",
+   "word": "AO2, AO3, AO4",
+   "match": [
+    "AO2",
+    "AO3"
+   ],
+   "def": "Assessment objective: how deep the IB goes on a topic. <b>AO2</b>: explain and apply to a case. <b>AO3</b>: evaluate, discuss or recommend. <b>AO4</b>: a skill, such as calculating or drawing a chart."
+  },
+  {
+   "key": "command term",
+   "word": "command term",
+   "match": [
+    "command term"
+   ],
+   "def": "The instruction word in an exam question, such as <i>explain</i> or <i>evaluate</i>. It tells you what kind of answer the examiner wants."
+  },
+  {
+   "key": "markband",
+   "word": "markbands",
+   "match": [
+    "markbands"
+   ],
+   "def": "Levels (1 to 2, 3 to 4 ... 9 to 10) used to mark a long answer. Each has a description, and your answer gets the band it fits best."
+  },
+  {
+   "key": "judgement",
+   "word": "judgement",
+   "match": [
+    "judgement"
+   ],
+   "def": "Your final decision in an evaluation, with the main reason and what it depends on: 'Yes, because..., but only if...'."
+  },
+  {
+   "key": "limitation",
+   "word": "limitation",
+   "match": [
+    "limitation"
+   ],
+   "def": "A weakness or missing piece in an argument or in the data, so you cannot be fully sure. In a 10-mark answer: what the case does not tell you."
+  },
+  {
+   "key": "objectives",
+   "word": "objectives",
+   "match": [
+    "objectives"
+   ],
+   "def": "The targets a business sets itself, such as growing sales by 10% or opening five new stores."
+  },
+  {
+   "key": "workforce",
+   "word": "workforce",
+   "match": [
+    "workforce"
+   ],
+   "def": "All the people who work for a business."
+  },
+  {
+   "key": "demographic change",
+   "word": "demographic change",
+   "match": [
+    "demographic change"
+   ],
+   "def": "A change in a country's population: its size, ages, birth rate or education. For example, an ageing population means more people near retirement and fewer young workers."
+  },
+  {
+   "key": "labour mobility",
+   "word": "labour mobility",
+   "match": [
+    "labour mobility"
+   ],
+   "def": "How easily workers can change job (occupational mobility) or move to another place for work (geographical mobility)."
+  },
+  {
+   "key": "immigration",
+   "word": "immigration",
+   "match": [
+    "immigration"
+   ],
+   "def": "People moving into a country to live and work. It can give businesses more workers and skills that are in short supply."
+  },
+  {
+   "key": "flexi-time",
+   "word": "flexi-time",
+   "match": [
+    "flexi-time"
+   ],
+   "def": "A system where staff choose when to start and finish work, as long as they work their agreed total hours."
+  },
+  {
+   "key": "gig economy",
+   "word": "gig economy",
+   "match": [
+    "gig economy"
+   ],
+   "def": "Work made of short, one-off jobs ('gigs') paid per task, such as food deliveries, usually done by self-employed people, not employees."
+  },
+  {
+   "key": "self-employed",
+   "word": "self-employed",
+   "match": [
+    "self-employed"
+   ],
+   "def": "Working for yourself and selling your work, not being an employee: no fixed wage, no holiday pay, but freedom to choose jobs."
+  },
+  {
+   "key": "dismissal",
+   "word": "dismissal",
+   "match": [
+    "dismissal"
+   ],
+   "def": "Ending someone's job because of something they did, such as poor work or breaking rules. In everyday words: being sacked."
+  },
+  {
+   "key": "redundancy",
+   "word": "redundancy",
+   "match": [
+    "redundancy",
+    "redundancies"
+   ],
+   "def": "Losing your job because the job itself is no longer needed, for example after a machine takes it over. It is not the worker's fault, and the firm often pays <b>redundancy pay</b>."
+  },
+  {
+   "key": "welfare",
+   "word": "welfare",
+   "match": [
+    "welfare"
+   ],
+   "def": "People's health, safety and wellbeing. Staff welfare is how well the business looks after its staff."
+  },
+  {
+   "key": "morale",
+   "word": "morale",
+   "match": [
+    "morale"
+   ],
+   "def": "How positive and confident staff feel about their work. Low morale means unhappy staff who work less well."
+  },
+  {
+   "key": "coercion",
+   "word": "coercion",
+   "match": [
+    "coercion"
+   ],
+   "def": "Forcing people to do something with threats, for example 'accept the change or lose your job'."
+  },
+  {
+   "key": "co-option",
+   "word": "co-option",
+   "match": [
+    "co-option"
+   ],
+   "def": "Winning over a critic by giving them a role in the change, so they stop opposing it."
+  },
+  {
+   "key": "unethical",
+   "word": "unethical",
+   "match": [
+    "unethical"
+   ],
+   "def": "Morally wrong or unfair, even if it is legal."
+  },
+  {
+   "key": "authority",
+   "word": "authority",
+   "match": [
+    "authority"
+   ],
+   "def": "The right to give instructions and make decisions, which comes with a job."
+  },
+  {
+   "key": "delegation",
+   "word": "delegation",
+   "match": [
+    "delegation"
+   ],
+   "def": "A manager handing a task or decision to someone below them. Explained in 2.2."
+  },
+  {
+   "key": "span of control",
+   "word": "span of control",
+   "match": [
+    "span of control",
+    "span"
+   ],
+   "def": "The number of people who report directly to one manager."
+  },
+  {
+   "key": "hierarchy",
+   "word": "hierarchy",
+   "match": [
+    "hierarchy"
+   ],
+   "def": "The levels of an organisation from the most senior person at the top to the staff at the bottom."
+  },
+  {
+   "key": "chain of command",
+   "word": "chain of command",
+   "match": [
+    "chain of command"
+   ],
+   "def": "The line of authority from the top to the bottom of an organisation: instructions pass down it, reports pass up."
+  },
+  {
+   "key": "bureaucracy",
+   "word": "bureaucracy",
+   "match": [
+    "bureaucracy",
+    "bureaucratic"
+   ],
+   "def": "Running an organisation with lots of formal rules, forms and procedures. Good for control, but slow."
+  },
+  {
+   "key": "centralisation",
+   "word": "centralisation",
+   "match": [
+    "centralisation"
+   ],
+   "def": "Keeping decisions with a few people at the top, such as head office."
+  },
+  {
+   "key": "decentralisation",
+   "word": "decentralisation",
+   "match": [
+    "decentralisation",
+    "decentralised"
+   ],
+   "def": "Passing decisions down to lower levels or to local branches."
+  },
+  {
+   "key": "delayering",
+   "word": "delayering",
+   "match": [
+    "delayering"
+   ],
+   "def": "Removing a level of the hierarchy, usually a layer of middle managers."
+  },
+  {
+   "key": "matrix structure",
+   "word": "matrix structure",
+   "match": [
+    "matrix structure"
+   ],
+   "def": "A structure where staff work in project teams across departments, so each person has two bosses: a department manager and a project manager."
+  },
+  {
+   "key": "supervise",
+   "word": "supervisors",
+   "match": [
+    "supervisors",
+    "supervision",
+    "supervise"
+   ],
+   "def": "To <b>supervise</b> is to watch over and check other people's work. A <b>supervisor</b> is a manager at the lowest level, in charge of a small team."
+  },
+  {
+   "key": "managing director",
+   "word": "managing director (MD)",
+   "match": [
+    "managing director"
+   ],
+   "def": "The most senior manager, who runs the whole company day to day. Also called the chief executive (CEO)."
+  },
+  {
+   "key": "division",
+   "word": "division",
+   "match": [
+    "division"
+   ],
+   "def": "A large part of a company that runs one product or one region almost like a separate business."
+  },
+  {
+   "key": "recession",
+   "word": "recession",
+   "match": [
+    "recession"
+   ],
+   "def": "A period when a country's economy shrinks: people spend less, firms sell less and more people lose their jobs."
+  },
+  {
+   "key": "autocratic",
+   "word": "autocratic",
+   "match": [
+    "autocratic"
+   ],
+   "def": "A leadership style where the leader makes all decisions alone and gives orders. Explained in 2.3."
+  },
+  {
+   "key": "paternalistic",
+   "word": "paternalistic",
+   "match": [
+    "paternalistic"
+   ],
+   "def": "Like a parent: the leader decides alone, but in what they believe is the staff's best interest, and cares about their welfare."
+  },
+  {
+   "key": "democratic",
+   "word": "democratic",
+   "match": [
+    "democratic"
+   ],
+   "def": "A leadership style where staff are asked for their views or vote on decisions."
+  },
+  {
+   "key": "laissez-faire",
+   "word": "laissez-faire",
+   "match": [
+    "laissez-faire"
+   ],
+   "def": "French for 'let them do'. The leader sets the goal and leaves staff to decide how to reach it. Say it 'less-ay fair'."
+  },
+  {
+   "key": "situational",
+   "word": "situational",
+   "match": [
+    "situational"
+   ],
+   "def": "Leadership that changes style to fit the situation: the task, the staff and the time available."
+  },
+  {
+   "key": "motivation-hygiene theory",
+   "word": "motivation-hygiene theory",
+   "match": [
+    "motivation-hygiene theory",
+    "motivation-hygiene"
+   ],
+   "def": "Herzberg's theory, explained in 2.4: some things (hygiene factors, such as pay) only stop staff being unhappy; others (motivators, such as responsibility) make them want to work well."
+  },
+  {
+   "key": "piece rate",
+   "word": "piece rate",
+   "match": [
+    "piece rates",
+    "piece rate"
+   ],
+   "def": "Pay for each item produced, for example $0.40 per shirt. A <b>time rate</b> is pay per hour worked."
+  },
+  {
+   "key": "salary",
+   "word": "salary",
+   "match": [
+    "salary",
+    "salaries"
+   ],
+   "def": "A fixed amount of pay per year, usually paid monthly, whatever the hours worked."
+  },
+  {
+   "key": "commission",
+   "word": "commission",
+   "match": [
+    "commission"
+   ],
+   "def": "Pay that is a percentage of the value of what you sell. 5% commission on $40 000 of sales is $2 000."
+  },
+  {
+   "key": "performance-related pay",
+   "word": "performance-related pay",
+   "match": [
+    "performance-related pay"
+   ],
+   "def": "Extra pay or a bonus for meeting your own targets, for example a set number of sales or excellent customer ratings."
+  },
+  {
+   "key": "profit-related pay",
+   "word": "profit-related pay",
+   "match": [
+    "profit-related pay"
+   ],
+   "def": "Extra pay for staff that depends on the firm's profit: more profit, more pay."
+  },
+  {
+   "key": "employee share ownership",
+   "word": "employee share ownership schemes",
+   "match": [
+    "employee share ownership schemes"
+   ],
+   "def": "A plan that gives staff shares in the company, free or cheaply, so they own a small part of it and gain when it does well."
+  },
+  {
+   "key": "shares",
+   "word": "shares",
+   "match": [
+    "shares",
+    "share price"
+   ],
+   "def": "Equal parts of a company's ownership. Hold 10 of its 100 shares and you own 10%. The <b>share price</b> is what one share costs to buy."
+  },
+  {
+   "key": "fringe payments",
+   "word": "fringe payments",
+   "match": [
+    "fringe payments"
+   ],
+   "def": "Benefits on top of pay, also called perks: a company car, health insurance, staff discounts, free meals."
+  },
+  {
+   "key": "job enrichment",
+   "word": "job enrichment",
+   "match": [
+    "job enrichment"
+   ],
+   "def": "Making a job more challenging by adding responsibility and harder tasks. Explained in 2.4."
+  },
+  {
+   "key": "job rotation",
+   "word": "job rotation",
+   "match": [
+    "job rotation"
+   ],
+   "def": "Moving staff between different jobs or tasks from time to time, for variety."
+  },
+  {
+   "key": "job enlargement",
+   "word": "job enlargement",
+   "match": [
+    "job enlargement"
+   ],
+   "def": "Adding more tasks of the same difficulty to a job, for variety."
+  },
+  {
+   "key": "empowerment",
+   "word": "empowerment",
+   "match": [
+    "empowerment"
+   ],
+   "def": "Giving staff the authority to make decisions about their own work."
+  },
+  {
+   "key": "induction",
+   "word": "induction",
+   "match": [
+    "induction"
+   ],
+   "def": "Training for new staff when they start: the people, the place, the rules and the job."
+  },
+  {
+   "key": "self-actualisation",
+   "word": "self-actualisation",
+   "match": [
+    "self-actualisation"
+   ],
+   "def": "Maslow's top need: becoming the best you can be, using all your talents."
+  },
+  {
+   "key": "esteem",
+   "word": "esteem",
+   "match": [
+    "esteem"
+   ],
+   "def": "Respect: from others (praise, status) and for yourself (self-respect)."
+  },
+  {
+   "key": "physiological",
+   "word": "physiological",
+   "match": [
+    "physiological"
+   ],
+   "def": "To do with the body's basic needs: food, water, warmth, rest."
+  },
+  {
+   "key": "profit",
+   "word": "profit",
+   "match": [
+    "profit"
+   ],
+   "def": "Money left after all costs are paid: profit = revenue − costs."
+  },
+  {
+   "key": "revenue",
+   "word": "revenue",
+   "match": [
+    "revenue"
+   ],
+   "def": "All the money from sales: price × quantity sold."
+  },
+  {
+   "key": "operating costs",
+   "word": "operating costs",
+   "match": [
+    "operating costs"
+   ],
+   "def": "The everyday costs of running a business, such as wages, rent, energy and transport."
+  },
+  {
+   "key": "forecast",
+   "word": "forecast",
+   "match": [
+    "forecast",
+    "forecasting"
+   ],
+   "def": "A prediction of a future figure, such as next year's sales or profit. It is an estimate, not a fact."
+  },
+  {
+   "key": "stakeholder",
+   "word": "stakeholders",
+   "match": [
+    "stakeholders"
+   ],
+   "def": "Anyone who affects or is affected by what a business does: staff, owners, customers, suppliers, the local community."
+  },
+  {
+   "key": "minimum wage",
+   "word": "minimum wage",
+   "match": [
+    "minimum wage"
+   ],
+   "def": "The lowest pay per hour that the law allows an employer to pay."
+  },
+  {
+   "key": "retraining",
+   "word": "retraining",
+   "match": [
+    "retraining",
+    "retrain"
+   ],
+   "def": "Teaching workers new skills so they can do a different job."
+  },
+  {
+   "key": "consultation",
+   "word": "consultation",
+   "match": [
+    "consultation"
+   ],
+   "def": "Asking people for their views before making a decision, and listening to them."
+  },
+  {
+   "key": "headline number",
+   "word": "headline number",
+   "match": [
+    "headline number"
+   ],
+   "def": "The big number that is announced first, before you look at the details."
+  },
+  {
+   "key": "hl",
+   "word": "HL only",
+   "match": [
+    "HL only",
+    "HL-only"
+   ],
+   "def": "Higher Level only. You take Business at Standard Level (SL), so HL-only content is not in your exam."
+  },
+  {
+   "key": "rhetorical question",
+   "word": "rhetorical questions",
+   "match": [
+    "rhetorical questions"
+   ],
+   "def": "Questions asked to make the audience think, not to get an answer: 'Avez-vous remarqué que... ?'"
+  },
+  {
+   "key": "text type",
+   "word": "text type",
+   "match": [
+    "text type"
+   ],
+   "def": "The kind of text you write, such as a blog, a speech or a letter. Each has its own layout and tone, and IB French marks whether you chose and used the right one."
+  }
+ ]
+}

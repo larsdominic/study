@@ -1,0 +1,742 @@
+{
+ "minutes": 8,
+ "background": [
+  {
+   "title": "Energy stored in molecules",
+   "html": "<p>Food molecules such as glucose hold <b>chemical energy</b> in the bonds between their atoms. When a big molecule is broken down into small ones (here carbon dioxide and water), energy is released.</p><p>A cell cannot release all of glucose's energy in one go: it would be wasted as heat. So it breaks glucose down in many small steps and catches the energy in small packets, as ATP. Think of changing a large banknote into coins you can actually spend.</p><p>Energy is never made or destroyed, only moved from one form or molecule to another. \"Releasing energy\" means moving it out of a molecule so the cell can use it.</p>"
+  },
+  {
+   "title": "Cells, organelles and the mitochondrion",
+   "html": "<p>A cell is surrounded by a thin <b>membrane</b>. Inside is the watery <b>cytoplasm</b>, with small structures called <b>organelles</b>, each with a job.</p><p>The <b>mitochondrion</b> (plural mitochondria) is the organelle where most respiration happens. It has two membranes: a smooth outer one and a folded inner one. The fluid inside the inner membrane is the <b>matrix</b>.</p><p>Muscle cells have many mitochondria because they need a lot of energy. Bacteria have none, and red blood cells lose theirs.</p>"
+  },
+  {
+   "title": "Enzymes and pathways",
+   "html": "<p>An <b>enzyme</b> is a protein that speeds up one particular reaction. Respiration is a <b>pathway</b>: a chain of reactions where the product of one step is the starting molecule of the next, and each step has its own enzyme.</p><p>Because every step needs an enzyme, anything that affects enzymes (temperature, pH, the amount of starting molecule) also changes how fast respiration goes. You learnt this in C1.1 Enzymes and metabolism.</p>"
+  },
+  {
+   "title": "Glucose, fatty acids and counting carbons",
+   "html": "<p><b>Glucose</b> is a sugar with the formula C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>: 6 carbon, 12 hydrogen and 6 oxygen atoms. Biologists label molecules by their number of carbon atoms: glucose is <b>6C</b>, pyruvate is 3C, an acetyl group is 2C.</p><p>Counting carbons is a useful check: carbon atoms are never lost, so the 6 carbons of one glucose must end up somewhere (in two 3C pyruvates, and finally in 6 carbon dioxide molecules).</p><p><b>Fatty acids</b> are long chains of carbon and hydrogen with very little oxygen. They come from fats (B1.1).</p>"
+  },
+  {
+   "title": "Oxidation and reduction",
+   "html": "<p>In biology, <b>oxidation</b> means a molecule <b>loses electrons</b>; <b>reduction</b> means it <b>gains electrons</b>. A memory trick: <b>OIL RIG</b>, Oxidation Is Loss, Reduction Is Gain.</p><p>A hydrogen atom is one proton plus one electron. So when hydrogen atoms are taken off a molecule, it loses electrons: it is oxidised. The molecule that takes the hydrogen gains electrons: it is reduced.</p><p>The two always happen together, because the electrons have to go somewhere.</p>"
+  },
+  {
+   "title": "Gas, pressure and volume",
+   "html": "<p>Gas particles move about and push on the walls of their container: this push is <b>pressure</b>. If gas is removed from a closed tube (for example oxygen used up by living things), there are fewer particles, so the pressure inside falls.</p><p>A liquid in a tube connected to it then gets pushed towards the side with the lower pressure. Warming a gas makes it expand and push harder, which is why temperature must be kept constant when you measure gas changes.</p>"
+  },
+  {
+   "title": "Circles, volumes and units",
+   "html": "<p>The <b>radius</b> r of a circle is the distance from the centre to the edge; the <b>diameter</b> is twice that, right across. The area of a circle is <b>π r<sup>2</sup></b> (π ≈ 3.14; use the π key on your calculator).</p><p>A thin tube is a cylinder: its volume is the area of its end times its length, π r<sup>2</sup> × length.</p><p>Units: 1 cm = 10 mm. mm<sup>3</sup> is a cubic millimetre, a tiny volume. A power of −1 means \"per\": mm<sup>3</sup> min<sup>−1</sup> is cubic millimetres per minute, and g<sup>−1</sup> is per gram.</p>"
+  }
+ ],
+ "terms": [
+  {
+   "key": "atp",
+   "word": "ATP",
+   "match": [
+    "ATP"
+   ],
+   "def": "Adenosine triphosphate: the small molecule that carries energy to every job in a cell. Breaking off one phosphate group releases a small amount of energy."
+  },
+  {
+   "key": "adp",
+   "word": "ADP",
+   "match": [
+    "ADP"
+   ],
+   "def": "Adenosine diphosphate: ATP with one phosphate group taken off. Energy from respiration joins a phosphate back on to make ATP again."
+  },
+  {
+   "key": "nucleotide",
+   "word": "nucleotide",
+   "match": [
+    "nucleotide"
+   ],
+   "def": "A small building block made of a phosphate, a sugar with 5 carbon atoms and a base. DNA and RNA are chains of nucleotides; ATP is a single one."
+  },
+  {
+   "key": "phosphate",
+   "word": "phosphate",
+   "match": [
+    "phosphate",
+    "phosphates"
+   ],
+   "def": "A small group of atoms: one phosphorus atom with four oxygen atoms. ATP has three phosphate groups in a row."
+  },
+  {
+   "key": "hydrolysis",
+   "word": "hydrolysis",
+   "match": [
+    "hydrolysis"
+   ],
+   "def": "Splitting a molecule by adding water to it. \"Hydro\" means water, \"lysis\" means splitting."
+  },
+  {
+   "key": "phosphorylation",
+   "word": "phosphorylation",
+   "match": [
+    "phosphorylation",
+    "phosphorylate"
+   ],
+   "def": "Adding a phosphate group to a molecule. Phosphorylating ADP makes ATP; phosphorylating glucose makes it ready to split."
+  },
+  {
+   "key": "condensation",
+   "word": "condensation",
+   "match": [
+    "condensation"
+   ],
+   "def": "A reaction that joins two molecules and releases a molecule of water. It is the opposite of hydrolysis."
+  },
+  {
+   "key": "macromolecule",
+   "word": "macromolecule",
+   "match": [
+    "macromolecules"
+   ],
+   "def": "A very large molecule built from many small units, such as a protein, DNA or starch."
+  },
+  {
+   "key": "anabolism",
+   "word": "anabolism",
+   "match": [
+    "anabolism"
+   ],
+   "def": "All the reactions in a cell that build large molecules from small ones. They need energy, which ATP supplies."
+  },
+  {
+   "key": "active transport",
+   "word": "active transport",
+   "match": [
+    "active transport"
+   ],
+   "def": "Moving ions or molecules across a membrane from where there are fewer to where there are more. It needs ATP and a pump protein."
+  },
+  {
+   "key": "concentration gradient",
+   "word": "concentration gradient",
+   "match": [
+    "concentration gradient"
+   ],
+   "def": "A difference in how much of a substance there is in two places. Things spread down a gradient (from more to less) by themselves; moving them up it needs energy."
+  },
+  {
+   "key": "membrane",
+   "word": "membrane",
+   "match": [
+    "membrane",
+    "membranes"
+   ],
+   "def": "A very thin layer of fat-like molecules around a cell, or around a structure inside it, that controls what goes in and out."
+  },
+  {
+   "key": "plasma membrane",
+   "word": "plasma membrane",
+   "match": [
+    "plasma membrane"
+   ],
+   "def": "The membrane around the whole cell."
+  },
+  {
+   "key": "cytoplasm",
+   "word": "cytoplasm",
+   "match": [
+    "cytoplasm"
+   ],
+   "def": "Everything inside the cell membrane except the nucleus: a watery fluid where glycolysis happens."
+  },
+  {
+   "key": "soluble",
+   "word": "soluble",
+   "match": [
+    "soluble"
+   ],
+   "def": "Able to dissolve in water, so it can move around in the watery cytoplasm."
+  },
+  {
+   "key": "organic",
+   "word": "organic",
+   "match": [
+    "organic"
+   ],
+   "def": "Here: a compound built on carbon atoms, made by living things, such as glucose, fats and proteins."
+  },
+  {
+   "key": "respiratory substrate",
+   "word": "respiratory substrate",
+   "match": [
+    "respiratory substrates",
+    "substrates"
+   ],
+   "def": "A molecule that is broken down in respiration to release energy, mainly glucose and fatty acids."
+  },
+  {
+   "key": "fatty acid",
+   "word": "fatty acid",
+   "match": [
+    "fatty acids",
+    "fatty acid"
+   ],
+   "def": "A long chain of carbon and hydrogen atoms with an acid group at one end. Fats and oils are made from fatty acids."
+  },
+  {
+   "key": "glycogen",
+   "word": "glycogen",
+   "match": [
+    "glycogen"
+   ],
+   "def": "The store of glucose in animals (in liver and muscle): many glucose units joined in a branched chain."
+  },
+  {
+   "key": "enzyme",
+   "word": "enzyme",
+   "match": [
+    "enzyme"
+   ],
+   "def": "A protein that speeds up one particular chemical reaction without being used up."
+  },
+  {
+   "key": "gas exchange",
+   "word": "gas exchange",
+   "match": [
+    "gas exchange"
+   ],
+   "def": "Oxygen and carbon dioxide moving between an organism and its surroundings, in lungs, gills or leaves. It is not respiration."
+  },
+  {
+   "key": "aerobic",
+   "word": "aerobic",
+   "match": [
+    "aerobic",
+    "aerobically"
+   ],
+   "def": "With oxygen. Aerobic respiration uses oxygen and gives a large amount of ATP."
+  },
+  {
+   "key": "anaerobic",
+   "word": "anaerobic",
+   "match": [
+    "anaerobic",
+    "anaerobically"
+   ],
+   "def": "Without oxygen. Anaerobic respiration gives only a little ATP."
+  },
+  {
+   "key": "lactate",
+   "word": "lactate",
+   "match": [
+    "lactate"
+   ],
+   "def": "The waste product of anaerobic respiration in human muscle. Lactic acid is the same substance; mark schemes say lactate."
+  },
+  {
+   "key": "yeast",
+   "word": "yeast",
+   "match": [
+    "yeast"
+   ],
+   "def": "A fungus made of single cells. Used to make bread and alcoholic drinks."
+  },
+  {
+   "key": "ethanol",
+   "word": "ethanol",
+   "match": [
+    "ethanol"
+   ],
+   "def": "The alcohol in beer and wine. Yeast makes it in anaerobic respiration; too much kills the yeast."
+  },
+  {
+   "key": "mitochondrion",
+   "word": "mitochondrion",
+   "match": [
+    "mitochondrion",
+    "mitochondria"
+   ],
+   "def": "The organelle (small structure in a cell) where the link reaction, Krebs cycle and electron transport chain happen. Plural: mitochondria."
+  },
+  {
+   "key": "chromosome",
+   "word": "chromosome",
+   "match": [
+    "chromosomes"
+   ],
+   "def": "A long DNA molecule packed tightly, visible when a cell divides."
+  },
+  {
+   "key": "cilia",
+   "word": "cilia and flagella",
+   "match": [
+    "cilia"
+   ],
+   "def": "Hair-like parts of some cells that beat to move the cell or the fluid around it. Cilia are short and many; a flagellum is long, like a sperm cell's tail."
+  },
+  {
+   "key": "respirometer",
+   "word": "respirometer",
+   "match": [
+    "respirometer"
+   ],
+   "def": "Apparatus that measures how fast living things use oxygen, by watching a drop of liquid move in a thin tube."
+  },
+  {
+   "key": "alkali",
+   "word": "alkali",
+   "match": [
+    "alkali"
+   ],
+   "def": "A substance that dissolves in water with a pH above 7. Alkalis such as KOH absorb carbon dioxide."
+  },
+  {
+   "key": "koh",
+   "word": "KOH and soda lime",
+   "match": [
+    "KOH"
+   ],
+   "def": "KOH is potassium hydroxide, an alkali; soda lime is a solid mixture that does the same job. Both absorb carbon dioxide in a respirometer."
+  },
+  {
+   "key": "capillary tube",
+   "word": "capillary tube",
+   "match": [
+    "capillary tube",
+    "capillary"
+   ],
+   "def": "A glass tube with a very narrow inside, so a tiny change in gas volume moves the liquid a long way, which is easy to measure."
+  },
+  {
+   "key": "pressure",
+   "word": "pressure",
+   "match": [
+    "pressure"
+   ],
+   "def": "How hard a gas pushes on the walls around it. Fewer gas particles in a closed tube means lower pressure."
+  },
+  {
+   "key": "control",
+   "word": "control",
+   "match": [
+    "control"
+   ],
+   "def": "In an experiment: a set-up the same as the real one but without the thing being tested (here, no living organisms), to show changes caused by anything else."
+  },
+  {
+   "key": "radius",
+   "word": "radius",
+   "match": [
+    "radius"
+   ],
+   "def": "The distance from the centre of a circle to its edge: half the diameter."
+  },
+  {
+   "key": "diameter",
+   "word": "diameter",
+   "match": [
+    "diameter"
+   ],
+   "def": "The distance right across a circle through its centre: twice the radius."
+  },
+  {
+   "key": "significant figures",
+   "word": "significant figures",
+   "match": [
+    "significant figures"
+   ],
+   "def": "The digits of a number that carry meaning. 1.885 to 2 significant figures is 1.9. Give answers to about as many as the data have."
+  },
+  {
+   "key": "germinating",
+   "word": "germinating",
+   "match": [
+    "germinating"
+   ],
+   "def": "Starting to grow: a seed that has taken in water and is sprouting. It respires fast."
+  },
+  {
+   "key": "oxidation",
+   "word": "oxidation",
+   "match": [
+    "oxidation",
+    "oxidised"
+   ],
+   "def": "Loss of electrons. In respiration, taking hydrogen atoms (each with an electron) off a molecule oxidises it."
+  },
+  {
+   "key": "reduction",
+   "word": "reduction",
+   "match": [
+    "reduction",
+    "reduced"
+   ],
+   "def": "Gain of electrons. A molecule that accepts hydrogen atoms is reduced."
+  },
+  {
+   "key": "electron",
+   "word": "electron",
+   "match": [
+    "electrons",
+    "electron"
+   ],
+   "def": "A tiny particle with a negative charge, found in every atom. A hydrogen atom has one."
+  },
+  {
+   "key": "redox",
+   "word": "redox",
+   "match": [
+    "redox"
+   ],
+   "def": "Short for reduction-oxidation: a reaction where one substance is oxidised and another is reduced at the same time."
+  },
+  {
+   "key": "dehydrogenation",
+   "word": "dehydrogenation",
+   "match": [
+    "dehydrogenation",
+    "dehydrogenations"
+   ],
+   "def": "Removing hydrogen atoms from a molecule. It is a kind of oxidation."
+  },
+  {
+   "key": "coenzyme",
+   "word": "coenzyme",
+   "match": [
+    "coenzyme"
+   ],
+   "def": "A small helper molecule that an enzyme needs to work, often to carry something such as hydrogen or an acetyl group."
+  },
+  {
+   "key": "nad",
+   "word": "NAD",
+   "match": [
+    "NAD"
+   ],
+   "def": "A coenzyme that carries hydrogen. It picks hydrogen up (becoming reduced NAD, NADH) and delivers it to the electron transport chain."
+  },
+  {
+   "key": "nadh",
+   "word": "NADH",
+   "match": [
+    "NADH"
+   ],
+   "def": "Another name for reduced NAD: NAD carrying hydrogen."
+  },
+  {
+   "key": "fad",
+   "word": "FAD",
+   "match": [
+    "FAD"
+   ],
+   "def": "A second hydrogen carrier that works like NAD. Reduced FAD is made in the Krebs cycle."
+  },
+  {
+   "key": "glycolysis",
+   "word": "glycolysis",
+   "match": [
+    "glycolysis"
+   ],
+   "def": "The first stage of respiration, in the cytoplasm: glucose is split into two pyruvate molecules. \"Glyco\" means sugar, \"lysis\" means splitting."
+  },
+  {
+   "key": "lysis",
+   "word": "lysis",
+   "match": [
+    "Lysis"
+   ],
+   "def": "Splitting. In glycolysis, one 6-carbon sugar splits into two 3-carbon sugars."
+  },
+  {
+   "key": "triose phosphate",
+   "word": "triose phosphate",
+   "match": [
+    "triose phosphate"
+   ],
+   "def": "A 3-carbon sugar with a phosphate group, made when glycolysis splits the 6-carbon sugar. \"Tri\" means three."
+  },
+  {
+   "key": "pyruvate",
+   "word": "pyruvate",
+   "match": [
+    "pyruvate",
+    "pyruvates"
+   ],
+   "def": "The 3-carbon molecule made at the end of glycolysis. Two are made from each glucose."
+  },
+  {
+   "key": "carbon count",
+   "word": "6C, 3C, 2C",
+   "match": [
+    "6C"
+   ],
+   "def": "Short for the number of carbon atoms in a molecule: 6C means six carbon atoms (glucose, citrate), 3C three (pyruvate), 2C two (an acetyl group)."
+  },
+  {
+   "key": "decarboxylation",
+   "word": "decarboxylation",
+   "match": [
+    "decarboxylation",
+    "decarboxylations",
+    "decarboxylated"
+   ],
+   "def": "Removing a carbon dioxide molecule from a molecule, so it has one carbon fewer."
+  },
+  {
+   "key": "link reaction",
+   "word": "link reaction",
+   "match": [
+    "link reaction"
+   ],
+   "def": "The stage between glycolysis and the Krebs cycle, in the matrix: pyruvate loses carbon dioxide and hydrogen and becomes acetyl CoA."
+  },
+  {
+   "key": "acetyl",
+   "word": "acetyl group",
+   "match": [
+    "acetyl group",
+    "acetyl groups"
+   ],
+   "def": "A small 2-carbon group. In respiration, glucose and fatty acids are both broken down into acetyl groups that enter the Krebs cycle."
+  },
+  {
+   "key": "coenzyme a",
+   "word": "coenzyme A",
+   "match": [
+    "coenzyme A"
+   ],
+   "def": "A coenzyme that picks up the acetyl group and carries it into the Krebs cycle. Together they are acetyl CoA."
+  },
+  {
+   "key": "acetyl coa",
+   "word": "acetyl CoA",
+   "match": [
+    "acetyl CoA"
+   ],
+   "def": "An acetyl group attached to coenzyme A: the form in which 2-carbon pieces enter the Krebs cycle."
+  },
+  {
+   "key": "krebs cycle",
+   "word": "Krebs cycle",
+   "match": [
+    "Krebs cycle"
+   ],
+   "def": "A cycle of reactions in the matrix of the mitochondrion that removes carbon dioxide and hydrogen from acetyl groups, making reduced NAD, reduced FAD and a little ATP."
+  },
+  {
+   "key": "oxaloacetate",
+   "word": "oxaloacetate",
+   "match": [
+    "oxaloacetate"
+   ],
+   "def": "A 4-carbon molecule in the Krebs cycle. It takes an acetyl group to make citrate and is made again at the end of each turn."
+  },
+  {
+   "key": "citrate",
+   "word": "citrate",
+   "match": [
+    "citrate"
+   ],
+   "def": "The 6-carbon molecule made when an acetyl group joins oxaloacetate at the start of the Krebs cycle."
+  },
+  {
+   "key": "matrix",
+   "word": "matrix",
+   "match": [
+    "matrix"
+   ],
+   "def": "The fluid inside the inner membrane of a mitochondrion. The link reaction and the Krebs cycle happen here."
+  },
+  {
+   "key": "cristae",
+   "word": "cristae",
+   "match": [
+    "cristae"
+   ],
+   "def": "The folds of the inner membrane of a mitochondrion. They give a large surface for the electron transport chain and ATP synthase."
+  },
+  {
+   "key": "intermembrane space",
+   "word": "intermembrane space",
+   "match": [
+    "intermembrane space"
+   ],
+   "def": "The narrow gap between the outer and inner membranes of a mitochondrion. Protons are pumped into it."
+  },
+  {
+   "key": "inner membrane",
+   "word": "inner membrane",
+   "match": [
+    "inner membrane"
+   ],
+   "def": "The folded inner of the two membranes of a mitochondrion. It holds the electron transport chain and ATP synthase."
+  },
+  {
+   "key": "electron transport chain",
+   "word": "electron transport chain",
+   "match": [
+    "electron transport chain"
+   ],
+   "def": "A row of carrier proteins in the inner membrane of the mitochondrion. Electrons from reduced NAD pass along it, and their energy pumps protons."
+  },
+  {
+   "key": "carrier protein",
+   "word": "carrier protein",
+   "match": [
+    "carrier protein",
+    "carrier proteins",
+    "carriers"
+   ],
+   "def": "Here: a protein in the inner membrane that accepts electrons and passes them on to the next one."
+  },
+  {
+   "key": "proton",
+   "word": "proton",
+   "match": [
+    "protons",
+    "proton"
+   ],
+   "def": "A hydrogen ion, H<sup>+</sup>: a hydrogen atom without its electron. It has a positive charge."
+  },
+  {
+   "key": "proton gradient",
+   "word": "proton gradient",
+   "match": [
+    "proton gradient"
+   ],
+   "def": "More protons on one side of a membrane than on the other. Like water behind a dam, the protons \"want\" to flow back, and that flow can do work."
+  },
+  {
+   "key": "chemiosmosis",
+   "word": "chemiosmosis",
+   "match": [
+    "chemiosmosis"
+   ],
+   "def": "Protons flowing back across a membrane, down their gradient, through ATP synthase, which uses the energy to make ATP."
+  },
+  {
+   "key": "atp synthase",
+   "word": "ATP synthase",
+   "match": [
+    "ATP synthase"
+   ],
+   "def": "An enzyme in the inner membrane of the mitochondrion. Protons flow through it, and it uses their energy to join ADP and phosphate into ATP."
+  },
+  {
+   "key": "oxidative phosphorylation",
+   "word": "oxidative phosphorylation",
+   "match": [
+    "oxidative phosphorylation"
+   ],
+   "def": "Making ATP with energy that came from oxidising reduced NAD: the electron transport chain plus chemiosmosis. It makes most of the ATP."
+  },
+  {
+   "key": "terminal electron acceptor",
+   "word": "terminal electron acceptor",
+   "match": [
+    "terminal electron acceptor"
+   ],
+   "def": "The last molecule to take the electrons at the end of the electron transport chain. In aerobic respiration it is oxygen, which forms water."
+  },
+  {
+   "key": "lipid",
+   "word": "lipid",
+   "match": [
+    "lipids",
+    "lipid"
+   ],
+   "def": "Fats and oils, and related molecules. They do not dissolve in water. Fats are made of fatty acids and glycerol."
+  },
+  {
+   "key": "carbohydrate",
+   "word": "carbohydrate",
+   "match": [
+    "carbohydrates",
+    "carbohydrate"
+   ],
+   "def": "Sugars and molecules made from sugars, such as glucose, starch and glycogen."
+  },
+  {
+   "key": "toxic",
+   "word": "toxic",
+   "match": [
+    "toxic"
+   ],
+   "def": "Poisonous: harmful to living cells."
+  },
+  {
+   "key": "fermentation",
+   "word": "fermentation",
+   "match": [
+    "fermentation"
+   ],
+   "def": "Anaerobic respiration by yeast or bacteria, used to make bread, beer and wine."
+  },
+  {
+   "key": "pi",
+   "word": "π",
+   "match": [
+    "π"
+   ],
+   "def": "Pi, about 3.14: the number you multiply by to get the area of a circle (π r<sup>2</sup>). Use the π key on your calculator."
+  },
+  {
+   "key": "distinguish",
+   "word": "distinguish",
+   "match": [
+    "Distinguish",
+    "distinguish"
+   ],
+   "def": "IB command term: make clear the differences between two or more things. Each point must mention both."
+  },
+  {
+   "key": "state",
+   "word": "state",
+   "match": [
+    "State"
+   ],
+   "def": "IB command term: give a specific name, value or short answer, without explanation."
+  },
+  {
+   "key": "outline",
+   "word": "outline",
+   "match": [
+    "Outline"
+   ],
+   "def": "IB command term: give a brief account, the main points only."
+  },
+  {
+   "key": "explain",
+   "word": "explain",
+   "match": [
+    "Explain",
+    "explain"
+   ],
+   "def": "IB command term: give a detailed account including reasons or causes. Say why or how, using \"because\" and \"so\"."
+  },
+  {
+   "key": "describe",
+   "word": "describe",
+   "match": [
+    "Describe",
+    "describe"
+   ],
+   "def": "IB command term: give a detailed account of what something is like or what happens. Reasons are not needed."
+  },
+  {
+   "key": "calculate",
+   "word": "calculate",
+   "match": [
+    "Calculate",
+    "calculate"
+   ],
+   "def": "IB command term: work out a number answer, showing the steps of your working."
+  },
+  {
+   "key": "compare",
+   "word": "compare",
+   "match": [
+    "compare",
+    "Compare"
+   ],
+   "def": "IB command term: give the similarities (and, in \"compare and contrast\", the differences), mentioning both things in each point."
+  }
+ ]
+}

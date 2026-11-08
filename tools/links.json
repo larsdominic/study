@@ -27,7 +27,19 @@
    "quiz": "ib-quiz-guide-2026-11-06"
   }
  ],
+ "2026-11-13": [
+  {
+   "url": "guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html",
+   "label": "English A HL Paper 1: satirical cartoons",
+   "quiz": "ib-quiz-guide-2026-11-13"
+  }
+ ],
  "2026-11-14": [
+  {
+   "url": "guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html",
+   "label": "Psychology HL: evaluating research and conditioning",
+   "quiz": "ib-quiz-guide-2026-11-14"
+  },
   {
    "url": "practice/2026-11-07-timed-maths-sequences.html",
    "label": "Timed set: Maths sequences (no calculator)",
@@ -36,9 +48,21 @@
  ],
  "2026-11-15": [
   {
+   "url": "guides/2026-11-15-biology-hl-b1.1-carbohydrates-lipids.html",
+   "label": "Biology HL B1.1 Carbohydrates and lipids",
+   "quiz": "ib-quiz-guide-2026-11-15"
+  },
+  {
    "url": "review/2026-11-08-week-1.html",
    "label": "Week 1 review",
    "quiz": "ib-quiz-review-2026-11-08"
+  }
+ ],
+ "2026-11-16": [
+  {
+   "url": "guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html",
+   "label": "Psychology HL: social learning theory, memory, exam technique",
+   "quiz": "ib-quiz-guide-2026-11-16"
   }
  ],
  "2026-11-17": [
@@ -48,6 +72,27 @@
    "quiz": "ib-quiz-guide-2026-11-10"
   }
  ],
+ "2026-11-18": [
+  {
+   "url": "guides/2026-11-18-biology-hl-b1.2-c1.1.html",
+   "label": "Biology HL B1.2 Proteins and C1.1 Enzymes",
+   "quiz": "ib-quiz-guide-2026-11-18"
+  }
+ ],
+ "2026-11-19": [
+  {
+   "url": "guides/2026-11-19-business-sl-unit2-hrm.html",
+   "label": "Business Management SL Unit 2 HRM",
+   "quiz": "ib-quiz-guide-2026-11-19"
+  }
+ ],
+ "2026-11-20": [
+  {
+   "url": "guides/2026-11-20-english-a-hl-persepolis-water-cell.html",
+   "label": "English A HL: Persepolis, The Water Cell",
+   "quiz": "ib-quiz-guide-2026-11-20"
+  }
+ ],
  "2026-11-21": [
   {
    "url": "practice/2026-11-21-mock-papers.html",
@@ -55,11 +100,35 @@
    "quiz": "ib-timed-2026-11-21"
   }
  ],
+ "2026-11-22": [
+  {
+   "url": "review/2026-11-22-week-2.html",
+   "label": "Week 2 review",
+   "quiz": "ib-quiz-review-2026-11-22"
+  },
+  {
+   "url": "guides/2026-11-22-biology-hl-c1.2-cell-respiration.html",
+   "label": "Biology HL C1.2 Cell respiration",
+   "quiz": "ib-quiz-guide-2026-11-22"
+  }
+ ],
  "2026-11-23": [
   {
    "url": "guides/2026-11-09-psychology-hl-frame-research-methods.html",
    "label": "Psychology: course map and research methods",
    "quiz": "ib-quiz-guide-2026-11-09",
+   "review": true
+  },
+  {
+   "url": "guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html",
+   "label": "Psychology HL: evaluating research and conditioning",
+   "quiz": "ib-quiz-guide-2026-11-14",
+   "review": true
+  },
+  {
+   "url": "guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html",
+   "label": "Psychology HL: social learning theory, memory, exam technique",
+   "quiz": "ib-quiz-guide-2026-11-16",
    "review": true
   }
  ],
@@ -79,9 +148,20 @@
  ],
  "2026-11-25": [
   {
+   "url": "practice/2026-11-25-biology-revision-a1-b1.1.html",
+   "label": "Timed revision: Biology A1.1, A1.2, B1.1",
+   "quiz": "ib-timed-2026-11-25"
+  },
+  {
    "url": "guides/2026-11-05-biology-hl-a1.1-a1.2.html",
    "label": "Biology A1.1 and A1.2",
    "quiz": "ib-quiz-guide-2026-11-05",
+   "review": true
+  },
+  {
+   "url": "guides/2026-11-15-biology-hl-b1.1-carbohydrates-lipids.html",
+   "label": "Biology HL B1.1 Carbohydrates and lipids",
+   "quiz": "ib-quiz-guide-2026-11-15",
    "review": true
   }
  ],
@@ -91,6 +171,19 @@
    "label": "Business Unit 1",
    "quiz": "ib-quiz-guide-2026-11-06",
    "review": true
+  },
+  {
+   "url": "guides/2026-11-19-business-sl-unit2-hrm.html",
+   "label": "Business Management SL Unit 2 HRM",
+   "quiz": "ib-quiz-guide-2026-11-19",
+   "review": true
+  }
+ ],
+ "2026-11-27": [
+  {
+   "url": "guides/2026-11-27-english-a-hl-revision-1.html",
+   "label": "English revision 1: timed cartoon analysis",
+   "quiz": "ib-quiz-guide-2026-11-27"
   }
  ],
  "2026-11-28": [
@@ -105,6 +198,19 @@
    "label": "Week 1 mixed quiz",
    "quiz": "ib-quiz-review-2026-11-08",
    "review": true
+  },
+  {
+   "url": "review/2026-11-22-week-2.html",
+   "label": "Week 2 mixed quiz",
+   "quiz": "ib-quiz-review-2026-11-22",
+   "review": true
+  }
+ ],
+ "2026-11-30": [
+  {
+   "url": "guides/2026-11-30-psychology-hl-data-analysis.html",
+   "label": "Psychology HL: data analysis and interpretation (Paper 3)",
+   "quiz": "ib-quiz-guide-2026-11-30"
   }
  ],
  "2026-12-01": [
@@ -121,12 +227,44 @@
    "review": true
   }
  ],
+ "2026-12-02": [
+  {
+   "url": "practice/2026-12-02-biology-revision-b1.2-c1.2.html",
+   "label": "Timed revision: Biology B1.2, C1.1, C1.2",
+   "quiz": "ib-timed-2026-12-02"
+  },
+  {
+   "url": "guides/2026-11-18-biology-hl-b1.2-c1.1.html",
+   "label": "Biology HL B1.2 Proteins and C1.1 Enzymes",
+   "quiz": "ib-quiz-guide-2026-11-18",
+   "review": true
+  },
+  {
+   "url": "guides/2026-11-22-biology-hl-c1.2-cell-respiration.html",
+   "label": "Biology HL C1.2 Cell respiration",
+   "quiz": "ib-quiz-guide-2026-11-22",
+   "review": true
+  }
+ ],
  "2026-12-03": [
   {
    "url": "guides/2026-11-06-business-sl-1.1-1.6.html",
    "label": "Business Unit 1",
    "quiz": "ib-quiz-guide-2026-11-06",
    "review": true
+  },
+  {
+   "url": "guides/2026-11-19-business-sl-unit2-hrm.html",
+   "label": "Business Management SL Unit 2 HRM",
+   "quiz": "ib-quiz-guide-2026-11-19",
+   "review": true
+  }
+ ],
+ "2026-12-04": [
+  {
+   "url": "guides/2026-12-04-english-a-hl-revision-2.html",
+   "label": "English revision 2: unseen infographic and your habits",
+   "quiz": "ib-quiz-guide-2026-12-04"
   }
  ]
 }

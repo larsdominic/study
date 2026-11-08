@@ -1,0 +1,487 @@
+{
+ "minutes": 4,
+ "background": [
+  {
+   "title": "Literary and non-literary texts",
+   "html": "<p><b>Literary</b> texts are novels, poems and plays, like <i>Purple Hibiscus</i>. <b>Non-literary</b> texts are everyday texts made to inform, persuade or entertain: adverts, speeches, blogs, photographs, cartoons.</p><p>Paper 1 uses only non-literary texts you have never seen, so you cannot learn answers by heart. You learn a <b>method</b> for any text. Today you practise it on cartoons.</p>"
+  },
+  {
+   "title": "What it shows and what it means",
+   "html": "<p>Every cartoon has two layers. <b>Literal</b>: what is there (\"a man waters a small plant in front of smoking chimneys\"). <b>Implied</b>: what you are meant to understand (\"companies make small green gestures to hide big pollution\").</p><p>A friend texting \"Great, another Monday\" literally praises Monday but implies the opposite. Marks come from explaining the implied layer and the details that lead you there.</p>"
+  },
+  {
+   "title": "Irony: when words and reality do not match",
+   "html": "<p>Irony is a gap between what is said or expected and what is true. Saying \"lovely weather\" in a storm is <b>verbal irony</b>. Cartoonists use it all the time: the speech bubble says one thing, the picture shows the opposite. Spot the gap and say what it reveals about the speaker. If you miss irony, you may think a cartoon agrees with the very thing it attacks.</p>"
+  },
+  {
+   "title": "Analysing is not retelling",
+   "html": "<p>Retelling: \"Two women sit in a café and one shows a photo.\" Anyone can see that.</p><p>Analysing: \"The phone sits exactly between the friends, so the device comes between them, suggesting technology divides people.\"</p><p>Test: after each piece of evidence, does your sentence go on with <i>so</i>, <i>because</i> or <i>which suggests</i>? If it stops at the evidence, it is still retelling.</p>"
+  }
+ ],
+ "terms": [
+  {
+   "key": "unseen",
+   "word": "unseen",
+   "match": [
+    "unseen"
+   ],
+   "def": "Not seen before. In Paper 1 the texts are new to you in the exam, so you cannot prepare answers in advance, only the method."
+  },
+  {
+   "key": "non-literary",
+   "word": "non-literary",
+   "match": [
+    "non-literary"
+   ],
+   "def": "Not a novel, poem or play. Non-literary texts are everyday texts such as adverts, speeches, blogs, photographs and cartoons."
+  },
+  {
+   "key": "text type",
+   "word": "text type",
+   "match": [
+    "text type",
+    "text types"
+   ],
+   "def": "The kind of text, such as an advert, a speech, a blog or a cartoon. Each type has its own usual features."
+  },
+  {
+   "key": "guiding question",
+   "word": "guiding question",
+   "match": [
+    "guiding question",
+    "guiding questions"
+   ],
+   "def": "The question printed with each Paper 1 text. It points you to one aspect of how the text works, and your answer should keep coming back to it."
+  },
+  {
+   "key": "criteria",
+   "word": "criteria (singular: criterion)",
+   "match": [
+    "criteria",
+    "criterion"
+   ],
+   "def": "The standards your answer is marked against. Paper 1 has four, A to D, each worth 5 marks per text."
+  },
+  {
+   "key": "hl",
+   "word": "HL and SL",
+   "match": [
+    "HL",
+    "SL"
+   ],
+   "def": "Higher Level and Standard Level. You take English at HL: more texts to study, both Paper 1 texts, and an extra HL essay."
+  },
+  {
+   "key": "weight",
+   "word": "weight (of a paper)",
+   "match": [
+    "weight"
+   ],
+   "def": "How much a part of the assessment counts towards your final grade. Paper 1 is 35%: just over a third of your English grade."
+  },
+  {
+   "key": "annotate",
+   "word": "annotate",
+   "match": [
+    "annotate",
+    "annotation",
+    "annotations"
+   ],
+   "def": "Write short notes on or next to a text while you study it: circle details, label techniques, jot down ideas."
+  },
+  {
+   "key": "satire",
+   "word": "satire",
+   "match": [
+    "satire",
+    "satirical"
+   ],
+   "def": "Using humour, irony or exaggeration to criticise someone or something, usually people with power. You laugh, then you judge."
+  },
+  {
+   "key": "editorial cartoon",
+   "word": "editorial cartoon",
+   "match": [
+    "editorial cartoon",
+    "editorial cartoonist"
+   ],
+   "def": "A cartoon in the opinion pages of a newspaper or news site, about a real news issue, giving the cartoonist's point of view."
+  },
+  {
+   "key": "horatian",
+   "word": "Horatian satire",
+   "match": [
+    "Horatian"
+   ],
+   "def": "Gentle, amused satire that teases and invites people to laugh at a fault and change it. Named after the Roman poet Horace."
+  },
+  {
+   "key": "juvenalian",
+   "word": "Juvenalian satire",
+   "match": [
+    "Juvenalian"
+   ],
+   "def": "Harsh, angry satire that attacks something seen as seriously wrong. Named after the Roman poet Juvenal."
+  },
+  {
+   "key": "target",
+   "word": "target",
+   "match": [
+    "target"
+   ],
+   "def": "In satire, the person, group or idea being criticised."
+  },
+  {
+   "key": "context",
+   "word": "context",
+   "match": [
+    "context"
+   ],
+   "def": "What a reader needs to know around a text to understand it: the news story, the people, and when and where it was published."
+  },
+  {
+   "key": "idiom",
+   "word": "idiom",
+   "match": [
+    "idiom"
+   ],
+   "def": "A fixed phrase whose meaning is not the meaning of its words, such as \"we're all in the same boat\" (we share the same problem)."
+  },
+  {
+   "key": "tone",
+   "word": "tone",
+   "match": [
+    "tone"
+   ],
+   "def": "The writer's or cartoonist's attitude towards the subject or audience: mocking, serious, bitter, playful."
+  },
+  {
+   "key": "mood",
+   "word": "mood",
+   "match": [
+    "mood"
+   ],
+   "def": "The atmosphere a text creates, the feeling it gives the audience: uneasy, cheerful, gloomy."
+  },
+  {
+   "key": "register",
+   "word": "register",
+   "match": [
+    "register"
+   ],
+   "def": "How formal the language is, from chatty to academic, and whose kind of voice it sounds like. Exam answers need a formal register."
+  },
+  {
+   "key": "theme",
+   "word": "theme",
+   "match": [
+    "theme"
+   ],
+   "def": "The big idea underneath a text, such as inequality or loneliness, as opposed to what literally happens."
+  },
+  {
+   "key": "caricature",
+   "word": "caricature",
+   "match": [
+    "caricature",
+    "caricatured"
+   ],
+   "def": "A drawing of a real person with some features stretched or shrunk to make a point, such as huge ears for someone who listens to nobody."
+  },
+  {
+   "key": "exaggeration",
+   "word": "exaggeration",
+   "match": [
+    "exaggeration"
+   ],
+   "def": "Showing something as bigger, smaller or more extreme than it is in real life, to make a point."
+  },
+  {
+   "key": "symbolism",
+   "word": "symbolism, symbol",
+   "match": [
+    "symbolism",
+    "symbolic"
+   ],
+   "def": "Using an object, animal or figure to stand for an idea. A dove stands for peace; a fat cat for a greedy rich person."
+  },
+  {
+   "key": "visual metaphor",
+   "word": "visual metaphor",
+   "match": [
+    "visual metaphor"
+   ],
+   "def": "An idea drawn as if it were a real object, such as debt drawn as a ball and chain."
+  },
+  {
+   "key": "analogy",
+   "word": "analogy",
+   "match": [
+    "analogy"
+   ],
+   "def": "Showing an issue as a different situation that people already understand, so they judge it the same way: a government drawn as a crew arguing on a sinking ship."
+  },
+  {
+   "key": "juxtaposition",
+   "word": "juxtaposition",
+   "match": [
+    "juxtaposition"
+   ],
+   "def": "Placing two contrasting things side by side so the reader compares them, such as rich next to poor."
+  },
+  {
+   "key": "stereotype",
+   "word": "stereotype",
+   "match": [
+    "stereotype",
+    "stereotypes"
+   ],
+   "def": "A fixed, oversimplified idea about a whole group of people, such as \"all teenagers are lazy\"."
+  },
+  {
+   "key": "parody",
+   "word": "parody",
+   "match": [
+    "parody"
+   ],
+   "def": "Copying a famous image or text and changing it, to make fun of something or give the original a new meaning."
+  },
+  {
+   "key": "caption",
+   "word": "caption",
+   "match": [
+    "caption"
+   ],
+   "def": "The line of text above or below a picture, or its title."
+  },
+  {
+   "key": "pun",
+   "word": "pun",
+   "match": [
+    "pun"
+   ],
+   "def": "A joke using a word with two meanings at once, such as \"going green\" (turning green, and becoming eco-friendly)."
+  },
+  {
+   "key": "irony",
+   "word": "irony, verbal irony",
+   "match": [
+    "irony",
+    "ironic"
+   ],
+   "def": "A gap between what is said or expected and what is true. Verbal irony: saying \"lovely weather\" in a storm."
+  },
+  {
+   "key": "hyperbole",
+   "word": "hyperbole",
+   "match": [
+    "hyperbole"
+   ],
+   "def": "Deliberate overstatement in words: \"I've told you a million times\"."
+  },
+  {
+   "key": "understatement",
+   "word": "understatement",
+   "match": [
+    "understatement"
+   ],
+   "def": "Making something sound much smaller than it is, such as calling a flood \"a bit of rain\"."
+  },
+  {
+   "key": "euphemism",
+   "word": "euphemism",
+   "match": [
+    "euphemism"
+   ],
+   "def": "A soft, polite word used to hide something unpleasant, such as \"let go\" for \"sacked\"."
+  },
+  {
+   "key": "jargon",
+   "word": "jargon",
+   "match": [
+    "jargon"
+   ],
+   "def": "Technical words used by a particular group, which outsiders may not understand and which can hide what is really meant."
+  },
+  {
+   "key": "allusion",
+   "word": "allusion",
+   "match": [
+    "allusion"
+   ],
+   "def": "A short reference to a famous text, saying, story or person that the reader is expected to recognise."
+  },
+  {
+   "key": "accent colour",
+   "word": "accent colour",
+   "match": [
+    "accent colour"
+   ],
+   "def": "One strong colour used against a plain or grey background, so the eye goes straight to it."
+  },
+  {
+   "key": "saturation",
+   "word": "saturation",
+   "match": [
+    "saturation"
+   ],
+   "def": "How strong or dull a colour is. Bright red is highly saturated; greyish red is not."
+  },
+  {
+   "key": "literal",
+   "word": "literal",
+   "match": [
+    "literal"
+   ],
+   "def": "The plain surface meaning: what is actually shown or said, before any reading between the lines."
+  },
+  {
+   "key": "implied",
+   "word": "implied",
+   "match": [
+    "implied"
+   ],
+   "def": "Suggested without being said directly. You work out an implied message from clues."
+  },
+  {
+   "key": "interpretation",
+   "word": "interpretation",
+   "match": [
+    "interpretation"
+   ],
+   "def": "Your explanation of what a text means, supported by details from it. Different readers can give different, equally good interpretations."
+  },
+  {
+   "key": "evaluation",
+   "word": "evaluate, evaluation",
+   "match": [
+    "evaluation",
+    "evaluates"
+   ],
+   "def": "Judging how well something works, with reasons: is the cartoon effective, and why?"
+  },
+  {
+   "key": "thesis",
+   "word": "thesis",
+   "match": [
+    "thesis"
+   ],
+   "def": "The main argument of your whole answer, stated in the introduction, usually in one or two sentences."
+  },
+  {
+   "key": "topic sentence",
+   "word": "topic sentence",
+   "match": [
+    "topic sentence"
+   ],
+   "def": "The first sentence of a paragraph. It states the point the paragraph will prove."
+  },
+  {
+   "key": "integration",
+   "word": "integration",
+   "match": [
+    "integration",
+    "integrates"
+   ],
+   "def": "Reading the picture and the words together, showing how they work as one, instead of in two separate lists."
+  },
+  {
+   "key": "insight",
+   "word": "insight, insightful",
+   "match": [
+    "insights",
+    "insightful"
+   ],
+   "def": "A clever, less obvious point that shows deep understanding."
+  },
+  {
+   "key": "passive voice",
+   "word": "passive voice",
+   "match": [
+    "passive voice"
+   ],
+   "def": "A sentence where the thing done to comes first and the doer is hidden or after \"by\": \"His face is generated by AI\" instead of \"AI generates his face\"."
+  },
+  {
+   "key": "punchline",
+   "word": "punchline",
+   "match": [
+    "punchline"
+   ],
+   "def": "The last line of a joke, which makes it funny or gives it the twist."
+  },
+  {
+   "key": "frame",
+   "word": "frame",
+   "match": [
+    "frame"
+   ],
+   "def": "The edges of the cartoon picture, and everything inside them."
+  },
+  {
+   "key": "abstract",
+   "word": "abstract",
+   "match": [
+    "abstract"
+   ],
+   "def": "An idea you cannot see or touch, such as freedom, debt or fear."
+  },
+  {
+   "key": "peel",
+   "word": "PEEL",
+   "match": [
+    "PEEL"
+   ],
+   "def": "A paragraph pattern: Point, Evidence, Explain, Link. The Horsey file names it but does not spell it out; this is the usual meaning."
+  },
+  {
+   "key": "formal",
+   "word": "formal",
+   "match": [
+    "formal"
+   ],
+   "def": "Serious, careful language for school and work: no slang, no contractions like \"don't\", full sentences."
+  },
+  {
+   "key": "learner portfolio",
+   "word": "learner portfolio",
+   "match": [
+    "learner portfolio"
+   ],
+   "def": "Your own collection of notes, analyses and reflections from the course. It is not graded, but the school keeps it and you use it to prepare for assessments."
+  },
+  {
+   "key": "transcript",
+   "word": "transcript",
+   "match": [
+    "transcript"
+   ],
+   "def": "The written-out words of something spoken, such as a video or a radio report."
+  },
+  {
+   "key": "cortisol",
+   "word": "cortisol",
+   "match": [
+    "cortisol"
+   ],
+   "def": "A hormone (a chemical message in the body) that rises when you are stressed. Scientists measure it in saliva to see how stressed someone is."
+  },
+  {
+   "key": "prescribe",
+   "word": "prescribe",
+   "match": [
+    "prescribe",
+    "prescribed"
+   ],
+   "def": "When a doctor officially tells a patient to take a treatment, usually a medicine; here, a museum visit."
+  },
+  {
+   "key": "positioned",
+   "word": "position the reader",
+   "match": [
+    "positioned"
+   ],
+   "def": "Guide the reader to see something from one side, so they share a certain view."
+  }
+ ]
+}

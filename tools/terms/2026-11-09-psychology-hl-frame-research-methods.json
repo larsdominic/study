@@ -1,130 +1,1002 @@
 {
- "minutes": 8,
+ "minutes": 4,
  "background": [
-  {"title": "What psychology is: a science about people",
-   "html": "<p>Psychology tries to answer questions about why people act, think and feel as they do. Why do we forget names? Why do teenagers copy their friends? Why do some people feel anxious before tests?</p><p>It is a <b>science</b>: a psychologist does not just give an opinion, but collects evidence from real people and checks whether an idea fits that evidence. Other people must be able to repeat the check.</p><p>Psychology is not mind reading, and it is not only about therapy. Most of it is careful studies: giving people a task, measuring what they do, and comparing groups.</p>"},
-  {"title": "How a scientific study works",
-   "html": "<p>Almost every study follows the same steps:</p><ul><li><b>Question</b>: does exercise make people happier?</li><li><b>Prediction</b>: people who exercise for a week will rate their mood higher than people who do not.</li><li><b>Collect information</b>: ask both groups to rate their mood from 1 to 10.</li><li><b>Compare</b>: is the exercise group higher?</li><li><b>Conclusion</b>: does the evidence support the prediction or not?</li></ul><p>One study is never the final word. If other researchers repeat it and get the same result, we trust it more.</p>"},
-  {"title": "Cause, or just a link?",
-   "html": "<p>On days when more ice cream is sold, more people get sunburnt. Does ice cream cause sunburn? No: hot sunny weather causes both. The two things are <b>linked</b>, but one does not <b>cause</b> the other.</p><p>Much of today is about this problem. To show that X causes Y, a researcher changes X on purpose, keeps everything else the same, and checks whether Y changes. If something else also changed (like the weather), you cannot tell which one caused the result.</p>"},
-  {"title": "Averages, and comparing two groups",
-   "html": "<p>The <b>mean</b> is the usual average: add up all the scores and divide by how many there are. Mood scores 6, 7 and 8 have a mean of 21 ÷ 3 = 7.</p><p>Studies often compare the mean of two groups: exercise group 7, no-exercise group 4.2. A bigger mean in one group looks like an effect, but with only a few people a difference can happen by luck.</p><p>Psychologists use <b>statistics</b> (maths for data) to decide whether a difference is big enough not to be luck. You will learn the details later in HL data analysis; today you only need the idea.</p>"},
-  {"title": "Population and sample: tasting the soup",
-   "html": "<p>To check whether a big pot of soup needs salt, you do not eat the whole pot. You stir it and taste one spoonful.</p><ul><li>The pot is the <b>population</b>: everyone you want to know about.</li><li>The spoonful is the <b>sample</b>: the people you actually study.</li><li>Stirring matters: an unstirred spoonful from the top might taste nothing like the rest. A sample that is not like the population gives a wrong answer about the population.</li></ul><p>Today's sampling section is about different ways of choosing the spoonful, and what can go wrong with each.</p>"},
-  {"title": "What \"random\" means in science",
-   "html": "<p>In everyday talk, random means odd or unplanned (\"a random question\"). In science it means something exact: <b>decided by chance, so every option has the same chance</b>.</p><p>Tossing a coin is random: heads and tails each have a 1 in 2 chance. A computer picking 60 names from a list of 600 is random: every name has the same 1 in 10 chance.</p><p>Walking up to whoever you happen to see is <b>not</b> random in this sense, because people who are not there have no chance at all. Keep this in mind for random sampling and random allocation.</p>"},
-  {"title": "How IB exams are marked",
-   "html": "<p>IB Psychology papers have no multiple choice. You write answers, and examiners mark them with <b>markbands</b>: descriptions of what an answer at each level looks like (for example 1-2 marks: limited knowledge; 3-4 marks: detailed knowledge, example explained).</p><p>The first word of each question is a <b>command term</b> (describe, explain, evaluate...). It tells you what kind of answer reaches the top band. Answering \"describe\" when the question says \"explain\" keeps you in a lower band, even if everything you wrote is true.</p><p>Your final grade is from 1 to 7.</p>"}
+  {
+   "title": "How a scientific study works",
+   "html": "<p>Psychology is a <b>science</b> about why people act, think and feel as they do. A psychologist does not just give an opinion: they collect evidence from real people.</p><ul><li><b>Question</b>: does exercise make people happier?</li><li><b>Prediction</b>: people who exercise for a week will rate their mood higher.</li><li><b>Collect and compare</b>: both groups rate their mood from 1 to 10. Is the exercise group higher?</li><li><b>Conclusion</b>: does the evidence support the prediction?</li></ul><p>If other researchers repeat a study and get the same result, we trust it more.</p>"
+  },
+  {
+   "title": "Cause, or just a link?",
+   "html": "<p>On days when more ice cream is sold, more people get sunburnt. Ice cream does not cause sunburn: hot weather causes both. The two are <b>linked</b>, but one does not <b>cause</b> the other.</p><p>To show that X causes Y, a researcher changes X on purpose, keeps everything else the same, and checks whether Y changes. Much of today is about this.</p>"
+  },
+  {
+   "title": "Population and sample: tasting the soup",
+   "html": "<p>To check whether a pot of soup needs salt, you stir it and taste one spoonful.</p><ul><li>The pot is the <b>population</b>: everyone you want to know about.</li><li>The spoonful is the <b>sample</b>: the people you actually study.</li><li>An unstirred spoonful from the top might taste nothing like the rest: a sample that is not like the population gives a wrong answer.</li></ul>"
+  },
+  {
+   "title": "What \"random\" means in science",
+   "html": "<p>In everyday talk random means odd (\"a random question\"). In science it means <b>decided by chance, so every option has the same chance</b>. A computer picking 60 names from a list of 600 is random: every name has a 1 in 10 chance.</p><p>Walking up to whoever you happen to see is <b>not</b> random: people who are not there have no chance at all.</p>"
+  },
+  {
+   "title": "How IB exams are marked",
+   "html": "<p>IB Psychology papers have no multiple choice. Examiners mark written answers with <b>markbands</b>: descriptions of each level (for example 1-2 marks: limited knowledge; 3-4 marks: detailed knowledge, example explained).</p><p>The first word of each question is a <b>command term</b> (describe, explain, evaluate...). Answering \"describe\" when it says \"explain\" keeps you in a lower band, even if everything you wrote is true.</p>"
+  }
  ],
  "terms": [
-  {"key": "approach", "word": "approach", "match": ["approach", "approaches"], "def": "In IB Psychology, one of three ways of explaining behaviour: biological (body and brain), cognitive (thinking and memory) or sociocultural (other people and culture)."},
-  {"key": "concept", "word": "concept", "match": ["concept", "concepts"], "def": "In this course, one of six big ideas used to question any study or theory: bias, causality, change, measurement, perspective and responsibility."},
-  {"key": "content", "word": "content", "match": ["content"], "def": "In this course, the knowledge you learn: the biological, cognitive and sociocultural approaches, plus research methodology."},
-  {"key": "context", "word": "context", "match": ["context", "contexts"], "def": "In this course, one of four real-life areas where psychology is used: health and well-being, human development, human relationships, and learning and cognition."},
-  {"key": "research methodology", "word": "research methodology", "match": ["research methodology", "methodology"], "def": "How psychologists find things out: which kind of study they run, who they study, how they collect information and how they analyse it."},
-  {"key": "hl", "word": "HL and SL", "match": ["HL", "SL"], "def": "Higher Level (HL) and Standard Level (SL). You take Psychology at HL: more hours, an extra exam (Paper 3) and extra topics."},
-  {"key": "ia", "word": "IA (internal assessment)", "match": ["IA", "internal assessment"], "def": "The part of your grade done in class and marked by your teacher, not in the exam. In Psychology it is a written research proposal, worth 20% at HL."},
-  {"key": "research proposal", "word": "research proposal", "match": ["research proposal", "proposal"], "def": "A written plan for a study: what you would investigate, who you would study and how. In your IA you write the plan but never carry the study out."},
-  {"key": "extended essay", "word": "extended essay", "match": ["extended essay"], "def": "A separate 4&nbsp;000-word research essay every IB Diploma student writes on a subject of their choice. It is not part of the Psychology grade."},
-  {"key": "syllabus", "word": "syllabus", "match": ["syllabus"], "def": "The official list of everything a course covers and can be tested on."},
-  {"key": "assessment objective", "word": "assessment objective (AO)", "match": ["assessment objective", "assessment objectives", "AO1", "AO2", "AO3"], "def": "One of three kinds of skill the exams test. AO1: know and understand. AO2: use your knowledge on a question or situation. AO3: judge, weigh up or design."},
-  {"key": "synthesis", "word": "synthesis", "match": ["synthesis"], "def": "Putting several pieces of information together to make one argument or conclusion."},
-  {"key": "command term", "word": "command term", "match": ["command term", "command terms"], "def": "The instruction word at the start of an exam question, such as describe, explain or evaluate. The IB gives each one an exact meaning, and it decides what kind of answer gets the marks."},
-  {"key": "describe", "word": "describe (command term)", "match": ["describe", "describes", "described"], "def": "IB command term: \"Give a detailed account.\" Say what something is or what happened, with detail. No reasons needed."},
-  {"key": "explain", "word": "explain (command term)", "match": ["explain", "explained"], "def": "IB command term: \"Give a detailed account including reasons or causes.\" Describe, then say why or how."},
-  {"key": "evaluate", "word": "evaluate (command term)", "match": ["evaluate"], "def": "IB command term: \"Make an appraisal by weighing up the strengths and limitations.\" Give good points and bad points, then a judgement."},
-  {"key": "discuss", "word": "discuss (command term)", "match": ["discuss"], "def": "IB command term: give a balanced review with a range of arguments or factors, then a clear conclusion backed by evidence."},
-  {"key": "state", "word": "state (command term)", "match": ["state"], "def": "IB command term: give a name, a number or another short answer, with no explanation."},
-  {"key": "design", "word": "design (command term)", "match": ["design"], "def": "IB command term: \"Produce a plan, simulation or model.\" In Psychology: plan a study, saying the method, the participants and what happens step by step."},
-  {"key": "apply", "word": "apply", "match": ["apply"], "def": "Use an idea or theory on a particular situation or question, not just repeat it."},
-  {"key": "suggest", "word": "suggest (command term)", "match": ["suggest"], "def": "IB command term: put forward a sensible possible answer, such as a hypothesis. More than one answer can be right."},
-  {"key": "differentiate", "word": "differentiate", "match": ["differentiate"], "def": "Show the difference between two or more things."},
-  {"key": "markband", "word": "markband", "match": ["markband", "markbands"], "def": "A level on the examiners' marking grid, such as 1-2 marks or 3-4 marks. Each band describes what an answer must contain to get those marks."},
-  {"key": "markscheme", "word": "markscheme", "match": ["markscheme", "markschemes", "mark scheme"], "def": "The examiners' guide to marking a paper: what earns marks and what does not."},
-  {"key": "specimen paper", "word": "specimen paper", "match": ["specimen paper", "specimen papers"], "def": "A sample exam made by the IB to show what the real papers will look like, before any real exam with the new course has happened."},
-  {"key": "unseen", "word": "unseen", "match": ["unseen"], "def": "Not seen before. An unseen scenario or study is new to you in the exam, so you must apply what you know to it."},
-  {"key": "scenario", "word": "scenario", "match": ["scenario", "scenarios"], "def": "A short description of a situation, made up or real, that a question asks you to think about."},
-  {"key": "source", "word": "source", "match": ["sources"], "def": "In Paper 3, a piece of evidence printed in the exam: a graph, a table of results or a summary of interviews."},
-  {"key": "criteria", "word": "criteria", "match": ["criteria"], "def": "The standards something is marked against. Criterion is the singular. The IA has four criteria, each marked out of 6."},
-  {"key": "class practical", "word": "class practical", "match": ["class practicals", "class practical", "practicals"], "def": "A small study you run with your class, for example a short experiment or a survey. IB Psychology has four: an interview, an observation, a survey and an experiment."},
-  {"key": "interview", "word": "interview", "match": ["interview", "interviews"], "def": "A research method where the researcher asks people questions and records their answers, often their own words."},
-  {"key": "observation", "word": "observation", "match": ["observation", "observations"], "def": "A research method where the researcher watches and records what people do."},
-  {"key": "survey", "word": "survey", "match": ["survey"], "def": "A research method that asks many people the same set of written questions (a questionnaire)."},
-  {"key": "questionnaire", "word": "questionnaire", "match": ["questionnaire"], "def": "A list of written questions that people answer themselves, often by choosing a number on a scale."},
-  {"key": "procedure", "word": "procedure", "match": ["procedure"], "def": "The exact steps of a study: what happens to the participants, in what order, for how long."},
-  {"key": "aim", "word": "aim", "match": ["aim"], "def": "What a study sets out to find out, in one sentence."},
-  {"key": "ethics", "word": "ethics, ethical", "match": ["ethics", "ethical"], "def": "Rules about treating research participants properly: asking their permission, not harming them, letting them stop at any time, keeping their data private."},
-  {"key": "consent", "word": "consent", "match": ["consent"], "def": "Permission. Informed consent means people agree to take part after being told what the study involves."},
-  {"key": "theory", "word": "theory", "match": ["theory", "theories"], "def": "An explanation of why or how something happens, which can be tested against evidence."},
-  {"key": "conceptual", "word": "conceptual understanding", "match": ["conceptual understanding", "conceptual"], "def": "Understanding the big ideas well enough to use them in new situations, not just remembering facts."},
-  {"key": "hormone", "word": "hormones", "match": ["hormones"], "def": "Chemical messages carried in the blood that change how the body and mood work. Adrenaline, released when you are scared, is one."},
-  {"key": "genes", "word": "genes", "match": ["genes"], "def": "Instructions passed on from parents to children inside every cell. They influence things like eye colour and, partly, some behaviour."},
-  {"key": "conditioning", "word": "classical and operant conditioning", "match": ["classical and operant conditioning", "classical conditioning", "conditioning"], "def": "Two kinds of learning taught in your class. Classical: linking two things, like a dog drooling at a bell that always comes before food. Operant: repeating what gets rewarded and avoiding what gets punished."},
-  {"key": "multi-store model", "word": "multi-store model", "match": ["multi-store model"], "def": "A diagram-like explanation of memory taught in your class: information passes from the senses into short-term memory and then, with rehearsal, into long-term memory."},
-  {"key": "social learning theory", "word": "social learning theory", "match": ["social learning theory"], "def": "The idea (Bandura) that we learn by watching other people and copying them, especially when we see them being rewarded."},
-  {"key": "theory of mind", "word": "theory of mind", "match": ["theory of mind"], "def": "Understanding that other people have their own thoughts, beliefs and feelings that can differ from yours. Young children develop it at around 4 years old."},
-  {"key": "self-esteem", "word": "self-esteem", "match": ["self-esteem"], "def": "How much a person values and likes themselves."},
-  {"key": "anxiety", "word": "anxiety", "match": ["anxiety"], "def": "A feeling of worry, nervousness or fear, often with a fast heartbeat."},
-  {"key": "data", "word": "data", "match": ["data"], "def": "Information collected in a study: numbers such as scores, or words such as interview answers."},
-  {"key": "statistics", "word": "statistics", "match": ["statistical test", "statistics", "statistical"], "def": "Maths used on data: averages, spread, and tests that decide whether a difference between groups is too big to be just luck."},
-  {"key": "objective", "word": "objective", "match": ["objective", "objectively"], "def": "Not affected by personal feelings or opinions; the same whoever does the measuring. The opposite is subjective."},
-  {"key": "bias", "word": "bias, biased", "match": ["bias", "biased", "biases"], "def": "A tilt in thinking or in a study that pushes results one way, away from the truth. A biased sample is not like the population it is meant to represent."},
-  {"key": "perceive", "word": "perceive", "match": ["perceive"], "def": "Notice and make sense of something with your senses and mind."},
-  {"key": "cognitive filter", "word": "cognitive filter", "match": ["cognitive filter"], "def": "The way your past experience and likes shape what you notice and how you understand it, like looking through tinted glasses."},
-  {"key": "premise", "word": "premise", "match": ["premise"], "def": "The basic idea or rule that something is built on."},
-  {"key": "causality", "word": "causality", "match": ["causality"], "def": "One of the six concepts: whether one thing really causes another. Psychologists try to find cause and effect, but other factors often get in the way."},
-  {"key": "measurement", "word": "measurement", "match": ["measurement"], "def": "One of the six concepts: how psychologists turn behaviour and thoughts, which are hard to see, into information they can record and compare."},
-  {"key": "cause and effect", "word": "cause and effect", "match": ["cause-and-effect", "cause and effect"], "def": "When one thing (the cause) makes another thing happen (the effect). Showing this needs an experiment with good controls."},
-  {"key": "participant", "word": "participant", "match": ["participant", "participants"], "def": "A person who takes part in a study."},
-  {"key": "reliable", "word": "reliable", "match": ["reliable"], "def": "Gives the same result when the measurement is repeated. A good bathroom scale is reliable."},
-  {"key": "valid", "word": "valid", "match": ["valid"], "def": "Really measures what it claims to measure. A maths test that is mostly reading is not a valid maths test."},
-  {"key": "direct or indirect", "word": "direct or indirect data", "match": ["direct or indirect"], "def": "Direct: measuring the behaviour itself, such as counting words recalled. Indirect: working it out from something else, such as brain activity on a scan."},
-  {"key": "deductively", "word": "deductively, inductively", "match": ["deductively", "inductively"], "def": "Deductively: start with a theory, make a prediction, test it. Inductively: start with observations and build a general idea from them."},
-  {"key": "emic and etic", "word": "emic and etic", "match": ["emic and etic"], "def": "Emic: studying a culture from the inside, using its own ideas. Etic: studying from the outside, using the same measures in many cultures to compare them."},
-  {"key": "quantitative", "word": "quantitative", "match": ["quantitative"], "def": "To do with numbers. Quantitative data are scores, times or counts."},
-  {"key": "qualitative", "word": "qualitative", "match": ["qualitative"], "def": "To do with words and meanings rather than numbers. Qualitative data are what people say or write, or notes on what they do."},
-  {"key": "variable", "word": "variable", "match": ["variable", "variables"], "def": "Anything that can change or differ and can be measured or changed in a study, such as reaction time or hours of sleep."},
-  {"key": "construct", "word": "construct", "match": ["construct", "constructs"], "def": "An idea you cannot see or touch directly, such as stress, intelligence or happiness. It has to be turned into something measurable first."},
-  {"key": "operationalise", "word": "operationalise", "match": ["operationalisation", "operationalization", "operationalise", "operationalised", "operationalising", "operationalized"], "def": "State exactly how a variable will be changed or measured, so that anyone could do it the same way. \"Memory\" becomes \"number of words out of 20 recalled in 2 minutes\"."},
-  {"key": "iv", "word": "IV (independent variable)", "match": ["independent variable", "IV", "IVs"], "def": "The thing the researcher changes on purpose in an experiment, to see whether it has an effect. It has at least two conditions."},
-  {"key": "dv", "word": "DV (dependent variable)", "match": ["dependent variable", "DV"], "def": "The thing the researcher measures in an experiment, to see whether the IV changed it."},
-  {"key": "condition", "word": "condition", "match": ["condition", "conditions"], "def": "One version of the IV in an experiment. Music and silence are the two conditions of a music experiment."},
-  {"key": "manipulate", "word": "manipulate", "match": ["manipulate", "manipulated", "manipulation"], "def": "In research: change something on purpose to see what happens. The researcher manipulates the IV."},
-  {"key": "experiment", "word": "experiment", "match": ["experiment", "experiments"], "def": "A study in which the researcher changes one thing (the IV), keeps other things the same, and measures whether another thing (the DV) changes."},
-  {"key": "true experiment", "word": "true experiment", "match": ["true experiment", "true experiments"], "def": "An experiment where the researcher changes the IV and chance decides which condition each participant goes into (random allocation). It gives the strongest evidence of cause and effect."},
-  {"key": "quasi-experiment", "word": "quasi-experiment", "match": ["quasi-experiment", "quasi-experiments"], "def": "Quasi means \"almost\". An experiment-like study where the groups already exist (age, gender, a diagnosis), so participants cannot be put into conditions by chance."},
-  {"key": "field experiment", "word": "field experiment", "match": ["field experiment", "field experiments"], "def": "A true experiment run in a real-life place, such as a street or a school corridor, instead of a laboratory."},
-  {"key": "natural experiment", "word": "natural experiment", "match": ["natural experiment", "natural experiments"], "def": "A study where a real event, such as a new law, changes the IV, not the researcher. It is a kind of quasi-experiment."},
-  {"key": "laboratory", "word": "laboratory (lab)", "match": ["laboratory", "lab"], "def": "A room where a researcher can control the conditions, such as noise and light. In psychology it is often just a quiet room with a computer."},
-  {"key": "random allocation", "word": "random allocation", "match": ["random allocation", "random assignment", "randomly allocated", "randomly assign"], "def": "Using chance (a coin toss, drawing names) to decide which condition each participant goes into, so that differences between people are spread evenly."},
-  {"key": "extraneous variable", "word": "extraneous variable", "match": ["extraneous variable", "extraneous variables", "extraneous", "external variables"], "def": "Anything other than the IV that could affect the DV, such as noise, time of day or tiredness."},
-  {"key": "confounding variable", "word": "confounding variable", "match": ["confounding variable", "confounding variables", "confounding", "confound"], "def": "An extraneous variable that was not controlled and differs between the conditions. It gives a second possible cause for the result, so you cannot tell which one it was."},
-  {"key": "control variable", "word": "control variable", "match": ["control variable", "control variables"], "def": "A variable the researcher keeps the same in every condition, so it cannot affect the result."},
-  {"key": "control group", "word": "control group", "match": ["control group", "control condition"], "def": "The group that does not get the thing being tested, for comparison. If exercisers become happier but the control group does not, exercise may be the reason."},
-  {"key": "standardisation", "word": "standardisation", "match": ["standardisation"], "def": "Giving every participant exactly the same instructions, materials, place and timing, so the results can be compared fairly."},
-  {"key": "population", "word": "population", "match": ["population", "populations"], "def": "In research, the whole group of people a study wants to find out about, for example all teenagers in Singapore."},
-  {"key": "target population", "word": "target population", "match": ["target population"], "def": "The whole group the researcher wants the results to apply to. The sample is chosen from it."},
-  {"key": "sample", "word": "sample", "match": ["sample", "samples"], "def": "The smaller group of people chosen from the population who actually take part in a study."},
-  {"key": "sampling technique", "word": "sampling technique", "match": ["sampling technique", "sampling techniques", "sampling"], "def": "The way the researcher chooses the sample from the population. The IB guide names five: self-selected, opportunity, stratified, random and snowball."},
-  {"key": "sampling bias", "word": "sampling bias", "match": ["sampling bias"], "def": "When the sample is not like the population it should represent, so the results may be wrong for that population."},
-  {"key": "subset", "word": "subset", "match": ["subset"], "def": "A smaller group taken out of a bigger group."},
-  {"key": "representative", "word": "representative", "match": ["representative", "unrepresentative"], "def": "Like the population in the ways that matter, for example the same mix of ages and genders. Results from a representative sample can be applied to the population."},
-  {"key": "generalise", "word": "generalise", "match": ["generalise", "generalising", "generalisation", "generalize", "generalizing", "generalized"], "def": "Apply the results of a study to other people or places beyond those actually studied."},
-  {"key": "strata", "word": "strata", "match": ["strata", "stratum"], "def": "Subgroups of a population, such as year groups. One subgroup is a stratum. Stratified sampling picks from each one."},
-  {"key": "volunteer bias", "word": "volunteer bias", "match": ["volunteer bias"], "def": "Bias because people who volunteer tend to be alike (keen, interested, with strong opinions) and different from people who do not."},
-  {"key": "selection bias", "word": "selection bias", "match": ["selection bias"], "def": "Bias that comes from the way people were chosen for a study."},
-  {"key": "privacy", "word": "privacy", "match": ["privacy"], "def": "Keeping people's personal information secret. In snowball sampling, participants know who else took part."},
-  {"key": "hypothesis", "word": "hypothesis (plural: hypotheses)", "match": ["experimental hypothesis", "hypothesis", "hypotheses"], "def": "A clear, testable statement that predicts what a study will find, for example that one condition will score higher than the other."},
-  {"key": "null hypothesis", "word": "null hypothesis", "match": ["null hypothesis", "null"], "def": "The statement that the IV will make no difference to the DV, and that any difference found is just chance. Written H<sub>0</sub>."},
-  {"key": "one-tailed", "word": "one-tailed (directional)", "match": ["one-tailed", "directional"], "def": "A hypothesis that says which way the result will go, using words like more, fewer, higher, faster."},
-  {"key": "two-tailed", "word": "two-tailed (non-directional)", "match": ["two-tailed", "non-directional"], "def": "A hypothesis that predicts a difference but not which way, using words like \"will affect\" or \"there will be a difference\"."},
-  {"key": "reject", "word": "reject, retain", "match": ["reject"], "def": "After the statistics, researchers reject the null hypothesis (the difference is too big to be chance) or retain (keep) it."},
-  {"key": "chance", "word": "chance", "match": ["chance"], "def": "Luck. A difference \"due to chance\" happened by luck, not because of the IV."},
-  {"key": "self-report", "word": "self-report", "match": ["self-report", "self-rating", "self-rated"], "def": "Information people give about themselves, for example by rating their own mood or answering a questionnaire. It depends on honest answers."},
-  {"key": "decaf", "word": "decaf", "match": ["decaf"], "def": "Coffee with the caffeine taken out. It tastes like coffee, so people cannot tell which one they had."},
-  {"key": "reaction time", "word": "reaction time", "match": ["reaction-time", "reaction time"], "def": "How quickly someone responds, for example pressing a key when a light appears, usually in thousandths of a second."},
-  {"key": "diagnosis", "word": "diagnosis", "match": ["diagnosis"], "def": "When a doctor or psychologist officially identifies an illness, such as depression."},
-  {"key": "proportion", "word": "proportion", "match": ["proportion", "proportions"], "def": "A part compared with the whole. 120 out of 200 is a proportion of 0.6, or 60%."},
-  {"key": "et al", "word": "et al.", "match": ["et al."], "def": "Latin for \"and others\". \"Maguire et al.\" means Maguire and the other researchers who wrote the study."}
+  {
+   "key": "approach",
+   "word": "approach",
+   "match": [
+    "approach",
+    "approaches"
+   ],
+   "def": "In IB Psychology, one of three ways of explaining behaviour: biological (body and brain), cognitive (thinking and memory) or sociocultural (other people and culture)."
+  },
+  {
+   "key": "concept",
+   "word": "concept",
+   "match": [
+    "concept",
+    "concepts"
+   ],
+   "def": "In this course, one of six big ideas used to question any study or theory: bias, causality, change, measurement, perspective and responsibility."
+  },
+  {
+   "key": "content",
+   "word": "content",
+   "match": [
+    "content"
+   ],
+   "def": "In this course, the knowledge you learn: the biological, cognitive and sociocultural approaches, plus research methodology."
+  },
+  {
+   "key": "context",
+   "word": "context",
+   "match": [
+    "context",
+    "contexts"
+   ],
+   "def": "In this course, one of four real-life areas where psychology is used: health and well-being, human development, human relationships, and learning and cognition."
+  },
+  {
+   "key": "research methodology",
+   "word": "research methodology",
+   "match": [
+    "research methodology",
+    "methodology"
+   ],
+   "def": "How psychologists find things out: which kind of study they run, who they study, how they collect information and how they analyse it."
+  },
+  {
+   "key": "hl",
+   "word": "HL and SL",
+   "match": [
+    "HL",
+    "SL"
+   ],
+   "def": "Higher Level (HL) and Standard Level (SL). You take Psychology at HL: more hours, an extra exam (Paper 3) and extra topics."
+  },
+  {
+   "key": "ia",
+   "word": "IA (internal assessment)",
+   "match": [
+    "IA",
+    "internal assessment"
+   ],
+   "def": "The part of your grade done in class and marked by your teacher, not in the exam. In Psychology it is a written research proposal, worth 20% at HL."
+  },
+  {
+   "key": "research proposal",
+   "word": "research proposal",
+   "match": [
+    "research proposal",
+    "proposal"
+   ],
+   "def": "A written plan for a study: what you would investigate, who you would study and how. In your IA you write the plan but never carry the study out."
+  },
+  {
+   "key": "extended essay",
+   "word": "extended essay",
+   "match": [
+    "extended essay"
+   ],
+   "def": "A separate 4&nbsp;000-word research essay every IB Diploma student writes on a subject of their choice. It is not part of the Psychology grade."
+  },
+  {
+   "key": "assessment objective",
+   "word": "assessment objective (AO)",
+   "match": [
+    "assessment objective",
+    "assessment objectives",
+    "AO1",
+    "AO2",
+    "AO3"
+   ],
+   "def": "One of three kinds of skill the exams test. AO1: know and understand. AO2: use your knowledge on a question or situation. AO3: judge, weigh up or design."
+  },
+  {
+   "key": "synthesis",
+   "word": "synthesis",
+   "match": [
+    "synthesis"
+   ],
+   "def": "Putting several pieces of information together to make one argument or conclusion."
+  },
+  {
+   "key": "command term",
+   "word": "command term",
+   "match": [
+    "command term",
+    "command terms"
+   ],
+   "def": "The instruction word at the start of an exam question, such as describe, explain or evaluate. The IB gives each one an exact meaning, and it decides what kind of answer gets the marks."
+  },
+  {
+   "key": "describe",
+   "word": "describe (command term)",
+   "match": [
+    "describe",
+    "describes",
+    "described"
+   ],
+   "def": "IB command term: \"Give a detailed account.\" Say what something is or what happened, with detail. No reasons needed."
+  },
+  {
+   "key": "explain",
+   "word": "explain (command term)",
+   "match": [
+    "explain",
+    "explained"
+   ],
+   "def": "IB command term: \"Give a detailed account including reasons or causes.\" Describe, then say why or how."
+  },
+  {
+   "key": "evaluate",
+   "word": "evaluate (command term)",
+   "match": [
+    "evaluate"
+   ],
+   "def": "IB command term: \"Make an appraisal by weighing up the strengths and limitations.\" Give good points and bad points, then a judgement."
+  },
+  {
+   "key": "discuss",
+   "word": "discuss (command term)",
+   "match": [
+    "discuss"
+   ],
+   "def": "IB command term: give a balanced review with a range of arguments or factors, then a clear conclusion backed by evidence."
+  },
+  {
+   "key": "state",
+   "word": "state (command term)",
+   "match": [
+    "state"
+   ],
+   "def": "IB command term: give a name, a number or another short answer, with no explanation."
+  },
+  {
+   "key": "design",
+   "word": "design (command term)",
+   "match": [
+    "design"
+   ],
+   "def": "IB command term: \"Produce a plan, simulation or model.\" In Psychology: plan a study, saying the method, the participants and what happens step by step."
+  },
+  {
+   "key": "apply",
+   "word": "apply",
+   "match": [
+    "apply"
+   ],
+   "def": "Use an idea or theory on a particular situation or question, not just repeat it."
+  },
+  {
+   "key": "suggest",
+   "word": "suggest (command term)",
+   "match": [
+    "suggest"
+   ],
+   "def": "IB command term: put forward a sensible possible answer, such as a hypothesis. More than one answer can be right."
+  },
+  {
+   "key": "differentiate",
+   "word": "differentiate",
+   "match": [
+    "differentiate"
+   ],
+   "def": "Show the difference between two or more things."
+  },
+  {
+   "key": "markband",
+   "word": "markband",
+   "match": [
+    "markband",
+    "markbands"
+   ],
+   "def": "A level on the examiners' marking grid, such as 1-2 marks or 3-4 marks. Each band describes what an answer must contain to get those marks."
+  },
+  {
+   "key": "markscheme",
+   "word": "markscheme",
+   "match": [
+    "markscheme",
+    "markschemes",
+    "mark scheme"
+   ],
+   "def": "The examiners' guide to marking a paper: what earns marks and what does not."
+  },
+  {
+   "key": "specimen paper",
+   "word": "specimen paper",
+   "match": [
+    "specimen paper",
+    "specimen papers"
+   ],
+   "def": "A sample exam made by the IB to show what the real papers will look like, before any real exam with the new course has happened."
+  },
+  {
+   "key": "unseen",
+   "word": "unseen",
+   "match": [
+    "unseen"
+   ],
+   "def": "Not seen before. An unseen scenario or study is new to you in the exam, so you must apply what you know to it."
+  },
+  {
+   "key": "scenario",
+   "word": "scenario",
+   "match": [
+    "scenario",
+    "scenarios"
+   ],
+   "def": "A short description of a situation, made up or real, that a question asks you to think about."
+  },
+  {
+   "key": "source",
+   "word": "source",
+   "match": [
+    "sources"
+   ],
+   "def": "In Paper 3, a piece of evidence printed in the exam: a graph, a table of results or a summary of interviews."
+  },
+  {
+   "key": "criteria",
+   "word": "criteria",
+   "match": [
+    "criteria"
+   ],
+   "def": "The standards something is marked against. Criterion is the singular. The IA has four criteria, each marked out of 6."
+  },
+  {
+   "key": "class practical",
+   "word": "class practical",
+   "match": [
+    "class practicals",
+    "class practical",
+    "practicals"
+   ],
+   "def": "A small study you run with your class, for example a short experiment or a survey. IB Psychology has four: an interview, an observation, a survey and an experiment."
+  },
+  {
+   "key": "interview",
+   "word": "interview",
+   "match": [
+    "interview",
+    "interviews"
+   ],
+   "def": "A research method where the researcher asks people questions and records their answers, often their own words."
+  },
+  {
+   "key": "observation",
+   "word": "observation",
+   "match": [
+    "observation",
+    "observations"
+   ],
+   "def": "A research method where the researcher watches and records what people do."
+  },
+  {
+   "key": "survey",
+   "word": "survey",
+   "match": [
+    "survey"
+   ],
+   "def": "A research method that asks many people the same set of written questions (a questionnaire)."
+  },
+  {
+   "key": "questionnaire",
+   "word": "questionnaire",
+   "match": [
+    "questionnaire"
+   ],
+   "def": "A list of written questions that people answer themselves, often by choosing a number on a scale."
+  },
+  {
+   "key": "procedure",
+   "word": "procedure",
+   "match": [
+    "procedure"
+   ],
+   "def": "The exact steps of a study: what happens to the participants, in what order, for how long."
+  },
+  {
+   "key": "aim",
+   "word": "aim",
+   "match": [
+    "aim"
+   ],
+   "def": "What a study sets out to find out, in one sentence."
+  },
+  {
+   "key": "ethics",
+   "word": "ethics, ethical",
+   "match": [
+    "ethics",
+    "ethical"
+   ],
+   "def": "Rules about treating research participants properly: asking their permission, not harming them, letting them stop at any time, keeping their data private."
+  },
+  {
+   "key": "consent",
+   "word": "consent",
+   "match": [
+    "consent"
+   ],
+   "def": "Permission. Informed consent means people agree to take part after being told what the study involves."
+  },
+  {
+   "key": "theory",
+   "word": "theory",
+   "match": [
+    "theory",
+    "theories"
+   ],
+   "def": "An explanation of why or how something happens, which can be tested against evidence."
+  },
+  {
+   "key": "conceptual",
+   "word": "conceptual understanding",
+   "match": [
+    "conceptual understanding",
+    "conceptual"
+   ],
+   "def": "Understanding the big ideas well enough to use them in new situations, not just remembering facts."
+  },
+  {
+   "key": "hormone",
+   "word": "hormones",
+   "match": [
+    "hormones"
+   ],
+   "def": "Chemical messages carried in the blood that change how the body and mood work. Adrenaline, released when you are scared, is one."
+  },
+  {
+   "key": "genes",
+   "word": "genes",
+   "match": [
+    "genes"
+   ],
+   "def": "Instructions passed on from parents to children inside every cell. They influence things like eye colour and, partly, some behaviour."
+  },
+  {
+   "key": "conditioning",
+   "word": "classical and operant conditioning",
+   "match": [
+    "classical and operant conditioning",
+    "classical conditioning",
+    "conditioning"
+   ],
+   "def": "Two kinds of learning taught in your class. Classical: linking two things, like a dog drooling at a bell that always comes before food. Operant: repeating what gets rewarded and avoiding what gets punished."
+  },
+  {
+   "key": "multi-store model",
+   "word": "multi-store model",
+   "match": [
+    "multi-store model"
+   ],
+   "def": "A diagram-like explanation of memory taught in your class: information passes from the senses into short-term memory and then, with rehearsal, into long-term memory."
+  },
+  {
+   "key": "social learning theory",
+   "word": "social learning theory",
+   "match": [
+    "social learning theory"
+   ],
+   "def": "The idea (Bandura) that we learn by watching other people and copying them, especially when we see them being rewarded."
+  },
+  {
+   "key": "theory of mind",
+   "word": "theory of mind",
+   "match": [
+    "theory of mind"
+   ],
+   "def": "Understanding that other people have their own thoughts, beliefs and feelings that can differ from yours. Young children develop it at around 4 years old."
+  },
+  {
+   "key": "self-esteem",
+   "word": "self-esteem",
+   "match": [
+    "self-esteem"
+   ],
+   "def": "How much a person values and likes themselves."
+  },
+  {
+   "key": "anxiety",
+   "word": "anxiety",
+   "match": [
+    "anxiety"
+   ],
+   "def": "A feeling of worry, nervousness or fear, often with a fast heartbeat."
+  },
+  {
+   "key": "data",
+   "word": "data",
+   "match": [
+    "data"
+   ],
+   "def": "Information collected in a study: numbers such as scores, or words such as interview answers."
+  },
+  {
+   "key": "statistics",
+   "word": "statistics",
+   "match": [
+    "statistical test",
+    "statistics",
+    "statistical"
+   ],
+   "def": "Maths used on data: averages, spread, and tests that decide whether a difference between groups is too big to be just luck."
+  },
+  {
+   "key": "objective",
+   "word": "objective",
+   "match": [
+    "objective",
+    "objectively"
+   ],
+   "def": "Not affected by personal feelings or opinions; the same whoever does the measuring. The opposite is subjective."
+  },
+  {
+   "key": "bias",
+   "word": "bias, biased",
+   "match": [
+    "bias",
+    "biased",
+    "biases"
+   ],
+   "def": "A tilt in thinking or in a study that pushes results one way, away from the truth. A biased sample is not like the population it is meant to represent."
+  },
+  {
+   "key": "perceive",
+   "word": "perceive",
+   "match": [
+    "perceive"
+   ],
+   "def": "Notice and make sense of something with your senses and mind."
+  },
+  {
+   "key": "cognitive filter",
+   "word": "cognitive filter",
+   "match": [
+    "cognitive filter"
+   ],
+   "def": "The way your past experience and likes shape what you notice and how you understand it, like looking through tinted glasses."
+  },
+  {
+   "key": "premise",
+   "word": "premise",
+   "match": [
+    "premise"
+   ],
+   "def": "The basic idea or rule that something is built on."
+  },
+  {
+   "key": "causality",
+   "word": "causality",
+   "match": [
+    "causality"
+   ],
+   "def": "One of the six concepts: whether one thing really causes another. Psychologists try to find cause and effect, but other factors often get in the way."
+  },
+  {
+   "key": "measurement",
+   "word": "measurement",
+   "match": [
+    "measurement"
+   ],
+   "def": "One of the six concepts: how psychologists turn behaviour and thoughts, which are hard to see, into information they can record and compare."
+  },
+  {
+   "key": "cause and effect",
+   "word": "cause and effect",
+   "match": [
+    "cause-and-effect",
+    "cause and effect"
+   ],
+   "def": "When one thing (the cause) makes another thing happen (the effect). Showing this needs an experiment with good controls."
+  },
+  {
+   "key": "participant",
+   "word": "participant",
+   "match": [
+    "participant",
+    "participants"
+   ],
+   "def": "A person who takes part in a study."
+  },
+  {
+   "key": "reliable",
+   "word": "reliable",
+   "match": [
+    "reliable"
+   ],
+   "def": "Gives the same result when the measurement is repeated. A good bathroom scale is reliable."
+  },
+  {
+   "key": "valid",
+   "word": "valid",
+   "match": [
+    "valid"
+   ],
+   "def": "Really measures what it claims to measure. A maths test that is mostly reading is not a valid maths test."
+  },
+  {
+   "key": "direct or indirect",
+   "word": "direct or indirect data",
+   "match": [
+    "direct or indirect"
+   ],
+   "def": "Direct: measuring the behaviour itself, such as counting words recalled. Indirect: working it out from something else, such as brain activity on a scan."
+  },
+  {
+   "key": "deductively",
+   "word": "deductively, inductively",
+   "match": [
+    "deductively",
+    "inductively"
+   ],
+   "def": "Deductively: start with a theory, make a prediction, test it. Inductively: start with observations and build a general idea from them."
+  },
+  {
+   "key": "emic and etic",
+   "word": "emic and etic",
+   "match": [
+    "emic and etic"
+   ],
+   "def": "Emic: studying a culture from the inside, using its own ideas. Etic: studying from the outside, using the same measures in many cultures to compare them."
+  },
+  {
+   "key": "quantitative",
+   "word": "quantitative",
+   "match": [
+    "quantitative"
+   ],
+   "def": "To do with numbers. Quantitative data are scores, times or counts."
+  },
+  {
+   "key": "qualitative",
+   "word": "qualitative",
+   "match": [
+    "qualitative"
+   ],
+   "def": "To do with words and meanings rather than numbers. Qualitative data are what people say or write, or notes on what they do."
+  },
+  {
+   "key": "variable",
+   "word": "variable",
+   "match": [
+    "variable",
+    "variables"
+   ],
+   "def": "Anything that can change or differ and can be measured or changed in a study, such as reaction time or hours of sleep."
+  },
+  {
+   "key": "construct",
+   "word": "construct",
+   "match": [
+    "construct",
+    "constructs"
+   ],
+   "def": "An idea you cannot see or touch directly, such as stress, intelligence or happiness. It has to be turned into something measurable first."
+  },
+  {
+   "key": "operationalise",
+   "word": "operationalise",
+   "match": [
+    "operationalisation",
+    "operationalization",
+    "operationalise",
+    "operationalised",
+    "operationalising",
+    "operationalized"
+   ],
+   "def": "State exactly how a variable will be changed or measured, so that anyone could do it the same way. \"Memory\" becomes \"number of words out of 20 recalled in 2 minutes\"."
+  },
+  {
+   "key": "iv",
+   "word": "IV (independent variable)",
+   "match": [
+    "independent variable",
+    "IV",
+    "IVs"
+   ],
+   "def": "The thing the researcher changes on purpose in an experiment, to see whether it has an effect. It has at least two conditions."
+  },
+  {
+   "key": "dv",
+   "word": "DV (dependent variable)",
+   "match": [
+    "dependent variable",
+    "DV"
+   ],
+   "def": "The thing the researcher measures in an experiment, to see whether the IV changed it."
+  },
+  {
+   "key": "condition",
+   "word": "condition",
+   "match": [
+    "condition",
+    "conditions"
+   ],
+   "def": "One version of the IV in an experiment. Music and silence are the two conditions of a music experiment."
+  },
+  {
+   "key": "manipulate",
+   "word": "manipulate",
+   "match": [
+    "manipulate",
+    "manipulated",
+    "manipulation"
+   ],
+   "def": "In research: change something on purpose to see what happens. The researcher manipulates the IV."
+  },
+  {
+   "key": "experiment",
+   "word": "experiment",
+   "match": [
+    "experiment",
+    "experiments"
+   ],
+   "def": "A study in which the researcher changes one thing (the IV), keeps other things the same, and measures whether another thing (the DV) changes."
+  },
+  {
+   "key": "true experiment",
+   "word": "true experiment",
+   "match": [
+    "true experiment",
+    "true experiments"
+   ],
+   "def": "An experiment where the researcher changes the IV and chance decides which condition each participant goes into (random allocation). It gives the strongest evidence of cause and effect."
+  },
+  {
+   "key": "quasi-experiment",
+   "word": "quasi-experiment",
+   "match": [
+    "quasi-experiment",
+    "quasi-experiments"
+   ],
+   "def": "Quasi means \"almost\". An experiment-like study where the groups already exist (age, gender, a diagnosis), so participants cannot be put into conditions by chance."
+  },
+  {
+   "key": "field experiment",
+   "word": "field experiment",
+   "match": [
+    "field experiment",
+    "field experiments"
+   ],
+   "def": "A true experiment run in a real-life place, such as a street or a school corridor, instead of a laboratory."
+  },
+  {
+   "key": "natural experiment",
+   "word": "natural experiment",
+   "match": [
+    "natural experiment",
+    "natural experiments"
+   ],
+   "def": "A study where a real event, such as a new law, changes the IV, not the researcher. It is a kind of quasi-experiment."
+  },
+  {
+   "key": "laboratory",
+   "word": "laboratory (lab)",
+   "match": [
+    "laboratory",
+    "lab"
+   ],
+   "def": "A room where a researcher can control the conditions, such as noise and light. In psychology it is often just a quiet room with a computer."
+  },
+  {
+   "key": "random allocation",
+   "word": "random allocation",
+   "match": [
+    "random allocation",
+    "random assignment",
+    "randomly allocated",
+    "randomly assign"
+   ],
+   "def": "Using chance (a coin toss, drawing names) to decide which condition each participant goes into, so that differences between people are spread evenly."
+  },
+  {
+   "key": "extraneous variable",
+   "word": "extraneous variable",
+   "match": [
+    "extraneous variable",
+    "extraneous variables",
+    "extraneous",
+    "external variables"
+   ],
+   "def": "Anything other than the IV that could affect the DV, such as noise, time of day or tiredness."
+  },
+  {
+   "key": "confounding variable",
+   "word": "confounding variable",
+   "match": [
+    "confounding variable",
+    "confounding variables",
+    "confounding",
+    "confound"
+   ],
+   "def": "An extraneous variable that was not controlled and differs between the conditions. It gives a second possible cause for the result, so you cannot tell which one it was."
+  },
+  {
+   "key": "control variable",
+   "word": "control variable",
+   "match": [
+    "control variable",
+    "control variables"
+   ],
+   "def": "A variable the researcher keeps the same in every condition, so it cannot affect the result."
+  },
+  {
+   "key": "control group",
+   "word": "control group",
+   "match": [
+    "control group",
+    "control condition"
+   ],
+   "def": "The group that does not get the thing being tested, for comparison. If exercisers become happier but the control group does not, exercise may be the reason."
+  },
+  {
+   "key": "standardisation",
+   "word": "standardisation",
+   "match": [
+    "standardisation"
+   ],
+   "def": "Giving every participant exactly the same instructions, materials, place and timing, so the results can be compared fairly."
+  },
+  {
+   "key": "population",
+   "word": "population",
+   "match": [
+    "population",
+    "populations"
+   ],
+   "def": "In research, the whole group of people a study wants to find out about, for example all teenagers in Singapore."
+  },
+  {
+   "key": "target population",
+   "word": "target population",
+   "match": [
+    "target population"
+   ],
+   "def": "The whole group the researcher wants the results to apply to. The sample is chosen from it."
+  },
+  {
+   "key": "sample",
+   "word": "sample",
+   "match": [
+    "sample",
+    "samples"
+   ],
+   "def": "The smaller group of people chosen from the population who actually take part in a study."
+  },
+  {
+   "key": "sampling technique",
+   "word": "sampling technique",
+   "match": [
+    "sampling technique",
+    "sampling techniques",
+    "sampling"
+   ],
+   "def": "The way the researcher chooses the sample from the population. The IB guide names five: self-selected, opportunity, stratified, random and snowball."
+  },
+  {
+   "key": "sampling bias",
+   "word": "sampling bias",
+   "match": [
+    "sampling bias"
+   ],
+   "def": "When the sample is not like the population it should represent, so the results may be wrong for that population."
+  },
+  {
+   "key": "subset",
+   "word": "subset",
+   "match": [
+    "subset"
+   ],
+   "def": "A smaller group taken out of a bigger group."
+  },
+  {
+   "key": "representative",
+   "word": "representative",
+   "match": [
+    "representative",
+    "unrepresentative"
+   ],
+   "def": "Like the population in the ways that matter, for example the same mix of ages and genders. Results from a representative sample can be applied to the population."
+  },
+  {
+   "key": "generalise",
+   "word": "generalise",
+   "match": [
+    "generalise",
+    "generalising",
+    "generalisation",
+    "generalize",
+    "generalizing",
+    "generalized"
+   ],
+   "def": "Apply the results of a study to other people or places beyond those actually studied."
+  },
+  {
+   "key": "strata",
+   "word": "strata",
+   "match": [
+    "strata",
+    "stratum"
+   ],
+   "def": "Subgroups of a population, such as year groups. One subgroup is a stratum. Stratified sampling picks from each one."
+  },
+  {
+   "key": "volunteer bias",
+   "word": "volunteer bias",
+   "match": [
+    "volunteer bias"
+   ],
+   "def": "Bias because people who volunteer tend to be alike (keen, interested, with strong opinions) and different from people who do not."
+  },
+  {
+   "key": "selection bias",
+   "word": "selection bias",
+   "match": [
+    "selection bias"
+   ],
+   "def": "Bias that comes from the way people were chosen for a study."
+  },
+  {
+   "key": "privacy",
+   "word": "privacy",
+   "match": [
+    "privacy"
+   ],
+   "def": "Keeping people's personal information secret. In snowball sampling, participants know who else took part."
+  },
+  {
+   "key": "hypothesis",
+   "word": "hypothesis (plural: hypotheses)",
+   "match": [
+    "experimental hypothesis",
+    "hypothesis",
+    "hypotheses"
+   ],
+   "def": "A clear, testable statement that predicts what a study will find, for example that one condition will score higher than the other."
+  },
+  {
+   "key": "null hypothesis",
+   "word": "null hypothesis",
+   "match": [
+    "null hypothesis",
+    "null"
+   ],
+   "def": "The statement that the IV will make no difference to the DV, and that any difference found is just chance. Written H<sub>0</sub>."
+  },
+  {
+   "key": "one-tailed",
+   "word": "one-tailed (directional)",
+   "match": [
+    "one-tailed",
+    "directional"
+   ],
+   "def": "A hypothesis that says which way the result will go, using words like more, fewer, higher, faster."
+  },
+  {
+   "key": "two-tailed",
+   "word": "two-tailed (non-directional)",
+   "match": [
+    "two-tailed",
+    "non-directional"
+   ],
+   "def": "A hypothesis that predicts a difference but not which way, using words like \"will affect\" or \"there will be a difference\"."
+  },
+  {
+   "key": "reject",
+   "word": "reject, retain",
+   "match": [
+    "reject"
+   ],
+   "def": "After the statistics, researchers reject the null hypothesis (the difference is too big to be chance) or retain (keep) it."
+  },
+  {
+   "key": "chance",
+   "word": "chance",
+   "match": [
+    "chance"
+   ],
+   "def": "Luck. A difference \"due to chance\" happened by luck, not because of the IV."
+  },
+  {
+   "key": "self-report",
+   "word": "self-report",
+   "match": [
+    "self-report",
+    "self-rating",
+    "self-rated"
+   ],
+   "def": "Information people give about themselves, for example by rating their own mood or answering a questionnaire. It depends on honest answers."
+  },
+  {
+   "key": "decaf",
+   "word": "decaf",
+   "match": [
+    "decaf"
+   ],
+   "def": "Coffee with the caffeine taken out. It tastes like coffee, so people cannot tell which one they had."
+  },
+  {
+   "key": "reaction time",
+   "word": "reaction time",
+   "match": [
+    "reaction-time",
+    "reaction time"
+   ],
+   "def": "How quickly someone responds, for example pressing a key when a light appears, usually in thousandths of a second."
+  },
+  {
+   "key": "diagnosis",
+   "word": "diagnosis",
+   "match": [
+    "diagnosis"
+   ],
+   "def": "When a doctor or psychologist officially identifies an illness, such as depression."
+  },
+  {
+   "key": "proportion",
+   "word": "proportion",
+   "match": [
+    "proportion",
+    "proportions"
+   ],
+   "def": "A part compared with the whole. 120 out of 200 is a proportion of 0.6, or 60%."
+  },
+  {
+   "key": "et al",
+   "word": "et al.",
+   "match": [
+    "et al."
+   ],
+   "def": "Latin for \"and others\". \"Maguire et al.\" means Maguire and the other researchers who wrote the study."
+  },
+  {
+   "key": "internal validity",
+   "word": "internal validity",
+   "match": [
+    "internal validity"
+   ],
+   "def": "Whether a study really tests what it claims to. In an experiment: whether the change in the DV really comes from the IV and not from something else."
+  },
+  {
+   "key": "appraisal",
+   "word": "appraisal",
+   "match": [
+    "appraisal"
+   ],
+   "def": "A judgement of how good or useful something is, after looking at its good and bad points."
+  },
+  {
+   "key": "systematic",
+   "word": "systematic difference",
+   "match": [
+    "systematic difference"
+   ],
+   "def": "A difference that affects one whole group in the same way, not just a few people by luck. Testing one group in the morning and the other after PE is a systematic difference."
+  }
  ]
 }

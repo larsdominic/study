@@ -45,7 +45,7 @@
 "day": "Sat",
 "week": "Week 1",
 "subject": "Timed practice + TOK + Psychology (session 2)",
-"task": "1 h: timed Maths set, sequences, no calculator (study site), then mark. 1 h TOK: exhibition prep (independent investigation task, May 2026 subject report pages, exhibition rubric). 2 h Psychology: evaluating research, then classical and operant conditioning (audit session 2)."
+"task": "1 h: timed Maths set, sequences, no calculator (study site), then mark. 1 h TOK: exhibition prep (independent investigation task, May 2026 subject report pages, exhibition rubric). 2 h Psychology: evaluating research, then classical and operant conditioning. Take a 10-min break between the parts."
 },
 {
 "iso": "2026-11-15",
@@ -53,7 +53,7 @@
 "day": "Sun",
 "week": "Week 1",
 "subject": "Week review + Biology B1.1 + plan + CAS",
-"task": "1 h: week 1 review page (Error log top 3, mixed quiz, flashcards). 2 h Biology: B1.1 Carbohydrates and lipids from the summary notes and the Term 1 deck (slides 241-362); HL topical pack, skip Q1 (it is in the 21 Nov mock), mark with the mark scheme. 1 h: plan next week, log CAS."
+"task": "1 h: week 1 review page (Error log top 3, mixed quiz, flashcards). 2 h Biology: B1.1 Carbohydrates and lipids from the summary notes and the Term 1 deck (slides 241-362); HL topical pack, skip Q1 (it is in the 21 Nov mock), mark with the mark scheme. 1 h: plan next week, log CAS. Take a 10-min break between the parts."
 },
 {
 "iso": "2026-11-16",
@@ -101,7 +101,7 @@
 "day": "Sat",
 "week": "Week 2",
 "subject": "Mock papers + Psychology (session 4)",
-"task": "Timed, no notes, follow the study-site page: Biology Grade 11 combined paper HL plus a mock selection, one English Paper 1 cartoon analysis, then Psychology session 4 (Paper 1 A and B block, research methods set, HL Paper 3 Q1-2). Mark everything with the mark schemes and markbands; log mistakes."
+"task": "Timed, no notes, follow the study-site page: Biology Grade 11 combined paper HL plus a mock selection, one English Paper 1 cartoon analysis, then Psychology session 4 (Paper 1 A and B block, research methods set, HL Paper 3 Q1-2). Mark everything with the mark schemes and markbands; log mistakes. Breaks are planned on the page."
 },
 {
 "iso": "2026-11-22",
@@ -117,7 +117,7 @@
 "day": "Mon",
 "week": "Exam window",
 "subject": "Psychology (revision)",
-"task": "Fix the weak points from the 21 Nov mock; redo the 6 Oct quiz short answers from the mark scheme (cover the answers); glossary flashcards for research methods and learning and cognition. Re-take the 9 Nov guide quiz."
+"task": "Revision, from memory first: 5-min brain dump of everything you know; then the shuffled re-take of the 9, 14 and 16 Nov guide quizzes; redo the 6 Oct quiz short answers from the mark scheme (answers covered); Fix-it: rewrite your weakest 21 Nov answer to the top markband. Last 15 min: due flashcards from other subjects."
 },
 {
 "iso": "2026-11-24",
@@ -125,7 +125,7 @@
 "day": "Tue",
 "week": "Exam window",
 "subject": "Maths",
-"task": "Revision: Error log first, then re-take both Maths guide quizzes. New if time: quadratics (official 2.6-2.7, school 2.2) with the worksheet and the GDC guide (no answers in the file: check with the GDC)."
+"task": "Revision, from memory first: 5-min brain dump; Error log lines; shuffled re-take of both Maths guide quizzes; a timed set of 5 questions from the sequences and functions packs, marked with the mark schemes; Fix-it rewrites. Quadratics (official 2.6-2.7) only if the teacher confirms it is on the Maths exam: then the worksheet with the GDC guide. Last 15 min: due flashcards from other subjects."
 },
 {
 "iso": "2026-11-25",
@@ -133,7 +133,7 @@
 "day": "Wed",
 "week": "Exam window",
 "subject": "Biology",
-"task": "Revision A1.1, A1.2, B1.1: Error log lines first; timed InThinking topic tests A1.2 (40 min) and B1.1 (30 min), mark with their mark schemes; A1.1 test if time. Re-read the summary notes only for the lines you got wrong."
+"task": "Revision A1.1, A1.2, B1.1, from memory first: 5-min brain dump; Error log lines; timed InThinking topic tests A1.2 and B1.1, marked with their mark schemes; A1.1 test if time; Fix-it rewrites. Last 15 min: due flashcards from other subjects."
 },
 {
 "iso": "2026-11-26",
@@ -141,7 +141,7 @@
 "day": "Thu",
 "week": "Exam window",
 "subject": "Business + French (30 min)",
-"task": "Business: the toolkit (SWOT, STEEPLE, Ansoff) from the free pages linked (STEEPLE has 7 factors, Ethical included; PESTLE sites leave Ethical out), then the McDonald's CosMc's Ansoff question with its mark scheme; rehearse the 10-mark structure. French (30 min): photo analysis phrase bank, describe one photo out loud for 3 minutes."
+"task": "Business revision, from memory first: 5-min brain dump of Units 1 and 2; shuffled re-take of both Business guide quizzes; one timed 10-marker with the mark scheme; Fix-it rewrite. The toolkit (SWOT, STEEPLE, Ansoff) only if the teacher confirms it is on the exam: then the free pages linked (STEEPLE has 7 factors, Ethical included; PESTLE sites leave Ethical out) and the McDonald's CosMc's Ansoff question. French (30 min): photo analysis phrase bank, describe one photo out loud for 3 minutes."
 },
 {
 "iso": "2026-11-27",
@@ -149,7 +149,7 @@
 "day": "Fri",
 "week": "Exam window",
 "subject": "English + French (30 min)",
-"task": "English: Error log, then a second timed cartoon analysis paragraph and the Persepolis terms (sessions 3 to 7 slides). French (30 min): re-read the corrected writing task, learn 15 connectors."
+"task": "English revision, from memory first: 5-min brain dump of the cartoon analysis chain and the Persepolis visual terms; Error log; a second timed cartoon analysis paragraph, self-marked with the criteria checklist; Fix-it rewrite. French (30 min): your corrected writing task, then the 9 cause connectors from the flashcards."
 },
 {
 "iso": "2026-11-28",
@@ -181,7 +181,7 @@
 "day": "Tue",
 "week": "Exam window",
 "subject": "Maths",
-"task": "Revision: Error log, re-do the worst 5 questions of the sequences and functions packs, formula booklet fluency."
+"task": "Revision, from memory first: 5-min brain dump; Error log; redo the worst 5 questions of the sequences and functions packs under time; formula booklet fluency; Fix-it rewrites. Last 15 min: due flashcards from other subjects."
 },
 {
 "iso": "2026-12-02",
@@ -189,7 +189,7 @@
 "day": "Wed",
 "week": "Exam window",
 "subject": "Biology",
-"task": "Revision B1.2, C1.1, C1.2 and the 21 Nov mock mistakes: timed InThinking topic tests C1.1 and C1.2 (35 min each), mark with their mark schemes; B1.2 test if time."
+"task": "Revision B1.2, C1.1, C1.2 and the 21 Nov mock mistakes, from memory first: 5-min brain dump; timed InThinking topic tests C1.1 and C1.2, marked with their mark schemes; B1.2 test if time; Fix-it rewrites. Last 15 min: due flashcards from other subjects."
 },
 {
 "iso": "2026-12-03",
@@ -197,7 +197,7 @@
 "day": "Thu",
 "week": "Exam window",
 "subject": "Business + French (30 min)",
-"task": "Business: Error log; rehearse Paper 1 answer structure (define, apply, analyse, evaluate) on the stakeholders Q1 again, timed 20 min. French: daily habit only."
+"task": "Business, from memory first: 5-min brain dump; Error log; rehearse the Paper 1 answer structure (define, apply, analyse, evaluate) on the stakeholders Q1 again, timed 20 min; Fix-it rewrite. French daily habit: 10 min flashcards + say 3 sentences out loud."
 },
 {
 "iso": "2026-12-04",
@@ -205,6 +205,6 @@
 "day": "Fri",
 "week": "Exam window",
 "subject": "English + French (30 min)",
-"task": "English: re-read your two cartoon paragraphs and the Horsey model, list your three habits that lose marks. French: daily habit only. End of the plan."
+"task": "English, from memory first: 5-min brain dump; then compare your two cartoon paragraphs with the Horsey model and list your three habits that lose marks; one last timed paragraph. French daily habit: 10 min flashcards + say 3 sentences out loud. End of the plan."
 }
 ]

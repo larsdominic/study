@@ -1,13 +1,13 @@
 {
- "minutes": 9,
+ "minutes": 7,
  "background": [
   {
    "title": "Substituting into a formula",
-   "html": "<p>A formula is a rule written with letters. To <b>substitute</b> means to replace each letter with its number, then work it out.</p><p>Example: u<sub>n</sub> = u<sub>1</sub> + (n − 1)d with u<sub>1</sub> = 36, n = 13 and d = −6.</p><ul><li>Write it out with brackets: 36 + (13 − 1) × (−6)</li><li>Brackets first: 13 − 1 = 12</li><li>Then multiply: 12 × (−6) = −72</li><li>Then add: 36 + (−72) = −36</li></ul><p>The same works for an expression such as 6n − 2: with n = 4 it is 24 − 2 = 22.</p><p>The order is always: brackets, then powers, then × and ÷, then + and −. Put negative numbers in brackets so the minus sign is not lost. The small letter in u<sub>n</sub> is not a power: it just says which position the number is in.</p>"
+   "html": "<p>A formula is a rule written with letters. To <b>substitute</b> means to replace each letter with its number, then work it out.</p><p>Example: u<sub>n</sub> = u<sub>1</sub> + (n − 1)d with u<sub>1</sub> = 36, n = 13 and d = −6.</p><ul><li>Write it out with brackets: 36 + (13 − 1) × (−6)</li><li>Brackets first: 13 − 1 = 12</li><li>Then multiply: 12 × (−6) = −72</li><li>Then add: 36 + (−72) = −36</li></ul><p>The order is always: brackets, then powers, then × and ÷, then + and −. Put negative numbers in brackets so the minus sign is not lost. The small letter in u<sub>n</sub> is not a power: it just says which position the number is in.</p>"
   },
   {
    "title": "Powers (indices): what 2<sup>5</sup>, (−2)<sup>6</sup> and 2<sup>−1</sup> mean",
-   "html": "<p>The small raised number says how many times to multiply: 2<sup>5</sup> = 2 × 2 × 2 × 2 × 2 = 32, the product of five 2s.</p><ul><li>A negative number to an <b>even</b> power is positive: (−2)<sup>6</sup> = 64. To an <b>odd</b> power it stays negative: (−2)<sup>3</sup> = −8.</li><li>Anything (except 0) to the power 0 is 1.</li><li>A negative power means 1 divided by: 2<sup>−1</sup> = <sup>1</sup>/<sub>2</sub> and 2<sup>−3</sup> = <sup>1</sup>/<sub>8</sub>.</li><li>A fraction power means a root: 9<sup>1/2</sup> = √9 = 3 and 8<sup>1/3</sup> = 2, because 2 × 2 × 2 = 8.</li></ul><p>Going backwards: if r<sup>3</sup> = 8 then r = 2. If r<sup>2</sup> = 3 then r = √3 <b>or</b> r = −√3, because a negative number squared is also positive. On the calculator use the ^ key: 1.03^10 ≈ 1.344.</p>"
+   "html": "<p>The small raised number says how many times to multiply: 2<sup>5</sup> = 2 × 2 × 2 × 2 × 2 = 32, the product of five 2s.</p><ul><li>A negative number to an <b>even</b> power is positive: (−2)<sup>6</sup> = 64. To an <b>odd</b> power it stays negative: (−2)<sup>3</sup> = −8.</li><li>A negative power means 1 divided by: 2<sup>−1</sup> = <sup>1</sup>/<sub>2</sub> and 2<sup>−3</sup> = <sup>1</sup>/<sub>8</sub>.</li></ul><p>Going backwards: if r<sup>3</sup> = 8 then r = 2. If r<sup>2</sup> = 3 then r = √3 <b>or</b> r = −√3, because a negative number squared is also positive. On the calculator use the ^ key: 1.03^10 ≈ 1.344.</p>"
   },
   {
    "title": "Solving equations, and a pair of equations together",
@@ -24,10 +24,6 @@
   {
    "title": "Rounding: decimal places and significant figures",
    "html": "<p><b>Decimal places</b> (d.p.) count digits after the decimal point. <b>Significant figures</b> (s.f.) count digits from the first one that is not zero.</p><table><tr><td>5796.3703…</td><td>2 d.p.</td><td>5796.37</td></tr><tr><td>5796.3703…</td><td>nearest dollar</td><td>5796</td></tr><tr><td>5796.3703…</td><td>3 s.f.</td><td>5800</td></tr></table><p>IB rule: unless the question says otherwise, give answers exactly or correct to 3 significant figures. Money questions usually ask for 2 d.p. or the nearest dollar: read the question and do what it says.</p><p>Keep the full calculator value until the very last line. Rounding in the middle of a calculation changes the final answer and can lose the answer mark.</p>"
-  },
-  {
-   "title": "What a proof is, and why it uses letters",
-   "html": "<p>Trying examples (2 + 3 = 5, 4 + 5 = 9) only shows a statement works for the numbers you tried. There are infinitely many integers to try. A <b>proof</b> uses letters that stand for <b>any</b> integer, so one argument covers every case.</p><ul><li>Any even integer can be written 2k, and any odd integer 2k + 1, where k is an integer.</li><li>Expanding a squared bracket: (x − 3)<sup>2</sup> = (x − 3)(x − 3) = x<sup>2</sup> − 3x − 3x + 9 = x<sup>2</sup> − 6x + 9. It is not x<sup>2</sup> + 9.</li><li>Command words: <b>state</b> means give the answer, no working needed; <b>show that</b> means the answer is already given and the marks are for the steps.</li><li>Each line must follow from the line before by correct algebra, and the last line says in words why the statement is true.</li></ul>"
   }
  ],
  "terms": [
@@ -141,15 +137,6 @@
    "def": "Σ is the Greek capital letter sigma. In maths it means 'add up'. The number below it says where the counting starts, the number on top where it stops."
   },
   {
-   "key": "positive integer",
-   "word": "positive integer",
-   "match": [
-    "positive integer",
-    "positive integers"
-   ],
-   "def": "A whole number above zero: 1, 2, 3, 4, … A position in a sequence is always one of these."
-  },
-  {
    "key": "integer",
    "word": "integer",
    "match": [
@@ -165,14 +152,6 @@
     "consecutive"
    ],
    "def": "Coming one straight after another, with no gaps. 4, 5, 6 are consecutive integers; u<sub>2</sub> and u<sub>3</sub> are consecutive terms."
-  },
-  {
-   "key": "constant",
-   "word": "constant",
-   "match": [
-    "constant"
-   ],
-   "def": "Staying the same; not changing."
   },
   {
    "key": "common difference",
@@ -208,15 +187,6 @@
    "def": "A piece of maths made of numbers and letters joined by +, −, × or ÷, with no = sign. Example: 6n − 2."
   },
   {
-   "key": "variable",
-   "word": "variable",
-   "match": [
-    "variable",
-    "variables"
-   ],
-   "def": "A letter that stands for a number that can change, like x, m or n."
-  },
-  {
    "key": "power",
    "word": "power",
    "match": [
@@ -245,22 +215,6 @@
    "def": "A way to find an unknown power. log<sub>2</sub> 8 = 3 because 2<sup>3</sup> = 8. Your class meets it properly in Topic 2; today the GDC can do the same job."
   },
   {
-   "key": "evaluate",
-   "word": "evaluate",
-   "match": [
-    "evaluate"
-   ],
-   "def": "In maths: work out the value. 'Evaluate the sum' means find the single number it equals. (In other IB subjects 'evaluate' means weigh up the good and bad points.)"
-  },
-  {
-   "key": "state",
-   "word": "state (command term)",
-   "match": [
-    "state"
-   ],
-   "def": "IB command term: give the answer or a short fact. No working or explanation is needed."
-  },
-  {
    "key": "show that",
    "word": "show that (command term)",
    "match": [
@@ -285,14 +239,6 @@
     "deductive"
    ],
    "def": "Going step by step from things you know are true to a result that must then also be true."
-  },
-  {
-   "key": "statement",
-   "word": "statement",
-   "match": [
-    "statement"
-   ],
-   "def": "A sentence in maths that is either true or false, such as 'the sum of two odd numbers is even'."
   },
   {
    "key": "identity",
@@ -388,14 +334,6 @@
     "divisible"
    ],
    "def": "Divisible by 3 means it divides by 3 exactly, with nothing left over. 15 is divisible by 3; 16 is not."
-  },
-  {
-   "key": "square number",
-   "word": "square number",
-   "match": [
-    "square number"
-   ],
-   "def": "An integer times itself: 1, 4, 9, 16, 25, … (1 × 1, 2 × 2, 3 × 3, …)."
   },
   {
    "key": "product",
@@ -596,36 +534,12 @@
    "def": "Close to the true value but not exact. To approximate is to find such a value, for example by rounding or averaging."
   },
   {
-   "key": "model",
-   "word": "model",
-   "match": [
-    "a model"
-   ],
-   "def": "A formula that describes a real situation well enough to make predictions, even if it does not fit perfectly."
-  },
-  {
-   "key": "extrapolation",
-   "word": "extrapolation",
-   "match": [
-    "extrapolation"
-   ],
-   "def": "Predicting a value outside the range of the numbers you have, such as week 10 when you only know weeks 1 to 5. It is less reliable than predicting inside that range."
-  },
-  {
    "key": "reliable",
    "word": "reliable",
    "match": [
     "reliable"
    ],
    "def": "Likely to be correct, so you can trust it."
-  },
-  {
-   "key": "symmetric",
-   "word": "symmetric",
-   "match": [
-    "symmetric"
-   ],
-   "def": "The same on both sides of a middle point. 36, 30, …, −30, −36 is symmetric about 0: each number has a partner with the opposite sign."
   },
   {
    "key": "alternate",
@@ -636,18 +550,11 @@
    "def": "Switch back and forth every time: +, −, +, −, …"
   },
   {
-   "key": "derive",
-   "word": "derive",
-   "match": [
-    "derive"
-   ],
-   "def": "Work out a formula yourself, step by step, from things you already know."
-  },
-  {
    "key": "justify",
    "word": "justify",
    "match": [
-    "justify"
+    "justify",
+    "justified"
    ],
    "def": "Give a correct reason why a step is allowed."
   },
@@ -769,14 +676,6 @@
    "def": "IB command term: give a short judgement about a result, for example whether it is sensible or how far you can trust it."
   },
   {
-   "key": "independent",
-   "word": "independent",
-   "match": [
-    "independent"
-   ],
-   "def": "Not linked to each other. Two independent letters, a and b, can each be any integer, so the two numbers can be different."
-  },
-  {
    "key": "find",
    "word": "find (command term)",
    "match": [
@@ -793,6 +692,22 @@
     "predict"
    ],
    "def": "IB command term: say what result you expect, for example a value for week 10 worked out from the pattern so far."
+  },
+  {
+   "key": "probability",
+   "word": "probability",
+   "match": [
+    "probability"
+   ],
+   "def": "How likely something is, as a number from 0 (impossible) to 1 (certain). It is a later topic; you skip that part today."
+  },
+  {
+   "key": "examiner",
+   "word": "examiner",
+   "match": [
+    "examiner"
+   ],
+   "def": "The person who marks your exam paper using the mark scheme."
   }
  ]
 }

@@ -1,0 +1,358 @@
+{
+ "minutes": 5,
+ "background": [
+  {
+   "title": "What a timed topic test is for",
+   "html": "<p>A topic test checks one topic the way an exam does: a fixed time, no notes, marks printed in brackets after each question, for example [3]. Today the times come from the test covers: they are exam pace, a bit faster than normal homework.</p><p>The point is not the score. The point is to find out <b>which exact points</b> you cannot yet write down under time, so you can fix them before the exam.</p>"
+  },
+  {
+   "title": "How a mark scheme gives marks",
+   "html": "<p>A mark scheme is the list of answers a marker accepts. For a written question it lists separate points, and each different correct point is worth one mark, up to the number in brackets. A scheme often lists more points than there are marks (\"any two of these\").</p><ul><li>Say the same thing twice: still one mark.</li><li>Your words can differ from the scheme if the meaning is the same.</li><li>A vague word (\"sticks\" for adhesion) may not get the mark.</li></ul>"
+  },
+  {
+   "title": "Command words: what the question wants",
+   "html": "<p>The first word of a question tells you how much to write.</p><ul><li><b>State</b>: one word or short phrase.</li><li><b>Outline</b>: the main points, briefly.</li><li><b>Describe</b>: say what something is like or what happens.</li><li><b>Explain</b>: say why or how, with \"because\" and \"so\".</li><li><b>Compare and contrast</b>: what is the same and what is different.</li><li><b>Suggest</b>: a sensible idea, even for something you were not taught.</li></ul>"
+  },
+  {
+   "title": "SL and HL on one paper",
+   "html": "<p>Biology is taught at standard level (SL) and higher level (HL). HL students learn everything SL students learn plus some extra parts (\"additional higher level\").</p><p>These InThinking tests are one paper for both levels: the HL-only questions come at the end, and the cover gives two times and two totals. You are HL, so you answer every question and use the HL time and total.</p>"
+  }
+ ],
+ "terms": [
+  {
+   "key": "mark scheme",
+   "word": "mark scheme",
+   "match": [
+    "mark scheme",
+    "mark schemes",
+    "scheme"
+   ],
+   "def": "The list of answers the marker accepts, with how many marks each point earns."
+  },
+  {
+   "key": "timed",
+   "word": "timed",
+   "match": [
+    "timed"
+   ],
+   "def": "Done against a clock, with the time limit of the real exam, and no notes."
+  },
+  {
+   "key": "hl",
+   "word": "HL",
+   "match": [
+    "HL"
+   ],
+   "def": "Higher level: the longer Biology course you take. HL exams have extra questions on the HL-only parts."
+  },
+  {
+   "key": "sl",
+   "word": "SL",
+   "match": [
+    "SL"
+   ],
+   "def": "Standard level: the shorter Biology course. The tests show the SL time and total too, but you use the HL ones."
+  },
+  {
+   "key": "multiple choice",
+   "word": "multiple choice",
+   "match": [
+    "multiple choice"
+   ],
+   "def": "A question with answers A, B, C and D where you pick one. One mark each."
+  },
+  {
+   "key": "structured",
+   "word": "structured",
+   "match": [
+    "structured"
+   ],
+   "def": "A question split into short parts, each worth a few marks."
+  },
+  {
+   "key": "extended response",
+   "word": "extended response",
+   "match": [
+    "extended response"
+   ],
+   "def": "A longer written answer, worth about 4 to 8 marks, where you make several separate points."
+  },
+  {
+   "key": "brain dump",
+   "word": "brain dump",
+   "match": [
+    "brain dump"
+   ],
+   "def": "Writing down everything you remember about a topic on a blank page, from memory, before you look at anything."
+  },
+  {
+   "key": "summary notes",
+   "word": "summary notes",
+   "match": [
+    "summary notes"
+   ],
+   "def": "Short revision notes for each topic (Revision Village, in your Drive), one or two pages long."
+  },
+  {
+   "key": "complementary",
+   "word": "complementary",
+   "match": [
+    "complementary"
+   ],
+   "def": "Matching so they fit together: in DNA, A always pairs with T and C with G."
+  },
+  {
+   "key": "template",
+   "word": "template",
+   "match": [
+    "template"
+   ],
+   "def": "A pattern used to make a copy. Each old DNA strand is the pattern for building a new strand."
+  },
+  {
+   "key": "nucleotide",
+   "word": "nucleotide",
+   "match": [
+    "nucleotide"
+   ],
+   "def": "One building block of DNA or RNA: a phosphate, a sugar and a base joined together."
+  },
+  {
+   "key": "phosphate",
+   "word": "phosphate",
+   "match": [
+    "phosphate"
+   ],
+   "def": "A small group containing phosphorus and oxygen. It links the sugars in DNA and RNA into a chain."
+  },
+  {
+   "key": "base",
+   "word": "base",
+   "match": [
+    "base",
+    "bases"
+   ],
+   "def": "In DNA and RNA, the part of a nucleotide that carries the code: A, C, G and T (U in RNA)."
+  },
+  {
+   "key": "covalent bond",
+   "word": "covalent bond",
+   "match": [
+    "covalent bond",
+    "covalent bonds"
+   ],
+   "def": "A strong bond where two atoms share a pair of electrons (tiny negative particles). It holds atoms together inside a molecule."
+  },
+  {
+   "key": "hydrogen bond",
+   "word": "hydrogen bond",
+   "match": [
+    "hydrogen bonds",
+    "hydrogen bond"
+   ],
+   "def": "A weak attraction between a slightly positive hydrogen and a slightly negative atom such as oxygen. It holds the two DNA strands together and water molecules to each other."
+  },
+  {
+   "key": "deoxyribose",
+   "word": "deoxyribose",
+   "match": [
+    "deoxyribose"
+   ],
+   "def": "The sugar in DNA. RNA has a very similar sugar called ribose."
+  },
+  {
+   "key": "uracil",
+   "word": "uracil",
+   "match": [
+    "uracil"
+   ],
+   "def": "A base found only in RNA. It takes the place of thymine (T)."
+  },
+  {
+   "key": "histone",
+   "word": "histone",
+   "match": [
+    "histone",
+    "histones"
+   ],
+   "def": "A protein that DNA is wound around, like thread round a spool, so the long molecule fits in the nucleus."
+  },
+  {
+   "key": "genetic material",
+   "word": "genetic material",
+   "match": [
+    "genetic material"
+   ],
+   "def": "The molecule that carries the instructions passed from parent to offspring. In living things it is DNA."
+  },
+  {
+   "key": "monosaccharide",
+   "word": "monosaccharide",
+   "match": [
+    "monosaccharides",
+    "monosaccharide"
+   ],
+   "def": "A single sugar unit, such as glucose."
+  },
+  {
+   "key": "disaccharide",
+   "word": "disaccharide",
+   "match": [
+    "disaccharide"
+   ],
+   "def": "Two sugar units joined together, such as sucrose (table sugar)."
+  },
+  {
+   "key": "polysaccharide",
+   "word": "polysaccharide",
+   "match": [
+    "polysaccharide"
+   ],
+   "def": "A long chain of many sugar units, such as starch or glycogen."
+  },
+  {
+   "key": "glycogen",
+   "word": "glycogen",
+   "match": [
+    "glycogen"
+   ],
+   "def": "The energy store made of glucose chains in animals, kept in the liver and muscles."
+  },
+  {
+   "key": "variable",
+   "word": "variable",
+   "match": [
+    "variable"
+   ],
+   "def": "Anything in an experiment that can change, such as temperature. You keep all but the one you test the same."
+  },
+  {
+   "key": "control",
+   "word": "control",
+   "match": [
+    "control"
+   ],
+   "def": "In an experiment, a set-up that leaves out the thing being tested (for example no yeast), to show that the result is caused by it."
+  },
+  {
+   "key": "c=c double bond",
+   "word": "C=C double bond",
+   "match": [
+    "C=C double bonds"
+   ],
+   "def": "Two carbon atoms joined by two shared pairs of electrons instead of one. Each one puts a bend in a fatty acid chain."
+  },
+  {
+   "key": "melting point",
+   "word": "melting point",
+   "match": [
+    "melting point"
+   ],
+   "def": "The temperature at which a solid turns into a liquid. Fats with more bends melt at lower temperatures, so they are oils."
+  },
+  {
+   "key": "polarity",
+   "word": "polarity",
+   "match": [
+    "polarity"
+   ],
+   "def": "Having a slightly positive end and a slightly negative end, because electrons are shared unequally."
+  },
+  {
+   "key": "delta",
+   "word": "δ+ and δ−",
+   "match": [
+    "δ+"
+   ],
+   "def": "Symbols for slightly positive (δ+) and slightly negative (δ−). δ is the Greek letter delta."
+  },
+  {
+   "key": "adhesion",
+   "word": "adhesion",
+   "match": [
+    "adhesion"
+   ],
+   "def": "Water sticking to other materials, such as soil or plant cell walls, by hydrogen bonds."
+  },
+  {
+   "key": "non-polar",
+   "word": "non-polar",
+   "match": [
+    "non-polar"
+   ],
+   "def": "With no positive and negative ends. Non-polar substances such as oils do not mix with water."
+  },
+  {
+   "key": "buoyancy",
+   "word": "buoyancy",
+   "match": [
+    "buoyancy"
+   ],
+   "def": "The upward push of water that helps things float."
+  },
+  {
+   "key": "specific heat capacity",
+   "word": "specific heat capacity",
+   "match": [
+    "specific heat capacity"
+   ],
+   "def": "How much energy it takes to warm something up. Water needs a lot, so lakes and seas change temperature slowly."
+  },
+  {
+   "key": "thermal conductivity",
+   "word": "thermal conductivity",
+   "match": [
+    "thermal conductivity"
+   ],
+   "def": "How easily heat passes through a material. Water carries heat away from a body faster than air."
+  },
+  {
+   "key": "viscosity",
+   "word": "viscosity",
+   "match": [
+    "viscosity"
+   ],
+   "def": "How thick and slow-flowing a liquid is. Honey has high viscosity; water much lower."
+  },
+  {
+   "key": "condense",
+   "word": "condense",
+   "match": [
+    "condense"
+   ],
+   "def": "To turn from a gas into a liquid, as steam does on a cold window."
+  },
+  {
+   "key": "goldilocks zone",
+   "word": "Goldilocks zone",
+   "match": [
+    "Goldilocks"
+   ],
+   "def": "The distance from a star where a planet is not too hot and not too cold, so liquid water could exist."
+  },
+  {
+   "key": "outline",
+   "word": "outline",
+   "match": [
+    "outline"
+   ],
+   "def": "IB command word: give the main points briefly."
+  },
+  {
+   "key": "explain",
+   "word": "explain",
+   "match": [
+    "explain"
+   ],
+   "def": "IB command word: say why or how, with reasons (use \"because\" and \"so\")."
+  },
+  {
+   "key": "compare and contrast",
+   "word": "compare and contrast",
+   "match": [
+    "compare and contrast"
+   ],
+   "def": "IB command words: give what is the same (similarities) and what is different (differences), mentioning both things each time."
+  }
+ ]
+}

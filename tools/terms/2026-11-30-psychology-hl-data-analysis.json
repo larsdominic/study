@@ -1,0 +1,509 @@
+{
+ "minutes": 7,
+ "background": [
+  {
+   "title": "What Paper 3 is",
+   "html": "<p>Paper 3 is the extra exam that only <b>HL</b> students sit: 1 hour 45 minutes, 30 marks, 30% of your final grade. You get a short booklet of <b>sources</b>: graphs, tables of results and summaries of interviews, all about one <b>claim</b> (a statement such as \"technology in school harms students' mental health\").</p><p>There are four questions. The first three each look at one source; the last one asks how far all the sources together support the claim. You never collect data yourself: everything you need is printed in the booklet. Examiners mark each answer against a short description of what a 1-mark, 3-mark or 6-mark answer looks like.</p>"
+  },
+  {
+   "title": "Three kinds of average",
+   "html": "<p>Take five test scores: 3, 4, 4, 6, 8.</p><ul><li><b>Mean</b>: add them (25) and divide by how many (5): 5.</li><li><b>Median</b>: put them in order and take the middle one: 4.</li><li><b>Mode</b>: the one that appears most often: 4.</li></ul><p>All three try to say what a typical score is. Now change the 8 into 28. The mean jumps to 9, but the median stays 4. One unusual score can drag the mean a long way, which is why psychologists often report the median as well.</p>"
+  },
+  {
+   "title": "Same average, different spread",
+   "html": "<p>Two classes both have a mean test score of 15 out of 20.</p><ul><li>Class A: 14, 15, 15, 16. Everyone scored about the same.</li><li>Class B: 5, 15, 20, 20. Some did very badly, some perfectly.</li></ul><p>The average hides this difference. A <b>measure of spread</b> shows it. The simplest is the range: highest minus lowest (2 for class A, 15 for class B). In Paper 3 you always look at the average <b>and</b> the spread before you say what a result means.</p>"
+  },
+  {
+   "title": "Numbers or words: two kinds of data",
+   "html": "<p><b>Quantitative</b> data are numbers: scores, times, counts. They are easy to compare: group A recalled 12 words, group B 8.</p><p><b>Qualitative</b> data are words: what people said in an interview or a <b>focus group</b> (a small group discussion led by a researcher). The researcher reads the written-out conversations and groups similar ideas into <b>themes</b>, such as \"feeling lonely\".</p><p>Paper 3 uses both. Question 3 is always about the words kind: can we trust the themes, and do they apply to other people?</p>"
+  },
+  {
+   "title": "A link is not a cause",
+   "html": "<p>Students who spend more hours on their phones may get lower grades. That is a link (a <b>correlation</b>). It does not show that phones <i>cause</i> lower grades: struggling students might turn to their phones more, or tiredness might cause both.</p><p>Only a study where the researcher changes one thing on purpose and compares groups can suggest a cause. In Paper 3, always ask: was anything changed on purpose, or were things just measured?</p>"
+  },
+  {
+   "title": "Reading a graph before believing it",
+   "html": "<p>Before you look at the bars, read the edges of the graph:</p><ul><li>the <b>title</b>: what is it really about?</li><li>the <b>axes</b>: what is measured, in what units, and does the scale start at 0?</li><li>the <b>key</b>: which colour is which group?</li><li>what is <b>missing</b>: how many people were asked? when?</li></ul><p>A scale that starts at 6.6 instead of 0 can make a small difference look huge. Spotting things like that is exactly Paper 3 question 1.</p>"
+  }
+ ],
+ "terms": [
+  {
+   "key": "hl",
+   "word": "HL and SL",
+   "match": [
+    "HL"
+   ],
+   "def": "Higher Level (HL) and Standard Level (SL). You take Psychology at HL: more hours, an extra exam (Paper 3) and extra topics."
+  },
+  {
+   "key": "source",
+   "word": "source",
+   "match": [
+    "sources",
+    "source"
+   ],
+   "def": "In Paper 3, one piece of evidence printed in the exam booklet: a graph, a table of results or a summary of interviews."
+  },
+  {
+   "key": "claim",
+   "word": "claim",
+   "match": [
+    "claim"
+   ],
+   "def": "A statement that something is true, which the Paper 3 sources are collected to test, for example \"technology in school harms mental health\"."
+  },
+  {
+   "key": "markband",
+   "word": "markband",
+   "match": [
+    "markband",
+    "markbands"
+   ],
+   "def": "A level on the examiners' marking grid, such as 3-4 marks. Each band describes what an answer must contain to get those marks."
+  },
+  {
+   "key": "markscheme",
+   "word": "markscheme",
+   "match": [
+    "markscheme"
+   ],
+   "def": "The examiners' guide to marking a paper: what earns marks and what does not."
+  },
+  {
+   "key": "specimen",
+   "word": "specimen paper",
+   "match": [
+    "specimen"
+   ],
+   "def": "A sample exam made by the IB to show what the real papers will look like for the new course."
+  },
+  {
+   "key": "command term",
+   "word": "command term",
+   "match": [
+    "command term",
+    "command terms"
+   ],
+   "def": "The instruction word at the start of an exam question, such as explain or analyse. The IB gives each one an exact meaning, and it decides what kind of answer gets the marks."
+  },
+  {
+   "key": "synthesis",
+   "word": "synthesis",
+   "match": [
+    "synthesis"
+   ],
+   "def": "Putting several pieces of evidence together into one argument and judgement."
+  },
+  {
+   "key": "data",
+   "word": "data",
+   "match": [
+    "data"
+   ],
+   "def": "Information collected in a study: numbers such as scores, or words such as interview answers."
+  },
+  {
+   "key": "qualitative",
+   "word": "qualitative",
+   "match": [
+    "qualitative"
+   ],
+   "def": "To do with words and meanings rather than numbers: what people say or write in interviews and focus groups."
+  },
+  {
+   "key": "statistic",
+   "word": "statistic, statistics",
+   "match": [
+    "statistics",
+    "statistic"
+   ],
+   "def": "A number that sums up data, such as an average or a measure of spread. Descriptive statistics describe the data you have."
+  },
+  {
+   "key": "central tendency",
+   "word": "central tendency",
+   "match": [
+    "central tendency"
+   ],
+   "def": "One number that describes the typical score: the mean, the median or the mode."
+  },
+  {
+   "key": "dispersion",
+   "word": "dispersion",
+   "match": [
+    "dispersion"
+   ],
+   "def": "How spread out the scores are. Range, standard deviation and semi-interquartile range measure it."
+  },
+  {
+   "key": "outlier",
+   "word": "outlier",
+   "match": [
+    "outlier",
+    "outliers"
+   ],
+   "def": "A score far away from all the others, such as 18 when everyone else scored 6 to 10. It can pull the mean and the range a long way."
+  },
+  {
+   "key": "quartile",
+   "word": "quartile (Q1, Q3)",
+   "match": [
+    "Q1"
+   ],
+   "def": "Put the scores in order. Q1 is a quarter of the way up, Q3 three quarters of the way up. Half of all scores lie between Q1 and Q3."
+  },
+  {
+   "key": "whisker",
+   "word": "whisker",
+   "match": [
+    "whiskers",
+    "whisker"
+   ],
+   "def": "In a box plot, the lines sticking out of the box, reaching to the lowest and highest scores."
+  },
+  {
+   "key": "box plot",
+   "word": "box and whisker plot",
+   "match": [
+    "box and whisker plot",
+    "box plots",
+    "box plot"
+   ],
+   "def": "A graph that shows five numbers: lowest score, Q1, median, Q3 and highest score. The box holds the middle half of the scores."
+  },
+  {
+   "key": "skew",
+   "word": "skew, skewed",
+   "match": [
+    "positively skewed",
+    "skewed",
+    "skew"
+   ],
+   "def": "When scores are bunched on one side and trail off on the other. Positively skewed: a long tail of high scores on the right, which pulls the mean above the median."
+  },
+  {
+   "key": "symmetrical",
+   "word": "symmetrical",
+   "match": [
+    "symmetrical"
+   ],
+   "def": "The same shape on both sides of the middle, like a mirror image. In symmetrical data the mean and the median are about equal."
+  },
+  {
+   "key": "sd",
+   "word": "standard deviation (SD)",
+   "match": [
+    "standard deviation"
+   ],
+   "def": "Roughly the typical distance of a score from the mean. Small SD: people scored much alike. Large SD: they differed a lot."
+  },
+  {
+   "key": "siqr",
+   "word": "semi-interquartile range (SIQR)",
+   "match": [
+    "semi-interquartile range"
+   ],
+   "def": "(Q3 − Q1) ÷ 2: half the width of the middle half of the scores. It ignores extreme scores, so it goes well with the median."
+  },
+  {
+   "key": "correlation",
+   "word": "correlation, correlation coefficient",
+   "match": [
+    "correlation coefficient",
+    "correlation"
+   ],
+   "def": "A link between two things measured in the same people. The coefficient runs from −1 to +1: near 0 means no link, the sign says whether one goes up as the other goes up (+) or down (−). A link does not show a cause."
+  },
+  {
+   "key": "bidirectional",
+   "word": "bidirectional ambiguity",
+   "match": [
+    "bidirectional ambiguity"
+   ],
+   "def": "Not knowing which way the cause runs: does A cause B, or does B cause A?"
+  },
+  {
+   "key": "tentative",
+   "word": "tentative",
+   "match": [
+    "tentative"
+   ],
+   "def": "Careful and not final: a conclusion that may change with more evidence."
+  },
+  {
+   "key": "sample",
+   "word": "sample",
+   "match": [
+    "sample size",
+    "sample"
+   ],
+   "def": "The group of people who actually took part in a study. Sample size is how many there were."
+  },
+  {
+   "key": "participant",
+   "word": "participant",
+   "match": [
+    "participants",
+    "participant"
+   ],
+   "def": "A person who takes part in a study."
+  },
+  {
+   "key": "laboratory",
+   "word": "laboratory experiment",
+   "match": [
+    "laboratory experiment",
+    "laboratory"
+   ],
+   "def": "A study in a controlled room where the researcher changes one thing and measures the effect, keeping everything else the same."
+  },
+  {
+   "key": "control group",
+   "word": "control group",
+   "match": [
+    "control group"
+   ],
+   "def": "The group that does not get the thing being tested, for comparison."
+  },
+  {
+   "key": "model",
+   "word": "model (in social learning)",
+   "match": [
+    "aggressive model"
+   ],
+   "def": "A person whose behaviour someone watches and may copy. In Bandura's study an adult hit a large toy doll while children watched."
+  },
+  {
+   "key": "prosocial",
+   "word": "prosocial, antisocial",
+   "match": [
+    "prosocial",
+    "antisocial"
+   ],
+   "def": "Prosocial: helpful (sharing, comforting). Antisocial: harmful (hitting, kicking, grabbing)."
+  },
+  {
+   "key": "bias",
+   "word": "bias",
+   "match": [
+    "bias"
+   ],
+   "def": "A tilt in thinking or in a study that pushes results one way, away from the truth."
+  },
+  {
+   "key": "researcher bias",
+   "word": "researcher bias",
+   "match": [
+    "researcher bias"
+   ],
+   "def": "When the researcher's own expectations or values affect how the study is run, scored or interpreted."
+  },
+  {
+   "key": "participant bias",
+   "word": "participant bias",
+   "match": [
+    "participant bias"
+   ],
+   "def": "When participants change what they say or do because they are being studied, for example to look good."
+  },
+  {
+   "key": "confirmation bias",
+   "word": "confirmation bias",
+   "match": [
+    "confirmation bias"
+   ],
+   "def": "Noticing and remembering mainly the evidence that fits what you already believe."
+  },
+  {
+   "key": "anchoring",
+   "word": "anchoring and framing",
+   "match": [
+    "anchoring and framing",
+    "framing"
+   ],
+   "def": "Anchoring: the first number you meet sways your later judgement. Framing: the way a number is put (\"4% risk\" or \"96% safe\") changes how it feels."
+  },
+  {
+   "key": "credibility",
+   "word": "credibility",
+   "match": [
+    "credibility"
+   ],
+   "def": "How far qualitative findings give a true picture of what was studied and of what the participants really meant."
+  },
+  {
+   "key": "transferability",
+   "word": "transferability, transferable",
+   "match": [
+    "transferability",
+    "transferable"
+   ],
+   "def": "How far findings from one qualitative study could apply to other people, places or times."
+  },
+  {
+   "key": "reflexivity",
+   "word": "reflexivity",
+   "match": [
+    "reflexivity"
+   ],
+   "def": "The researcher thinking about, and stating, how their own views and background might shape the study."
+  },
+  {
+   "key": "triangulation",
+   "word": "triangulation",
+   "match": [
+    "triangulation"
+   ],
+   "def": "Checking a finding from more than one angle: another method, other data, or a second researcher. If they agree, the finding is more credible."
+  },
+  {
+   "key": "member checking",
+   "word": "member checking",
+   "match": [
+    "member checking"
+   ],
+   "def": "Showing participants the researcher's themes and asking whether they match what they meant."
+  },
+  {
+   "key": "focus group",
+   "word": "focus group",
+   "match": [
+    "focus groups",
+    "focus group"
+   ],
+   "def": "A small group discussion (about 3 to 8 people) led by a researcher, to collect people's views in their own words."
+  },
+  {
+   "key": "theme",
+   "word": "theme",
+   "match": [
+    "themes",
+    "theme"
+   ],
+   "def": "In qualitative research, an idea that keeps coming up across what participants said, such as \"feeling lonely\"."
+  },
+  {
+   "key": "transcript",
+   "word": "transcript",
+   "match": [
+    "transcripts"
+   ],
+   "def": "A written, word-for-word copy of a recorded interview or discussion."
+  },
+  {
+   "key": "conflict of interest",
+   "word": "conflict of interest",
+   "match": [
+    "conflicts of interest"
+   ],
+   "def": "When a researcher could gain from a certain result, for example by working for the company whose product is studied."
+  },
+  {
+   "key": "peer review",
+   "word": "peer review, peer-reviewed",
+   "match": [
+    "peer-reviewed",
+    "peer review"
+   ],
+   "def": "Other experts check a study before it is published. A news article is usually not peer-reviewed."
+  },
+  {
+   "key": "levels of processing",
+   "word": "levels of processing",
+   "match": [
+    "levels of processing"
+   ],
+   "def": "A memory idea from your class (Craik and Lockhart): the more deeply you think about a word, the better you remember it. Structural (how it looks) is shallow, phonemic (how it sounds) is deeper, semantic (what it means) is deepest."
+  },
+  {
+   "key": "postpartum psychosis",
+   "word": "postpartum psychosis",
+   "match": [
+    "postpartum psychosis"
+   ],
+   "def": "A rare, severe mental illness that can start soon after giving birth, with confused thinking and beliefs that are not real."
+  },
+  {
+   "key": "insanity acquittee",
+   "word": "not guilty by reason of insanity",
+   "match": [
+    "insanity acquittees",
+    "not guilty by reason of insanity"
+   ],
+   "def": "A court verdict that a person did the act but was so mentally ill that they are not held criminally responsible. Such people are often sent to hospital instead of prison."
+  },
+  {
+   "key": "reoffend",
+   "word": "reoffending, rearrested",
+   "match": [
+    "reoffending",
+    "rearrested"
+   ],
+   "def": "Committing a crime again after release. Rearrested or charged again are ways of counting it, but they are not the same as being found guilty."
+  },
+  {
+   "key": "context",
+   "word": "context",
+   "match": [
+    "context"
+   ],
+   "def": "The setting around a study or a source: the place, time, people and purpose."
+  },
+  {
+   "key": "explain",
+   "word": "explain (command term)",
+   "match": [
+    "explain"
+   ],
+   "def": "IB command term: \"Give a detailed account including reasons or causes.\""
+  },
+  {
+   "key": "analyse",
+   "word": "analyse (command term)",
+   "match": [
+    "analyse"
+   ],
+   "def": "IB command term: \"Break down in order to bring out the essential elements or structure.\""
+  },
+  {
+   "key": "discuss",
+   "word": "discuss (command term)",
+   "match": [
+    "discuss"
+   ],
+   "def": "IB command term: give a balanced review with a range of arguments, then a clear conclusion backed by evidence."
+  },
+  {
+   "key": "to what extent",
+   "word": "to what extent (command term)",
+   "match": [
+    "to what extent"
+   ],
+   "def": "IB command term: weigh how far a claim is true, then give a clear, supported conclusion."
+  },
+  {
+   "key": "concept",
+   "word": "concept",
+   "match": [
+    "concepts"
+   ],
+   "def": "In this course, one of six big ideas used to question any study: bias, causality, change, measurement, perspective and responsibility."
+  },
+  {
+   "key": "appraisal",
+   "word": "appraisal",
+   "match": [
+    "appraisal"
+   ],
+   "def": "A judgement of how good or useful something is."
+  },
+  {
+   "key": "merits",
+   "word": "merits",
+   "match": [
+    "merits"
+   ],
+   "def": "Good points or strengths."
+  }
+ ]
+}

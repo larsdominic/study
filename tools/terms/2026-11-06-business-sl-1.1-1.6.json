@@ -1,5 +1,5 @@
 {
- "minutes": 8,
+ "minutes": 7,
  "background": [
   {
    "title": "What a business is for",
@@ -20,10 +20,6 @@
   {
    "title": "Government, laws and taxes",
    "html": "<p>The <b>government</b> (also called <b>the state</b>) makes laws, collects taxes and uses the tax money for public services such as state schools and roads. Organisations it owns or controls are the <b>public sector</b>; everything owned by private people or firms is the <b>private sector</b>.</p><p>Laws set the minimum a business must do: keep workers safe, limit pollution, pay tax on its profit. Governments also try to attract businesses, for example with <b>grants</b> (money that is not paid back) or lower taxes, because businesses create jobs.</p><p>Choosing to do more than the law requires is <b>corporate social responsibility</b> (1.3).</p>"
-  },
-  {
-   "title": "Business across borders",
-   "html": "<p>Businesses buy and sell between countries. Goods bought from another country are <b>imports</b>; goods sold to another country are <b>exports</b>. Each country has its own money (<b>currency</b>), so trade means swapping one currency for another.</p><p>A big company may go further and <b>produce</b> in other countries: build factories, open offices and hire staff there. Its <b>home country</b> is where its head office is; the other countries it works in are <b>host countries</b>. Section 1.6 asks one question: is this good or bad for the host country and its <b>economy</b> (its jobs, firms and incomes)?</p>"
   },
   {
    "title": "How Business exam questions work",
@@ -97,44 +93,12 @@
    "def": "IB command term (AO3): give a balanced review with arguments on more than one side, and a clear conclusion backed by evidence."
   },
   {
-   "key": "examine",
-   "word": "examine",
-   "match": [
-    "examine"
-   ],
-   "def": "IB command term (AO3): look closely at an argument or idea to show what it takes for granted and how its parts link together."
-  },
-  {
    "key": "recommend",
    "word": "recommend",
    "match": [
     "recommend"
    ],
    "def": "IB command term (AO3): advise what the business should do, with evidence and reasons from the situation."
-  },
-  {
-   "key": "justify",
-   "word": "justify",
-   "match": [
-    "justify"
-   ],
-   "def": "IB command term (AO3): give valid reasons or evidence to support an answer or conclusion. In everyday use, to justify something is to be a good reason for it: a fair-wage story may justify a higher price."
-  },
-  {
-   "key": "to what extent",
-   "word": "to what extent",
-   "match": [
-    "to what extent"
-   ],
-   "def": "IB command term (AO3): consider how far an argument is true, looking at its strong and weak points, then give a clear conclusion backed by evidence and sound reasoning."
-  },
-  {
-   "key": "calculate",
-   "word": "calculate",
-   "match": [
-    "calculate"
-   ],
-   "def": "IB command term (AO4): get a number as the answer and show the steps of your working."
   },
   {
    "key": "case study",
@@ -196,28 +160,12 @@
    "def": "A comparison of two numbers. A staff-to-child ratio of 1 to 4 means one adult for every four children. In Unit 3, ratios compare figures from a firm's accounts."
   },
   {
-   "key": "productivity",
-   "word": "productivity",
-   "match": [
-    "productivity"
-   ],
-   "def": "How much each worker (or machine) produces in a given time. Higher productivity means more output from the same people."
-  },
-  {
    "key": "toolkit",
    "word": "toolkit",
    "match": [
     "toolkit"
    ],
    "def": "The IB business management toolkit: a set of methods for analysing a business and making decisions, such as SWOT, STEEPLE and the business plan. You use them in every unit."
-  },
-  {
-   "key": "swot",
-   "word": "SWOT",
-   "match": [
-    "SWOT"
-   ],
-   "def": "A toolkit tool that lists a firm's <b>s</b>trengths and <b>w</b>eaknesses (inside the firm) and the <b>o</b>pportunities and <b>t</b>hreats it faces (outside)."
   },
   {
    "key": "substantiated",
@@ -243,23 +191,6 @@
     "limitation"
    ],
    "def": "A weakness or missing piece in an argument or in the data, which means you cannot be fully sure. In a 10-mark answer: what the case does not tell you."
-  },
-  {
-   "key": "superficially",
-   "word": "superficially",
-   "match": [
-    "superficially"
-   ],
-   "def": "Only on the surface, without going any deeper."
-  },
-  {
-   "key": "integrate",
-   "word": "integrated",
-   "match": [
-    "integrated",
-    "integration"
-   ],
-   "def": "Joined so the parts work as one. After an acquisition (buying another firm): combining the two firms' systems and staff. In a 10-mark answer: weaving facts from the case into your arguments."
   },
   {
    "key": "resources",
@@ -382,22 +313,6 @@
    "def": "A part of the economy. The four sectors (primary to quaternary) group businesses by the kind of work; the private and public sectors group them by who owns them."
   },
   {
-   "key": "research and development",
-   "word": "research and development",
-   "match": [
-    "research and development"
-   ],
-   "def": "Work to invent new products or better ways of making them. Often shortened to R&amp;D."
-  },
-  {
-   "key": "consultancy",
-   "word": "consultancies",
-   "match": [
-    "consultancies"
-   ],
-   "def": "Firms that sell expert advice to other businesses, for example on how to cut costs."
-  },
-  {
    "key": "industrialisation",
    "word": "industrialisation",
    "match": [
@@ -412,14 +327,6 @@
     "deindustrialisation"
    ],
    "def": "When manufacturing shrinks as a share of a country's jobs and output, and services grow instead."
-  },
-  {
-   "key": "market",
-   "word": "market",
-   "match": [
-    "markets"
-   ],
-   "def": "All the people or businesses who might buy a product, for example the market for bikes in one city. <b>Market research</b> is finding out what these customers want, for example with surveys or sales data."
   },
   {
    "key": "gap in the market",
@@ -533,14 +440,6 @@
    "def": "Money left over after all costs are paid. In a non-profit organisation it is called a surplus, not profit, because none of it goes to owners."
   },
   {
-   "key": "humanitarian",
-   "word": "humanitarian",
-   "match": [
-    "humanitarian"
-   ],
-   "def": "To do with helping people in need and reducing suffering, for example after a war or a flood."
-  },
-  {
    "key": "for-profit",
    "word": "for-profit",
    "match": [
@@ -573,14 +472,6 @@
    "def": "A market where shares in publicly held companies are bought and sold, such as the London Stock Exchange."
   },
   {
-   "key": "lease",
-   "word": "lease",
-   "match": [
-    "lease"
-   ],
-   "def": "A contract to rent a building or equipment for a fixed time."
-  },
-  {
    "key": "investment",
    "word": "investment",
    "match": [
@@ -600,14 +491,6 @@
     "reinvested"
    ],
    "def": "Put back into the business or its cause instead of being paid out to owners."
-  },
-  {
-   "key": "commercial",
-   "word": "commercial",
-   "match": [
-    "commercial"
-   ],
-   "def": "Run as a business that sells to customers and aims to cover its costs or make a profit."
   },
   {
    "key": "stakeholder",
@@ -706,28 +589,12 @@
    "def": "Making a business look more environmentally friendly than it really is, through adverts or claims not backed by action."
   },
   {
-   "key": "budget brand",
-   "word": "budget brand",
-   "match": [
-    "budget brand"
-   ],
-   "def": "A brand that sells mainly on a low price, not on quality or values."
-  },
-  {
    "key": "interests",
    "word": "interests",
    "match": [
     "interests"
    ],
    "def": "What a person or group wants or cares about. Employees' interests include fair pay and job security. 'In the interests of society' means for the good of society."
-  },
-  {
-   "key": "liquidity",
-   "word": "liquidity",
-   "match": [
-    "liquidity"
-   ],
-   "def": "Having enough cash, or things quickly turned into cash, to pay bills when they are due."
   },
   {
    "key": "profit-related pay",
@@ -805,44 +672,12 @@
    "def": "A small, specialised part of a market with particular needs, for example left-handed guitars."
   },
   {
-   "key": "infrastructure",
-   "word": "infrastructure",
-   "match": [
-    "infrastructure"
-   ],
-   "def": "The basic systems a country needs to work: roads, ports, power, water and internet."
-  },
-  {
-   "key": "lobby",
-   "word": "lobby",
-   "match": [
-    "lobby"
-   ],
-   "def": "To try to persuade politicians or the government to make decisions that help you."
-  },
-  {
-   "key": "tax break",
-   "word": "tax breaks",
-   "match": [
-    "tax breaks"
-   ],
-   "def": "A cut in tax that a government gives to some businesses or people."
-  },
-  {
    "key": "tax holiday",
    "word": "tax holiday",
    "match": [
     "tax holiday"
    ],
    "def": "A period when a government lets a business pay little or no tax, to persuade it to set up in the country."
-  },
-  {
-   "key": "enforce",
-   "word": "enforces",
-   "match": [
-    "enforces"
-   ],
-   "def": "Makes sure a law is obeyed, for example by inspecting firms and fining those that break it."
   },
   {
    "key": "incentive",
@@ -871,14 +706,6 @@
    "def": "Assessment objective: how deep the IB goes on a topic. <b>AO1</b>: know and describe. <b>AO2</b>: explain and apply to a case. <b>AO3</b>: evaluate, discuss or recommend (weigh up and judge). <b>AO4</b>: calculate and use skills."
   },
   {
-   "key": "capacity utilisation",
-   "word": "capacity utilisation",
-   "match": [
-    "capacity utilisation"
-   ],
-   "def": "How much a firm actually produces, as a percentage of the most it could produce. A hotel with 80 of its 100 rooms full has 80% capacity utilisation. Unit 5, HL only."
-  },
-  {
    "key": "steeple",
    "word": "STEEPLE",
    "match": [
@@ -903,28 +730,12 @@
    "def": "To find and hire new staff."
   },
   {
-   "key": "scarce",
-   "word": "scarce",
-   "match": [
-    "scarce"
-   ],
-   "def": "In short supply: there is not enough of it, so it is hard to find or costs more."
-  },
-  {
    "key": "business entity",
    "word": "business entities",
    "match": [
     "business entities"
    ],
    "def": "An organisation that does business. 'Types of business entities' means the different kinds: sole traders, partnerships, companies, cooperatives and NGOs."
-  },
-  {
-   "key": "high profile",
-   "word": "high profile",
-   "match": [
-    "high profile"
-   ],
-   "def": "Well known to the public and often in the news."
   },
   {
    "key": "refinery",
@@ -945,30 +756,6 @@
    "def": "A <b>plant</b> is a large factory. A car plant (or assembly plant) puts cars together from their parts."
   },
   {
-   "key": "distorted",
-   "word": "distorted",
-   "match": [
-    "distorted"
-   ],
-   "def": "Changed along the way, so the meaning is no longer accurate, like a message in a game of whispers."
-  },
-  {
-   "key": "headline number",
-   "word": "headline number",
-   "match": [
-    "headline number"
-   ],
-   "def": "The big number that is announced, such as '1 500 jobs', before you look at the details."
-  },
-  {
-   "key": "exploit",
-   "word": "exploit",
-   "match": [
-    "exploit"
-   ],
-   "def": "To use people or a place unfairly for your own gain, for example paying very low wages or polluting where laws are weak."
-  },
-  {
    "key": "bear the cost",
    "word": "bear the rest",
    "match": [
@@ -976,6 +763,145 @@
     "bear the cost"
    ],
    "def": "To <b>bear</b> a cost or loss is to carry it or suffer it. 'The lenders bear the rest' means the banks that lent the money lose it."
+  },
+  {
+   "key": "consult",
+   "word": "consult",
+   "match": [
+    "consult"
+   ],
+   "def": "Ask people for their views before you decide, so they feel heard and you learn their worries."
+  },
+  {
+   "key": "in bulk",
+   "word": "in bulk",
+   "match": [
+    "in bulk",
+    "bulk"
+   ],
+   "def": "In large amounts at once. Suppliers often give a lower price per item for a big order: a <b>bulk discount</b>."
+  },
+  {
+   "key": "unemployment",
+   "word": "unemployment",
+   "match": [
+    "unemployment"
+   ],
+   "def": "People who want a job but cannot find one. <b>Youth unemployment</b> means young people without jobs."
+  },
+  {
+   "key": "import",
+   "word": "imported",
+   "match": [
+    "imported"
+   ],
+   "def": "Bought from another country and brought in. Imported parts are made abroad, so local suppliers get no orders for them."
+  },
+  {
+   "key": "mark scheme",
+   "word": "mark scheme",
+   "match": [
+    "mark scheme",
+    "mark schemes"
+   ],
+   "def": "The examiner's list of what earns each mark for a question, sometimes with sample answers. You use it to mark your own work."
+  },
+  {
+   "key": "section a",
+   "word": "section A",
+   "match": [
+    "section A"
+   ],
+   "def": "The first part of Business Papers 1 and 2: questions split into parts, such as (a) and (b), marked point by point. Section B holds the 10-mark answer."
+  },
+  {
+   "key": "certified",
+   "word": "certified",
+   "match": [
+    "certified"
+   ],
+   "def": "Officially checked and approved by an independent organisation, for example as paying its workers fairly."
+  },
+  {
+   "key": "head office",
+   "word": "head office",
+   "match": [
+    "head office"
+   ],
+   "def": "The main office of a company, where the top managers work and the big decisions are made."
+  },
+  {
+   "key": "contract",
+   "word": "contract",
+   "match": [
+    "contracts",
+    "contract"
+   ],
+   "def": "A written agreement that the law can enforce, such as the rules a franchisee must follow."
+  },
+  {
+   "key": "hygiene",
+   "word": "hygiene",
+   "match": [
+    "hygiene"
+   ],
+   "def": "Keeping food, hands and places clean so that people do not get ill."
+  },
+  {
+   "key": "ict",
+   "word": "ICT",
+   "match": [
+    "ICT"
+   ],
+   "def": "Information and communication technology: computers, software, data and the internet."
+  },
+  {
+   "key": "manufacturing",
+   "word": "manufacturing",
+   "match": [
+    "manufacturing"
+   ],
+   "def": "Making goods in factories from materials or parts, for example cars or chocolate bars."
+  },
+  {
+   "key": "construction",
+   "word": "construction",
+   "match": [
+    "construction"
+   ],
+   "def": "Building houses, offices, roads and bridges."
+  },
+  {
+   "key": "emissions",
+   "word": "emissions",
+   "match": [
+    "emissions"
+   ],
+   "def": "Gases sent into the air, such as carbon dioxide from burning fuel, which add to pollution and climate change."
+  },
+  {
+   "key": "qualification",
+   "word": "qualification",
+   "match": [
+    "Qualification"
+   ],
+   "def": "In your teacher's 10-mark guide: a sentence saying when the argument is stronger or weaker, such as 'However, this depends on...'. Not a certificate."
+  },
+  {
+   "key": "resentment",
+   "word": "resentment",
+   "match": [
+    "resentment"
+   ],
+   "def": "An angry feeling of being treated unfairly."
+  },
+  {
+   "key": "price-sensitive",
+   "word": "price-sensitive",
+   "match": [
+    "price-sensitive"
+   ],
+   "def": "Customers who buy a lot less when the price goes up even a little."
   }
  ]
 }

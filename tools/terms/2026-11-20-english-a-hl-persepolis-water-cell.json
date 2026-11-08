@@ -1,0 +1,521 @@
+{
+ "minutes": 7,
+ "background": [
+  {
+   "title": "How to read a comic page",
+   "html": "<p>A comic or <b>graphic novel</b> tells a story in boxes called <b>panels</b>. In English you read them left to right, top row first, like text. The white strip between two panels is the <b>gutter</b>.</p><p>Inside a panel there are two kinds of words: a <b>speech balloon</b> (with a little tail pointing at the speaker) holds what a character says; a <b>caption</b> (a box, often at the top) holds the narrator's words.</p><p>Every drawing is a choice: how close we are, where we look from, how big the panel is, what is black and what is white. In English class you analyse those choices the way you would analyse word choices in a poem.</p>"
+  },
+  {
+   "title": "Persepolis in a few lines",
+   "html": "<p><i>Persepolis</i> is Marjane Satrapi's memoir in comic form: the true story of her own childhood in Iran around the 1979 revolution, drawn only in black and white.</p><p>Two voices tell it. The <b>pictures</b> show the child, Marji, as she was then. The <b>captions</b> are the grown-up Marjane looking back, who knows much more than the child did. Much of the book's meaning comes from the gap between the two.</p><p>In \"The Water Cell\" (pp. 18-25 in your class edition) Marji's parents are out protesting every day, and at home she learns things about her country and her own family that her school never told her.</p>"
+  },
+  {
+   "title": "Iran's rulers, only as much as you need",
+   "html": "<p>For many years Iran was ruled by kings of one family, the <b>Qajar dynasty</b>. In the 1920s an army officer, <b>Reza Shah</b>, took power and made himself king (\"Shah\" means king). His son, also called the Shah, ruled after him until the <b>1979 revolution</b>, when huge protests ended the monarchy.</p><p>That is all the history the Water Cell questions need. Your book gives the rest.</p>"
+  },
+  {
+   "title": "Close or far, high or low: how a camera sees",
+   "html": "<p>Film makers and comic artists make two choices for every picture. <b>How close</b> is the camera? Far away shows a whole place; very close shows one eye. <b>How high</b> is the camera? Looking down on someone makes them seem small; looking up makes them seem big and strong.</p><p>Try it with your phone: photograph a friend from far, then close, then from a chair above them, then from the floor. Each photo makes you feel differently about the same person. That feeling is the <b>effect</b> you write about.</p>",
+   "link": {
+    "url": "https://www.bbc.co.uk/bitesize/guides/zg6ffrd/revision/1",
+    "label": "BBC Bitesize: Types of shot (Moving Image Arts)"
+   }
+  },
+  {
+   "title": "What analysis means in English A",
+   "html": "<p>Analysis is not retelling the story. It answers three questions about one choice the writer or artist made:</p><ul><li><b>What</b> is the choice? (a close-up, a black background, a short caption)</li><li><b>What does it do</b> to the reader? (we feel close to her, we feel she is trapped)</li><li><b>Why</b> did the writer want that? (to show how a child meets violence)</li></ul><p>A sentence that only names a technique earns very little. A sentence that goes from the technique to its effect to its purpose is what examiners reward.</p>"
+  },
+  {
+   "title": "Literary and non-literary texts",
+   "html": "<p>The IB sorts texts into two groups. <b>Literary</b> texts are works of literature: novels, poems, plays, short stories and graphic novels. <b>Non-literary</b> texts are everything else people read and see: adverts, cartoons, blogs, speeches, photographs, posters, news articles.</p><p>In Paper 1 you get two <b>unseen</b> non-literary texts (texts you have never seen before). Your class books, like Persepolis, are literary works and are used in other parts of the course.</p>"
+  },
+  {
+   "title": "Writing for an audience in French",
+   "html": "<p>In a French B writing task, three questions decide your text before you write a word: <b>who</b> reads it (here: your classmates), <b>why</b> (to persuade them to use phones less) and <b>what kind of text</b> (a speech or a blog post).</p><p>The way you speak to the reader is the <b>register</b>. To a group of classmates you write in a friendly but correct way and use <i>vous</i>, because you are talking to several people. A job application letter would be the wrong kind of text for this reader and this purpose, however good its French.</p>"
+  }
+ ],
+ "terms": [
+  {
+   "key": "multimodal",
+   "word": "multimodal",
+   "match": [
+    "multimodal"
+   ],
+   "def": "Using more than one way of making meaning at once, for example pictures and words together. A comic, an advert and a website are multimodal."
+  },
+  {
+   "key": "convention",
+   "word": "convention",
+   "match": [
+    "conventions",
+    "convention"
+   ],
+   "def": "A usual feature that readers expect in a kind of text. Panels and speech balloons are conventions of comics; a greeting and a sign-off are conventions of a speech."
+  },
+  {
+   "key": "panel",
+   "word": "panel",
+   "match": [
+    "panels",
+    "panel"
+   ],
+   "def": "One box (one picture) on a comic page. A page is usually made of several panels read in order."
+  },
+  {
+   "key": "gutter",
+   "word": "gutter",
+   "match": [
+    "gutters",
+    "gutter"
+   ],
+   "def": "The empty strip between two comic panels. Time passes there, and the reader imagines what happens in it."
+  },
+  {
+   "key": "caption",
+   "word": "caption",
+   "match": [
+    "captions",
+    "caption"
+   ],
+   "def": "A box of words in a comic panel that holds the narrator's voice, not a character's speech. In Persepolis, the grown-up Marjane looking back."
+  },
+  {
+   "key": "closure",
+   "word": "closure",
+   "match": [
+    "closure"
+   ],
+   "def": "In comics, the reader's mind joining separate panels into one story and filling in what is not drawn."
+  },
+  {
+   "key": "transition",
+   "word": "transition",
+   "match": [
+    "transitions",
+    "transition"
+   ],
+   "def": "The kind of jump from one panel to the next: a second later, the next action, another person, another time or place."
+  },
+  {
+   "key": "shot type",
+   "word": "shot type",
+   "match": [
+    "shot types",
+    "shot type"
+   ],
+   "def": "How close the camera (or the artist) is to the subject: from extreme close-up (one detail) to extreme long shot (a tiny figure in a huge place)."
+  },
+  {
+   "key": "angle",
+   "word": "camera angle",
+   "match": [
+    "camera angles",
+    "camera angle",
+    "angles"
+   ],
+   "def": "How high the camera is compared with the subject: above looking down (high), level (eye level) or below looking up (low)."
+  },
+  {
+   "key": "frame",
+   "word": "frame",
+   "match": [
+    "frame"
+   ],
+   "def": "The edges of the picture: everything we can see inside one panel or one camera shot. Also the border line drawn around a panel."
+  },
+  {
+   "key": "chiaroscuro",
+   "word": "chiaroscuro",
+   "match": [
+    "chiaroscuro"
+   ],
+   "def": "An art word (Italian for \"light-dark\"): strong contrast between light and dark areas of a picture. Say it \"kee-ar-oh-SKOO-roh\"."
+  },
+  {
+   "key": "symbol",
+   "word": "symbol",
+   "match": [
+    "symbolism",
+    "symbolic",
+    "symbol"
+   ],
+   "def": "A thing in a text that stands for an idea. A dove can stand for peace; wrinkled hands can stand for suffering passed down a family."
+  },
+  {
+   "key": "motif",
+   "word": "motif",
+   "match": [
+    "motif"
+   ],
+   "def": "An image or idea that comes back several times in a text, so it gathers meaning, for example ageing or water."
+  },
+  {
+   "key": "mimicry",
+   "word": "mimicry",
+   "match": [
+    "mimicry"
+   ],
+   "def": "Copying how someone else acts or looks, here with your own body."
+  },
+  {
+   "key": "emulation",
+   "word": "emulation",
+   "match": [
+    "emulation"
+   ],
+   "def": "Trying to copy or be like someone you look up to."
+  },
+  {
+   "key": "empathy",
+   "word": "empathy",
+   "match": [
+    "empathy"
+   ],
+   "def": "Trying to feel what another person feels, as if you were in their place."
+  },
+  {
+   "key": "trauma",
+   "word": "trauma",
+   "match": [
+    "trauma"
+   ],
+   "def": "Very deep pain or shock from a terrible experience, which can last for years."
+  },
+  {
+   "key": "ideology",
+   "word": "ideology",
+   "match": [
+    "ideology"
+   ],
+   "def": "A set of political ideas and beliefs about how a society should be run, for example communism."
+  },
+  {
+   "key": "dynasty",
+   "word": "dynasty",
+   "match": [
+    "dynasty"
+   ],
+   "def": "A family of rulers, where power passes from parent to child, for example the Qajar kings of Iran."
+  },
+  {
+   "key": "revolution",
+   "word": "revolution",
+   "match": [
+    "revolution"
+   ],
+   "def": "When people overthrow their government or ruler, often through mass protest. In Iran in 1979 the monarchy (rule by the Shah) was ended."
+  },
+  {
+   "key": "shah",
+   "word": "Shah",
+   "match": [
+    "Shah"
+   ],
+   "def": "The title of the king of Iran."
+  },
+  {
+   "key": "innocence",
+   "word": "innocence",
+   "match": [
+    "innocence",
+    "innocent"
+   ],
+   "def": "In literature, a child's not yet knowing about the cruelty of the adult world."
+  },
+  {
+   "key": "memoir",
+   "word": "memoir",
+   "match": [
+    "memoir"
+   ],
+   "def": "A true story of the writer's own life, told by the writer."
+  },
+  {
+   "key": "narrator",
+   "word": "narrator",
+   "match": [
+    "narrator",
+    "narration"
+   ],
+   "def": "The voice that tells the story. In Persepolis it is the grown-up Marjane, remembering."
+  },
+  {
+   "key": "perspective",
+   "word": "perspective",
+   "match": [
+    "perspectives",
+    "perspective"
+   ],
+   "def": "In the IB course: the point of view a text shows (whose eyes we see through), and the view each reader brings to it. One of the seven IB key concepts."
+  },
+  {
+   "key": "representation",
+   "word": "representation",
+   "match": [
+    "representation",
+    "represents",
+    "represent"
+   ],
+   "def": "In the IB course: how a text shows real life, and how its form (here pictures, panels, black and white) shapes the meaning. One of the seven IB key concepts."
+  },
+  {
+   "key": "concept",
+   "word": "concept",
+   "match": [
+    "concepts",
+    "concept"
+   ],
+   "def": "A big idea used to think about any text. The IB English course has seven, including perspective and representation."
+  },
+  {
+   "key": "synthesis",
+   "word": "synthesis",
+   "match": [
+    "synthesis"
+   ],
+   "def": "The last sentence of an analytical paragraph that pulls your points together into one big idea about the text."
+  },
+  {
+   "key": "micro-analysis",
+   "word": "micro-analysis",
+   "match": [
+    "micro-analysis"
+   ],
+   "def": "Very close analysis of small details (one panel, one word) and exactly how each one creates meaning."
+  },
+  {
+   "key": "topic sentence",
+   "word": "topic sentence",
+   "match": [
+    "topic sentence"
+   ],
+   "def": "The first sentence of a paragraph: it states the point (argument) the paragraph will prove."
+  },
+  {
+   "key": "analyse",
+   "word": "analyse",
+   "match": [
+    "analyse",
+    "analysis",
+    "analytical",
+    "analyses"
+   ],
+   "def": "IB command term: break something down to bring out its essential parts or structure. In English: show how choices create meaning."
+  },
+  {
+   "key": "explain",
+   "word": "explain",
+   "match": [
+    "explain"
+   ],
+   "def": "IB command term: give a detailed account including reasons or causes."
+  },
+  {
+   "key": "identify",
+   "word": "identify",
+   "match": [
+    "identify"
+   ],
+   "def": "IB command term: give an answer from a number of possibilities. Name it; no explanation needed."
+  },
+  {
+   "key": "state",
+   "word": "state",
+   "match": [
+    "state"
+   ],
+   "def": "IB command term: give a specific name, value or other brief answer without explanation."
+  },
+  {
+   "key": "define",
+   "word": "define",
+   "match": [
+    "define"
+   ],
+   "def": "IB command term: give the precise meaning of a word or idea."
+  },
+  {
+   "key": "evaluation",
+   "word": "evaluation",
+   "match": [
+    "evaluation"
+   ],
+   "def": "Judging how well something works, weighing its strengths and limits. In Paper 1: judging how well the writer's choices create meaning."
+  },
+  {
+   "key": "interpretation",
+   "word": "interpretation",
+   "match": [
+    "interpretation"
+   ],
+   "def": "Your reasoned idea of what a text means beyond the obvious, supported by details from it."
+  },
+  {
+   "key": "criterion",
+   "word": "criterion",
+   "match": [
+    "criteria",
+    "criterion"
+   ],
+   "def": "One of the headings a piece of work is marked against (plural: criteria). Paper 1 has four, A to D, 5 marks each."
+  },
+  {
+   "key": "unseen",
+   "word": "unseen",
+   "match": [
+    "unseen"
+   ],
+   "def": "A text you have never seen before; you meet it for the first time in the exam."
+  },
+  {
+   "key": "non-literary",
+   "word": "non-literary",
+   "match": [
+    "non-literary"
+   ],
+   "def": "Texts that are not literature: adverts, cartoons, blogs, speeches, photographs, posters, articles."
+  },
+  {
+   "key": "literary",
+   "word": "literary",
+   "match": [
+    "literary"
+   ],
+   "def": "Belonging to literature: novels, poems, plays, short stories and, for the IB, graphic novels."
+  },
+  {
+   "key": "text type",
+   "word": "text type",
+   "match": [
+    "text types",
+    "text type"
+   ],
+   "def": "A kind of text with its own usual features: blog, speech, letter, advert, cartoon."
+  },
+  {
+   "key": "guiding question",
+   "word": "guiding question",
+   "match": [
+    "guiding question"
+   ],
+   "def": "The question printed under each Paper 1 text that suggests what to focus your analysis on."
+  },
+  {
+   "key": "descriptive",
+   "word": "descriptive",
+   "match": [
+    "descriptive"
+   ],
+   "def": "Only saying what is there, without explaining how it creates meaning. The IB marks this low in criterion B."
+  },
+  {
+   "key": "context",
+   "word": "context",
+   "match": [
+    "context"
+   ],
+   "def": "The situation around a text: when, where and why it was made, and who reads it."
+  },
+  {
+   "key": "intimacy",
+   "word": "intimacy",
+   "match": [
+    "intimacy"
+   ],
+   "def": "A feeling of being very close to someone, personally or emotionally."
+  },
+  {
+   "key": "vulnerable",
+   "word": "vulnerable",
+   "match": [
+    "vulnerable"
+   ],
+   "def": "Easy to hurt or attack; weak and exposed."
+  },
+  {
+   "key": "isolation",
+   "word": "isolation",
+   "match": [
+    "isolation",
+    "isolates",
+    "isolated"
+   ],
+   "def": "Being alone and cut off from other people."
+  },
+  {
+   "key": "awe",
+   "word": "awe",
+   "match": [
+    "awe"
+   ],
+   "def": "A feeling of wonder mixed with a little fear, at something huge or powerful."
+  },
+  {
+   "key": "irony",
+   "word": "irony",
+   "match": [
+    "ironic",
+    "irony"
+   ],
+   "def": "When the meaning is the opposite of what the words seem to say, or when what happens is the opposite of what we expect."
+  },
+  {
+   "key": "register",
+   "word": "register",
+   "match": [
+    "register"
+   ],
+   "def": "How formal or informal your language is, chosen for your reader: a speech to classmates is friendly but correct."
+  },
+  {
+   "key": "connector",
+   "word": "connector",
+   "match": [
+    "connectors",
+    "connector"
+   ],
+   "def": "A word or phrase that links ideas, such as <i>parce que</i> (because) or <i>grâce à</i> (thanks to)."
+  },
+  {
+   "key": "agreement",
+   "word": "agreement",
+   "match": [
+    "agreements"
+   ],
+   "def": "In French grammar, making an adjective or past participle match its noun: masculine or feminine, singular or plural (<i>une idée intéressante</i>)."
+  },
+  {
+   "key": "noun",
+   "word": "noun",
+   "match": [
+    "noun"
+   ],
+   "def": "A word for a person, place, thing or idea: <i>le téléphone</i>, <i>la pause</i>."
+  },
+  {
+   "key": "consequence",
+   "word": "consequence",
+   "match": [
+    "consequences",
+    "consequence"
+   ],
+   "def": "The result of something that happened before."
+  },
+  {
+   "key": "call to action",
+   "word": "call to action",
+   "match": [
+    "call to action"
+   ],
+   "def": "The end of a persuasive text that tells the audience exactly what to do now."
+  },
+  {
+   "key": "error log",
+   "word": "Error log",
+   "match": [
+    "Error log"
+   ],
+   "def": "The tab in your study sheet where you write every lost mark, why you lost it and the rule that fixes it."
+  }
+ ]
+}

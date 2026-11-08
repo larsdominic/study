@@ -92,15 +92,6 @@
    "def": "Two functions done one after the other: the output of the first is the input of the second. (f ∘ g)(x) = f(g(x)): do g first, then f."
   },
   {
-   "key": "piecewise",
-   "word": "piecewise function",
-   "match": [
-    "piecewise function",
-    "piecewise"
-   ],
-   "def": "A function made of different rules on different parts of its domain, for example f(x) = x + 1 for x &lt; 0 and f(x) = 1 − x for x ≥ 0. Its graph is made of pieces."
-  },
-  {
    "key": "reflect",
    "word": "reflect, reflection",
    "match": [
@@ -332,30 +323,6 @@
    "def": "Rewrite a quadratic with a squared bracket: x<sup>2</sup> + 6x + 1 = (x + 3)<sup>2</sup> − 8. Half the number in front of x goes in the bracket; then subtract that half squared (here 9). If x<sup>2</sup> has a number in front, take it out first."
   },
   {
-   "key": "quadratic formula",
-   "word": "quadratic formula",
-   "match": [
-    "quadratic formula"
-   ],
-   "def": "x = (−b ± √(b<sup>2</sup> − 4ac)) ÷ (2a) solves any equation ax<sup>2</sup> + bx + c = 0. It is in the formula booklet."
-  },
-  {
-   "key": "decreasing",
-   "word": "decreasing",
-   "match": [
-    "decreasing"
-   ],
-   "def": "A decreasing function goes down as x goes up: a bigger input gives a smaller output. f(x) = −6x − 3 is decreasing."
-  },
-  {
-   "key": "strict",
-   "word": "strict (inequality)",
-   "match": [
-    "strict"
-   ],
-   "def": "A strict inequality uses &lt; or &gt;, so the end value is not included. ≤ and ≥ are not strict: the end value is included."
-  },
-  {
    "key": "restrict",
    "word": "restrict (a domain)",
    "match": [
@@ -504,7 +471,7 @@
    "match": [
     "GDC"
    ],
-   "def": "Graphic display calculator: the graphing calculator allowed in Paper 2, for example the TI-84 Plus CE or the Casio fx-CG50."
+   "def": "Graphic display calculator: the graphing calculator allowed in Paper 2, for example the TI-Nspire CX or the Casio fx-CG50."
   },
   {
    "key": "window",
@@ -542,31 +509,6 @@
    "def": "Standard Level, the IB maths course you take. 'SL 2.2' is the official number of a topic in the IB syllabus (the list of what the course covers)."
   },
   {
-   "key": "hl",
-   "word": "HL",
-   "match": [
-    "HL"
-   ],
-   "def": "Higher Level, the longer IB maths course. HL-only content is not on your SL exam."
-  },
-  {
-   "key": "ahl",
-   "word": "AHL",
-   "match": [
-    "AHL"
-   ],
-   "def": "Additional Higher Level: the topics only HL students study. 'AHL 2.14' is an HL-only topic, not on your exam."
-  },
-  {
-   "key": "command term",
-   "word": "command term",
-   "match": [
-    "command terms",
-    "command term"
-   ],
-   "def": "The IB word at the start of a question, like 'find', 'state' or 'sketch'. It tells you exactly what kind of answer gets the marks."
-  },
-  {
    "key": "find",
    "word": "find (command term)",
    "match": [
@@ -585,22 +527,6 @@
     "write down"
    ],
    "def": "IB command term: give the answer with little or no calculation. You do not need to show working."
-  },
-  {
-   "key": "hence",
-   "word": "hence (command term)",
-   "match": [
-    "hence"
-   ],
-   "def": "IB command term: use the answer you have just found to get the next result. 'Hence or otherwise' also allows a different method."
-  },
-  {
-   "key": "show",
-   "word": "show (command term)",
-   "match": [
-    "show two functions"
-   ],
-   "def": "IB command term: give the steps of a calculation that lead to the result. In 'show that' the answer is given, so the marks are for the working."
   },
   {
    "key": "state",
@@ -661,14 +587,6 @@
    "def": "IB command term: work out the one correct answer. In everyday words: find."
   },
   {
-   "key": "not defined",
-   "word": "not defined",
-   "match": [
-    "not defined"
-   ],
-   "def": "A function is not defined at a value when it gives no output there, for example 3/(x − 2) at x = 2, because you cannot divide by 0."
-  },
-  {
    "key": "tends to",
    "word": "tends to",
    "match": [
@@ -716,14 +634,6 @@
     "technology"
    ],
    "def": "In IB maths, technology means your GDC (or graphing software) used to draw graphs and find values such as zeros and intersections."
-  },
-  {
-   "key": "in the form",
-   "word": "in the form",
-   "match": [
-    "in the form"
-   ],
-   "def": "Write it in exactly that shape and find the numbers that the letters stand for. x<sup>2</sup> + 12x + 24 in the form (x + h)<sup>2</sup> + k is (x + 6)<sup>2</sup> − 12, so h = 6 and k = −12."
   },
   {
    "key": "vertical",

@@ -1,0 +1,559 @@
+{
+ "minutes": 7,
+ "background": [
+  {
+   "title": "How Paper 1 answers are marked",
+   "html": "<p>Psychology exams have no multiple choice. You write answers, and examiners mark them with <b>markbands</b>: short descriptions of what an answer at each level looks like. For a 4-mark question there are two bands, 1-2 marks and 3-4 marks.</p><p>The first word of the question, the <b>command term</b>, says what kind of answer gets the top band. <b>Describe</b> means give a detailed account. <b>Explain</b> means a detailed account <i>plus</i> reasons or causes. Answering \"describe\" when the question says \"explain\" keeps you in the lower band, even if every sentence is true.</p>"
+  },
+  {
+   "title": "Two kinds of learning you met in session 2",
+   "html": "<p><b>Classical conditioning</b>: learning by linking two things that happen together. Pavlov's dogs drooled at a sound that always came just before food.</p><p><b>Operant conditioning</b>: learning from what happens <i>after</i> you do something. A behaviour that is rewarded (reinforced) happens more; a behaviour that is punished happens less.</p><p>In both, the learner experiences things directly. Today's social learning theory adds a third way: learning by <b>watching other people</b> and what happens to them.</p>"
+  },
+  {
+   "title": "What a theory and a model are",
+   "html": "<p>A <b>theory</b> is an explanation of why or how something happens, which can be checked against evidence.</p><p>A <b>model</b> is a simplified picture of how something works, often drawn as boxes and arrows, like a map of the underground: it leaves out details so you can see the main route.</p><p>Neither is ever \"proven\". Researchers use them to make <b>predictions</b> (\"if this is true, then people should forget a word within 20 seconds\"), then run studies to see whether the predictions come true. Studies that fit <b>support</b> the model; studies that do not fit show it needs changing.</p>"
+  },
+  {
+   "title": "Memory in everyday words: in, kept, out",
+   "html": "<p>Every memory has three steps:</p><ul><li><b>In</b>: you notice something and take it in, for example a new classmate's name.</li><li><b>Kept</b>: it is stored, for a few seconds or for years.</li><li><b>Out</b>: you get it back when you need it, for example when you see her the next day. Getting it back is called <b>retrieval</b>.</li></ul><p>Forgetting can happen at any step: you never really noticed, it was not kept, or you cannot find it when you need it (the name is \"on the tip of your tongue\").</p>"
+  },
+  {
+   "title": "Averages and putting numbers in order",
+   "html": "<p>An <b>average</b> is one number that sums up a whole set of numbers. Psychology uses three:</p><ul><li><b>Mean</b>: add them all and divide by how many. Scores 4, 6 and 8: 18 ÷ 3 = 6.</li><li><b>Median</b>: write them in order from smallest to largest and take the middle one. For 3, 9, 5 that is 3, 5, 9, so the median is 5.</li><li><b>Mode</b>: the one that appears most often. In 2, 3, 3, 7 the mode is 3.</li></ul><p>Always sort the numbers first when you need the median.</p>"
+  },
+  {
+   "title": "Percentages and milliseconds",
+   "html": "<p>A <b>percentage</b> is \"out of 100\". 80% recalled means 80 out of every 100 items were remembered; under 10% means fewer than 10 out of 100.</p><p>A <b>millisecond</b> (ms) is one thousandth of a second. Reaction times are often around 400 to 500 ms: just under half a second. 1&nbsp;240 ms is about one and a quarter seconds, which is very slow for a simple reaction task.</p>"
+  }
+ ],
+ "terms": [
+  {
+   "key": "approach",
+   "word": "approach",
+   "match": [
+    "approach",
+    "approaches"
+   ],
+   "def": "In IB Psychology, one of three ways of explaining behaviour: biological (body and brain), cognitive (thinking and memory) or sociocultural (other people and culture)."
+  },
+  {
+   "key": "sociocultural",
+   "word": "sociocultural",
+   "match": [
+    "sociocultural"
+   ],
+   "def": "To do with other people, groups and culture. The sociocultural approach explains behaviour through the people around us."
+  },
+  {
+   "key": "cognitive",
+   "word": "cognitive",
+   "match": [
+    "cognitive"
+   ],
+   "def": "To do with thinking: paying attention, remembering, deciding. The cognitive approach explains behaviour through what goes on in the mind."
+  },
+  {
+   "key": "context",
+   "word": "context",
+   "match": [
+    "context"
+   ],
+   "def": "In this course, one of four real-life areas where psychology is used, such as learning and cognition, or health and well-being."
+  },
+  {
+   "key": "markband",
+   "word": "markband",
+   "match": [
+    "markband",
+    "markbands"
+   ],
+   "def": "A level on the examiners' marking grid, such as 1-2 marks or 3-4 marks. Each band describes what an answer must contain to get those marks."
+  },
+  {
+   "key": "markscheme",
+   "word": "markscheme (mark scheme)",
+   "match": [
+    "markscheme",
+    "markschemes",
+    "mark scheme"
+   ],
+   "def": "The examiners' guide to marking a paper: what earns marks and what does not."
+  },
+  {
+   "key": "specimen",
+   "word": "specimen paper",
+   "match": [
+    "specimen"
+   ],
+   "def": "A sample exam made by the IB to show what the real papers for this course will look like."
+  },
+  {
+   "key": "describe",
+   "word": "describe (command term)",
+   "match": [
+    "describe"
+   ],
+   "def": "IB command term: \"Give a detailed account.\" Say what something is or what happened, with detail. No reasons needed."
+  },
+  {
+   "key": "explain",
+   "word": "explain (command term)",
+   "match": [
+    "explain"
+   ],
+   "def": "IB command term: \"Give a detailed account including reasons or causes.\" Describe, then say why or how."
+  },
+  {
+   "key": "hypothetical",
+   "word": "hypothetical",
+   "match": [
+    "hypothetical"
+   ],
+   "def": "Made up for the purpose of an example, but realistic. \"Imagine a teacher gives a merit point...\" is a hypothetical example."
+  },
+  {
+   "key": "stimulus",
+   "word": "stimulus (plural: stimuli)",
+   "match": [
+    "stimulus"
+   ],
+   "def": "Anything in the surroundings that a person or animal can sense and react to: a sound, a smell, food, a picture."
+  },
+  {
+   "key": "unconditioned",
+   "word": "unconditioned, conditioned",
+   "match": [
+    "unconditioned"
+   ],
+   "def": "Unconditioned means natural, not learned (drooling at food). Conditioned means learned (drooling at a sound that has been linked with food)."
+  },
+  {
+   "key": "operant conditioning",
+   "word": "operant conditioning",
+   "match": [
+    "operant conditioning"
+   ],
+   "def": "Learning from consequences: a behaviour that is followed by a reward happens more often, and one followed by punishment happens less often."
+  },
+  {
+   "key": "positive reinforcement",
+   "word": "positive reinforcement",
+   "match": [
+    "positive reinforcement"
+   ],
+   "def": "Adding something pleasant, such as praise or a merit point, straight after a behaviour, so the behaviour happens more often."
+  },
+  {
+   "key": "extinction",
+   "word": "extinction",
+   "match": [
+    "extinction"
+   ],
+   "def": "When a learned behaviour fades away because the link or the reward that kept it going has stopped."
+  },
+  {
+   "key": "metronome",
+   "word": "metronome",
+   "match": [
+    "metronome"
+   ],
+   "def": "A device that makes a regular ticking sound, used by musicians to keep time."
+  },
+  {
+   "key": "vicarious",
+   "word": "vicarious",
+   "match": [
+    "vicarious"
+   ],
+   "def": "Experienced through someone else. Vicarious reinforcement: you see someone else rewarded, and that makes you more likely to do the same."
+  },
+  {
+   "key": "observational learning",
+   "word": "observational learning",
+   "match": [
+    "observational learning"
+   ],
+   "def": "Learning by watching another person (the model) and later copying what they did."
+  },
+  {
+   "key": "identification",
+   "word": "identification (with a model)",
+   "match": [
+    "identification",
+    "identify"
+   ],
+   "def": "Feeling that a model is like you, for example the same age or gender. We copy people we identify with more."
+  },
+  {
+   "key": "retention",
+   "word": "retention",
+   "match": [
+    "retention",
+    "retain"
+   ],
+   "def": "Keeping something in memory. In social learning theory: remembering what the model did well enough to copy it later."
+  },
+  {
+   "key": "self-efficacy",
+   "word": "self-efficacy",
+   "match": [
+    "self-efficacy"
+   ],
+   "def": "Your belief that you can succeed at a particular task. High self-efficacy makes you more likely to try."
+  },
+  {
+   "key": "aggression",
+   "word": "aggression, aggressive",
+   "match": [
+    "aggression",
+    "aggressive",
+    "aggressively"
+   ],
+   "def": "Behaviour meant to hurt or harm someone or something, by hitting, kicking or hurtful words."
+  },
+  {
+   "key": "bobo doll",
+   "word": "Bobo doll",
+   "match": [
+    "Bobo doll"
+   ],
+   "def": "A large inflatable toy clown that springs back up when hit. Bandura used it to see whether children would copy an adult hitting it."
+  },
+  {
+   "key": "influencer",
+   "word": "influencer",
+   "match": [
+    "influencer"
+   ],
+   "def": "A person with many followers on social media whose posts can affect what followers buy, eat or do."
+  },
+  {
+   "key": "theory",
+   "word": "theory",
+   "match": [
+    "theory"
+   ],
+   "def": "An explanation of why or how something happens, which can be tested against evidence."
+  },
+  {
+   "key": "cognitive model",
+   "word": "cognitive model",
+   "match": [
+    "cognitive model",
+    "cognitive models"
+   ],
+   "def": "A simplified picture, often boxes and arrows, of how a mental process such as memory works, used to make predictions that studies can test."
+  },
+  {
+   "key": "empirical",
+   "word": "empirical",
+   "match": [
+    "empirical"
+   ],
+   "def": "Based on real observation or measurement, not on opinion or pure reasoning."
+  },
+  {
+   "key": "operationalise",
+   "word": "operationalise",
+   "match": [
+    "operationalised",
+    "operationalized"
+   ],
+   "def": "State exactly how something will be measured, so anyone could do it the same way. \"Memory\" becomes \"number of trigrams recalled after 18 seconds\"."
+  },
+  {
+   "key": "construct",
+   "word": "construct",
+   "match": [
+    "constructs",
+    "construct"
+   ],
+   "def": "An idea you cannot see or touch directly, such as memory or intelligence. It must be turned into something measurable first."
+  },
+  {
+   "key": "framework",
+   "word": "framework, representation",
+   "match": [
+    "framework"
+   ],
+   "def": "A framework is a basic structure of ideas. A representation is something that stands for something else, like a map stands for a city."
+  },
+  {
+   "key": "hypothesis",
+   "word": "hypothesis (plural: hypotheses)",
+   "match": [
+    "hypotheses"
+   ],
+   "def": "A clear, testable prediction of what a study will find."
+  },
+  {
+   "key": "capacity",
+   "word": "capacity",
+   "match": [
+    "capacity"
+   ],
+   "def": "How much something can hold. The capacity of short-term memory is how many items it can hold at once."
+  },
+  {
+   "key": "duration",
+   "word": "duration",
+   "match": [
+    "duration"
+   ],
+   "def": "How long something lasts."
+  },
+  {
+   "key": "store",
+   "word": "store (memory store)",
+   "match": [
+    "stores"
+   ],
+   "def": "In the multi-store model, a separate place or system where information is held: sensory memory, short-term memory or long-term memory."
+  },
+  {
+   "key": "rehearsal",
+   "word": "rehearsal",
+   "match": [
+    "rehearsal"
+   ],
+   "def": "Going over information again in your head. Maintenance rehearsal is just repeating it; elaborative rehearsal is thinking about what it means."
+  },
+  {
+   "key": "chunking",
+   "word": "chunking",
+   "match": [
+    "chunking",
+    "chunks"
+   ],
+   "def": "Grouping separate items into bigger meaningful units so you can hold more at once: 1, 9, 4, 5 becomes the year 1945."
+  },
+  {
+   "key": "decay",
+   "word": "decay, displacement",
+   "match": [
+    "decay"
+   ],
+   "def": "Two ways of losing information from short-term memory. Decay: it fades with time. Displacement: new items push old ones out because there is little room."
+  },
+  {
+   "key": "trigram",
+   "word": "trigram",
+   "match": [
+    "trigram",
+    "trigrams"
+   ],
+   "def": "A group of three letters with no meaning, such as TGH, used so that people cannot link it to anything they already know."
+  },
+  {
+   "key": "serial position effect",
+   "word": "serial position effect",
+   "match": [
+    "serial position effect"
+   ],
+   "def": "When people learn a list, they remember the first items and the last items better than those in the middle."
+  },
+  {
+   "key": "structural",
+   "word": "structural, phonetic, semantic",
+   "match": [
+    "structural"
+   ],
+   "def": "Three kinds of processing a word. Structural: how it looks. Phonetic: how it sounds. Semantic: what it means."
+  },
+  {
+   "key": "recognition",
+   "word": "recognition test",
+   "match": [
+    "recognition",
+    "recognised"
+   ],
+   "def": "A memory test where you pick out items you saw before from a longer list, instead of recalling them from nothing."
+  },
+  {
+   "key": "ecological validity",
+   "word": "ecological validity",
+   "match": [
+    "ecological validity"
+   ],
+   "def": "How well a study's task and setting match real life. Learning lists of nonsense letters is not much like everyday memory, so ecological validity is low."
+  },
+  {
+   "key": "motor skills",
+   "word": "motor skills",
+   "match": [
+    "motor skills"
+   ],
+   "def": "Skills of body movement, such as riding a bike or drawing, that improve with practice."
+  },
+  {
+   "key": "data",
+   "word": "data",
+   "match": [
+    "data"
+   ],
+   "def": "Information collected in a study: numbers such as scores, or words such as interview answers."
+  },
+  {
+   "key": "descriptive statistics",
+   "word": "descriptive statistics",
+   "match": [
+    "Descriptive statistics"
+   ],
+   "def": "Numbers that sum up a set of data, such as an average or how spread out the scores are."
+  },
+  {
+   "key": "central tendency",
+   "word": "measure of central tendency",
+   "match": [
+    "central tendency"
+   ],
+   "def": "One number that describes the typical or middle value of a set of data: the mean, the median or the mode."
+  },
+  {
+   "key": "dispersion",
+   "word": "dispersion",
+   "match": [
+    "dispersion"
+   ],
+   "def": "How spread out a set of data is. The range (largest minus smallest) is the simplest measure. Coming in a later lesson."
+  },
+  {
+   "key": "standard deviation",
+   "word": "standard deviation, semi-interquartile range",
+   "match": [
+    "standard deviation"
+   ],
+   "def": "Two measures of how spread out data are, which you will learn in a later HL lesson. Not needed today."
+  },
+  {
+   "key": "nominal",
+   "word": "nominal",
+   "match": [
+    "nominal"
+   ],
+   "def": "Data that are just names of categories with no order, such as favourite colour."
+  },
+  {
+   "key": "ordinal",
+   "word": "ordinal",
+   "match": [
+    "ordinal"
+   ],
+   "def": "Data that can be put in order, but the gaps between steps are not equal, such as mild, moderate, severe."
+  },
+  {
+   "key": "interval",
+   "word": "interval",
+   "match": [
+    "interval"
+   ],
+   "def": "Data with equal steps but no true zero, such as temperature in degrees Celsius."
+  },
+  {
+   "key": "ratio data",
+   "word": "ratio (data)",
+   "match": [
+    "ratio"
+   ],
+   "def": "Data with equal steps and a true zero, where 0 means none at all, such as reaction time or number of words recalled."
+  },
+  {
+   "key": "outlier",
+   "word": "outlier",
+   "match": [
+    "outlier"
+   ],
+   "def": "A value far away from all the others in a data set, such as one reaction time of 1 240 ms when the rest are around 420 ms."
+  },
+  {
+   "key": "skew",
+   "word": "skewed, skewness",
+   "match": [
+    "skewness",
+    "skewed"
+   ],
+   "def": "When a graph of the data is lopsided, with a long tail on one side. Positively skewed: a few very high values make a long tail on the right."
+  },
+  {
+   "key": "symmetrical",
+   "word": "symmetrical, asymmetrical",
+   "match": [
+    "symmetrical"
+   ],
+   "def": "Symmetrical: the same on both sides of the middle, like a mirror image. Asymmetrical: not the same on both sides."
+  },
+  {
+   "key": "distribution",
+   "word": "distribution",
+   "match": [
+    "distribution"
+   ],
+   "def": "How the values in a data set are spread out, usually seen as the shape of a bar graph of how often each value occurs."
+  },
+  {
+   "key": "paper 3",
+   "word": "Paper 3",
+   "match": [
+    "Paper 3"
+   ],
+   "def": "The HL-only exam (1 h 45, 30% of your grade) where you analyse graphs, tables and research findings."
+  },
+  {
+   "key": "analyse",
+   "word": "analyse, interpret",
+   "match": [
+    "Analyse"
+   ],
+   "def": "Analyse: break something down to show its main parts. Interpret: work out what data or results mean and what conclusion they support."
+  },
+  {
+   "key": "iq",
+   "word": "IQ",
+   "match": [
+    "IQ"
+   ],
+   "def": "Intelligence quotient: a score from an intelligence test, where 100 is average."
+  },
+  {
+   "key": "et al",
+   "word": "et al.",
+   "match": [
+    "et al"
+   ],
+   "def": "Latin for \"and others\". \"Coates et al.\" means Coates and the other researchers who wrote the study."
+  },
+  {
+   "key": "participant",
+   "word": "participant",
+   "match": [
+    "participants",
+    "participant"
+   ],
+   "def": "A person who takes part in a study."
+  },
+  {
+   "key": "mastery",
+   "word": "mastery",
+   "match": [
+    "mastery"
+   ],
+   "def": "Being successful at something through your own effort. Mastery experiences are your own past successes."
+  },
+  {
+   "key": "persuasion",
+   "word": "social persuasion",
+   "match": [
+    "social persuasion"
+   ],
+   "def": "Other people telling you that you can do something, which makes you try harder."
+  },
+  {
+   "key": "evaluation",
+   "word": "evaluation",
+   "match": [
+    "evaluation"
+   ],
+   "def": "Weighing up strengths and limitations, then giving a judgement. A \"describe\" or \"explain\" question does not ask for it."
+  }
+ ]
+}

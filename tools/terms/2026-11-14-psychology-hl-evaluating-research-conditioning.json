@@ -1,0 +1,791 @@
+{
+ "minutes": 6,
+ "background": [
+  {
+   "title": "What it means to evaluate a study",
+   "html": "<p>To <b>evaluate</b> a study is to weigh up its strengths and its limitations, then decide how far you can trust its conclusion. A study is only as good as the way it was done.</p><p>Three questions do most of the work:</p><ul><li><b>Cause:</b> did the thing the researcher changed really cause the result, or could something else explain it?</li><li><b>Measuring:</b> was the behaviour measured in a way that is consistent and accurate?</li><li><b>Reach:</b> would the result also hold for other people and in real life?</li></ul><p>Today's first half gives each of these questions its proper name.</p>"
+  },
+  {
+   "title": "Monday's experiment words, in one example",
+   "html": "<p>A researcher wants to know if music helps memory. She <b>changes</b> one thing: music or silence. That is the <b>IV</b> (independent variable). She <b>measures</b> one thing: how many of 20 words people recall. That is the <b>DV</b> (dependent variable).</p><p>\"Music\" and \"silence\" are the two <b>conditions</b>. The people taking part are <b>participants</b>. If chance (a coin toss) decides who goes into which condition, that is <b>random allocation</b>. Anything else that could change the score, such as a noisy room for one group only, is a <b>confounding variable</b>.</p>"
+  },
+  {
+   "title": "Consistent is not the same as correct",
+   "html": "<p>Imagine throwing darts. If all your darts land close together, you are <b>consistent</b>. If they land on the bullseye, you are <b>accurate</b>.</p><p>You can be consistent but wrong: all darts close together in the top corner. In research, consistent is called <b>reliable</b> and accurate is called <b>valid</b>. A good measure needs both.</p>"
+  },
+  {
+   "title": "Reflexes: responses you do not choose",
+   "html": "<p>A <b>reflex</b> is something your body does automatically, without you deciding. Your mouth waters when you smell food. You blink when something flies at your eye. You jump at a sudden loud bang.</p><p>You cannot stop a reflex just by wanting to. Classical conditioning is about how a new signal can come to trigger one of these automatic responses.</p>"
+  },
+  {
+   "title": "Learning by linking things together",
+   "html": "<p>Your brain links things that keep happening together. If your phone's message sound has often been followed by news from a friend, you may feel a little lift just hearing it. The smell of a certain shampoo may remind you of a holiday.</p><p>Nobody taught you these links on purpose. They formed because two things happened together many times. Psychologists call this learning by <b>association</b>.</p>"
+  },
+  {
+   "title": "Consequences shape what we do",
+   "html": "<p>What happens <b>after</b> we do something changes how often we do it again. Praise for helping makes helping more likely. A fine for parking in the wrong place makes it less likely.</p><p>In operant conditioning, \"positive\" and \"negative\" are used like plus and minus in maths: positive means something is <b>added</b>, negative means something is <b>taken away</b>. They do not mean good and bad.</p>"
+  }
+ ],
+ "terms": [
+  {
+   "key": "evaluate",
+   "word": "evaluate",
+   "match": [
+    "evaluate",
+    "evaluating"
+   ],
+   "def": "IB command term: \"Make an appraisal by weighing up the strengths and limitations.\" In plain words: say what is good and what is weak, then judge."
+  },
+  {
+   "key": "explain",
+   "word": "explain",
+   "match": [
+    "explain",
+    "explains"
+   ],
+   "def": "IB command term: \"Give a detailed account including reasons or causes.\" Not just what happens, but why."
+  },
+  {
+   "key": "describe",
+   "word": "describe",
+   "match": [
+    "describe"
+   ],
+   "def": "IB command term: \"Give a detailed account.\" Say what something is or what happens, in detail."
+  },
+  {
+   "key": "suggest",
+   "word": "suggest",
+   "match": [
+    "suggest",
+    "suggests"
+   ],
+   "def": "IB command term: \"Propose a solution, hypothesis or other possible answer.\""
+  },
+  {
+   "key": "state",
+   "word": "state",
+   "match": [
+    "state"
+   ],
+   "def": "IB command term: \"Give a specific name, value or other brief answer without explanation or calculation.\""
+  },
+  {
+   "key": "justify",
+   "word": "justify",
+   "match": [
+    "justify",
+    "justification"
+   ],
+   "def": "Give a reason for your answer, backed by evidence (here: details from the study)."
+  },
+  {
+   "key": "markband",
+   "word": "markband",
+   "match": [
+    "markband"
+   ],
+   "def": "A level in the IB marking table (for example 3-4 marks) with a description of what an answer must show to get those marks."
+  },
+  {
+   "key": "participant",
+   "word": "participant",
+   "match": [
+    "participant",
+    "participants"
+   ],
+   "def": "A person who takes part in a study."
+  },
+  {
+   "key": "condition",
+   "word": "condition",
+   "match": [
+    "condition",
+    "conditions"
+   ],
+   "def": "One version of an experiment, for example \"with music\" or \"in silence\". Each condition is one value of the IV."
+  },
+  {
+   "key": "iv",
+   "word": "IV (independent variable)",
+   "match": [
+    "IV"
+   ],
+   "def": "The thing the researcher changes on purpose, to see if it has an effect. Example: music or silence."
+  },
+  {
+   "key": "dv",
+   "word": "DV (dependent variable)",
+   "match": [
+    "DV"
+   ],
+   "def": "The thing the researcher measures, to see if the IV changed it. Example: the number of words recalled."
+  },
+  {
+   "key": "operationalise",
+   "word": "operationalise",
+   "match": [
+    "operationalise",
+    "operationalisation"
+   ],
+   "def": "Say exactly how a variable will be changed or measured, so anyone could repeat it. \"Memory\" becomes \"words recalled out of 20 in 2 minutes\"."
+  },
+  {
+   "key": "design",
+   "word": "experimental design",
+   "match": [
+    "design"
+   ],
+   "def": "The plan for how participants are spread over the conditions: different people in each, the same people in all, or matched pairs."
+  },
+  {
+   "key": "independent samples",
+   "word": "independent samples design",
+   "match": [
+    "independent samples"
+   ],
+   "def": "A design where different people do each condition, put there by random allocation."
+  },
+  {
+   "key": "repeated measures",
+   "word": "repeated measures design",
+   "match": [
+    "repeated measures"
+   ],
+   "def": "A design where the same people do every condition, so each person is compared with themselves."
+  },
+  {
+   "key": "matched pairs",
+   "word": "matched pairs design",
+   "match": [
+    "matched pairs"
+   ],
+   "def": "People are tested first on a trait (for example memory), paired with someone similar, and one of each pair goes into each condition."
+  },
+  {
+   "key": "random allocation",
+   "word": "random allocation",
+   "match": [
+    "random allocation"
+   ],
+   "def": "Chance (a coin toss, drawing names) decides which condition each participant goes into, so differences between people are spread evenly."
+  },
+  {
+   "key": "participant variables",
+   "word": "participant variables",
+   "match": [
+    "participant variables",
+    "participant variability"
+   ],
+   "def": "Differences between people, such as ability, mood or language level, that could affect the DV."
+  },
+  {
+   "key": "order effects",
+   "word": "order effects",
+   "match": [
+    "order effects",
+    "order effect"
+   ],
+   "def": "Changes in how people do a task that come from the order of the conditions (practice, tiredness, boredom), not from the IV."
+  },
+  {
+   "key": "practice effect",
+   "word": "practice effect",
+   "match": [
+    "practice effect",
+    "practice effects"
+   ],
+   "def": "Doing better the second time because you have already practised the task."
+  },
+  {
+   "key": "counterbalancing",
+   "word": "counterbalancing",
+   "match": [
+    "counterbalancing"
+   ],
+   "def": "Half the participants do condition A then B, the other half B then A, so order effects hit both conditions equally."
+  },
+  {
+   "key": "confounding variable",
+   "word": "confounding variable",
+   "match": [
+    "confounding variable",
+    "confound",
+    "confounds"
+   ],
+   "def": "Something other than the IV that differs between the conditions and could explain the result instead of the IV."
+  },
+  {
+   "key": "reliable",
+   "word": "reliable / reliability",
+   "match": [
+    "reliability",
+    "reliable"
+   ],
+   "def": "Consistent: the measure gives the same result when it is used again in the same way."
+  },
+  {
+   "key": "test-retest",
+   "word": "test-retest reliability",
+   "match": [
+    "test-retest reliability"
+   ],
+   "def": "Checking reliability by giving the same people the same test twice: similar scores mean it is reliable."
+  },
+  {
+   "key": "inter-rater",
+   "word": "inter-rater reliability",
+   "match": [
+    "inter-rater reliability"
+   ],
+   "def": "Checking reliability by having two or more people score the same thing separately: if they agree, the scoring is reliable."
+  },
+  {
+   "key": "valid",
+   "word": "valid / validity",
+   "match": [
+    "validity",
+    "valid"
+   ],
+   "def": "Accurate: the study measures, or shows, what it claims to."
+  },
+  {
+   "key": "internal validity",
+   "word": "internal validity",
+   "match": [
+    "internal validity"
+   ],
+   "def": "How sure we can be that the IV, and nothing else, caused the change in the DV."
+  },
+  {
+   "key": "external validity",
+   "word": "external validity",
+   "match": [
+    "external validity"
+   ],
+   "def": "How far the results can be applied to other people, places and times outside the study."
+  },
+  {
+   "key": "construct",
+   "word": "construct",
+   "match": [
+    "construct"
+   ],
+   "def": "An idea that cannot be seen directly, such as anxiety, intelligence or aggression. It must be operationalised to be measured."
+  },
+  {
+   "key": "construct validity",
+   "word": "construct validity",
+   "match": [
+    "construct validity"
+   ],
+   "def": "Whether a measure really captures the idea (construct) it is meant to, and not something else."
+  },
+  {
+   "key": "population validity",
+   "word": "population validity",
+   "match": [
+    "population validity"
+   ],
+   "def": "Class word: whether the sample is like the wider population, so the results apply to them too."
+  },
+  {
+   "key": "ecological validity",
+   "word": "ecological validity",
+   "match": [
+    "ecological validity"
+   ],
+   "def": "Class word: whether the setting and task are like real life, so the results show what people do in everyday situations."
+  },
+  {
+   "key": "generalise",
+   "word": "generalise",
+   "match": [
+    "generalise",
+    "generalised",
+    "generalising",
+    "generalisation",
+    "generalizability",
+    "generalisability"
+   ],
+   "def": "Apply a result from the people and setting of one study to other people and settings."
+  },
+  {
+   "key": "sample",
+   "word": "sample",
+   "match": [
+    "sample"
+   ],
+   "def": "The group of people actually studied, chosen from the larger group (the population) the researcher wants to know about."
+  },
+  {
+   "key": "representative",
+   "word": "representative",
+   "match": [
+    "representative"
+   ],
+   "def": "A sample is representative when it is like the population in the ways that matter (age, gender, background)."
+  },
+  {
+   "key": "stratified sample",
+   "word": "stratified sample",
+   "match": [
+    "stratified sample"
+   ],
+   "def": "A sample that includes each subgroup (for example each age group) in the same proportion as in the population."
+  },
+  {
+   "key": "bias",
+   "word": "bias",
+   "match": [
+    "bias",
+    "biases",
+    "biased"
+   ],
+   "def": "Something that pushes results in one direction, away from the truth."
+  },
+  {
+   "key": "participant bias",
+   "word": "participant bias",
+   "match": [
+    "participant bias"
+   ],
+   "def": "Participants change how they act or answer because they know they are being studied or think they know the aim."
+  },
+  {
+   "key": "researcher bias",
+   "word": "researcher bias",
+   "match": [
+    "researcher bias"
+   ],
+   "def": "The researcher's own beliefs or expectations affect how the study is planned, run, scored or explained."
+  },
+  {
+   "key": "confirmation bias",
+   "word": "confirmation bias",
+   "match": [
+    "confirmation bias"
+   ],
+   "def": "Noticing and believing what fits what you already think, and ignoring what does not."
+  },
+  {
+   "key": "funding bias",
+   "word": "funding bias",
+   "match": [
+    "funding bias"
+   ],
+   "def": "Class word: the person or company paying for a study influences its result or how it is reported."
+  },
+  {
+   "key": "publication bias",
+   "word": "publication bias",
+   "match": [
+    "publication bias"
+   ],
+   "def": "Studies that found a clear effect are more likely to be published than studies that found nothing, so the published picture is one-sided."
+  },
+  {
+   "key": "demand characteristics",
+   "word": "demand characteristics",
+   "match": [
+    "demand characteristics",
+    "demand characteristic"
+   ],
+   "def": "Clues in a study that tell participants what the researcher wants, so they change how they behave."
+  },
+  {
+   "key": "expectancy effect",
+   "word": "expectancy effect",
+   "match": [
+    "expectancy effect"
+   ],
+   "def": "Class word: participants act the way they think the researcher wants them to."
+  },
+  {
+   "key": "screw-you effect",
+   "word": "screw-you effect",
+   "match": [
+    "screw-you effect"
+   ],
+   "def": "Class word: a participant works out the aim and deliberately does the opposite to spoil the study."
+  },
+  {
+   "key": "social desirability",
+   "word": "social desirability effect",
+   "match": [
+    "social desirability effect",
+    "social desirability bias"
+   ],
+   "def": "Giving the answer that makes you look good rather than the true one."
+  },
+  {
+   "key": "reactivity",
+   "word": "reactivity",
+   "match": [
+    "reactivity"
+   ],
+   "def": "Class word: acting differently simply because you know you are being watched."
+  },
+  {
+   "key": "deception",
+   "word": "deception",
+   "match": [
+    "deception"
+   ],
+   "def": "Misleading participants about the real aim of a study. It is allowed only if it does no harm and is followed by a debriefing."
+  },
+  {
+   "key": "debriefing",
+   "word": "debriefing",
+   "match": [
+    "debriefing",
+    "debriefed"
+   ],
+   "def": "Telling participants the real aim after the study, answering their questions and offering to remove their data."
+  },
+  {
+   "key": "informed consent",
+   "word": "informed consent",
+   "match": [
+    "informed consent"
+   ],
+   "def": "A participant agrees to take part after being told what they will do and any risks. Under 16, a parent must agree too."
+  },
+  {
+   "key": "placebo",
+   "word": "placebo",
+   "match": [
+    "placebo"
+   ],
+   "def": "A fake treatment with no real effect (for example a drink without the active ingredient), given so people cannot tell which condition they are in."
+  },
+  {
+   "key": "single-blind",
+   "word": "single-blind",
+   "match": [
+    "single-blind"
+   ],
+   "def": "The participants do not know which condition they are in."
+  },
+  {
+   "key": "double-blind",
+   "word": "double-blind",
+   "match": [
+    "double-blind"
+   ],
+   "def": "Neither the participants nor the researchers collecting the data know who is in which condition."
+  },
+  {
+   "key": "triangulation",
+   "word": "researcher triangulation",
+   "match": [
+    "researcher triangulation"
+   ],
+   "def": "Class word: several researchers score or analyse the same data separately, then compare."
+  },
+  {
+   "key": "peer review",
+   "word": "peer review",
+   "match": [
+    "peer review"
+   ],
+   "def": "Other experts check a study before it is published."
+  },
+  {
+   "key": "qualitative",
+   "word": "qualitative research",
+   "match": [
+    "qualitative"
+   ],
+   "def": "Research that collects words and meanings (for example from interviews) rather than numbers."
+  },
+  {
+   "key": "self-report",
+   "word": "self-report",
+   "match": [
+    "self-report"
+   ],
+   "def": "Data that people give about themselves, for example by filling in a questionnaire."
+  },
+  {
+   "key": "causality",
+   "word": "causality",
+   "match": [
+    "causality",
+    "causal"
+   ],
+   "def": "One of the six IB concepts: whether one thing really causes another, not just goes with it."
+  },
+  {
+   "key": "cognitive approach",
+   "word": "cognitive approach",
+   "match": [
+    "cognitive approach"
+   ],
+   "def": "One of the three IB approaches: explaining behaviour through mental processes such as attention, memory and thinking."
+  },
+  {
+   "key": "behaviourism",
+   "word": "behaviourism",
+   "match": [
+    "behaviourism"
+   ],
+   "def": "An older school of psychology that studied only behaviour you can see, and treated the mind as a closed box."
+  },
+  {
+   "key": "information processor",
+   "word": "information processor",
+   "match": [
+    "information processors",
+    "information processor"
+   ],
+   "def": "Something that takes information in, works on it and gives an output, like a computer. The cognitive approach sees the mind this way."
+  },
+  {
+   "key": "mental representations",
+   "word": "mental representation",
+   "match": [
+    "mental representations"
+   ],
+   "def": "The ideas and pictures of the world we carry in our heads, built from experience."
+  },
+  {
+   "key": "soft determinism",
+   "word": "soft determinism",
+   "match": [
+    "soft determinism"
+   ],
+   "def": "The view that behaviour is shaped by causes such as experience, but people still have some free choice."
+  },
+  {
+   "key": "free will",
+   "word": "free will",
+   "match": [
+    "free will"
+   ],
+   "def": "The ability to choose what you do, rather than it being decided by outside causes."
+  },
+  {
+   "key": "stimulus",
+   "word": "stimulus",
+   "match": [
+    "stimulus",
+    "stimuli"
+   ],
+   "def": "Anything in the surroundings that can cause a response: a sound, a smell, a taste, a sight."
+  },
+  {
+   "key": "reflex",
+   "word": "reflex",
+   "match": [
+    "reflex"
+   ],
+   "def": "An automatic response the body makes without learning or choosing, such as salivating at food."
+  },
+  {
+   "key": "association",
+   "word": "association",
+   "match": [
+    "association"
+   ],
+   "def": "A link the brain forms between two things that keep happening together."
+  },
+  {
+   "key": "involuntary",
+   "word": "involuntary",
+   "match": [
+    "involuntary"
+   ],
+   "def": "Not chosen: it happens automatically."
+  },
+  {
+   "key": "voluntary",
+   "word": "voluntary",
+   "match": [
+    "voluntary"
+   ],
+   "def": "Chosen: you decide to do it."
+  },
+  {
+   "key": "ns",
+   "word": "NS (neutral stimulus)",
+   "match": [
+    "NS"
+   ],
+   "def": "A stimulus that causes no natural response before conditioning, such as the buzzer at the start."
+  },
+  {
+   "key": "ucs",
+   "word": "UCS (unconditioned stimulus)",
+   "match": [
+    "UCS"
+   ],
+   "def": "A stimulus that causes a natural, unlearned response, such as food or a Skittle."
+  },
+  {
+   "key": "ucr",
+   "word": "UCR (unconditioned response)",
+   "match": [
+    "UCR"
+   ],
+   "def": "The natural, unlearned response to the UCS, such as salivating at food."
+  },
+  {
+   "key": "cs",
+   "word": "CS (conditioned stimulus)",
+   "match": [
+    "CS"
+   ],
+   "def": "The old neutral stimulus after it has been paired with the UCS many times; now it causes a response on its own."
+  },
+  {
+   "key": "cr",
+   "word": "CR (conditioned response)",
+   "match": [
+    "CR"
+   ],
+   "def": "The learned response to the CS, such as salivating at the buzzer alone."
+  },
+  {
+   "key": "salivate",
+   "word": "salivate",
+   "match": [
+    "salivated",
+    "salivating",
+    "salivation",
+    "saliva"
+   ],
+   "def": "Produce saliva (spit): your mouth waters."
+  },
+  {
+   "key": "metronome",
+   "word": "metronome",
+   "match": [
+    "metronome"
+   ],
+   "def": "A device that makes a steady ticking sound, used by musicians to keep time."
+  },
+  {
+   "key": "extinction",
+   "word": "extinction",
+   "match": [
+    "extinction",
+    "extinguish"
+   ],
+   "def": "The learned response fades and stops because the link is no longer kept up (the CS comes without the UCS, or the reward stops)."
+  },
+  {
+   "key": "spontaneous recovery",
+   "word": "spontaneous recovery",
+   "match": [
+    "spontaneous recovery"
+   ],
+   "def": "After extinction and a rest, the learned response suddenly comes back, usually weaker."
+  },
+  {
+   "key": "taste aversion",
+   "word": "taste aversion",
+   "match": [
+    "taste aversion"
+   ],
+   "def": "A strong dislike of a taste after it was once followed by feeling sick."
+  },
+  {
+   "key": "saccharin",
+   "word": "saccharin",
+   "match": [
+    "saccharin"
+   ],
+   "def": "A sweetener with no sugar; the rats got sweet-tasting water."
+  },
+  {
+   "key": "radiation",
+   "word": "radiation",
+   "match": [
+    "radiation"
+   ],
+   "def": "Invisible energy (like X-rays) that in large doses makes animals feel sick."
+  },
+  {
+   "key": "aversion therapy",
+   "word": "aversion therapy",
+   "match": [
+    "aversion therapy"
+   ],
+   "def": "A treatment that pairs an unwanted habit (such as drinking alcohol) with something unpleasant, so the habit becomes linked with feeling bad."
+  },
+  {
+   "key": "conversion therapy",
+   "word": "conversion therapy",
+   "match": [
+    "conversion therapy"
+   ],
+   "def": "Attempts to change someone's sexual orientation or gender identity. It does not work and is widely condemned as harmful."
+  },
+  {
+   "key": "nausea",
+   "word": "nausea",
+   "match": [
+    "nausea"
+   ],
+   "def": "Feeling sick, as if you might vomit."
+  },
+  {
+   "key": "law of effect",
+   "word": "law of effect",
+   "match": [
+    "law of effect"
+   ],
+   "def": "Thorndike's rule: behaviour followed by something pleasant is repeated more; behaviour followed by something unpleasant is repeated less."
+  },
+  {
+   "key": "consequence",
+   "word": "consequence",
+   "match": [
+    "consequences",
+    "consequence"
+   ],
+   "def": "What happens straight after a behaviour, as a result of it."
+  },
+  {
+   "key": "reinforcement",
+   "word": "reinforcement",
+   "match": [
+    "reinforcement"
+   ],
+   "def": "Any consequence that makes a behaviour more likely to happen again."
+  },
+  {
+   "key": "punishment",
+   "word": "punishment",
+   "match": [
+    "punishment"
+   ],
+   "def": "Any consequence that makes a behaviour less likely to happen again."
+  },
+  {
+   "key": "cognitive misers",
+   "word": "cognitive misers",
+   "match": [
+    "cognitive misers"
+   ],
+   "def": "Class idea: people save mental effort by taking thinking shortcuts instead of thinking everything through."
+  },
+  {
+   "key": "et al",
+   "word": "et al.",
+   "match": [
+    "et al"
+   ],
+   "def": "Latin for \"and others\": the study has more authors than the first one named."
+  },
+  {
+   "key": "control group",
+   "word": "control group",
+   "match": [
+    "control group"
+   ],
+   "def": "A group that does not get the treatment, so the treatment group can be compared with it."
+  }
+ ]
+}

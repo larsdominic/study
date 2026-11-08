@@ -306,7 +306,8 @@
    "word": "condenses",
    "match": [
     "condenses",
-    "condensing"
+    "condensing",
+    "condense"
    ],
    "def": "To change from a gas into a liquid. Water vapour (water as a gas) condenses into droplets on a cold window."
   },
@@ -387,14 +388,6 @@
    "def": "A change in which substances break apart or join up to make new substances. The starting substances are reactants; the new ones are products."
   },
   {
-   "key": "hydrolysis",
-   "word": "hydrolysis",
-   "match": [
-    "hydrolysis"
-   ],
-   "def": "A reaction that uses a water molecule to break a covalent bond, splitting a large molecule into smaller ones. \"Hydro\" means water, \"lysis\" means splitting."
-  },
-  {
    "key": "condensation reaction",
    "word": "condensation reaction",
    "match": [
@@ -405,28 +398,12 @@
    "def": "A reaction that joins two molecules with a covalent bond and releases a molecule of water. It is the opposite of hydrolysis. (Not the same as water vapour condensing.)"
   },
   {
-   "key": "respiration",
-   "word": "respiration",
-   "match": [
-    "respiration"
-   ],
-   "def": "The process in every cell that releases energy from glucose. With oxygen it produces carbon dioxide and water. It is not the same as breathing."
-  },
-  {
    "key": "xylem",
    "word": "xylem",
    "match": [
     "xylem"
    ],
    "def": "Tubes in a plant, made of dead, hollow cells with strong walls, that carry water and dissolved minerals up from the roots to the leaves."
-  },
-  {
-   "key": "phloem",
-   "word": "phloem",
-   "match": [
-    "phloem"
-   ],
-   "def": "Tubes in a plant, made of living cells, that carry dissolved sugar (sucrose) from the leaves to the rest of the plant."
   },
   {
    "key": "cell wall",
@@ -444,14 +421,6 @@
     "cellulose"
    ],
    "def": "A tough fibre made of long chains of glucose. It is the main material of plant cell walls, and of paper and cotton."
-  },
-  {
-   "key": "lignified",
-   "word": "lignified",
-   "match": [
-    "lignified"
-   ],
-   "def": "Strengthened with lignin, a hard, woody substance. Lignified xylem walls are strong enough not to collapse."
   },
   {
    "key": "amino acid",
@@ -479,15 +448,6 @@
     "enzymes"
    ],
    "def": "A protein that speeds up one particular chemical reaction in a living thing without being used up."
-  },
-  {
-   "key": "substrate",
-   "word": "substrate",
-   "match": [
-    "substrate",
-    "substrates"
-   ],
-   "def": "The molecule that an enzyme acts on."
   },
   {
    "key": "phospholipid",
@@ -548,15 +508,6 @@
     "genetic information"
    ],
    "def": "The instructions for building and running an organism, passed on to its offspring. They are stored as the order of bases in DNA (in some viruses, RNA)."
-  },
-  {
-   "key": "gene",
-   "word": "gene",
-   "match": [
-    "gene",
-    "genes"
-   ],
-   "def": "A section of DNA that carries the instructions for one product, usually a protein."
   },
   {
    "key": "polymer",
@@ -666,24 +617,6 @@
    "def": "The rule for which group of three bases (a triplet) stands for which amino acid. It is almost the same in every living thing."
   },
   {
-   "key": "codon",
-   "word": "codon",
-   "match": [
-    "codon",
-    "codons"
-   ],
-   "def": "A group of three bases in messenger RNA that codes for one amino acid."
-  },
-  {
-   "key": "anticodon",
-   "word": "anticodon",
-   "match": [
-    "anticodon",
-    "anticodons"
-   ],
-   "def": "Three bases on a transfer RNA molecule that are complementary to, and pair with, a codon on messenger RNA."
-  },
-  {
    "key": "template",
    "word": "template",
    "match": [
@@ -725,14 +658,6 @@
    "def": "An RNA copy of a gene that carries its instructions from the DNA to a ribosome, where the protein is made."
   },
   {
-   "key": "transfer rna",
-   "word": "transfer RNA",
-   "match": [
-    "transfer RNA"
-   ],
-   "def": "Small RNA molecules that each bring one amino acid to the ribosome. Each has an anticodon that pairs with a codon."
-  },
-  {
    "key": "ribosome",
    "word": "ribosome",
    "match": [
@@ -749,31 +674,6 @@
     "common ancestry"
    ],
    "def": "A common ancestor is an organism from which several groups of organisms are all descended. Universal common ancestry means all life comes from one shared ancestor."
-  },
-  {
-   "key": "conserved",
-   "word": "conserved",
-   "match": [
-    "conserved",
-    "conservation"
-   ],
-   "def": "Kept the same over a very long time of evolution. Conservation means being kept the same: the genetic code has hardly changed in billions of years."
-  },
-  {
-   "key": "mitochondria",
-   "word": "mitochondria",
-   "match": [
-    "mitochondria"
-   ],
-   "def": "Small structures in the cells of animals, plants and fungi where respiration releases most of the energy. They have their own small DNA."
-  },
-  {
-   "key": "genetic engineering",
-   "word": "genetic engineering",
-   "match": [
-    "genetic engineering"
-   ],
-   "def": "Changing an organism's DNA, often by moving a gene from one organism into another. For example, bacteria given the human gene for insulin (a hormone) make human insulin."
   },
   {
    "key": "arbitrary",
@@ -798,30 +698,6 @@
     "prokaryotes"
    ],
    "def": "Organisms whose cells have no nucleus, such as bacteria. Their DNA lies loose in the cytoplasm."
-  },
-  {
-   "key": "dna polymerase",
-   "word": "DNA polymerase",
-   "match": [
-    "DNA polymerase"
-   ],
-   "def": "The enzyme that builds a new DNA strand, adding one nucleotide at a time."
-  },
-  {
-   "key": "nm",
-   "word": "nm",
-   "match": [
-    "nm"
-   ],
-   "def": "Nanometre: one millionth of a millimetre. DNA is about 2 nm wide."
-  },
-  {
-   "key": "electron microscope",
-   "word": "electron microscope",
-   "match": [
-    "electron microscope"
-   ],
-   "def": "A microscope that uses a beam of electrons instead of light, so it can show things far too small for an ordinary microscope."
   },
   {
    "key": "radioactive",
@@ -932,14 +808,6 @@
    "def": "To look at two or more things side by side. As an IB command term: give the similarities, mentioning all the things in each point. \"Compare and contrast\" asks for the differences too."
   },
   {
-   "key": "suggest",
-   "word": "suggest",
-   "match": [
-    "suggest"
-   ],
-   "def": "IB command term: give a possible answer or explanation that makes sense, using what you know, even for a situation you have not been taught."
-  },
-  {
    "key": "define",
    "word": "define",
    "match": [
@@ -964,12 +832,104 @@
    "def": "IB command term: break data or information down to bring out the key parts or patterns."
   },
   {
-   "key": "calculate",
-   "word": "calculate",
+   "key": "asteroid",
+   "word": "asteroid",
    "match": [
-    "calculate"
+    "asteroids",
+    "asteroid"
    ],
-   "def": "IB command term: work out a number answer, showing the steps of your working."
+   "def": "A lump of rock (some contain ice) that travels around the Sun. Many crashed into the young Earth."
+  },
+  {
+   "key": "hypothesis",
+   "word": "hypothesis",
+   "match": [
+    "hypothesis"
+   ],
+   "def": "A possible explanation that can be tested with evidence. It may turn out to be wrong."
+  },
+  {
+   "key": "latent heat of vaporisation",
+   "word": "latent heat of vaporisation",
+   "match": [
+    "latent heat of vaporisation"
+   ],
+   "def": "The energy needed to turn a liquid into a gas without changing its temperature. Water's is high because every escaping molecule must break its hydrogen bonds, so evaporation removes a lot of heat."
+  },
+  {
+   "key": "urea",
+   "word": "urea",
+   "match": [
+    "urea"
+   ],
+   "def": "A waste substance made in the liver from unwanted amino acids. It is carried dissolved in the blood to the kidneys and removed in urine."
+  },
+  {
+   "key": "catalyse",
+   "word": "catalyse",
+   "match": [
+    "catalyse"
+   ],
+   "def": "To speed up a chemical reaction without being used up. Enzymes catalyse the reactions in cells."
+  },
+  {
+   "key": "streamlined",
+   "word": "streamlined",
+   "match": [
+    "streamlined"
+   ],
+   "def": "Smooth and narrow at the ends, like a torpedo, so it moves through water or air with little drag."
+  },
+  {
+   "key": "blubber",
+   "word": "blubber",
+   "match": [
+    "blubber"
+   ],
+   "def": "A thick layer of fat under the skin of seals and whales. Fat conducts heat poorly, so blubber keeps body heat in."
+  },
+  {
+   "key": "histone",
+   "word": "histone",
+   "match": [
+    "histone proteins",
+    "histones",
+    "histone"
+   ],
+   "def": "A small protein with a positive charge that DNA winds around in the nucleus of eukaryotes."
+  },
+  {
+   "key": "supercoil",
+   "word": "supercoil",
+   "match": [
+    "supercoil"
+   ],
+   "def": "To coil something that is already coiled, again and again, like a twisted telephone cord, so it takes up much less space."
+  },
+  {
+   "key": "habitat",
+   "word": "habitat",
+   "match": [
+    "habitats",
+    "habitat"
+   ],
+   "def": "The place where an organism lives, such as a pond, a seashore or a forest floor."
+  },
+  {
+   "key": "counter-example",
+   "word": "counter-example",
+   "match": [
+    "counter-example"
+   ],
+   "def": "One case that does not fit a general claim. A single reliable one is enough to show the claim is false."
+  },
+  {
+   "key": "transfer rna",
+   "word": "transfer RNA",
+   "match": [
+    "transfer RNA"
+   ],
+   "def": "Small RNA molecules that each bring one amino acid to the ribosome. Each has an anticodon that pairs with a codon."
   }
  ]
 }
