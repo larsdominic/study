@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>English A HL study guide: Persepolis, "The Water Cell", multimodal analysis + French writing (Fri 20 Nov 2026)</title>
+<!--
+  English A: Language and Literature HL + French B SL (30 min), Friday 20 November 2026 (plan_data.py, other-subjects-audit.md).
+  Built 8 Nov 2026. File names are the NEW titles from other-renames.json.
+
+  Sources read on 8 Nov:
+  - Persepolis - The Water Cell (pp. 18-25) - Questions with Mark Scheme and Model Answers.docx (1J_dJFwabatvDaJTrPJ1LpiSug5BZoQGP):
+    Part 1 (2+3+2+3 = 10), Part 2 (3+3+4 = 10), Part 4 Paper 1 paragraph (2+2+4+2 = 10). There is no Part 3 in the file.
+  - Graphic Novels Unit - Session 3 Film Codes and Camera Angles - Student Worksheet.docx (1H51Jgsj4O8ylb7bb9CxFMS-0nEOuS1zW): shot and angle definitions/effects used here.
+  - Session 3, 4, 5 and 7 slides (193O2..., 1dPY1..., 1VeAj..., 11InV6...): goals and term lists. The six transitions and seven word-picture
+    combinations are NOT named on the slides (they are in McCloud extracts linked from the slides, not in the folder). Names and meanings checked
+    against two free pages (D'source transitions page; Yale National Initiative unit 14.01.01 section 6), fetched 8 Nov.
+  - Persepolis - The Bicycle and The Water Cell - Note-taking Guide (1BrxG...), REF - Persepolis Study Guide (LitCharts) (1l84b..., Water Cell on pp. 20-21).
+  - Paper 1 Satirical Cartoons - Revision Guide (1Sk7GD4F...): analysis chain "spot it, explain it, effect, purpose" (step 5), criteria self-check (step 7).
+  - French B - Paper 1 Writing Task Phones at School (1Hqi6Qh2...), cause/consequence verbs (17Gk45...), cause connectors (1d54T...).
+
+  IB checks (rule 6b): official guide, free on ibo.org (fetched 8 Nov via Exa):
+  https://ibo.org/globalassets/new-structure/university-admission/pdfs/subject-guides/language-a-language-literature-guide.pdf
+  (Language A: language and literature guide, first assessment 2021), plus the ibo.org course page and subject brief:
+  HL Paper 1 = two unseen non-literary passages from different text types, each with a guiding question, an analysis of each,
+  2 h 15, 40 marks (20 per text), 35%; criteria A-D 5 marks each per text; seven key concepts incl. perspective and representation;
+  "Graphic novel" is in the guide's list of LITERARY text types, "Cartoon" in the non-literary list.
+  French: ibo.org Language B subject brief (Paper 1 writing 30 marks, 25%); 250-400 words SL, 1 h 15 and criteria A Language 12,
+  B Message 12, C Conceptual understanding 6 from the Language B guide (first assessment 2020), read via a school-hosted copy; not linked.
+
+  UNSURE / decisions:
+  1. The IB 2026 examiner instructions mention a Language A guide "first assessment 2026". The Paper 1 task described there (two unseen texts,
+     HL analyses both, guiding question, criteria A and B wording) matches the 2021 guide, so the facts on this page should hold. Not seen in full.
+  2. The answer sheet (Part 2 row 1) says Marji's MOTHER asks what she is doing in the bath; LitCharts says GOD asks. Flagged on the page:
+     she checks her own book.
+  3. Marji's age: the answer sheet says "at ten"; not used on the page.
+  4. The answer sheet calls Part 4 an "IB Paper 1 formative" task. In the real Paper 1 the texts are unseen and non-literary, so Persepolis
+     itself cannot appear there. Said on the page; the skills transfer.
+  5. Which McCloud combination fits the wrinkled-hands panel (interdependent vs additive) is a judgement; the page says so.
+  6. The 13 Nov cartoons page exists (built in the same batch); linked to its #chain section; chain wording kept the same.
+  8. Coordinator note 8 Nov: the 2026 guide is not public; Paper 1 unchanged. Facts re-checked against ~/ClaudeMe/ib-notes/refs/langlit-guide-2021.txt (HL outline p35: P1 2 h 15, 40 marks, 35%).
+  7. Pedagogy rules P1-P8 applied: the Water Cell itself is not interpreted in the teaching sections (made-up panels instead), so Part 2 is not given away before she answers it.
+-->
+<style>
+  :root{
+    --paper:#F5F7F4; --ink:#1E2A33; --ink-soft:#4A5862; --rule:#D6DCD8;
+    --indigo:#2F47A6; --indigo-soft:#E6EAF7; --amber:#B8761A; --amber-soft:#FBF1DF;
+    --green:#2E7D4F; --green-soft:#E3F2E8; --red:#B23A3A; --red-soft:#F8E4E4;
+    --card:#FFFFFF;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;overflow-wrap:break-word}
+  h1,h2,h3,h4{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;line-height:1.2;margin:0 0 .4em;font-weight:600}
+  h1{font-size:2.3rem}
+  h2{font-size:1.75rem;margin-top:0}
+  h3{font-size:1.25rem;margin-top:1.8em}
+  h4{font-size:1.05rem;margin-top:1.4em;font-family:inherit;font-weight:700}
+  p{margin:0 0 1em}
+  a{color:var(--indigo)}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
+
+  /* hero: the visual vocabulary itself (shot sizes, camera angles, panel, gutter, balloon, caption, closure) */
+  .hero{background:#0B0F1A;color:#fff;padding:0 0 28px}
+  .map{display:block;width:100%;max-width:900px;height:auto;margin:0 auto}
+  .hero .wrap{padding-top:18px;padding-bottom:0}
+  .hero h1{color:#fff}
+  .hero p{color:#C9D1E6;max-width:680px}
+  .hero a{color:#F2C46D}
+  .meta{display:flex;flex-wrap:wrap;gap:8px 22px;color:#C9D1E6;font-size:.95rem;margin-top:8px}
+
+  nav.toc{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+  nav.toc .wrap{display:flex;gap:2px;flex-wrap:wrap;padding:6px 20px}
+  nav.toc a{text-decoration:none;color:var(--ink-soft);padding:4px 8px;border-radius:6px;font-size:.9rem}
+  section[id]{scroll-margin-top:84px}
+  nav.toc a:hover,nav.toc a:focus-visible{background:var(--indigo-soft);color:var(--indigo);outline:none}
+
+  .plan{display:grid;grid-template-columns:1fr;gap:12px;margin:22px 0 8px}
+  .plan > div{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);padding:12px 16px}
+  .plan .bh{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-bottom:4px}
+  .plan .bh b{font-size:1.2rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+  .plan .bh span{font-weight:700;color:var(--indigo)}
+  .plan ol{margin:6px 0 0;padding-left:22px}
+  .plan li{margin:4px 0}
+  .plan .t{color:var(--ink-soft);font-size:.88rem;white-space:nowrap}
+  .files{margin:10px 0 0;padding-left:20px}
+  .files li{margin:5px 0;font-size:.95rem}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 20px;background:var(--card);border:1px solid var(--rule);padding:10px 14px;font-size:.92rem;margin:16px 0}
+  .note{background:var(--amber-soft);border:1px solid var(--amber);padding:10px 14px;margin:14px 0;font-size:.95rem}
+  .checked{background:var(--green-soft);border:1px solid var(--green);padding:10px 14px;margin:14px 0;font-size:.95rem}
+
+  section.topic{margin-top:56px;padding-top:28px;border-top:3px solid var(--ink)}
+  section.topic ul{padding-left:22px}
+  section.topic li{margin:4px 0}
+  .kicker{color:var(--indigo);font-weight:700;letter-spacing:.01em;margin-bottom:4px}
+  .guiding{font-style:italic;color:var(--ink-soft);margin-bottom:18px}
+
+  .ican{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:0 0 24px}
+  .ican p{margin:0 0 8px;font-weight:700}
+  .ican label{display:flex;gap:10px;align-items:flex-start;padding:5px 0;cursor:pointer}
+  .ican input{margin-top:6px;width:16px;height:16px;flex:none;accent-color:var(--indigo)}
+
+  /* markers: what to learn by heart and what to use on a new text */
+  .fb,.learn{display:inline-block;font-size:.72rem;font-weight:700;padding:1px 7px;border-radius:3px;vertical-align:middle;margin-left:6px;white-space:nowrap;font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.01em}
+  .fb{background:var(--green);color:#fff}
+  .learn{background:var(--amber);color:#fff}
+
+  table{border-collapse:collapse;width:100%;margin:12px 0 20px;font-size:.95rem;background:var(--card)}
+  th,td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#EDF0EC}
+  td.c,th.c{text-align:center}
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+  figure{margin:20px 0;background:var(--card);border:1px solid var(--rule);padding:12px}
+  figure svg{display:block;width:100%;height:auto}
+  figcaption{font-size:.9rem;color:var(--ink-soft);margin-top:8px}
+
+  .quote{background:var(--card);border-left:5px solid var(--amber);padding:10px 16px;margin:14px 0;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:1.05rem}
+  .quote small{display:block;font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.85rem;color:var(--ink-soft);margin-top:4px}
+  .tip{background:var(--amber-soft);border-left:5px solid var(--amber);padding:12px 16px;margin:18px 0}
+  .tip b:first-child{color:var(--amber)}
+  .worked{background:var(--indigo-soft);border-left:5px solid var(--indigo);padding:12px 16px;margin:18px 0}
+  .worked > b:first-child{color:var(--indigo)}
+  .worked ol{margin:6px 0 0;padding-left:22px}
+  .worked li{margin:3px 0}
+  .nw{white-space:nowrap}
+  .qbox{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--ink);padding:10px 16px;margin:12px 0}
+  .qbox p{margin:0 0 6px}
+  .qbox .plain{color:var(--ink-soft);font-size:.95rem}
+  .mk{font-weight:700;color:var(--indigo);white-space:nowrap}
+
+  details{background:var(--card);border:1px solid var(--rule);padding:10px 14px;margin:10px 0}
+  summary{cursor:pointer;font-weight:600}
+  details[open] summary{margin-bottom:8px}
+
+  .quiz .q{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:12px 0}
+  .quiz .q > p{font-weight:600;margin-bottom:8px}
+  .quiz button{display:block;width:100%;text-align:left;background:#F3F5F2;border:1px solid var(--rule);padding:8px 12px;margin:6px 0;border-radius:6px;font:inherit;cursor:pointer;color:var(--ink)}
+  .quiz button:hover,.quiz button:focus-visible{border-color:var(--indigo);outline:none}
+  .quiz button.right{background:var(--green-soft);border-color:var(--green)}
+  .quiz button.wrong{background:var(--red-soft);border-color:var(--red)}
+  .quiz .why{display:none;margin-top:8px;font-size:.95rem;color:var(--ink-soft)}
+  .quiz .q.done .why{display:block}
+  .score{font-weight:700;margin-top:14px}
+
+  .end{margin-top:56px;background:var(--card);border:1px solid var(--rule);padding:18px 20px}
+  .end ul{margin:8px 0 0;padding-left:20px}
+  @media (max-width:600px){section[id]{scroll-margin-top:130px}h1{font-size:1.8rem}body{font-size:16px}th,td{padding:6px}}
+  @media print{nav.toc{position:static}details{break-inside:avoid}.quiz button{border:1px solid #999}}
+  .today{background:var(--card);border:2px solid var(--indigo);border-radius:10px;padding:12px 16px;margin:24px 0 12px}
+  .today p{margin:0 0 6px;font-weight:700;color:var(--indigo)}
+  .today ul{margin:0;padding-left:20px}
+  .brk{text-align:center;font-weight:700;color:var(--green);background:var(--green-soft);border:1px dashed var(--green);padding:8px 12px;border-radius:8px}
+  .stuck{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--green);padding:10px 16px;margin:16px 0}
+  .star{color:var(--amber);font-weight:700}
+  .finish{background:var(--card);border:1px dashed var(--indigo);padding:10px 16px;margin:14px 0}
+  .finish > b:first-child{color:var(--indigo)}
+  .quiz .written{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--amber);padding:14px 16px;margin:12px 0}
+  .quiz .written > p{font-weight:600;margin-bottom:8px}
+  .frame{background:var(--card);border:1px solid var(--rule);padding:10px 16px;margin:12px 0;line-height:2}
+  .blank{display:inline-block;min-width:6em;border-bottom:2px solid var(--ink-soft)}
+
+
+
+/*terms:start*/
+.term{border-bottom:2px dotted var(--indigo);cursor:pointer;border-radius:2px}
+.term:focus-visible{background:var(--indigo-soft)}
+@media (hover:hover){.term:hover{background:var(--indigo-soft)}}
+#termbox{display:none;position:fixed;left:10px;right:10px;bottom:10px;max-width:640px;margin:0 auto;background:var(--card);border:2px solid var(--indigo);border-radius:8px;padding:14px 16px 12px;box-shadow:0 8px 28px rgba(0,0,0,.22);z-index:60;max-height:60vh;overflow:auto}
+#termbox.on{display:block}
+#termbox .tb-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+#termbox .tb-h b{font-size:1.1rem;color:var(--indigo)}
+#termbox button{font:inherit;border:1px solid var(--rule);background:var(--paper);border-radius:8px;padding:4px 12px;cursor:pointer;flex:none;min-height:44px;min-width:44px}
+#termbox .tb-d{margin:8px 0 0;line-height:1.5}
+.before.block0{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:12px 16px;margin:12px 0}
+.before > details{background:transparent;border:0;padding:0;margin:0}
+.before > details > summary{display:grid;grid-template-columns:32px minmax(0,1fr) auto auto;align-items:center;gap:4px 10px;min-height:44px;list-style:none;cursor:pointer}
+.before > details > summary::-webkit-details-marker{display:none}
+.before > details > summary::after{content:"Hide";font-size:.85rem;font-weight:600;color:var(--indigo)}
+.before > details:not([open]) > summary::after{content:"Show"}
+.before .bn{flex:none;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--indigo);color:#fff;font-weight:700}
+.before .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.before .b0t{font-size:1.15rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-weight:600;color:var(--ink)}
+.before .bt{white-space:nowrap;font-size:.8rem;font-weight:700;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:4px;padding:2px 8px}
+.before .bgi{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);border-radius:8px;padding:12px 16px;margin:12px 0}
+.before .bgi h3{margin:0 0 6px;font-size:1.08rem}
+.before .bgi p{margin:6px 0}
+.before .bgi svg{max-width:100%;height:auto;display:block;margin:8px auto}
+.before .more{font-size:.95rem;color:var(--ink-soft)}
+.before .stuck{background:var(--amber-soft);border-radius:8px;padding:10px 14px}
+/*terms:end*/
+</style>
+<!--enhance:start--><meta name="color-scheme" content="light"><style>
+.warmup{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--amber);padding:12px 16px 4px;margin:24px 0}
+.warmup h2{margin:0 0 6px;font-size:1.3rem}
+.warmup .wu-how{font-size:.95rem;color:var(--ink-soft);margin:0 0 8px}
+.warmup ol{margin:0;padding-left:24px}
+.warmup li{margin:10px 0}
+.warmup .wu-m{font-size:.8rem;color:var(--ink-soft)}
+.warmup .wu-f{font-weight:600}
+.warmup details{margin-top:4px}
+.warmup summary{cursor:pointer;color:var(--indigo);font-size:.92rem}
+.warmup .wu-b{border-top:1px solid var(--rule);margin-top:6px;padding-top:6px}
+.warmup .wu-b a{font-size:.88rem;margin-left:6px;white-space:nowrap}
+.warmup .wu-foot{font-size:.92rem;margin:12px 0 8px}
+
+:root{--amber-ink:#8A6416}
+:focus-visible{outline:3px solid var(--indigo);outline-offset:2px}
+.quiz button:focus-visible,.quiz .q .cf button:focus-visible{outline:3px solid var(--indigo);outline-offset:2px}
+@media (hover:none){.quiz button:not(.right):not(.wrong):hover{border-color:var(--rule)}}
+.quiz button.right::before{content:"✓ Correct: ";font-weight:700;color:var(--green)}
+.quiz button.wrong::before{content:"✗ Your answer: ";font-weight:700;color:var(--red)}
+.quiz .q .qn{font-size:.8rem;font-weight:700;color:var(--ink-soft);margin-bottom:2px}
+.quiz .q .cf{margin:4px 0 10px}
+.quiz .q .cf .cfl-h{font-size:.88rem;font-weight:600;color:var(--ink-soft);margin-bottom:4px}
+.quiz .q .cf .cfb{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;max-width:420px}
+.quiz .q .cf button{display:block;width:100%;min-height:44px;margin:0;padding:6px 8px;text-align:center;font-size:.92rem;border:1px solid var(--rule);border-radius:8px;background:var(--card);color:var(--ink)}
+.quiz .q .cf button.on{background:var(--indigo-soft);border:2px solid var(--indigo);font-weight:700}
+.quiz .q .cf button:disabled{cursor:default;opacity:1;color:var(--ink-soft)}
+.quiz .q .cf button.on:disabled{color:var(--ink)}
+.quiz .cfh{font-size:.92rem;color:var(--ink-soft)}
+.quiz .cfr{margin-top:10px}
+.quiz .cfr ol{margin:6px 0 10px;padding-left:22px}
+.quiz .cfr li{margin:4px 0}
+.quiz .cfr li.sure{font-weight:600}
+.quiz .cfr .cfa{font-size:.9rem;color:var(--ink-soft);margin:8px 0}
+.quiz .cfr button.retry{display:inline-block;width:auto;min-height:44px;text-align:center;background:var(--indigo);color:#fff;border-color:var(--indigo);font-weight:700;padding:8px 16px}
+.wm{margin-top:8px;font-size:.92rem}
+.wm select{font:inherit;min-height:44px;padding:4px 6px;border:1px solid var(--rule);border-radius:8px;background:var(--card);color:var(--ink);max-width:100%}
+.notice{background:var(--amber-soft);border:1px solid var(--amber);color:var(--ink);padding:10px 14px;margin:12px 0;border-radius:8px;font-weight:600}
+
+:root{--amber-ink:#8A6416;--grey:#5F6B72;--purple:#6A3D9A;--green-ink:#256B43;--r-sm:4px;--r:8px}
+/* top bar: back to today, flashcards, progress, sheet */
+.sitebar{position:sticky;top:0;z-index:30;height:44px;background:var(--paper);box-shadow:0 1px 0 var(--rule)}
+.sitebar .sb{max-width:820px;height:44px;margin:0 auto;padding:0 10px;display:flex;align-items:stretch;gap:2px;overflow-x:auto;scrollbar-width:none;white-space:nowrap}
+.sitebar .sb::-webkit-scrollbar{display:none}
+.sitebar a{flex:none;display:flex;align-items:center;min-height:44px;padding:0 10px;color:var(--indigo);text-decoration:none;font:600 .95rem/1 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;border-radius:var(--r-sm)}
+.sitebar a.sb-home{font-weight:700}
+@media (hover:hover){.sitebar a:hover{background:var(--indigo-soft)}}
+/* guide section menu: one row that scrolls sideways, 44 px targets, current section marked */
+nav.toc{top:44px;z-index:29}
+nav.toc .wrap{display:flex;flex-wrap:nowrap;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;white-space:nowrap;padding:0 10px}
+nav.toc .wrap::-webkit-scrollbar{display:none}
+nav.toc a{flex:none;display:flex;align-items:center;min-height:44px;padding:12px 10px;line-height:1.2;border-radius:0}
+nav.toc a[href$="index.html"]{display:none}
+nav.toc a[aria-current]{color:var(--indigo);font-weight:700;background:var(--indigo-soft);box-shadow:inset 0 -3px 0 var(--indigo)}
+[id]{scroll-margin-top:56px}
+html:has(nav.toc) [id]{scroll-margin-top:100px}
+/* focus: always visible */
+:focus-visible{outline:3px solid var(--indigo)!important;outline-offset:2px!important}
+header.hero :focus-visible,header.top :focus-visible{outline-color:#F2C46D!important}
+/* readable text */
+main p,main li,.why{max-width:68ch}
+@media (max-width:600px){.wrap{padding-left:16px;padding-right:16px}}
+small{font-size:max(12px,.8em)}
+.sig small{font-size:max(12px,.62em)}
+/* hero: title first, then the picture (at most 30% of the screen height, as wide as the text column),
+   so the title and the Today card share the first screen; long intro paragraphs fold to 3 lines (tap to read) */
+header.hero{display:flex;flex-direction:column}
+header.hero > .wrap{order:-1;width:100%}
+header.hero > svg,header.hero > img{max-height:30vh;max-width:780px;margin:14px auto 0}
+header.hero p.fold{position:relative;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;cursor:pointer}
+header.hero p.fold::after{content:"more";position:absolute;right:0;bottom:0;padding:0 2px 0 28px;background:linear-gradient(90deg,rgba(11,15,26,0),#0B0F1A 22px);color:#F2C46D;font-weight:700}
+header.hero .wrap > p ~ p.fold{-webkit-line-clamp:2}
+header.hero p.fold.open{display:block;-webkit-line-clamp:unset}
+header.hero p.fold.open::after{content:none}
+@media (max-width:600px){header.hero > svg,header.hero > img{max-height:28vh} header.hero .meta{font-size:.85rem;gap:0 14px}}
+/* contrast: amber and grey text */
+body .tip b:first-child,body .src > b:first-child,body .star,body .col.l > h3,body .timer.low .tdisp{color:var(--amber-ink)}
+/* one badge system: Learn = solid amber; Given / in booklet = neutral outline; Apply = indigo outline; HL = purple outline; green = done */
+.badge,.fb,.learn,.tag,span.hl,.quiz .subj,.written .wsubj,.wsubj,.pill,.soon{display:inline-block;font:700 .8rem/1.4 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.01em;padding:1px 7px;border:1px solid currentColor;border-radius:var(--r-sm);background:var(--card);vertical-align:middle;white-space:nowrap}
+.learn,.badge.learn{background:var(--amber-ink);border-color:var(--amber-ink);color:#fff}
+.fb,.badge.apply{color:var(--indigo);border-color:var(--indigo)}
+.fb.given,.badge.given,.tag,.quiz .subj,.written .wsubj,.wsubj,.badge.subj{color:var(--ink);border-color:var(--grey)}
+span.hl,.badge.hl{color:var(--purple);border-color:var(--purple)}
+.pill{margin-left:6px}
+.p-done,.badge.done{color:var(--green-ink);border-color:var(--green);background:var(--green-soft)}
+.p-soon,.soon{color:var(--grey);border-color:var(--grey)}
+/* radii: 4 px small things, 8 px boxes */
+.today,.goals,.able,.todaycard,#termbox,.before .bgi,.before .stuck,.quiz button,.go,.notice,.btn,.timer button,.tl,.chip,.plan > div,.step,.block{border-radius:var(--r)}
+/* 44 px targets */
+.go{min-height:44px;display:inline-flex;align-items:center}
+main details>summary{min-height:44px;display:flex;align-items:center;cursor:pointer}
+ul.files a,.files li>a{display:inline-flex;align-items:center;min-height:44px}
+input[type=number],input[type=text],select{min-height:44px}
+#box a#src,a.src{display:inline-flex;align-items:center;min-height:44px}
+#termbox .tb-h button{min-height:44px;min-width:44px}
+.top .crumb{display:flex;flex-wrap:nowrap;align-items:center;gap:0 6px;overflow-x:auto;scrollbar-width:none;white-space:nowrap;margin-bottom:2px}
+.top .crumb::-webkit-scrollbar{display:none}
+.top .crumb a{flex:none;display:inline-flex;align-items:center;min-height:44px;padding-right:4px}
+/* timed blocks: one card for guide plans, review steps and mock plans */
+.plan > div,.block,.step{background:var(--card);border:1px solid var(--rule);padding:12px 16px}
+.plan > div.brk{background:var(--green-soft);border-color:var(--green)}
+.bh{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;margin-bottom:4px}
+.block > .bh{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:4px 10px;align-items:center}
+.plan .bh .bn,.step .bh .bn,.bh .bn{flex:none;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--indigo);color:#fff;font:700 1rem/1 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif}
+.plan .bh > b,.step .bh > b,.bh > b{font-size:1.15rem;line-height:1.25;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;color:var(--ink)}
+.plan .bh .bt,.step .bh .bt,.bh .bt{flex:none;display:inline-block;font:700 .8rem/1.4 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:var(--r-sm);padding:2px 8px}
+.bdone{display:flex;align-items:center;gap:10px;min-height:44px;margin:8px 0 0;padding-top:4px;border-top:1px solid var(--rule);font-weight:600;color:var(--ink-soft);cursor:pointer;max-width:none}
+.bdone input{width:20px;height:20px;margin:0;flex:none;accent-color:var(--green)}
+.block.is-done{border-color:var(--green)} .block.is-done .bn{background:var(--green)} .block.is-done .bdone{color:var(--green-ink)}
+.blocks{display:grid;gap:10px;margin:16px 0}
+.blocks > .block p{margin:4px 0 0}
+.brkc{background:var(--green-soft);border:1px solid var(--green);border-radius:var(--r);padding:8px 16px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* Today card on guides: goals, plan chips, warm-up */
+.todaycard{background:var(--card);border:2px solid var(--indigo);padding:14px 16px 6px;margin:20px 0 10px}
+.todaycard .tc-goals > *{background:transparent!important;border:0!important;padding:0!important;margin:0!important;box-shadow:none!important;border-radius:0!important}
+.todaycard .tc-goals h2,.todaycard .tc-goals h3,.todaycard .tc-goals > * > p:first-child,.todaycard .tc-goals > * > b:first-child{display:block;font:600 1.25rem/1.25 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;color:var(--ink);margin:0 0 6px}
+.todaycard .tc-goals ol,.todaycard .tc-goals ul{margin:0;padding-left:22px}
+.todaycard .tc-goals li{margin:3px 0}
+.todaycard .tc-plan{margin:0 0 12px;padding-bottom:12px;border-bottom:1px solid var(--rule)}
+@media (max-width:600px){.todaycard .chips{display:grid;grid-template-columns:1fr 1fr;gap:6px}.todaycard .chip{padding:4px 10px;font-size:.9rem}.todaycard .chip.c0{grid-column:1 / -1}}
+.todaycard .tc-h{font-weight:700;margin:0 0 6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:4px;min-height:44px;padding:4px 12px;border:1px solid var(--indigo);background:var(--card);color:var(--indigo);text-decoration:none;font-size:.95rem;line-height:1.2}
+.chip b{font-weight:700}
+.chip.done{border-color:var(--green);color:var(--green-ink);background:var(--green-soft)}
+.chip.done::before{content:"\2713";font-weight:700}
+.todaycard .warmup{border:0;border-top:1px solid var(--rule);border-radius:0;padding:12px 0 4px;margin:12px 0 0;background:transparent}
+.todaycard .tc-plan + .warmup{border-top:0;margin-top:0;padding-top:0}
+.todaycard .warmup h2{font-size:1.15rem}
+.sitebar + .notice{margin:8px max(16px,calc((100% - 780px) / 2))}
+@media print{.sitebar,.notice,#termbox,.go,.chips,.bdone{display:none!important}nav.toc{position:static}.quiz button{display:list-item}.todaycard{border-width:1px}}
+</style><!--enhance:end-->
+</head>
+<body><!--enhance:start--><nav class="sitebar" aria-label="Study site"><div class="sb"><a class="sb-home" href="../index.html#today">← Today</a><a href="../flashcards.html">Flashcards</a><a href="../progress.html">Progress</a><a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">Sheet</a></div></nav><!--enhance:end-->
+
+
+<header class="hero">
+  <svg class="map" viewBox="0 0 1000 650" role="img" aria-label="The visual vocabulary of a graphic novel: five panels showing the same person in an extreme long shot, long shot, medium shot, close-up and extreme close-up; a diagram of a high, eye-level and low camera angle; and two panels with a speech balloon, a caption box, the gutter between them and the closure the reader makes across the gutter">
+    <rect width="1000" height="650" fill="#0B0F1A"/>
+    <defs>
+      <clipPath id="c1"><rect x="10" y="20" width="180" height="220"/></clipPath>
+      <clipPath id="c2"><rect x="210" y="20" width="180" height="220"/></clipPath>
+      <clipPath id="c3"><rect x="410" y="20" width="180" height="220"/></clipPath>
+      <clipPath id="c4"><rect x="610" y="20" width="180" height="220"/></clipPath>
+      <clipPath id="c5"><rect x="810" y="20" width="180" height="220"/></clipPath>
+      <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#F2C46D"/></marker>
+    </defs>
+    <!-- row 1: five shot sizes, same person -->
+    <g fill="#FFFFFF" stroke="#111" stroke-width="4">
+      <rect x="10" y="20" width="180" height="220"/><rect x="210" y="20" width="180" height="220"/><rect x="410" y="20" width="180" height="220"/>
+      <rect x="610" y="20" width="180" height="220"/><rect x="810" y="20" width="180" height="220"/>
+    </g>
+    <!-- ELS: tiny figure in a vast landscape -->
+    <g clip-path="url(#c1)">
+      <polygon points="10,165 50,95 85,135 125,65 165,125 190,100 190,165" fill="#111"/>
+      <line x1="10" y1="212" x2="190" y2="212" stroke="#111" stroke-width="3"/>
+      <g stroke="#111" stroke-width="3" fill="none"><circle cx="100" cy="190" r="4" fill="#111"/><line x1="100" y1="194" x2="100" y2="204"/><line x1="100" y1="204" x2="96" y2="211"/><line x1="100" y1="204" x2="104" y2="211"/></g>
+    </g>
+    <!-- LS: whole body with the ground -->
+    <g clip-path="url(#c2)" stroke="#111" stroke-width="5" fill="none" stroke-linecap="round">
+      <line x1="210" y1="224" x2="390" y2="224" stroke-width="3"/>
+      <circle cx="300" cy="78" r="18" fill="#111"/>
+      <line x1="300" y1="96" x2="300" y2="165"/><line x1="300" y1="165" x2="282" y2="222"/><line x1="300" y1="165" x2="318" y2="222"/>
+      <line x1="300" y1="115" x2="276" y2="152"/><line x1="300" y1="115" x2="324" y2="152"/>
+    </g>
+    <!-- MS: waist up -->
+    <g clip-path="url(#c3)">
+      <path d="M432,245 L448,160 Q500,138 552,160 L568,245 Z" fill="#111"/>
+      <rect x="490" y="122" width="20" height="26" fill="#111"/>
+      <circle cx="500" cy="92" r="36" fill="#FFFFFF" stroke="#111" stroke-width="5"/>
+      <path d="M464,88 Q470,48 500,50 Q532,48 536,88 Q520,66 500,66 Q480,66 464,88 Z" fill="#111"/>
+      <circle cx="487" cy="96" r="4" fill="#111"/><circle cx="513" cy="96" r="4" fill="#111"/>
+    </g>
+    <!-- CU: face fills the frame -->
+    <g clip-path="url(#c4)">
+      <circle cx="700" cy="148" r="92" fill="#FFFFFF" stroke="#111" stroke-width="5"/>
+      <path d="M608,140 Q612,46 700,44 Q790,46 792,140 Q760,90 700,88 Q640,90 608,140 Z" fill="#111"/>
+      <circle cx="668" cy="150" r="9" fill="#111"/><circle cx="732" cy="150" r="9" fill="#111"/>
+      <line x1="680" y1="200" x2="720" y2="200" stroke="#111" stroke-width="5" stroke-linecap="round"/>
+    </g>
+    <!-- ECU: one eye -->
+    <g clip-path="url(#c5)">
+      <path d="M822,60 Q900,22 978,60" fill="none" stroke="#111" stroke-width="12" stroke-linecap="round"/>
+      <path d="M820,135 Q900,45 980,135 Q900,225 820,135 Z" fill="#FFFFFF" stroke="#111" stroke-width="6"/>
+      <circle cx="900" cy="135" r="46" fill="#111"/>
+      <circle cx="886" cy="120" r="11" fill="#FFFFFF"/>
+    </g>
+    <g font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="bold" fill="#F2C46D" text-anchor="middle">
+      <text x="100" y="285">ELS</text><text x="300" y="285">LS</text><text x="500" y="285">MS</text><text x="700" y="285">CU</text><text x="900" y="285">ECU</text>
+    </g>
+
+    <!-- row 2 left: camera angles -->
+    <line x1="160" y1="610" x2="490" y2="610" stroke="#C9D1E6" stroke-width="3"/>
+    <g stroke="#FFFFFF" stroke-width="6" fill="none" stroke-linecap="round">
+      <circle cx="410" cy="470" r="18" fill="#FFFFFF"/>
+      <line x1="410" y1="488" x2="410" y2="558"/><line x1="410" y1="558" x2="394" y2="606"/><line x1="410" y1="558" x2="426" y2="606"/>
+      <line x1="410" y1="505" x2="388" y2="540"/><line x1="410" y1="505" x2="432" y2="540"/>
+    </g>
+    <g fill="#9FB3FF">
+      <rect x="165" y="382" width="48" height="32" rx="5"/><rect x="165" y="454" width="48" height="32" rx="5"/><rect x="165" y="566" width="48" height="32" rx="5"/>
+      <circle cx="218" cy="398" r="9"/><circle cx="218" cy="470" r="9"/><circle cx="218" cy="582" r="9"/>
+    </g>
+    <g stroke="#9FB3FF" stroke-width="3" stroke-dasharray="10 8">
+      <line x1="228" y1="400" x2="390" y2="464"/><line x1="228" y1="470" x2="388" y2="470"/><line x1="228" y1="580" x2="390" y2="478"/>
+    </g>
+    <g font-family="Arial,Helvetica,sans-serif" font-size="32" fill="#DCE3FF" text-anchor="end">
+      <text x="152" y="408">high</text><text x="152" y="481">eye level</text><text x="152" y="593">low</text>
+    </g>
+
+    <!-- row 2 right: two panels, the gutter, closure -->
+    <g fill="#FFFFFF" stroke="#111" stroke-width="4">
+      <rect x="520" y="400" width="190" height="190"/><rect x="790" y="400" width="190" height="190"/>
+    </g>
+    <ellipse cx="615" cy="465" rx="84" ry="42" fill="#FFFFFF" stroke="#111" stroke-width="4"/>
+    <polygon points="590,502 610,505 585,540" fill="#FFFFFF" stroke="#111" stroke-width="4" stroke-linejoin="round"/>
+    <rect x="800" y="410" width="170" height="54" fill="#F7E3B5" stroke="#111" stroke-width="3"/>
+    <g font-family="Arial,Helvetica,sans-serif" font-size="32" fill="#111" text-anchor="middle">
+      <text x="615" y="476">balloon</text><text x="885" y="448">caption</text>
+    </g>
+    <path d="M640,392 Q750,320 860,392" fill="none" stroke="#F2C46D" stroke-width="4" marker-end="url(#ah)"/>
+    <line x1="750" y1="605" x2="750" y2="560" stroke="#F2C46D" stroke-width="3" marker-end="url(#ah)"/>
+    <g font-family="Arial,Helvetica,sans-serif" font-size="32" fill="#F2C46D" text-anchor="middle" font-weight="bold">
+      <text x="750" y="342">closure</text><text x="750" y="638">gutter</text>
+    </g>
+  </svg>
+  <div class="wrap">
+    <h1>English A HL: Persepolis, "The Water Cell"</h1>
+    <p>Study guide for Friday 20 November 2026: an hour and a half of English (multimodal analysis of a graphic novel) and 30 minutes of French. The picture above is today's vocabulary. Top row: the same person drawn from far away to very close (the five <b>shot types</b>). Bottom left: where the "camera" stands (the three <b>camera angles</b>). Bottom right: two panels, the white strip between them (the <b>gutter</b>), a speech balloon, a caption box, and the jump your mind makes across the gutter (<b>closure</b>). Learn these, then use them on "The Water Cell" (Persepolis, pp. 18-25 in your class edition).</p>
+    <div class="meta"><span>About 2 h (English 1 h 30 + French 30 min)</span><span>Sources: your class answer sheet, worksheet and slides; IB guides on ibo.org</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <a href="../index.html" style="font-weight:700;color:var(--indigo)">All days</a><a href="#plan">Plan</a><a href="#shots">Shots</a><a href="#pace">Panels</a><a href="#words">Words</a><a href="#parts">Parts 1-2</a><a href="#chain">Analysis</a><a href="#part4">Part 4</a><a href="#french">French</a><a href="#quiz">Quiz</a><a href="#end">Finish</a>
+  </div>
+</nav>
+
+<main class="wrap"><!--enhance:start-->
+<section class="todaycard" aria-label="Today"><div class="tc-plan"><p class="tc-h">Today: tap a block to jump to it</p><div class="chips"><a class="chip c0" href="#before"><b>Block 0</b> · Before you start</a><a class="chip" href="#wu"><b>Warm-up</b> · 8 min</a><a class="chip" href="#b1" data-n="1"><b>Block 1</b> · 20 min</a><a class="chip" href="#b2" data-n="2"><b>Block 2</b> · 35 min</a><a class="chip" href="#b3" data-n="3"><b>Block 3</b> · 32 min</a><a class="chip" href="#b4" data-n="4"><b>Block 4</b> · 30 min</a></div></div><div class="tc-goals"><!--enhance:end--><!--enhance:moved--><div class="today">
+  <p>Today you will be able to</p>
+  <ul>
+    <li>name <span class="term" data-t="shot type" tabindex="0" role="button">shot types</span>, <span class="term" data-t="angle" tabindex="0" role="button">angles</span>, <span class="term" data-t="panel" tabindex="0" role="button">panel</span> <span class="term" data-t="transition" tabindex="0" role="button">transitions</span> and word-picture combinations, and say what each does to the reader</li>
+    <li>answer and self-mark the "Water Cell" comprehension and visual <span class="term" data-t="analyse" tabindex="0" role="button">analysis</span> questions (Parts 1 and 2)</li>
+    <li>write a Paper 1 style analytical paragraph on a graphic novel, and plan and check a French B text for classmates</li>
+  </ul>
+</div><!--enhance:/moved--><!--enhance:start--></div>
+<section class="warmup" id="wu" aria-label="Warm-up from earlier days">
+<h2>Warm-up from earlier days (8 min)</h2>
+<p class="wu-how">Answer from memory before you read on: write the answer on paper, then tap to check it.</p><ol>
+<li><div class="wu-m">Maths · SL 1.4 · from Tue 10 Nov</div><div class="wu-f">GDC financial app: the sign rule</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">PV and FV must have opposite signs (money paid in is negative). <a href="../guides/2026-11-04-maths-aa-sl-1.2-1.6.html#s14">open the section</a></div></details></li>
+<li><div class="wu-m">Business · 2.4 · from Thu 19 Nov</div><div class="wu-f">Herzberg: hygiene factors vs motivators</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">Hygiene (pay, conditions, security, supervision, policy, colleagues) only prevent dissatisfaction. Motivators (achievement, recognition, the work itself, responsibility, promotion, growth) motivate. IB name: motivation-hygiene theory. <a href="../guides/2026-11-19-business-sl-unit2-hrm.html#s24">open the section</a></div></details></li>
+<li><div class="wu-m">Biology · C1.1 · from Wed 18 Nov</div><div class="wu-f">What do enzymes do to activation energy and to the overall energy change?</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">They lower the activation energy; the overall energy change stays the same. <a href="../guides/2026-11-18-biology-hl-b1.2-c1.1.html#c11">open the section</a></div></details></li>
+<li><div class="wu-m">Biology · B1.2 · from Wed 18 Nov</div><div class="wu-f">Essential vs non-essential amino acids</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">Essential: cannot be synthesised by the body, must come from food. Non-essential: can be made from other amino acids. <a href="../guides/2026-11-18-biology-hl-b1.2-c1.1.html#b12">open the section</a></div></details></li>
+<li><div class="wu-m">English · Colour · from Fri 13 Nov</div><div class="wu-f">How to write about colour (class guide)</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">Not "Red makes the reader angry" but "Here, red suggests danger because ..." <a href="../guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html#colour">open the section</a></div></details></li>
+</ol>
+<p class="wu-foot">Missed one? Put it in the <a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">Error log</a>.</p></section>
+</section><!--enhance:end-->
+
+
+<!--enhance:origin-->
+<div id="warmup"></div>
+
+
+
+
+
+
+<section id="plan">
+  <h2 style="margin-top:28px">How to spend the two hours</h2>  <div class="checked"><b>What this page was checked against.</b> Every Paper 1 and course fact (texts, time, marks, <span class="term" data-t="criterion" tabindex="0" role="button">criteria</span>, <span class="term" data-t="concept" tabindex="0" role="button">concepts</span>, which forms count as <span class="term" data-t="literary" tabindex="0" role="button">literary</span>) was checked against the official <a href="https://ibo.org/globalassets/new-structure/university-admission/pdfs/subject-guides/language-a-language-literature-guide.pdf">IB Language A: language and literature guide</a> (first assessment 2021; Paper 1 is the same in the 2026 version you will sit). The comic and film words are your class terms from the slides and worksheet, not IB syllabus wording. The marks for "The Water Cell" come from your teacher's answer sheet.</div>
+  <p style="margin:10px 0 0">English 1 h 30 (Blocks 1 to 3: 20 + 35 + 32 minutes, with a 3-minute break), then French 30 minutes (Block 4): 120 minutes in total. Have your copy of Persepolis open. If a word has a dotted underline, tap it.</p>
+  <div class="plan"><!--terms:start--><div id="before" class="before block0"><details open>
+  <summary><span class="bn" aria-hidden="true">0</span><span class="b0t"><span class="sr">Block 0: </span>Before you start</span><span class="bt">about 7 min</span></summary>
+  <p style="margin:10px 0 0">This page builds on the ideas below. Read them first so you do not have to stop later (about 7 min, not counted in the blocks below). Words with a <span style="border-bottom:2px dotted var(--indigo)">dotted underline</span> anywhere on the page: tap them for a short explanation.</p>
+  <div class="bgi"><h3>How to read a comic page</h3><p>A comic or <b>graphic novel</b> tells a story in boxes called <b>panels</b>. In English you read them left to right, top row first, like text. The white strip between two panels is the <b><span class="term" data-t="gutter" tabindex="0" role="button">gutter</span></b>.</p><p>Inside a panel there are two kinds of words: a <b>speech balloon</b> (with a little tail pointing at the speaker) holds what a character says; a <b><span class="term" data-t="caption" tabindex="0" role="button">caption</span></b> (a box, often at the top) holds the <span class="term" data-t="narrator" tabindex="0" role="button">narrator</span>'s words.</p><p>Every drawing is a choice: how close we are, where we look from, how big the panel is, what is black and what is white. In English class you analyse those choices the way you would analyse word choices in a poem.</p></div><div class="bgi"><h3>Persepolis in a few lines</h3><p><i>Persepolis</i> is Marjane Satrapi's <span class="term" data-t="memoir" tabindex="0" role="button">memoir</span> in comic form: the true story of her own childhood in Iran around the 1979 <span class="term" data-t="revolution" tabindex="0" role="button">revolution</span>, drawn only in black and white.</p><p>Two voices tell it. The <b>pictures</b> show the child, Marji, as she was then. The <b>captions</b> are the grown-up Marjane looking back, who knows much more than the child did. Much of the book's meaning comes from the gap between the two.</p><p>In "The Water Cell" (pp. 18-25 in your class edition) Marji's parents are out protesting every day, and at home she learns things about her country and her own family that her school never told her.</p></div><div class="bgi"><h3>Iran's rulers, only as much as you need</h3><p>For many years Iran was ruled by kings of one family, the <b>Qajar <span class="term" data-t="dynasty" tabindex="0" role="button">dynasty</span></b>. In the 1920s an army officer, <b>Reza <span class="term" data-t="shah" tabindex="0" role="button">Shah</span></b>, took power and made himself king ("Shah" means king). His son, also called the Shah, ruled after him until the <b>1979 revolution</b>, when huge protests ended the monarchy.</p><p>That is all the history the Water Cell questions need. Your book gives the rest.</p></div><div class="bgi"><h3>Close or far, high or low: how a camera sees</h3><p>Film makers and comic artists make two choices for every picture. <b>How close</b> is the camera? Far away shows a whole place; very close shows one eye. <b>How high</b> is the camera? Looking down on someone makes them seem small; looking up makes them seem big and strong.</p><p>Try it with your phone: photograph a friend from far, then close, then from a chair above them, then from the floor. Each photo makes you feel differently about the same person. That feeling is the <b>effect</b> you write about.</p><p class="more">Want to see it explained another way? <a href="https://www.bbc.co.uk/bitesize/guides/zg6ffrd/revision/1" target="_blank" rel="noopener">BBC Bitesize: Types of shot (Moving Image Arts)</a></p></div><div class="bgi"><h3>What analysis means in English A</h3><p>Analysis is not retelling the story. It answers three questions about one choice the writer or artist made:</p><ul><li><b>What</b> is the choice? (a close-up, a black background, a short caption)</li><li><b>What does it do</b> to the reader? (we feel close to her, we feel she is trapped)</li><li><b>Why</b> did the writer want that? (to show how a child meets violence)</li></ul><p>A sentence that only names a technique earns very little. A sentence that goes from the technique to its effect to its purpose is what examiners reward.</p></div><div class="bgi"><h3>Literary and non-literary texts</h3><p>The IB sorts texts into two groups. <b>Literary</b> texts are works of literature: novels, poems, plays, short stories and graphic novels. <b><span class="term" data-t="non-literary" tabindex="0" role="button">Non-literary</span></b> texts are everything else people read and see: adverts, cartoons, blogs, speeches, photographs, posters, news articles.</p><p>In Paper 1 you get two <b><span class="term" data-t="unseen" tabindex="0" role="button">unseen</span></b> non-literary texts (texts you have never seen before). Your class books, like Persepolis, are literary works and are used in other parts of the course.</p></div><div class="bgi"><h3>Writing for an audience in French</h3><p>In a French B writing task, three questions decide your text before you write a word: <b>who</b> reads it (here: your classmates), <b>why</b> (to persuade them to use phones less) and <b>what kind of text</b> (a speech or a blog post).</p><p>The way you speak to the reader is the <b><span class="term" data-t="register" tabindex="0" role="button">register</span></b>. To a group of classmates you write in a friendly but correct way and use <i>vous</i>, because you are talking to several people. A job application letter would be the wrong kind of text for this reader and this purpose, however good its French.</p></div>
+  <p class="stuck"><b>Still stuck on a word?</b> Do not search for long. Write it in the <b><span class="term" data-t="error log" tabindex="0" role="button">Error log</span></b> tab of the study sheet starting with "word:" (for example "word: composition") and carry on. It will be explained in the next guide.</p>
+</details></div><!--terms:end-->
+
+    <div id="b1">
+      <div class="bh"><b>Block 1 · 20 min</b><span>The visual words</span></div>
+      <ol>
+        <li>Look at the picture at the top, then read <a href="#shots">Shots and angles</a>: worked example, "Finish it", self-check. <span class="t">(7 min)</span></li>
+        <li>Read <a href="#words">Words, pictures and black and white</a>: worked example, "Finish it", self-check. <span class="t">(6 min)</span></li>
+        <li><span class="star">★ If time:</span> read <a href="#pace">Panels, gutters and closure</a> with its "Finish it" (otherwise it is in the Friday 27 November session). <span class="t">(7 min)</span></li>
+      </ol>
+    </div>
+    <div id="b2">
+      <div class="bh"><b>Block 2 · 35 min</b><span>"The Water Cell", Parts 1 and 2</span></div>
+      <ol>
+        <li>Re-read "The Water Cell" (pp. 18-25) in your book. Look at the pictures as closely as the words: where is the camera, how big is each panel, what is black and what is white? <span class="t">(4 min)</span></li>
+        <li>Close the book. Answer <a href="#parts">Part 1</a> (four questions, 10 marks) on paper. The questions are copied on this page, so do NOT open the answer sheet yet: the answers are in the same file. <span class="t">(10 min)</span></li>
+        <li>Answer <a href="#parts">Part 2</a> (three questions, 10 marks). Use the book now: pictures are your evidence. <span class="t">(14 min)</span></li>
+        <li>Open <a href="https://drive.google.com/file/d/1J_dJFwabatvDaJTrPJ1LpiSug5BZoQGP/view">Persepolis - The Water Cell (pp. 18-25) - Questions with Mark Scheme and Model Answers</a>. Mark Parts 1 and 2 with its "Award marks for" lines: one tick per point you really made; score out of 20. Then open "After marking" under the questions here. <span class="t">(7 min)</span></li>
+      </ol>
+    </div>
+    <div class="brk">Break · 3 min: stand up, drink some water, look away from the screen.</div>
+    <div id="b3">
+      <div class="bh"><b>Block 3 · 32 min</b><span>The Part 4 paragraph and the quiz</span></div>
+      <ol>
+        <li>Read <a href="#chain">From technique to paragraph</a> (the same analysis chain as on the <a href="2026-11-13-english-a-hl-paper1-satirical-cartoons.html#chain">13 November cartoons page</a>) and do its "Finish it". <span class="t">(5 min)</span></li>
+        <li>Fill the <a href="#part4">paragraph frame</a> for the Part 4 prompt on paper: a plan, not the paragraph. <span class="t">(3 min)</span></li>
+        <li>Write your own Part 4 paragraph, timed, without the answer sheet: about 150 to 200 words. <span class="t">(12 min)</span></li>
+        <li>Open the answer sheet, read the model paragraph and mark yours with its four parts (2 + 2 + 4 + 2). Write down two things the model does that yours does not. <span class="t">(5 min)</span></li>
+        <li>Do the 7 multiple-choice questions of the <a href="#quiz">quiz</a>. <span class="t">(4 min)</span></li>
+        <li><span class="star">★ If time:</span> the 3 written quiz questions on paper (otherwise at the start of the 27 November session). The Error log and Fix-it routine in <a href="#end">Before you close this</a> goes into tomorrow's catch-up time if today runs out. <span class="t">(3 min)</span></li>
+      </ol>
+    </div>
+    <div id="b4">
+      <div class="bh"><b>Block 4 · 30 min</b><span>French: finish the screen-time text</span></div>
+      <ol>
+        <li>Open the <a href="https://drive.google.com/file/d/1Hqi6Qh2X_FeRENOisYlvq6koDnDQH9QY/view">French B - Paper 1 Writing Task Phones at School (Blog, Discours, Lettre) - Screenshot 25 Sep 2026</a> and read the <a href="#french">French section</a>. Choose blog or discours. <span class="t">(3 min)</span></li>
+        <li>If you started this text in September, read what you have. If not, plan: two problems, three other things to do at break, an opening and an ending. <span class="t">(5 min)</span></li>
+        <li>Write or finish it: 250 to 400 words, with <span class="term" data-t="connector" tabindex="0" role="button">connectors</span> from the <a href="https://drive.google.com/file/d/1d54TG2mwqwqvXnPtxVhKrcmIZHn5GuHo/view">French B - Grammar Exercise Cause Connectors (Exercice 1) - Screenshot 18 Sep 2026</a> and verbs from the <a href="https://drive.google.com/file/d/17Gk45ODOkOje3MB4BlZiMXXpHlH-KGet/view">French B - Grammar Reference Cause and Consequence Verbs Table - Screenshot 17 Sep 2026</a>. <span class="t">(17 min)</span></li>
+        <li>Go through the <a href="#fcheck">self-check list</a> and count your words. <span class="star">★ If time:</span> log grammar mistakes you find in the Error log. Give the text to your French teacher. <span class="t">(5 min)</span></li>
+      </ol>
+    </div>
+  </div>
+  <p><b>Short on time: skip ★ steps, still do the quiz.</b></p>
+
+  <div class="stuck"><b>Stuck?</b> (1) Look at the worked example of that section again. (2) Redo the section's self-check on paper. (3) Still stuck after 10 minutes: write it in the Error log as "ask teacher" and move on.</div>
+
+  <p><b>Files for today in the IB folder</b></p>
+  <ul class="files">
+    <li><a href="https://drive.google.com/file/d/1J_dJFwabatvDaJTrPJ1LpiSug5BZoQGP/view">Persepolis - The Water Cell (pp. 18-25) - Questions with Mark Scheme and Model Answers</a> (questions and answers in one file: open it only to mark)</li>
+    <li><a href="https://drive.google.com/file/d/1H51Jgsj4O8ylb7bb9CxFMS-0nEOuS1zW/view">Graphic Novels Unit - Session 3 Film Codes and Camera Angles - Student Worksheet</a></li>
+    <li><a href="https://drive.google.com/file/d/1BrxGopIN15j-7jwiJdcnQxxkUOFPKuHW/view">Persepolis - The Bicycle and The Water Cell - Note-taking Guide (cover lesson 21 Oct 2026)</a></li>
+    <li><a href="https://drive.google.com/file/d/1l84bHxigAm2MQERz1D_BAFqhtRx-OK85/view">REF - Persepolis Study Guide (LitCharts)</a>: "The Water Cell" is on pp. 20-21, only if you need the story again</li>
+    <li>French: <a href="https://drive.google.com/file/d/1Hqi6Qh2X_FeRENOisYlvq6koDnDQH9QY/view">writing task (25 Sep)</a>, <a href="https://drive.google.com/file/d/1d54TG2mwqwqvXnPtxVhKrcmIZHn5GuHo/view">cause connectors (18 Sep)</a>, <a href="https://drive.google.com/file/d/17Gk45ODOkOje3MB4BlZiMXXpHlH-KGet/view">cause and consequence verbs (17 Sep)</a></li>
+  </ul>
+  <div class="legend" aria-label="Legend for the markers">
+    <span><span class="learn" style="margin-left:0">Learn</span> names and definitions to know by heart</span>
+    <span><span class="fb" style="margin-left:0">Apply</span> skills you must use on a text you have never seen</span>
+  </div>
+  <div class="note"><b>Persepolis and the real exam.</b> HL Paper 1 gives you two <b>unseen non-literary</b> texts. The IB guide lists the graphic novel as a <b>literary</b> form, so Persepolis itself will not be a Paper 1 text; it can be used in Paper 2, the individual oral or the HL essay. Your teacher calls Part 4 a "Paper 1" task because the skill is the same: explaining how pictures and words make meaning, as you will need to on a cartoon or an advert.</div>
+
+  <details id="extra"><summary>Extra, not needed today</summary>
+    <p><b>Other class slides</b> on the same terms: <a href="https://drive.google.com/file/d/193O2yAwIEA-yMGF_1PGG4I9UEHl8RKy_/view">Graphic Novels Unit - Session 3 Film Perspectives - Slides</a>, <a href="https://drive.google.com/file/d/1dPY1MSzxeClWZnuqlcg-Gkfs2izvvreb/view">Session 4 Time and Motion - Slides</a>, <a href="https://drive.google.com/file/d/1VeAjxEUlIENsgDKDWh6zrRjKCgSEZrwn/view">Session 5 Role of the Reader (Closure and Panel Transitions) - Slides</a>, <a href="https://drive.google.com/file/d/11InV6-AedsZkNS5C9f5XOfr7z_yavt-u/view">Session 7 Show and Tell (Word-Picture Combinations and Colour) - Slides</a>. This page already teaches what they list.</p>
+    <p><b>More class words you only need to recognise:</b> foreground, midground and background (nearest, middle and furthest parts of a picture); polyptych (one scene split across several panels); panorama (another name for an extreme long shot).</p>
+    <p><b>The IB's seven key concepts:</b> identity, culture, creativity, communication, perspective, transformation and representation. Part 4 needs only perspective and representation.</p>
+    <p><b>Free reading (never copy from it):</b></p>
+    <ul>
+      <li>BBC Bitesize, <a href="https://www.bbc.co.uk/bitesize/guides/zg6ffrd/revision/1">Types of shot</a> and <a href="https://www.bbc.co.uk/bitesize/guides/zg6ffrd/revision/2">Camera angles</a>. Bitesize uses "bird's eye view" for a camera straight above and "worm's eye view" for a very low angle; your worksheet uses them as other names for high and low angle. "High angle" and "low angle" are always safe.</li>
+      <li>D'source (IIT Bombay design school), <a href="https://www.dsource.in/resource/grammar-and-vocabulary-comics/transitions">Transitions</a>: McCloud's six panel transitions, the gutter and closure.</li>
+      <li>Yale National Initiative teaching unit, <a href="https://teachersinstitute.yale.edu/curriculum/units/2014/1/14.01.01/6">"A Picture is Worth..." section 6</a>: McCloud's seven word-picture combinations with everyday examples.</li>
+      <li><a href="https://drive.google.com/file/d/1Sk7GD4FmWcB_crdej9xiSiWgg1iFySKR/view">Paper 1 Satirical Cartoons - Revision Guide (research workbook)</a>, step 5: the analysis chain.</li>
+    </ul>
+  </details>
+</section>
+
+<!-- =============================== SHOTS AND ANGLES =============================== -->
+<section class="topic" id="shots">
+  <div class="kicker">Session 3 · film codes worksheet</div>
+  <h2>Shots and angles</h2>
+  <p class="guiding">How much do we see, and where are we looking from?</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="s1"><span>Name the five shot types (ECU, CU, MS, LS, ELS) and say what each one shows and its usual effect</span></label>
+    <label><input type="checkbox" data-k="s2"><span>Name the three camera angles (high, eye level, low), keep them apart from shot types, and <span class="term" data-t="explain" tabindex="0" role="button">explain</span> the effect of an angle in a panel</span></label>
+  </div>
+
+  <p>A graphic novel artist works like a film director. For every panel she chooses how close the "camera" is (the <b>shot type</b>: <i>how much</i> we see) and how high it is (the <b>angle</b>: <i>where we look from</i>). These are two different choices.</p>
+
+  <h3>The five shot types <span class="learn">Learn</span></h3>
+  <div class="tablewrap"><table>
+    <tr><th>Shot</th><th>What it shows</th><th>Usual effect on the reader</th></tr>
+    <tr><td><b>Extreme close-up (ECU)</b></td><td>One tiny detail fills the <span class="term" data-t="frame" tabindex="0" role="button">frame</span>: an eye, a scar, one object.</td><td>Intensity: you must look at that one thing.</td></tr>
+    <tr><td><b>Close-up (CU)</b></td><td>A face or hands; the head fills most of the frame.</td><td><span class="term" data-t="intimacy" tabindex="0" role="button">Intimacy</span> or tension: you feel close and read the emotion.</td></tr>
+    <tr><td><b>Medium shot (MS)</b></td><td>From the waist or chest up: face and body language.</td><td>Natural, like a conversation.</td></tr>
+    <tr><td><b>Long shot (LS)</b></td><td>The whole body inside its surroundings.</td><td><span class="term" data-t="context" tabindex="0" role="button">Context</span>: you see where the character is.</td></tr>
+    <tr><td><b>Extreme long shot (ELS)</b></td><td>The character is tiny in a huge setting.</td><td>Scale, <span class="term" data-t="isolation" tabindex="0" role="button">isolation</span> or <span class="term" data-t="awe" tabindex="0" role="button">awe</span>.</td></tr>
+  </table></div>
+
+  <h3>The three angles <span class="learn">Learn</span></h3>
+  <div class="tablewrap"><table>
+    <tr><th>Angle</th><th>Where the camera is</th><th>Usual effect</th></tr>
+    <tr><td><b>High angle</b> (bird's-eye view on your worksheet)</td><td>Above, looking down.</td><td>The subject looks small, weak or <span class="term" data-t="vulnerable" tabindex="0" role="button">vulnerable</span>; the reader feels powerful.</td></tr>
+    <tr><td><b>Eye level</b></td><td>At the subject's height.</td><td>Neutral. It is the default, so when a panel breaks from eye level, ask why.</td></tr>
+    <tr><td><b>Low angle</b> (worm's-eye view on your worksheet)</td><td>Below, looking up.</td><td>The subject looks powerful, threatening or heroic; the reader feels small.</td></tr>
+  </table></div>
+  <p>The two choices combine: a <b>low-angle close-up</b> feels powerful and threatening; a <b>high-angle extreme long shot</b> (a tiny figure seen from above) feels isolated and vulnerable.</p>
+
+  <div class="worked"><b>Worked example.</b> A made-up panel: we look down on a small girl standing alone in the middle of a large, empty school yard.
+    <ol>
+      <li>How much do we see? Her whole body and a lot of space around her: a <b>long shot</b>. Not ELS: she is still clearly visible, not a dot.</li>
+      <li>Where is the camera? Above her, looking down: a <b>high angle</b>.</li>
+      <li>Effect: the empty space and the downward view make her look small and alone, so the reader feels sorry for her.</li>
+      <li>Exam sentence: "The high-angle long shot leaves the girl small in an empty yard, so the reader looks down on her isolation."</li>
+    </ol>
+    <details><summary>Why this step? Why decide the shot type and the angle separately (steps 1 and 2)?</summary><p style="margin:0">Because they are two different choices with different effects. Here both point the same way (small, alone), which makes the analysis stronger: you can say the artist uses two techniques together.</p></details>
+  </div>
+
+  <div class="finish"><b>Finish it.</b> A made-up panel: we look up at a headteacher's shouting face, which fills the frame.
+    <ol>
+      <li>Shot: a <b>close-up</b> (the face fills the frame).</li>
+      <li>Angle: ...</li>
+      <li>Effect on the reader: ...</li>
+    </ol>
+    <details><summary>Show the answer</summary><p style="margin:0">Angle: <b>low angle</b> (we look up). Effect: the headteacher looks powerful and threatening, and the reader feels small, like a pupil being told off. Together: a low-angle close-up.</p></details>
+  </div>
+
+  <div class="tip"><b>Exam traps.</b> (1) "A low-angle shot" says nothing about how close we are. (2) Naming a shot earns little: the IB's Paper 1 criterion B describes a response that only identifies features as "<span class="term" data-t="descriptive" tabindex="0" role="button">descriptive</span>". Say what the choice <i>does</i>. (3) Usual effects are a starting point: explain the effect in <i>this</i> panel.</div>
+
+  <details><summary>Self-check: write two key words for each, then open</summary>
+    <ol>
+      <li>A panel shows only a hand gripping a door handle. Which shot?</li>
+      <li>Two people from the chest up, talking. Which shot?</li>
+      <li>We look up at a soldier from his boots. Which angle, and what is the usual effect?</li>
+      <li>"This is a high-angle shot, so it is a close-up." What is wrong?</li>
+    </ol>
+    <p><b>Answers.</b> 1: close-up (hands count as CU on your worksheet). 2: medium shot. 3: low angle; he looks powerful and the reader feels small. 4: angle and shot type are separate choices; a high-angle shot can be any distance.</p>
+  </details>
+</section>
+
+<!-- =============================== PANELS, GUTTERS, CLOSURE =============================== -->
+<section class="topic" id="pace">
+  <div class="kicker">Sessions 4 and 5 · time, motion and the role of the reader</div>
+  <h2>Panels, gutters and closure</h2>
+  <p class="guiding">A comic controls time with boxes and gaps, and lets the reader fill the gaps.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="p1"><span>Explain how panel size, frames, gutters and layout control the pace of a story</span></label>
+    <label><input type="checkbox" data-k="p2"><span><span class="term" data-t="define" tabindex="0" role="button">Define</span> <span class="term" data-t="closure" tabindex="0" role="button">closure</span> and name the six panel transitions from class, with the effect of a transition in a sequence</span></label>
+  </div>
+
+  <h3>Controlling time (Session 4)</h3>
+  <div class="tablewrap"><table>
+    <tr><th>Technique</th><th>What it can do</th></tr>
+    <tr><td><b>Panel size and shape</b></td><td>A bigger or wider panel makes a moment feel longer and more important; small panels feel quick.</td></tr>
+    <tr><td><b>Silent panel</b> (no words)</td><td>A pause: the reader stops and looks.</td></tr>
+    <tr><td><b>Frame</b> (the border line) or none; <b>bleed</b> (the picture runs off the page edge)</td><td>A frameless or bleeding image feels open, not held in one moment.</td></tr>
+    <tr><td><b>Gutter</b> (the gap between panels)</td><td>Time passes there; a wide or black gutter can feel like a longer or darker break.</td></tr>
+    <tr><td><b>Grid layout</b></td><td>A regular grid gives a steady rhythm; breaking it draws attention.</td></tr>
+    <tr><td><b>Motion lines</b>, sound effects, speech</td><td>Show speed and noise; speech takes time to read, so it slows a panel.</td></tr>
+    <tr><td><b>Overlapping balloons</b></td><td>A quick conversation where people interrupt.</td></tr>
+  </table></div>
+
+  <h3>Closure (Session 5) <span class="learn">Learn</span></h3>
+  <p>Your Session 5 slide quotes the comics writer Scott McCloud: closure is <i>"observing the parts but perceiving the whole"</i>. Panels show separate moments, and the reader's mind joins them into one story. If panel 1 shows a raised hand and panel 2 shows someone crying, you "see" the slap that is never drawn.</p>
+
+  <h3>The six panel transitions <span class="learn">Learn</span></h3>
+  <p>McCloud's six kinds of jump from one panel to the next. Class terms, not IB terms: the examiner rewards what the transition does, not the label.</p>
+  <div class="tablewrap"><table>
+    <tr><th>Transition</th><th>What changes between the panels</th></tr>
+    <tr><td><b>Moment-to-moment</b></td><td>Almost nothing: the same thing a second later. Slow motion; asks the least of the reader.</td></tr>
+    <tr><td><b>Action-to-action</b></td><td>One subject doing one thing after another. The most common kind.</td></tr>
+    <tr><td><b>Subject-to-subject</b></td><td>Different people or things in the same scene.</td></tr>
+    <tr><td><b>Scene-to-scene</b></td><td>A jump across a lot of time or space; the reader fills a big gap.</td></tr>
+    <tr><td><b>Aspect-to-aspect</b></td><td>Different parts of one place, idea or mood; time seems to stand still.</td></tr>
+    <tr><td><b>Non-sequitur</b></td><td>No logical link at all; the reader still searches for one.</td></tr>
+  </table></div>
+
+  <div class="worked"><b>Worked example.</b> A made-up sequence. Panel 1: a mother reads a letter. Panel 2: close-up of her hand dropping the letter. Panel 3: the empty kitchen at night.
+    <ol>
+      <li>Panel 1 to 2: the same person, the next action: <b>action-to-action</b>.</li>
+      <li>Panel 2 to 3: hours pass and she is gone: a jump in time, so <b>scene-to-scene</b>.</li>
+      <li>Effect: the gutter hides what she did next. The reader must imagine her reaction, which makes the news feel too painful to show.</li>
+    </ol>
+    <details><summary>Why this step? Why is step 3 the one that earns marks?</summary><p style="margin:0">Steps 1 and 2 only label. Step 3 says what the gap makes the reader do and feel, which is analysis of an authorial choice.</p></details>
+  </div>
+
+  <div class="finish"><b>Finish it.</b> A made-up sequence. Panel 1: soldiers knock at a door. Panel 2: a family hides under a table in the dark.
+    <ol>
+      <li>Transition: the scene stays the same house, but we move from the soldiers to the family: ...</li>
+      <li>Effect on the reader: ...</li>
+    </ol>
+    <details><summary>Show the answer</summary><p style="margin:0">Subject-to-subject (different people, same scene). Effect: the gutter makes the reader imagine what happens at the door, so the fear grows; we share the family's view of danger they cannot see.</p></details>
+  </div>
+
+  <details><summary>Self-check: write two key words for each, then open</summary>
+    <ol>
+      <li>Why might an artist put one important moment in a very wide panel?</li>
+      <li>Panel 1: a girl at her desk. Panel 2: her teacher at the board. Panel 3: the classmate next to her. Which transition?</li>
+      <li>Explain closure in one sentence of your own.</li>
+    </ol>
+    <p><b>Answers.</b> 1: a wider panel makes the moment feel longer, so the reader lingers. 2: subject-to-subject. 3: for example, "the reader's mind joins separate panels into one story, filling in what is not drawn."</p>
+  </details>
+</section>
+
+<!-- =============================== WORDS AND PICTURES =============================== -->
+<section class="topic" id="words">
+  <div class="kicker">Session 7 · captions, combinations, black and white</div>
+  <h2>Words, pictures and black and white</h2>
+  <p class="guiding">Words and pictures can repeat, add to or fight each other.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="w1"><span>Tell a caption from a speech balloon and say how the words in a panel work with the picture (McCloud's combinations from class)</span></label>
+    <label><input type="checkbox" data-k="w2"><span>Analyse black and white contrast (<span class="term" data-t="chiaroscuro" tabindex="0" role="button">chiaroscuro</span>) and a visual <span class="term" data-t="symbol" tabindex="0" role="button">symbol</span> in a panel, in context</span></label>
+  </div>
+
+  <p>A <b>speech balloon</b> holds what a character says (a thought balloon, what they think). A <b>caption</b> is a box of narration. In Persepolis the captions are the voice of the adult Marjane looking back, while the pictures show the child Marji: that gap is a key source of the book's <b><span class="term" data-t="perspective" tabindex="0" role="button">perspective</span></b>.</p>
+
+  <h3>The seven word-picture combinations <span class="learn">Learn</span></h3>
+  <div class="tablewrap"><table>
+    <tr><th>Combination</th><th>How words and picture work together</th></tr>
+    <tr><td><b>Word-specific</b></td><td>The words tell it all; the picture only illustrates.</td></tr>
+    <tr><td><b>Picture-specific</b></td><td>The picture tells it all; the words are like a soundtrack ("Bang!").</td></tr>
+    <tr><td><b>Duo-specific</b></td><td>Both say the same thing.</td></tr>
+    <tr><td><b>Additive</b></td><td>One makes the other stronger or adds detail.</td></tr>
+    <tr><td><b>Parallel</b></td><td>Words and picture follow different tracks and do not meet.</td></tr>
+    <tr><td><b>Montage</b></td><td>The words are drawn as part of the picture.</td></tr>
+    <tr><td><b>Interdependent</b></td><td>Together they say something neither could say alone. The most common kind.</td></tr>
+  </table></div>
+
+  <h3>Black and white: chiaroscuro <span class="fb">Apply</span></h3>
+  <p>Persepolis is drawn only in black and white, with big areas of solid black. <b>Chiaroscuro</b> (an art word, Italian for "light-dark") means strong contrast between light and dark areas. A <b>symbol</b> is a thing that stands for an idea; a <b><span class="term" data-t="motif" tabindex="0" role="button">motif</span></b> is an image or idea that keeps coming back. Your cartoons guide gives the rule: <i>analyse the choice, do not guess the feeling</i>. Weak: "Black makes the reader sad." Strong: "Here, the solid black around the small figure isolates her."</p>
+
+  <div class="worked"><b>Worked example.</b> A made-up panel: a father laughing at a family dinner. Caption: "That was the last time I saw him laugh."
+    <ol>
+      <li>Picture alone: a happy meal. Words alone: a sad memory. Together: we know something terrible is coming that the family does not. So: <b>interdependent</b>.</li>
+      <li>Effect: the reader enjoys the happy scene and grieves at the same moment.</li>
+      <li>Purpose: the adult narrator's knowledge hangs over the child's happy world.</li>
+    </ol>
+    <details><summary>Why this step? Why look at the picture and the words separately first (step 1)?</summary><p style="margin:0">Only by asking what each says alone can you see what they say together, and that difference is what you analyse.</p></details>
+  </div>
+
+  <div class="finish"><b>Finish it.</b> A made-up panel: a small white figure in a doorway; everything else is solid black.
+    <ol>
+      <li>Feature: <b>chiaroscuro</b>, strong contrast of white and black.</li>
+      <li>What the white and the black could stand for here: ...</li>
+      <li>Effect on the reader: ...</li>
+    </ol>
+    <details><summary>Show the answer</summary><p style="margin:0">For example: the white figure stands for someone innocent or alone; the black for danger or the unknown pressing in. Effect: the reader feels how exposed and fragile the figure is. Any reading is fine if it comes from this panel.</p></details>
+  </div>
+
+  <details><summary>Self-check: write two key words for each, then open</summary>
+    <ol>
+      <li>A panel shows a burning building; the only words are "CRASH!" Which combination?</li>
+      <li>Who "speaks" in a Persepolis caption, and why does that matter?</li>
+      <li>Improve: "The picture is black and white, which is sad."</li>
+    </ol>
+    <p><b>Answers.</b> 1: picture-specific. 2: the adult Marjane looking back; the reader gets both the child's view (pictures) and the adult's understanding (captions). 3: for example, "The solid black around the white figure isolates her, suggesting innocence surrounded by a darkness she does not understand."</p>
+  </details>
+</section>
+
+<!-- =============================== PARTS 1 AND 2 =============================== -->
+<section class="topic" id="parts">
+  <div class="kicker">Answer sheet · Parts 1 and 2 · 20 marks</div>
+  <h2>"The Water Cell": Parts 1 and 2</h2>
+  <p class="guiding">Answer on paper first; open the answer sheet only to mark.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="t1"><span>Explain what Marji learns in "The Water Cell" about Reza Shah, the British and her grandfather, and how it changes her view</span></label>
+    <label><input type="checkbox" data-k="t2"><span>Answer a visual analysis question with a feature, a link to meaning and an effect on the reader</span></label>
+  </div>
+
+  <p>Questions from your teacher's answer sheet, each with a plain-words version. Aim for one clear point per mark.</p>
+
+  <h3>Part 1: Context and comprehension (10 marks)</h3>
+  <div class="qbox"><p><b>1.1 a)</b> Why does young Marji claim that she loves the Shah? <span class="term" data-t="identify" tabindex="0" role="button">Identify</span> the main sources of her first political beliefs. <span class="mk">[2]</span></p><p class="plain">Plain words: why does she say she loves the king, and where did she get that idea?</p></div>
+  <div class="qbox"><p><b>1.1 b)</b> How does her father take apart the official, state-approved story of how Reza Shah came to power? <span class="mk">[3]</span></p><p class="plain">Plain words: who was Reza Shah really, who helped him, and what does that show about the school's version?</p></div>
+  <div class="qbox"><p><b>1.2 a)</b> What important thing does Marji's father reveal about her mother's father? <span class="mk">[2]</span></p></div>
+  <div class="qbox"><p><b>1.2 b)</b> Which political <span class="term" data-t="ideology" tabindex="0" role="button">ideology</span> did her grandfather adopt, and what physical and social <span class="term" data-t="consequence" tabindex="0" role="button">consequences</span> did he suffer? <span class="mk">[3]</span></p><p class="plain">Plain words: what political belief did he take up, what was done to his body, and what did he lose in society?</p></div>
+
+  <h3>Part 2: Visual and multimodal analysis (10 marks)</h3>
+  <div class="qbox"><p><b>Row 1, <span class="term" data-t="empathy" tabindex="0" role="button">empathy</span> and <span class="term" data-t="emulation" tabindex="0" role="button">emulation</span> (character posing).</b> How does Satrapi use physical <span class="term" data-t="mimicry" tabindex="0" role="button">mimicry</span> to show the child trying to connect distant historical <span class="term" data-t="trauma" tabindex="0" role="button">trauma</span> with her own body? <span class="mk">[3]</span></p><p class="plain">Plain words: what does Marji copy with her body, why, and how should the reader feel about it?</p></div>
+  <div class="qbox"><p><b>Row 2, chiaroscuro and lighting.</b> How does the black-and-white art style show Marji losing her childhood <span class="term" data-t="innocence" tabindex="0" role="button">innocence</span>? <span class="mk">[3]</span></p></div>
+  <div class="qbox"><p><b>Row 3, physical symbolism (the motif of ageing).</b> Analyse the symbolic link between wrinkled skin, bodily suffering and memory passed down a family. <span class="mk">[4]</span></p></div>
+
+  <div class="tip"><b>The pattern behind every Part 2 mark.</b> Each row gives one mark for <b>naming the visual feature</b>, one for <b>linking it to meaning</b>, and one for <b>the effect on the reader</b> (row 3 adds a fourth point). Check your answer has all three before you write.</div>
+
+  <details><summary>After marking: points that are easy to miss</summary>
+    <ul>
+      <li><b>1.1 b)</b> needs three separate points: who Reza Shah was, who helped him and why, and what this shows about the "chosen by God" story.</li>
+      <li><b>1.2 a)</b> "He was a prince" is only 1 of 2: link him to the Qajar dynasty (the royal family that ruled Iran before Reza Shah overthrew it).</li>
+      <li><b>1.2 b)</b> needs the ideology <i>and</i> both kinds of consequence: physical and social.</li>
+      <li><b>Rows 1 and 2:</b> the third mark is the effect on the reader. "It shows her innocence" is meaning; "the reader feels tenderness and unease" is effect.</li>
+      <li><b>Row 3:</b> the fourth mark is for the <i>limits</i> of her empathy: her wrinkles are temporary, so she copies the outward sign of his suffering, never its reality.</li>
+      <li><b>Check your book:</b> the answer sheet says her <i>mother</i> asks what Marji is doing in the bath; the LitCharts guide says <i>God</i> asks. Use what the panel in your book shows.</li>
+    </ul>
+    <p style="margin:0">For context only: Iran was ruled by the Qajar dynasty until Reza Shah took power in the 1920s; his son, the Shah of the story, was overthrown in the 1979 revolution. More history is not needed for these questions.</p>
+  </details>
+</section>
+
+<!-- =============================== ANALYSIS CHAIN =============================== -->
+<section class="topic" id="chain">
+  <div class="kicker">Paper 1 skill · the analysis chain · ibo.org guide</div>
+  <h2>From technique to paragraph</h2>
+  <p class="guiding">Never stop at naming the technique: say what it does and why.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="a1"><span>Use the analysis chain (spot it, explain it, effect on the reader, purpose) on a panel I have never seen</span></label>
+    <label><input type="checkbox" data-k="a2"><span><span class="term" data-t="state" tabindex="0" role="button">State</span> the HL Paper 1 format and its four criteria, and explain the IB concepts of perspective and <span class="term" data-t="representation" tabindex="0" role="button">representation</span> in my own words</span></label>
+  </div>
+
+  <figure>
+    <svg viewBox="0 0 1000 150" role="img" aria-label="The analysis chain: spot it, then explain it, then the effect on the reader, then the purpose">
+      <g fill="#E6EAF7" stroke="#2F47A6" stroke-width="3">
+        <rect x="10" y="30" width="210" height="90" rx="12"/><rect x="265" y="30" width="210" height="90" rx="12"/><rect x="520" y="30" width="210" height="90" rx="12"/><rect x="775" y="30" width="215" height="90" rx="12"/>
+      </g>
+      <g stroke="#2F47A6" stroke-width="5"><line x1="224" y1="75" x2="258" y2="75"/><line x1="479" y1="75" x2="513" y2="75"/><line x1="734" y1="75" x2="768" y2="75"/></g>
+      <g fill="#2F47A6"><polygon points="262,75 248,66 248,84"/><polygon points="517,75 503,66 503,84"/><polygon points="772,75 758,66 758,84"/></g>
+      <g font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="bold" fill="#1E2A33" text-anchor="middle">
+        <text x="115" y="87">spot it</text><text x="370" y="87">explain it</text><text x="625" y="87">effect</text><text x="882" y="87">purpose</text>
+      </g>
+    </svg>
+    <figcaption>The analysis chain from your cartoons revision guide (step 5) and the <a href="2026-11-13-english-a-hl-paper1-satirical-cartoons.html#chain">13 November page</a>: spot it, explain it, effect on the reader, purpose. Your Session 3 slides say the same in three steps: identify the technique, its effect, its meaning.</figcaption>
+  </figure>
+
+  <div class="worked"><b>Model paragraph.</b> A made-up panel: a high-angle long shot of a small boy alone in a large, empty classroom; the past-tense caption reads "Nobody told me why they had gone."
+    <p style="margin:8px 0 0"><i>[<span class="term" data-t="topic sentence" tabindex="0" role="button">Topic sentence</span>]</i> The artist uses a high-angle long shot to show a child left outside adult events. <i>[Evidence and <span class="term" data-t="micro-analysis" tabindex="0" role="button">micro-analysis</span>]</i> Seen from above, the boy is small in the middle of an empty classroom, so the reader looks down on him and feels his isolation before reading a word. The past-tense caption, "Nobody told me why they had gone", adds an older narrator who now knows what the boy did not; this gap between the remembering voice and the confused child lets the reader share both views. <i>[<span class="term" data-t="synthesis" tabindex="0" role="button">Synthesis</span>]</i> The panel therefore represents childhood as a time of being surrounded by events that no one explains, a question of perspective.</p>
+    <details><summary>Why this step? Why does the synthesis name a concept (perspective)?</summary><p style="margin:0">It lifts one panel to the big idea of the text. The Part 4 scheme gives 2 marks for linking the insight to representation or perspective.</p></details>
+  </div>
+
+  <div class="finish"><b>Finish it.</b> Same panel, your turn for one link of the chain.
+    <ol>
+      <li>Spot it: the empty desks around the boy.</li>
+      <li>Explain it: rows of empty desks fill most of the panel.</li>
+      <li>Effect on the reader: ...</li>
+      <li>Purpose: ...</li>
+    </ol>
+    <details><summary>Show the answer</summary><p style="margin:0">Effect: the reader notices who is missing and feels the silence of the room. Purpose: the absence shows a loss the child cannot explain, so the reader, like him, must guess what happened.</p></details>
+  </div>
+
+  <h3>HL Paper 1 in one table <span class="learn">Learn</span></h3>
+  <div class="tablewrap"><table>
+    <tr><th>What</th><th>HL Paper 1: guided textual analysis</th></tr>
+    <tr><td>Texts</td><td>"Two guided analyses of previously unseen non-literary extracts or texts" (IB guide): two passages from different <span class="term" data-t="text type" tabindex="0" role="button">text types</span>, each with a <span class="term" data-t="guiding question" tabindex="0" role="button">guiding question</span>.</td></tr>
+    <tr><td>Time and marks</td><td>2 h 15; 40 marks (20 per text); 35% of the HL grade</td></tr>
+    <tr><td>Criteria (per text, 5 marks each)</td><td>A Understanding and <span class="term" data-t="interpretation" tabindex="0" role="button">interpretation</span>; B Analysis and <span class="term" data-t="evaluation" tabindex="0" role="button">evaluation</span>; C Focus and organisation; D Language</td></tr>
+  </table></div>
+
+  <h3>Perspective and representation</h3>
+  <ul>
+    <li><b>Perspective</b>: whose point of view a text shows, and how the reader's own view shapes the reading. The IB guide: <i>"A text may offer a multiplicity of perspectives which may, or may not, reflect the views of its author."</i></li>
+    <li><b>Representation</b>: how a text shows reality, and how its form (pictures, layout, black and white) shapes the meaning.</li>
+  </ul>
+
+  <div class="tip"><b>Exam trap.</b> Retelling the story earns almost nothing, and a list of techniques is "descriptive" in the criterion B wording. Every technique you name needs its effect and its purpose.</div>
+</section>
+
+<!-- =============================== PART 4 =============================== -->
+<section class="topic" id="part4">
+  <div class="kicker">Answer sheet · Part 4 · 10 marks</div>
+  <h2>The Part 4 paragraph</h2>
+  <p class="guiding">Model, then frame, then your own.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="t3"><span>Write a topic sentence, evidence, micro-analysis and synthesis paragraph on a graphic novel sequence, and mark it with the 2 + 2 + 4 + 2 scheme</span></label>
+  </div>
+
+  <div class="qbox"><p><b>Prompt.</b> Analyse how Satrapi uses <span class="term" data-t="multimodal" tabindex="0" role="button">multimodal</span> <span class="term" data-t="convention" tabindex="0" role="button">conventions</span> in "The Water Cell" to represent the collision between personal childhood innocence and political reality. <span class="mk">[10]</span></p><p class="plain">Plain words: how do the chapter's pictures and words (shots, black and white, panels, captions) show a child's innocent world crashing into the violent politics of her family's past?</p></div>
+
+  <div class="tablewrap"><table>
+    <tr><th>Part</th><th class="c">Marks</th><th>What earns them (answer sheet)</th></tr>
+    <tr><td><b>Topic sentence</b></td><td class="c">2</td><td>A clear argument linking graphic techniques to lost innocence or political criticism</td></tr>
+    <tr><td><b>Evidence</b></td><td class="c">2</td><td>Specific, accurate visual details (framing, black and white, body language) and captions, woven into your sentences</td></tr>
+    <tr><td><b>Micro-analysis</b></td><td class="c">4</td><td>HOW each choice creates meaning and a response: the chain, not a description</td></tr>
+    <tr><td><b>Synthesis</b></td><td class="c">2</td><td>Links your insight to the concept of representation or perspective</td></tr>
+  </table></div>
+  <p>Micro-analysis carries the most marks (4 of 10), so spend most of your words there.</p>
+
+  <h3>Paragraph frame (fill it on paper, then write your own)</h3>
+  <div class="frame">
+    In "The Water Cell", Satrapi uses <span class="blank"></span> and <span class="blank"></span> to show <span class="blank"></span>.
+    In the bath sequence, <span class="blank"></span> (a visual detail), while the caption <span class="blank"></span> (a short quote).
+    The <span class="blank"></span> (technique) makes the reader <span class="blank"></span>, which suggests <span class="blank"></span>.
+    However, <span class="blank"></span> (what Marji cannot share with her grandfather) shows <span class="blank"></span>.
+    Through this sequence, Satrapi represents <span class="blank"></span>, showing the perspective of <span class="blank"></span>.
+  </div>
+
+  <div class="tip"><b>Exam traps.</b> (1) One sentence of story is enough. (2) Choose details from the pictures, not only the words: this is a multimodal question. (3) "Satrapi" for the author's choices, "Marji" for the child. (4) Read the model paragraph only after you write.</div>
+</section>
+
+<!-- =============================== FRENCH =============================== -->
+<section class="topic" id="french">
+  <div class="kicker">French B SL · Paper 1 writing · 30 minutes</div>
+  <h2>French: the screen-time text</h2>
+  <p class="guiding">Right text type, right audience, both halves of the task.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="f1"><span>Choose a text type that fits the audience and purpose of a Paper 1 task, and write 250 to 400 words with its conventions</span></label>
+    <label><input type="checkbox" data-k="f2"><span>Use cause connectors and cause and consequence verbs correctly in my own sentences</span></label>
+  </div>
+
+  <p><b>The task (25 Sep).</b> Your classmates spend their breaks on their phones instead of talking. Write a text that encourages them to use screens less: explain the <b>problems</b> of using the phone too much at school, and <b>suggest other things</b> to do at break. 250 to 400 words. Text types offered: <i>blog</i>, <i>discours</i> (speech), <i>lettre de motivation</i> (cover letter).</p>
+
+  <div class="tip"><b>The trap in this task.</b> A <i>lettre de motivation</i> applies for a job or a place: it fits neither classmates nor the purpose of persuading them. Choose the <b>discours</b> (for example at a school assembly) or a school <b>blog</b> post. The IB Language B guide warns that a response that ignores context, purpose and audience may get 0 for criteria B and C, even if the French is good.</div>
+
+  <div class="tablewrap"><table>
+    <tr><th>Criterion (SL Paper 1, 30 marks)</th><th class="c">Marks</th><th>In plain words</th></tr>
+    <tr><td>A: Language</td><td class="c">12</td><td>Varied, accurate vocabulary and grammar, some complex sentences</td></tr>
+    <tr><td>B: Message</td><td class="c">12</td><td>Relevant ideas, developed with details and examples, in a clear order</td></tr>
+    <tr><td>C: Conceptual understanding</td><td class="c">6</td><td>Right text type, register and tone for this audience and purpose</td></tr>
+  </table></div>
+  <p style="font-size:.95rem;color:var(--ink-soft)">From the IB Language B guide; the 30 marks and 25% of the grade are also in the IB subject brief on ibo.org.</p>
+
+  <div class="tablewrap"><table>
+    <tr><th>Discours: conventions</th><th>Blog: conventions</th></tr>
+    <tr><td>Greet: <i>Chers camarades,</i><br>Say who you are and why you speak<br><i>vous</i>, <i>nous</i>; questions to the audience<br>End: a <span class="term" data-t="call to action" tabindex="0" role="button">call to action</span>, <i>Merci de votre attention.</i></td><td>A title and a date<br>A friendly opening to readers<br>Short paragraphs<br>End: <i>Et vous, qu'en pensez-vous ?</i></td></tr>
+  </table></div>
+
+  <h3 id="fcheck">Self-check list before you hand it in</h3>
+  <ol>
+    <li>Discours or blog, with its conventions at the start and at the end.</li>
+    <li>Register suits classmates and stays the same (<i>vous</i> for the group).</li>
+    <li>Both halves: at least two problems <b>and</b> at least two other things to do at break.</li>
+    <li>Every idea has a detail or an example.</li>
+    <li>Paragraphs, one main idea each, joined by connectors.</li>
+    <li>Three cause connectors from 18 Sep, built correctly: <i>parce que, comme, puisque, étant donné que</i> + subject and verb; <i>grâce à, à cause de, en raison de</i> + <span class="term" data-t="noun" tabindex="0" role="button">noun</span>.</li>
+    <li>Two verbs from the 17 Sep table (for example <i>provoquer, entraîner, favoriser, permettre de</i>).</li>
+    <li>Accents, verb endings and <span class="term" data-t="agreement" tabindex="0" role="button">agreements</span> checked line by line.</li>
+    <li>Word count between 250 and 400.</li>
+  </ol>
+</section>
+
+<!-- =============================== QUIZ =============================== -->
+<section class="topic quiz" id="quiz">
+  <div class="kicker">Seven multiple choice + three written</div>
+  <h2>Quick quiz</h2>
+  <p>Decide your answer before you click. The saved score counts the seven multiple-choice questions. Then write the three short answers on paper and mark them with the checklist.</p>
+
+  <div class="q" data-a="2"><p>1. A panel shows a girl's whole body standing in an empty street, with the houses around her. Which shot type?</p>
+    <button>Close-up</button>
+    <button>Medium shot</button>
+    <button>Long shot</button>
+    <button>Extreme close-up</button>
+    <div class="why">Whole body plus surroundings is a long shot. A medium shot stops at the waist or chest; an extreme long shot would make her tiny in a vast setting.</div></div>
+
+  <div class="q" data-a="1"><p>2. The artist draws a soldier from below, looking up at him. This is</p>
+    <button>a high angle, and he looks weak</button>
+    <button>a low angle, and he looks powerful</button>
+    <button>eye level, and he looks neutral</button>
+    <button>a low angle, and he looks vulnerable</button>
+    <div class="why">Camera below looking up is a low angle, which usually makes the subject look powerful. Vulnerable is the usual effect of a high angle.</div></div>
+
+  <div class="q" data-a="1"><p>3. Panel 1: a boy kicks a ball. Panel 2: the ball hits a window. Which transition?</p>
+    <button>Moment-to-moment</button>
+    <button>Action-to-action</button>
+    <button>Scene-to-scene</button>
+    <button>Non-sequitur</button>
+    <div class="why">One subject moving through actions: action-to-action. Moment-to-moment shows almost no change; scene-to-scene jumps across time or place.</div></div>
+
+  <div class="q" data-a="1"><p>4. A crying girl, with the caption "I was so sad." McCloud would call this word-picture combination</p>
+    <button>word-specific</button>
+    <button>duo-specific</button>
+    <button>parallel</button>
+    <button>interdependent</button>
+    <div class="why">Words and picture send the same message: duo-specific. Interdependent means together they say something neither says alone.</div></div>
+
+  <div class="q" data-a="1"><p>5. HL Paper 1 is</p>
+    <button>one unseen text from a choice of two, 1 h 15</button>
+    <button>two unseen non-literary texts, an analysis of each, 2 h 15, 40 marks</button>
+    <button>a comparative essay on two literary works</button>
+    <button>a 15-minute individual oral</button>
+    <div class="why">HL writes on both texts: 2 h 15, 20 marks per text, 35% of the grade. One text in 1 h 15 is SL; the comparative essay is Paper 2.</div></div>
+
+  <div class="q" data-a="1"><p>6. Why will Persepolis itself not be the text in your Paper 1?</p>
+    <button>It is too long</button>
+    <button>The IB guide lists the graphic novel as a literary form, and Paper 1 texts are non-literary</button>
+    <button>It is in black and white</button>
+    <button>It was written in French</button>
+    <div class="why">Paper 1 uses unseen non-literary texts; the guide puts "graphic novel" with the literary forms. The skills still transfer to a cartoon or an advert.</div></div>
+
+  <div class="q" data-a="2"><p>7. French task: persuade your classmates to use their phones less at break. Which offered text type fits worst?</p>
+    <button>Blog</button>
+    <button>Discours</button>
+    <button>Lettre de motivation</button>
+    <div class="why">A lettre de motivation applies for a job or a place: wrong audience and purpose, which costs marks in criterion C and can cost B too.</div></div>
+
+  <div class="score" id="score">Score: 0 / 7 answered 0</div>
+
+  <div class="written" data-max="2"><p>8. Explain what closure is, and what the reader does in this made-up pair: panel 1, a man raises a stick over a dog; panel 2, an empty street with the sound effect "YELP!" <span class="mk">[2]</span></p>
+    <details><summary>Show model answer</summary><p>Closure is the reader's mind joining separate panels into one story (1). Here the reader imagines the blow that is never drawn, so the violence feels worse for being hidden (1).</p><p><b>Checklist:</b> a correct definition in your own words; what the reader fills in for <i>these</i> panels.</p></details></div>
+
+  <div class="written" data-max="2"><p>9. A made-up panel: a low-angle close-up of a soldier shouting. Identify the shot and angle, and explain one effect on the reader. <span class="mk">[2]</span></p>
+    <details><summary>Show model answer</summary><p>A low-angle close-up (1). The face fills the frame and we look up at it, so the soldier seems huge and threatening and the reader feels small and powerless (1).</p><p><b>Checklist:</b> both terms correct (shot and angle); an effect on the reader, not just "it shows the soldier".</p></details></div>
+
+  <div class="written" data-max="3"><p>10. A made-up advert: a tiny family sits under a giant smartphone; the slogan reads "Always connected." Analyse one visual choice and one verbal choice, and give the purpose. <span class="mk">[3]</span></p>
+    <details><summary>Show model answer</summary><p>Scale: the giant phone towers over the tiny family, so the reader sees technology dominating them (1). The slogan "Always connected" sounds positive, but next to the image it becomes <span class="term" data-t="irony" tabindex="0" role="button">ironic</span>: the family is connected to the phone, not to each other (1). Purpose: the advert criticises how screens push out real family contact (1).</p><p><b>Checklist:</b> one visual choice with its effect; one verbal choice with its effect (here, irony); a purpose sentence.</p></details></div>
+</section>
+
+<section class="end" id="end">
+  <h2 style="font-size:1.4rem">Before you close this</h2>
+  <ul>
+    <li>Tick the "I can" boxes you are confident about. The unticked ones come first next time: Saturday 21 November (a timed cartoon analysis) and Friday 27 November (these Persepolis terms again).</li>
+    <li>For every quiz question you missed: close the page, redo that section's self-check on paper, and write the rule in one line.</li>
+    <li>Open the <a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">study sheet</a>, <b>Error log</b> tab, and write one row for every lost mark (Parts 1 and 2, the paragraph, the quiz). Give each a type: <b>did not know</b>, <b>wrong method</b>, <b>slip</b>, <b>time</b> or <b>ask teacher</b>.</li>
+    <li><b>Fix-it:</b> rewrite one answer that lost marks so it would get full marks (for example a Part 2 row with the missing effect on the reader).</li>
+    <li>Also on the study site: <a href="../flashcards.html">flashcards</a> (today's shot types, angles, transitions and combinations are in there), <a href="../exam.html">exam technique</a>, and your <a href="../progress.html">progress page</a>.</li>
+  </ul>
+</section>
+
+</main>
+
+<script>
+(function(){
+  // remember ticked "I can" boxes on this device; fails quietly where storage is unavailable
+  var key='ib-english-hl-persepolis-ican';
+  var boxes=document.querySelectorAll('.ican input');
+  try{ var saved=JSON.parse(localStorage.getItem(key)||'{}'); boxes.forEach(function(b){ if(saved[b.dataset.k]) b.checked=true; }); }catch(e){}
+  boxes.forEach(function(b){ b.addEventListener('change',function(){ try{ var s={}; boxes.forEach(function(x){ if(x.checked) s[x.dataset.k]=1; }); localStorage.setItem(key,JSON.stringify(s)); }catch(e){} }); });
+
+  // quiz: only the multiple-choice items (.q) are scored and saved; written items are marked on paper
+  var qs=document.querySelectorAll('.quiz .q'); var right=0, done=0, total=qs.length;
+  qs.forEach(function(q){
+    var a=parseInt(q.dataset.a,10); var btns=q.querySelectorAll('button');
+    btns.forEach(function(b,i){ b.addEventListener('click',function(){
+      if(q.classList.contains('done')) return;
+      q.classList.add('done'); done++;
+      if(i===a){ b.classList.add('right'); right++; } else { b.classList.add('wrong'); btns[a].classList.add('right'); }
+      document.getElementById('score').textContent='Score: '+right+' / '+total+' answered '+done+(done===total?(right>=6?'. Good. Now the written questions below.':'. For each miss: close the page, redo that section self-check, write the rule. Then the written questions.'):'');
+      if(done===qs.length){ try{ var KQ='ib-quiz-guide-2026-11-20'; var prev=JSON.parse(localStorage.getItem(KQ)||'null'); localStorage.setItem(KQ,JSON.stringify({right:right,total:qs.length,date:new Date().toISOString().slice(0,10),best:Math.max(right,prev&&prev.best||0)})); }catch(e){} }
+    }); });
+  });
+})();
+</script>
+
+
+
+<!--terms:start-->
+<div id="termbox" role="dialog" aria-live="polite"><div class="tb-h"><b></b><button type="button">Close</button></div><p class="tb-d"></p></div>
+<script id="terms-data" type="application/json">{"multimodal": {"w": "multimodal", "d": "Using more than one way of making meaning at once, for example pictures and words together. A comic, an advert and a website are multimodal."}, "convention": {"w": "convention", "d": "A usual feature that readers expect in a kind of text. Panels and speech balloons are conventions of comics; a greeting and a sign-off are conventions of a speech."}, "panel": {"w": "panel", "d": "One box (one picture) on a comic page. A page is usually made of several panels read in order."}, "gutter": {"w": "gutter", "d": "The empty strip between two comic panels. Time passes there, and the reader imagines what happens in it."}, "caption": {"w": "caption", "d": "A box of words in a comic panel that holds the narrator's voice, not a character's speech. In Persepolis, the grown-up Marjane looking back."}, "closure": {"w": "closure", "d": "In comics, the reader's mind joining separate panels into one story and filling in what is not drawn."}, "transition": {"w": "transition", "d": "The kind of jump from one panel to the next: a second later, the next action, another person, another time or place."}, "shot type": {"w": "shot type", "d": "How close the camera (or the artist) is to the subject: from extreme close-up (one detail) to extreme long shot (a tiny figure in a huge place)."}, "angle": {"w": "camera angle", "d": "How high the camera is compared with the subject: above looking down (high), level (eye level) or below looking up (low)."}, "frame": {"w": "frame", "d": "The edges of the picture: everything we can see inside one panel or one camera shot. Also the border line drawn around a panel."}, "chiaroscuro": {"w": "chiaroscuro", "d": "An art word (Italian for \"light-dark\"): strong contrast between light and dark areas of a picture. Say it \"kee-ar-oh-SKOO-roh\"."}, "symbol": {"w": "symbol", "d": "A thing in a text that stands for an idea. A dove can stand for peace; wrinkled hands can stand for suffering passed down a family."}, "motif": {"w": "motif", "d": "An image or idea that comes back several times in a text, so it gathers meaning, for example ageing or water."}, "mimicry": {"w": "mimicry", "d": "Copying how someone else acts or looks, here with your own body."}, "emulation": {"w": "emulation", "d": "Trying to copy or be like someone you look up to."}, "empathy": {"w": "empathy", "d": "Trying to feel what another person feels, as if you were in their place."}, "trauma": {"w": "trauma", "d": "Very deep pain or shock from a terrible experience, which can last for years."}, "ideology": {"w": "ideology", "d": "A set of political ideas and beliefs about how a society should be run, for example communism."}, "dynasty": {"w": "dynasty", "d": "A family of rulers, where power passes from parent to child, for example the Qajar kings of Iran."}, "revolution": {"w": "revolution", "d": "When people overthrow their government or ruler, often through mass protest. In Iran in 1979 the monarchy (rule by the Shah) was ended."}, "shah": {"w": "Shah", "d": "The title of the king of Iran."}, "innocence": {"w": "innocence", "d": "In literature, a child's not yet knowing about the cruelty of the adult world."}, "memoir": {"w": "memoir", "d": "A true story of the writer's own life, told by the writer."}, "narrator": {"w": "narrator", "d": "The voice that tells the story. In Persepolis it is the grown-up Marjane, remembering."}, "perspective": {"w": "perspective", "d": "In the IB course: the point of view a text shows (whose eyes we see through), and the view each reader brings to it. One of the seven IB key concepts."}, "representation": {"w": "representation", "d": "In the IB course: how a text shows real life, and how its form (here pictures, panels, black and white) shapes the meaning. One of the seven IB key concepts."}, "concept": {"w": "concept", "d": "A big idea used to think about any text. The IB English course has seven, including perspective and representation."}, "synthesis": {"w": "synthesis", "d": "The last sentence of an analytical paragraph that pulls your points together into one big idea about the text."}, "micro-analysis": {"w": "micro-analysis", "d": "Very close analysis of small details (one panel, one word) and exactly how each one creates meaning."}, "topic sentence": {"w": "topic sentence", "d": "The first sentence of a paragraph: it states the point (argument) the paragraph will prove."}, "analyse": {"w": "analyse", "d": "IB command term: break something down to bring out its essential parts or structure. In English: show how choices create meaning."}, "explain": {"w": "explain", "d": "IB command term: give a detailed account including reasons or causes."}, "identify": {"w": "identify", "d": "IB command term: give an answer from a number of possibilities. Name it; no explanation needed."}, "state": {"w": "state", "d": "IB command term: give a specific name, value or other brief answer without explanation."}, "define": {"w": "define", "d": "IB command term: give the precise meaning of a word or idea."}, "evaluation": {"w": "evaluation", "d": "Judging how well something works, weighing its strengths and limits. In Paper 1: judging how well the writer's choices create meaning."}, "interpretation": {"w": "interpretation", "d": "Your reasoned idea of what a text means beyond the obvious, supported by details from it."}, "criterion": {"w": "criterion", "d": "One of the headings a piece of work is marked against (plural: criteria). Paper 1 has four, A to D, 5 marks each."}, "unseen": {"w": "unseen", "d": "A text you have never seen before; you meet it for the first time in the exam."}, "non-literary": {"w": "non-literary", "d": "Texts that are not literature: adverts, cartoons, blogs, speeches, photographs, posters, articles."}, "literary": {"w": "literary", "d": "Belonging to literature: novels, poems, plays, short stories and, for the IB, graphic novels."}, "text type": {"w": "text type", "d": "A kind of text with its own usual features: blog, speech, letter, advert, cartoon."}, "guiding question": {"w": "guiding question", "d": "The question printed under each Paper 1 text that suggests what to focus your analysis on."}, "descriptive": {"w": "descriptive", "d": "Only saying what is there, without explaining how it creates meaning. The IB marks this low in criterion B."}, "context": {"w": "context", "d": "The situation around a text: when, where and why it was made, and who reads it."}, "intimacy": {"w": "intimacy", "d": "A feeling of being very close to someone, personally or emotionally."}, "vulnerable": {"w": "vulnerable", "d": "Easy to hurt or attack; weak and exposed."}, "isolation": {"w": "isolation", "d": "Being alone and cut off from other people."}, "awe": {"w": "awe", "d": "A feeling of wonder mixed with a little fear, at something huge or powerful."}, "irony": {"w": "irony", "d": "When the meaning is the opposite of what the words seem to say, or when what happens is the opposite of what we expect."}, "register": {"w": "register", "d": "How formal or informal your language is, chosen for your reader: a speech to classmates is friendly but correct."}, "connector": {"w": "connector", "d": "A word or phrase that links ideas, such as <i>parce que<\/i> (because) or <i>grâce à<\/i> (thanks to)."}, "agreement": {"w": "agreement", "d": "In French grammar, making an adjective or past participle match its noun: masculine or feminine, singular or plural (<i>une idée intéressante<\/i>)."}, "noun": {"w": "noun", "d": "A word for a person, place, thing or idea: <i>le téléphone<\/i>, <i>la pause<\/i>."}, "consequence": {"w": "consequence", "d": "The result of something that happened before."}, "call to action": {"w": "call to action", "d": "The end of a persuasive text that tells the audience exactly what to do now."}, "error log": {"w": "Error log", "d": "The tab in your study sheet where you write every lost mark, why you lost it and the rule that fixes it."}}</script>
+<script>
+(function(){
+  // tap a dotted word to see what it means
+  var T={};
+  try{ T=JSON.parse(document.getElementById('terms-data').textContent); }catch(e){ return; }
+  var box=document.getElementById('termbox'), bt=box.querySelector('.tb-h b'), bd=box.querySelector('.tb-d');
+  function show(el){ var k=el.getAttribute('data-t'); if(!T[k]) return; bt.textContent=T[k].w; bd.innerHTML=T[k].d; box.classList.add('on'); }
+  function hide(){ box.classList.remove('on'); }
+  document.addEventListener('click',function(e){
+    var el=e.target.closest ? e.target.closest('.term') : null;
+    if(el){ e.preventDefault(); e.stopPropagation(); show(el); return; }
+    if(!box.contains(e.target)) hide();
+  },true);
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape') hide();
+    if((e.key==='Enter'||e.key===' ') && e.target.classList && e.target.classList.contains('term')){ e.preventDefault(); show(e.target); }
+  });
+  box.querySelector('button').addEventListener('click',hide);
+})();
+</script><!--terms:end-->
+<!--enhance:start--><script>
+function storageOK(){ try{ var k='__ib_t'; localStorage.setItem(k,'1'); localStorage.removeItem(k); return true; }catch(e){ return false; } }
+function storageNotice(){ if(storageOK() || document.querySelector('.notice.storage')) return;
+  var n=document.createElement('div'); n.className='notice storage'; n.setAttribute('role','status');
+  n.textContent='Progress cannot be saved in this browser (private mode?). Use normal Safari or Chrome.';
+  var sb=document.querySelector('.sitebar');   // under the shared top bar when the page has one
+  if(sb && sb.parentNode){ sb.parentNode.insertBefore(n,sb.nextSibling); return; }
+  var m=document.querySelector('main')||document.body; m.insertBefore(n,m.firstChild); }
+
+function ibQuizEnhance(cfg){
+  if(window.__ibQuizEnh) return; window.__ibQuizEnh=1;
+  if(typeof storageNotice==='function') storageNotice();
+  var KEY=cfg&&cfg.key; if(!KEY) return;
+  var AK=KEY+'-attempts', WK=KEY+'-written';
+  function get(k){ try{ return JSON.parse(localStorage.getItem(k)||'null'); }catch(e){ return null; } }
+  function put(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); }catch(e){} }
+  function pad(n){ return (n<10?'0':'')+n; }
+  function today(){ var d=new Date(); return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()); }
+  function attempts(){ var a=get(AK); return Array.isArray(a)?a:[]; }
+  function addAttempt(r,t,sameDay){ var a=attempts(), d=today(), rec={date:d,right:r,total:t};
+    if(sameDay && a.length && a[a.length-1].date===d) a[a.length-1]=rec; else a.push(rec); put(AK,a); return a; }
+  // keep the score saved before this history existed as the first attempt
+  (function(){ if(get(AK)) return; var r=get(KEY); if(!r||typeof r!=='object') return;
+    var rr=(typeof r.right==='number')?r.right:r.score, tt=(typeof r.total==='number')?r.total:r.max;
+    if(typeof rr==='number' && tt) put(AK,[{date:r.date||today(),right:rr,total:tt}]); })();
+
+  // written answers: self-mark 0..max
+  var W=get(WK); if(!W||typeof W!=='object') W={};
+  [].forEach.call(document.querySelectorAll('.written[data-max]'),function(el,i){
+    var max=parseInt(el.getAttribute('data-max'),10); if(!(max>=0) || el.querySelector('.wm')) return;
+    var id=el.id||el.getAttribute('data-id')||('w'+(i+1));
+    var box=document.createElement('div'); box.className='wm';
+    var lab=document.createElement('label'); lab.appendChild(document.createTextNode('My mark: '));
+    var sel=document.createElement('select'); sel.setAttribute('aria-label','Your mark out of '+max);
+    var o=document.createElement('option'); o.value=''; o.textContent='not marked yet'; sel.appendChild(o);
+    for(var m=0;m<=max;m++){ o=document.createElement('option'); o.value=String(m); o.textContent=m+' out of '+max; sel.appendChild(o); }
+    if(W[id]!=null) sel.value=String(W[id]);
+    sel.addEventListener('change',function(){ var w=get(WK); if(!w||typeof w!=='object') w={};
+      if(sel.value==='') delete w[id]; else w[id]=parseInt(sel.value,10); put(WK,w); });
+    lab.appendChild(sel); box.appendChild(lab); el.appendChild(box);
+  });
+
+  // timed pages save {score,max,date} themselves; keep one history entry per day
+  if(/^ib-timed-/.test(KEY)){
+    var rec=function(){ var r=get(KEY); if(r && typeof r.score==='number' && r.max) addAttempt(r.score,r.max,true); };
+    var sb=document.getElementById('savebtn'); if(sb) sb.addEventListener('click',function(){ setTimeout(rec,0); });
+    [].forEach.call(document.querySelectorAll('.score-t input'),function(i){ i.addEventListener('change',function(){ setTimeout(rec,0); }); });
+  }
+
+  // multiple-choice quiz
+  var q0=document.querySelector('.quiz .q[data-a]'); if(!q0) return;
+  var quiz=q0.closest('.quiz');
+  var own=!!cfg.own, total=0, count=0, right=0, recs=[];
+  function qsAll(){ return [].filter.call(quiz.querySelectorAll('.q[data-a]'),function(q){ return !q.classList.contains('written'); }); }
+  function opts(q){ return [].filter.call(q.children,function(c){ return c.tagName==='BUTTON'; }); }
+  var score=document.getElementById('score');
+  if(!score){ score=document.createElement('div'); score.className='score'; score.id='score'; var l=qsAll(); l[l.length-1].parentNode.insertBefore(score,l[l.length-1].nextSibling); }
+  var rep=document.createElement('div'); rep.className='cfr'; rep.setAttribute('aria-live','polite'); score.parentNode.insertBefore(rep,score.nextSibling);
+  var hint=document.createElement('p'); hint.className='cfh';
+  hint.textContent='Before each answer, say how sure you are. At the end, the ones you were sure about but got wrong are listed first: they matter most.';
+  q0.parentNode.insertBefore(hint,qsAll()[0]);
+  function addConf(q){ var p=q.querySelector('.cf'); if(p) p.parentNode.removeChild(p);
+    var d=document.createElement('div'); d.className='cf'; d.setAttribute('role','group'); d.setAttribute('aria-label','How sure are you?');
+    d.innerHTML='<div class="cfl-h">How sure are you?</div><div class="cfb"><button type="button" data-c="guess" aria-pressed="false">Guessed</button><button type="button" data-c="unsure" aria-pressed="false">Unsure</button><button type="button" data-c="sure" aria-pressed="false">Sure</button></div>';
+    var first=opts(q)[0]; q.insertBefore(d,first||null); q.removeAttribute('data-conf'); }
+  function counters(qs){ qs.forEach(function(q,i){ var c=q.querySelector('.qn'); if(!c){ c=document.createElement('div'); c.className='qn'; q.insertBefore(c,q.firstChild); } c.textContent=(i+1)+' of '+qs.length; }); }
+  function start(){ var qs=qsAll(); total=qs.length; count=0; right=0; recs=[]; qs.forEach(addConf); counters(qs); rep.innerHTML=''; }
+  function msg(){ return 'Score: '+right+' / '+total+' answered '+count+(count===total?(right>=0.8*total?'. Good. Log the ones you missed.':'. Re-read the sections for the ones you missed, then log them.'):''); }
+  function qtext(q){ var p=q.querySelector('p'); var t=p?p.textContent:''; t=t.replace(/\s+/g,' ').trim();
+    var s=p&&p.querySelector('.subj'); if(s) t=t.slice(s.textContent.trim().length).trim();
+    t=t.replace(/^\d+\.\s*/,''); return t.length>110?t.slice(0,107)+'...':t; }
+  function esc(s){ var d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+  quiz.addEventListener('click',function(e){
+    var b=e.target.closest?e.target.closest('button'):null; if(!b) return;
+    var q=b.closest('.q'); if(!q || !quiz.contains(q) || !q.hasAttribute('data-a') || q.classList.contains('written')) return;
+    var cf=b.closest('.cf');
+    if(cf){ if(q.__ibRec) return; var c=b.getAttribute('data-c'); q.setAttribute('data-conf',c);
+      [].forEach.call(cf.querySelectorAll('button'),function(x){ var on=x===b; x.classList.toggle('on',on); x.setAttribute('aria-pressed',on?'true':'false'); }); return; }
+    if(b.parentNode!==q || q.__ibRec) return;
+    if(own){
+      if(q.classList.contains('done')) return;
+      var bs=opts(q), a=parseInt(q.getAttribute('data-a'),10), i=bs.indexOf(b);
+      q.classList.add('done');
+      if(i===a) b.classList.add('right'); else { b.classList.add('wrong'); if(bs[a]) bs[a].classList.add('right'); }
+    } else if(!q.classList.contains('done')) return;
+    q.__ibRec=true; var ok=b.classList.contains('right'); if(ok) right++; count++;
+    recs.push({q:q,ok:ok,conf:q.getAttribute('data-conf')||''});
+    [].forEach.call(q.querySelectorAll('.cf button'),function(x){ x.disabled=true; });
+    if(own) score.textContent=msg();
+    if(count===total) finish();
+  });
+  function finish(){
+    var r=right, t=total;
+    if(own){ try{ var prev=get(KEY); localStorage.setItem(KEY,JSON.stringify({right:r,total:t,date:new Date().toISOString().slice(0,10),best:Math.max(r,prev&&prev.best||0)})); }catch(e){} }
+    else { var s=get(KEY); if(s && typeof s.right==='number' && s.total) { r=s.right; t=s.total; } }
+    var a=addAttempt(r,t,false);
+    var order=qsAll(), num=function(q){ return order.indexOf(q)+1; };
+    var wrong=recs.filter(function(x){ return !x.ok; });
+    wrong.sort(function(x,y){ return (y.conf==='sure')-(x.conf==='sure') || num(x.q)-num(y.q); });
+    var lucky=recs.filter(function(x){ return x.ok && (x.conf==='guess'||x.conf==='unsure'); }).sort(function(x,y){ return num(x.q)-num(y.q); });
+    var lab={sure:'you were sure',unsure:'you were unsure',guess:'you guessed','':'not marked'};
+    var h='';
+    if(wrong.length){ h+='<b>Log these first</b><ol class="cfl">'+wrong.map(function(x){ return '<li'+(x.conf==='sure'?' class="sure"':'')+'>Question '+num(x.q)+' ('+lab[x.conf]+'): '+esc(qtext(x.q))+'</li>'; }).join('')+'</ol>'; }
+    if(lucky.length){ h+='<b>Right, but not sure</b>: read the explanation again for '+lucky.map(function(x){ return 'question '+num(x.q); }).join(', ')+'.'; }
+    if(!wrong.length && !lucky.length) h+='<b>All right.</b> Come back in a few days and try again: a score that lasts is what counts.';
+    var past=a.slice(0,-1).slice(-3).map(function(x){ return x.right+'/'+x.total+' on '+x.date; });
+    h+='<p class="cfa">Try number '+a.length+(past.length?'. Before: '+past.join(', ')+'.':'.')+'</p>';
+    h+='<button type="button" class="retry">Try again (shuffled)</button>';
+    rep.innerHTML=h;
+    rep.querySelector('.retry').addEventListener('click',retry);
+  }
+  function shuffled(arr){ var best=arr.slice();
+    for(var k=0;k<12;k++){ var x=arr.slice(); for(var i=x.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=x[i]; x[i]=x[j]; x[j]=t; }
+      best=x; if(arr.length<2 || x.some(function(v,i){ return v!==arr[i]; })) break; }
+    return best; }
+  function renumber(q,n){ var p=q.querySelector('p'); if(!p) return;
+    var w=document.createTreeWalker(p,4,null), tn;
+    while((tn=w.nextNode())){ if(tn.parentNode.closest && tn.parentNode.closest('.subj')) continue; if(!/\S/.test(tn.data)) continue;
+      if(/^\s*\d+\.\s/.test(tn.data)) tn.data=tn.data.replace(/^(\s*)\d+\./,'$1'+n+'.'); break; } }
+  function retry(){
+    var qs=qsAll(), marks=[], clones=[];
+    qs.forEach(function(q){
+      var m=document.createComment('q'); q.parentNode.insertBefore(m,q); marks.push(m);
+      var c=q.cloneNode(true); c.classList.remove('done'); c.removeAttribute('data-conf');
+      var p=c.querySelector('.cf'); if(p) p.parentNode.removeChild(p); p=c.querySelector('.qn'); if(p) p.parentNode.removeChild(p);
+      var bs=opts(c), a=parseInt(c.getAttribute('data-a'),10), good=bs[a];
+      bs.forEach(function(x){ x.classList.remove('right','wrong'); x.disabled=false; });
+      if(bs.length){ var after=bs[bs.length-1].nextSibling, nb=shuffled(bs);
+        bs.forEach(function(x){ c.removeChild(x); }); nb.forEach(function(x){ c.insertBefore(x,after); });
+        c.setAttribute('data-a',String(nb.indexOf(good))); }
+      q.parentNode.removeChild(q); clones.push(c);
+    });
+    var nq=shuffled(clones);
+    marks.forEach(function(m,i){ m.parentNode.insertBefore(nq[i],m); m.parentNode.removeChild(m); renumber(nq[i],i+1); });
+    own=true; start(); score.textContent='Score: 0 / '+total+' answered 0';
+    var top=quiz.getBoundingClientRect().top+window.pageYOffset-60; try{ window.scrollTo(0,Math.max(0,top)); }catch(e){}
+  }
+  start();
+}
+
+storageNotice();
+ibQuizEnhance({"key": "ib-quiz-guide-2026-11-20", "own": false});
+(function(){
+  if(window.__ibSite) return; window.__ibSite=1;
+  var PAGE='ib-'+((location.pathname.split('/').pop()||'index').replace(/\.html?$/,''));
+  var BK=PAGE+'-blocks';
+  function get(){ try{ var v=JSON.parse(localStorage.getItem(BK)||'null'); return v&&typeof v==='object'?v:{}; }catch(e){ return {}; } }
+  function put(v){ try{ localStorage.setItem(BK,JSON.stringify(v)); }catch(e){} }
+  // guide plan blocks "Block 1 · 25 min" + title -> numbered card with a time chip
+  [].forEach.call(document.querySelectorAll('.plan > div:not(.brk), .step'),function(d){
+    var bh=d.querySelector(':scope > .bh'); if(!bh || bh.querySelector('.bn')) return;
+    var b=bh.querySelector('b'); var m=b && /^\s*Block\s+(\d+[a-z]?)\s*[·.:-]\s*(.+?)\s*$/i.exec(b.textContent); if(!m) return;
+    var s=bh.querySelector('span'); var title=s?s.innerHTML:'';
+    d.classList.add('block'); d.setAttribute('data-n',m[1]);
+    bh.innerHTML='<span class="bn" aria-hidden="true">'+m[1]+'</span><b><span class="sr">Block '+m[1]+': </span>'+(title||('Block '+m[1]))+'</b><span class="bt">'+m[2]+'</span>';
+    // teaching sections linked from this block get a kicker "Block n · ..."
+    [].forEach.call(d.querySelectorAll('a[href^="#"]'),function(a){
+      var t=document.getElementById(a.getAttribute('href').slice(1)); if(!t) return;
+      var k=t.querySelector(':scope > .kicker'); if(!k || k.getAttribute('data-bk')) return;
+      k.setAttribute('data-bk',m[1]); k.insertAdjacentHTML('afterbegin','<span class="bk">Block '+m[1]+' · </span>');
+    });
+  });
+  // long hero intro paragraphs fold to 3 lines; tap to read them all
+  [].forEach.call(document.querySelectorAll('header.hero .wrap > p'),function(p){
+      if(p.textContent.length<160) return;
+      p.classList.add('fold'); if(p.scrollHeight<=p.clientHeight+2){ p.classList.remove('fold'); return; }
+      p.setAttribute('role','button'); p.setAttribute('tabindex','0'); p.setAttribute('aria-expanded','false');
+      function tog(e){ if(e && e.target && e.target.closest && e.target.closest('a,.term')) return; var o=p.classList.toggle('open'); p.setAttribute('aria-expanded',o?'true':'false'); }
+      p.addEventListener('click',tog); p.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); tog(); } });
+  });
+  // keep the Today card on the first screen: shrink the header picture (not below 18% of the screen height) if needed
+  (function(){ var art=document.querySelector('header.hero > svg, header.hero > img'), card=document.querySelector('.todaycard');
+    if(!art || !card) return; var vh=window.innerHeight, over=card.getBoundingClientRect().top+window.pageYOffset-(vh-70);
+    if(over>0){ var h=art.getBoundingClientRect().height; art.style.maxHeight=Math.max(0.18*vh,h-over)+'px'; } })();
+  // "Block done" ticks
+  var st=get();
+  [].forEach.call(document.querySelectorAll('.block'),function(d,i){
+    if(d.querySelector(':scope > .bdone')) return;
+    var n=d.getAttribute('data-n')||String(i+1);
+    var l=document.createElement('label'); l.className='bdone';
+    l.innerHTML='<input type="checkbox"> Block done';
+    var c=l.querySelector('input'); c.checked=!!st[n]; d.classList.toggle('is-done',c.checked);
+    c.addEventListener('change',function(){ var s=get(); if(c.checked) s[n]=new Date().toISOString().slice(0,10); else delete s[n]; put(s); d.classList.toggle('is-done',c.checked); chips(); });
+    d.appendChild(l);
+  });
+  function chips(){ var s=get(); [].forEach.call(document.querySelectorAll('.chip[data-n]'),function(a){ a.classList.toggle('done',!!s[a.getAttribute('data-n')]); }); }
+  chips();
+  // current section in the menu
+  var nav=document.querySelector('nav.toc .wrap'); if(!nav || !('IntersectionObserver' in window)) return;
+  var links={}, secs=[];
+  [].forEach.call(nav.querySelectorAll('a[href^="#"]'),function(a){ var el=document.getElementById(a.getAttribute('href').slice(1)); if(el){ links[el.id]=a; secs.push(el); } });
+  // the current section is the last one whose top has passed under the two bars; the observer (and a
+  // throttled scroll check, for long sections) only decides when to look again
+  function mark(){ var best=null; secs.forEach(function(el){ if(el.getBoundingClientRect().top<=120) best=el; });
+    Object.keys(links).forEach(function(id){ links[id].removeAttribute('aria-current'); });
+    if(best){ var a=links[best.id]; a.setAttribute('aria-current','location');
+      var l=a.offsetLeft-nav.offsetLeft, r=l+a.offsetWidth; if(l<nav.scrollLeft+8 || r>nav.scrollLeft+nav.clientWidth-8) nav.scrollLeft=Math.max(0,l-40); } }
+  secs.sort(function(a,b){ return (a.compareDocumentPosition(b)&2)?1:-1; });
+  var io=new IntersectionObserver(mark,{rootMargin:'-100px 0px -55% 0px'});
+  var tick=false; window.addEventListener('scroll',function(){ if(tick) return; tick=true; requestAnimationFrame(function(){ tick=false; mark(); }); },{passive:true});
+  secs.forEach(function(el){ io.observe(el); });
+})();
+</script><!--enhance:end-->
+</body>
+</html>

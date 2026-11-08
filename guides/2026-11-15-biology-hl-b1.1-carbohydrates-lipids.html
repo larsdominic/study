@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biology HL study guide: B1.1 Carbohydrates and lipids (Sun 15 Nov 2026)</title>
+<!--
+  CHECKED (8 Nov 2026) against the official IB Biology guide, first assessment 2025, published by the IB at
+  https://www.ibo.org/globalassets/new-structure/university-admission/pdfs/subject-guides/biology-guide.pdf
+  (read via the Exa fetch tool; WebFetch/curl return 403). B1.1 section quoted: titles B1.1.1 to B1.1.13 and their guidance,
+  "Note: There is no additional higher level content in B1.1." Assessment outline HL: Paper 1 2 h, 75 marks (1A 40, 1B 35),
+  36%; Paper 2 2 h 30 min, 80 marks (Section A 48, Section B 32), 44%; IA 24 marks, 20%. Command term definitions from the
+  guide's glossary. The guide does not mention a data booklet.
+  Also used: teacher Term 1 deck (Google Slides 1Cdkg3Tn3riqP_CQF1-yW3Er7AhgaN0ncpLhBf9ZikrQ, B1.1 topic slides 241, 281, 307,
+  345; its exam-format slide gives HL 1B 30 and Paper 2 70 marks, which differs from the guide), B1.1 HL topical pack +
+  mark scheme (SaveMyExams), B1.1 summary notes HL (Revision Village).
+  UNSURE / unverified:
+   1. Energy values 38 kJ/g (triglyceride) and 17 kJ/g (carbohydrate) are from the Revision Village summary notes, not the guide.
+   2. Melting points (stearic acid about 69 C, oleic acid about 13 C) are standard textbook values, recalled, not read in a
+      class file. Only used as an illustration.
+   3. ABO detail (group O = basic chain, A and B add different extra sugars) is general textbook knowledge; the guide only
+      says "Include ABO antigens as an example".
+  Mock overlap (checked question by question on 8 Nov): B1.1 HL pack Q1 = mock Q3, Q2(a-d) = mock Q4(a-d), Q3 = mock Q26,
+  Q4 = mock Q28, Q5 = mock Q32, Q6 = mock Q41. Q7(b) and Q10(d) ask almost the same as mock Q25. None of these is used.
+  Combined paper HL B1.1 items (Q2 elements, Q6 phospholipid diagram, Q9 amphipathic) are not reused in the quiz.
+-->
+<style>
+
+  :root{
+    --paper:#F5F7F4; --ink:#1E2A33; --ink-soft:#4A5862; --rule:#D6DCD8;
+    --indigo:#2F47A6; --indigo-soft:#E6EAF7; --amber:#B8761A; --amber-soft:#FBF1DF;
+    --green:#2E7D4F; --green-soft:#E3F2E8; --red:#B23A3A; --red-soft:#F8E4E4;
+    --card:#FFFFFF;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;overflow-wrap:break-word}
+  h1,h2,h3,h4{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;line-height:1.2;margin:0 0 .4em;font-weight:600}
+  h1{font-size:2.3rem}
+  h2{font-size:1.75rem;margin-top:0}
+  h3{font-size:1.25rem;margin-top:1.8em}
+  h4{font-size:1.05rem;margin-top:1.4em;font-family:inherit;font-weight:700}
+  p{margin:0 0 1em}
+  a{color:var(--indigo)}
+  code,.mono{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;font-size:.95em}
+  sup,sub{line-height:0}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
+
+  /* hero: part of a starch molecule and a triglyceride, which is the day's content */
+  .hero{background:#0B0F1A;color:#fff;padding:0 0 28px}
+  .banner{display:block;width:100%;height:auto;max-height:300px}
+  .hero .wrap{padding-top:18px;padding-bottom:0}
+  .hero h1{color:#fff}
+  .hero p{color:#C9D1E6;max-width:660px}
+  .hero .series{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:1.15rem;color:#F2C46D;margin:0 0 14px}
+  .meta{display:flex;flex-wrap:wrap;gap:8px 22px;color:#C9D1E6;font-size:.95rem;margin-top:8px}
+
+  nav.toc{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+  nav.toc .wrap{display:flex;gap:4px;flex-wrap:wrap;padding:8px 20px}
+  nav.toc a{text-decoration:none;color:var(--ink-soft);padding:6px 10px;border-radius:6px;font-size:.92rem}
+  nav.toc a:hover,nav.toc a:focus-visible{background:var(--indigo-soft);color:var(--indigo);outline:none}
+
+  .plan{display:grid;grid-template-columns:1fr;gap:12px;margin:22px 0 8px}
+  .plan > div{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);padding:12px 16px}
+  .plan .bh{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-bottom:4px}
+  .plan .bh b{font-size:1.2rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+  .plan .bh span{font-weight:700;color:var(--indigo)}
+  .plan ol{margin:6px 0 0;padding-left:22px}
+  .plan li{margin:4px 0}
+  .plan .t{color:var(--ink-soft);font-size:.88rem;white-space:nowrap}
+  .files{margin:16px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+  .files li a{display:inline-block;background:var(--card);border:1px solid var(--rule);padding:5px 10px;border-radius:999px;font-size:.9rem;text-decoration:none}
+  .files li a:hover{border-color:var(--indigo)}
+  .hl{display:inline-block;background:var(--indigo);color:#fff;font-size:.72rem;font-weight:700;padding:1px 6px;border-radius:3px;vertical-align:middle;margin-left:6px;font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif}
+  .note{background:var(--amber-soft);border:1px solid var(--amber);padding:10px 14px;margin:14px 0 0;font-size:.95rem}
+  section.topic ul{padding-left:22px}
+  section.topic li{margin:4px 0}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 20px;background:var(--card);border:1px solid var(--rule);padding:10px 14px;font-size:.92rem;margin:16px 0}
+
+  section.topic{margin-top:56px;padding-top:28px;border-top:3px solid var(--ink)}
+  .kicker{color:var(--indigo);font-weight:700;letter-spacing:.01em;margin-bottom:4px}
+  .guiding{font-style:italic;color:var(--ink-soft);margin-bottom:18px}
+
+  .ican{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:0 0 24px}
+  .ican p{margin:0 0 8px;font-weight:700}
+  .ican label{display:flex;gap:10px;align-items:flex-start;padding:5px 0;cursor:pointer}
+  .ican input{margin-top:6px;width:16px;height:16px;flex:none;accent-color:var(--indigo)}
+
+  /* formula booklet markers */
+  .fb,.learn{display:inline-block;font-size:.72rem;font-weight:700;padding:1px 7px;border-radius:3px;vertical-align:middle;margin-left:6px;white-space:nowrap;font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.01em}
+  .fb{background:var(--green);color:#fff}
+  .learn{background:var(--amber);color:#fff}
+
+  table{border-collapse:collapse;width:100%;margin:12px 0 20px;font-size:.95rem;background:var(--card)}
+  th,td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#EDF0EC}
+  td.c,th.c{text-align:center}
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+  figure{margin:20px 0;background:var(--card);border:1px solid var(--rule);padding:12px}
+  figure svg{display:block;width:100%;height:auto}
+  figcaption{font-size:.9rem;color:var(--ink-soft);margin-top:8px}
+  .keyrow{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.9rem;margin-top:6px}
+  .sw{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-2px;margin-right:6px}
+
+  .tip{background:var(--amber-soft);border-left:5px solid var(--amber);padding:12px 16px;margin:18px 0}
+  .tip b:first-child{color:var(--amber)}
+  .worked{background:var(--indigo-soft);border-left:5px solid var(--indigo);padding:12px 16px;margin:18px 0}
+  .worked > b:first-child{color:var(--indigo)}
+  .worked ol{margin:6px 0 0;padding-left:22px}
+  .worked li{margin:3px 0}
+  .formula{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:1.2rem;text-align:center;margin:12px 0;line-height:2}
+  .nw{white-space:nowrap}
+  .fbox{background:var(--card);border:1px solid var(--rule);padding:6px 14px;margin:14px 0}
+  .fbox .formula{margin:8px 0}
+
+
+
+  details{background:var(--card);border:1px solid var(--rule);padding:10px 14px;margin:10px 0}
+  summary{cursor:pointer;font-weight:600}
+  details[open] summary{margin-bottom:8px}
+
+  .quiz .q{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:12px 0}
+  .quiz .q > p{font-weight:600;margin-bottom:8px}
+  .quiz button{display:block;width:100%;text-align:left;background:#F3F5F2;border:1px solid var(--rule);padding:8px 12px;margin:6px 0;border-radius:6px;font:inherit;cursor:pointer;color:var(--ink)}
+  .quiz button:hover,.quiz button:focus-visible{border-color:var(--indigo);outline:none}
+  .quiz button.right{background:var(--green-soft);border-color:var(--green)}
+  .quiz button.wrong{background:var(--red-soft);border-color:var(--red)}
+  .quiz .why{display:none;margin-top:8px;font-size:.95rem;color:var(--ink-soft)}
+  .quiz .q.done .why{display:block}
+  .score{font-weight:700;margin-top:14px}
+
+  .end{margin-top:56px;background:var(--card);border:1px solid var(--rule);padding:18px 20px}
+  .end ul{margin:8px 0 0;padding-left:20px}
+  @media (max-width:600px){h1{font-size:1.8rem}body{font-size:16px}th,td{padding:6px}.formula{font-size:1.08rem}}
+  @media print{nav.toc{position:static}details{break-inside:avoid}.quiz button{border:1px solid #999}}
+  .goals{background:var(--card);border:2px solid var(--indigo);padding:14px 18px;margin:28px 0 12px}
+  .goals h2{font-size:1.3rem;margin:0 0 6px}
+  .goals ul{margin:0;padding-left:22px}
+  .today{background:var(--green-soft);border-left:5px solid var(--green);padding:12px 16px;margin:16px 0}
+  .checked{background:var(--green-soft);border:1px solid var(--green);padding:10px 14px;margin:14px 0 0;font-size:.95rem}
+  .skipnote{margin:10px 0 0}
+  .break{background:var(--paper);border:2px dashed var(--rule);padding:8px 14px;margin:0;text-align:center}
+  .stuck{background:var(--card);border:1px solid var(--amber);border-left:5px solid var(--amber);padding:10px 14px;margin:16px 0}
+  .finish{background:#F1F7F1;border-left:5px solid var(--green);padding:12px 16px;margin:18px 0}
+  .finish > b:first-child{color:var(--green)}
+  .finish details,.worked details{margin:8px 0 0}
+  .figs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0 4px}
+  .figs figure{margin:0}
+  @media (max-width:600px){.figs{grid-template-columns:1fr}}
+  .cap{font-size:.95rem;color:var(--ink-soft)}
+  details.check ol{margin:4px 0 8px;padding-left:22px}
+  details.extra{margin-top:16px}
+  .quiz .written{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--green);padding:14px 16px;margin:12px 0}
+  .quiz .written > p{margin-bottom:8px}
+  .quiz .written ul{padding-left:22px}
+
+
+/*terms:start*/
+.term{border-bottom:2px dotted var(--indigo);cursor:pointer;border-radius:2px}
+.term:focus-visible{background:var(--indigo-soft)}
+@media (hover:hover){.term:hover{background:var(--indigo-soft)}}
+#termbox{display:none;position:fixed;left:10px;right:10px;bottom:10px;max-width:640px;margin:0 auto;background:var(--card);border:2px solid var(--indigo);border-radius:8px;padding:14px 16px 12px;box-shadow:0 8px 28px rgba(0,0,0,.22);z-index:60;max-height:60vh;overflow:auto}
+#termbox.on{display:block}
+#termbox .tb-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+#termbox .tb-h b{font-size:1.1rem;color:var(--indigo)}
+#termbox button{font:inherit;border:1px solid var(--rule);background:var(--paper);border-radius:8px;padding:4px 12px;cursor:pointer;flex:none;min-height:44px;min-width:44px}
+#termbox .tb-d{margin:8px 0 0;line-height:1.5}
+.before.block0{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:12px 16px;margin:12px 0}
+.before > details{background:transparent;border:0;padding:0;margin:0}
+.before > details > summary{display:grid;grid-template-columns:32px minmax(0,1fr) auto auto;align-items:center;gap:4px 10px;min-height:44px;list-style:none;cursor:pointer}
+.before > details > summary::-webkit-details-marker{display:none}
+.before > details > summary::after{content:"Hide";font-size:.85rem;font-weight:600;color:var(--indigo)}
+.before > details:not([open]) > summary::after{content:"Show"}
+.before .bn{flex:none;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--indigo);color:#fff;font-weight:700}
+.before .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.before .b0t{font-size:1.15rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-weight:600;color:var(--ink)}
+.before .bt{white-space:nowrap;font-size:.8rem;font-weight:700;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:4px;padding:2px 8px}
+.before .bgi{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);border-radius:8px;padding:12px 16px;margin:12px 0}
+.before .bgi h3{margin:0 0 6px;font-size:1.08rem}
+.before .bgi p{margin:6px 0}
+.before .bgi svg{max-width:100%;height:auto;display:block;margin:8px auto}
+.before .more{font-size:.95rem;color:var(--ink-soft)}
+.before .stuck{background:var(--amber-soft);border-radius:8px;padding:10px 14px}
+/*terms:end*/
+</style>
+<!--enhance:start--><meta name="color-scheme" content="light"><style>
+.warmup{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--amber);padding:12px 16px 4px;margin:24px 0}
+.warmup h2{margin:0 0 6px;font-size:1.3rem}
+.warmup .wu-how{font-size:.95rem;color:var(--ink-soft);margin:0 0 8px}
+.warmup ol{margin:0;padding-left:24px}
+.warmup li{margin:10px 0}
+.warmup .wu-m{font-size:.8rem;color:var(--ink-soft)}
+.warmup .wu-f{font-weight:600}
+.warmup details{margin-top:4px}
+.warmup summary{cursor:pointer;color:var(--indigo);font-size:.92rem}
+.warmup .wu-b{border-top:1px solid var(--rule);margin-top:6px;padding-top:6px}
+.warmup .wu-b a{font-size:.88rem;margin-left:6px;white-space:nowrap}
+.warmup .wu-foot{font-size:.92rem;margin:12px 0 8px}
+
+:root{--amber-ink:#8A6416}
+:focus-visible{outline:3px solid var(--indigo);outline-offset:2px}
+.quiz button:focus-visible,.quiz .q .cf button:focus-visible{outline:3px solid var(--indigo);outline-offset:2px}
+@media (hover:none){.quiz button:not(.right):not(.wrong):hover{border-color:var(--rule)}}
+.quiz button.right::before{content:"✓ Correct: ";font-weight:700;color:var(--green)}
+.quiz button.wrong::before{content:"✗ Your answer: ";font-weight:700;color:var(--red)}
+.quiz .q .qn{font-size:.8rem;font-weight:700;color:var(--ink-soft);margin-bottom:2px}
+.quiz .q .cf{margin:4px 0 10px}
+.quiz .q .cf .cfl-h{font-size:.88rem;font-weight:600;color:var(--ink-soft);margin-bottom:4px}
+.quiz .q .cf .cfb{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;max-width:420px}
+.quiz .q .cf button{display:block;width:100%;min-height:44px;margin:0;padding:6px 8px;text-align:center;font-size:.92rem;border:1px solid var(--rule);border-radius:8px;background:var(--card);color:var(--ink)}
+.quiz .q .cf button.on{background:var(--indigo-soft);border:2px solid var(--indigo);font-weight:700}
+.quiz .q .cf button:disabled{cursor:default;opacity:1;color:var(--ink-soft)}
+.quiz .q .cf button.on:disabled{color:var(--ink)}
+.quiz .cfh{font-size:.92rem;color:var(--ink-soft)}
+.quiz .cfr{margin-top:10px}
+.quiz .cfr ol{margin:6px 0 10px;padding-left:22px}
+.quiz .cfr li{margin:4px 0}
+.quiz .cfr li.sure{font-weight:600}
+.quiz .cfr .cfa{font-size:.9rem;color:var(--ink-soft);margin:8px 0}
+.quiz .cfr button.retry{display:inline-block;width:auto;min-height:44px;text-align:center;background:var(--indigo);color:#fff;border-color:var(--indigo);font-weight:700;padding:8px 16px}
+.wm{margin-top:8px;font-size:.92rem}
+.wm select{font:inherit;min-height:44px;padding:4px 6px;border:1px solid var(--rule);border-radius:8px;background:var(--card);color:var(--ink);max-width:100%}
+.notice{background:var(--amber-soft);border:1px solid var(--amber);color:var(--ink);padding:10px 14px;margin:12px 0;border-radius:8px;font-weight:600}
+
+:root{--amber-ink:#8A6416;--grey:#5F6B72;--purple:#6A3D9A;--green-ink:#256B43;--r-sm:4px;--r:8px}
+/* top bar: back to today, flashcards, progress, sheet */
+.sitebar{position:sticky;top:0;z-index:30;height:44px;background:var(--paper);box-shadow:0 1px 0 var(--rule)}
+.sitebar .sb{max-width:820px;height:44px;margin:0 auto;padding:0 10px;display:flex;align-items:stretch;gap:2px;overflow-x:auto;scrollbar-width:none;white-space:nowrap}
+.sitebar .sb::-webkit-scrollbar{display:none}
+.sitebar a{flex:none;display:flex;align-items:center;min-height:44px;padding:0 10px;color:var(--indigo);text-decoration:none;font:600 .95rem/1 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;border-radius:var(--r-sm)}
+.sitebar a.sb-home{font-weight:700}
+@media (hover:hover){.sitebar a:hover{background:var(--indigo-soft)}}
+/* guide section menu: one row that scrolls sideways, 44 px targets, current section marked */
+nav.toc{top:44px;z-index:29}
+nav.toc .wrap{display:flex;flex-wrap:nowrap;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;white-space:nowrap;padding:0 10px}
+nav.toc .wrap::-webkit-scrollbar{display:none}
+nav.toc a{flex:none;display:flex;align-items:center;min-height:44px;padding:12px 10px;line-height:1.2;border-radius:0}
+nav.toc a[href$="index.html"]{display:none}
+nav.toc a[aria-current]{color:var(--indigo);font-weight:700;background:var(--indigo-soft);box-shadow:inset 0 -3px 0 var(--indigo)}
+[id]{scroll-margin-top:56px}
+html:has(nav.toc) [id]{scroll-margin-top:100px}
+/* focus: always visible */
+:focus-visible{outline:3px solid var(--indigo)!important;outline-offset:2px!important}
+header.hero :focus-visible,header.top :focus-visible{outline-color:#F2C46D!important}
+/* readable text */
+main p,main li,.why{max-width:68ch}
+@media (max-width:600px){.wrap{padding-left:16px;padding-right:16px}}
+small{font-size:max(12px,.8em)}
+.sig small{font-size:max(12px,.62em)}
+/* hero: title first, then the picture (at most 30% of the screen height, as wide as the text column),
+   so the title and the Today card share the first screen; long intro paragraphs fold to 3 lines (tap to read) */
+header.hero{display:flex;flex-direction:column}
+header.hero > .wrap{order:-1;width:100%}
+header.hero > svg,header.hero > img{max-height:30vh;max-width:780px;margin:14px auto 0}
+header.hero p.fold{position:relative;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;cursor:pointer}
+header.hero p.fold::after{content:"more";position:absolute;right:0;bottom:0;padding:0 2px 0 28px;background:linear-gradient(90deg,rgba(11,15,26,0),#0B0F1A 22px);color:#F2C46D;font-weight:700}
+header.hero .wrap > p ~ p.fold{-webkit-line-clamp:2}
+header.hero p.fold.open{display:block;-webkit-line-clamp:unset}
+header.hero p.fold.open::after{content:none}
+@media (max-width:600px){header.hero > svg,header.hero > img{max-height:28vh} header.hero .meta{font-size:.85rem;gap:0 14px}}
+/* contrast: amber and grey text */
+body .tip b:first-child,body .src > b:first-child,body .star,body .col.l > h3,body .timer.low .tdisp{color:var(--amber-ink)}
+/* one badge system: Learn = solid amber; Given / in booklet = neutral outline; Apply = indigo outline; HL = purple outline; green = done */
+.badge,.fb,.learn,.tag,span.hl,.quiz .subj,.written .wsubj,.wsubj,.pill,.soon{display:inline-block;font:700 .8rem/1.4 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.01em;padding:1px 7px;border:1px solid currentColor;border-radius:var(--r-sm);background:var(--card);vertical-align:middle;white-space:nowrap}
+.learn,.badge.learn{background:var(--amber-ink);border-color:var(--amber-ink);color:#fff}
+.fb,.badge.apply{color:var(--indigo);border-color:var(--indigo)}
+.fb.given,.badge.given,.tag,.quiz .subj,.written .wsubj,.wsubj,.badge.subj{color:var(--ink);border-color:var(--grey)}
+span.hl,.badge.hl{color:var(--purple);border-color:var(--purple)}
+.pill{margin-left:6px}
+.p-done,.badge.done{color:var(--green-ink);border-color:var(--green);background:var(--green-soft)}
+.p-soon,.soon{color:var(--grey);border-color:var(--grey)}
+/* radii: 4 px small things, 8 px boxes */
+.today,.goals,.able,.todaycard,#termbox,.before .bgi,.before .stuck,.quiz button,.go,.notice,.btn,.timer button,.tl,.chip,.plan > div,.step,.block{border-radius:var(--r)}
+/* 44 px targets */
+.go{min-height:44px;display:inline-flex;align-items:center}
+main details>summary{min-height:44px;display:flex;align-items:center;cursor:pointer}
+ul.files a,.files li>a{display:inline-flex;align-items:center;min-height:44px}
+input[type=number],input[type=text],select{min-height:44px}
+#box a#src,a.src{display:inline-flex;align-items:center;min-height:44px}
+#termbox .tb-h button{min-height:44px;min-width:44px}
+.top .crumb{display:flex;flex-wrap:nowrap;align-items:center;gap:0 6px;overflow-x:auto;scrollbar-width:none;white-space:nowrap;margin-bottom:2px}
+.top .crumb::-webkit-scrollbar{display:none}
+.top .crumb a{flex:none;display:inline-flex;align-items:center;min-height:44px;padding-right:4px}
+/* timed blocks: one card for guide plans, review steps and mock plans */
+.plan > div,.block,.step{background:var(--card);border:1px solid var(--rule);padding:12px 16px}
+.plan > div.brk{background:var(--green-soft);border-color:var(--green)}
+.bh{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;margin-bottom:4px}
+.block > .bh{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:4px 10px;align-items:center}
+.plan .bh .bn,.step .bh .bn,.bh .bn{flex:none;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--indigo);color:#fff;font:700 1rem/1 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif}
+.plan .bh > b,.step .bh > b,.bh > b{font-size:1.15rem;line-height:1.25;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;color:var(--ink)}
+.plan .bh .bt,.step .bh .bt,.bh .bt{flex:none;display:inline-block;font:700 .8rem/1.4 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:var(--r-sm);padding:2px 8px}
+.bdone{display:flex;align-items:center;gap:10px;min-height:44px;margin:8px 0 0;padding-top:4px;border-top:1px solid var(--rule);font-weight:600;color:var(--ink-soft);cursor:pointer;max-width:none}
+.bdone input{width:20px;height:20px;margin:0;flex:none;accent-color:var(--green)}
+.block.is-done{border-color:var(--green)} .block.is-done .bn{background:var(--green)} .block.is-done .bdone{color:var(--green-ink)}
+.blocks{display:grid;gap:10px;margin:16px 0}
+.blocks > .block p{margin:4px 0 0}
+.brkc{background:var(--green-soft);border:1px solid var(--green);border-radius:var(--r);padding:8px 16px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* Today card on guides: goals, plan chips, warm-up */
+.todaycard{background:var(--card);border:2px solid var(--indigo);padding:14px 16px 6px;margin:20px 0 10px}
+.todaycard .tc-goals > *{background:transparent!important;border:0!important;padding:0!important;margin:0!important;box-shadow:none!important;border-radius:0!important}
+.todaycard .tc-goals h2,.todaycard .tc-goals h3,.todaycard .tc-goals > * > p:first-child,.todaycard .tc-goals > * > b:first-child{display:block;font:600 1.25rem/1.25 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;color:var(--ink);margin:0 0 6px}
+.todaycard .tc-goals ol,.todaycard .tc-goals ul{margin:0;padding-left:22px}
+.todaycard .tc-goals li{margin:3px 0}
+.todaycard .tc-plan{margin:0 0 12px;padding-bottom:12px;border-bottom:1px solid var(--rule)}
+@media (max-width:600px){.todaycard .chips{display:grid;grid-template-columns:1fr 1fr;gap:6px}.todaycard .chip{padding:4px 10px;font-size:.9rem}.todaycard .chip.c0{grid-column:1 / -1}}
+.todaycard .tc-h{font-weight:700;margin:0 0 6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:4px;min-height:44px;padding:4px 12px;border:1px solid var(--indigo);background:var(--card);color:var(--indigo);text-decoration:none;font-size:.95rem;line-height:1.2}
+.chip b{font-weight:700}
+.chip.done{border-color:var(--green);color:var(--green-ink);background:var(--green-soft)}
+.chip.done::before{content:"\2713";font-weight:700}
+.todaycard .warmup{border:0;border-top:1px solid var(--rule);border-radius:0;padding:12px 0 4px;margin:12px 0 0;background:transparent}
+.todaycard .tc-plan + .warmup{border-top:0;margin-top:0;padding-top:0}
+.todaycard .warmup h2{font-size:1.15rem}
+.sitebar + .notice{margin:8px max(16px,calc((100% - 780px) / 2))}
+@media print{.sitebar,.notice,#termbox,.go,.chips,.bdone{display:none!important}nav.toc{position:static}.quiz button{display:list-item}.todaycard{border-width:1px}}
+</style><!--enhance:end-->
+</head>
+<body><!--enhance:start--><nav class="sitebar" aria-label="Study site"><div class="sb"><a class="sb-home" href="../index.html#today">← Today</a><a href="../flashcards.html">Flashcards</a><a href="../progress.html">Progress</a><a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">Sheet</a></div></nav><!--enhance:end-->
+
+
+<header class="hero">
+<svg class="banner" viewBox="0 0 1000 330" role="img" aria-label="Left: part of a starch molecule, a chain of alpha glucose rings joined by glycosidic bonds with one side branch. Right: a triglyceride, glycerol joined to three fatty acid tails, one of them kinked by a double bond." font-family="Arial,Helvetica,sans-serif">
+<rect width="1000" height="330" fill="#0B0F1A"/>
+<line x1="100" y1="190" x2="112" y2="190" stroke="#F2C46D" stroke-width="5"/>
+<line x1="172" y1="190" x2="184" y2="190" stroke="#F2C46D" stroke-width="5"/>
+<line x1="244" y1="190" x2="256" y2="190" stroke="#F2C46D" stroke-width="5"/>
+<line x1="316" y1="190" x2="328" y2="190" stroke="#F2C46D" stroke-width="5"/>
+<line x1="388" y1="190" x2="400" y2="190" stroke="#F2C46D" stroke-width="5"/>
+<polygon points="70,158 97.7,174 97.7,206 70,222 42.3,206 42.3,174" fill="#6F8EF0" stroke="#C9D1E6" stroke-width="2"/>
+<polygon points="142,158 169.7,174 169.7,206 142,222 114.3,206 114.3,174" fill="#6F8EF0" stroke="#C9D1E6" stroke-width="2"/>
+<polygon points="214,158 241.7,174 241.7,206 214,222 186.3,206 186.3,174" fill="#6F8EF0" stroke="#C9D1E6" stroke-width="2"/>
+<polygon points="286,158 313.7,174 313.7,206 286,222 258.3,206 258.3,174" fill="#6F8EF0" stroke="#C9D1E6" stroke-width="2"/>
+<polygon points="358,158 385.7,174 385.7,206 358,222 330.3,206 330.3,174" fill="#6F8EF0" stroke="#C9D1E6" stroke-width="2"/>
+<polygon points="430,158 457.7,174 457.7,206 430,222 402.3,206 402.3,174" fill="#6F8EF0" stroke="#C9D1E6" stroke-width="2"/>
+<line x1="214" y1="158" x2="250" y2="108" stroke="#F2C46D" stroke-width="5"/>
+<polygon points="266,60 293.7,76 293.7,108 266,124 238.3,108 238.3,76" fill="#6F8EF0" stroke="#C9D1E6" stroke-width="2"/>
+<line x1="296" y1="92" x2="308" y2="92" stroke="#F2C46D" stroke-width="5"/>
+<polygon points="338,60 365.7,76 365.7,108 338,124 310.3,108 310.3,76" fill="#6F8EF0" stroke="#C9D1E6" stroke-width="2"/>
+<line x1="368" y1="92" x2="380" y2="92" stroke="#F2C46D" stroke-width="5"/>
+<polygon points="410,60 437.7,76 437.7,108 410,124 382.3,108 382.3,76" fill="#6F8EF0" stroke="#C9D1E6" stroke-width="2"/>
+<text x="70" y="270" font-size="32" fill="#C9D1E6">α-glucose</text>
+<text x="300" y="270" font-size="32" fill="#F2C46D">glycosidic bonds</text>
+<rect x="620" y="70" width="60" height="190" rx="8" fill="#E39A5E"/>
+<line x1="680" y1="100" x2="720" y2="100" stroke="#E5534B" stroke-width="6"/>
+<polyline points="720,100 746,108 772,100 798,108 824,100 847,95.8 869.9,75.6 892.9,71.4 915.8,51.2 938.8,47" fill="none" stroke="#9FD8DB" stroke-width="5" stroke-linejoin="round"/>
+<line x1="680" y1="165" x2="720" y2="165" stroke="#E5534B" stroke-width="6"/>
+<polyline points="720,165 746,173 772,165 798,173 824,165 850,173 876,165 902,173 928,165 954,173" fill="none" stroke="#9FD8DB" stroke-width="5" stroke-linejoin="round"/>
+<line x1="680" y1="230" x2="720" y2="230" stroke="#E5534B" stroke-width="6"/>
+<polyline points="720,230 746,238 772,230 798,238 824,230 850,238 876,230 902,238 928,230 954,238" fill="none" stroke="#9FD8DB" stroke-width="5" stroke-linejoin="round"/>
+<text x="620" y="300" font-size="32" fill="#C9D1E6">glycerol</text>
+<text x="770" y="300" font-size="32" fill="#9FD8DB">fatty acids</text>
+</svg>
+  <div class="wrap">
+    <p class="series">Left: part of a starch molecule. Right: a triglyceride.</p>
+    <h1>Biology HL: carbohydrates and lipids</h1>
+    <p>Study guide for Sunday 15 November 2026 (B1.1). The picture shows the two families of today: sugars joined into long chains, and fats built from glycerol and fatty acids. One bent fatty acid tail hints at the idea that decides whether a fat is solid or liquid.</p>
+    <div class="meta"><span>2 hours of Biology</span><span>B1.1, SL and HL (no HL-only part)</span><span>Source: your teacher's Term 1 slides, the B1.1 summary notes and the B1.1 HL pack</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <a href="../index.html" style="font-weight:700;color:var(--indigo)">All days</a><a href="#plan">Plan</a><a href="#b11a">Carbon and sugars</a><a href="#b11b">Polysaccharides</a><a href="#b11c">Lipids</a><a href="#b11d">Fat stores and membranes</a><a href="#quiz">Quiz</a><a href="#end">Finish</a>
+  </div>
+</nav>
+
+<main class="wrap"><!--enhance:start-->
+<section class="todaycard" aria-label="Today"><div class="tc-plan"><p class="tc-h">Today: tap a block to jump to it</p><div class="chips"><a class="chip c0" href="#before"><b>Block 0</b> · Before you start</a><a class="chip" href="#wu"><b>Warm-up</b> · 8 min</a><a class="chip" href="#b1" data-n="1"><b>Block 1</b> · 30 min</a><a class="chip" href="#b2" data-n="2"><b>Block 2</b> · 30 min</a><a class="chip" href="#b3" data-n="3"><b>Block 3</b> · 25 min</a><a class="chip" href="#b4" data-n="4"><b>Block 4</b> · 32 min</a></div></div><div class="tc-goals"><!--enhance:end--><!--enhance:moved--><div class="goals" id="goals">
+  <h2>Today you will be able to</h2>
+  <ul>
+    <li>join and split sugars and <span class="term" data-t="lipid" tabindex="0" role="button">lipids</span> by <span class="term" data-t="condensation reaction" tabindex="0" role="button">condensation</span> and <span class="term" data-t="hydrolysis" tabindex="0" role="button">hydrolysis</span>, and work out the formula of the product;</li>
+    <li><span class="term" data-t="draw" tabindex="0" role="button">draw</span> α-glucose and β-glucose and <span class="term" data-t="explain" tabindex="0" role="button">explain</span> how starch, glycogen and cellulose suit their jobs;</li>
+    <li><span class="term" data-t="describe" tabindex="0" role="button">describe</span> <span class="term" data-t="triglyceride" tabindex="0" role="button">triglycerides</span>, <span class="term" data-t="phospholipid" tabindex="0" role="button">phospholipids</span> and <span class="term" data-t="steroid" tabindex="0" role="button">steroids</span>, and explain fat stores, the <span class="term" data-t="bilayer" tabindex="0" role="button">bilayer</span> and why steroids pass through it.</li>
+  </ul>
+</div><!--enhance:/moved--><!--enhance:start--></div>
+<section class="warmup" id="wu" aria-label="Warm-up from earlier days">
+<h2>Warm-up from earlier days (8 min)</h2>
+<p class="wu-how">Answer from memory before you read on: write the answer on paper, then tap to check it.</p><ol>
+<li><div class="wu-m">Psychology · COG 7 · from Sat 14 Nov</div><div class="wu-f">Positive vs negative (operant)</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">Positive = something is added; negative = something is taken away. Reinforcement increases behaviour; punishment decreases it. <a href="../guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#operant">open the section</a></div></details></li>
+<li><div class="wu-m">Psychology · COG 2 · from Sat 14 Nov</div><div class="wu-f">Pavlov: the five terms</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">UCS food; UCR salivating at food; NS metronome before pairing; CS metronome after pairing; CR salivating at the metronome alone. <a href="../guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#classical">open the section</a></div></details></li>
+<li><div class="wu-m">Psychology · Frame · from Mon 9 Nov</div><div class="wu-f">The four content areas</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">Biological, cognitive and sociocultural approaches, plus research methodology. <a href="../guides/2026-11-09-psychology-hl-frame-research-methods.html#frame">open the section</a></div></details></li>
+<li><div class="wu-m">English · Cartoons · from Fri 13 Nov</div><div class="wu-f">Juxtaposition vs analogy</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">Juxtaposition: two contrasting things side by side. Analogy: the issue shown as a different, familiar situation. <a href="../guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html#visual">open the section</a></div></details></li>
+<li><div class="wu-m">Psychology · COG 2 · from Sat 14 Nov</div><div class="wu-f">Extinction and spontaneous recovery</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">Extinction: the CS keeps coming without the UCS, so the CR fades. Spontaneous recovery: after a rest the CR returns, usually weaker. <a href="../guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#classical">open the section</a></div></details></li>
+</ol>
+<p class="wu-foot">Missed one? Put it in the <a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">Error log</a>.</p></section>
+</section><!--enhance:end-->
+
+
+<!--enhance:origin-->
+<div id="warmup"></div>
+
+<div class="today">
+  <b>Today also (Sunday 15 November):</b> 1 hour for the <a href="../review/2026-11-08-week-1.html">week 1 review</a> (Error log top 3, mixed quiz, flashcards) and 1 hour to plan next week and log your CAS. This page is the 2 hours of Biology. Do the review first if you can: it warms up your memory.
+</div>
+
+
+<section id="plan">
+  <h2 style="margin-top:28px">How to spend the two hours</h2>  <p class="checked"><b>Checked against</b> the official <a href="https://www.ibo.org/globalassets/new-structure/university-admission/pdfs/subject-guides/biology-guide.pdf">IB Biology guide</a> (first assessment 2025, published by the IB on ibo.org) and your class files. Each "I can" box starts with the guide's own statement title in bold. B1.1 is the same for SL and HL: the guide says there is no extra HL content in B1.1.</p>
+  <p style="margin:10px 0 0">Four blocks and a short break. Do them in order and tick each step off on paper. You need the <a href="https://drive.google.com/file/d/16BAwh43g-yPtpnlj6EFXTgi89E5Y7KeT/view">B1.1 HL pack</a> (questions) and its <a href="https://drive.google.com/file/d/1ZSJTC85Bs07He9mWFmCMACGV01loodJl/view">mark scheme</a>. Pack work is timed at about 1.5 minutes a mark.</p>
+  <p class="skipnote"><b>Short on time: skip ★ steps, still do the quiz.</b></p>
+  <div class="plan"><!--terms:start--><div id="before" class="before block0"><details open>
+  <summary><span class="bn" aria-hidden="true">0</span><span class="b0t"><span class="sr">Block 0: </span>Before you start</span><span class="bt">about 8 min</span></summary>
+  <p style="margin:10px 0 0">This page builds on the ideas below. Read them first so you do not have to stop later (about 8 min, not counted in the blocks below). Words with a <span style="border-bottom:2px dotted var(--indigo)">dotted underline</span> anywhere on the page: tap them for a short explanation.</p>
+  <div class="bgi"><h3>Atoms, electrons and covalent bonds</h3><p>Everything is made of tiny <b>atoms</b>. Each atom has a small centre with <b><span class="term" data-t="electron" tabindex="0" role="button">electrons</span></b> (tiny negative particles) around it. The electrons in the outermost layer, the <b><span class="term" data-t="outer shell" tabindex="0" role="button">outer shell</span></b>, take part in bonding.</p><p>In a <b><span class="term" data-t="covalent bond" tabindex="0" role="button">covalent bond</span></b> two atoms <i>share</i> a pair of electrons. It is strong. A <b>single bond</b> (C-C) shares one pair; a <b>double bond</b> (C=C) shares two pairs.</p><p>Each kind of atom makes a fixed number of covalent bonds: hydrogen 1, oxygen 2, nitrogen 3, <b>carbon 4</b>. A double bond counts as two of them.</p></div><div class="bgi"><h3>Reading a formula and counting atoms</h3><p>A formula lists the atoms in one molecule. The small low number after a symbol counts that atom: C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> (glucose) has 6 carbon, 12 hydrogen and 6 oxygen atoms. H<sub>2</sub>O (water) has 2 hydrogen and 1 oxygen.</p><p>Groups of atoms have short names: -OH is an oxygen joined to a hydrogen (a hydroxyl group); -COOH is an acid group; CH<sub>2</sub>OH is a carbon with two hydrogens and an -OH.</p><p>In ring diagrams, the corners of the ring are atoms (usually carbon), and the lines are covalent bonds.</p></div><div class="bgi"><h3>Polar, non-polar and dissolving (from A1.1)</h3><p>In some bonds the electrons are shared unevenly, so one end is slightly negative and the other slightly positive: the bond is <b><span class="term" data-t="polar" tabindex="0" role="button">polar</span></b>. <span class="term" data-t="-oh group" tabindex="0" role="button">-OH groups</span> are polar. Bonds between carbon and hydrogen are shared evenly: <b><span class="term" data-t="non-polar" tabindex="0" role="button">non-polar</span></b>.</p><p>A <b><span class="term" data-t="hydrogen bond" tabindex="0" role="button">hydrogen bond</span></b> is a weak attraction between a slightly positive H and a slightly negative O (or N) nearby.</p><p>"Like dissolves like": water is polar, so it dissolves polar things (sugars, with many -OH groups) but not non-polar ones (oils, which are mostly C and H).</p></div><div class="bgi"><h3>Cells, membranes and osmosis</h3><p>Every cell is surrounded by a thin <b><span class="term" data-t="membrane" tabindex="0" role="button">membrane</span></b> that controls what goes in and out. Plant cells also have a stiff <b><span class="term" data-t="cell wall" tabindex="0" role="button">cell wall</span></b> outside the membrane.</p><p><b><span class="term" data-t="osmosis" tabindex="0" role="button">Osmosis</span></b> is water moving across a membrane towards the side with more dissolved substances. So if a cell fills up with dissolved sugar, water rushes in and the cell swells (an animal cell can burst). Big molecules that do not dissolve do not cause this.</p></div><div class="bgi"><h3>Energy from food: respiration</h3><p>Cells release energy from food in <b><span class="term" data-t="respiration" tabindex="0" role="button">respiration</span></b>: glucose (or fat) is broken down with oxygen, giving carbon dioxide and water. Energy is measured in joules (J); 1 <span class="term" data-t="kj" tabindex="0" role="button">kJ</span> = 1&nbsp;000 J. "<span class="term" data-t="oxidised" tabindex="0" role="button">Oxidised</span>" here means broken down with oxygen in respiration.</p><p>Building big molecules needs energy; cells get it from a small molecule called <span class="term" data-t="atp" tabindex="0" role="button">ATP</span>, made in respiration.</p></div><div class="bgi"><h3>Percentage change</h3><p>Percentage change = (new value − starting value) ÷ starting value × 100.</p><p>Example: 50 grows to 60. Change 10; 10 ÷ 50 = 0.2; × 100 = a 20% increase. Always divide by the value you started with (usually the earlier one).</p></div><div class="bgi"><h3>Command terms: what the question wants</h3><p>IB questions start with a <b>command term</b> that tells you how much to write. The ones today (definitions from the IB Biology guide, shortened):</p><ul><li><b>State, list, <span class="term" data-t="identify" tabindex="0" role="button">identify</span></b>: a short answer, no reasons.</li><li><b><span class="term" data-t="outline" tabindex="0" role="button">Outline</span></b>: a brief account; <b>describe</b>: a detailed account.</li><li><b>Explain</b>: give reasons or causes: link each feature to its effect with "SO" or "because".</li><li><b><span class="term" data-t="distinguish" tabindex="0" role="button">Distinguish</span></b>: make the differences clear.</li><li><b><span class="term" data-t="deduce" tabindex="0" role="button">Deduce</span></b>: reach a conclusion from the information given; <b><span class="term" data-t="calculate" tabindex="0" role="button">calculate</span></b>: a number with working shown.</li></ul></div>
+  <p class="stuck"><b>Still stuck on a word?</b> Do not search for long. Write it in the <b>Error log</b> tab of the study sheet starting with "word:" (for example "word: composition") and carry on. It will be explained in the next guide.</p>
+</details></div><!--terms:end-->
+
+    <div id="b1">
+      <div class="bh"><b>Block 1 · 30 min</b><span>Carbon, building and breaking, simple sugars (B1.1.1 to B1.1.4)</span></div>
+      <ol>
+        <li>Read <a href="#b11a">Carbon and sugars</a> below, with the two figures. <span class="t">(9 min)</span></li>
+        <li>Cover the steps of the two worked examples and try them, then do both "Finish it" boxes on paper. <span class="t">(4 min)</span></li>
+        <li><a href="#check-a">Self-check A</a>: write two key words for each question, then open it. <span class="t">(2 min)</span></li>
+        <li>B1.1 HL pack: <b>questions 7(c), 15(c) and 10(a)</b> (5 marks) on paper. <span class="t">(8 min)</span></li>
+        <li>Mark with the mark scheme. Each [1 mark] line is one marking point. For 10(a) the name must be specific: plain "glucose" does not get the naming mark. Log each lost mark in the Error log with its type (see <a href="#end">Finish</a>). <span class="t">(4 min)</span></li>
+        <li>★ If time: <b>questions 9 and 15(d)</b> (3 marks), then mark them. <span class="t">(3 min)</span></li>
+      </ol>
+    </div>
+    <div id="b2">
+      <div class="bh"><b>Block 2 · 30 min</b><span>Starch, glycogen, cellulose, <span class="term" data-t="glycoprotein" tabindex="0" role="button">glycoproteins</span> (B1.1.5 to B1.1.7)</span></div>
+      <ol>
+        <li>Read <a href="#b11b">Polysaccharides</a> below. <span class="t">(8 min)</span></li>
+        <li>Worked example, then "Finish it" on paper. <span class="t">(4 min)</span></li>
+        <li><a href="#check-b">Self-check B</a>: two key words each, then open. <span class="t">(2 min)</span></li>
+        <li>Pack: <b>questions 7(a) and 14</b> (4 marks). <span class="t">(6 min)</span></li>
+        <li>Mark and log. In 7(a) each correct row of the table is one mark. <span class="t">(4 min)</span></li>
+        <li>★ If time: <b>questions 15(a), 10(c) and 16</b> (4 marks), then mark them. <span class="t">(6 min)</span></li>
+      </ol>
+    </div>
+    <p class="break"><b>Break · 3 min.</b> Stand up, drink some water, look out of a window. No phone.</p>
+    <div id="b3">
+      <div class="bh"><b>Block 3 · 25 min</b><span>Lipids, triglycerides, phospholipids, <span class="term" data-t="fatty acid" tabindex="0" role="button">fatty acids</span> (B1.1.8 to B1.1.10)</span></div>
+      <ol>
+        <li>Read <a href="#b11c">Lipids</a> below. <span class="t">(8 min)</span></li>
+        <li>Worked example (percentage change), then both "Finish it" boxes. <span class="t">(4 min)</span></li>
+        <li><a href="#check-c">Self-check C</a>: two key words each, then open. <span class="t">(2 min)</span></li>
+        <li>Pack: <b>questions 11(a) and 11(b)</b> (3 marks). <span class="t">(5 min)</span></li>
+        <li>Mark and log. In 11(b), check you divided by the 1960 value (the starting value). <span class="t">(3 min)</span></li>
+        <li>★ If time: <b>questions 8 and 12</b> (2 marks), then mark them. <span class="t">(3 min)</span></li>
+      </ol>
+    </div>
+    <div id="b4">
+      <div class="bh"><b>Block 4 · 32 min</b><span>Fat stores, the bilayer, steroids (B1.1.11 to B1.1.13), then the quiz</span></div>
+      <ol>
+        <li>Read <a href="#b11d">Fat stores and membranes</a> below. <span class="t">(6 min)</span></li>
+        <li>Worked example, then "Finish it". <span class="t">(3 min)</span></li>
+        <li><a href="#check-d">Self-check D</a>: two key words each, then open. <span class="t">(2 min)</span></li>
+        <li>Pack: <b>question 13(a)</b> (4 marks). Four marks means four separate ideas. <span class="t">(6 min)</span></li>
+        <li>Mark and log. <span class="t">(3 min)</span></li>
+        <li>The <a href="#quiz">quiz</a>: 7 multiple-choice questions, then 3 short written ones on paper, marked with the model answers. <span class="t">(8 min)</span></li>
+        <li>★ If time: <b>question 13(b)</b> (7 marks), plan only: list seven "feature SO function" points in two columns, carbohydrates and lipids. No full answer today. <span class="t">(4 min)</span></li>
+      </ol>
+    </div>
+  </div>
+  <div class="tip"><b>Do not use today:</b> questions 1 to 6 of the HL pack, the SL pack, the B1.1 topic test (InThinking) and the Grade 11 combined paper. Questions 1 to 6 are also in your 21 November mock paper (the mock and the pack come from the same question bank), the topic test is for your revision day on 25 November, and the combined paper is your timed paper on 21 November. Questions 7(b) and 10(d) are also left out: they ask almost the same as mock question 25.</div>
+  <div class="stuck"><b>Stuck?</b> 1. Look again at the worked example for that skill. 2. Redo the self-check of that section. 3. Still stuck after 10 minutes: write it in the Error log as "ask teacher" and move on.</div>
+  <p><b>Files for today in the IB folder</b></p>
+  <ul class="files">
+    <li><a href="https://drive.google.com/file/d/16BAwh43g-yPtpnlj6EFXTgi89E5Y7KeT/view">B1.1 HL pack (questions)</a></li>
+    <li><a href="https://drive.google.com/file/d/1ZSJTC85Bs07He9mWFmCMACGV01loodJl/view">B1.1 HL mark scheme</a></li>
+    <li><a href="https://drive.google.com/file/d/1Kcwxqupd_m7EiVX29SDDbC3PBc5ufknX/view">B1.1 summary notes</a></li>
+    <li><a href="https://docs.google.com/presentation/d/1Cdkg3Tn3riqP_CQF1-yW3Er7AhgaN0ncpLhBf9ZikrQ/edit#slide=id.g3fae1fd7ec7_0_84">Term 1 teacher slides (B1.1 starts at slide 241)</a></li>
+  </ul>
+  <div class="legend" aria-label="Legend for the markers">
+    <span><span class="learn" style="margin-left:0">Learn</span> a fact to know by heart. The guide mentions no Biology data booklet, so learn it all.</span>
+    <span>★ an extra step, only if you have time</span>
+  </div>
+  <details class="extra"><summary>Extra, not needed today</summary>
+    <p><b>The summary notes</b> (<a href="https://drive.google.com/file/d/1Kcwxqupd_m7EiVX29SDDbC3PBc5ufknX/view">B1.1 summary notes, Revision Village</a>) are a two-page overview of this whole topic. Good for revision on 25 November, not needed today: this page covers the same points.</p>
+    <p><b>Your teacher's slides:</b> B1.1.1 to B1.1.3 start at <a href="https://docs.google.com/presentation/d/1Cdkg3Tn3riqP_CQF1-yW3Er7AhgaN0ncpLhBf9ZikrQ/edit#slide=id.g3fae1fd7ec7_0_84">slide 241</a>, with short practice questions on slides 271 to 280; B1.1.4 to B1.1.6 at <a href="https://docs.google.com/presentation/d/1Cdkg3Tn3riqP_CQF1-yW3Er7AhgaN0ncpLhBf9ZikrQ/edit#slide=id.g3facd6d0d23_0_42">slide 281</a>; B1.1.7 to B1.1.10 at <a href="https://docs.google.com/presentation/d/1Cdkg3Tn3riqP_CQF1-yW3Er7AhgaN0ncpLhBf9ZikrQ/edit#slide=id.g3f9b4aa42fb_0_91">slide 307</a>; B1.1.11 to B1.1.13 at <a href="https://docs.google.com/presentation/d/1Cdkg3Tn3riqP_CQF1-yW3Er7AhgaN0ncpLhBf9ZikrQ/edit#slide=id.g3fb0bfca10b_0_46">slide 345</a>. The page numbers on those slides (179 to 194) are textbook pages.</p>
+    <p><b>Exam format at HL</b> (official <a href="https://www.ibo.org/globalassets/new-structure/university-admission/pdfs/subject-guides/biology-guide.pdf">IB Biology guide</a>): Paper 1, 2 hours, 75 marks (1A: 40 multiple-choice questions; 1B: 35 marks of data-based questions), 36% of the grade. Paper 2, 2 hours 30 minutes, 80 marks (Section A 48: data-based and short-answer questions; Section B 32: extended responses), 44%. The scientific investigation, 24 marks, 20%. Your teacher's slide gives 1B as 30 and Paper 2 as 70 marks: the guide's numbers are the official ones.</p>
+    <p><b>Extra free reading (optional).</b> Khan Academy, free, no login needed (checked 8 Nov): <a href="https://www.khanacademy.org/science/biology/macromolecules/carbohydrates-and-sugars/a/carbohydrates">Carbohydrates</a> and <a href="https://www.khanacademy.org/science/biology/macromolecules/lipids/a/lipids">Lipids</a>. They say "dehydration synthesis": that is the same as condensation. Skip their parts on aldoses and ketoses, chitin, omega fatty acids and the shape of cholesterol: not needed for the IB exam.</p>
+  </details>
+</section>
+
+<!-- =============================== A: B1.1.1 to B1.1.4 =============================== -->
+<section class="topic" id="b11a">
+  <div class="kicker">B1.1.1 to B1.1.4 · SL and HL</div>
+  <h2>Carbon, building and breaking, simple sugars</h2>
+  <p class="guiding">Life builds its big molecules from small units, joined and split by two opposite reactions.</p>
+  <div class="ican">
+    <p>By the end of this section (the guide's statement titles in bold)</p>
+    <label><input type="checkbox" data-k="c1"><span><b>B1.1.1 Chemical properties of a carbon atom allowing for the formation of diverse <span class="term" data-t="compound" tabindex="0" role="button">compounds</span> upon which life is based.</b> I can explain why carbon can form so many different compounds: four covalent bonds, single or double, to carbon or other <span class="term" data-t="non-metal" tabindex="0" role="button">non-metals</span>, making chains (branched or not) and rings</span></label>
+    <label><input type="checkbox" data-k="c2"><span><b>B1.1.2 Production of <span class="term" data-t="macromolecule" tabindex="0" role="button">macromolecules</span> by condensation reactions that link <span class="term" data-t="monomer" tabindex="0" role="button">monomers</span> to form a <span class="term" data-t="polymer" tabindex="0" role="button">polymer</span>.</b> I can describe how condensation links monomers into a polymer and releases water, and name the bond made</span></label>
+    <label><input type="checkbox" data-k="c3"><span><b>B1.1.3 <span class="term" data-t="digestion" tabindex="0" role="button">Digestion</span> of polymers into monomers by hydrolysis reactions.</b> I can describe how hydrolysis uses water to split a polymer into monomers, as in digestion</span></label>
+    <label><input type="checkbox" data-k="c4"><span><b>B1.1.4 Form and function of <span class="term" data-t="monosaccharide" tabindex="0" role="button">monosaccharides</span>.</b> I can <span class="term" data-t="recognise" tabindex="0" role="button">recognise</span> <span class="term" data-t="pentose" tabindex="0" role="button">pentoses</span> and <span class="term" data-t="hexose" tabindex="0" role="button">hexoses</span> in ring diagrams, draw α-glucose and β-glucose, and link the properties of glucose to its uses</span></label>
+  </div>
+
+  <h3>B1.1.1 Why carbon?</h3>
+  <p>A carbon atom has four electrons in its outer shell, so it forms <b>four covalent bonds</b> (each bond is a shared pair of electrons).<span class="learn">Learn</span> The four can be four single bonds, or single bonds plus a double bond (a double bond uses two of the four). Carbon bonds to other carbon atoms and to other non-metals: mainly hydrogen, oxygen and nitrogen, sometimes phosphorus and sulfur. Covalent bonds are strong, so carbon compounds are stable.</p>
+  <p>Because carbon atoms join to each other, they can make <b>unbranched chains</b> (fatty acid tails), <b>branched chains</b>, <b>single rings</b> (glucose) and <b>several rings joined together</b> (steroids). That variety of shapes is why carbon compounds are the basis of life.</p>
+  <p style="font-size:.95rem;color:var(--ink-soft)">For context: scientists everywhere use the same unit prefixes (kilo, centi, milli, micro, nano) because they agreed on them internationally.</p>
+
+  <h3>B1.1.2 and B1.1.3 Condensation and hydrolysis</h3>
+  <p>A <b>monomer</b> is one small unit; a <b>polymer</b> (a macromolecule) is a long chain of monomers.</p>
+  <div class="tablewrap"><table>
+    <tr><th>Monomer</th><th>Polymer</th><th>Bond made</th></tr>
+    <tr><td>monosaccharide (e.g. glucose)</td><td><span class="term" data-t="polysaccharide" tabindex="0" role="button">polysaccharide</span> (e.g. starch)</td><td><span class="term" data-t="glycosidic bond" tabindex="0" role="button">glycosidic bond</span></td></tr>
+    <tr><td>amino acid</td><td><span class="term" data-t="polypeptide" tabindex="0" role="button">polypeptide</span> (protein)</td><td><span class="term" data-t="peptide bond" tabindex="0" role="button">peptide bond</span></td></tr>
+    <tr><td><span class="term" data-t="nucleotide" tabindex="0" role="button">nucleotide</span></td><td>nucleic acid (DNA, RNA)</td><td>covalent sugar-phosphate bond</td></tr>
+  </table></div>
+  <p><b>Condensation</b>: two molecules are joined by a new covalent bond, and a molecule of water is released. An -OH from one molecule and an -H from the other leave as H<sub>2</sub>O.<span class="learn">Learn</span> Building a polymer needs energy (in cells it comes from ATP). Fats are also made this way (<span class="term" data-t="ester bond" tabindex="0" role="button">ester bonds</span>), but they are not polymers.</p>
+  <p><b>Hydrolysis</b>: water is used to break a covalent bond, splitting a polymer into monomers. The water molecule is split: its -H goes to one monomer and its -OH to the other ("hydro" means water, "lysis" means splitting).<span class="learn">Learn</span> Digestion in the gut is hydrolysis, sped up by <span class="term" data-t="enzyme" tabindex="0" role="button">enzymes</span>: starch to glucose, proteins to amino acids.</p>
+  <figure>
+<svg viewBox="0 20 680 220" role="img" aria-label="Two glucose molecules join by condensation into maltose, linked by a glycosidic bond, and a water molecule is released. Hydrolysis is the reverse: water is used to split maltose back into two glucose molecules." font-family="Arial,Helvetica,sans-serif">
+<rect x="0" y="20" width="680" height="220" fill="#fff"/>
+<polygon points="80,50 114.6,70 114.6,110 80,130 45.4,110 45.4,70" fill="#DCE6F7" stroke="#1E2A33" stroke-width="2.5"/>
+<polygon points="200,50 234.6,70 234.6,110 200,130 165.4,110 165.4,70" fill="#DCE6F7" stroke="#1E2A33" stroke-width="2.5"/>
+<text x="140" y="98" text-anchor="middle" font-size="30" fill="#1E2A33">+</text>
+<text x="80" y="165" text-anchor="middle" font-size="22" fill="#1E2A33">glucose</text><text x="200" y="165" text-anchor="middle" font-size="22" fill="#1E2A33">glucose</text>
+<line x1="270" y1="72" x2="390" y2="72" stroke="#2E7D4F" stroke-width="4"/><polygon points="390,62 408,72 390,82" fill="#2E7D4F"/>
+<text x="339" y="56" text-anchor="middle" font-size="22" fill="#2E7D4F" font-weight="700">condensation</text>
+<line x1="408" y1="112" x2="288" y2="112" stroke="#B8761A" stroke-width="4"/><polygon points="288,102 270,112 288,122" fill="#B8761A"/>
+<text x="339" y="146" text-anchor="middle" font-size="22" fill="#B8761A" font-weight="700">hydrolysis</text>
+<polygon points="470,50 504.6,70 504.6,110 470,130 435.4,110 435.4,70" fill="#DCE6F7" stroke="#1E2A33" stroke-width="2.5"/>
+<polygon points="590,50 624.6,70 624.6,110 590,130 555.4,110 555.4,70" fill="#DCE6F7" stroke="#1E2A33" stroke-width="2.5"/>
+<line x1="505" y1="90" x2="555" y2="90" stroke="#B23A3A" stroke-width="5"/><circle cx="530" cy="90" r="9" fill="#B23A3A"/>
+<text x="530" y="165" text-anchor="middle" font-size="22" fill="#1E2A33">maltose</text>
+<text x="530" y="195" text-anchor="middle" font-size="22" fill="#B23A3A">glycosidic bond</text>
+<text x="339" y="200" text-anchor="middle" font-size="24" fill="#2F47A6" font-weight="700">H₂O</text>
+<text x="339" y="225" text-anchor="middle" font-size="20" fill="#4A5862">out / in</text>
+</svg>
+    <figcaption>Condensation joins two glucose molecules into maltose with a glycosidic bond and releases water. Hydrolysis uses water to split maltose again.</figcaption>
+  </figure>
+  <div class="worked"><b>Worked example: formula of a condensation product.</b> Two glucose molecules (C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>) join to make maltose, a <span class="term" data-t="disaccharide" tabindex="0" role="button">disaccharide</span> (two sugar units). What is the formula of maltose?
+    <ol>
+      <li>Add up the atoms of both molecules: C 6 + 6 = 12, H 12 + 12 = 24, O 6 + 6 = 12, so C<sub>12</sub>H<sub>24</sub>O<sub>12</sub>.</li>
+      <li>One bond is made, so one H<sub>2</sub>O is lost: take away 2 H and 1 O.</li>
+      <li>Maltose is <span class="nw">C<sub>12</sub>H<sub>22</sub>O<sub>11</sub></span>.</li>
+    </ol>
+    <details><summary>Why this step? (step 2)</summary><p>Every condensation releases one water molecule. A chain of n monomers has n − 1 bonds, so it loses n − 1 waters.</p></details></div>
+  <div class="finish"><b>Finish it.</b> Five glucose molecules join in a chain. Total atoms: C 30, H 60, O 30. Number of bonds = 4, so 4 H<sub>2</sub>O are lost: H 60 − 8 = <b>?</b>, O 30 − 4 = <b>?</b>. Write the formula.
+    <details><summary>Answer</summary><p><span class="nw">C<sub>30</sub>H<sub>52</sub>O<sub>26</sub></span>.</p></details></div>
+  <div class="tip"><b>Exam trap.</b> Count the <b>bonds</b>, not the molecules: three monomers need two condensations, so two waters. Hydrolysis is the reverse: it <b>adds</b> water, it does not release it.</div>
+
+  <h3>B1.1.4 Monosaccharides</h3>
+  <p>A <b>monosaccharide</b> is a single sugar unit. Most have 5 carbons (<b>pentoses</b>, C<sub>5</sub>H<sub>10</sub>O<sub>5</sub>, for example ribose) or 6 carbons (<b>hexoses</b>, C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>, for example glucose and fructose). In cells they are mostly rings: carbons plus one oxygen atom in the ring, with -OH and -H groups above and below it.<span class="learn">Learn</span></p>
+  <p><b>To recognise one in a diagram, count every carbon atom</b>, in the ring and in the side chains: 5 means pentose, 6 means hexose. Do not just count the corners of the ring.</p>
+  <div class="figs">
+    <figure><svg viewBox="0 0 330 300" role="img" aria-label="Alpha glucose drawn as a ring of five carbon atoms and one oxygen atom. Carbons are numbered 1 to 6. On carbon 1 the OH group points down, below the ring." font-family="Arial,Helvetica,sans-serif">
+<rect x="0" y="0" width="330" height="300" fill="#fff"/>
+<line x1="91" y1="69" x2="211" y2="69" stroke="#1E2A33" stroke-width="3" stroke-linecap="round"/>
+<line x1="211" y1="69" x2="271" y2="125" stroke="#1E2A33" stroke-width="3" stroke-linecap="round"/>
+<line x1="271" y1="125" x2="221" y2="181" stroke="#1E2A33" stroke-width="7" stroke-linecap="round"/>
+<line x1="221" y1="181" x2="101" y2="181" stroke="#1E2A33" stroke-width="7" stroke-linecap="round"/>
+<line x1="101" y1="181" x2="47" y2="125" stroke="#1E2A33" stroke-width="7" stroke-linecap="round"/>
+<line x1="47" y1="125" x2="91" y2="69" stroke="#1E2A33" stroke-width="3" stroke-linecap="round"/>
+<rect x="197" y="54" width="28" height="30" fill="#fff"/><text x="211" y="77" text-anchor="middle" font-size="24" font-weight="700" fill="#B23A3A">O</text>
+<line x1="271" y1="125" x2="271" y2="91" stroke="#1E2A33" stroke-width="2.5"/>
+<line x1="271" y1="125" x2="271" y2="159" stroke="#1E2A33" stroke-width="2.5"/>
+<text x="271" y="86" text-anchor="middle" font-size="22" fill="#1E2A33" font-weight="400">H</text>
+<text x="271" y="179" text-anchor="middle" font-size="22" fill="#B23A3A" font-weight="700">OH</text>
+<line x1="221" y1="181" x2="221" y2="159" stroke="#1E2A33" stroke-width="2.5"/>
+<line x1="221" y1="181" x2="221" y2="215" stroke="#1E2A33" stroke-width="2.5"/>
+<text x="221" y="154" text-anchor="middle" font-size="22" fill="#1E2A33" font-weight="400">H</text>
+<text x="221" y="235" text-anchor="middle" font-size="22" fill="#1E2A33" font-weight="400">OH</text>
+<line x1="101" y1="181" x2="101" y2="159" stroke="#1E2A33" stroke-width="2.5"/>
+<line x1="101" y1="181" x2="101" y2="215" stroke="#1E2A33" stroke-width="2.5"/>
+<text x="101" y="154" text-anchor="middle" font-size="22" fill="#1E2A33" font-weight="400">OH</text>
+<text x="101" y="235" text-anchor="middle" font-size="22" fill="#1E2A33" font-weight="400">H</text>
+<line x1="47" y1="125" x2="47" y2="91" stroke="#1E2A33" stroke-width="2.5"/>
+<line x1="47" y1="125" x2="47" y2="159" stroke="#1E2A33" stroke-width="2.5"/>
+<text x="47" y="86" text-anchor="middle" font-size="22" fill="#1E2A33" font-weight="400">H</text>
+<text x="47" y="179" text-anchor="middle" font-size="22" fill="#1E2A33" font-weight="400">OH</text>
+<line x1="91" y1="69" x2="91" y2="35" stroke="#1E2A33" stroke-width="2.5"/>
+<line x1="91" y1="69" x2="91" y2="89" stroke="#1E2A33" stroke-width="2.5"/>
+<text x="91" y="30" text-anchor="middle" font-size="22" fill="#1E2A33" font-weight="400">CH₂OH</text>
+<text x="91" y="109" text-anchor="middle" font-size="22" fill="#1E2A33" font-weight="400">H</text>
+<text x="283" y="133" font-size="22" fill="#2F47A6" font-weight="700">1</text>
+<text x="231" y="207" font-size="22" fill="#2F47A6" font-weight="700">2</text>
+<text x="75" y="207" font-size="22" fill="#2F47A6" font-weight="700">3</text>
+<text x="17" y="133" font-size="22" fill="#2F47A6" font-weight="700">4</text>
+<text x="61" y="77" font-size="22" fill="#2F47A6" font-weight="700">5</text>
+<text x="133" y="30" font-size="22" fill="#2F47A6" font-weight="700">6</text>
+<text x="159" y="265" text-anchor="middle" font-size="26" font-weight="700" fill="#2F47A6">α-glucose</text>
+</svg></figure>
+    <figure><svg viewBox="0 0 330 300" role="img" aria-label="Beta glucose drawn as the same ring. The only difference from alpha glucose: on carbon 1 the OH group points up, above the ring." font-family="Arial,Helvetica,sans-serif">
+<rect x="0" y="0" width="330" height="300" fill="#fff"/>
+<line x1="91" y1="69" x2="211" y2="69" stroke="#1E2A33" stroke-width="3" stroke-linecap="round"/>
+<line x1="211" y1="69" x2="271" y2="125" stroke="#1E2A33" stroke-width="3" stroke-linecap="round"/>
+<line x1="271" y1="125" x2="221" y2="181" stroke="#1E2A33" stroke-width="7" stroke-linecap="round"/>
+<line x1="221" y1="181" x2="101" y2="181" stroke="#1E2A33" stroke-width="7" stroke-linecap="round"/>
+<line x1="101" y1="181" x2="47" y2="125" stroke="#1E2A33" stroke-width="7" stroke-linecap="round"/>
+<line x1="47" y1="125" x2="91" y2="69" stroke="#1E2A33" stroke-width="3" stroke-linecap="round"/>
+<rect x="197" y="54" width="28" height="30" fill="#fff"/><text x="211" y="77" text-anchor="middle" font-size="24" font-weight="700" fill="#B23A3A">O</text>
+<line x1="271" y1="125" x2="271" y2="91" stroke="#1E2A33" stroke-width="2.5"/>
+<line x1="271" y1="125" x2="271" y2="159" stroke="#1E2A33" stroke-width="2.5"/>
+<text x="271" y="86" text-anchor="middle" font-size="22" fill="#B23A3A" font-weight="700">OH</text>
+<text x="271" y="179" text-anchor="middle" font-size="22" fill="#1E2A33" font-weight="400">H</text>
+<line x1="221" y1="181" x2="221" y2="159" stroke="#1E2A33" stroke-width="2.5"/>
+<line x1="221" y1="181" x2="221" y2="215" stroke="#1E2A33" stroke-width="2.5"/>
+<text x="221" y="154" text-anchor="middle" font-size="22" fill="#1E2A33" font-weight="400">H</text>
+<text x="221" y="235" text-anchor="middle" font-size="22" fill="#1E2A33" font-weight="400">OH</text>
+<line x1="101" y1="181" x2="101" y2="159" stroke="#1E2A33" stroke-width="2.5"/>
+<line x1="101" y1="181" x2="101" y2="215" stroke="#1E2A33" stroke-width="2.5"/>
+<text x="101" y="154" text-anchor="middle" font-size="22" fill="#1E2A33" font-weight="400">OH</text>
+<text x="101" y="235" text-anchor="middle" font-size="22" fill="#1E2A33" font-weight="400">H</text>
+<line x1="47" y1="125" x2="47" y2="91" stroke="#1E2A33" stroke-width="2.5"/>
+<line x1="47" y1="125" x2="47" y2="159" stroke="#1E2A33" stroke-width="2.5"/>
+<text x="47" y="86" text-anchor="middle" font-size="22" fill="#1E2A33" font-weight="400">H</text>
+<text x="47" y="179" text-anchor="middle" font-size="22" fill="#1E2A33" font-weight="400">OH</text>
+<line x1="91" y1="69" x2="91" y2="35" stroke="#1E2A33" stroke-width="2.5"/>
+<line x1="91" y1="69" x2="91" y2="89" stroke="#1E2A33" stroke-width="2.5"/>
+<text x="91" y="30" text-anchor="middle" font-size="22" fill="#1E2A33" font-weight="400">CH₂OH</text>
+<text x="91" y="109" text-anchor="middle" font-size="22" fill="#1E2A33" font-weight="400">H</text>
+<text x="283" y="133" font-size="22" fill="#2F47A6" font-weight="700">1</text>
+<text x="231" y="207" font-size="22" fill="#2F47A6" font-weight="700">2</text>
+<text x="75" y="207" font-size="22" fill="#2F47A6" font-weight="700">3</text>
+<text x="17" y="133" font-size="22" fill="#2F47A6" font-weight="700">4</text>
+<text x="61" y="77" font-size="22" fill="#2F47A6" font-weight="700">5</text>
+<text x="133" y="30" font-size="22" fill="#2F47A6" font-weight="700">6</text>
+<text x="159" y="265" text-anchor="middle" font-size="26" font-weight="700" fill="#2F47A6">β-glucose</text>
+</svg></figure>
+  </div>
+  <p class="cap">Draw glucose like this: a ring of five carbons and one oxygen, carbons numbered 1 to 6 clockwise from the right, carbon 6 in the CH<sub>2</sub>OH group. The only difference: on carbon 1, the -OH is <b>below</b> the ring in α-glucose and <b>above</b> it in β-glucose.<span class="learn">Learn</span> Going round from carbon 1, α-glucose has its -OH groups down, down, up, down.</p>
+  <div class="figs">
+    <figure><svg viewBox="0 0 330 300" role="img" aria-label="Ribose drawn as a ring of four carbon atoms and one oxygen atom, with carbon 5 in a CH2OH side chain. Carbon 2 carries an OH group." font-family="Arial,Helvetica,sans-serif">
+<rect x="0" y="0" width="330" height="300" fill="#fff"/>
+<line x1="65" y1="110" x2="165" y2="60" stroke="#1E2A33" stroke-width="3" stroke-linecap="round"/>
+<line x1="165" y1="60" x2="265" y2="110" stroke="#1E2A33" stroke-width="3" stroke-linecap="round"/>
+<line x1="265" y1="110" x2="213" y2="175" stroke="#1E2A33" stroke-width="7" stroke-linecap="round"/>
+<line x1="213" y1="175" x2="117" y2="175" stroke="#1E2A33" stroke-width="7" stroke-linecap="round"/>
+<line x1="117" y1="175" x2="65" y2="110" stroke="#1E2A33" stroke-width="7" stroke-linecap="round"/>
+<rect x="151" y="45" width="28" height="30" fill="#fff"/><text x="165" y="68" text-anchor="middle" font-size="24" font-weight="700" fill="#B23A3A">O</text>
+<line x1="265" y1="110" x2="265" y2="76" stroke="#1E2A33" stroke-width="2.5"/>
+<line x1="265" y1="110" x2="265" y2="136" stroke="#1E2A33" stroke-width="2.5"/>
+<text x="265" y="71" text-anchor="middle" font-size="22" fill="#1E2A33">OH</text>
+<text x="265" y="156" text-anchor="middle" font-size="22" fill="#1E2A33" font-weight="400">H</text>
+<line x1="213" y1="175" x2="213" y2="153" stroke="#1E2A33" stroke-width="2.5"/>
+<line x1="213" y1="175" x2="213" y2="209" stroke="#1E2A33" stroke-width="2.5"/>
+<text x="213" y="148" text-anchor="middle" font-size="22" fill="#1E2A33">H</text>
+<text x="213" y="229" text-anchor="middle" font-size="22" fill="#B23A3A" font-weight="700">OH</text>
+<line x1="117" y1="175" x2="117" y2="153" stroke="#1E2A33" stroke-width="2.5"/>
+<line x1="117" y1="175" x2="117" y2="209" stroke="#1E2A33" stroke-width="2.5"/>
+<text x="117" y="148" text-anchor="middle" font-size="22" fill="#1E2A33">H</text>
+<text x="117" y="229" text-anchor="middle" font-size="22" fill="#1E2A33" font-weight="400">OH</text>
+<line x1="65" y1="110" x2="65" y2="76" stroke="#1E2A33" stroke-width="2.5"/>
+<line x1="65" y1="110" x2="65" y2="136" stroke="#1E2A33" stroke-width="2.5"/>
+<text x="65" y="71" text-anchor="middle" font-size="22" fill="#1E2A33">CH₂OH</text>
+<text x="65" y="156" text-anchor="middle" font-size="22" fill="#1E2A33" font-weight="400">H</text>
+<text x="279" y="118" font-size="22" fill="#2F47A6" font-weight="700">1</text>
+<text x="225" y="203" font-size="22" fill="#2F47A6" font-weight="700">2</text>
+<text x="89" y="203" font-size="22" fill="#2F47A6" font-weight="700">3</text>
+<text x="33" y="118" font-size="22" fill="#2F47A6" font-weight="700">4</text>
+<text x="107" y="71" font-size="22" fill="#2F47A6" font-weight="700">5</text>
+<text x="165" y="265" text-anchor="middle" font-size="26" font-weight="700" fill="#2F47A6">ribose</text>
+</svg></figure>
+    <figure><svg viewBox="0 0 330 300" role="img" aria-label="Deoxyribose: the same ring as ribose, but carbon 2 carries H instead of OH." font-family="Arial,Helvetica,sans-serif">
+<rect x="0" y="0" width="330" height="300" fill="#fff"/>
+<line x1="65" y1="110" x2="165" y2="60" stroke="#1E2A33" stroke-width="3" stroke-linecap="round"/>
+<line x1="165" y1="60" x2="265" y2="110" stroke="#1E2A33" stroke-width="3" stroke-linecap="round"/>
+<line x1="265" y1="110" x2="213" y2="175" stroke="#1E2A33" stroke-width="7" stroke-linecap="round"/>
+<line x1="213" y1="175" x2="117" y2="175" stroke="#1E2A33" stroke-width="7" stroke-linecap="round"/>
+<line x1="117" y1="175" x2="65" y2="110" stroke="#1E2A33" stroke-width="7" stroke-linecap="round"/>
+<rect x="151" y="45" width="28" height="30" fill="#fff"/><text x="165" y="68" text-anchor="middle" font-size="24" font-weight="700" fill="#B23A3A">O</text>
+<line x1="265" y1="110" x2="265" y2="76" stroke="#1E2A33" stroke-width="2.5"/>
+<line x1="265" y1="110" x2="265" y2="136" stroke="#1E2A33" stroke-width="2.5"/>
+<text x="265" y="71" text-anchor="middle" font-size="22" fill="#1E2A33">OH</text>
+<text x="265" y="156" text-anchor="middle" font-size="22" fill="#1E2A33" font-weight="400">H</text>
+<line x1="213" y1="175" x2="213" y2="153" stroke="#1E2A33" stroke-width="2.5"/>
+<line x1="213" y1="175" x2="213" y2="209" stroke="#1E2A33" stroke-width="2.5"/>
+<text x="213" y="148" text-anchor="middle" font-size="22" fill="#1E2A33">H</text>
+<text x="213" y="229" text-anchor="middle" font-size="22" fill="#B23A3A" font-weight="700">H</text>
+<line x1="117" y1="175" x2="117" y2="153" stroke="#1E2A33" stroke-width="2.5"/>
+<line x1="117" y1="175" x2="117" y2="209" stroke="#1E2A33" stroke-width="2.5"/>
+<text x="117" y="148" text-anchor="middle" font-size="22" fill="#1E2A33">H</text>
+<text x="117" y="229" text-anchor="middle" font-size="22" fill="#1E2A33" font-weight="400">OH</text>
+<line x1="65" y1="110" x2="65" y2="76" stroke="#1E2A33" stroke-width="2.5"/>
+<line x1="65" y1="110" x2="65" y2="136" stroke="#1E2A33" stroke-width="2.5"/>
+<text x="65" y="71" text-anchor="middle" font-size="22" fill="#1E2A33">CH₂OH</text>
+<text x="65" y="156" text-anchor="middle" font-size="22" fill="#1E2A33" font-weight="400">H</text>
+<text x="279" y="118" font-size="22" fill="#2F47A6" font-weight="700">1</text>
+<text x="225" y="203" font-size="22" fill="#2F47A6" font-weight="700">2</text>
+<text x="89" y="203" font-size="22" fill="#2F47A6" font-weight="700">3</text>
+<text x="33" y="118" font-size="22" fill="#2F47A6" font-weight="700">4</text>
+<text x="107" y="71" font-size="22" fill="#2F47A6" font-weight="700">5</text>
+<text x="165" y="265" text-anchor="middle" font-size="26" font-weight="700" fill="#2F47A6">deoxyribose</text>
+</svg></figure>
+  </div>
+  <p class="cap">Two pentoses you met in A1.2: ribose (in RNA) and deoxyribose (in DNA). Deoxyribose has H instead of OH on carbon 2.</p>
+  <p><b>Glucose: properties and uses.</b><span class="learn">Learn</span></p>
+  <div class="tablewrap"><table>
+    <tr><th>Property</th><th>So glucose is used</th></tr>
+    <tr><td><span class="term" data-t="soluble" tabindex="0" role="button">soluble</span> in water (its -OH groups form hydrogen bonds with water)</td><td>transported dissolved in blood <span class="term" data-t="plasma" tabindex="0" role="button">plasma</span></td></tr>
+    <tr><td>easy to transport (small and soluble)</td><td>carried to every cell that needs it</td></tr>
+    <tr><td>chemically stable</td><td>kept in cells, or stored after joining into starch or glycogen</td></tr>
+    <tr><td>gives a lot of energy when oxidised (broken down with oxygen in respiration)</td><td>the main fuel for cell respiration</td></tr>
+  </table></div>
+  <div class="worked"><b>Worked example: pentose or hexose?</b> A ring diagram shows a ring of four carbons and one oxygen, with a CH<sub>2</sub>OH group on two of the ring carbons.
+    <ol>
+      <li>Carbons in the ring: 4.</li>
+      <li>Carbons in side chains: each CH<sub>2</sub>OH has one, so 2.</li>
+      <li>Total 6, so it is a hexose, even though the ring has only five corners (this one is fructose).</li>
+    </ol>
+    <details><summary>Why this step? (step 2)</summary><p>A hexose is defined by its six carbon atoms, wherever they are. Side-chain carbons count too.</p></details></div>
+  <div class="finish"><b>Finish it.</b> You can draw α-glucose. To draw β-glucose, copy α-glucose and change one thing on one carbon. Which carbon, and what do you change?
+    <details><summary>Answer</summary><p>Carbon 1: swap its -H and -OH, so the -OH points up, above the ring.</p></details></div>
+  <div class="tip"><b>Exam trap.</b> When asked to identify a sugar, be specific: "α-glucose", not just "glucose". In a drawing, copy the ring shape you are given and put every -H and -OH on the correct side.</div>
+
+  <details class="check" id="check-a"><summary>Self-check A (write two key words for each, then open)</summary>
+    <ol>
+      <li>How many water molecules are released when 10 amino acids join into one chain?</li>
+      <li>Which reaction digests starch in the gut, and what does it use?</li>
+      <li>Why can carbon form branched chains?</li>
+      <li>Which carbon is different in α-glucose and β-glucose?</li>
+    </ol>
+    <p><b>Answers.</b> 1. Nine (9 peptide bonds, one water each). 2. Hydrolysis; it uses water (and enzymes). 3. It forms four bonds, so one carbon can bond to three or four other carbons. 4. Carbon 1: -OH below the ring in α, above in β.</p>
+  </details>
+</section>
+
+<!-- =============================== B: B1.1.5 to B1.1.7 =============================== -->
+<section class="topic" id="b11b">
+  <div class="kicker">B1.1.5 to B1.1.7 · SL and HL</div>
+  <h2>Polysaccharides and glycoproteins</h2>
+  <p class="guiding">Same monomer, different jobs: the type of glucose and the way the chain is built decide what a polysaccharide is for.</p>
+  <div class="ican">
+    <p>By the end of this section (the guide's statement titles in bold)</p>
+    <label><input type="checkbox" data-k="c5"><span><b>B1.1.5 Polysaccharides as energy storage compounds.</b> I can explain how starch (amylose and amylopectin) and glycogen suit energy storage: compact because coiled and branched, <span class="term" data-t="insoluble" tabindex="0" role="button">insoluble</span> because large, glucose easily added or removed by condensation and hydrolysis</span></label>
+    <label><input type="checkbox" data-k="c6"><span><b>B1.1.6 Structure of cellulose related to its function as a structural polysaccharide in plants.</b> I can explain how cellulose suits plant cell walls: β-glucose in alternating <span class="term" data-t="orientation" tabindex="0" role="button">orientation</span>, straight chains, bundles held by hydrogen bonds</span></label>
+    <label><input type="checkbox" data-k="c7"><span><b>B1.1.7 Role of glycoproteins in cell–cell recognition.</b> I can outline how glycoproteins allow cell–cell recognition, with ABO blood groups as the example</span></label>
+  </div>
+
+  <h3>B1.1.5 Starch and glycogen: energy stores</h3>
+  <p>Both are polymers of <b>α-glucose</b>.<span class="learn">Learn</span></p>
+  <ul>
+    <li><b>Starch</b> (plants) is a mixture of two molecules. <b>Amylose</b>: α-glucose joined by 1,4 glycosidic bonds (carbon 1 of one glucose to carbon 4 of the next), unbranched, coiled into a <span class="term" data-t="helix" tabindex="0" role="button">helix</span>. <b>Amylopectin</b>: 1,4 bonds plus some 1,6 bonds, which start side branches.</li>
+    <li><b>Glycogen</b> (animals, stored in liver and muscle cells): like amylopectin but much more branched.</li>
+  </ul>
+  <figure>
+<svg viewBox="0 0 680 545" role="img" aria-label="Four polysaccharides drawn as chains of glucose beads. Amylose is a coiled chain without branches. Amylopectin has a few branches, each starting at a 1,6 bond. Glycogen has many more branches and so many chain ends. Cellulose is made of straight parallel chains of beta glucose held side by side by hydrogen bonds." font-family="Arial,Helvetica,sans-serif">
+<rect x="0" y="0" width="680" height="545" fill="#fff"/>
+<text x="20" y="40" font-size="24" font-weight="700" fill="#2F47A6">amylose</text>
+<polyline points="40,85 64,102.2 88,106.4 112,94.4 136,75.3 160,63.5 184,68 208,85.4 232,102.5 256,106.3 280,94.1 304,74.9 328,63.4 352,68.2 376,85.7 400,102.7" fill="none" stroke="#4A5862" stroke-width="2"/>
+<circle cx="40" cy="85" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="64" cy="102.2" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="88" cy="106.4" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="112" cy="94.4" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="136" cy="75.3" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="160" cy="63.5" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="184" cy="68" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="208" cy="85.4" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="232" cy="102.5" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="256" cy="106.3" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="280" cy="94.1" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="304" cy="74.9" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="328" cy="63.4" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="352" cy="68.2" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="376" cy="85.7" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="400" cy="102.7" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<text x="440" y="92" font-size="22" fill="#1E2A33">coiled, unbranched</text>
+<text x="20" y="160" font-size="24" font-weight="700" fill="#2F47A6">amylopectin</text>
+<line x1="40" y1="200" x2="376" y2="200" stroke="#4A5862" stroke-width="2"/>
+<line x1="184" y1="200" x2="208" y2="170" stroke="#4A5862" stroke-width="2"/><line x1="208" y1="170" x2="328" y2="170" stroke="#4A5862" stroke-width="2"/>
+<circle cx="40" cy="200" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="64" cy="200" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="88" cy="200" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="112" cy="200" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="136" cy="200" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="160" cy="200" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="184" cy="200" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="208" cy="200" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="232" cy="200" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="256" cy="200" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="280" cy="200" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="304" cy="200" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="328" cy="200" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="352" cy="200" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="376" cy="200" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="208" cy="170" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="232" cy="170" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="256" cy="170" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="280" cy="170" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="304" cy="170" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="328" cy="170" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="184" cy="200" r="15" fill="none" stroke="#B23A3A" stroke-width="3"/>
+<text x="440" y="190" font-size="22" fill="#1E2A33">some branches</text><text x="440" y="216" font-size="22" fill="#B23A3A">1,6 bond</text>
+<text x="20" y="275" font-size="24" font-weight="700" fill="#2F47A6">glycogen</text>
+<line x1="40" y1="320" x2="376" y2="320" stroke="#4A5862" stroke-width="2"/>
+<line x1="88" y1="320" x2="112" y2="290" stroke="#4A5862" stroke-width="2"/><line x1="112" y1="290" x2="160" y2="290" stroke="#4A5862" stroke-width="2"/>
+<line x1="184" y1="320" x2="208" y2="350" stroke="#4A5862" stroke-width="2"/><line x1="208" y1="350" x2="256" y2="350" stroke="#4A5862" stroke-width="2"/>
+<line x1="256" y1="320" x2="280" y2="290" stroke="#4A5862" stroke-width="2"/><line x1="280" y1="290" x2="328" y2="290" stroke="#4A5862" stroke-width="2"/>
+<line x1="328" y1="320" x2="352" y2="350" stroke="#4A5862" stroke-width="2"/><line x1="352" y1="350" x2="400" y2="350" stroke="#4A5862" stroke-width="2"/>
+<circle cx="40" cy="320" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="64" cy="320" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="88" cy="320" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="112" cy="320" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="136" cy="320" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="160" cy="320" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="184" cy="320" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="208" cy="320" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="232" cy="320" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="256" cy="320" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="280" cy="320" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="304" cy="320" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="328" cy="320" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="352" cy="320" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="376" cy="320" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="112" cy="290" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="136" cy="290" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="160" cy="290" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="208" cy="350" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="232" cy="350" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="256" cy="350" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="280" cy="290" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="304" cy="290" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="328" cy="290" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="352" cy="350" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="376" cy="350" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<circle cx="400" cy="350" r="11" fill="#9FD8DB" stroke="#1E2A33" stroke-width="1.5"/>
+<text x="440" y="316" font-size="22" fill="#1E2A33">many branches</text><text x="440" y="342" font-size="22" fill="#1E2A33">many ends</text>
+<text x="20" y="400" font-size="24" font-weight="700" fill="#2E7D4F">cellulose</text>
+<line x1="40" y1="440" x2="376" y2="440" stroke="#4A5862" stroke-width="2"/>
+<rect x="30" y="430" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<line x1="40" y1="451" x2="40" y2="469" stroke="#2F47A6" stroke-width="2.5" stroke-dasharray="4 3"/>
+<rect x="54" y="430" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<rect x="78" y="430" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<line x1="88" y1="451" x2="88" y2="469" stroke="#2F47A6" stroke-width="2.5" stroke-dasharray="4 3"/>
+<rect x="102" y="430" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<rect x="126" y="430" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<line x1="136" y1="451" x2="136" y2="469" stroke="#2F47A6" stroke-width="2.5" stroke-dasharray="4 3"/>
+<rect x="150" y="430" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<rect x="174" y="430" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<line x1="184" y1="451" x2="184" y2="469" stroke="#2F47A6" stroke-width="2.5" stroke-dasharray="4 3"/>
+<rect x="198" y="430" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<rect x="222" y="430" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<line x1="232" y1="451" x2="232" y2="469" stroke="#2F47A6" stroke-width="2.5" stroke-dasharray="4 3"/>
+<rect x="246" y="430" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<rect x="270" y="430" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<line x1="280" y1="451" x2="280" y2="469" stroke="#2F47A6" stroke-width="2.5" stroke-dasharray="4 3"/>
+<rect x="294" y="430" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<rect x="318" y="430" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<line x1="328" y1="451" x2="328" y2="469" stroke="#2F47A6" stroke-width="2.5" stroke-dasharray="4 3"/>
+<rect x="342" y="430" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<rect x="366" y="430" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<line x1="376" y1="451" x2="376" y2="469" stroke="#2F47A6" stroke-width="2.5" stroke-dasharray="4 3"/>
+<line x1="40" y1="480" x2="376" y2="480" stroke="#4A5862" stroke-width="2"/>
+<rect x="30" y="470" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<line x1="40" y1="491" x2="40" y2="509" stroke="#2F47A6" stroke-width="2.5" stroke-dasharray="4 3"/>
+<rect x="54" y="470" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<rect x="78" y="470" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<line x1="88" y1="491" x2="88" y2="509" stroke="#2F47A6" stroke-width="2.5" stroke-dasharray="4 3"/>
+<rect x="102" y="470" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<rect x="126" y="470" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<line x1="136" y1="491" x2="136" y2="509" stroke="#2F47A6" stroke-width="2.5" stroke-dasharray="4 3"/>
+<rect x="150" y="470" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<rect x="174" y="470" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<line x1="184" y1="491" x2="184" y2="509" stroke="#2F47A6" stroke-width="2.5" stroke-dasharray="4 3"/>
+<rect x="198" y="470" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<rect x="222" y="470" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<line x1="232" y1="491" x2="232" y2="509" stroke="#2F47A6" stroke-width="2.5" stroke-dasharray="4 3"/>
+<rect x="246" y="470" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<rect x="270" y="470" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<line x1="280" y1="491" x2="280" y2="509" stroke="#2F47A6" stroke-width="2.5" stroke-dasharray="4 3"/>
+<rect x="294" y="470" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<rect x="318" y="470" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<line x1="328" y1="491" x2="328" y2="509" stroke="#2F47A6" stroke-width="2.5" stroke-dasharray="4 3"/>
+<rect x="342" y="470" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<rect x="366" y="470" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<line x1="376" y1="491" x2="376" y2="509" stroke="#2F47A6" stroke-width="2.5" stroke-dasharray="4 3"/>
+<line x1="40" y1="520" x2="376" y2="520" stroke="#4A5862" stroke-width="2"/>
+<rect x="30" y="510" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<rect x="54" y="510" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<rect x="78" y="510" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<rect x="102" y="510" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<rect x="126" y="510" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<rect x="150" y="510" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<rect x="174" y="510" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<rect x="198" y="510" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<rect x="222" y="510" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<rect x="246" y="510" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<rect x="270" y="510" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<rect x="294" y="510" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<rect x="318" y="510" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<rect x="342" y="510" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<rect x="366" y="510" width="20" height="20" rx="3" fill="#B9E3C6" stroke="#1E2A33" stroke-width="1.5"/>
+<text x="440" y="460" font-size="22" fill="#1E2A33">straight chains</text><text x="440" y="486" font-size="22" fill="#2F47A6">hydrogen bonds</text><text x="440" y="512" font-size="22" fill="#1E2A33">between chains</text>
+</svg>
+    <figcaption>Each bead is one glucose. Amylose coils; amylopectin and glycogen branch at 1,6 bonds (glycogen far more often); cellulose is straight chains of β-glucose (squares) held side by side by hydrogen bonds.</figcaption>
+  </figure>
+  <p>Why they are good stores (each feature, SO its benefit):<span class="learn">Learn</span></p>
+  <ul>
+    <li><b>Coiled and branched, so compact</b>: a lot of glucose fits in a small space.</li>
+    <li><b>Very large molecules, so insoluble</b>: they do not dissolve, so they do not draw water into the cell by osmosis.</li>
+    <li><b>Glucose is easily added or removed at the chain ends</b> (condensation to store, hydrolysis to release). Branches give many ends, so glycogen can release glucose fast when an animal needs energy.</li>
+  </ul>
+
+  <h3>B1.1.6 Cellulose: a structural polysaccharide</h3>
+  <p>Cellulose is made of <b>β-glucose</b> joined by 1,4 bonds. Because the -OH on carbon 1 is above the ring, each glucose is <b>flipped</b> compared with the one next to it (alternating orientation). That keeps the chain <b>straight</b>, not coiled.<span class="learn">Learn</span> Straight chains lie side by side and form many <b>hydrogen bonds</b> between their -OH groups, making bundles (<span class="term" data-t="microfibril" tabindex="0" role="button">microfibrils</span>). These are very strong when pulled (high <span class="term" data-t="tensile strength" tabindex="0" role="button">tensile strength</span>), so the cell wall stops a plant cell bursting when it takes in water.</p>
+  <div class="worked"><b>Worked example: a 3-mark "explain" answer.</b> "Explain how the structure of cellulose is related to its function in plant cell walls." One marking point per line:
+    <ol>
+      <li>Cellulose is made of β-glucose, with each glucose flipped relative to its neighbour, SO the chains are straight.</li>
+      <li>Straight chains lie parallel, SO many hydrogen bonds form between neighbouring chains, making bundles (microfibrils).</li>
+      <li>The bundles have high tensile strength, SO the cell wall resists the pressure of water and stops the cell bursting.</li>
+    </ol>
+    <details><summary>Why this step? (the word SO)</summary><p>In an "explain" question a feature alone scores nothing. The mark comes from linking the feature to what it does. "SO" forces that link.</p></details></div>
+  <div class="finish"><b>Finish it.</b> "Explain why a potato cell that stores glucose as starch does not swell up by osmosis. [2]" First half: "Starch is a very large molecule, SO it is ..."
+    <details><summary>Answer</summary><p>... insoluble; SO it does not change the water concentration inside the cell and does not draw water in by osmosis (dissolved glucose would).</p></details></div>
+  <div class="tip"><b>Exam trap.</b> Amylose is <b>unbranched</b> (coiled); amylopectin and glycogen are branched. Cellulose is never branched or coiled. "Insoluble" or "compact" alone get no mark in an "explain" question: add what it does.</div>
+
+  <h3>B1.1.7 Glycoproteins and cell–cell recognition</h3>
+  <p>A <b>glycoprotein</b> is a protein in the cell membrane with a short carbohydrate chain attached, sticking out of the <b>outside</b> surface of the cell.<span class="learn">Learn</span> Other cells and the <span class="term" data-t="immune system" tabindex="0" role="button">immune system</span> recognise the shape of these chains: this is cell–cell recognition, and it is how the body tells its own cells ("self") from foreign ones.</p>
+  <p><b>Example: ABO blood groups.</b> Red blood cells carry these chains as <span class="term" data-t="antigen" tabindex="0" role="button">antigens</span>. Group O has the basic chain only. Group A has one extra sugar added to it; group B has a different extra sugar; group AB has both. If someone receives blood with an antigen their own cells do not have, their <span class="term" data-t="antibody" tabindex="0" role="button">antibodies</span> bind to it and the red cells clump together.</p>
+
+  <details class="check" id="check-b"><summary>Self-check B (write two key words for each, then open)</summary>
+    <ol>
+      <li>Which of starch, glycogen and cellulose is the most branched?</li>
+      <li>Which form of glucose is in cellulose, and which in starch?</li>
+      <li>What holds cellulose chains together in bundles?</li>
+      <li>How does the antigen of blood group O differ from group A?</li>
+    </ol>
+    <p><b>Answers.</b> 1. Glycogen. 2. β-glucose in cellulose, α-glucose in starch. 3. Hydrogen bonds between neighbouring chains. 4. O has the basic chain only; A has one extra sugar on it.</p>
+  </details>
+</section>
+
+<!-- =============================== C: B1.1.8 to B1.1.10 =============================== -->
+<section class="topic" id="b11c">
+  <div class="kicker">B1.1.8 to B1.1.10 · SL and HL</div>
+  <h2>Lipids: triglycerides, phospholipids and fatty acids</h2>
+  <p class="guiding">Lipids are defined by one property: they do not mix with water.</p>
+  <div class="ican">
+    <p>By the end of this section (the guide's statement titles in bold)</p>
+    <label><input type="checkbox" data-k="c8"><span><b>B1.1.8 <span class="term" data-t="hydrophobic" tabindex="0" role="button">Hydrophobic</span> properties of lipids.</b> I can describe lipids as hydrophobic: they dissolve in non-polar <span class="term" data-t="solvent" tabindex="0" role="button">solvents</span> but hardly in water; fats, oils, waxes and steroids are lipids</span></label>
+    <label><input type="checkbox" data-k="c9"><span><b>B1.1.9 Formation of triglycerides and phospholipids by condensation reactions.</b> I can describe how condensation forms a triglyceride (<span class="term" data-t="glycerol" tabindex="0" role="button">glycerol</span> and three fatty acids) and a phospholipid (glycerol, two fatty acids and a <span class="term" data-t="phosphate" tabindex="0" role="button">phosphate</span>), with ester bonds</span></label>
+    <label><input type="checkbox" data-k="c10"><span><b>B1.1.10 Difference between <span class="term" data-t="saturated" tabindex="0" role="button">saturated</span>, monounsaturated and polyunsaturated fatty acids.</b> I can distinguish saturated, monounsaturated and polyunsaturated fatty acids by their C=C bonds, and link this to <span class="term" data-t="melting point" tabindex="0" role="button">melting point</span> and to oils in plants and fats in <span class="term" data-t="endotherm" tabindex="0" role="button">endotherms</span></span></label>
+  </div>
+
+  <h3>B1.1.8 Lipids are hydrophobic</h3>
+  <p><b>Lipids</b> dissolve in non-polar solvents (such as hexane, a petrol-like liquid) but only very slightly in water.<span class="learn">Learn</span> They are mostly carbon and hydrogen, with few oxygen atoms and so few polar groups to form hydrogen bonds with water. The main groups: <b>fats</b> (solid at room temperature, about 20 °C), <b>oils</b> (liquid at room temperature), <b>waxes</b> and <b>steroids</b>.</p>
+
+  <h3>B1.1.9 Building triglycerides and phospholipids</h3>
+  <p><b>Glycerol</b> is a small molecule with three -OH groups. A <b>fatty acid</b> is a long hydrocarbon chain (only C and H) with an acid group, -COOH, at one end. Condensation between an -OH of glycerol and the -COOH of a fatty acid makes an <b>ester bond</b> and releases one water.<span class="learn">Learn</span></p>
+  <ul>
+    <li><b>Triglyceride</b>: glycerol + <b>three</b> fatty acids: three condensations, three ester bonds, three waters released.</li>
+    <li><b>Phospholipid</b>: glycerol + <b>two</b> fatty acids + one <b>phosphate group</b> in place of the third fatty acid.</li>
+  </ul>
+  <figure>
+<svg viewBox="0 0 700 330" role="img" aria-label="Left: a triglyceride, one glycerol joined by three ester bonds to three fatty acid tails. Right: a phospholipid, glycerol joined to a phosphate group, which forms the hydrophilic head, and to two fatty acid tails, which are hydrophobic." font-family="Arial,Helvetica,sans-serif">
+<rect x="0" y="0" width="700" height="330" fill="#fff"/>
+<text x="20" y="34" font-size="24" font-weight="700" fill="#2F47A6">triglyceride</text>
+<rect x="30" y="52" width="92" height="170" rx="8" fill="#FBF1DF" stroke="#B8761A" stroke-width="2.5"/>
+<text x="76" y="250" text-anchor="middle" font-size="22" fill="#B8761A" font-weight="700">glycerol</text>
+<line x1="122" y1="80" x2="180" y2="80" stroke="#B23A3A" stroke-width="5"/><circle cx="151" cy="80" r="8" fill="#B23A3A"/>
+<polyline points="180,80 206,89 232,80 258,89 284,80 310,89 336,80 362,89" fill="none" stroke="#1E2A33" stroke-width="3" stroke-linejoin="round"/>
+<line x1="122" y1="137" x2="180" y2="137" stroke="#B23A3A" stroke-width="5"/><circle cx="151" cy="137" r="8" fill="#B23A3A"/>
+<polyline points="180,137 206,146 232,137 258,146 284,137 310,146 336,137 362,146" fill="none" stroke="#1E2A33" stroke-width="3" stroke-linejoin="round"/>
+<line x1="122" y1="194" x2="180" y2="194" stroke="#B23A3A" stroke-width="5"/><circle cx="151" cy="194" r="8" fill="#B23A3A"/>
+<polyline points="180,194 206,203 232,194 258,203 284,194 310,203 336,194 362,203" fill="none" stroke="#1E2A33" stroke-width="3" stroke-linejoin="round"/>
+<text x="151" y="290" text-anchor="middle" font-size="22" fill="#B23A3A" font-weight="700">3 ester bonds</text>
+<text x="280" y="250" text-anchor="middle" font-size="22" fill="#1E2A33">3 fatty acids</text>
+<text x="440" y="34" font-size="24" font-weight="700" fill="#2F47A6">phospholipid</text>
+<circle cx="480" cy="110" r="34" fill="#DCE6F7" stroke="#2F47A6" stroke-width="2.5"/><text x="480" y="118" text-anchor="middle" font-size="24" font-weight="700" fill="#2F47A6">P</text>
+<rect x="450" y="150" width="60" height="44" rx="6" fill="#FBF1DF" stroke="#B8761A" stroke-width="2.5"/>
+<line x1="480" y1="144" x2="480" y2="150" stroke="#1E2A33" stroke-width="3"/>
+<line x1="464" y1="194" x2="464" y2="214" stroke="#B23A3A" stroke-width="5"/>
+<line x1="496" y1="194" x2="496" y2="214" stroke="#B23A3A" stroke-width="5"/>
+<polyline points="464,214 473,238 464,262 473,286 464,310" fill="none" stroke="#1E2A33" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="496,214 505,238 510,262 519,286 510,310" fill="none" stroke="#1E2A33" stroke-width="3" stroke-linejoin="round"/>
+<text x="540" y="118" font-size="22" fill="#1E2A33">phosphate</text><text x="540" y="144" font-size="22" fill="#2F47A6">hydrophilic</text>
+<text x="540" y="250" font-size="22" fill="#1E2A33">2 fatty acids</text><text x="540" y="276" font-size="22" fill="#B8761A">hydrophobic</text>
+</svg>
+    <figcaption>A triglyceride (left) and a phospholipid (right). Red: ester bonds. In the phospholipid the phosphate makes a <span class="term" data-t="hydrophilic" tabindex="0" role="button">hydrophilic</span> head; the two fatty acid tails are hydrophobic.</figcaption>
+  </figure>
+  <div class="finish"><b>Finish it.</b> Glycerol is C<sub>3</sub>H<sub>8</sub>O<sub>3</sub>; palmitic acid is C<sub>16</sub>H<sub>32</sub>O<sub>2</sub>. One glycerol and three palmitic acids make a triglyceride. Total atoms: C 3 + 48 = 51, H 8 + 96 = 104, O 3 + 6 = 9. Three waters are lost: H 104 − 6 = <b>?</b>, O 9 − 3 = <b>?</b>.
+    <details><summary>Answer</summary><p><span class="nw">C<sub>51</sub>H<sub>98</sub>O<sub>6</sub></span>.</p></details></div>
+
+  <h3>B1.1.10 Saturated and unsaturated fatty acids</h3>
+  <figure>
+<svg viewBox="0 0 700 330" role="img" aria-label="Three fatty acid chains. A saturated fatty acid has only single bonds and its chain is straight. A monounsaturated fatty acid has one carbon to carbon double bond, which puts one kink in the chain. A polyunsaturated fatty acid has two or more double bonds and two or more kinks." font-family="Arial,Helvetica,sans-serif">
+<rect x="0" y="0" width="700" height="330" fill="#fff"/>
+<text x="20" y="38" font-size="24" font-weight="700" fill="#2F47A6">saturated</text>
+<text x="20" y="74" font-size="22" fill="#4A5862">no C=C</text>
+<text x="250" y="70" font-size="22" font-weight="700" fill="#1E2A33">COOH</text>
+<polyline points="320,60 346,69 372,60 398,69 424,60 450,69 476,60 502,69 528,60 554,69 580,60 606,69 632,60" fill="none" stroke="#1E2A33" stroke-width="3" stroke-linejoin="round"/>
+<text x="20" y="148" font-size="24" font-weight="700" fill="#2F47A6">monounsaturated</text>
+<text x="20" y="184" font-size="22" fill="#4A5862">one C=C</text>
+<text x="250" y="180" font-size="22" font-weight="700" fill="#1E2A33">COOH</text>
+<polyline points="320,170 346,179 372,170 398,179 424,170 450,179 476,170 499.6,190 523.1,192 546.7,212 570.3,214 593.8,233.9 617.4,235.9" fill="none" stroke="#1E2A33" stroke-width="3" stroke-linejoin="round"/>
+<line x1="452" y1="184.7" x2="478" y2="175.7" stroke="#B23A3A" stroke-width="3"/>
+<line x1="450" y1="179" x2="476" y2="170" stroke="#B23A3A" stroke-width="3"/>
+<text x="20" y="258" font-size="24" font-weight="700" fill="#2F47A6">polyunsaturated</text>
+<text x="20" y="294" font-size="22" fill="#4A5862">two or more C=C</text>
+<text x="250" y="290" font-size="22" font-weight="700" fill="#1E2A33">COOH</text>
+<polyline points="320,280 346,289 372,280 398,289 424,280 448.1,298.7 472.2,299.5 496.3,318.2 522.3,309.2 548.3,318.2 574.3,309.2 600.3,318.2 626.3,309.2" fill="none" stroke="#1E2A33" stroke-width="3" stroke-linejoin="round"/>
+<line x1="400" y1="294.7" x2="426" y2="285.7" stroke="#B23A3A" stroke-width="3"/>
+<line x1="398" y1="289" x2="424" y2="280" stroke="#B23A3A" stroke-width="3"/>
+<line x1="468.5" y1="304.2" x2="492.6" y2="323" stroke="#B23A3A" stroke-width="3"/>
+<line x1="472.2" y1="299.5" x2="496.3" y2="318.2" stroke="#B23A3A" stroke-width="3"/>
+</svg>
+    <figcaption>Red: carbon to carbon double bonds (C=C). Each one puts a kink (bend) in the chain.</figcaption>
+  </figure>
+  <ul>
+    <li><b>Saturated</b>: no C=C double bonds; every carbon holds as many hydrogen atoms as it can. Straight chain.<span class="learn">Learn</span></li>
+    <li><b>Monounsaturated</b>: exactly <b>one</b> C=C double bond: one kink.</li>
+    <li><b>Polyunsaturated</b>: <b>two or more</b> C=C double bonds.</li>
+  </ul>
+  <p><b>Melting point.</b> Straight saturated chains pack closely together, so more energy is needed to separate them: higher melting point. Kinks stop <span class="term" data-t="unsaturated" tabindex="0" role="button">unsaturated</span> chains packing closely: lower melting point. So the more C=C bonds, the lower the melting point.<span class="learn">Learn</span> For example, stearic acid (18 carbons, no C=C) melts at about 69 °C, oleic acid (18 carbons, one C=C) at about 13 °C (textbook values, not from your class files; only an illustration, not to learn).</p>
+  <p><b>Plants and endotherms.</b> Plants store energy mainly as <b>oils</b>, rich in unsaturated fatty acids; they stay liquid even when the plant is cold (as in seeds). Endotherms (birds and mammals, which keep their body warm, near 37 °C in humans) store more <b>fats</b>, richer in saturated fatty acids: these are solid at room temperature but soft at body temperature.</p>
+  <p style="font-size:.95rem;color:var(--ink-soft)">For context: "trans fats" in pack question 11 are unsaturated fatty acids with straight chains that behave like saturated ones. Their chemistry is not needed for the IB exam.</p>
+  <div class="worked"><b>Worked example: percentage change</b> (data questions ask this often). A seed contains 4.8 g of oil. After 6 days of growing it contains 1.2 g. Calculate the percentage decrease. (Invented numbers for practice.)
+    <ol>
+      <li>Change: 4.8 − 1.2 = 3.6 g.</li>
+      <li>Divide by the <b>starting</b> value: 3.6 ÷ 4.8 = 0.75.</li>
+      <li>Multiply by 100: <b>75% decrease</b>.</li>
+    </ol>
+    <details><summary>Why this step? (step 2)</summary><p>A percentage change is always measured against where you started. Dividing by the final value (1.2) would give 300%, which is wrong.</p></details></div>
+  <div class="finish"><b>Finish it.</b> The <span class="term" data-t="blubber" tabindex="0" role="button">blubber</span> of a seal is 40 mm thick in autumn and 52 mm thick in winter. Change: 52 − 40 = 12 mm. Divide by the starting value and multiply by 100.
+    <details><summary>Answer</summary><p>12 ÷ 40 × 100 = 30% increase.</p></details></div>
+  <div class="tip"><b>Exam trap.</b> The bond in fats is an <b>ester</b> bond (not glycosidic, not peptide). A phospholipid has <b>two</b> fatty acids, not three. "Monounsaturated" means one C=C double bond, not "one hydrogen missing".</div>
+
+  <details class="check" id="check-c"><summary>Self-check C (write two key words for each, then open)</summary>
+    <ol>
+      <li>Name the bond between glycerol and a fatty acid.</li>
+      <li>How many water molecules are released when one phospholipid forms from glycerol, two fatty acids and a phosphate?</li>
+      <li>A fatty acid has three C=C bonds. What type is it?</li>
+      <li>Why are oils liquid at room temperature?</li>
+    </ol>
+    <p><b>Answers.</b> 1. Ester bond. 2. Three (three condensations: two fatty acids and the phosphate). 3. Polyunsaturated. 4. Their unsaturated fatty acids have kinks, so they cannot pack closely: low melting point.</p>
+  </details>
+</section>
+
+<!-- =============================== D: B1.1.11 to B1.1.13 =============================== -->
+<section class="topic" id="b11d">
+  <div class="kicker">B1.1.11 to B1.1.13 · SL and HL</div>
+  <h2>Fat stores, the bilayer and steroids</h2>
+  <p class="guiding">Being hydrophobic makes lipids good stores, good insulators, and the barrier around every cell.</p>
+  <div class="ican">
+    <p>By the end of this section (the guide's statement titles in bold)</p>
+    <label><input type="checkbox" data-k="c11"><span><b>B1.1.11 Triglycerides in <span class="term" data-t="adipose tissue" tabindex="0" role="button">adipose</span> tissues for energy storage and thermal <span class="term" data-t="insulation" tabindex="0" role="button">insulation</span>.</b> I can explain why triglycerides suit long-term energy storage in adipose tissue, and how adipose tissue insulates, linked to body temperature and <span class="term" data-t="habitat" tabindex="0" role="button">habitat</span></span></label>
+    <label><input type="checkbox" data-k="c12"><span><b>B1.1.12 Formation of phospholipid bilayers as a consequence of the hydrophobic and hydrophilic regions.</b> I can explain how <span class="term" data-t="amphipathic" tabindex="0" role="button">amphipathic</span> phospholipids form a bilayer in water</span></label>
+    <label><input type="checkbox" data-k="c13"><span><b>B1.1.13 Ability of non-polar steroids to pass through the phospholipid bilayer.</b> I can identify steroids in diagrams (four <span class="term" data-t="fused" tabindex="0" role="button">fused</span> rings) and explain why oestradiol and testosterone pass through the bilayer</span></label>
+  </div>
+
+  <h3>B1.1.11 Triglycerides in adipose tissue</h3>
+  <p><b>Adipose tissue</b> is fat tissue: cells full of triglyceride droplets, under the skin and around organs.</p>
+  <ul>
+    <li><b>Energy store</b>: triglycerides release about 38 kJ per gram in respiration, carbohydrates about 17 kJ per gram (summary notes): about twice as much, so the same energy is stored in less body mass.<span class="learn">Learn</span> They are insoluble, so they have no osmotic effect on cells.</li>
+    <li><b>Thermal insulation</b>: fat conducts heat poorly, so a layer under the skin slows heat loss. Endotherms keep their body warmer than their surroundings, so the colder the habitat, the thicker the layer. Seals and whales in polar water have thick blubber.</li>
+  </ul>
+
+  <h3>B1.1.12 The phospholipid bilayer</h3>
+  <p>A phospholipid is <b>amphipathic</b>: one part is hydrophilic (the phosphate head, which is charged and polar) and one part is hydrophobic (the two fatty acid tails).<span class="learn">Learn</span> In water, phospholipids arrange themselves into a double layer: heads face the water on both sides, tails point inwards, away from water. Nothing has to build it; it forms by itself.</p>
+  <figure>
+<svg viewBox="0 0 700 360" role="img" aria-label="A phospholipid bilayer between water on both sides. The hydrophilic phosphate heads face the water; the hydrophobic fatty acid tails face each other in the middle. A small non-polar steroid molecule sits among the tails: it can dissolve in the hydrophobic core and pass straight through." font-family="Arial,Helvetica,sans-serif">
+<rect x="0" y="0" width="700" height="360" fill="#fff"/>
+<rect x="0" y="0" width="700" height="70" fill="#EAF3FB"/><rect x="0" y="290" width="700" height="70" fill="#EAF3FB"/>
+<text x="20" y="44" font-size="22" fill="#2F47A6">water</text><text x="20" y="336" font-size="22" fill="#2F47A6">water</text>
+<circle cx="120" cy="92" r="15" fill="#DCE6F7" stroke="#2F47A6" stroke-width="2"/>
+<path d="M114,107 l4,20 l-4,20 l4,20" fill="none" stroke="#1E2A33" stroke-width="2.5"/><path d="M126,107 l-4,20 l4,20 l-4,20" fill="none" stroke="#1E2A33" stroke-width="2.5"/>
+<circle cx="120" cy="268" r="15" fill="#DCE6F7" stroke="#2F47A6" stroke-width="2"/>
+<path d="M114,253 l4,-20 l-4,-20 l4,-20" fill="none" stroke="#1E2A33" stroke-width="2.5"/><path d="M126,253 l-4,-20 l4,-20 l-4,-20" fill="none" stroke="#1E2A33" stroke-width="2.5"/>
+<circle cx="160" cy="92" r="15" fill="#DCE6F7" stroke="#2F47A6" stroke-width="2"/>
+<path d="M154,107 l4,20 l-4,20 l4,20" fill="none" stroke="#1E2A33" stroke-width="2.5"/><path d="M166,107 l-4,20 l4,20 l-4,20" fill="none" stroke="#1E2A33" stroke-width="2.5"/>
+<circle cx="160" cy="268" r="15" fill="#DCE6F7" stroke="#2F47A6" stroke-width="2"/>
+<path d="M154,253 l4,-20 l-4,-20 l4,-20" fill="none" stroke="#1E2A33" stroke-width="2.5"/><path d="M166,253 l-4,-20 l4,-20 l-4,-20" fill="none" stroke="#1E2A33" stroke-width="2.5"/>
+<circle cx="200" cy="92" r="15" fill="#DCE6F7" stroke="#2F47A6" stroke-width="2"/>
+<path d="M194,107 l4,20 l-4,20 l4,20" fill="none" stroke="#1E2A33" stroke-width="2.5"/><path d="M206,107 l-4,20 l4,20 l-4,20" fill="none" stroke="#1E2A33" stroke-width="2.5"/>
+<circle cx="200" cy="268" r="15" fill="#DCE6F7" stroke="#2F47A6" stroke-width="2"/>
+<path d="M194,253 l4,-20 l-4,-20 l4,-20" fill="none" stroke="#1E2A33" stroke-width="2.5"/><path d="M206,253 l-4,-20 l4,-20 l-4,-20" fill="none" stroke="#1E2A33" stroke-width="2.5"/>
+<circle cx="240" cy="92" r="15" fill="#DCE6F7" stroke="#2F47A6" stroke-width="2"/>
+<path d="M234,107 l4,20 l-4,20 l4,20" fill="none" stroke="#1E2A33" stroke-width="2.5"/><path d="M246,107 l-4,20 l4,20 l-4,20" fill="none" stroke="#1E2A33" stroke-width="2.5"/>
+<circle cx="240" cy="268" r="15" fill="#DCE6F7" stroke="#2F47A6" stroke-width="2"/>
+<path d="M234,253 l4,-20 l-4,-20 l4,-20" fill="none" stroke="#1E2A33" stroke-width="2.5"/><path d="M246,253 l-4,-20 l4,-20 l-4,-20" fill="none" stroke="#1E2A33" stroke-width="2.5"/>
+<circle cx="280" cy="92" r="15" fill="#DCE6F7" stroke="#2F47A6" stroke-width="2"/>
+<path d="M274,107 l4,20 l-4,20 l4,20" fill="none" stroke="#1E2A33" stroke-width="2.5"/><path d="M286,107 l-4,20 l4,20 l-4,20" fill="none" stroke="#1E2A33" stroke-width="2.5"/>
+<circle cx="280" cy="268" r="15" fill="#DCE6F7" stroke="#2F47A6" stroke-width="2"/>
+<path d="M274,253 l4,-20 l-4,-20 l4,-20" fill="none" stroke="#1E2A33" stroke-width="2.5"/><path d="M286,253 l-4,-20 l4,-20 l-4,-20" fill="none" stroke="#1E2A33" stroke-width="2.5"/>
+<circle cx="320" cy="92" r="15" fill="#DCE6F7" stroke="#2F47A6" stroke-width="2"/>
+<path d="M314,107 l4,20 l-4,20 l4,20" fill="none" stroke="#1E2A33" stroke-width="2.5"/><path d="M326,107 l-4,20 l4,20 l-4,20" fill="none" stroke="#1E2A33" stroke-width="2.5"/>
+<circle cx="320" cy="268" r="15" fill="#DCE6F7" stroke="#2F47A6" stroke-width="2"/>
+<path d="M314,253 l4,-20 l-4,-20 l4,-20" fill="none" stroke="#1E2A33" stroke-width="2.5"/><path d="M326,253 l-4,-20 l4,-20 l-4,-20" fill="none" stroke="#1E2A33" stroke-width="2.5"/>
+<circle cx="440" cy="92" r="15" fill="#DCE6F7" stroke="#2F47A6" stroke-width="2"/>
+<path d="M434,107 l4,20 l-4,20 l4,20" fill="none" stroke="#1E2A33" stroke-width="2.5"/><path d="M446,107 l-4,20 l4,20 l-4,20" fill="none" stroke="#1E2A33" stroke-width="2.5"/>
+<circle cx="440" cy="268" r="15" fill="#DCE6F7" stroke="#2F47A6" stroke-width="2"/>
+<path d="M434,253 l4,-20 l-4,-20 l4,-20" fill="none" stroke="#1E2A33" stroke-width="2.5"/><path d="M446,253 l-4,-20 l4,-20 l-4,-20" fill="none" stroke="#1E2A33" stroke-width="2.5"/>
+<circle cx="480" cy="92" r="15" fill="#DCE6F7" stroke="#2F47A6" stroke-width="2"/>
+<path d="M474,107 l4,20 l-4,20 l4,20" fill="none" stroke="#1E2A33" stroke-width="2.5"/><path d="M486,107 l-4,20 l4,20 l-4,20" fill="none" stroke="#1E2A33" stroke-width="2.5"/>
+<circle cx="480" cy="268" r="15" fill="#DCE6F7" stroke="#2F47A6" stroke-width="2"/>
+<path d="M474,253 l4,-20 l-4,-20 l4,-20" fill="none" stroke="#1E2A33" stroke-width="2.5"/><path d="M486,253 l-4,-20 l4,-20 l-4,-20" fill="none" stroke="#1E2A33" stroke-width="2.5"/>
+<circle cx="520" cy="92" r="15" fill="#DCE6F7" stroke="#2F47A6" stroke-width="2"/>
+<path d="M514,107 l4,20 l-4,20 l4,20" fill="none" stroke="#1E2A33" stroke-width="2.5"/><path d="M526,107 l-4,20 l4,20 l-4,20" fill="none" stroke="#1E2A33" stroke-width="2.5"/>
+<circle cx="520" cy="268" r="15" fill="#DCE6F7" stroke="#2F47A6" stroke-width="2"/>
+<path d="M514,253 l4,-20 l-4,-20 l4,-20" fill="none" stroke="#1E2A33" stroke-width="2.5"/><path d="M526,253 l-4,-20 l4,-20 l-4,-20" fill="none" stroke="#1E2A33" stroke-width="2.5"/>
+<polygon points="352,173 366.7,181.5 366.7,198.5 352,207 337.3,198.5 337.3,181.5" fill="none" stroke="#B23A3A" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="381.4,173 396.2,181.5 396.2,198.5 381.4,207 366.7,198.5 366.7,181.5" fill="none" stroke="#B23A3A" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="396.2,147.5 410.9,156 410.9,173 396.2,181.5 381.4,173 381.4,156" fill="none" stroke="#B23A3A" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="410.9,156 427.1,150.7 437.1,164.5 427.1,178.3 410.9,173" fill="none" stroke="#B23A3A" stroke-width="3" stroke-linejoin="round"/>
+<text x="590" y="98" font-size="22" fill="#2F47A6">heads</text><text x="590" y="186" font-size="22" fill="#1E2A33">tails</text><text x="590" y="274" font-size="22" fill="#2F47A6">heads</text>
+<text x="380" y="44" text-anchor="middle" font-size="22" font-weight="700" fill="#B23A3A">steroid</text>
+<line x1="380" y1="52" x2="380" y2="140" stroke="#B23A3A" stroke-width="2.5" stroke-dasharray="6 5"/><polygon points="372,136 380,152 388,136" fill="#B23A3A"/>
+</svg>
+    <figcaption>The bilayer: hydrophilic heads facing water on both sides, hydrophobic tails inside. The core is hydrophobic, so ions and polar molecules cannot easily cross, but a small non-polar steroid can.</figcaption>
+  </figure>
+  <div class="worked"><b>Worked example: a 3-mark "explain" answer.</b> "Explain why phospholipids form a bilayer in water."
+    <ol>
+      <li>Phospholipids are amphipathic: a hydrophilic phosphate head and two hydrophobic fatty acid tails.</li>
+      <li>The heads are attracted to water, SO they face the water on both sides.</li>
+      <li>The tails are not attracted to water, SO they point inwards, towards each other, forming a hydrophobic core.</li>
+    </ol>
+    <details><summary>Why this step? (step 1)</summary><p>The word "amphipathic" with both halves named is usually the first marking point. Everything else follows from it.</p></details></div>
+
+  <h3>B1.1.13 Steroids</h3>
+  <p><b>How to recognise a steroid in a diagram:</b> four rings fused together, three rings of six carbons and one ring of five, with only a few -OH or C=O groups.<span class="learn">Learn</span> Examples: the sex <span class="term" data-t="hormone" tabindex="0" role="button">hormones</span> <b>oestradiol</b> and <b>testosterone</b>.</p>
+  <figure>
+<svg viewBox="40 40 660 250" role="img" aria-label="The steroid skeleton: four rings fused together, three rings of six carbon atoms (A, B and C) and one ring of five (D), with only a few OH groups. This outline matches oestradiol, which has an OH group on ring A and one on ring D." font-family="Arial,Helvetica,sans-serif">
+<rect x="40" y="40" width="660" height="250" fill="#fff"/>
+<polygon points="160,148 205,174 205,226 160,252 115,226 115,174" fill="none" stroke="#1E2A33" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="250.1,148 295.1,174 295.1,226 250.1,252 205,226 205,174" fill="none" stroke="#1E2A33" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="295.1,70 340.1,96 340.1,148 295.1,174 250.1,148 250.1,96" fill="none" stroke="#1E2A33" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="340.1,96 389.6,79.9 420.2,122 389.6,164.1 340.1,148" fill="none" stroke="#1E2A33" stroke-width="3" stroke-linejoin="round"/>
+<text x="160" y="208" text-anchor="middle" font-size="22" font-weight="700" fill="#2F47A6">A</text>
+<text x="250.1" y="208" text-anchor="middle" font-size="22" font-weight="700" fill="#2F47A6">B</text>
+<text x="295.1" y="130" text-anchor="middle" font-size="22" font-weight="700" fill="#2F47A6">C</text>
+<text x="375.9" y="130" text-anchor="middle" font-size="22" font-weight="700" fill="#2F47A6">D</text>
+<line x1="115" y1="226" x2="79" y2="246" stroke="#1E2A33" stroke-width="3"/><text x="75" y="272" text-anchor="middle" font-size="22" fill="#B23A3A" font-weight="700">HO</text>
+<line x1="420.2" y1="122" x2="456.2" y2="104" stroke="#1E2A33" stroke-width="3"/><text x="478.2" y="102" text-anchor="middle" font-size="22" fill="#B23A3A" font-weight="700">OH</text>
+<text x="560" y="150" font-size="22" fill="#1E2A33">3 rings of 6</text><text x="560" y="180" font-size="22" fill="#1E2A33">1 ring of 5</text><text x="560" y="210" font-size="22" fill="#1E2A33">fused</text>
+</svg>
+    <figcaption>The steroid outline: rings A, B and C have six carbons, ring D has five. This one has an -OH group on ring A and on ring D, like oestradiol.</figcaption>
+  </figure>
+  <p>Steroids are mostly carbon and hydrogen, so they are <b>non-polar</b> (hydrophobic). They dissolve in the hydrophobic core of the bilayer and pass straight through it by <span class="term" data-t="diffusion" tabindex="0" role="button">diffusion</span>, without a protein channel. So steroid hormones can enter their target cells. For context: inside, they bind to <span class="term" data-t="receptor" tabindex="0" role="button">receptors</span> and change which <span class="term" data-t="gene" tabindex="0" role="button">genes</span> are used.</p>
+  <div class="finish"><b>Finish it.</b> "Explain why ringed seals living in Arctic water have a thick layer of blubber. [2]" First half: "Blubber is adipose tissue, which conducts heat poorly, SO ..."
+    <details><summary>Answer</summary><p>... it reduces heat loss from the body to the very cold water; a seal keeps its body much warmer than the water, so it needs a thick layer (it also stores energy).</p></details></div>
+  <div class="tip"><b>Exam trap.</b> The heads are hydrophilic and the tails hydrophobic, never the other way round. To identify a steroid, point to the four fused rings; do not confuse it with a phospholipid (head and two tails) or a triglyceride (three tails).</div>
+
+  <details class="check" id="check-d"><summary>Self-check D (write two key words for each, then open)</summary>
+    <ol>
+      <li>What does "amphipathic" mean?</li>
+      <li>Which part of a phospholipid faces the water?</li>
+      <li>How do you recognise a steroid in a diagram?</li>
+      <li>Give two reasons why triglycerides are good long-term energy stores.</li>
+    </ol>
+    <p><b>Answers.</b> 1. Having a hydrophilic part and a hydrophobic part in one molecule. 2. The phosphate head. 3. Four fused rings: three of six carbons, one of five. 4. About twice the energy per gram of carbohydrate (less mass to carry); insoluble, so no osmotic effect.</p>
+  </details>
+</section>
+
+<!-- =============================== QUIZ =============================== -->
+<section class="topic quiz" id="quiz">
+  <div class="kicker">Paper 1A style (multiple choice), then 3 short written items</div>
+  <h2>Quick quiz</h2>
+  <p>Decide on your answer before you click. Each question explains the trap after you answer. Then write the three short answers on paper and mark them with the model answers.</p>
+
+  <div class="q" data-a="2"><p>1. Three α-glucose molecules (C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>) are joined in a chain by condensation. What is the formula of the product?</p>
+    <button>C<sub>18</sub>H<sub>36</sub>O<sub>18</sub></button>
+    <button>C<sub>18</sub>H<sub>34</sub>O<sub>17</sub></button>
+    <button>C<sub>18</sub>H<sub>32</sub>O<sub>16</sub></button>
+    <button>C<sub>18</sub>H<sub>30</sub>O<sub>15</sub></button>
+    <div class="why">Three molecules, two bonds, so two waters lost: C<sub>18</sub>H<sub>36</sub>O<sub>18</sub> − 2 H<sub>2</sub>O = C<sub>18</sub>H<sub>32</sub>O<sub>16</sub>. Option 1 loses no water; option 2 loses only one; option 4 loses three (one per molecule instead of one per bond).</div></div>
+
+  <div class="q" data-a="1"><p>2. Which description always identifies a hexose?</p>
+    <button>A ring with five corners</button>
+    <button>Six carbon atoms in total, counting the ring and the side chains</button>
+    <button>A ring of six carbon atoms with no oxygen</button>
+    <button>Two rings joined by a glycosidic bond</button>
+    <div class="why">Hexose means six carbons. Fructose is a hexose with a five-cornered ring, so counting corners fails. Sugar rings always contain one oxygen. Two joined rings is a disaccharide.</div></div>
+
+  <div class="q" data-a="0"><p>3. Which property of glucose allows it to be transported dissolved in blood plasma?</p>
+    <button>Its -OH groups form hydrogen bonds with water, so it is soluble</button>
+    <button>It is chemically stable</button>
+    <button>It releases a lot of energy when oxidised</button>
+    <button>It is non-polar</button>
+    <div class="why">Transport in plasma needs solubility, which comes from the polar -OH groups. Stability suits storage; energy yield suits respiration. Glucose is polar, not non-polar.</div></div>
+
+  <div class="q" data-a="3"><p>4. Why do cellulose molecules form straight chains?</p>
+    <button>They contain α-glucose joined by 1,4 bonds</button>
+    <button>They have many 1,6 branches</button>
+    <button>Hydrogen bonds inside each chain coil it into a helix</button>
+    <button>Each β-glucose is flipped relative to its neighbour</button>
+    <div class="why">Alternating (flipped) β-glucose keeps the chain straight. α-glucose with 1,4 bonds gives the coiled amylose; 1,6 bonds give branches (amylopectin, glycogen). Hydrogen bonds link neighbouring cellulose chains; they do not coil them.</div></div>
+
+  <div class="q" data-a="0"><p>5. A triglyceride is hydrolysed into glycerol and fatty acids. Which bonds are broken, and what happens to water?</p>
+    <button>Three ester bonds; three water molecules are used</button>
+    <button>Three glycosidic bonds; three water molecules are used</button>
+    <button>Three ester bonds; three water molecules are released</button>
+    <button>Two ester bonds and one phosphate bond; two water molecules are used</button>
+    <div class="why">Hydrolysis uses water, one molecule per bond broken, and the triglyceride has three ester bonds. Glycosidic bonds are in carbohydrates. Releasing water is condensation. Option 4 describes part of a phospholipid.</div></div>
+
+  <div class="q" data-a="1"><p>6. Fatty acid X has 18 carbon atoms and no C=C double bonds. Fatty acid Y has 18 carbon atoms and two C=C double bonds. Which statement is correct?</p>
+    <button>X is monounsaturated and has the lower melting point</button>
+    <button>Y is polyunsaturated and has the lower melting point</button>
+    <button>Y is saturated and packs more closely than X</button>
+    <button>X has kinks in its chain, so it is liquid at room temperature</button>
+    <div class="why">Two or more C=C means polyunsaturated. Its kinks stop the chains packing closely, so Y melts at a lower temperature. X has no C=C: saturated, straight, higher melting point.</div></div>
+
+  <div class="q" data-a="2"><p>7. Which feature in a molecular diagram shows that a molecule is a steroid?</p>
+    <button>A glycerol joined to two fatty acids and a phosphate group</button>
+    <button>A long chain of rings joined by glycosidic bonds</button>
+    <button>Four fused rings: three with six carbons and one with five</button>
+    <button>One hexagonal ring with a -COOH group</button>
+    <div class="why">Four fused rings is the steroid shape. Option 1 is a phospholipid; option 2 a polysaccharide; option 4 is neither.</div></div>
+
+  <div class="score" id="score">Score: 0 / 7 answered 0</div>
+
+  <h3>Written items (on paper)</h3>
+  <div class="written" data-max="2"><p><b>8.</b> Distinguish between the structures of α-glucose and β-glucose. [2]</p>
+    <details><summary>Show model answer</summary>
+      <p>One mark per point, up to 2:</p>
+      <ul><li>both are hexoses / have the same formula, C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>, and the same ring;</li><li>they differ at carbon 1;</li><li>in α-glucose the -OH on carbon 1 is below the ring, in β-glucose above it.</li></ul>
+      <p>"Distinguish" asks for the difference: the carbon 1 point is needed for full marks.</p></details></div>
+  <div class="written" data-max="3"><p><b>9.</b> Outline how glycoproteins allow cells to be recognised, using ABO blood groups as an example. [3]</p>
+    <details><summary>Show model answer</summary>
+      <ul><li>a glycoprotein is a membrane protein with a carbohydrate chain attached, on the outside of the cell;</li><li>other cells / the immune system recognise the shape of the carbohydrate chain (self or foreign);</li><li>red blood cells of group A and group B carry different chains (antigens): O has the basic chain, A and B add different extra sugars;</li><li>blood with an antigen the person lacks is recognised as foreign / antibodies make the cells clump.</li></ul>
+      <p>Any 3 points.</p></details></div>
+  <div class="written" data-max="2"><p><b>10.</b> Explain why triglycerides are suited to long-term energy storage. [2]</p>
+    <details><summary>Show model answer</summary>
+      <ul><li>they release about twice as much energy per gram as carbohydrates, SO less body mass is needed to store the same energy;</li><li>they are insoluble (hydrophobic), SO they have no osmotic effect on cells.</li></ul>
+      <p>A feature with no "SO" part scores 0.</p></details></div>
+  <p>After the quiz: for every question you missed, close this page, redo the self-check of that section from memory, and write the rule in the Error log.</p>
+</section>
+
+<section class="end" id="end">
+  <h2 style="font-size:1.4rem">Before you close this</h2>
+  <ul>
+    <li>Tick the "I can" boxes you are confident about. The unticked ones are the first ten minutes of your next Biology session.</li>
+    <li>Open the <a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">study sheet</a>, <b>Error log</b> tab. One row for every lost mark (pack and quiz), with its type: <b>did not know</b>, <b>wrong method</b>, <b>slip</b>, <b>time</b> or <b>ask teacher</b>. Add the rule that fixes it (for example "hydrolysis ADDS water").</li>
+    <li><b>Fix-it:</b> choose one pack answer that lost marks and rewrite it on paper until it would get full marks, using the mark scheme's points in your own words.</li>
+    <li>Draw from memory before you sleep: α-glucose, β-glucose, and a triglyceride with its three ester bonds.</li>
+    <li>Also on the study site: <a href="../flashcards.html">flashcards</a> (5 to 10 minutes a day), <a href="../exam.html">exam technique</a>, and your <a href="../progress.html">progress page</a>, which turns green as you tick the "I can" boxes and pass the quiz.</li>
+  </ul>
+</section>
+
+</main>
+
+<script>
+(function(){
+  // remember ticked "I can" boxes on this device; fails quietly where storage is unavailable
+  var key='ib-bio-b11-ican';
+  var boxes=document.querySelectorAll('.ican input');
+  try{ var saved=JSON.parse(localStorage.getItem(key)||'{}'); boxes.forEach(function(b){ if(saved[b.dataset.k]) b.checked=true; }); }catch(e){}
+  boxes.forEach(function(b){ b.addEventListener('change',function(){ try{ var s={}; boxes.forEach(function(x){ if(x.checked) s[x.dataset.k]=1; }); localStorage.setItem(key,JSON.stringify(s)); }catch(e){} }); });
+
+  // quiz: only the 7 multiple-choice questions are scored and saved; the written items are self-marked on paper
+  var qs=document.querySelectorAll('.quiz .q'); var right=0, done=0, total=qs.length;
+  qs.forEach(function(q){
+    var a=parseInt(q.dataset.a,10); var btns=q.querySelectorAll('button');
+    btns.forEach(function(b,i){ b.addEventListener('click',function(){
+      if(q.classList.contains('done')) return;
+      q.classList.add('done'); done++;
+      if(i===a){ b.classList.add('right'); right++; } else { b.classList.add('wrong'); btns[a].classList.add('right'); }
+      document.getElementById('score').textContent='Score: '+right+' / '+total+' answered '+done+(done===total?(right>=6?'. Good. Log the ones you missed.':'. For each one you missed, redo that section self-check from memory, then log it.'):'');
+      if(done===qs.length){ try{ var KQ='ib-quiz-guide-2026-11-15'; var prev=JSON.parse(localStorage.getItem(KQ)||'null'); localStorage.setItem(KQ,JSON.stringify({right:right,total:qs.length,date:new Date().toISOString().slice(0,10),best:Math.max(right,prev&&prev.best||0)})); }catch(e){} }
+    }); });
+  });
+})();
+</script>
+
+<!--terms:start-->
+<div id="termbox" role="dialog" aria-live="polite"><div class="tb-h"><b></b><button type="button">Close</button></div><p class="tb-d"></p></div>
+<script id="terms-data" type="application/json">{"electron": {"w": "electrons", "d": "A very small particle with a negative charge that moves around the centre of an atom. Bonds form when atoms share electrons."}, "outer shell": {"w": "outer shell", "d": "The outermost layer of electrons around an atom. These are the electrons that take part in bonding."}, "covalent bond": {"w": "covalent bonds", "d": "A strong bond in which two atoms share a pair of electrons. Covalent bonds hold the atoms of one molecule together."}, "non-metal": {"w": "non-metals", "d": "Elements that are not metals, such as hydrogen, oxygen, nitrogen, phosphorus and sulfur. They join to each other with covalent bonds."}, "compound": {"w": "compounds", "d": "A substance made of atoms of two or more different elements joined by bonds. Glucose (C, H and O) is a compound."}, "monomer": {"w": "monomers", "d": "One of the small units that join in a chain to make a polymer. Glucose is the monomer of starch."}, "polymer": {"w": "polymers", "d": "A large molecule made of many similar small units (monomers) joined in a chain. Starch, proteins and DNA are polymers."}, "macromolecule": {"w": "macromolecule", "d": "A very large molecule, made of thousands of atoms. Polysaccharides, proteins and nucleic acids are macromolecules."}, "condensation reaction": {"w": "condensation", "d": "A reaction that joins two molecules with a covalent bond and releases a molecule of water. The opposite of hydrolysis."}, "hydrolysis": {"w": "hydrolysis", "d": "A reaction that uses a water molecule to break a covalent bond, splitting a large molecule into smaller ones."}, "glycosidic bond": {"w": "glycosidic bonds", "d": "The covalent bond that joins two sugar units, made by condensation. \"1,4\" means it links carbon 1 of one sugar to carbon 4 of the next."}, "peptide bond": {"w": "peptide bond", "d": "The covalent bond that joins two amino acids in a protein, made by condensation."}, "polypeptide": {"w": "polypeptide", "d": "A chain of amino acids joined by peptide bonds. A protein is made of one or more polypeptides."}, "nucleotide": {"w": "nucleotide", "d": "The building block of DNA and RNA: a phosphate, a sugar with five carbons and a base, joined together."}, "atp": {"w": "ATP", "d": "A small molecule that carries energy inside cells. Cells make it in respiration and use it to power work such as building polymers."}, "enzyme": {"w": "enzymes", "d": "A protein that speeds up one particular chemical reaction in a living thing without being used up."}, "digestion": {"w": "digestion", "d": "Breaking large food molecules into small ones in the gut, so they can be absorbed into the blood."}, "monosaccharide": {"w": "monosaccharide", "d": "A single sugar unit, such as glucose or ribose: the monomer of carbohydrates."}, "polysaccharide": {"w": "polysaccharide", "d": "A carbohydrate polymer: many monosaccharides joined by glycosidic bonds. Starch, glycogen and cellulose are polysaccharides."}, "disaccharide": {"w": "disaccharide", "d": "Two monosaccharides joined by one glycosidic bond, such as maltose or sucrose."}, "pentose": {"w": "pentoses", "d": "A monosaccharide with five carbon atoms, formula C<sub>5<\/sub>H<sub>10<\/sub>O<sub>5<\/sub>, such as ribose."}, "hexose": {"w": "hexoses", "d": "A monosaccharide with six carbon atoms, formula C<sub>6<\/sub>H<sub>12<\/sub>O<sub>6<\/sub>, such as glucose and fructose."}, "-oh group": {"w": "-OH groups", "d": "An oxygen atom bonded to a hydrogen atom, sticking out from a bigger molecule (a hydroxyl group). It is polar, so it forms hydrogen bonds with water."}, "hydrogen bond": {"w": "hydrogen bonds", "d": "A weak attraction between a slightly positive hydrogen atom and a slightly negative oxygen or nitrogen atom nearby, usually on another molecule."}, "soluble": {"w": "soluble", "d": "Able to dissolve in a liquid, here water. Insoluble means it does not dissolve."}, "insoluble": {"w": "insoluble", "d": "Not able to dissolve in water. Insoluble stores stay put and do not cause osmosis."}, "plasma": {"w": "plasma", "d": "The pale yellow liquid part of blood, mostly water, in which the blood cells float."}, "oxidised": {"w": "oxidised", "d": "Here: broken down with oxygen in respiration, which releases the energy stored in the molecule."}, "respiration": {"w": "respiration", "d": "The process in every cell that releases energy from glucose or fat. With oxygen it produces carbon dioxide and water. It is not the same as breathing."}, "osmosis": {"w": "osmosis", "d": "Water moving across a membrane towards the side with more dissolved substances. Osmotic means to do with osmosis."}, "helix": {"w": "helix", "d": "A spiral shape, like a spring or a spiral staircase."}, "tensile strength": {"w": "tensile strength", "d": "How strongly something resists being pulled apart. A rope has high tensile strength."}, "microfibril": {"w": "microfibrils", "d": "A bundle of cellulose chains held together by hydrogen bonds: the strong fibres of a plant cell wall."}, "cell wall": {"w": "cell wall", "d": "A stiff layer outside the membrane of plant cells that gives the cell its shape and stops it bursting. In plants it is made of cellulose."}, "membrane": {"w": "membrane", "d": "A very thin layer around a cell that controls what goes in and out. It is made mainly of phospholipids."}, "glycoprotein": {"w": "glycoproteins", "d": "A protein with a short carbohydrate (sugar) chain attached. In membranes the chain sticks out of the cell."}, "antigen": {"w": "antigens", "d": "A molecule, often on a cell surface, that the immune system can recognise. Foreign antigens trigger a defence."}, "antibody": {"w": "antibodies", "d": "A protein made by white blood cells that binds to one particular antigen. Antibodies can make foreign cells clump together."}, "immune system": {"w": "immune system", "d": "The body's defence system (white blood cells and the antibodies they make) against germs and foreign cells."}, "lipid": {"w": "lipids", "d": "Fats, oils, waxes and steroids: substances in living things that dissolve in non-polar solvents but hardly at all in water."}, "hydrophobic": {"w": "hydrophobic", "d": "\"Water-hating\": not attracted to water, so it does not dissolve in it. Non-polar substances such as oils are hydrophobic."}, "hydrophilic": {"w": "hydrophilic", "d": "\"Water-loving\": attracted to water, so it dissolves in or mixes with water. Polar and charged groups are hydrophilic."}, "non-polar": {"w": "non-polar", "d": "Having no charged ends, because the electrons are shared evenly. Molecules made mostly of C and H are non-polar."}, "polar": {"w": "polar", "d": "Having a slightly positive end and a slightly negative end, because electrons are shared unevenly. -OH groups and water are polar."}, "solvent": {"w": "solvents", "d": "A liquid that other substances dissolve in. Water and ethanol are solvents."}, "glycerol": {"w": "glycerol", "d": "A small molecule with three carbons, each carrying an -OH group. It is the backbone that fatty acids join to in fats and phospholipids."}, "fatty acid": {"w": "fatty acids", "d": "A long chain of carbon and hydrogen atoms with an acid group (-COOH) at one end. The chain is non-polar, so it is hydrophobic."}, "ester bond": {"w": "ester bonds", "d": "The covalent bond formed by condensation between an -OH of glycerol and the -COOH of a fatty acid."}, "phosphate": {"w": "phosphate", "d": "A small group of atoms, one phosphorus surrounded by four oxygens, with a negative charge. It makes the head of a phospholipid hydrophilic."}, "triglyceride": {"w": "triglycerides", "d": "A fat or oil molecule: one glycerol joined by ester bonds to three fatty acids."}, "phospholipid": {"w": "phospholipids", "d": "A lipid made of glycerol, two fatty acids and a phosphate group: a hydrophilic head and two hydrophobic tails. Membranes are made of them."}, "saturated": {"w": "saturated", "d": "A saturated fatty acid has no C=C double bonds: every carbon holds as many hydrogen atoms as it can."}, "unsaturated": {"w": "unsaturated", "d": "An unsaturated fatty acid has at least one C=C double bond. Mono = one, poly = two or more."}, "melting point": {"w": "melting point", "d": "The temperature at which a solid turns into a liquid. Fats with a high melting point are solid at room temperature."}, "endotherm": {"w": "endotherms", "d": "An animal that keeps its body warm with its own heat, whatever the outside temperature: birds and mammals."}, "adipose tissue": {"w": "adipose tissue", "d": "Fat tissue: cells filled with triglyceride droplets, found under the skin and around organs."}, "blubber": {"w": "blubber", "d": "The thick layer of adipose tissue under the skin of seals and whales."}, "insulation": {"w": "insulation", "d": "Reducing the loss of heat. A thermal insulator is a material that heat passes through slowly."}, "habitat": {"w": "habitat", "d": "The place where an organism lives, such as polar sea water or a warm forest."}, "amphipathic": {"w": "amphipathic", "d": "Having a hydrophilic part and a hydrophobic part in the same molecule. A phospholipid is the main example."}, "bilayer": {"w": "bilayer", "d": "A double layer. The phospholipid bilayer is two layers of phospholipids with their tails facing each other: the basis of every cell membrane."}, "steroid": {"w": "steroids", "d": "A lipid whose molecule is four rings of carbon atoms fused together. Cholesterol, oestradiol and testosterone are steroids."}, "hormone": {"w": "hormones", "d": "A chemical messenger made in one part of the body and carried in the blood to act on other cells (target cells)."}, "diffusion": {"w": "diffusion", "d": "Particles spreading from where there are many of them to where there are fewer, without the cell using energy."}, "receptor": {"w": "receptors", "d": "A protein that a particular signal molecule fits and binds to, which then changes what the cell does."}, "gene": {"w": "genes", "d": "A section of DNA that carries the instructions for one product, usually a protein."}, "kj": {"w": "kJ", "d": "Kilojoule: a unit of energy. 1 kJ = 1&nbsp;000 joules. \"kJ per gram\" is the energy released by one gram."}, "explain": {"w": "Explain", "d": "IB command term: \"give a detailed account including reasons or causes\". Link each feature to its effect with SO or because."}, "outline": {"w": "Outline", "d": "IB command term: \"give a brief account or summary\". The main points only."}, "describe": {"w": "Describe", "d": "IB command term: \"give a detailed account\". What it is or what happens; reasons are not needed."}, "identify": {"w": "Identify", "d": "IB command term: \"provide an answer from a number of possibilities\". A short, specific answer."}, "distinguish": {"w": "Distinguish", "d": "IB command term: \"make clear the differences between two or more concepts or items\"."}, "deduce": {"w": "deduce", "d": "IB command term: \"reach a conclusion from the information given\"."}, "calculate": {"w": "Calculate", "d": "IB command term: \"obtain a numerical answer showing the relevant stages in the working\"."}, "draw": {"w": "Draw", "d": "IB command term: a labelled, accurate diagram in pencil, with a ruler for straight lines."}, "recognise": {"w": "Recognise", "d": "To spot and name something when you see it, here a type of molecule in a diagram."}, "orientation": {"w": "orientation", "d": "Which way round something faces. In cellulose, each glucose faces the opposite way to its neighbour."}, "fused": {"w": "fused", "d": "Joined so that neighbouring rings share a side (two atoms and the bond between them)."}}</script>
+<script>
+(function(){
+  // tap a dotted word to see what it means
+  var T={};
+  try{ T=JSON.parse(document.getElementById('terms-data').textContent); }catch(e){ return; }
+  var box=document.getElementById('termbox'), bt=box.querySelector('.tb-h b'), bd=box.querySelector('.tb-d');
+  function show(el){ var k=el.getAttribute('data-t'); if(!T[k]) return; bt.textContent=T[k].w; bd.innerHTML=T[k].d; box.classList.add('on'); }
+  function hide(){ box.classList.remove('on'); }
+  document.addEventListener('click',function(e){
+    var el=e.target.closest ? e.target.closest('.term') : null;
+    if(el){ e.preventDefault(); e.stopPropagation(); show(el); return; }
+    if(!box.contains(e.target)) hide();
+  },true);
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape') hide();
+    if((e.key==='Enter'||e.key===' ') && e.target.classList && e.target.classList.contains('term')){ e.preventDefault(); show(e.target); }
+  });
+  box.querySelector('button').addEventListener('click',hide);
+})();
+</script><!--terms:end-->
+<!--enhance:start--><script>
+function storageOK(){ try{ var k='__ib_t'; localStorage.setItem(k,'1'); localStorage.removeItem(k); return true; }catch(e){ return false; } }
+function storageNotice(){ if(storageOK() || document.querySelector('.notice.storage')) return;
+  var n=document.createElement('div'); n.className='notice storage'; n.setAttribute('role','status');
+  n.textContent='Progress cannot be saved in this browser (private mode?). Use normal Safari or Chrome.';
+  var sb=document.querySelector('.sitebar');   // under the shared top bar when the page has one
+  if(sb && sb.parentNode){ sb.parentNode.insertBefore(n,sb.nextSibling); return; }
+  var m=document.querySelector('main')||document.body; m.insertBefore(n,m.firstChild); }
+
+function ibQuizEnhance(cfg){
+  if(window.__ibQuizEnh) return; window.__ibQuizEnh=1;
+  if(typeof storageNotice==='function') storageNotice();
+  var KEY=cfg&&cfg.key; if(!KEY) return;
+  var AK=KEY+'-attempts', WK=KEY+'-written';
+  function get(k){ try{ return JSON.parse(localStorage.getItem(k)||'null'); }catch(e){ return null; } }
+  function put(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); }catch(e){} }
+  function pad(n){ return (n<10?'0':'')+n; }
+  function today(){ var d=new Date(); return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()); }
+  function attempts(){ var a=get(AK); return Array.isArray(a)?a:[]; }
+  function addAttempt(r,t,sameDay){ var a=attempts(), d=today(), rec={date:d,right:r,total:t};
+    if(sameDay && a.length && a[a.length-1].date===d) a[a.length-1]=rec; else a.push(rec); put(AK,a); return a; }
+  // keep the score saved before this history existed as the first attempt
+  (function(){ if(get(AK)) return; var r=get(KEY); if(!r||typeof r!=='object') return;
+    var rr=(typeof r.right==='number')?r.right:r.score, tt=(typeof r.total==='number')?r.total:r.max;
+    if(typeof rr==='number' && tt) put(AK,[{date:r.date||today(),right:rr,total:tt}]); })();
+
+  // written answers: self-mark 0..max
+  var W=get(WK); if(!W||typeof W!=='object') W={};
+  [].forEach.call(document.querySelectorAll('.written[data-max]'),function(el,i){
+    var max=parseInt(el.getAttribute('data-max'),10); if(!(max>=0) || el.querySelector('.wm')) return;
+    var id=el.id||el.getAttribute('data-id')||('w'+(i+1));
+    var box=document.createElement('div'); box.className='wm';
+    var lab=document.createElement('label'); lab.appendChild(document.createTextNode('My mark: '));
+    var sel=document.createElement('select'); sel.setAttribute('aria-label','Your mark out of '+max);
+    var o=document.createElement('option'); o.value=''; o.textContent='not marked yet'; sel.appendChild(o);
+    for(var m=0;m<=max;m++){ o=document.createElement('option'); o.value=String(m); o.textContent=m+' out of '+max; sel.appendChild(o); }
+    if(W[id]!=null) sel.value=String(W[id]);
+    sel.addEventListener('change',function(){ var w=get(WK); if(!w||typeof w!=='object') w={};
+      if(sel.value==='') delete w[id]; else w[id]=parseInt(sel.value,10); put(WK,w); });
+    lab.appendChild(sel); box.appendChild(lab); el.appendChild(box);
+  });
+
+  // timed pages save {score,max,date} themselves; keep one history entry per day
+  if(/^ib-timed-/.test(KEY)){
+    var rec=function(){ var r=get(KEY); if(r && typeof r.score==='number' && r.max) addAttempt(r.score,r.max,true); };
+    var sb=document.getElementById('savebtn'); if(sb) sb.addEventListener('click',function(){ setTimeout(rec,0); });
+    [].forEach.call(document.querySelectorAll('.score-t input'),function(i){ i.addEventListener('change',function(){ setTimeout(rec,0); }); });
+  }
+
+  // multiple-choice quiz
+  var q0=document.querySelector('.quiz .q[data-a]'); if(!q0) return;
+  var quiz=q0.closest('.quiz');
+  var own=!!cfg.own, total=0, count=0, right=0, recs=[];
+  function qsAll(){ return [].filter.call(quiz.querySelectorAll('.q[data-a]'),function(q){ return !q.classList.contains('written'); }); }
+  function opts(q){ return [].filter.call(q.children,function(c){ return c.tagName==='BUTTON'; }); }
+  var score=document.getElementById('score');
+  if(!score){ score=document.createElement('div'); score.className='score'; score.id='score'; var l=qsAll(); l[l.length-1].parentNode.insertBefore(score,l[l.length-1].nextSibling); }
+  var rep=document.createElement('div'); rep.className='cfr'; rep.setAttribute('aria-live','polite'); score.parentNode.insertBefore(rep,score.nextSibling);
+  var hint=document.createElement('p'); hint.className='cfh';
+  hint.textContent='Before each answer, say how sure you are. At the end, the ones you were sure about but got wrong are listed first: they matter most.';
+  q0.parentNode.insertBefore(hint,qsAll()[0]);
+  function addConf(q){ var p=q.querySelector('.cf'); if(p) p.parentNode.removeChild(p);
+    var d=document.createElement('div'); d.className='cf'; d.setAttribute('role','group'); d.setAttribute('aria-label','How sure are you?');
+    d.innerHTML='<div class="cfl-h">How sure are you?</div><div class="cfb"><button type="button" data-c="guess" aria-pressed="false">Guessed</button><button type="button" data-c="unsure" aria-pressed="false">Unsure</button><button type="button" data-c="sure" aria-pressed="false">Sure</button></div>';
+    var first=opts(q)[0]; q.insertBefore(d,first||null); q.removeAttribute('data-conf'); }
+  function counters(qs){ qs.forEach(function(q,i){ var c=q.querySelector('.qn'); if(!c){ c=document.createElement('div'); c.className='qn'; q.insertBefore(c,q.firstChild); } c.textContent=(i+1)+' of '+qs.length; }); }
+  function start(){ var qs=qsAll(); total=qs.length; count=0; right=0; recs=[]; qs.forEach(addConf); counters(qs); rep.innerHTML=''; }
+  function msg(){ return 'Score: '+right+' / '+total+' answered '+count+(count===total?(right>=0.8*total?'. Good. Log the ones you missed.':'. Re-read the sections for the ones you missed, then log them.'):''); }
+  function qtext(q){ var p=q.querySelector('p'); var t=p?p.textContent:''; t=t.replace(/\s+/g,' ').trim();
+    var s=p&&p.querySelector('.subj'); if(s) t=t.slice(s.textContent.trim().length).trim();
+    t=t.replace(/^\d+\.\s*/,''); return t.length>110?t.slice(0,107)+'...':t; }
+  function esc(s){ var d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+  quiz.addEventListener('click',function(e){
+    var b=e.target.closest?e.target.closest('button'):null; if(!b) return;
+    var q=b.closest('.q'); if(!q || !quiz.contains(q) || !q.hasAttribute('data-a') || q.classList.contains('written')) return;
+    var cf=b.closest('.cf');
+    if(cf){ if(q.__ibRec) return; var c=b.getAttribute('data-c'); q.setAttribute('data-conf',c);
+      [].forEach.call(cf.querySelectorAll('button'),function(x){ var on=x===b; x.classList.toggle('on',on); x.setAttribute('aria-pressed',on?'true':'false'); }); return; }
+    if(b.parentNode!==q || q.__ibRec) return;
+    if(own){
+      if(q.classList.contains('done')) return;
+      var bs=opts(q), a=parseInt(q.getAttribute('data-a'),10), i=bs.indexOf(b);
+      q.classList.add('done');
+      if(i===a) b.classList.add('right'); else { b.classList.add('wrong'); if(bs[a]) bs[a].classList.add('right'); }
+    } else if(!q.classList.contains('done')) return;
+    q.__ibRec=true; var ok=b.classList.contains('right'); if(ok) right++; count++;
+    recs.push({q:q,ok:ok,conf:q.getAttribute('data-conf')||''});
+    [].forEach.call(q.querySelectorAll('.cf button'),function(x){ x.disabled=true; });
+    if(own) score.textContent=msg();
+    if(count===total) finish();
+  });
+  function finish(){
+    var r=right, t=total;
+    if(own){ try{ var prev=get(KEY); localStorage.setItem(KEY,JSON.stringify({right:r,total:t,date:new Date().toISOString().slice(0,10),best:Math.max(r,prev&&prev.best||0)})); }catch(e){} }
+    else { var s=get(KEY); if(s && typeof s.right==='number' && s.total) { r=s.right; t=s.total; } }
+    var a=addAttempt(r,t,false);
+    var order=qsAll(), num=function(q){ return order.indexOf(q)+1; };
+    var wrong=recs.filter(function(x){ return !x.ok; });
+    wrong.sort(function(x,y){ return (y.conf==='sure')-(x.conf==='sure') || num(x.q)-num(y.q); });
+    var lucky=recs.filter(function(x){ return x.ok && (x.conf==='guess'||x.conf==='unsure'); }).sort(function(x,y){ return num(x.q)-num(y.q); });
+    var lab={sure:'you were sure',unsure:'you were unsure',guess:'you guessed','':'not marked'};
+    var h='';
+    if(wrong.length){ h+='<b>Log these first</b><ol class="cfl">'+wrong.map(function(x){ return '<li'+(x.conf==='sure'?' class="sure"':'')+'>Question '+num(x.q)+' ('+lab[x.conf]+'): '+esc(qtext(x.q))+'</li>'; }).join('')+'</ol>'; }
+    if(lucky.length){ h+='<b>Right, but not sure</b>: read the explanation again for '+lucky.map(function(x){ return 'question '+num(x.q); }).join(', ')+'.'; }
+    if(!wrong.length && !lucky.length) h+='<b>All right.</b> Come back in a few days and try again: a score that lasts is what counts.';
+    var past=a.slice(0,-1).slice(-3).map(function(x){ return x.right+'/'+x.total+' on '+x.date; });
+    h+='<p class="cfa">Try number '+a.length+(past.length?'. Before: '+past.join(', ')+'.':'.')+'</p>';
+    h+='<button type="button" class="retry">Try again (shuffled)</button>';
+    rep.innerHTML=h;
+    rep.querySelector('.retry').addEventListener('click',retry);
+  }
+  function shuffled(arr){ var best=arr.slice();
+    for(var k=0;k<12;k++){ var x=arr.slice(); for(var i=x.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=x[i]; x[i]=x[j]; x[j]=t; }
+      best=x; if(arr.length<2 || x.some(function(v,i){ return v!==arr[i]; })) break; }
+    return best; }
+  function renumber(q,n){ var p=q.querySelector('p'); if(!p) return;
+    var w=document.createTreeWalker(p,4,null), tn;
+    while((tn=w.nextNode())){ if(tn.parentNode.closest && tn.parentNode.closest('.subj')) continue; if(!/\S/.test(tn.data)) continue;
+      if(/^\s*\d+\.\s/.test(tn.data)) tn.data=tn.data.replace(/^(\s*)\d+\./,'$1'+n+'.'); break; } }
+  function retry(){
+    var qs=qsAll(), marks=[], clones=[];
+    qs.forEach(function(q){
+      var m=document.createComment('q'); q.parentNode.insertBefore(m,q); marks.push(m);
+      var c=q.cloneNode(true); c.classList.remove('done'); c.removeAttribute('data-conf');
+      var p=c.querySelector('.cf'); if(p) p.parentNode.removeChild(p); p=c.querySelector('.qn'); if(p) p.parentNode.removeChild(p);
+      var bs=opts(c), a=parseInt(c.getAttribute('data-a'),10), good=bs[a];
+      bs.forEach(function(x){ x.classList.remove('right','wrong'); x.disabled=false; });
+      if(bs.length){ var after=bs[bs.length-1].nextSibling, nb=shuffled(bs);
+        bs.forEach(function(x){ c.removeChild(x); }); nb.forEach(function(x){ c.insertBefore(x,after); });
+        c.setAttribute('data-a',String(nb.indexOf(good))); }
+      q.parentNode.removeChild(q); clones.push(c);
+    });
+    var nq=shuffled(clones);
+    marks.forEach(function(m,i){ m.parentNode.insertBefore(nq[i],m); m.parentNode.removeChild(m); renumber(nq[i],i+1); });
+    own=true; start(); score.textContent='Score: 0 / '+total+' answered 0';
+    var top=quiz.getBoundingClientRect().top+window.pageYOffset-60; try{ window.scrollTo(0,Math.max(0,top)); }catch(e){}
+  }
+  start();
+}
+
+storageNotice();
+ibQuizEnhance({"key": "ib-quiz-guide-2026-11-15", "own": false});
+(function(){
+  if(window.__ibSite) return; window.__ibSite=1;
+  var PAGE='ib-'+((location.pathname.split('/').pop()||'index').replace(/\.html?$/,''));
+  var BK=PAGE+'-blocks';
+  function get(){ try{ var v=JSON.parse(localStorage.getItem(BK)||'null'); return v&&typeof v==='object'?v:{}; }catch(e){ return {}; } }
+  function put(v){ try{ localStorage.setItem(BK,JSON.stringify(v)); }catch(e){} }
+  // guide plan blocks "Block 1 · 25 min" + title -> numbered card with a time chip
+  [].forEach.call(document.querySelectorAll('.plan > div:not(.brk), .step'),function(d){
+    var bh=d.querySelector(':scope > .bh'); if(!bh || bh.querySelector('.bn')) return;
+    var b=bh.querySelector('b'); var m=b && /^\s*Block\s+(\d+[a-z]?)\s*[·.:-]\s*(.+?)\s*$/i.exec(b.textContent); if(!m) return;
+    var s=bh.querySelector('span'); var title=s?s.innerHTML:'';
+    d.classList.add('block'); d.setAttribute('data-n',m[1]);
+    bh.innerHTML='<span class="bn" aria-hidden="true">'+m[1]+'</span><b><span class="sr">Block '+m[1]+': </span>'+(title||('Block '+m[1]))+'</b><span class="bt">'+m[2]+'</span>';
+    // teaching sections linked from this block get a kicker "Block n · ..."
+    [].forEach.call(d.querySelectorAll('a[href^="#"]'),function(a){
+      var t=document.getElementById(a.getAttribute('href').slice(1)); if(!t) return;
+      var k=t.querySelector(':scope > .kicker'); if(!k || k.getAttribute('data-bk')) return;
+      k.setAttribute('data-bk',m[1]); k.insertAdjacentHTML('afterbegin','<span class="bk">Block '+m[1]+' · </span>');
+    });
+  });
+  // long hero intro paragraphs fold to 3 lines; tap to read them all
+  [].forEach.call(document.querySelectorAll('header.hero .wrap > p'),function(p){
+      if(p.textContent.length<160) return;
+      p.classList.add('fold'); if(p.scrollHeight<=p.clientHeight+2){ p.classList.remove('fold'); return; }
+      p.setAttribute('role','button'); p.setAttribute('tabindex','0'); p.setAttribute('aria-expanded','false');
+      function tog(e){ if(e && e.target && e.target.closest && e.target.closest('a,.term')) return; var o=p.classList.toggle('open'); p.setAttribute('aria-expanded',o?'true':'false'); }
+      p.addEventListener('click',tog); p.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); tog(); } });
+  });
+  // keep the Today card on the first screen: shrink the header picture (not below 18% of the screen height) if needed
+  (function(){ var art=document.querySelector('header.hero > svg, header.hero > img'), card=document.querySelector('.todaycard');
+    if(!art || !card) return; var vh=window.innerHeight, over=card.getBoundingClientRect().top+window.pageYOffset-(vh-70);
+    if(over>0){ var h=art.getBoundingClientRect().height; art.style.maxHeight=Math.max(0.18*vh,h-over)+'px'; } })();
+  // "Block done" ticks
+  var st=get();
+  [].forEach.call(document.querySelectorAll('.block'),function(d,i){
+    if(d.querySelector(':scope > .bdone')) return;
+    var n=d.getAttribute('data-n')||String(i+1);
+    var l=document.createElement('label'); l.className='bdone';
+    l.innerHTML='<input type="checkbox"> Block done';
+    var c=l.querySelector('input'); c.checked=!!st[n]; d.classList.toggle('is-done',c.checked);
+    c.addEventListener('change',function(){ var s=get(); if(c.checked) s[n]=new Date().toISOString().slice(0,10); else delete s[n]; put(s); d.classList.toggle('is-done',c.checked); chips(); });
+    d.appendChild(l);
+  });
+  function chips(){ var s=get(); [].forEach.call(document.querySelectorAll('.chip[data-n]'),function(a){ a.classList.toggle('done',!!s[a.getAttribute('data-n')]); }); }
+  chips();
+  // current section in the menu
+  var nav=document.querySelector('nav.toc .wrap'); if(!nav || !('IntersectionObserver' in window)) return;
+  var links={}, secs=[];
+  [].forEach.call(nav.querySelectorAll('a[href^="#"]'),function(a){ var el=document.getElementById(a.getAttribute('href').slice(1)); if(el){ links[el.id]=a; secs.push(el); } });
+  // the current section is the last one whose top has passed under the two bars; the observer (and a
+  // throttled scroll check, for long sections) only decides when to look again
+  function mark(){ var best=null; secs.forEach(function(el){ if(el.getBoundingClientRect().top<=120) best=el; });
+    Object.keys(links).forEach(function(id){ links[id].removeAttribute('aria-current'); });
+    if(best){ var a=links[best.id]; a.setAttribute('aria-current','location');
+      var l=a.offsetLeft-nav.offsetLeft, r=l+a.offsetWidth; if(l<nav.scrollLeft+8 || r>nav.scrollLeft+nav.clientWidth-8) nav.scrollLeft=Math.max(0,l-40); } }
+  secs.sort(function(a,b){ return (a.compareDocumentPosition(b)&2)?1:-1; });
+  var io=new IntersectionObserver(mark,{rootMargin:'-100px 0px -55% 0px'});
+  var tick=false; window.addEventListener('scroll',function(){ if(tick) return; tick=true; requestAnimationFrame(function(){ tick=false; mark(); }); },{passive:true});
+  secs.forEach(function(el){ io.observe(el); });
+})();
+</script><!--enhance:end-->
+</body>
+</html>

@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Psychology HL: Paper 3 data analysis and interpretation (Mon 30 Nov 2026)</title>
+<!--
+  Psychology HL, exam window revision, Mon 30 Nov 2026 (psychology-audit.md section 4.2, plan_data.py 2026-11-30).
+  Retrieval-based revision day: brain dump first, then worked example -> Finish it -> class task for each Paper 3 skill.
+  Official source: IB Diploma Programme Psychology guide, first assessment 2027, Drive 1Khqsn6PrxoS5UXAEKBpu5G_XG5Viyvtq,
+  read from the Drive text export on 8 Nov: Table 3.4 data analysis and research considerations (p27-28), HL extension (p39),
+  Paper 3 question types and markbands (p49-52), command terms (p60-61), glossary (p62-69).
+  Official specimen Paper 3 + resource booklet + markscheme: Drive 1KoOk8IT670o-bbr1HKc-Nw2Kub_Gf1Mr (read 8 Nov).
+  Class files read 8 Nov: HL01, HL02, HL03, HL04, HL05, RM05. New titles from psych-renames.json.
+  The 21 Nov mock page used specimen Paper 3 Q1 and Q2, so today's specimen practice is Q3 (credibility).
+  Every number in the worked examples, Finish it items and quiz was computed in python (scratchpad build/2026-11-30/calc.py).
+  All data sets marked "made up" were invented for this page.
+
+  UNSURE / decisions:
+  1. Standard deviation: the page uses the sample SD (divide by n - 1), usual in psychology. Dividing by n gives 3.70 and 1.59
+     instead of 3.99 and 1.72. The guide asks students to "analyse and interpret" SD, not to calculate it.
+  2. Range: highest minus lowest. The specimen markscheme also accepts "highest - lowest + 1" for interval data. It prints
+     ranges of 14 and 12 for source 2; from the box plot they are 21 - 7 = 14 and 25 - 12 = 13. Flagged as a probable misprint.
+  3. Semi-interquartile range is only computed from given quartiles; quartiles from raw data are not computed (methods differ).
+  4. Correlation strength words ("fairly weak", "fairly strong") are not defined in the guide; the number is always given too.
+  5. RM05 is an answer key only; the quiz paper is not in Drive. The prompts on this page are reconstructed from the key.
+  6. HL04 names two classmates; their names are left out.
+  7. The Lindsay Clancy case is a real and distressing court case; the page treats it only as a data-interpretation exercise.
+  8. Paper 3 pace (3.5 minutes per mark) is our own arithmetic from 105 minutes / 30 marks, not an IB rule.
+  9. The HL05 bias menu lists base-rate neglect, hindsight bias and motivated reasoning: class words, not guide content.
+     Confirmation bias and anchoring bias are guide content (cognitive approach, p25).
+  10. Written quiz items are Paper 3-style (3 + 2 + 2 marks), not Paper 1/2 4-markers, because today is the Paper 3 day.
+-->
+<style>
+  :root{
+    --paper:#F5F7F4; --ink:#1E2A33; --ink-soft:#4A5862; --rule:#D6DCD8;
+    --indigo:#2F47A6; --indigo-soft:#E6EAF7; --amber:#B8761A; --amber-soft:#FBF1DF;
+    --green:#2E7D4F; --green-soft:#E3F2E8; --red:#B23A3A; --red-soft:#F8E4E4;
+    --card:#FFFFFF;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;overflow-wrap:break-word}
+  h1,h2,h3,h4{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;line-height:1.2;margin:0 0 .4em;font-weight:600}
+  h1{font-size:2.3rem}
+  h2{font-size:1.75rem;margin-top:0}
+  h3{font-size:1.25rem;margin-top:1.8em}
+  h4{font-size:1.05rem;margin-top:1.4em;font-family:inherit;font-weight:700}
+  p{margin:0 0 1em}
+  a{color:var(--indigo)}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
+
+  /* hero: the course map itself (guide Table 1 and Table 2, p19, and the HL assessment outline, p42-43) */
+  .hero{background:#0B0F1A;color:#fff;padding:0 0 28px}
+  .map{display:block;width:100%;max-width:900px;height:auto;margin:0 auto}
+  .hero .wrap{padding-top:18px;padding-bottom:0}
+  .hero h1{color:#fff}
+  .hero p{color:#C9D1E6;max-width:680px}
+  .hero a{color:#F2C46D}
+  .meta{display:flex;flex-wrap:wrap;gap:8px 22px;color:#C9D1E6;font-size:.95rem;margin-top:8px}
+
+  nav.toc{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+  nav.toc .wrap{display:flex;gap:2px;flex-wrap:wrap;padding:6px 20px}
+  nav.toc a{text-decoration:none;color:var(--ink-soft);padding:4px 8px;border-radius:6px;font-size:.9rem}
+  section[id]{scroll-margin-top:84px}
+  nav.toc a:hover,nav.toc a:focus-visible{background:var(--indigo-soft);color:var(--indigo);outline:none}
+
+  .plan{display:grid;grid-template-columns:1fr;gap:12px;margin:22px 0 8px}
+  .plan > div{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);padding:12px 16px}
+  .plan .bh{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-bottom:4px}
+  .plan .bh b{font-size:1.2rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+  .plan .bh span{font-weight:700;color:var(--indigo)}
+  .plan ol{margin:6px 0 0;padding-left:22px}
+  .plan li{margin:4px 0}
+  .plan .t{color:var(--ink-soft);font-size:.88rem;white-space:nowrap}
+  .files{margin:10px 0 0;padding-left:20px}
+  .files li{margin:5px 0;font-size:.95rem}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 20px;background:var(--card);border:1px solid var(--rule);padding:10px 14px;font-size:.92rem;margin:16px 0}
+  .note{background:var(--amber-soft);border:1px solid var(--amber);padding:10px 14px;margin:14px 0;font-size:.95rem}
+
+  section.topic{margin-top:56px;padding-top:28px;border-top:3px solid var(--ink)}
+  section.topic ul{padding-left:22px}
+  section.topic li{margin:4px 0}
+  .kicker{color:var(--indigo);font-weight:700;letter-spacing:.01em;margin-bottom:4px}
+  .guiding{font-style:italic;color:var(--ink-soft);margin-bottom:18px}
+
+  .ican{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:0 0 24px}
+  .ican p{margin:0 0 8px;font-weight:700}
+  .ican label{display:flex;gap:10px;align-items:flex-start;padding:5px 0;cursor:pointer}
+  .ican input{margin-top:6px;width:16px;height:16px;flex:none;accent-color:var(--indigo)}
+
+  /* markers: what to learn word for word and what to understand and apply */
+  .fb,.learn{display:inline-block;font-size:.72rem;font-weight:700;padding:1px 7px;border-radius:3px;vertical-align:middle;margin-left:6px;white-space:nowrap;font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.01em}
+  .fb{background:var(--green);color:#fff}
+  .learn{background:var(--amber);color:#fff}
+
+  table{border-collapse:collapse;width:100%;margin:12px 0 20px;font-size:.95rem;background:var(--card)}
+  th,td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#EDF0EC}
+  td.c,th.c{text-align:center}
+  tr.ao th{background:var(--indigo-soft);color:var(--indigo)}
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:14px 0 20px}
+  .cards > div{background:var(--card);border:1px solid var(--rule);border-top:4px solid var(--indigo);padding:10px 14px}
+  .cards h4{margin:0 0 6px}
+  .cards p{margin:4px 0;font-size:.95rem}
+  .cards .cq{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:1.02rem;border-left:3px solid var(--amber);padding-left:10px}
+  .cards .lab{font-weight:700;color:var(--ink-soft)}
+  figure{margin:20px 0;background:var(--card);border:1px solid var(--rule);padding:12px}
+  figure svg{display:block;width:100%;height:auto}
+  figcaption{font-size:.9rem;color:var(--ink-soft);margin-top:8px}
+
+  .quote{background:var(--card);border-left:5px solid var(--amber);padding:10px 16px;margin:14px 0;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:1.05rem}
+  .quote small{display:block;font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.85rem;color:var(--ink-soft);margin-top:4px}
+  .tip{background:var(--amber-soft);border-left:5px solid var(--amber);padding:12px 16px;margin:18px 0}
+  .tip b:first-child{color:var(--amber)}
+  .worked{background:var(--indigo-soft);border-left:5px solid var(--indigo);padding:12px 16px;margin:18px 0}
+  .worked > b:first-child{color:var(--indigo)}
+  .worked ol{margin:6px 0 0;padding-left:22px}
+  .worked li{margin:3px 0}
+  .nw{white-space:nowrap}
+
+  details{background:var(--card);border:1px solid var(--rule);padding:10px 14px;margin:10px 0}
+  summary{cursor:pointer;font-weight:600}
+  details[open] summary{margin-bottom:8px}
+
+  .quiz .q{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:12px 0}
+  .quiz .q > p{font-weight:600;margin-bottom:8px}
+  .quiz button{display:block;width:100%;text-align:left;background:#F3F5F2;border:1px solid var(--rule);padding:8px 12px;margin:6px 0;border-radius:6px;font:inherit;cursor:pointer;color:var(--ink)}
+  .quiz button:hover,.quiz button:focus-visible{border-color:var(--indigo);outline:none}
+  .quiz button.right{background:var(--green-soft);border-color:var(--green)}
+  .quiz button.wrong{background:var(--red-soft);border-color:var(--red)}
+  .quiz .why{display:none;margin-top:8px;font-size:.95rem;color:var(--ink-soft)}
+  .quiz .q.done .why{display:block}
+  .score{font-weight:700;margin-top:14px}
+
+  .end{margin-top:56px;background:var(--card);border:1px solid var(--rule);padding:18px 20px}
+  .end ul{margin:8px 0 0;padding-left:20px}
+  @media (max-width:600px){section[id]{scroll-margin-top:130px}h1{font-size:1.8rem}body{font-size:16px}th,td{padding:6px}}
+  @media print{nav.toc{position:static}details{break-inside:avoid}.quiz button{border:1px solid #999}}
+  .due{background:#F2C46D;color:#0B0F1A;font-weight:700;text-align:center;padding:10px 16px;font-size:1.05rem}
+  .checked{font-size:.92rem;color:#C9D1E6;margin-top:6px}
+  .today{background:var(--card);border:2px solid var(--indigo);border-radius:10px;padding:12px 16px;margin:24px 0 8px}
+  .today p{margin:0 0 6px;font-weight:700;color:var(--indigo)}
+  .today ul{margin:0;padding-left:20px}
+  .src{background:#FFFDF7;border:1px dashed var(--amber);padding:10px 14px;margin:12px 0;font-size:.97rem}
+  .src > b:first-child{color:var(--amber)}
+  .finish{background:var(--green-soft);border-left:5px solid var(--green);padding:12px 16px;margin:18px 0}
+  .finish > b:first-child{color:var(--green)}
+  .finish ol{margin:6px 0 0;padding-left:22px}
+  .star{color:var(--amber);font-weight:700}
+  .brk{text-align:center;font-weight:700;color:var(--ink-soft);border-top:2px dashed var(--rule);border-bottom:2px dashed var(--rule);padding:8px;margin:4px 0}
+  .stuck2{background:var(--amber-soft);border:1px solid var(--amber);border-radius:10px;padding:10px 14px;margin:16px 0;font-size:.95rem}
+  .quiz .written{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--amber);padding:14px 16px;margin:12px 0}
+  .quiz .written > p:first-child{font-weight:600}
+
+
+/*terms:start*/
+.term{border-bottom:2px dotted var(--indigo);cursor:pointer;border-radius:2px}
+.term:focus-visible{background:var(--indigo-soft)}
+@media (hover:hover){.term:hover{background:var(--indigo-soft)}}
+#termbox{display:none;position:fixed;left:10px;right:10px;bottom:10px;max-width:640px;margin:0 auto;background:var(--card);border:2px solid var(--indigo);border-radius:8px;padding:14px 16px 12px;box-shadow:0 8px 28px rgba(0,0,0,.22);z-index:60;max-height:60vh;overflow:auto}
+#termbox.on{display:block}
+#termbox .tb-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+#termbox .tb-h b{font-size:1.1rem;color:var(--indigo)}
+#termbox button{font:inherit;border:1px solid var(--rule);background:var(--paper);border-radius:8px;padding:4px 12px;cursor:pointer;flex:none;min-height:44px;min-width:44px}
+#termbox .tb-d{margin:8px 0 0;line-height:1.5}
+.before.block0{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:12px 16px;margin:12px 0}
+.before > details{background:transparent;border:0;padding:0;margin:0}
+.before > details > summary{display:grid;grid-template-columns:32px minmax(0,1fr) auto auto;align-items:center;gap:4px 10px;min-height:44px;list-style:none;cursor:pointer}
+.before > details > summary::-webkit-details-marker{display:none}
+.before > details > summary::after{content:"Hide";font-size:.85rem;font-weight:600;color:var(--indigo)}
+.before > details:not([open]) > summary::after{content:"Show"}
+.before .bn{flex:none;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--indigo);color:#fff;font-weight:700}
+.before .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.before .b0t{font-size:1.15rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-weight:600;color:var(--ink)}
+.before .bt{white-space:nowrap;font-size:.8rem;font-weight:700;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:4px;padding:2px 8px}
+.before .bgi{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);border-radius:8px;padding:12px 16px;margin:12px 0}
+.before .bgi h3{margin:0 0 6px;font-size:1.08rem}
+.before .bgi p{margin:6px 0}
+.before .bgi svg{max-width:100%;height:auto;display:block;margin:8px auto}
+.before .more{font-size:.95rem;color:var(--ink-soft)}
+.before .stuck{background:var(--amber-soft);border-radius:8px;padding:10px 14px}
+/*terms:end*/
+</style>
+<!--enhance:start--><meta name="color-scheme" content="light"><style>
+.warmup{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--amber);padding:12px 16px 4px;margin:24px 0}
+.warmup h2{margin:0 0 6px;font-size:1.3rem}
+.warmup .wu-how{font-size:.95rem;color:var(--ink-soft);margin:0 0 8px}
+.warmup ol{margin:0;padding-left:24px}
+.warmup li{margin:10px 0}
+.warmup .wu-m{font-size:.8rem;color:var(--ink-soft)}
+.warmup .wu-f{font-weight:600}
+.warmup details{margin-top:4px}
+.warmup summary{cursor:pointer;color:var(--indigo);font-size:.92rem}
+.warmup .wu-b{border-top:1px solid var(--rule);margin-top:6px;padding-top:6px}
+.warmup .wu-b a{font-size:.88rem;margin-left:6px;white-space:nowrap}
+.warmup .wu-foot{font-size:.92rem;margin:12px 0 8px}
+
+:root{--amber-ink:#8A6416}
+:focus-visible{outline:3px solid var(--indigo);outline-offset:2px}
+.quiz button:focus-visible,.quiz .q .cf button:focus-visible{outline:3px solid var(--indigo);outline-offset:2px}
+@media (hover:none){.quiz button:not(.right):not(.wrong):hover{border-color:var(--rule)}}
+.quiz button.right::before{content:"✓ Correct: ";font-weight:700;color:var(--green)}
+.quiz button.wrong::before{content:"✗ Your answer: ";font-weight:700;color:var(--red)}
+.quiz .q .qn{font-size:.8rem;font-weight:700;color:var(--ink-soft);margin-bottom:2px}
+.quiz .q .cf{margin:4px 0 10px}
+.quiz .q .cf .cfl-h{font-size:.88rem;font-weight:600;color:var(--ink-soft);margin-bottom:4px}
+.quiz .q .cf .cfb{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;max-width:420px}
+.quiz .q .cf button{display:block;width:100%;min-height:44px;margin:0;padding:6px 8px;text-align:center;font-size:.92rem;border:1px solid var(--rule);border-radius:8px;background:var(--card);color:var(--ink)}
+.quiz .q .cf button.on{background:var(--indigo-soft);border:2px solid var(--indigo);font-weight:700}
+.quiz .q .cf button:disabled{cursor:default;opacity:1;color:var(--ink-soft)}
+.quiz .q .cf button.on:disabled{color:var(--ink)}
+.quiz .cfh{font-size:.92rem;color:var(--ink-soft)}
+.quiz .cfr{margin-top:10px}
+.quiz .cfr ol{margin:6px 0 10px;padding-left:22px}
+.quiz .cfr li{margin:4px 0}
+.quiz .cfr li.sure{font-weight:600}
+.quiz .cfr .cfa{font-size:.9rem;color:var(--ink-soft);margin:8px 0}
+.quiz .cfr button.retry{display:inline-block;width:auto;min-height:44px;text-align:center;background:var(--indigo);color:#fff;border-color:var(--indigo);font-weight:700;padding:8px 16px}
+.wm{margin-top:8px;font-size:.92rem}
+.wm select{font:inherit;min-height:44px;padding:4px 6px;border:1px solid var(--rule);border-radius:8px;background:var(--card);color:var(--ink);max-width:100%}
+.notice{background:var(--amber-soft);border:1px solid var(--amber);color:var(--ink);padding:10px 14px;margin:12px 0;border-radius:8px;font-weight:600}
+
+:root{--amber-ink:#8A6416;--grey:#5F6B72;--purple:#6A3D9A;--green-ink:#256B43;--r-sm:4px;--r:8px}
+/* top bar: back to today, flashcards, progress, sheet */
+.sitebar{position:sticky;top:0;z-index:30;height:44px;background:var(--paper);box-shadow:0 1px 0 var(--rule)}
+.sitebar .sb{max-width:820px;height:44px;margin:0 auto;padding:0 10px;display:flex;align-items:stretch;gap:2px;overflow-x:auto;scrollbar-width:none;white-space:nowrap}
+.sitebar .sb::-webkit-scrollbar{display:none}
+.sitebar a{flex:none;display:flex;align-items:center;min-height:44px;padding:0 10px;color:var(--indigo);text-decoration:none;font:600 .95rem/1 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;border-radius:var(--r-sm)}
+.sitebar a.sb-home{font-weight:700}
+@media (hover:hover){.sitebar a:hover{background:var(--indigo-soft)}}
+/* guide section menu: one row that scrolls sideways, 44 px targets, current section marked */
+nav.toc{top:44px;z-index:29}
+nav.toc .wrap{display:flex;flex-wrap:nowrap;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;white-space:nowrap;padding:0 10px}
+nav.toc .wrap::-webkit-scrollbar{display:none}
+nav.toc a{flex:none;display:flex;align-items:center;min-height:44px;padding:12px 10px;line-height:1.2;border-radius:0}
+nav.toc a[href$="index.html"]{display:none}
+nav.toc a[aria-current]{color:var(--indigo);font-weight:700;background:var(--indigo-soft);box-shadow:inset 0 -3px 0 var(--indigo)}
+[id]{scroll-margin-top:56px}
+html:has(nav.toc) [id]{scroll-margin-top:100px}
+/* focus: always visible */
+:focus-visible{outline:3px solid var(--indigo)!important;outline-offset:2px!important}
+header.hero :focus-visible,header.top :focus-visible{outline-color:#F2C46D!important}
+/* readable text */
+main p,main li,.why{max-width:68ch}
+@media (max-width:600px){.wrap{padding-left:16px;padding-right:16px}}
+small{font-size:max(12px,.8em)}
+.sig small{font-size:max(12px,.62em)}
+/* hero: title first, then the picture (at most 30% of the screen height, as wide as the text column),
+   so the title and the Today card share the first screen; long intro paragraphs fold to 3 lines (tap to read) */
+header.hero{display:flex;flex-direction:column}
+header.hero > .wrap{order:-1;width:100%}
+header.hero > svg,header.hero > img{max-height:30vh;max-width:780px;margin:14px auto 0}
+header.hero p.fold{position:relative;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;cursor:pointer}
+header.hero p.fold::after{content:"more";position:absolute;right:0;bottom:0;padding:0 2px 0 28px;background:linear-gradient(90deg,rgba(11,15,26,0),#0B0F1A 22px);color:#F2C46D;font-weight:700}
+header.hero .wrap > p ~ p.fold{-webkit-line-clamp:2}
+header.hero p.fold.open{display:block;-webkit-line-clamp:unset}
+header.hero p.fold.open::after{content:none}
+@media (max-width:600px){header.hero > svg,header.hero > img{max-height:28vh} header.hero .meta{font-size:.85rem;gap:0 14px}}
+/* contrast: amber and grey text */
+body .tip b:first-child,body .src > b:first-child,body .star,body .col.l > h3,body .timer.low .tdisp{color:var(--amber-ink)}
+/* one badge system: Learn = solid amber; Given / in booklet = neutral outline; Apply = indigo outline; HL = purple outline; green = done */
+.badge,.fb,.learn,.tag,span.hl,.quiz .subj,.written .wsubj,.wsubj,.pill,.soon{display:inline-block;font:700 .8rem/1.4 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.01em;padding:1px 7px;border:1px solid currentColor;border-radius:var(--r-sm);background:var(--card);vertical-align:middle;white-space:nowrap}
+.learn,.badge.learn{background:var(--amber-ink);border-color:var(--amber-ink);color:#fff}
+.fb,.badge.apply{color:var(--indigo);border-color:var(--indigo)}
+.fb.given,.badge.given,.tag,.quiz .subj,.written .wsubj,.wsubj,.badge.subj{color:var(--ink);border-color:var(--grey)}
+span.hl,.badge.hl{color:var(--purple);border-color:var(--purple)}
+.pill{margin-left:6px}
+.p-done,.badge.done{color:var(--green-ink);border-color:var(--green);background:var(--green-soft)}
+.p-soon,.soon{color:var(--grey);border-color:var(--grey)}
+/* radii: 4 px small things, 8 px boxes */
+.today,.goals,.able,.todaycard,#termbox,.before .bgi,.before .stuck,.quiz button,.go,.notice,.btn,.timer button,.tl,.chip,.plan > div,.step,.block{border-radius:var(--r)}
+/* 44 px targets */
+.go{min-height:44px;display:inline-flex;align-items:center}
+main details>summary{min-height:44px;display:flex;align-items:center;cursor:pointer}
+ul.files a,.files li>a{display:inline-flex;align-items:center;min-height:44px}
+input[type=number],input[type=text],select{min-height:44px}
+#box a#src,a.src{display:inline-flex;align-items:center;min-height:44px}
+#termbox .tb-h button{min-height:44px;min-width:44px}
+.top .crumb{display:flex;flex-wrap:nowrap;align-items:center;gap:0 6px;overflow-x:auto;scrollbar-width:none;white-space:nowrap;margin-bottom:2px}
+.top .crumb::-webkit-scrollbar{display:none}
+.top .crumb a{flex:none;display:inline-flex;align-items:center;min-height:44px;padding-right:4px}
+/* timed blocks: one card for guide plans, review steps and mock plans */
+.plan > div,.block,.step{background:var(--card);border:1px solid var(--rule);padding:12px 16px}
+.plan > div.brk{background:var(--green-soft);border-color:var(--green)}
+.bh{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;margin-bottom:4px}
+.block > .bh{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:4px 10px;align-items:center}
+.plan .bh .bn,.step .bh .bn,.bh .bn{flex:none;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--indigo);color:#fff;font:700 1rem/1 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif}
+.plan .bh > b,.step .bh > b,.bh > b{font-size:1.15rem;line-height:1.25;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;color:var(--ink)}
+.plan .bh .bt,.step .bh .bt,.bh .bt{flex:none;display:inline-block;font:700 .8rem/1.4 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:var(--r-sm);padding:2px 8px}
+.bdone{display:flex;align-items:center;gap:10px;min-height:44px;margin:8px 0 0;padding-top:4px;border-top:1px solid var(--rule);font-weight:600;color:var(--ink-soft);cursor:pointer;max-width:none}
+.bdone input{width:20px;height:20px;margin:0;flex:none;accent-color:var(--green)}
+.block.is-done{border-color:var(--green)} .block.is-done .bn{background:var(--green)} .block.is-done .bdone{color:var(--green-ink)}
+.blocks{display:grid;gap:10px;margin:16px 0}
+.blocks > .block p{margin:4px 0 0}
+.brkc{background:var(--green-soft);border:1px solid var(--green);border-radius:var(--r);padding:8px 16px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* Today card on guides: goals, plan chips, warm-up */
+.todaycard{background:var(--card);border:2px solid var(--indigo);padding:14px 16px 6px;margin:20px 0 10px}
+.todaycard .tc-goals > *{background:transparent!important;border:0!important;padding:0!important;margin:0!important;box-shadow:none!important;border-radius:0!important}
+.todaycard .tc-goals h2,.todaycard .tc-goals h3,.todaycard .tc-goals > * > p:first-child,.todaycard .tc-goals > * > b:first-child{display:block;font:600 1.25rem/1.25 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;color:var(--ink);margin:0 0 6px}
+.todaycard .tc-goals ol,.todaycard .tc-goals ul{margin:0;padding-left:22px}
+.todaycard .tc-goals li{margin:3px 0}
+.todaycard .tc-plan{margin:0 0 12px;padding-bottom:12px;border-bottom:1px solid var(--rule)}
+@media (max-width:600px){.todaycard .chips{display:grid;grid-template-columns:1fr 1fr;gap:6px}.todaycard .chip{padding:4px 10px;font-size:.9rem}.todaycard .chip.c0{grid-column:1 / -1}}
+.todaycard .tc-h{font-weight:700;margin:0 0 6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:4px;min-height:44px;padding:4px 12px;border:1px solid var(--indigo);background:var(--card);color:var(--indigo);text-decoration:none;font-size:.95rem;line-height:1.2}
+.chip b{font-weight:700}
+.chip.done{border-color:var(--green);color:var(--green-ink);background:var(--green-soft)}
+.chip.done::before{content:"\2713";font-weight:700}
+.todaycard .warmup{border:0;border-top:1px solid var(--rule);border-radius:0;padding:12px 0 4px;margin:12px 0 0;background:transparent}
+.todaycard .tc-plan + .warmup{border-top:0;margin-top:0;padding-top:0}
+.todaycard .warmup h2{font-size:1.15rem}
+.sitebar + .notice{margin:8px max(16px,calc((100% - 780px) / 2))}
+@media print{.sitebar,.notice,#termbox,.go,.chips,.bdone{display:none!important}nav.toc{position:static}.quiz button{display:list-item}.todaycard{border-width:1px}}
+</style><!--enhance:end-->
+</head>
+<body><!--enhance:start--><nav class="sitebar" aria-label="Study site"><div class="sb"><a class="sb-home" href="../index.html#today">← Today</a><a href="../flashcards.html">Flashcards</a><a href="../progress.html">Progress</a><a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">Sheet</a></div></nav><!--enhance:end-->
+
+
+<header class="hero">
+  <div class="due">Maths IA Form A is due 4 pm today. Hand it in before you start Psychology.</div>
+  <svg class="map" viewBox="0 0 1000 530" role="img" aria-label="Dot plot of made-up data: words recalled out of 20 by seven students with their phone on the desk and seven with their phone in another room, with the mean and median of each group marked">
+    <rect width="1000" height="530" fill="#0B0F1A"/>
+    <g font-family="Arial,Helvetica,sans-serif" font-size="34">
+      <text x="40" y="48" fill="#9FB3FF" font-weight="bold">Phone on desk</text>
+      <text x="40" y="238" fill="#8FD9A8" font-weight="bold">Phone away</text>
+      <!-- scale: x = 80 + 43 * words; desk median 8 (x 424), mean 9.43 (x 485.4) -->
+      <line x1="424" y1="102" x2="424" y2="178" stroke="#E0B3FF" stroke-width="4"/>
+      <line x1="485.4" y1="102" x2="485.4" y2="178" stroke="#F2C46D" stroke-width="4" stroke-dasharray="10 6"/>
+      <text x="414" y="94" fill="#E0B3FF" text-anchor="end">median 8</text>
+      <text x="495" y="94" fill="#F2C46D">mean 9.4</text>
+      <g fill="#9FB3FF">
+        <circle cx="338" cy="150" r="13"/><circle cx="381" cy="150" r="13"/><circle cx="424" cy="150" r="13"/><circle cx="424" cy="122" r="13"/>
+        <circle cx="467" cy="150" r="13"/><circle cx="510" cy="150" r="13"/><circle cx="854" cy="150" r="13"/>
+      </g>
+      <text x="854" y="118" fill="#FFFFFF" text-anchor="middle">outlier</text>
+      <!-- away: mean 11.57 (x 577.6), median 12 (x 596) -->
+      <line x1="596" y1="292" x2="596" y2="368" stroke="#E0B3FF" stroke-width="4"/>
+      <line x1="577.6" y1="292" x2="577.6" y2="368" stroke="#F2C46D" stroke-width="4" stroke-dasharray="10 6"/>
+      <text x="606" y="284" fill="#E0B3FF">median 12</text>
+      <text x="568" y="284" fill="#F2C46D" text-anchor="end">mean 11.6</text>
+      <g fill="#8FD9A8">
+        <circle cx="467" cy="340" r="13"/><circle cx="510" cy="340" r="13"/><circle cx="553" cy="340" r="13"/><circle cx="596" cy="340" r="13"/>
+        <circle cx="596" cy="312" r="13"/><circle cx="639" cy="340" r="13"/><circle cx="682" cy="340" r="13"/>
+      </g>
+      <line x1="80" y1="420" x2="940" y2="420" stroke="#C9D1E6" stroke-width="2"/>
+      <g stroke="#C9D1E6" stroke-width="2"><line x1="80" y1="420" x2="80" y2="432"/><line x1="295" y1="420" x2="295" y2="432"/><line x1="510" y1="420" x2="510" y2="432"/><line x1="725" y1="420" x2="725" y2="432"/><line x1="940" y1="420" x2="940" y2="432"/></g>
+      <g fill="#C9D1E6" text-anchor="middle"><text x="80" y="465">0</text><text x="295" y="465">5</text><text x="510" y="465">10</text><text x="725" y="465">15</text><text x="940" y="465">20</text></g>
+      <text x="510" y="510" fill="#C9D1E6" text-anchor="middle">words recalled (out of 20)</text>
+    </g>
+  </svg>
+  <div class="wrap">
+    <h1>Psychology HL: Paper 3 data analysis and interpretation</h1>
+    <p>Study guide for Monday 30 November 2026, exam window revision. The picture is a small made-up study: 14 students learned 20 words, 7 with their phone on the desk and 7 with it in another room. Each dot is one student. One student in the desk group remembered 18 words and pulled that group's mean (dashed gold line) away from its median (purple line). Spotting that, and saying what it means for a conclusion, is what Paper 3 rewards.</p>
+    <p class="checked">Checked against the official IB Psychology guide (first assessment 2027: p27-28, p39, p49-52, p60-61) and the official specimen Paper 3 with its markscheme. Data marked "made up" were invented for this page; every statistic was calculated, not estimated.</p>
+    <div class="meta"><span>About 2 hours</span><span>Exam window revision: recall first, then practise</span><span>Paper 3 is HL only: 1 h 45, 30 marks, 30% of your grade</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <a href="../index.html" style="font-weight:700;color:var(--indigo)">All days</a><a href="#plan">Plan</a><a href="#p3">Paper 3</a><a href="#stats">Statistics</a><a href="#q2">Q2</a><a href="#hl02">Bandura vs Charlton</a><a href="#q4">Q4</a><a href="#q1">Q1</a><a href="#clancy">Clancy</a><a href="#q3">Q3</a><a href="#spec">Specimen Q3</a><a href="#drill">Drill</a><a href="#quiz">Quiz</a><a href="#end">Finish</a>
+  </div>
+</nav>
+
+<main class="wrap"><!--enhance:start-->
+<section class="todaycard" aria-label="Today"><div class="tc-plan"><p class="tc-h">Today: tap a block to jump to it</p><div class="chips"><a class="chip c0" href="#before"><b>Block 0</b> · Before you start</a><a class="chip" href="#wu"><b>Warm-up</b> · 8 min</a><a class="chip" href="#b1" data-n="1"><b>Block 1</b> · 28 min</a><a class="chip" href="#b2" data-n="2"><b>Block 2</b> · 28 min</a><a class="chip" href="#b3" data-n="3"><b>Block 3</b> · 36 min</a><a class="chip" href="#b4" data-n="4"><b>Block 4</b> · 25 min</a></div></div><div class="tc-goals"><!--enhance:end--><!--enhance:moved--><div class="today">
+  <p>Today you will be able to</p>
+  <ul>
+    <li>name the four Paper 3 question types and what earns the top band in each;</li>
+    <li><span class="term" data-t="analyse" tabindex="0" role="button">analyse</span> a table or <span class="term" data-t="box plot" tabindex="0" role="button">box plot</span> with mean, median, mode, range, SD and <span class="term" data-t="skew" tabindex="0" role="button">skew</span>, and state a linked conclusion;</li>
+    <li><span class="term" data-t="explain" tabindex="0" role="button">explain</span> one limitation of a graph or figure, and <span class="term" data-t="discuss" tabindex="0" role="button">discuss</span> <span class="term" data-t="credibility" tabindex="0" role="button">credibility</span>, <span class="term" data-t="bias" tabindex="0" role="button">bias</span> or <span class="term" data-t="transferability" tabindex="0" role="button">transferability</span> of a <span class="term" data-t="qualitative" tabindex="0" role="button">qualitative</span> <span class="term" data-t="source" tabindex="0" role="button">source</span>.</li>
+  </ul>
+</div><!--enhance:/moved--><!--enhance:start--></div>
+<section class="warmup" id="wu" aria-label="Warm-up from earlier days">
+<h2>Warm-up from earlier days (8 min)</h2>
+<p class="wu-how">Answer from memory before you read on: write the answer on paper, then tap to check it.</p><ol>
+<li><div class="wu-m">English · English A HL: revision 1 · from Fri 27 Nov</div><div class="wu-f">Ellipsis</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">The three dots ... at the end of a sentence: it trails off and leaves the reader to finish the thought. <a href="../guides/2026-11-27-english-a-hl-revision-1.html#mark">open the section</a></div></details></li>
+<li><div class="wu-m">Psychology · Cognitive models · from Mon 16 Nov</div><div class="wu-f">Model (guide glossary, p66)</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">"A theoretical representation or framework used to explain and understand complex processes in order to test hypotheses and make predictions." <a href="../guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#mem">open the section</a></div></details></li>
+<li><div class="wu-m">English · English A HL: revision 1 · from Fri 27 Nov</div><div class="wu-f">French: grâce à, à cause de with le and les</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">à + le = au, à + les = aux (grâce au club, grâce aux vacances); de + le = du, de + les = des (à cause du téléphone, à cause des écrans). <a href="../guides/2026-11-27-english-a-hl-revision-1.html#french">open the section</a></div></details></li>
+<li><div class="wu-m">English · English A HL: revision 1 · from Fri 27 Nov</div><div class="wu-f">A wide panel with no words: effect on pace</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">It slows the reader: there is more to look at and nothing tells you to move on, so the moment feels longer and more important. <a href="../guides/2026-11-27-english-a-hl-revision-1.html#panels">open the section</a></div></details></li>
+<li><div class="wu-m">Psychology · RM 3 · from Sat 14 Nov</div><div class="wu-f">Four demand characteristics (class deck)</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">Expectancy effect, screw-you effect, social desirability effect, reactivity. <a href="../guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#threats">open the section</a></div></details></li>
+</ol>
+<p class="wu-foot">Missed one? Put it in the <a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">Error log</a>.</p></section>
+</section><!--enhance:end-->
+
+
+<!--enhance:origin-->
+<div id="warmup"></div>
+
+
+
+
+<section id="plan">
+  <h2 style="margin-top:28px">How to spend the two hours</h2>  <p style="margin:10px 0 0">This is a revision day: you <b>recall first</b>, then check, then practise. Four blocks and a short break. Paper and pen all the way: Paper 3 is written. File links open your IB Psychology folder in Drive; section links jump down this page.</p>
+  <p style="margin:6px 0 0"><b>Short on time: skip <span class="star">★</span> steps, still do the quiz.</b></p>
+  <div class="plan"><!--terms:start--><div id="before" class="before block0"><details open>
+  <summary><span class="bn" aria-hidden="true">0</span><span class="b0t"><span class="sr">Block 0: </span>Before you start</span><span class="bt">about 7 min</span></summary>
+  <p style="margin:10px 0 0">This page builds on the ideas below. Read them first so you do not have to stop later (about 7 min, not counted in the blocks below). Words with a <span style="border-bottom:2px dotted var(--indigo)">dotted underline</span> anywhere on the page: tap them for a short explanation.</p>
+  <div class="bgi"><h3>What Paper 3 is</h3><p>Paper 3 is the extra exam that only <b><span class="term" data-t="hl" tabindex="0" role="button">HL</span></b> students sit: 1 hour 45 minutes, 30 marks, 30% of your final grade. You get a short booklet of <b>sources</b>: graphs, tables of results and summaries of interviews, all about one <b><span class="term" data-t="claim" tabindex="0" role="button">claim</span></b> (a statement such as "technology in school harms students' mental health").</p><p>There are four questions. The first three each look at one source; the last one asks how far all the sources together support the claim. You never collect <span class="term" data-t="data" tabindex="0" role="button">data</span> yourself: everything you need is printed in the booklet. Examiners mark each answer against a short description of what a 1-mark, 3-mark or 6-mark answer looks like.</p></div><div class="bgi"><h3>Three kinds of average</h3><p>Take five test scores: 3, 4, 4, 6, 8.</p><ul><li><b>Mean</b>: add them (25) and divide by how many (5): 5.</li><li><b>Median</b>: put them in order and take the middle one: 4.</li><li><b>Mode</b>: the one that appears most often: 4.</li></ul><p>All three try to say what a typical score is. Now change the 8 into 28. The mean jumps to 9, but the median stays 4. One unusual score can drag the mean a long way, which is why psychologists often report the median as well.</p></div><div class="bgi"><h3>Same average, different spread</h3><p>Two classes both have a mean test score of 15 out of 20.</p><ul><li>Class A: 14, 15, 15, 16. Everyone scored about the same.</li><li>Class B: 5, 15, 20, 20. Some did very badly, some perfectly.</li></ul><p>The average hides this difference. A <b>measure of spread</b> shows it. The simplest is the range: highest minus lowest (2 for class A, 15 for class B). In Paper 3 you always look at the average <b>and</b> the spread before you say what a result means.</p></div><div class="bgi"><h3>Numbers or words: two kinds of data</h3><p><b>Quantitative</b> data are numbers: scores, times, counts. They are easy to compare: group A recalled 12 words, group B 8.</p><p><b>Qualitative</b> data are words: what people said in an interview or a <b><span class="term" data-t="focus group" tabindex="0" role="button">focus group</span></b> (a small group discussion led by a researcher). The researcher reads the written-out conversations and groups similar ideas into <b><span class="term" data-t="theme" tabindex="0" role="button">themes</span></b>, such as "feeling lonely".</p><p>Paper 3 uses both. Question 3 is always about the words kind: can we trust the themes, and do they apply to other people?</p></div><div class="bgi"><h3>A link is not a cause</h3><p>Students who spend more hours on their phones may get lower grades. That is a link (a <b><span class="term" data-t="correlation" tabindex="0" role="button">correlation</span></b>). It does not show that phones <i>cause</i> lower grades: struggling students might turn to their phones more, or tiredness might cause both.</p><p>Only a study where the researcher changes one thing on purpose and compares groups can suggest a cause. In Paper 3, always ask: was anything changed on purpose, or were things just measured?</p></div><div class="bgi"><h3>Reading a graph before believing it</h3><p>Before you look at the bars, read the edges of the graph:</p><ul><li>the <b>title</b>: what is it really about?</li><li>the <b>axes</b>: what is measured, in what units, and does the scale start at 0?</li><li>the <b>key</b>: which colour is which group?</li><li>what is <b>missing</b>: how many people were asked? when?</li></ul><p>A scale that starts at 6.6 instead of 0 can make a small difference look huge. Spotting things like that is exactly Paper 3 question 1.</p></div>
+  <p class="stuck"><b>Still stuck on a word?</b> Do not search for long. Write it in the <b>Error log</b> tab of the study sheet starting with "word:" (for example "word: composition") and carry on. It will be explained in the next guide.</p>
+</details></div><!--terms:end-->
+
+    <div id="b1">
+      <div class="bh"><b>Block 1 · 28 min</b><span>Brain dump, Paper 3 and <span class="term" data-t="statistic" tabindex="0" role="button">statistics</span></span></div>
+      <ol>
+        <li><b>Brain dump, no notes.</b> On one page write: the four Paper 3 question types with their marks; mean, median, mode and when to use each; range, SD and <span class="term" data-t="siqr" tabindex="0" role="button">semi-interquartile range</span>; what an <span class="term" data-t="outlier" tabindex="0" role="button">outlier</span> does to the mean. Then check it against <a href="#p3">Paper 3 at a glance</a> and the first part of <a href="#stats">statistics</a>, and add what you missed in another colour. <span class="t">(6 min)</span></li>
+        <li>Read worked examples 1 and 2 in <a href="#stats">statistics</a>. Answer each "Why this step?" before you open it. <span class="t">(8 min)</span></li>
+        <li>Do "Finish it" and the self-check in the same section, on paper. <span class="t">(5 min)</span></li>
+        <li>Open <a href="https://drive.google.com/file/d/154Sv75_2rUuphHDny_SyP0Fx0WaqWniH/view">RM05 Research methodology - Levels of processing pop quiz - Answer key (class)</a>, cover Section B, and answer the four <a href="#rm05">RM05 prompts</a> (Q10 to Q13). Uncover one question at a time to check. The quiz paper itself is not in Drive. <span class="t">(6 min)</span></li>
+        <li><span class="star">★ If time:</span> RM05 Q14: pick two of bias, measurement, perspective, responsibility and link each to the <span class="term" data-t="levels of processing" tabindex="0" role="button">levels of processing</span> data in two sentences; compare with the key's "possible directions". <span class="t">(3 min)</span></li>
+      </ol>
+    </div>
+    <div id="b2">
+      <div class="bh"><b>Block 2 · 28 min</b><span>Q2: interpret the numbers (Bandura vs Charlton)</span></div>
+      <ol>
+        <li>Read <a href="#q2">question 2</a>: the recipe and worked example 3, then do its "Finish it". <span class="t">(7 min)</span></li>
+        <li>Open <a href="https://drive.google.com/file/d/1EUXpuau1dt9DGImsFaEmUkzm4uhYAqEk/view">HL02 Data analysis and interpretation - Social learning theory data, Bandura 1961 vs Charlton 2000 - Homework (class)</a>. Read the two study columns, then the <a href="#hl02">unit warning</a> on this page. <span class="t">(5 min)</span></li>
+        <li>Do the homework on paper: four "describe" sentences with a number in each (two per study), one stem from the "Trust the numbers" and "Cause" rows, and the three "better for what?" questions with the sentence frames. <span class="t">(8 min)</span></li>
+        <li>Open the model points in <a href="#hl02">Bandura vs Charlton</a> and mark your sentences. Any claim without a number: rewrite it. <span class="t">(3 min)</span></li>
+        <li><span class="star">★ If time:</span> read <a href="#q4">question 4</a> and fill in its paragraph frame. <span class="t">(5 min)</span></li>
+      </ol>
+    </div>
+    <p class="brk">Break, 3 minutes: stand up, drink water, look out of a window. No phone.</p>
+    <div id="b3">
+      <div class="bh"><b>Block 3 · 36 min</b><span><span class="term" data-t="quartile" tabindex="0" role="button">Q1</span>, the Clancy cards and Q3</span></div>
+      <ol>
+        <li>Read <a href="#q1">question 1</a>, worked example 4, then do its "Finish it". <span class="t">(5 min)</span></li>
+        <li>Read <a href="#clancy">the Clancy section</a>. Open <a href="https://drive.google.com/file/d/16iMT1Pt_X1Z4pTY4TeuD83WpOOQdtIw1/view">HL03 Data analysis and interpretation - Lindsay Clancy case, data sets for clinician and prosecution - Source cards (class)</a>: read Set B row 3 and row 4 and Set A row 5, plus the "If it's a number" questions. <span class="t">(5 min)</span></li>
+        <li><span class="star">★ If time:</span> in <a href="https://drive.google.com/file/d/1wFfgZKnqZpR8MwI3vLZwZpaBLI8BnbeW/view">HL05 Data analysis and interpretation - The space between data and conclusion - Handout (class, 21 Oct)</a>, tag two leaps on card 3 with D, R or C. Glance at big rule 2 of <a href="https://drive.google.com/file/d/1u4egvuCi6IjpuM18g9lU3_MUMjvHOehc/view">HL04 Data analysis and interpretation - Lindsay Clancy debate - Rules and score sheet (class)</a>. <span class="t">(2 min)</span></li>
+        <li>HL05 "Paper 3-style practice": using card 3, explain one limitation that affects how the 35% figure can be interpreted, in three sentences. Tick the handout's three checklist boxes, then open the model in <a href="#clancy">the Clancy section</a>. <span class="t">(6 min)</span></li>
+        <li>Read <a href="#q3">question 3</a> and worked example 5, then do its "Finish it". <span class="t">(6 min)</span></li>
+        <li><span class="term" data-t="specimen" tabindex="0" role="button">Specimen</span> Paper 3 question 3 under time, as in the <a href="#spec">specimen Q3 box</a>: 9 minutes writing, 3 minutes marking with the <span class="term" data-t="markband" tabindex="0" role="button">markband</span> and <span class="term" data-t="markscheme" tabindex="0" role="button">markscheme</span>. <span class="t">(12 min)</span></li>
+      </ol>
+    </div>
+    <div id="b4">
+      <div class="bh"><b>Block 4 · 25 min</b><span>15-minute drill, written items, Error log</span></div>
+      <ol>
+        <li><a href="#drill">Drill part A</a>: cover the definitions, say each <span class="term" data-t="command term" tabindex="0" role="button">command term</span> out loud, check. <span class="t">(4 min)</span></li>
+        <li>Drill part B: the <span class="term" data-t="concept" tabindex="0" role="button">concepts</span> mini task. <span class="t">(3 min)</span></li>
+        <li><a href="#quiz">Quiz</a>: the 7 multiple-choice questions, then written item 1. <span class="t">(8 min)</span></li>
+        <li>Written items 2 and 3, then mark all three with their checklists. <span class="t">(6 min)</span></li>
+        <li><a href="#end">Error log and Fix-it</a>. <span class="t">(4 min)</span></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="stuck2"><b>Stuck?</b> (1) Look at the worked example just above the task. (2) Redo that section's self-check. (3) Still stuck after 10 minutes: write it in the Error log as "ask teacher" and move on.</div>
+
+  <p><b>Files for today in the IB folder</b></p>
+  <ul class="files">
+    <li><a href="https://drive.google.com/file/d/1EUXpuau1dt9DGImsFaEmUkzm4uhYAqEk/view">HL02 Data analysis and interpretation - Social learning theory data, Bandura 1961 vs Charlton 2000 - Homework (class)</a> (no answers in Drive: use the model points here)</li>
+    <li><a href="https://drive.google.com/file/d/16iMT1Pt_X1Z4pTY4TeuD83WpOOQdtIw1/view">HL03 Data analysis and interpretation - Lindsay Clancy case, data sets for clinician and prosecution - Source cards (class)</a></li>
+    <li><a href="https://drive.google.com/file/d/1u4egvuCi6IjpuM18g9lU3_MUMjvHOehc/view">HL04 Data analysis and interpretation - Lindsay Clancy debate - Rules and score sheet (class)</a></li>
+    <li><a href="https://drive.google.com/file/d/1wFfgZKnqZpR8MwI3vLZwZpaBLI8BnbeW/view">HL05 Data analysis and interpretation - The space between data and conclusion - Handout (class, 21 Oct)</a></li>
+    <li><a href="https://drive.google.com/file/d/154Sv75_2rUuphHDny_SyP0Fx0WaqWniH/view">RM05 Research methodology - Levels of processing pop quiz - Answer key (class)</a> (answers only)</li>
+    <li><a href="https://drive.google.com/file/d/1KoOk8IT670o-bbr1HKc-Nw2Kub_Gf1Mr/view">REF - Specimen papers 1, 2 and 3 with markschemes (official, first assessment 2027)</a>: Paper 3, its resource booklet and its markscheme</li>
+  </ul>
+  <details><summary>Extra, not needed today</summary>
+    <ul class="files">
+      <li><a href="https://drive.google.com/file/d/1WASZdO0iLXxNuY7JfEdTtwbAoYVITuWv/view">HL01 Data analysis and interpretation - Levels of measurement and central tendency, Paper 3 lesson 1 - Slides (class)</a>: the class slides behind the "which average?" rule.</li>
+      <li><a href="https://drive.google.com/file/d/1Khqsn6PrxoS5UXAEKBpu5G_XG5Viyvtq/view">REF - IB Psychology Subject Guide (official, first assessment 2027)</a>: p49-52 hold the full Paper 3 markbands.</li>
+      <li><a href="https://drive.google.com/file/d/1pjh95S1mQYIxbI25HhP19Ozc3JBE7A1N/view">GLO - Key terms glossary, all topics - Glossary (class, compiled from guide)</a>: to look up any word later.</li>
+      <li>Free reading, no login (read for ideas, write in your own words): Simply Psychology, <a href="https://www.simplypsychology.org/boxplots.html">Box plots</a> (first sections; its outlier rule is not used in class); tutor2u, <a href="https://www.tutor2u.net/psychology/reference/measures-of-disperson">Measures of dispersion</a> (its SD formula divides by the number of scores, this page by one less; in Paper 3 the SD is given, so it does not matter); Simply Psychology, <a href="https://www.simplypsychology.org/credibility-in-qualitative-research.html">Credibility in qualitative research</a> (first sections only).</li>
+      <li>How an SD is calculated, for context only: take each score minus the mean, square it, add the squares, divide by one less than the number of scores, take the square root. For the phone-away group: 17.71 ÷ 6 = 2.95, square root 1.72. The guide asks you to interpret an SD, not to calculate one.</li>
+      <li>Pace for Paper 3 (our arithmetic, not an IB rule): 105 minutes ÷ 30 marks = 3.5 minutes per mark, so about 10, 21, 21 and 52 minutes for Q1 to Q4.</li>
+    </ul>
+  </details>
+  <div class="legend" aria-label="Legend for the markers">
+    <span><span class="learn" style="margin-left:0">Learn word for word</span> official definitions and statements</span>
+    <span><span class="fb" style="margin-left:0">Understand and apply</span> skills to use on data you have never seen</span>
+  </div>
+</section>
+
+<!-- =============================== PAPER 3 =============================== -->
+<section class="topic" id="p3">
+  <div class="kicker">Assessment · guide p49-52, specimen Paper 3</div>
+  <h2>Paper 3 at a glance</h2>
+  <p class="guiding">Four questions, one set of sources, one claim. Check your brain dump against this table.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="p1"><span>State the four Paper 3 question types and their marks: interpretation of graphs (3), data analysis (6), research considerations (6), <span class="term" data-t="synthesis" tabindex="0" role="button">synthesis</span> (15)</span></label>
+    <label><input type="checkbox" data-k="p2"><span>Say what lifts an answer into the top band of each question</span></label>
+  </div>
+
+  <p>The sources come from one HL extension (culture, motivation or technology) and mix numbers and words. Specimen claim: "the use of technology in education may have a negative effect on the mental health of students".</p>
+  <div class="tablewrap"><table>
+    <tr><th>Q</th><th>Type and marks <span class="learn">Learn</span></th><th>What it asks (guide p49-50)</th><th>Top band needs</th></tr>
+    <tr><td class="c">1</td><td>Interpretation of graphs [3]</td><td>"explain one issue that limits the interpretation of the information from a given source"</td><td>3: the issue is <b>explained</b> (2: clearly described; 1: identified)</td></tr>
+    <tr><td class="c">2</td><td>Data analysis [6]</td><td>"analyse the findings from one of several given sources and state a conclusion"</td><td>5-6: "The data is analysed in detail" and the conclusion is "explicitly linked to the findings"</td></tr>
+    <tr><td class="c">3</td><td>Research considerations [6]</td><td>credibility, bias or transferability of a qualitative source</td><td>5-6: "detailed understanding"; source evidence "explicit"</td></tr>
+    <tr><td class="c">4</td><td>Synthesis [15]</td><td>"at least three of the given sources" plus "own knowledge" to "discuss the validity of the claim"</td><td>13-15: three or more sources used effectively; "Different points of view are identified and evaluated"; a reasoned conclusion</td></tr>
+  </table></div>
+  <div class="tip"><b>Exam traps.</b> (1) Q1: only your <b>first</b> issue is credited (specimen markscheme). (2) Q2 has two jobs: analyse <b>and</b> state a conclusion. (3) Q3 is about the <b>qualitative</b> source (interviews, focus groups). (4) Q4 needs three sources <b>and</b> your own knowledge.</div>
+</section>
+
+<!-- =============================== STATISTICS =============================== -->
+<section class="topic" id="stats">
+  <div class="kicker">Data analysis and interpretation · guide p27 (assessed at HL)</div>
+  <h2>Descriptive statistics</h2>
+  <p class="guiding">An average says what is typical. A measure of spread says how much people differ. Paper 3 wants both.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="s1"><span>"Analyse and interpret results of typical measures of <span class="term" data-t="central tendency" tabindex="0" role="button">central tendency</span> (mean, median, mode)" (guide p27)</span></label>
+    <label><input type="checkbox" data-k="s2"><span>Analyse and interpret "measures of <span class="term" data-t="dispersion" tabindex="0" role="button">dispersion</span> (range, <span class="term" data-t="sd" tabindex="0" role="button">standard deviation</span>, semi-interquartile range)" (guide p27)</span></label>
+    <label><input type="checkbox" data-k="s3"><span>Read a box and whisker plot, spot skew and outliers, and say what they do to the mean and the median</span></label>
+  </div>
+
+  <div class="tablewrap"><table>
+    <tr><th>Statistic</th><th>What it is</th></tr>
+    <tr><td>Mean</td><td>add all scores, divide by how many; pulled by one extreme score</td></tr>
+    <tr><td>Median</td><td>middle score in order (even number: halfway between the middle two); not pulled by extremes</td></tr>
+    <tr><td>Mode</td><td>most frequent score or category</td></tr>
+    <tr><td>Range</td><td>highest − lowest; one outlier makes it huge</td></tr>
+    <tr><td>Standard deviation (SD)</td><td>roughly the typical distance of a score from the mean</td></tr>
+    <tr><td>Semi-interquartile range (SIQR)</td><td>(Q3 − Q1) ÷ 2: half the width of the middle 50%; ignores extremes</td></tr>
+  </table></div>
+  <p>Class rule (HL01): categories: <b>mode</b>; ordered ratings (1 to 5): <b>median</b>; numbers, <span class="term" data-t="symmetrical" tabindex="0" role="button">symmetrical</span>: <b>mean</b>; numbers with skew or outliers: <b>median</b>. Q1 and Q3 are a quarter and three quarters of the way up the ordered scores.</p>
+
+  <div class="worked"><b>Worked example 1: five statistics on a made-up data set.</b> <span class="fb">Understand and apply</span>
+    <p>Made up: words recalled (out of 20), in order.</p>
+    <div class="tablewrap"><table>
+      <tr><th>Condition</th><th>Scores (n = 7)</th><th>Mean</th><th>Median</th><th>Mode</th><th>Range</th><th>SD</th></tr>
+      <tr><td>Phone on desk</td><td>6, 7, 8, 8, 9, 10, 18</td><td class="c">9.43</td><td class="c">8</td><td class="c">8</td><td class="c">12</td><td class="c">3.99</td></tr>
+      <tr><td>Phone away</td><td>9, 10, 11, 12, 12, 13, 14</td><td class="c">11.57</td><td class="c">12</td><td class="c">12</td><td class="c">5</td><td class="c">1.72</td></tr>
+    </table></div>
+    <ol>
+      <li>Mean: desk 66 ÷ 7 = 9.43; away 81 ÷ 7 = 11.57.</li>
+      <li>Median: the 4th of 7 scores. Desk 8, away 12. Mode: desk 8, away 12 (each appears twice).</li>
+      <li>Range: desk 18 − 6 = 12; away 14 − 9 = 5. SD (from a calculator or the source): 3.99 and 1.72.</li>
+      <li>Interpret: one outlier (18) lifts the desk mean above its median. Without it: mean 48 ÷ 6 = 8.0, range 4, SD 1.41. The median is fairer here.</li>
+    </ol>
+    <details><summary>Why this step? Why recalculate without the 18? (write two key words, then open)</summary><p>To show how much one outlier moves the mean and spread; if one score changes the picture this much, report the median and say why.</p></details>
+  </div>
+
+  <div class="worked"><b>Worked example 2: read a box and whisker plot.</b> <span class="fb">Understand and apply</span>
+    <p>Made up: reading scores (out of 30), notifications on or off. Five numbers: lowest, Q1 (box left edge), median (red line), Q3 (box right edge), highest.</p>
+    <figure style="margin:10px 0">
+      <svg viewBox="0 0 1000 400" role="img" aria-label="Box plots of made-up reading scores: notifications on: lowest 4, Q1 8, median 10, Q3 15, highest 24; notifications off: lowest 9, Q1 12, median 14, Q3 16, highest 19">
+        <g font-family="Arial,Helvetica,sans-serif" font-size="40">
+          <!-- x = 80 + 28.667 * score -->
+          <text x="80" y="45" fill="#2F47A6" font-weight="bold">Notifications on</text>
+          <line x1="194.7" y1="110" x2="309.3" y2="110" stroke="#1E2A33" stroke-width="3"/>
+          <line x1="510" y1="110" x2="768" y2="110" stroke="#1E2A33" stroke-width="3"/>
+          <line x1="194.7" y1="85" x2="194.7" y2="135" stroke="#1E2A33" stroke-width="3"/><line x1="768" y1="85" x2="768" y2="135" stroke="#1E2A33" stroke-width="3"/>
+          <rect x="309.3" y="75" width="200.7" height="70" fill="#E6EAF7" stroke="#2F47A6" stroke-width="3"/>
+          <line x1="366.7" y1="75" x2="366.7" y2="145" stroke="#B23A3A" stroke-width="5"/>
+          <text x="80" y="195" fill="#2E7D4F" font-weight="bold">Notifications off</text>
+          <line x1="338" y1="260" x2="424" y2="260" stroke="#1E2A33" stroke-width="3"/>
+          <line x1="538.7" y1="260" x2="624.7" y2="260" stroke="#1E2A33" stroke-width="3"/>
+          <line x1="338" y1="235" x2="338" y2="285" stroke="#1E2A33" stroke-width="3"/><line x1="624.7" y1="235" x2="624.7" y2="285" stroke="#1E2A33" stroke-width="3"/>
+          <rect x="424" y="225" width="114.7" height="70" fill="#E3F2E8" stroke="#2E7D4F" stroke-width="3"/>
+          <line x1="481.3" y1="225" x2="481.3" y2="295" stroke="#B23A3A" stroke-width="5"/>
+          <line x1="80" y1="330" x2="940" y2="330" stroke="#4A5862" stroke-width="2"/>
+          <g stroke="#4A5862" stroke-width="2"><line x1="80" y1="330" x2="80" y2="342"/><line x1="223.3" y1="330" x2="223.3" y2="342"/><line x1="366.7" y1="330" x2="366.7" y2="342"/><line x1="510" y1="330" x2="510" y2="342"/><line x1="653.3" y1="330" x2="653.3" y2="342"/><line x1="796.7" y1="330" x2="796.7" y2="342"/><line x1="940" y1="330" x2="940" y2="342"/></g>
+          <g fill="#4A5862" text-anchor="middle"><text x="80" y="375">0</text><text x="223.3" y="375">5</text><text x="366.7" y="375">10</text><text x="510" y="375">15</text><text x="653.3" y="375">20</text><text x="796.7" y="375">25</text><text x="940" y="375">30</text></g>
+        </g>
+      </svg>
+      <figcaption>On: lowest 4, Q1 8, median 10, Q3 15, highest 24. Off: lowest 9, Q1 12, median 14, Q3 16, highest 19.</figcaption>
+    </figure>
+    <ol>
+      <li>Typical score: median 14 (off) against 10 (on). But 14 lies inside the "on" box (8 to 15), so the middle halves overlap a lot.</li>
+      <li>SIQR: on (15 − 8) ÷ 2 = 3.5; off (16 − 12) ÷ 2 = 2. Range: on 20, off 10. The "on" scores vary more.</li>
+      <li>Shape: "on" has 2 from Q1 to the median but 5 from the median to Q3, and <span class="term" data-t="whisker" tabindex="0" role="button">whiskers</span> of 4 (left) and 9 (right): <b>positively skewed</b> (guide glossary: "a longer tail on the right side"), so its mean is probably above its median. "Off" is symmetrical (2 and 2, 3 and 3).</li>
+    </ol>
+    <details><summary>Why this step? Why compare the median with the other group's box? (write two key words, then open)</summary><p>Overlap: if one median sits inside the other group's box, many people scored alike, so the difference is less clear-cut. The specimen markscheme uses this check.</p></details>
+  </div>
+
+  <div class="finish"><b>Finish it.</b> Made up: box plots of anxiety scores. Group X: lowest 5, Q1 9, median 11, Q3 13, highest 17. Group Y: lowest 6, Q1 7, median 8, Q3 12, highest 20.
+    <ol>
+      <li>Done for you: medians 11 (X) and 8 (Y). SIQR of X = (13 − 9) ÷ 2 = 2.</li>
+      <li>Your turn: SIQR of Y, the two ranges, and which group is skewed, which way, and how you can tell.</li>
+    </ol>
+    <details><summary>Answer</summary><p>SIQR Y = (12 − 7) ÷ 2 = 2.5. Ranges: X 12, Y 14. Y is positively skewed: 1 then 4 inside the box, whiskers 1 (left) and 8 (right). X is symmetrical (2 and 2, 4 and 4).</p></details>
+  </div>
+
+  <div class="tip"><b>Exam traps.</b> (1) A big range can come from one outlier: check the SD or SIQR. (2) A high SD is not "unreliable data": it means people differed. (3) Mean well above median: a few high scores pull it up (positive skew). (4) Always quote the numbers: "median 14 against 10", not "higher".</div>
+  <details><summary>Self-check: statistics (write two key words for each, then open)</summary>
+    <p>Made up: anxiety ratings (1 to 10): 2, 3, 3, 4, 5, 9.</p>
+    <ol>
+      <li>Mean, median, mode, range? <i>Mean 26 ÷ 6 = 4.33; median halfway between 3 and 4 = 3.5; mode 3; range 9 − 2 = 7.</i></li>
+      <li>Which average would you report? <i>The median: a 1 to 10 rating is ordered, and the 9 pulls the mean up.</i></li>
+      <li>SD 1.1 against SD 3.6 on the same test? <i>The first group's scores were close together; the second varied much more.</i></li>
+    </ol>
+  </details>
+
+  <div class="src" id="rm05"><b>RM05 prompts (Block 1).</b> Cover Section B of the answer key; answer each in one or two lines, then uncover it.
+    <ol style="margin:6px 0 0;padding-left:22px">
+      <li><b>Q10 [2]</b>: why is "sitting at a desk with a textbook open" a poor measure of academic motivation, and what is better?</li>
+      <li><b>Q11 [2]</b>: why can a bracelet claim based on an "energy field" no instrument can detect not be tested, and how could you reword it so it can?</li>
+      <li><b>Q12 [3]</b>: mean recall was 6.2 (structural), 9.8 (phonemic), 14.5 (semantic). Do the data support levels of processing? Use the gaps (3.6, then 4.7).</li>
+      <li><b>Q13 [3]</b>: design a task for the word OCEAN at each level and predict the ranking.</li>
+    </ol>
+    <p style="margin:6px 0 0">For Q12 a Paper 3 answer would add the size (semantic is about 2.3 times structural) and a limit: no SD or <span class="term" data-t="sample" tabindex="0" role="button">sample size</span>.</p>
+  </div>
+</section>
+
+<!-- =============================== Q2 =============================== -->
+<section class="topic" id="q2">
+  <div class="kicker">Paper 3 question 2 · data analysis [6]</div>
+  <h2>Question 2: analyse and state a conclusion</h2>
+  <p class="guiding">"Analyse": "Break down in order to bring out the essential elements or structure." Then a conclusion tied to the numbers.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="a1"><span>"Analyse and interpret different types of data tables, graphs and results" (guide p27) and state a conclusion explicitly linked to the findings</span></label>
+  </div>
+
+  <p><b>Recipe:</b> (1) what is measured and what a high score means; (2) typical scores compared, with the size of the gap; (3) spread compared; (4) shape, outliers, overlap; (5) a conclusion in the claim's words, with the key numbers and how sure you can be.</p>
+
+  <div class="worked"><b>Worked example 3: Q2 on worked example 1.</b> Made-up question: "Analyse the findings and state a conclusion linked to the claim that phones in the classroom harm learning." <span class="fb">Understand and apply</span>
+    <ol>
+      <li>The source compares words recalled out of 20 by 7 students with the phone on the desk and 7 with it in another room; higher is better recall.</li>
+      <li>The phone-away group recalled more on both averages: mean 11.57 against 9.43 (2.14 words more), median 12 against 8 (4 more).</li>
+      <li>The desk group was far more spread out: SD 3.99 against 1.72, range 12 against 5.</li>
+      <li>That spread comes mostly from one outlier (18). Without it the desk mean is 8.0, so the median is the fairer comparison. Six of the seven desk scores are below the away median of 12.</li>
+      <li>So, in this sample, students whose phone was in another room recalled more words (median 12 against 8), which supports the claim. The conclusion is <span class="term" data-t="tentative" tabindex="0" role="button">tentative</span>: 7 per group, one outlier, and no test of whether the gap could be chance.</li>
+    </ol>
+    <details><summary>Why this step? Why end with "tentative"? (write two key words, then open)</summary><p>The top band needs a conclusion "explicitly linked to the findings": saying how far the numbers carry it (small groups, an outlier) is part of that link.</p></details>
+  </div>
+
+  <div class="finish"><b>Finish it.</b> Made up: motivation scores (out of 40) after four weeks, 20 students per group. App with points and badges: mean 27.4, median 28, SD 3.1. No app: mean 24.9, median 25, SD 6.8. Claim: "technology increases students' motivation".
+    <ol>
+      <li>Done for you: the app group scored higher on both averages: mean 27.4 against 24.9 (2.5 more), median 28 against 25 (3 more).</li>
+      <li>Your turn: one sentence on spread, then the conclusion sentence.</li>
+    </ol>
+    <details><summary>Answer</summary><p>Spread: the no-app SD (6.8) is more than twice the app SD (3.1): app scores were much more alike. Conclusion: so the app group was somewhat more motivated (median 28 against 25), which supports the claim, but the gap is small next to the no-app spread, and 20 per group for four weeks is a limited test.</p></details>
+  </div>
+  <div class="tip"><b>Exam traps.</b> (1) Listing numbers is not analysing: which is higher, by how much, why it matters. (2) Write the conclusion as its own last sentence, starting "So", in the claim's words. (3) Never "proves". (4) Specimen Q2 (done on 21 Nov): the markscheme prints the ranges as 14 and 12, but 25 − 12 = 13. It looks like a misprint; trust your own subtraction.</div>
+</section>
+
+<!-- =============================== HL02 =============================== -->
+<section class="topic" id="hl02">
+  <div class="kicker">Class homework HL02 · the class task for Q2</div>
+  <h2>Bandura vs Charlton: same theory, different data</h2>
+  <p class="guiding">The sheet's golden rule: "point to the number". Every claim uses a figure from the tables.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="h1"><span>Describe and compare two sets of results, with a number in every claim</span></label>
+    <label><input type="checkbox" data-k="h2"><span>Tell a data limitation (group size, zeros, what one number stands for, observer agreement) from a design limitation (<span class="term" data-t="control group" tabindex="0" role="button">control group</span>, lab or real life)</span></label>
+  </div>
+
+  <p>Study A (Bandura, Ross and Ross, 1961): a <span class="term" data-t="laboratory" tabindex="0" role="button">laboratory experiment</span>. Study B (Charlton et al., 2000): playgrounds on St Helena before and after TV arrived. Use only the numbers on the sheet.</p>
+  <div class="tip"><b>Watch the unit.</b> In Study A one number stands for <b>one child</b>. In Study B it is mean acts per <b>30 minutes of video</b>, with different children in 1994 and 2000 and no count of children given.</div>
+
+  <details><summary>Model points (open after your own sentences)</summary>
+    <p><b>Describe</b></p>
+    <ul>
+      <li>A: 22 of the 24 children who saw the <span class="term" data-t="model" tabindex="0" role="button">aggressive model</span> (92%) copied its aggressive acts; about 70% of children in the other two groups scored zero.</li>
+      <li>A, girls' mallet aggression: 18.0 (aggressive model), 13.1 (no model), 0.5 (quiet model): the quiet model lowered it more (12.6) than the aggressive one raised it (4.9).</li>
+      <li>B: only 9 of 64 comparisons (14%) changed noticeably. <span class="term" data-t="prosocial" tabindex="0" role="button">Antisocial</span>: 2 of 32, both <b>decreases</b>. Prosocial: 7 of 32 (5 down, 2 up).</li>
+      <li>B: one prosocial behaviour among pairs of girls fell from 13.67 to 5.75 acts per 30 minutes, a drop of 7.92 (about 58%).</li>
+    </ul>
+    <p><b>Question</b></p>
+    <ul>
+      <li>Each A subgroup (sex of child × sex of model) had only 6 children. With about 70% zeros in two groups, a mean describes few real children.</li>
+      <li>A's observers could often tell the group, because aggressive-condition children were easy to spot: possible researcher bias, although agreement was close (correlations in the .90s).</li>
+      <li>B cannot link any child to how much TV they watched.</li>
+    </ul>
+    <p><b>Compare</b></p>
+    <ul>
+      <li>Learning by watching a model: A is stronger (control group, matched groups, 22 of 24 copied). Design limit: a laboratory and a Bobo doll, minutes after the model.</li>
+      <li>What happens when TV arrives in a real community: B is stronger, and antisocial behaviour hardly changed (2 of 32, both down).</li>
+      <li>No contradiction: A counts copies of specific acts by each child straight after a model; B counts general playground behaviour per 30 minutes, years later. Both can be right.</li>
+    </ul>
+  </details>
+</section>
+
+<!-- =============================== Q4 =============================== -->
+<section class="topic" id="q4">
+  <div class="kicker">Paper 3 question 4 · synthesis [15] · <span class="star">★ If time today</span></div>
+  <h2>Question 4: weigh a claim with three sources and your own knowledge</h2>
+  <p class="guiding">The specimen Q4 asks "<span class="term" data-t="to what extent" tabindex="0" role="button">To what extent</span>": "Consider the <span class="term" data-t="merits" tabindex="0" role="button">merits</span> or otherwise of an argument or concept." You end with a judgement.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="y1"><span>Plan a Q4 answer that uses at least three sources and my own knowledge, gives different points of view and ends with a reasoned conclusion</span></label>
+  </div>
+
+  <div class="worked"><b>Worked example 6: a Q4 plan.</b> Made-up claim: "Phones in the classroom harm students' learning." Source A: worked example 1 (median 12 words with phone away, 8 on the desk). Source B: a survey of 200 students, correlation coefficient −0.31 between daily phone hours and grades. Source C: focus groups: "looking things up quickly helps", "notifications pull my attention away". <span class="fb">Understand and apply</span>
+    <ol>
+      <li>Opening: the sources partly support the claim, but none shows clearly that phones cause worse learning in real lessons.</li>
+      <li>A supports it and is the only one that can suggest cause, because the researcher changed where the phone was. Limit: 7 per group, one outlier, a word list, not a lesson.</li>
+      <li>B: more phone time goes with lower grades, but −0.31 is fairly weak and cannot show cause: struggling students may use phones more (<span class="term" data-t="bidirectional" tabindex="0" role="button">bidirectional ambiguity</span>).</li>
+      <li>C gives both sides: phones help and distract. It shows how students experience it, not how much.</li>
+      <li>Conclusion: limited support. The strongest source is small and artificial; the others do not show cause, and C shows benefits.</li>
+    </ol>
+    <details><summary>Why this step? Why give each source its limitation? (write two key words, then open)</summary><p>A limitation says how much weight a source carries, so the conclusion follows from the weights, not from counting sources.</p></details>
+  </div>
+  <div class="finish"><b>Finish it: paragraph frame for source B.</b> Fill the blanks on paper.
+    <p>"Source B shows that ______ (number) between ______ and ______. This supports the claim because ______. However, ______ (limitation), so source B ______ (how much weight)."</p>
+    <details><summary>Answer</summary><p>"Source B shows a correlation of −0.31 between daily phone hours and grades. This supports the claim because heavier phone users tended to have lower grades. However, it is fairly weak and cannot show which causes which, so source B adds only weak support."</p></details>
+  </div>
+  <div class="tip"><b>Exam traps.</b> (1) Fewer than three sources cannot reach the top band. (2) Summaries without links to the claim are "descriptive" (4-6 band). (3) The conclusion must be "consistent with the arguments presented".</div>
+</section>
+
+<!-- =============================== Q1 =============================== -->
+<section class="topic" id="q1">
+  <div class="kicker">Paper 3 question 1 · interpretation of graphs [3]</div>
+  <h2>Question 1: one issue that limits interpretation</h2>
+  <p class="guiding">"Explain": "Give a detailed account including reasons or causes." Name the issue, show it in the graph, say what it does to the conclusion.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="g1"><span>Explain one issue that limits the interpretation of the information in a graph, to the 3-mark level</span></label>
+  </div>
+
+  <p><b>Issues the specimen markscheme accepted:</b> y-axis not starting at zero; no sample size; an undefined category; something missing (no spread, people counted twice); a title that does not match the claim.</p>
+
+  <div class="worked"><b>Worked example 4: a 3-mark answer.</b> Made-up source: mean hours of sleep with and without a phone in the bedroom. <span class="fb">Understand and apply</span>
+    <figure style="margin:10px 0">
+      <svg viewBox="0 0 1000 475" role="img" aria-label="Made-up bar chart: mean hours of sleep 6.8 with a phone in the bedroom and 7.1 with no phone, y-axis from 6.6 to 7.2">
+        <g font-family="Arial,Helvetica,sans-serif" font-size="40">
+          <text x="960" y="38" fill="#1E2A33" font-weight="bold" text-anchor="end">Mean sleep (hours)</text>
+          <line x1="160" y1="60" x2="160" y2="360" stroke="#4A5862" stroke-width="2"/>
+          <line x1="160" y1="360" x2="960" y2="360" stroke="#4A5862" stroke-width="2"/>
+          <g fill="#4A5862" text-anchor="end"><text x="145" y="370">6.6</text><text x="145" y="270">6.8</text><text x="145" y="170">7.0</text><text x="145" y="70">7.2</text></g>
+          <g stroke="#D6DCD8" stroke-width="2"><line x1="160" y1="260" x2="960" y2="260"/><line x1="160" y1="160" x2="960" y2="160"/><line x1="160" y1="60" x2="960" y2="60"/></g>
+          <rect x="270" y="260" width="250" height="100" fill="#9FB3FF"/>
+          <rect x="600" y="110" width="250" height="250" fill="#2F47A6"/>
+          <text x="395" y="245" text-anchor="middle" fill="#1E2A33">6.8</text>
+          <text x="725" y="95" text-anchor="middle" fill="#1E2A33">7.1</text>
+          <text x="395" y="405" text-anchor="middle" fill="#1E2A33">Phone in</text><text x="395" y="452" text-anchor="middle" fill="#1E2A33">bedroom</text>
+          <text x="725" y="405" text-anchor="middle" fill="#1E2A33">No phone</text>
+        </g>
+      </svg>
+      <figcaption>Made-up graph. The y-axis starts at 6.6 hours, not 0.</figcaption>
+    </figure>
+    <ol>
+      <li><b>Identify</b> (1 mark): the y-axis starts at 6.6 hours instead of 0.</li>
+      <li><b>Describe</b> (2): so the "no phone" bar looks 2.5 times as tall (0.5 against 0.2 above the axis), although the real difference is 7.1 − 6.8 = 0.3 hours, about 18 minutes or 4.4% more sleep.</li>
+      <li><b>Explain</b> (3): a reader may conclude that a phone in the bedroom badly cuts sleep, when the graph supports only a small difference; with no sample size or spread we cannot even tell whether 18 minutes is more than normal night-to-night variation.</li>
+    </ol>
+    <details><summary>Why this step? Why calculate the 2.5 and the 4.4%? (write two key words, then open)</summary><p>They compare the size of the distortion with the size of the real effect: that is the reason the issue limits interpretation.</p></details>
+  </div>
+  <div class="finish"><b>Finish it.</b> Made up: a bar chart titled "Online learning and loneliness" shows 41% of students lonely in 2021 against 23% in 2019. No sample sizes are given.
+    <ol>
+      <li>Done for you (1 mark): the graph does not give the number of students asked in each year.</li>
+      <li>Your turn: describe (2) and explain (3).</li>
+    </ol>
+    <details><summary>Answer</summary><p>Describe: 41% could be 41 of 100 students or 4 of 10, and the two years may have asked different groups. Explain: so the 18-point rise could be chance or a change in who was asked; the graph cannot show that loneliness rose, let alone that online learning caused it.</p></details>
+  </div>
+  <div class="tip"><b>Exam traps.</b> (1) "The sample is too small" with no link to this graph stays at 1 mark. (2) Two issues: only the first is marked. (3) Q1 is about <b>interpreting</b> the data, not a general weakness of the design.</div>
+</section>
+
+<!-- =============================== CLANCY =============================== -->
+<section class="topic" id="clancy">
+  <div class="kicker">Class files HL03, HL04, HL05 · the class task for Q1</div>
+  <h2>The Clancy cards: the space between data and conclusion</h2>
+  <p class="guiding">HL05: "A number is an observation. A verdict is an interpretation."</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="c1"><span>Separate what was observed from how it was interpreted, and tag where a gap comes from: D (data), R (reader) or C (<span class="term" data-t="context" tabindex="0" role="button">context</span>)</span></label>
+    <label><input type="checkbox" data-k="c2"><span>Write a three-sentence limitation that names a specific problem, says what it changes, and uses the figures given</span></label>
+  </div>
+
+  <p>The class used a real, distressing court case in which the defence argued <span class="term" data-t="postpartum psychosis" tabindex="0" role="button">postpartum psychosis</span> (a rare, severe mental illness after giving birth). For Paper 3 only the skill matters: reading each number for what it really measured.</p>
+  <ul>
+    <li><b>D, in the data</b>: what exactly was measured, how many people, when, where, who.</li>
+    <li><b>R, in the reader</b>: which comparison you choose; noticing only what fits (<span class="term" data-t="confirmation bias" tabindex="0" role="button">confirmation bias</span>); being swayed by the first number or its <span class="term" data-t="anchoring" tabindex="0" role="button">framing</span> (anchoring and framing).</li>
+    <li><b>C, in the context</b>: your role, what the source wanted to do (inform or persuade), what was left out.</li>
+  </ul>
+  <p>Card 3 is a D example: <span class="term" data-t="reoffend" tabindex="0" role="button">reoffending</span> figures run from about 2% (4 of 177, Connecticut, closely monitored release) to 36% (Quebec, over nine years). They used different measures (rearrested, charged again), follow-up times, places and years: different numbers, not one number measured badly.</p>
+
+  <details><summary>Model three-sentence limitation for the 35% figure (open after yours)</summary>
+    <p>(1) The 35% comes from one state, Oregon, whose review board, according to the source's own title, releases people found <span class="term" data-t="insanity acquittee" tabindex="0" role="button">not guilty by reason of insanity</span> more quickly than nearly every other state. (2) Under closely monitored release in Connecticut only about 2% (4 of 177) were rearrested, so the rate seems to depend heavily on how a state supervises people after release, not only on the people themselves. (3) So the 35% cannot be used as a general reoffending risk for all insanity acquittees, let alone for one mother in Massachusetts; it describes what happened under Oregon's quicker release system.</p>
+    <p>Other good single limitations: "charged again" is not the same as convicted; the source is an investigative news article (ProPublica, 2018), not a peer-reviewed study.</p>
+  </details>
+  <div class="tip"><b>Exam traps.</b> (1) Different figures from different studies do not prove one is wrong: first check whether they measured the same thing. (2) "4% risk" and "96% do not" are the same number framed two ways: describe it neutrally.</div>
+</section>
+
+<!-- =============================== Q3 =============================== -->
+<section class="topic" id="q3">
+  <div class="kicker">Paper 3 question 3 · research considerations [6] · guide p27-28 and p49-50</div>
+  <h2>Question 3: credibility, bias or transferability</h2>
+  <p class="guiding">Always about a qualitative source. The paper asks one of three set questions.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="r1"><span>Use "Strategies for ensuring the credibility of research" (guide p28) on a qualitative source</span></label>
+    <label><input type="checkbox" data-k="r2"><span>Discuss bias and "Factors that should be considered when transferring findings of a study to another population or context" (guide p27)</span></label>
+  </div>
+
+  <p><b>The three possible questions</b> (guide p49) <span class="learn">Learn word for word</span>: "Discuss how the researcher could improve the credibility of the findings." / "Discuss how the researcher could avoid bias." / "To what extent are the findings transferable to other populations or contexts?"</p>
+  <ul>
+    <li><b>Credibility</b> <span class="learn">Learn</span> (guide glossary): "The degree to which the research gives a true picture of what is being investigated and the results represent the perceptions and opinions of the research <span class="term" data-t="participant" tabindex="0" role="button">participants</span>."</li>
+    <li><b>Transferability</b> <span class="learn">Learn</span>: "the extent to which findings from a study can be applied or generalized to other contexts or settings beyond the specific study's participants or conditions."</li>
+  </ul>
+  <p><b>Strategies the specimen markscheme rewards:</b> <span class="term" data-t="triangulation" tabindex="0" role="button">triangulation</span> (another method, other data sources, or a second researcher); <span class="term" data-t="member checking" tabindex="0" role="button">member checking</span> (participants confirm or correct the themes); <span class="term" data-t="peer review" tabindex="0" role="button">peer review</span> of methods and themes; being open about <span class="term" data-t="conflict of interest" tabindex="0" role="button">conflicts of interest</span> and own views (<span class="term" data-t="reflexivity" tabindex="0" role="button">reflexivity</span>). <b>Transferability</b> depends on how similar the new people and setting are (age, culture, school system, access to technology, time) and on whether the researcher described the sample and setting fully.</p>
+
+  <div class="worked"><b>Worked example 5: transferability.</b> <span class="fb">Understand and apply</span>
+    <div class="src"><b>Made-up source.</b> A teacher interviewed 6 Grade 11 students at her own international school in Singapore about using an AI chatbot for homework, and analysed the <span class="term" data-t="transcript" tabindex="0" role="button">transcripts</span> alone. Themes: "it saves time on hard questions"; "I worry about being accused of cheating"; "I feel less proud of my work".</div>
+    <p>"To what extent are the findings transferable to other populations or contexts?" [6]</p>
+    <ol>
+      <li>Sample: only 6 students from one class at one international school, who probably all have a device and fast internet, so "saves time" may not transfer to schools where students share devices.</li>
+      <li>Context: the worry about "being accused of cheating" depends on this school's AI rules; where AI is allowed for homework, the theme may vanish. The tools also change fast.</li>
+      <li>Balance: the findings could transfer to similar schools with similar rules, if the researcher describes her sample and school in enough detail for readers to judge the match.</li>
+      <li>Judgement: transferable only to a limited extent; interviews at several kinds of school would show which themes are shared.</li>
+    </ol>
+    <details><summary>Why this step? Why quote "6 students" and "accused of cheating"? (write two key words, then open)</summary><p>The 5-6 band needs "explicit" reference to the source: quoting details shows it.</p></details>
+  </div>
+  <div class="finish"><b>Finish it.</b> Made up: a researcher who works for a fitness-tracker company ran two focus groups with 5 members each of one sports club about using fitness trackers, and coded the transcripts herself. Question: "Discuss how the researcher could avoid bias." [6]
+    <ol>
+      <li>Done for you: <span class="term" data-t="researcher bias" tabindex="0" role="button">researcher bias</span>. She works for a tracker company, so she may notice positive comments more. She should state this interest (reflexivity) and have an independent second researcher code the transcripts too.</li>
+      <li>Your turn: one point about <span class="term" data-t="participant bias" tabindex="0" role="button">participant bias</span> in the focus groups, and a judgement.</li>
+    </ol>
+    <details><summary>Answer</summary><p>Participant bias: club members may say what sounds sporty or follow one strong voice. She could have everyone write their views before the discussion and add one-to-one interviews to compare. Judgement: this reduces bias but cannot remove it, because she still chose the questions and the club.</p></details>
+  </div>
+  <div class="tip"><b>Exam traps.</b> (1) "Discuss" or "to what extent": more than one point and a judgement. (2) Credibility is not reliability or sample size: it is whether the themes show what participants meant. (3) A strategy with no link to the source ("use triangulation") stays in the 1-2 band.</div>
+</section>
+
+<!-- =============================== SPECIMEN Q3 =============================== -->
+<section class="topic" id="spec">
+  <div class="kicker">Timed practice · official specimen Paper 3, question 3</div>
+  <h2>Specimen Q3: improve credibility (12 minutes)</h2>
+  <p>On 21 November you did specimen Q1 and Q2. Today: Q3.</p>
+  <ol>
+    <li>Open <a href="https://drive.google.com/file/d/1KoOk8IT670o-bbr1HKc-Nw2Kub_Gf1Mr/view">REF - Specimen papers 1, 2 and 3 with markschemes (official, first assessment 2027)</a>. Find the Paper 3 resource booklet and read <b>Source 3</b> only (focus groups at four schools about online learning during COVID-19 school closures, with three themes).</li>
+    <li>Write: "Discuss how the researcher could improve the credibility of the findings in source 3." [6] <b>9 minutes</b>, no notes: two or three strategies, each tied to a detail of source 3, and a closing judgement.</li>
+    <li>Mark it (<b>3 minutes</b>) with the markband below, then compare with the "In a discussion of credibility" list for question 3 in the Paper 3 markscheme at the end of the same file.</li>
+  </ol>
+  <div class="tablewrap"><table>
+    <tr><th>Marks</th><th>Markband for Q3 (guide p50)</th></tr>
+    <tr><td class="c">1-2</td><td>"limited understanding of the research consideration"; reference to the source "limited or missing"</td></tr>
+    <tr><td class="c">3-4</td><td>"some understanding ... but with some inaccuracies"; reference to the source "implicit"</td></tr>
+    <tr><td class="c">5-6</td><td>"detailed understanding of the research consideration"; reference to the source "explicit"</td></tr>
+  </table></div>
+  <p><b>Self-mark checklist:</b> each strategy explained (how it makes the themes truer to what students meant)? Each tied to a detail of source 3? Some balance? A last sentence that answers the question?</p>
+</section>
+
+<!-- =============================== DRILL =============================== -->
+<section class="topic" id="drill">
+  <div class="kicker">Block 4 · the 15-minute drill (parts A, B and the quiz)</div>
+  <h2>Command-term and concept drill</h2>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="d1"><span>Give the IB definition of the command terms used in Paper 3: explain, analyse, state, discuss, to what extent, interpret, evaluate</span></label>
+    <label><input type="checkbox" data-k="d2"><span>Turn each of the six concepts into a question to ask of any source</span></label>
+  </div>
+
+  <h3>Part A: command terms (guide p60-61) <span class="learn">Learn word for word</span></h3>
+  <div class="tablewrap"><table>
+    <tr><th>Term</th><th>IB definition</th><th>Paper 3</th></tr>
+    <tr><td>Explain</td><td>Give a detailed account including reasons or causes.</td><td>Q1</td></tr>
+    <tr><td>Analyse</td><td>Break down in order to bring out the essential elements or structure.</td><td>Q2</td></tr>
+    <tr><td>State</td><td>Give a specific name, value or other brief answer without explanation or calculation.</td><td>Q2</td></tr>
+    <tr><td>Discuss</td><td>Offer a considered and balanced review that includes a range of arguments, factors or hypotheses. Opinions or conclusions should be presented clearly and supported by appropriate evidence.</td><td>Q3</td></tr>
+    <tr><td>To what extent?</td><td>Consider the merits or otherwise of an argument or concept. Opinions and conclusions should be presented clearly and supported with appropriate evidence and sound argument.</td><td>Q3, Q4</td></tr>
+    <tr><td>Interpret</td><td>Use knowledge and understanding to recognize trends and draw conclusions from given information.</td><td>any</td></tr>
+    <tr><td>Evaluate</td><td>Make an <span class="term" data-t="appraisal" tabindex="0" role="button">appraisal</span> by weighing up the strengths and limitations.</td><td>inside Q4</td></tr>
+  </table></div>
+
+  <h3>Part B: the six concepts as questions about data</h3>
+  <div class="tablewrap"><table>
+    <tr><th>Concept</th><th>Ask of any source</th></tr>
+    <tr><td>Measurement</td><td>What exactly was counted, and does it really measure the idea?</td></tr>
+    <tr><td>Causality</td><td>Was anything changed on purpose with a comparison group, or is it only a correlation?</td></tr>
+    <tr><td>Bias</td><td>Who collected and scored it, and what did they expect or know?</td></tr>
+    <tr><td>Perspective</td><td>How would a different side (clinician, prosecutor, parent) read the same number?</td></tr>
+    <tr><td>Change</td><td>Does the data show change over time, and in which direction?</td></tr>
+    <tr><td>Responsibility</td><td>Were participants treated ethically, and are real people's data reported with respect?</td></tr>
+  </table></div>
+  <p><b>Mini task:</b> cover the table. For the Charlton data, write one question from each of three concepts.</p>
+  <details><summary>Check (open after writing)</summary><p>Measurement: does counting acts per 30 minutes of video measure each child's behaviour? Causality: what else changed on St Helena between 1994 and 2000? Change: which behaviours went down, and which up?</p></details>
+</section>
+
+<!-- =============================== QUIZ =============================== -->
+<section class="topic quiz" id="quiz">
+  <div class="kicker">7 multiple-choice questions, then 3 written items</div>
+  <h2>Quick quiz</h2>
+  <p>Decide before you click. Each answer explains the trap. If you miss one: close the page, redo that section's self-check or Finish it from memory, and write the rule in the Error log.</p>
+
+  <div class="q" data-a="1"><p>1. Scores: 3, 4, 4, 6, 18. Which is true?</p>
+    <button>Mean 4, median 7</button>
+    <button>Mean 7, median 4: the 18 pulls the mean up</button>
+    <button>Mean 7, median 6</button>
+    <button>Mean and median are both 7</button>
+    <div class="why">Mean 35 ÷ 5 = 7; median (3rd of 5) = 4. The outlier pulls the mean up.</div></div>
+
+  <div class="q" data-a="3"><p>2. On the same memory test, group A has SD 1.2 and group B has SD 4.8. This means</p>
+    <button>group B scored higher on average</button>
+    <button>group A's data are more valid</button>
+    <button>group B had more participants</button>
+    <button>group B's scores were much more spread out around their mean</button>
+    <div class="why">SD measures spread, not level, size or validity.</div></div>
+
+  <div class="q" data-a="2"><p>3. In a box plot, the median is close to Q1 and the right whisker is much longer than the left. The data are</p>
+    <button>normally distributed</button>
+    <button>negatively skewed</button>
+    <button>positively skewed, so the mean is probably above the median</button>
+    <button>full of errors</button>
+    <div class="why">Long right tail = positive skew; high scores pull the mean above the median.</div></div>
+
+  <div class="q" data-a="1"><p>4. In Charlton et al. (HL02), one number in the results stands for</p>
+    <button>one child</button>
+    <button>mean acts in one 30-minute period of video</button>
+    <button>one school</button>
+    <button>one island</button>
+    <div class="why">Mean acts per 30 minutes of video, different children each time. In Bandura one number is one child.</div></div>
+
+  <div class="q" data-a="3"><p>5. In Paper 3 question 1 you write about two issues. How is it marked?</p>
+    <button>Both, up to 3 marks each</button>
+    <button>The better of the two</button>
+    <button>Neither: two issues lose the mark</button>
+    <button>Only the first issue is credited</button>
+    <div class="why">Specimen markscheme: "credit should be given only for the first issue."</div></div>
+
+  <div class="q" data-a="0"><p>6. A researcher shows focus group members her themes and asks whether they match what they meant. This is</p>
+    <button>member checking, which can improve credibility</button>
+    <button>random allocation</button>
+    <button>a correlation</button>
+    <button>transferability</button>
+    <div class="why">Member checking helps the findings "represent the perceptions and opinions of the research participants" (guide definition of credibility).</div></div>
+
+  <div class="q" data-a="2"><p>7. "Break down in order to bring out the essential elements or structure" is the IB definition of</p>
+    <button>Explain</button>
+    <button>Discuss</button>
+    <button>Analyse</button>
+    <button>Evaluate</button>
+    <div class="why">Analyse (Q2). Explain adds reasons; discuss is a balanced review; evaluate weighs strengths and limitations.</div></div>
+
+  <div class="score" id="score">Score: 0 / 7 answered 0</div>
+
+  <h3>Written items (on paper, then open the model)</h3>
+  <div class="written" data-max="3"><p>W1 [3] Made-up source: a bar chart shows that 22% of students who used an AI tutor reported high anxiety, against 31% of students who did not. Students chose for themselves whether to use the tutor. Explain one issue that limits the interpretation of the data.</p>
+    <details><summary>Show model answer</summary><p>Students chose whether to use the tutor, so the groups may have differed before (identify): calmer students may have been keener to try a new tool (describe). So the 9-point gap could come from who chose the tutor, not the tutor itself; the graph cannot show that it lowers anxiety (explain).</p>
+    <p><b>Markband:</b> 1 issue identified; 2 clearly described; 3 explained (what it does to the conclusion). Only the first issue counts.</p></details>
+  </div>
+  <div class="written" data-max="2"><p>W2 [2] Made-up: sleep before a test (hours), phone in bedroom: median 6.5, SIQR 1.5; no phone: median 7.5, SIQR 0.5. State one conclusion and support it with the numbers.</p>
+    <details><summary>Show model answer</summary><p>Students without a phone in the bedroom typically slept longer, median 7.5 against 6.5 hours (1 mark), and their sleep was more consistent, SIQR 0.5 against 1.5 (1 mark).</p>
+    <p><b>Checklist:</b> a clear conclusion; both medians or both SIQRs quoted; no "proves".</p></details>
+  </div>
+  <div class="written" data-max="2"><p>W3 [2] A researcher interviewed 8 nurses about night shifts and found the theme "feeling invisible to managers". Explain one way she could improve the credibility of this finding.</p>
+    <details><summary>Show model answer</summary><p>Member checking: show the nurses the theme "feeling invisible to managers" and ask whether it matches what they meant (1 mark), so it represents their views, not her reading of them (1 mark). An explained triangulation point also earns both marks.</p>
+    <p><b>Checklist:</b> strategy named; linked to this source; says how it makes the finding truer to the participants.</p></details>
+  </div>
+</section>
+
+<section class="end" id="end">
+  <h2 style="font-size:1.4rem">Before you close this</h2>
+  <ul>
+    <li>Tick the "I can" boxes you are confident about. Unticked ones are your first ten minutes of Psychology revision before the exam.</li>
+    <li><b>Error log:</b> open the <a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">study sheet</a>, Error log tab. One row for every lost mark (Finish it items, RM05, specimen Q3, quiz, written items), with its type: <b>did not know</b> / <b>wrong method</b> / <b>slip</b> / <b>time</b> / <b>ask teacher</b>, and the rule that fixes it (for example "gave two issues in Q1: only the first counts").</li>
+    <li><b>Fix-it:</b> pick one answer that lost marks (your specimen Q3 is a good choice) and rewrite it to full marks, using the markband.</li>
+    <li>Also on the study site: <a href="../flashcards.html">flashcards</a> (today's command terms, question types and statistics), <a href="../exam-psychology-hl.html">exam technique</a> for Psychology, and your <a href="../progress.html">progress page</a>, which turns green as you tick the boxes and pass the quiz.</li>
+  </ul>
+</section>
+
+</main>
+
+<script>
+(function(){
+  // remember ticked "I can" boxes on this device; fails quietly where storage is unavailable
+  var key='ib-psych-hl-data-ican';
+  var boxes=document.querySelectorAll('.ican input');
+  try{ var saved=JSON.parse(localStorage.getItem(key)||'{}'); boxes.forEach(function(b){ if(saved[b.dataset.k]) b.checked=true; }); }catch(e){}
+  boxes.forEach(function(b){ b.addEventListener('change',function(){ try{ var s={}; boxes.forEach(function(x){ if(x.checked) s[x.dataset.k]=1; }); localStorage.setItem(key,JSON.stringify(s)); }catch(e){} }); });
+
+  // quiz: only the 7 multiple-choice questions are scored and saved; written items are marked on paper
+  var qs=document.querySelectorAll('.quiz .q'); var right=0, done=0, total=qs.length;
+  qs.forEach(function(q){
+    var a=parseInt(q.dataset.a,10); var btns=q.querySelectorAll('button');
+    btns.forEach(function(b,i){ b.addEventListener('click',function(){
+      if(q.classList.contains('done')) return;
+      q.classList.add('done'); done++;
+      if(i===a){ b.classList.add('right'); right++; } else { b.classList.add('wrong'); btns[a].classList.add('right'); }
+      document.getElementById('score').textContent='Score: '+right+' / '+total+' answered '+done+(done===total?(right>=6?'. Good. Log the ones you missed, then do the written items.':'. Redo the self-checks for the ones you missed, log them, then do the written items.'):'');
+      if(done===qs.length){ try{ var KQ='ib-quiz-guide-2026-11-30'; var prev=JSON.parse(localStorage.getItem(KQ)||'null'); localStorage.setItem(KQ,JSON.stringify({right:right,total:qs.length,date:new Date().toISOString().slice(0,10),best:Math.max(right,prev&&prev.best||0)})); }catch(e){} }
+    }); });
+  });
+})();
+</script>
+
+
+<!--terms:start-->
+<div id="termbox" role="dialog" aria-live="polite"><div class="tb-h"><b></b><button type="button">Close</button></div><p class="tb-d"></p></div>
+<script id="terms-data" type="application/json">{"hl": {"w": "HL and SL", "d": "Higher Level (HL) and Standard Level (SL). You take Psychology at HL: more hours, an extra exam (Paper 3) and extra topics."}, "source": {"w": "source", "d": "In Paper 3, one piece of evidence printed in the exam booklet: a graph, a table of results or a summary of interviews."}, "claim": {"w": "claim", "d": "A statement that something is true, which the Paper 3 sources are collected to test, for example \"technology in school harms mental health\"."}, "markband": {"w": "markband", "d": "A level on the examiners' marking grid, such as 3-4 marks. Each band describes what an answer must contain to get those marks."}, "markscheme": {"w": "markscheme", "d": "The examiners' guide to marking a paper: what earns marks and what does not."}, "specimen": {"w": "specimen paper", "d": "A sample exam made by the IB to show what the real papers will look like for the new course."}, "command term": {"w": "command term", "d": "The instruction word at the start of an exam question, such as explain or analyse. The IB gives each one an exact meaning, and it decides what kind of answer gets the marks."}, "synthesis": {"w": "synthesis", "d": "Putting several pieces of evidence together into one argument and judgement."}, "data": {"w": "data", "d": "Information collected in a study: numbers such as scores, or words such as interview answers."}, "qualitative": {"w": "qualitative", "d": "To do with words and meanings rather than numbers: what people say or write in interviews and focus groups."}, "statistic": {"w": "statistic, statistics", "d": "A number that sums up data, such as an average or a measure of spread. Descriptive statistics describe the data you have."}, "central tendency": {"w": "central tendency", "d": "One number that describes the typical score: the mean, the median or the mode."}, "dispersion": {"w": "dispersion", "d": "How spread out the scores are. Range, standard deviation and semi-interquartile range measure it."}, "outlier": {"w": "outlier", "d": "A score far away from all the others, such as 18 when everyone else scored 6 to 10. It can pull the mean and the range a long way."}, "quartile": {"w": "quartile (Q1, Q3)", "d": "Put the scores in order. Q1 is a quarter of the way up, Q3 three quarters of the way up. Half of all scores lie between Q1 and Q3."}, "whisker": {"w": "whisker", "d": "In a box plot, the lines sticking out of the box, reaching to the lowest and highest scores."}, "box plot": {"w": "box and whisker plot", "d": "A graph that shows five numbers: lowest score, Q1, median, Q3 and highest score. The box holds the middle half of the scores."}, "skew": {"w": "skew, skewed", "d": "When scores are bunched on one side and trail off on the other. Positively skewed: a long tail of high scores on the right, which pulls the mean above the median."}, "symmetrical": {"w": "symmetrical", "d": "The same shape on both sides of the middle, like a mirror image. In symmetrical data the mean and the median are about equal."}, "sd": {"w": "standard deviation (SD)", "d": "Roughly the typical distance of a score from the mean. Small SD: people scored much alike. Large SD: they differed a lot."}, "siqr": {"w": "semi-interquartile range (SIQR)", "d": "(Q3 − Q1) ÷ 2: half the width of the middle half of the scores. It ignores extreme scores, so it goes well with the median."}, "correlation": {"w": "correlation, correlation coefficient", "d": "A link between two things measured in the same people. The coefficient runs from −1 to +1: near 0 means no link, the sign says whether one goes up as the other goes up (+) or down (−). A link does not show a cause."}, "bidirectional": {"w": "bidirectional ambiguity", "d": "Not knowing which way the cause runs: does A cause B, or does B cause A?"}, "tentative": {"w": "tentative", "d": "Careful and not final: a conclusion that may change with more evidence."}, "sample": {"w": "sample", "d": "The group of people who actually took part in a study. Sample size is how many there were."}, "participant": {"w": "participant", "d": "A person who takes part in a study."}, "laboratory": {"w": "laboratory experiment", "d": "A study in a controlled room where the researcher changes one thing and measures the effect, keeping everything else the same."}, "control group": {"w": "control group", "d": "The group that does not get the thing being tested, for comparison."}, "model": {"w": "model (in social learning)", "d": "A person whose behaviour someone watches and may copy. In Bandura's study an adult hit a large toy doll while children watched."}, "prosocial": {"w": "prosocial, antisocial", "d": "Prosocial: helpful (sharing, comforting). Antisocial: harmful (hitting, kicking, grabbing)."}, "bias": {"w": "bias", "d": "A tilt in thinking or in a study that pushes results one way, away from the truth."}, "researcher bias": {"w": "researcher bias", "d": "When the researcher's own expectations or values affect how the study is run, scored or interpreted."}, "participant bias": {"w": "participant bias", "d": "When participants change what they say or do because they are being studied, for example to look good."}, "confirmation bias": {"w": "confirmation bias", "d": "Noticing and remembering mainly the evidence that fits what you already believe."}, "anchoring": {"w": "anchoring and framing", "d": "Anchoring: the first number you meet sways your later judgement. Framing: the way a number is put (\"4% risk\" or \"96% safe\") changes how it feels."}, "credibility": {"w": "credibility", "d": "How far qualitative findings give a true picture of what was studied and of what the participants really meant."}, "transferability": {"w": "transferability, transferable", "d": "How far findings from one qualitative study could apply to other people, places or times."}, "reflexivity": {"w": "reflexivity", "d": "The researcher thinking about, and stating, how their own views and background might shape the study."}, "triangulation": {"w": "triangulation", "d": "Checking a finding from more than one angle: another method, other data, or a second researcher. If they agree, the finding is more credible."}, "member checking": {"w": "member checking", "d": "Showing participants the researcher's themes and asking whether they match what they meant."}, "focus group": {"w": "focus group", "d": "A small group discussion (about 3 to 8 people) led by a researcher, to collect people's views in their own words."}, "theme": {"w": "theme", "d": "In qualitative research, an idea that keeps coming up across what participants said, such as \"feeling lonely\"."}, "transcript": {"w": "transcript", "d": "A written, word-for-word copy of a recorded interview or discussion."}, "conflict of interest": {"w": "conflict of interest", "d": "When a researcher could gain from a certain result, for example by working for the company whose product is studied."}, "peer review": {"w": "peer review, peer-reviewed", "d": "Other experts check a study before it is published. A news article is usually not peer-reviewed."}, "levels of processing": {"w": "levels of processing", "d": "A memory idea from your class (Craik and Lockhart): the more deeply you think about a word, the better you remember it. Structural (how it looks) is shallow, phonemic (how it sounds) is deeper, semantic (what it means) is deepest."}, "postpartum psychosis": {"w": "postpartum psychosis", "d": "A rare, severe mental illness that can start soon after giving birth, with confused thinking and beliefs that are not real."}, "insanity acquittee": {"w": "not guilty by reason of insanity", "d": "A court verdict that a person did the act but was so mentally ill that they are not held criminally responsible. Such people are often sent to hospital instead of prison."}, "reoffend": {"w": "reoffending, rearrested", "d": "Committing a crime again after release. Rearrested or charged again are ways of counting it, but they are not the same as being found guilty."}, "context": {"w": "context", "d": "The setting around a study or a source: the place, time, people and purpose."}, "explain": {"w": "explain (command term)", "d": "IB command term: \"Give a detailed account including reasons or causes.\""}, "analyse": {"w": "analyse (command term)", "d": "IB command term: \"Break down in order to bring out the essential elements or structure.\""}, "discuss": {"w": "discuss (command term)", "d": "IB command term: give a balanced review with a range of arguments, then a clear conclusion backed by evidence."}, "to what extent": {"w": "to what extent (command term)", "d": "IB command term: weigh how far a claim is true, then give a clear, supported conclusion."}, "concept": {"w": "concept", "d": "In this course, one of six big ideas used to question any study: bias, causality, change, measurement, perspective and responsibility."}, "appraisal": {"w": "appraisal", "d": "A judgement of how good or useful something is."}, "merits": {"w": "merits", "d": "Good points or strengths."}}</script>
+<script>
+(function(){
+  // tap a dotted word to see what it means
+  var T={};
+  try{ T=JSON.parse(document.getElementById('terms-data').textContent); }catch(e){ return; }
+  var box=document.getElementById('termbox'), bt=box.querySelector('.tb-h b'), bd=box.querySelector('.tb-d');
+  function show(el){ var k=el.getAttribute('data-t'); if(!T[k]) return; bt.textContent=T[k].w; bd.innerHTML=T[k].d; box.classList.add('on'); }
+  function hide(){ box.classList.remove('on'); }
+  document.addEventListener('click',function(e){
+    var el=e.target.closest ? e.target.closest('.term') : null;
+    if(el){ e.preventDefault(); e.stopPropagation(); show(el); return; }
+    if(!box.contains(e.target)) hide();
+  },true);
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape') hide();
+    if((e.key==='Enter'||e.key===' ') && e.target.classList && e.target.classList.contains('term')){ e.preventDefault(); show(e.target); }
+  });
+  box.querySelector('button').addEventListener('click',hide);
+})();
+</script><!--terms:end-->
+<!--enhance:start--><script>
+function storageOK(){ try{ var k='__ib_t'; localStorage.setItem(k,'1'); localStorage.removeItem(k); return true; }catch(e){ return false; } }
+function storageNotice(){ if(storageOK() || document.querySelector('.notice.storage')) return;
+  var n=document.createElement('div'); n.className='notice storage'; n.setAttribute('role','status');
+  n.textContent='Progress cannot be saved in this browser (private mode?). Use normal Safari or Chrome.';
+  var sb=document.querySelector('.sitebar');   // under the shared top bar when the page has one
+  if(sb && sb.parentNode){ sb.parentNode.insertBefore(n,sb.nextSibling); return; }
+  var m=document.querySelector('main')||document.body; m.insertBefore(n,m.firstChild); }
+
+function ibQuizEnhance(cfg){
+  if(window.__ibQuizEnh) return; window.__ibQuizEnh=1;
+  if(typeof storageNotice==='function') storageNotice();
+  var KEY=cfg&&cfg.key; if(!KEY) return;
+  var AK=KEY+'-attempts', WK=KEY+'-written';
+  function get(k){ try{ return JSON.parse(localStorage.getItem(k)||'null'); }catch(e){ return null; } }
+  function put(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); }catch(e){} }
+  function pad(n){ return (n<10?'0':'')+n; }
+  function today(){ var d=new Date(); return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()); }
+  function attempts(){ var a=get(AK); return Array.isArray(a)?a:[]; }
+  function addAttempt(r,t,sameDay){ var a=attempts(), d=today(), rec={date:d,right:r,total:t};
+    if(sameDay && a.length && a[a.length-1].date===d) a[a.length-1]=rec; else a.push(rec); put(AK,a); return a; }
+  // keep the score saved before this history existed as the first attempt
+  (function(){ if(get(AK)) return; var r=get(KEY); if(!r||typeof r!=='object') return;
+    var rr=(typeof r.right==='number')?r.right:r.score, tt=(typeof r.total==='number')?r.total:r.max;
+    if(typeof rr==='number' && tt) put(AK,[{date:r.date||today(),right:rr,total:tt}]); })();
+
+  // written answers: self-mark 0..max
+  var W=get(WK); if(!W||typeof W!=='object') W={};
+  [].forEach.call(document.querySelectorAll('.written[data-max]'),function(el,i){
+    var max=parseInt(el.getAttribute('data-max'),10); if(!(max>=0) || el.querySelector('.wm')) return;
+    var id=el.id||el.getAttribute('data-id')||('w'+(i+1));
+    var box=document.createElement('div'); box.className='wm';
+    var lab=document.createElement('label'); lab.appendChild(document.createTextNode('My mark: '));
+    var sel=document.createElement('select'); sel.setAttribute('aria-label','Your mark out of '+max);
+    var o=document.createElement('option'); o.value=''; o.textContent='not marked yet'; sel.appendChild(o);
+    for(var m=0;m<=max;m++){ o=document.createElement('option'); o.value=String(m); o.textContent=m+' out of '+max; sel.appendChild(o); }
+    if(W[id]!=null) sel.value=String(W[id]);
+    sel.addEventListener('change',function(){ var w=get(WK); if(!w||typeof w!=='object') w={};
+      if(sel.value==='') delete w[id]; else w[id]=parseInt(sel.value,10); put(WK,w); });
+    lab.appendChild(sel); box.appendChild(lab); el.appendChild(box);
+  });
+
+  // timed pages save {score,max,date} themselves; keep one history entry per day
+  if(/^ib-timed-/.test(KEY)){
+    var rec=function(){ var r=get(KEY); if(r && typeof r.score==='number' && r.max) addAttempt(r.score,r.max,true); };
+    var sb=document.getElementById('savebtn'); if(sb) sb.addEventListener('click',function(){ setTimeout(rec,0); });
+    [].forEach.call(document.querySelectorAll('.score-t input'),function(i){ i.addEventListener('change',function(){ setTimeout(rec,0); }); });
+  }
+
+  // multiple-choice quiz
+  var q0=document.querySelector('.quiz .q[data-a]'); if(!q0) return;
+  var quiz=q0.closest('.quiz');
+  var own=!!cfg.own, total=0, count=0, right=0, recs=[];
+  function qsAll(){ return [].filter.call(quiz.querySelectorAll('.q[data-a]'),function(q){ return !q.classList.contains('written'); }); }
+  function opts(q){ return [].filter.call(q.children,function(c){ return c.tagName==='BUTTON'; }); }
+  var score=document.getElementById('score');
+  if(!score){ score=document.createElement('div'); score.className='score'; score.id='score'; var l=qsAll(); l[l.length-1].parentNode.insertBefore(score,l[l.length-1].nextSibling); }
+  var rep=document.createElement('div'); rep.className='cfr'; rep.setAttribute('aria-live','polite'); score.parentNode.insertBefore(rep,score.nextSibling);
+  var hint=document.createElement('p'); hint.className='cfh';
+  hint.textContent='Before each answer, say how sure you are. At the end, the ones you were sure about but got wrong are listed first: they matter most.';
+  q0.parentNode.insertBefore(hint,qsAll()[0]);
+  function addConf(q){ var p=q.querySelector('.cf'); if(p) p.parentNode.removeChild(p);
+    var d=document.createElement('div'); d.className='cf'; d.setAttribute('role','group'); d.setAttribute('aria-label','How sure are you?');
+    d.innerHTML='<div class="cfl-h">How sure are you?</div><div class="cfb"><button type="button" data-c="guess" aria-pressed="false">Guessed</button><button type="button" data-c="unsure" aria-pressed="false">Unsure</button><button type="button" data-c="sure" aria-pressed="false">Sure</button></div>';
+    var first=opts(q)[0]; q.insertBefore(d,first||null); q.removeAttribute('data-conf'); }
+  function counters(qs){ qs.forEach(function(q,i){ var c=q.querySelector('.qn'); if(!c){ c=document.createElement('div'); c.className='qn'; q.insertBefore(c,q.firstChild); } c.textContent=(i+1)+' of '+qs.length; }); }
+  function start(){ var qs=qsAll(); total=qs.length; count=0; right=0; recs=[]; qs.forEach(addConf); counters(qs); rep.innerHTML=''; }
+  function msg(){ return 'Score: '+right+' / '+total+' answered '+count+(count===total?(right>=0.8*total?'. Good. Log the ones you missed.':'. Re-read the sections for the ones you missed, then log them.'):''); }
+  function qtext(q){ var p=q.querySelector('p'); var t=p?p.textContent:''; t=t.replace(/\s+/g,' ').trim();
+    var s=p&&p.querySelector('.subj'); if(s) t=t.slice(s.textContent.trim().length).trim();
+    t=t.replace(/^\d+\.\s*/,''); return t.length>110?t.slice(0,107)+'...':t; }
+  function esc(s){ var d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+  quiz.addEventListener('click',function(e){
+    var b=e.target.closest?e.target.closest('button'):null; if(!b) return;
+    var q=b.closest('.q'); if(!q || !quiz.contains(q) || !q.hasAttribute('data-a') || q.classList.contains('written')) return;
+    var cf=b.closest('.cf');
+    if(cf){ if(q.__ibRec) return; var c=b.getAttribute('data-c'); q.setAttribute('data-conf',c);
+      [].forEach.call(cf.querySelectorAll('button'),function(x){ var on=x===b; x.classList.toggle('on',on); x.setAttribute('aria-pressed',on?'true':'false'); }); return; }
+    if(b.parentNode!==q || q.__ibRec) return;
+    if(own){
+      if(q.classList.contains('done')) return;
+      var bs=opts(q), a=parseInt(q.getAttribute('data-a'),10), i=bs.indexOf(b);
+      q.classList.add('done');
+      if(i===a) b.classList.add('right'); else { b.classList.add('wrong'); if(bs[a]) bs[a].classList.add('right'); }
+    } else if(!q.classList.contains('done')) return;
+    q.__ibRec=true; var ok=b.classList.contains('right'); if(ok) right++; count++;
+    recs.push({q:q,ok:ok,conf:q.getAttribute('data-conf')||''});
+    [].forEach.call(q.querySelectorAll('.cf button'),function(x){ x.disabled=true; });
+    if(own) score.textContent=msg();
+    if(count===total) finish();
+  });
+  function finish(){
+    var r=right, t=total;
+    if(own){ try{ var prev=get(KEY); localStorage.setItem(KEY,JSON.stringify({right:r,total:t,date:new Date().toISOString().slice(0,10),best:Math.max(r,prev&&prev.best||0)})); }catch(e){} }
+    else { var s=get(KEY); if(s && typeof s.right==='number' && s.total) { r=s.right; t=s.total; } }
+    var a=addAttempt(r,t,false);
+    var order=qsAll(), num=function(q){ return order.indexOf(q)+1; };
+    var wrong=recs.filter(function(x){ return !x.ok; });
+    wrong.sort(function(x,y){ return (y.conf==='sure')-(x.conf==='sure') || num(x.q)-num(y.q); });
+    var lucky=recs.filter(function(x){ return x.ok && (x.conf==='guess'||x.conf==='unsure'); }).sort(function(x,y){ return num(x.q)-num(y.q); });
+    var lab={sure:'you were sure',unsure:'you were unsure',guess:'you guessed','':'not marked'};
+    var h='';
+    if(wrong.length){ h+='<b>Log these first</b><ol class="cfl">'+wrong.map(function(x){ return '<li'+(x.conf==='sure'?' class="sure"':'')+'>Question '+num(x.q)+' ('+lab[x.conf]+'): '+esc(qtext(x.q))+'</li>'; }).join('')+'</ol>'; }
+    if(lucky.length){ h+='<b>Right, but not sure</b>: read the explanation again for '+lucky.map(function(x){ return 'question '+num(x.q); }).join(', ')+'.'; }
+    if(!wrong.length && !lucky.length) h+='<b>All right.</b> Come back in a few days and try again: a score that lasts is what counts.';
+    var past=a.slice(0,-1).slice(-3).map(function(x){ return x.right+'/'+x.total+' on '+x.date; });
+    h+='<p class="cfa">Try number '+a.length+(past.length?'. Before: '+past.join(', ')+'.':'.')+'</p>';
+    h+='<button type="button" class="retry">Try again (shuffled)</button>';
+    rep.innerHTML=h;
+    rep.querySelector('.retry').addEventListener('click',retry);
+  }
+  function shuffled(arr){ var best=arr.slice();
+    for(var k=0;k<12;k++){ var x=arr.slice(); for(var i=x.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=x[i]; x[i]=x[j]; x[j]=t; }
+      best=x; if(arr.length<2 || x.some(function(v,i){ return v!==arr[i]; })) break; }
+    return best; }
+  function renumber(q,n){ var p=q.querySelector('p'); if(!p) return;
+    var w=document.createTreeWalker(p,4,null), tn;
+    while((tn=w.nextNode())){ if(tn.parentNode.closest && tn.parentNode.closest('.subj')) continue; if(!/\S/.test(tn.data)) continue;
+      if(/^\s*\d+\.\s/.test(tn.data)) tn.data=tn.data.replace(/^(\s*)\d+\./,'$1'+n+'.'); break; } }
+  function retry(){
+    var qs=qsAll(), marks=[], clones=[];
+    qs.forEach(function(q){
+      var m=document.createComment('q'); q.parentNode.insertBefore(m,q); marks.push(m);
+      var c=q.cloneNode(true); c.classList.remove('done'); c.removeAttribute('data-conf');
+      var p=c.querySelector('.cf'); if(p) p.parentNode.removeChild(p); p=c.querySelector('.qn'); if(p) p.parentNode.removeChild(p);
+      var bs=opts(c), a=parseInt(c.getAttribute('data-a'),10), good=bs[a];
+      bs.forEach(function(x){ x.classList.remove('right','wrong'); x.disabled=false; });
+      if(bs.length){ var after=bs[bs.length-1].nextSibling, nb=shuffled(bs);
+        bs.forEach(function(x){ c.removeChild(x); }); nb.forEach(function(x){ c.insertBefore(x,after); });
+        c.setAttribute('data-a',String(nb.indexOf(good))); }
+      q.parentNode.removeChild(q); clones.push(c);
+    });
+    var nq=shuffled(clones);
+    marks.forEach(function(m,i){ m.parentNode.insertBefore(nq[i],m); m.parentNode.removeChild(m); renumber(nq[i],i+1); });
+    own=true; start(); score.textContent='Score: 0 / '+total+' answered 0';
+    var top=quiz.getBoundingClientRect().top+window.pageYOffset-60; try{ window.scrollTo(0,Math.max(0,top)); }catch(e){}
+  }
+  start();
+}
+
+storageNotice();
+ibQuizEnhance({"key": "ib-quiz-guide-2026-11-30", "own": false});
+(function(){
+  if(window.__ibSite) return; window.__ibSite=1;
+  var PAGE='ib-'+((location.pathname.split('/').pop()||'index').replace(/\.html?$/,''));
+  var BK=PAGE+'-blocks';
+  function get(){ try{ var v=JSON.parse(localStorage.getItem(BK)||'null'); return v&&typeof v==='object'?v:{}; }catch(e){ return {}; } }
+  function put(v){ try{ localStorage.setItem(BK,JSON.stringify(v)); }catch(e){} }
+  // guide plan blocks "Block 1 · 25 min" + title -> numbered card with a time chip
+  [].forEach.call(document.querySelectorAll('.plan > div:not(.brk), .step'),function(d){
+    var bh=d.querySelector(':scope > .bh'); if(!bh || bh.querySelector('.bn')) return;
+    var b=bh.querySelector('b'); var m=b && /^\s*Block\s+(\d+[a-z]?)\s*[·.:-]\s*(.+?)\s*$/i.exec(b.textContent); if(!m) return;
+    var s=bh.querySelector('span'); var title=s?s.innerHTML:'';
+    d.classList.add('block'); d.setAttribute('data-n',m[1]);
+    bh.innerHTML='<span class="bn" aria-hidden="true">'+m[1]+'</span><b><span class="sr">Block '+m[1]+': </span>'+(title||('Block '+m[1]))+'</b><span class="bt">'+m[2]+'</span>';
+    // teaching sections linked from this block get a kicker "Block n · ..."
+    [].forEach.call(d.querySelectorAll('a[href^="#"]'),function(a){
+      var t=document.getElementById(a.getAttribute('href').slice(1)); if(!t) return;
+      var k=t.querySelector(':scope > .kicker'); if(!k || k.getAttribute('data-bk')) return;
+      k.setAttribute('data-bk',m[1]); k.insertAdjacentHTML('afterbegin','<span class="bk">Block '+m[1]+' · </span>');
+    });
+  });
+  // long hero intro paragraphs fold to 3 lines; tap to read them all
+  [].forEach.call(document.querySelectorAll('header.hero .wrap > p'),function(p){
+      if(p.textContent.length<160) return;
+      p.classList.add('fold'); if(p.scrollHeight<=p.clientHeight+2){ p.classList.remove('fold'); return; }
+      p.setAttribute('role','button'); p.setAttribute('tabindex','0'); p.setAttribute('aria-expanded','false');
+      function tog(e){ if(e && e.target && e.target.closest && e.target.closest('a,.term')) return; var o=p.classList.toggle('open'); p.setAttribute('aria-expanded',o?'true':'false'); }
+      p.addEventListener('click',tog); p.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); tog(); } });
+  });
+  // keep the Today card on the first screen: shrink the header picture (not below 18% of the screen height) if needed
+  (function(){ var art=document.querySelector('header.hero > svg, header.hero > img'), card=document.querySelector('.todaycard');
+    if(!art || !card) return; var vh=window.innerHeight, over=card.getBoundingClientRect().top+window.pageYOffset-(vh-70);
+    if(over>0){ var h=art.getBoundingClientRect().height; art.style.maxHeight=Math.max(0.18*vh,h-over)+'px'; } })();
+  // "Block done" ticks
+  var st=get();
+  [].forEach.call(document.querySelectorAll('.block'),function(d,i){
+    if(d.querySelector(':scope > .bdone')) return;
+    var n=d.getAttribute('data-n')||String(i+1);
+    var l=document.createElement('label'); l.className='bdone';
+    l.innerHTML='<input type="checkbox"> Block done';
+    var c=l.querySelector('input'); c.checked=!!st[n]; d.classList.toggle('is-done',c.checked);
+    c.addEventListener('change',function(){ var s=get(); if(c.checked) s[n]=new Date().toISOString().slice(0,10); else delete s[n]; put(s); d.classList.toggle('is-done',c.checked); chips(); });
+    d.appendChild(l);
+  });
+  function chips(){ var s=get(); [].forEach.call(document.querySelectorAll('.chip[data-n]'),function(a){ a.classList.toggle('done',!!s[a.getAttribute('data-n')]); }); }
+  chips();
+  // current section in the menu
+  var nav=document.querySelector('nav.toc .wrap'); if(!nav || !('IntersectionObserver' in window)) return;
+  var links={}, secs=[];
+  [].forEach.call(nav.querySelectorAll('a[href^="#"]'),function(a){ var el=document.getElementById(a.getAttribute('href').slice(1)); if(el){ links[el.id]=a; secs.push(el); } });
+  // the current section is the last one whose top has passed under the two bars; the observer (and a
+  // throttled scroll check, for long sections) only decides when to look again
+  function mark(){ var best=null; secs.forEach(function(el){ if(el.getBoundingClientRect().top<=120) best=el; });
+    Object.keys(links).forEach(function(id){ links[id].removeAttribute('aria-current'); });
+    if(best){ var a=links[best.id]; a.setAttribute('aria-current','location');
+      var l=a.offsetLeft-nav.offsetLeft, r=l+a.offsetWidth; if(l<nav.scrollLeft+8 || r>nav.scrollLeft+nav.clientWidth-8) nav.scrollLeft=Math.max(0,l-40); } }
+  secs.sort(function(a,b){ return (a.compareDocumentPosition(b)&2)?1:-1; });
+  var io=new IntersectionObserver(mark,{rootMargin:'-100px 0px -55% 0px'});
+  var tick=false; window.addEventListener('scroll',function(){ if(tick) return; tick=true; requestAnimationFrame(function(){ tick=false; mark(); }); },{passive:true});
+  secs.forEach(function(el){ io.observe(el); });
+})();
+</script><!--enhance:end-->
+</body>
+</html>

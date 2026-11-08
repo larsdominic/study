@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>English A Lang &amp; Lit HL revision 1: from memory, panels and closure, a timed cartoon paragraph + French (Fri 27 Nov 2026)</title>
+<!--
+  English A: Language and Literature HL revision session 1 (exam window), Friday 27 November 2026, then French B 30 min.
+  Built 8 Nov 2026 from tools/plan_data.py (27 Nov) and the coordinator's task: brain dump, Error log, a second timed
+  Paper 1 style paragraph on a NEW unseen cartoon self-marked with the official criteria, the panels/gutters/closure
+  step moved from 20 Nov, Fix-it; French: the corrected screen-time text, then cause connectors.
+  Consistent with guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html (chain, Big 5, conventions, effect verbs)
+  and guides/2026-11-20-english-a-hl-persepolis-water-cell.html (shots, angles, transitions, closure, combinations).
+
+  Sources:
+  - Official IB "Language A: language and literature guide", first assessment 2021, local copy
+    ~/ClaudeMe/ib-notes/refs/langlit-guide-2021.txt (from ibo.org): HL outline (lines ~1815-1818: Paper 1, 2 h 15,
+    two non-literary passages from two different text types, an analysis of each, 40 marks, 35%); Paper 1 criteria
+    A-D with the level descriptors quoted on this page (lines ~1953-2045). Jamila sits the 2026 version (not public);
+    the coordinator states Paper 1 is unchanged.
+  - Class files (Drive, new IDs, other-renames.json): Paper 1 Satirical Cartoons - Revision Guide (1Sk7GD4FmWcB_crdej9xiSiWgg1iFySKR),
+    Horsey model (1mSfhzzcuxkvOuk33g9wqVY3xyNvbx7nP), Graphic Novels Unit Session 5 slides (1VeAjxEUlIENsgDKDWh6zrRjKCgSEZrwn),
+    Session 4 slides (1dPY1MSzxeClWZnuqlcg-Gkfs2izvvreb); French B cause connectors 18 Sep (1d54TG2mwqwqvXnPtxVhKrcmIZHn5GuHo),
+    writing task 25 Sep (1Hqi6Qh2X_FeRENOisYlvq6koDnDQH9QY). Terms and the six transitions as already taught on 20 Nov.
+  - Unseen cartoon (fetched 8 Nov 2026, viewed for building only, NOT copied): Steve Jones, "Steve Jones on dangerous tech
+    innovations - cartoon", The Guardian, Sat 7 Nov 2026,
+    https://www.theguardian.com/commentisfree/picture/2026/nov/07/steve-jones-dangerous-tech-innovations-cartoon-ai-fire
+    (two cave dwellers at a fire, blue-grey cave, caption "Imagine if this technology fell into the wrong hands...").
+    Backup: Steve Jones on the pros and cons of AI datacentres, 12 Sep 2026,
+    https://www.theguardian.com/commentisfree/picture/2026/sep/12/steve-jones-pros-cons-ai-datacentres-cartoon
+    (a huge "DATACENTRE" block in a desert, cacti, an animal skeleton, two tiny people at a fence; caption
+    "Of course I miss water, but at least I don't have to think for myself any more...").
+  UNSURE:
+  1. Who speaks the Jones caption: there is no speech bubble; the man's mouth is open and he gestures, so the model says "presumably".
+  2. The plan line says "15 connectors from the flashcards"; the class sheet (18 Sep) and the French flashcards have 9 cause
+     connectors, so the page uses those 9 and does not add others (rule 6c).
+  3. Whether her French text has come back corrected by 27 Nov: the page gives a fallback (the 20 Nov self-check list).
+  4. The guiding questions for both cartoons are written for this page, not the IB's.
+  5. The Datacentre context line (datacentres use a lot of electricity and often water for cooling) is general knowledge, matching the
+     Guardian's own topic tags (Datacentres, Water); no figures given.
+-->
+<style>
+  :root{
+    --paper:#F5F7F4; --ink:#1E2A33; --ink-soft:#4A5862; --rule:#D6DCD8;
+    --indigo:#2F47A6; --indigo-soft:#E6EAF7; --amber:#B8761A; --amber-soft:#FBF1DF;
+    --green:#2E7D4F; --green-soft:#E3F2E8; --red:#B23A3A; --red-soft:#F8E4E4;
+    --card:#FFFFFF;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;overflow-wrap:break-word}
+  h1,h2,h3,h4{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;line-height:1.2;margin:0 0 .4em;font-weight:600}
+  h1{font-size:2.3rem}
+  h2{font-size:1.75rem;margin-top:0}
+  h3{font-size:1.25rem;margin-top:1.8em}
+  h4{font-size:1.05rem;margin-top:1.4em;font-family:inherit;font-weight:700}
+  p{margin:0 0 1em}
+  a{color:var(--indigo)}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
+
+  /* hero: the analysis chain from the class revision guide (Step 5), used on visual, verbal and colour choices */
+  .hero{background:#0B0F1A;color:#fff;padding:0 0 28px}
+  .chainsvg{display:block;width:100%;max-width:760px;height:auto;margin:0 auto;padding:10px 10px 0}
+  .hero .wrap{padding-top:18px;padding-bottom:0}
+  .hero h1{color:#fff}
+  .hero a{color:#F2C46D}
+  .hero p{color:#C9D1E6;max-width:680px}
+  .hero .check{border-left:4px solid #F2C46D;padding:8px 12px;background:#161C2E;color:#E9EDF7}
+  .meta{display:flex;flex-wrap:wrap;gap:8px 22px;color:#C9D1E6;font-size:.95rem;margin-top:8px}
+
+  nav.toc{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+  nav.toc .wrap{display:flex;gap:2px;flex-wrap:wrap;padding:6px 20px}
+  nav.toc a{text-decoration:none;color:var(--ink-soft);padding:4px 8px;border-radius:6px;font-size:.9rem}
+  main [id]{scroll-margin-top:84px}
+  nav.toc a:hover,nav.toc a:focus-visible{background:var(--indigo-soft);color:var(--indigo);outline:none}
+
+  .today{background:var(--card);border:2px solid var(--indigo);border-radius:10px;padding:12px 16px;margin:28px 0 12px}
+  .today p{margin:0 0 6px;font-weight:700;color:var(--indigo)}
+  .today ol{margin:0;padding-left:22px}
+
+  .plan{display:grid;grid-template-columns:1fr;gap:12px;margin:22px 0 8px}
+  .plan > div{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);padding:12px 16px}
+  .plan > div.fr{border-left-color:var(--green)}
+  .plan .bh{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-bottom:4px}
+  .plan .bh b{font-size:1.2rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+  .plan .bh span{font-weight:700;color:var(--indigo)}
+  .plan ol{margin:6px 0 0;padding-left:22px}
+  .plan li{margin:4px 0}
+  .plan .t{color:var(--ink-soft);font-size:.88rem;white-space:nowrap}
+  .star{color:var(--amber);font-weight:700}
+  .pause{text-align:center;background:var(--green-soft);border:1px dashed var(--green);padding:8px 12px;font-weight:600}
+  .stuck2{background:var(--amber-soft);border:1px solid var(--amber);border-radius:10px;padding:10px 14px;margin:14px 0}
+  .stuck2 ol{margin:6px 0 0;padding-left:22px}
+  .files{margin:10px 0 0;padding-left:20px}
+  .files li{margin:5px 0;font-size:.95rem}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 20px;background:var(--card);border:1px solid var(--rule);padding:10px 14px;font-size:.92rem;margin:16px 0}
+
+  .topic{margin-top:56px;padding-top:28px;border-top:3px solid var(--ink)}
+  .topic ul{padding-left:22px}
+  .topic li{margin:4px 0}
+  .kicker{color:var(--indigo);font-weight:700;letter-spacing:.01em;margin-bottom:4px}
+  .guiding{font-style:italic;color:var(--ink-soft);margin-bottom:18px}
+
+  .ican{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:0 0 24px}
+  .ican p{margin:0 0 8px;font-weight:700}
+  .ican label{display:flex;gap:10px;align-items:flex-start;padding:5px 0;cursor:pointer}
+  .ican input{margin-top:6px;width:16px;height:16px;flex:none;accent-color:var(--indigo)}
+
+  /* markers: what to learn word for word and what to understand and apply */
+  .fb,.learn{display:inline-block;font-size:.72rem;font-weight:700;padding:1px 7px;border-radius:3px;vertical-align:middle;margin-left:6px;white-space:nowrap;font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.01em}
+  .fb{background:var(--green);color:#fff}
+  .learn{background:var(--amber);color:#fff}
+
+  table{border-collapse:collapse;width:100%;margin:12px 0 20px;font-size:.95rem;background:var(--card)}
+  th,td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#EDF0EC}
+  td.c,th.c{text-align:center}
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:14px 0 20px}
+  .cards > div{background:var(--card);border:1px solid var(--rule);border-top:4px solid var(--indigo);padding:10px 14px}
+  .cards h4{margin:0 0 6px}
+  .cards p{margin:4px 0;font-size:.95rem}
+
+  .quote{background:var(--card);border-left:5px solid var(--amber);padding:10px 16px;margin:14px 0;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:1.05rem}
+  .quote small{display:block;font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.85rem;color:var(--ink-soft);margin-top:4px}
+  .scene{background:var(--card);border:1px dashed var(--ink-soft);padding:12px 16px;margin:14px 0}
+  .tip{background:var(--amber-soft);border-left:5px solid var(--amber);padding:12px 16px;margin:18px 0}
+  .tip b:first-child{color:var(--amber)}
+  .worked{background:var(--indigo-soft);border-left:5px solid var(--indigo);padding:12px 16px;margin:18px 0}
+  .worked > b:first-child{color:var(--indigo)}
+  .worked ol{margin:6px 0 0;padding-left:22px}
+  .worked li{margin:6px 0}
+  .finish{background:var(--card);border:1px solid var(--indigo);border-left:5px solid var(--green);padding:12px 16px;margin:18px 0}
+  .finish > b:first-child{color:var(--green)}
+  .blank{display:inline-block;min-width:5em;border-bottom:1px solid var(--ink-soft)}
+  .para{background:var(--card);border:1px solid var(--rule);padding:12px 16px;margin:12px 0;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:1.06rem}
+  .nw{white-space:nowrap}
+  .fr-word{font-weight:700}
+
+  details{background:var(--card);border:1px solid var(--rule);padding:10px 14px;margin:10px 0}
+  summary{cursor:pointer;font-weight:600}
+  details[open] summary{margin-bottom:8px}
+  details.why2{background:transparent;border:0;border-top:1px dashed var(--indigo);padding:8px 0 0;margin:10px 0 0}
+  details.extra{background:var(--green-soft);border:1px solid var(--green)}
+
+  .quiz .q{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:12px 0}
+  .quiz .q > p{font-weight:600;margin-bottom:8px}
+  .quiz .q.written{border-left:5px solid var(--amber)}
+  .quiz button{display:block;width:100%;text-align:left;background:#F3F5F2;border:1px solid var(--rule);padding:8px 12px;margin:6px 0;border-radius:6px;font:inherit;cursor:pointer;color:var(--ink)}
+  .quiz button:hover,.quiz button:focus-visible{border-color:var(--indigo);outline:none}
+  .quiz button.right{background:var(--green-soft);border-color:var(--green)}
+  .quiz button.wrong{background:var(--red-soft);border-color:var(--red)}
+  .quiz .why{display:none;margin-top:8px;font-size:.95rem;color:var(--ink-soft)}
+  .quiz .q.done .why{display:block}
+  .score{font-weight:700;margin-top:14px}
+
+  .end{margin-top:56px;background:var(--card);border:1px solid var(--rule);padding:18px 20px}
+  .end ul{margin:8px 0 0;padding-left:20px}
+  @media (max-width:600px){main [id]{scroll-margin-top:140px}h1{font-size:1.8rem}body{font-size:16px}th,td{padding:6px}}
+  @media print{nav.toc{position:static}details{break-inside:avoid}.quiz button{border:1px solid #999}}
+  .hero .chainsvg{max-width:760px}
+  .lvlc{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+  .rules{background:var(--card);border:2px dashed var(--amber);padding:10px 16px;margin:14px 0}
+  .rules ol{margin:6px 0 0;padding-left:22px}
+
+
+
+/*terms:start*/
+.term{border-bottom:2px dotted var(--indigo);cursor:pointer;border-radius:2px}
+.term:focus-visible{background:var(--indigo-soft)}
+@media (hover:hover){.term:hover{background:var(--indigo-soft)}}
+#termbox{display:none;position:fixed;left:10px;right:10px;bottom:10px;max-width:640px;margin:0 auto;background:var(--card);border:2px solid var(--indigo);border-radius:8px;padding:14px 16px 12px;box-shadow:0 8px 28px rgba(0,0,0,.22);z-index:60;max-height:60vh;overflow:auto}
+#termbox.on{display:block}
+#termbox .tb-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+#termbox .tb-h b{font-size:1.1rem;color:var(--indigo)}
+#termbox button{font:inherit;border:1px solid var(--rule);background:var(--paper);border-radius:8px;padding:4px 12px;cursor:pointer;flex:none;min-height:44px;min-width:44px}
+#termbox .tb-d{margin:8px 0 0;line-height:1.5}
+.before.block0{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:12px 16px;margin:12px 0}
+.before > details{background:transparent;border:0;padding:0;margin:0}
+.before > details > summary{display:grid;grid-template-columns:32px minmax(0,1fr) auto auto;align-items:center;gap:4px 10px;min-height:44px;list-style:none;cursor:pointer}
+.before > details > summary::-webkit-details-marker{display:none}
+.before > details > summary::after{content:"Hide";font-size:.85rem;font-weight:600;color:var(--indigo)}
+.before > details:not([open]) > summary::after{content:"Show"}
+.before .bn{flex:none;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--indigo);color:#fff;font-weight:700}
+.before .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.before .b0t{font-size:1.15rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-weight:600;color:var(--ink)}
+.before .bt{white-space:nowrap;font-size:.8rem;font-weight:700;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:4px;padding:2px 8px}
+.before .bgi{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);border-radius:8px;padding:12px 16px;margin:12px 0}
+.before .bgi h3{margin:0 0 6px;font-size:1.08rem}
+.before .bgi p{margin:6px 0}
+.before .bgi svg{max-width:100%;height:auto;display:block;margin:8px auto}
+.before .more{font-size:.95rem;color:var(--ink-soft)}
+.before .stuck{background:var(--amber-soft);border-radius:8px;padding:10px 14px}
+/*terms:end*/
+</style>
+<!--enhance:start--><meta name="color-scheme" content="light"><style>
+.warmup{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--amber);padding:12px 16px 4px;margin:24px 0}
+.warmup h2{margin:0 0 6px;font-size:1.3rem}
+.warmup .wu-how{font-size:.95rem;color:var(--ink-soft);margin:0 0 8px}
+.warmup ol{margin:0;padding-left:24px}
+.warmup li{margin:10px 0}
+.warmup .wu-m{font-size:.8rem;color:var(--ink-soft)}
+.warmup .wu-f{font-weight:600}
+.warmup details{margin-top:4px}
+.warmup summary{cursor:pointer;color:var(--indigo);font-size:.92rem}
+.warmup .wu-b{border-top:1px solid var(--rule);margin-top:6px;padding-top:6px}
+.warmup .wu-b a{font-size:.88rem;margin-left:6px;white-space:nowrap}
+.warmup .wu-foot{font-size:.92rem;margin:12px 0 8px}
+
+:root{--amber-ink:#8A6416}
+:focus-visible{outline:3px solid var(--indigo);outline-offset:2px}
+.quiz button:focus-visible,.quiz .q .cf button:focus-visible{outline:3px solid var(--indigo);outline-offset:2px}
+@media (hover:none){.quiz button:not(.right):not(.wrong):hover{border-color:var(--rule)}}
+.quiz button.right::before{content:"✓ Correct: ";font-weight:700;color:var(--green)}
+.quiz button.wrong::before{content:"✗ Your answer: ";font-weight:700;color:var(--red)}
+.quiz .q .qn{font-size:.8rem;font-weight:700;color:var(--ink-soft);margin-bottom:2px}
+.quiz .q .cf{margin:4px 0 10px}
+.quiz .q .cf .cfl-h{font-size:.88rem;font-weight:600;color:var(--ink-soft);margin-bottom:4px}
+.quiz .q .cf .cfb{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;max-width:420px}
+.quiz .q .cf button{display:block;width:100%;min-height:44px;margin:0;padding:6px 8px;text-align:center;font-size:.92rem;border:1px solid var(--rule);border-radius:8px;background:var(--card);color:var(--ink)}
+.quiz .q .cf button.on{background:var(--indigo-soft);border:2px solid var(--indigo);font-weight:700}
+.quiz .q .cf button:disabled{cursor:default;opacity:1;color:var(--ink-soft)}
+.quiz .q .cf button.on:disabled{color:var(--ink)}
+.quiz .cfh{font-size:.92rem;color:var(--ink-soft)}
+.quiz .cfr{margin-top:10px}
+.quiz .cfr ol{margin:6px 0 10px;padding-left:22px}
+.quiz .cfr li{margin:4px 0}
+.quiz .cfr li.sure{font-weight:600}
+.quiz .cfr .cfa{font-size:.9rem;color:var(--ink-soft);margin:8px 0}
+.quiz .cfr button.retry{display:inline-block;width:auto;min-height:44px;text-align:center;background:var(--indigo);color:#fff;border-color:var(--indigo);font-weight:700;padding:8px 16px}
+.wm{margin-top:8px;font-size:.92rem}
+.wm select{font:inherit;min-height:44px;padding:4px 6px;border:1px solid var(--rule);border-radius:8px;background:var(--card);color:var(--ink);max-width:100%}
+.notice{background:var(--amber-soft);border:1px solid var(--amber);color:var(--ink);padding:10px 14px;margin:12px 0;border-radius:8px;font-weight:600}
+
+:root{--amber-ink:#8A6416;--grey:#5F6B72;--purple:#6A3D9A;--green-ink:#256B43;--r-sm:4px;--r:8px}
+/* top bar: back to today, flashcards, progress, sheet */
+.sitebar{position:sticky;top:0;z-index:30;height:44px;background:var(--paper);box-shadow:0 1px 0 var(--rule)}
+.sitebar .sb{max-width:820px;height:44px;margin:0 auto;padding:0 10px;display:flex;align-items:stretch;gap:2px;overflow-x:auto;scrollbar-width:none;white-space:nowrap}
+.sitebar .sb::-webkit-scrollbar{display:none}
+.sitebar a{flex:none;display:flex;align-items:center;min-height:44px;padding:0 10px;color:var(--indigo);text-decoration:none;font:600 .95rem/1 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;border-radius:var(--r-sm)}
+.sitebar a.sb-home{font-weight:700}
+@media (hover:hover){.sitebar a:hover{background:var(--indigo-soft)}}
+/* guide section menu: one row that scrolls sideways, 44 px targets, current section marked */
+nav.toc{top:44px;z-index:29}
+nav.toc .wrap{display:flex;flex-wrap:nowrap;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;white-space:nowrap;padding:0 10px}
+nav.toc .wrap::-webkit-scrollbar{display:none}
+nav.toc a{flex:none;display:flex;align-items:center;min-height:44px;padding:12px 10px;line-height:1.2;border-radius:0}
+nav.toc a[href$="index.html"]{display:none}
+nav.toc a[aria-current]{color:var(--indigo);font-weight:700;background:var(--indigo-soft);box-shadow:inset 0 -3px 0 var(--indigo)}
+[id]{scroll-margin-top:56px}
+html:has(nav.toc) [id]{scroll-margin-top:100px}
+/* focus: always visible */
+:focus-visible{outline:3px solid var(--indigo)!important;outline-offset:2px!important}
+header.hero :focus-visible,header.top :focus-visible{outline-color:#F2C46D!important}
+/* readable text */
+main p,main li,.why{max-width:68ch}
+@media (max-width:600px){.wrap{padding-left:16px;padding-right:16px}}
+small{font-size:max(12px,.8em)}
+.sig small{font-size:max(12px,.62em)}
+/* hero: title first, then the picture (at most 30% of the screen height, as wide as the text column),
+   so the title and the Today card share the first screen; long intro paragraphs fold to 3 lines (tap to read) */
+header.hero{display:flex;flex-direction:column}
+header.hero > .wrap{order:-1;width:100%}
+header.hero > svg,header.hero > img{max-height:30vh;max-width:780px;margin:14px auto 0}
+header.hero p.fold{position:relative;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;cursor:pointer}
+header.hero p.fold::after{content:"more";position:absolute;right:0;bottom:0;padding:0 2px 0 28px;background:linear-gradient(90deg,rgba(11,15,26,0),#0B0F1A 22px);color:#F2C46D;font-weight:700}
+header.hero .wrap > p ~ p.fold{-webkit-line-clamp:2}
+header.hero p.fold.open{display:block;-webkit-line-clamp:unset}
+header.hero p.fold.open::after{content:none}
+@media (max-width:600px){header.hero > svg,header.hero > img{max-height:28vh} header.hero .meta{font-size:.85rem;gap:0 14px}}
+/* contrast: amber and grey text */
+body .tip b:first-child,body .src > b:first-child,body .star,body .col.l > h3,body .timer.low .tdisp{color:var(--amber-ink)}
+/* one badge system: Learn = solid amber; Given / in booklet = neutral outline; Apply = indigo outline; HL = purple outline; green = done */
+.badge,.fb,.learn,.tag,span.hl,.quiz .subj,.written .wsubj,.wsubj,.pill,.soon{display:inline-block;font:700 .8rem/1.4 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.01em;padding:1px 7px;border:1px solid currentColor;border-radius:var(--r-sm);background:var(--card);vertical-align:middle;white-space:nowrap}
+.learn,.badge.learn{background:var(--amber-ink);border-color:var(--amber-ink);color:#fff}
+.fb,.badge.apply{color:var(--indigo);border-color:var(--indigo)}
+.fb.given,.badge.given,.tag,.quiz .subj,.written .wsubj,.wsubj,.badge.subj{color:var(--ink);border-color:var(--grey)}
+span.hl,.badge.hl{color:var(--purple);border-color:var(--purple)}
+.pill{margin-left:6px}
+.p-done,.badge.done{color:var(--green-ink);border-color:var(--green);background:var(--green-soft)}
+.p-soon,.soon{color:var(--grey);border-color:var(--grey)}
+/* radii: 4 px small things, 8 px boxes */
+.today,.goals,.able,.todaycard,#termbox,.before .bgi,.before .stuck,.quiz button,.go,.notice,.btn,.timer button,.tl,.chip,.plan > div,.step,.block{border-radius:var(--r)}
+/* 44 px targets */
+.go{min-height:44px;display:inline-flex;align-items:center}
+main details>summary{min-height:44px;display:flex;align-items:center;cursor:pointer}
+ul.files a,.files li>a{display:inline-flex;align-items:center;min-height:44px}
+input[type=number],input[type=text],select{min-height:44px}
+#box a#src,a.src{display:inline-flex;align-items:center;min-height:44px}
+#termbox .tb-h button{min-height:44px;min-width:44px}
+.top .crumb{display:flex;flex-wrap:nowrap;align-items:center;gap:0 6px;overflow-x:auto;scrollbar-width:none;white-space:nowrap;margin-bottom:2px}
+.top .crumb::-webkit-scrollbar{display:none}
+.top .crumb a{flex:none;display:inline-flex;align-items:center;min-height:44px;padding-right:4px}
+/* timed blocks: one card for guide plans, review steps and mock plans */
+.plan > div,.block,.step{background:var(--card);border:1px solid var(--rule);padding:12px 16px}
+.plan > div.brk{background:var(--green-soft);border-color:var(--green)}
+.bh{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;margin-bottom:4px}
+.block > .bh{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:4px 10px;align-items:center}
+.plan .bh .bn,.step .bh .bn,.bh .bn{flex:none;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--indigo);color:#fff;font:700 1rem/1 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif}
+.plan .bh > b,.step .bh > b,.bh > b{font-size:1.15rem;line-height:1.25;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;color:var(--ink)}
+.plan .bh .bt,.step .bh .bt,.bh .bt{flex:none;display:inline-block;font:700 .8rem/1.4 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:var(--r-sm);padding:2px 8px}
+.bdone{display:flex;align-items:center;gap:10px;min-height:44px;margin:8px 0 0;padding-top:4px;border-top:1px solid var(--rule);font-weight:600;color:var(--ink-soft);cursor:pointer;max-width:none}
+.bdone input{width:20px;height:20px;margin:0;flex:none;accent-color:var(--green)}
+.block.is-done{border-color:var(--green)} .block.is-done .bn{background:var(--green)} .block.is-done .bdone{color:var(--green-ink)}
+.blocks{display:grid;gap:10px;margin:16px 0}
+.blocks > .block p{margin:4px 0 0}
+.brkc{background:var(--green-soft);border:1px solid var(--green);border-radius:var(--r);padding:8px 16px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* Today card on guides: goals, plan chips, warm-up */
+.todaycard{background:var(--card);border:2px solid var(--indigo);padding:14px 16px 6px;margin:20px 0 10px}
+.todaycard .tc-goals > *{background:transparent!important;border:0!important;padding:0!important;margin:0!important;box-shadow:none!important;border-radius:0!important}
+.todaycard .tc-goals h2,.todaycard .tc-goals h3,.todaycard .tc-goals > * > p:first-child,.todaycard .tc-goals > * > b:first-child{display:block;font:600 1.25rem/1.25 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;color:var(--ink);margin:0 0 6px}
+.todaycard .tc-goals ol,.todaycard .tc-goals ul{margin:0;padding-left:22px}
+.todaycard .tc-goals li{margin:3px 0}
+.todaycard .tc-plan{margin:0 0 12px;padding-bottom:12px;border-bottom:1px solid var(--rule)}
+@media (max-width:600px){.todaycard .chips{display:grid;grid-template-columns:1fr 1fr;gap:6px}.todaycard .chip{padding:4px 10px;font-size:.9rem}.todaycard .chip.c0{grid-column:1 / -1}}
+.todaycard .tc-h{font-weight:700;margin:0 0 6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:4px;min-height:44px;padding:4px 12px;border:1px solid var(--indigo);background:var(--card);color:var(--indigo);text-decoration:none;font-size:.95rem;line-height:1.2}
+.chip b{font-weight:700}
+.chip.done{border-color:var(--green);color:var(--green-ink);background:var(--green-soft)}
+.chip.done::before{content:"\2713";font-weight:700}
+.todaycard .warmup{border:0;border-top:1px solid var(--rule);border-radius:0;padding:12px 0 4px;margin:12px 0 0;background:transparent}
+.todaycard .tc-plan + .warmup{border-top:0;margin-top:0;padding-top:0}
+.todaycard .warmup h2{font-size:1.15rem}
+.sitebar + .notice{margin:8px max(16px,calc((100% - 780px) / 2))}
+@media print{.sitebar,.notice,#termbox,.go,.chips,.bdone{display:none!important}nav.toc{position:static}.quiz button{display:list-item}.todaycard{border-width:1px}}
+</style><!--enhance:end-->
+</head>
+<body><!--enhance:start--><nav class="sitebar" aria-label="Study site"><div class="sb"><a class="sb-home" href="../index.html#today">← Today</a><a href="../flashcards.html">Flashcards</a><a href="../progress.html">Progress</a><a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">Sheet</a></div></nav><!--enhance:end-->
+
+
+<header class="hero">
+  <svg class="chainsvg" viewBox="0 0 700 430" role="img" aria-label="Three comic panels showing the sun rising, the sun high and the moon, with the gutters between them and an arc labelled closure over them; below, the analysis chain: spot it, explain it, effect, purpose">
+    <rect width="700" height="430" fill="#0B0F1A"/>
+    <defs>
+      <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#F2C46D"/></marker>
+    </defs>
+    <g font-family="Arial,Helvetica,sans-serif" text-anchor="middle">
+      <text x="350" y="32" font-size="26" font-weight="bold" fill="#F2C46D">closure</text>
+      <path d="M115,74 Q350,30 585,74" fill="none" stroke="#F2C46D" stroke-width="4" marker-end="url(#ah)"/>
+      <g fill="#FFFFFF" stroke="#9FB3FF" stroke-width="3">
+        <rect x="20" y="80" width="190" height="140"/><rect x="255" y="80" width="190" height="140"/><rect x="490" y="80" width="190" height="140"/>
+      </g>
+      <line x1="20" y1="190" x2="210" y2="190" stroke="#111" stroke-width="3"/>
+      <line x1="255" y1="190" x2="445" y2="190" stroke="#111" stroke-width="3"/>
+      <rect x="491.5" y="81.5" width="187" height="137" fill="#1B2550"/>
+      <line x1="490" y1="190" x2="680" y2="190" stroke="#9FB3FF" stroke-width="3"/>
+      <circle cx="70" cy="182" r="26" fill="#F2A33A"/>
+      <rect x="22" y="191" width="186" height="27" fill="#FFFFFF"/>
+      <circle cx="350" cy="120" r="26" fill="#F2C46D"/>
+      <circle cx="600" cy="125" r="24" fill="#E9EDF7"/>
+      <circle cx="612" cy="117" r="22" fill="#1B2550"/>
+      <g fill="#E9EDF7"><circle cx="530" cy="110" r="3"/><circle cx="560" cy="150" r="3"/><circle cx="650" cy="160" r="3"/></g>
+      <g stroke="#F2C46D" stroke-width="3" marker-end="url(#ah)"><line x1="232" y1="262" x2="232" y2="228"/><line x1="467" y1="262" x2="467" y2="228"/></g>
+      <g font-size="22" fill="#DCE3FF"><text x="232" y="286">gutter</text><text x="467" y="286">gutter</text><text x="115" y="250">panel</text></g>
+      <g stroke-width="2.5">
+        <rect x="8" y="318" width="152" height="76" rx="12" fill="#1B2550" stroke="#9FB3FF"/>
+        <rect x="186" y="318" width="152" height="76" rx="12" fill="#1B2550" stroke="#9FB3FF"/>
+        <rect x="364" y="318" width="152" height="76" rx="12" fill="#1B2550" stroke="#9FB3FF"/>
+        <rect x="542" y="318" width="152" height="76" rx="12" fill="#F2C46D" stroke="#F2C46D"/>
+      </g>
+      <g stroke="#F2C46D" stroke-width="3" marker-end="url(#ah)"><line x1="162" y1="356" x2="182" y2="356"/><line x1="340" y1="356" x2="360" y2="356"/><line x1="518" y1="356" x2="538" y2="356"/></g>
+      <g font-size="24" font-weight="bold" fill="#FFFFFF"><text x="84" y="364">spot it</text><text x="262" y="364">explain it</text><text x="440" y="364">effect</text></g>
+      <text x="618" y="364" font-size="24" font-weight="bold" fill="#0B0F1A">purpose</text>
+    </g>
+  </svg>
+  <div class="wrap">
+    <h1>English A Lang &amp; Lit HL: revision 1</h1>
+    <p>Friday 27 November 2026, in the exam window: an hour and a half of English, then 30 minutes of French. Today you work <b>from memory first</b>, then practise. Top of the picture: three panels and the gaps between them (the gutters); your mind fills in the hours that pass between them (closure). Bottom: the analysis chain you use on every text.</p>
+    <p class="check"><b>Checked on 8 November 2026</b> against the official <a href="https://ibo.org/globalassets/new-structure/university-admission/pdfs/subject-guides/language-a-language-literature-guide.pdf">IB Language A: language and literature guide</a> (first assessment 2021; Paper 1 is the same in the 2026 version you sit): the Paper 1 format and the criteria wording quoted here. The chain, the Big 5 and the comic terms are your class terms, not IB wording.</p>
+    <div class="meta"><span>1 h 30 English + 30 min French</span><span>Sources: official IB guide, class revision guide, Graphic Novels slides, French 18 Sep sheet</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <a href="../index.html" style="font-weight:700;color:var(--indigo)">All days</a><a href="#plan">Plan</a><a href="#dump">Brain dump</a><a href="#panels">Panels</a><a href="#cartoon">Timed paragraph</a><a href="#mark">Self-mark</a><a href="#quiz">Quiz</a><a href="#french">French</a><a href="#end">Finish</a>
+  </div>
+</nav>
+
+<main class="wrap"><!--enhance:start-->
+<section class="todaycard" aria-label="Today"><div class="tc-plan"><p class="tc-h">Today: tap a block to jump to it</p><div class="chips"><a class="chip c0" href="#before"><b>Block 0</b> · Before you start</a><a class="chip" href="#wu"><b>Warm-up</b> · 8 min</a><a class="chip" href="#b1" data-n="1"><b>Block 1</b> · 15 min</a><a class="chip" href="#b2" data-n="2"><b>Block 2</b> · 22 min</a><a class="chip" href="#b3" data-n="3"><b>Block 3</b> · 32 min</a><a class="chip" href="#b4" data-n="4"><b>Block 4</b> · 18 min</a><a class="chip" href="#b5" data-n="5"><b>Block 5</b> · 30 min</a></div></div><div class="tc-goals"><!--enhance:end--><!--enhance:moved--><header class="today">
+  <p>Today you will be able to</p>
+  <ol>
+    <li>write the analysis chain, the four criteria and the Persepolis visual terms from memory;</li>
+    <li>explain how panels, gutters and closure control time and make the reader fill gaps;</li>
+    <li>write a timed paragraph on a cartoon you have never seen and mark it with the official criteria.</li>
+  </ol>
+</header><!--enhance:/moved--><!--enhance:start--></div>
+<section class="warmup" id="wu" aria-label="Warm-up from earlier days">
+<h2>Warm-up from earlier days (8 min)</h2>
+<p class="wu-how">Answer from memory before you read on: write the answer on paper, then tap to check it.</p><ol>
+<li><div class="wu-m">Biology · A1.1 · from Wed 11 Nov</div><div class="wu-f">Why is a water molecule polar?</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">Oxygen is more electronegative than hydrogen, so it pulls the shared electrons towards itself (O δ−, H δ+), and the bent shape (about 104.5°) stops the charges cancelling. <a href="../guides/2026-11-05-biology-hl-a1.1-a1.2.html#a11">open the section</a></div></details></li>
+<li><div class="wu-m">Business · 1.5 · from Thu 12 Nov</div><div class="wu-f">Joint venture vs strategic alliance</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">Joint venture: firms create a new, separate business they own together. Strategic alliance: firms cooperate but stay independent, and no new business is created. <a href="../guides/2026-11-06-business-sl-1.1-1.6.html#s15">open the section</a></div></details></li>
+<li><div class="wu-m">Psychology · Paper 1 exam technique · from Mon 16 Nov</div><div class="wu-f">Section A markband, 3-4 marks (guide p45)</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">"The response demonstrates detailed knowledge relevant to the question." "The example is relevant and explained." <a href="../guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#technique">open the section</a></div></details></li>
+<li><div class="wu-m">Biology · A1.2 · from Wed 11 Nov</div><div class="wu-f">How many base sequences are possible with n bases? Why are codons triplets?</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">4<sup>n</sup>. Pairs give only 16 codes, fewer than 20 amino acids; triplets give 64. <a href="../guides/2026-11-05-biology-hl-a1.1-a1.2.html#a12">open the section</a></div></details></li>
+<li><div class="wu-m">Psychology · Frame · from Mon 9 Nov</div><div class="wu-f">The four content areas</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">Biological, cognitive and sociocultural approaches, plus research methodology. <a href="../guides/2026-11-09-psychology-hl-frame-research-methods.html#frame">open the section</a></div></details></li>
+</ol>
+<p class="wu-foot">Missed one? Put it in the <a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">Error log</a>.</p></section>
+</section><!--enhance:end-->
+
+
+<!--enhance:origin-->
+<div id="warmup"></div>
+
+
+
+
+
+
+<section id="plan">
+  <h2 style="margin-top:28px">How to spend the two hours</h2>  <p style="margin:10px 0 0">English: four blocks and a break, 90 min. French: 30 min. Have blank paper, a pen in a second colour and a timer.</p>
+  <p><b>Short on time: skip <span class="star">★</span> steps, still do the quiz.</b></p>
+  <div class="plan"><!--terms:start--><div id="before" class="before block0"><details open>
+  <summary><span class="bn" aria-hidden="true">0</span><span class="b0t"><span class="sr">Block 0: </span>Before you start</span><span class="bt">about 4 min</span></summary>
+  <p style="margin:10px 0 0">This page builds on the ideas below. Read them first so you do not have to stop later (about 4 min, not counted in the blocks below). Words with a <span style="border-bottom:2px dotted var(--indigo)">dotted underline</span> anywhere on the page: tap them for a short explanation.</p>
+  <div class="bgi"><h3>Why start from memory</h3><p>Rereading your notes feels like learning because the words look familiar. But in the exam nothing is in front of you. Pulling an idea <b>out</b> of your memory, even slowly and with gaps, makes it much easier to pull out next time.</p><p>So today every part starts with a blank page: you write what you remember, then you check. The gaps you find are not a failure; they show exactly what to learn this week.</p></div><div class="bgi"><h3>One paragraph is not a whole Paper 1 answer</h3><p>In the exam you write a full answer on each text: an introduction, several paragraphs and a conclusion. The examiner marks the <b>whole</b> answer with four <span class="term" data-t="criteria" tabindex="0" role="button">criteria</span>, A to D, 5 marks each.</p><p>Today you write one paragraph, so you cannot give it a real mark. Instead you use the IB's own words for each level as a mirror: which description sounds most like your paragraph?</p></div><div class="bgi"><h3>Artificial intelligence in a few lines</h3><p><b>Artificial intelligence (AI)</b> means computer programs that do things we used to think only people could do: write essays, make pictures, hold a conversation. In 2026 many people use it every day.</p><p>People also argue about it: it could be used to cheat, to spread lies or to harm, and it needs huge buildings full of computers (datacentres) that use a lot of electricity and water. Today's cartoon comments on that debate.</p></div><div class="bgi"><h3>French: a clause or a noun group</h3><p>A <b><span class="term" data-t="clause" tabindex="0" role="button">clause</span></b> has a subject and a conjugated verb: <i>ils regardent leur téléphone</i> (they look at their phone).</p><p>A <b><span class="term" data-t="noun group" tabindex="0" role="button">noun group</span></b> is a noun with its little words, and no verb: <i>les écrans</i>, <i>l'arrivée des smartphones</i>.</p><p>Some French <span class="term" data-t="connector" tabindex="0" role="button">connectors</span> must be followed by a clause, others by a noun group. Choosing the wrong one is the most common connector mistake.</p></div>
+  <p class="stuck"><b>Still stuck on a word?</b> Do not search for long. Write it in the <b><span class="term" data-t="error log" tabindex="0" role="button">Error log</span></b> tab of the study sheet starting with "word:" (for example "word: composition") and carry on. It will be explained in the next guide.</p>
+</details></div><!--terms:end-->
+
+    <div id="b1">
+      <div class="bh"><b>Block 1 · 15 min</b><span><span class="term" data-t="retrieval" tabindex="0" role="button">From memory</span> first</span></div>
+      <ol>
+        <li><b><span class="term" data-t="brain dump" tabindex="0" role="button">Brain dump</span></b>, no notes: follow the three boxes in <a href="#dump">Brain dump</a>. <span class="t">(5 min)</span></li>
+        <li>Open the key under it. Tick what you had, add what you missed in your second colour. <span class="t">(3 min)</span></li>
+        <li><b>Error log:</b> open the <a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">study sheet</a>, Error log tab. Read your English rows (13, 20 and 21 Nov). Write your <b>three rules for today</b> (see the box in Brain dump). <span class="t">(5 min)</span></li>
+        <li><span class="star">★ If time:</span> on the <a href="../flashcards.html">flashcards</a> page, test yourself on the English cards for every term you missed. <span class="t">(2 min)</span></li>
+      </ol>
+    </div>
+    <div id="b2">
+      <div class="bh"><b>Block 2 · 22 min</b><span><span class="term" data-t="panel" tabindex="0" role="button">Panels</span>, <span class="term" data-t="gutter" tabindex="0" role="button">gutters</span> and <span class="term" data-t="closure" tabindex="0" role="button">closure</span> (moved from 20 Nov)</span></div>
+      <ol>
+        <li>Before you read: on paper, write what closure is and as many of the six panel <span class="term" data-t="transition" tabindex="0" role="button">transitions</span> as you can. <span class="t">(2 min)</span></li>
+        <li>Read <a href="#panels">Panels</a>: the tables, the worked example and its "Why this step?". <span class="t">(6 min)</span></li>
+        <li>Do "Finish it". <span class="t">(4 min)</span></li>
+        <li>Self-check: two key words each, then open. <span class="t">(3 min)</span></li>
+        <li>"Your turn": the 3-mark question on paper, then mark it with the model. <span class="t">(5 min)</span></li>
+        <li><span class="star">★ If time:</span> the "Controlling time" table in the <a href="2026-11-20-english-a-hl-persepolis-water-cell.html#pace">20 November page</a>. <span class="t">(2 min)</span></li>
+      </ol>
+    </div>
+    <p class="pause">3-minute break: stand up, drink some water, look out of a window. <span class="t">(3 min)</span></p>
+    <div id="b3">
+      <div class="bh"><b>Block 3 · 32 min</b><span>A timed paragraph on a new cartoon</span></div>
+      <ol>
+        <li>Read the set-up in <a href="#cartoon">Timed paragraph</a>, then open the cartoon. <span class="t">(2 min)</span></li>
+        <li><span class="term" data-t="annotate" tabindex="0" role="button">Annotate</span> on paper: <span class="term" data-t="big 5" tabindex="0" role="button">Big 5</span> notes and a 3-row chain table (visual, verbal, colour). <span class="t">(7 min)</span></li>
+        <li>Timer on: write one paragraph, 150 to 200 words, keeping your three rules. <span class="t">(12 min)</span></li>
+        <li>Mark it with the official criteria in <a href="#mark">Self-mark</a>. <span class="t">(6 min)</span></li>
+        <li>Open the model paragraph. Write two things it does that yours does not. <span class="t">(3 min)</span></li>
+        <li><span class="star">★ If time:</span> add the cartoon to your <span class="term" data-t="cartoon bank" tabindex="0" role="button">Cartoon Bank</span>, Step 6 of the <a href="https://drive.google.com/file/d/1Sk7GD4FmWcB_crdej9xiSiWgg1iFySKR/view">Paper 1 Satirical Cartoons - Revision Guide (research workbook)</a>. <span class="t">(2 min)</span></li>
+      </ol>
+    </div>
+    <div id="b4">
+      <div class="bh"><b>Block 4 · 18 min</b><span>Quiz, Error log, Fix-it</span></div>
+      <ol>
+        <li><a href="#quiz">Quiz</a>: the 7 clicks. <span class="t">(5 min)</span></li>
+        <li>The 3 written questions on paper, then mark them with the model answers. <span class="t">(8 min)</span></li>
+        <li>Error log: one row per lost mark, with its type (see <a href="#end">Finish</a>). <span class="t">(2 min)</span></li>
+        <li><b>Fix-it:</b> rewrite the weakest sentence of today's paragraph so it reaches level 4 or 5 for criterion B. <span class="t">(3 min)</span></li>
+      </ol>
+    </div>
+    <div id="b5" class="fr">
+      <div class="bh"><b>Block 5 · 30 min</b><span>French: your corrected text, then connectors</span></div>
+      <ol>
+        <li>Take your corrected screen-time text. Read every correction; write each one in the Error log with its type. <span class="t">(8 min)</span></li>
+        <li>Cover the corrections and rewrite your five worst sentences correctly. Check them. <span class="t">(8 min)</span></li>
+        <li>On the <a href="../flashcards.html">flashcards</a> page, run the French connector cards until you get each one right twice; then read the table in <a href="#french">French</a>. <span class="t">(6 min)</span></li>
+        <li>Write 5 sentences about screen time, each with a different cause connector, two of them with a noun. <span class="t">(6 min)</span></li>
+        <li><span class="star">★ If time:</span> say your 5 sentences out loud without looking. <span class="t">(2 min)</span></li>
+      </ol>
+    </div>
+  </div>
+  <div class="stuck2"><b>Stuck?</b>
+    <ol>
+      <li>Look at the worked example in that section again.</li>
+      <li>Redo the self-check on paper.</li>
+      <li>Still stuck after 10 minutes? Write it in the Error log as "ask teacher" and move on.</li>
+    </ol>
+  </div>
+  <details class="extra"><summary>Extra, not needed today: all files and free reading</summary>
+    <ul class="files">
+      <li><a href="https://drive.google.com/file/d/1Sk7GD4FmWcB_crdej9xiSiWgg1iFySKR/view">Paper 1 Satirical Cartoons - Revision Guide (research workbook)</a>: Step 5 (the chain), Step 6 (Cartoon Bank).</li>
+      <li><a href="https://drive.google.com/file/d/1mSfhzzcuxkvOuk33g9wqVY3xyNvbx7nP/view">Paper 1 Satirical Cartoons - Horsey Modern Life - Model Response and Answers (20 of 20)</a></li>
+      <li><a href="https://drive.google.com/file/d/1dPY1MSzxeClWZnuqlcg-Gkfs2izvvreb/view">Graphic Novels Unit - Session 4 Time and Motion - Slides</a> and <a href="https://drive.google.com/file/d/1VeAjxEUlIENsgDKDWh6zrRjKCgSEZrwn/view">Session 5 Role of the Reader (Closure and Panel Transitions) - Slides</a>: this page already teaches what they list.</li>
+      <li>French: <a href="https://drive.google.com/file/d/1d54TG2mwqwqvXnPtxVhKrcmIZHn5GuHo/view">French B - Grammar Exercise Cause Connectors (Exercice 1) - Screenshot 18 Sep 2026</a>, <a href="https://drive.google.com/file/d/1Hqi6Qh2X_FeRENOisYlvq6koDnDQH9QY/view">French B - Paper 1 Writing Task Phones at School (Blog, Discours, Lettre) - Screenshot 25 Sep 2026</a>.</li>
+      <li>Free: D'source (IIT Bombay design school), <a href="https://www.dsource.in/resource/grammar-and-vocabulary-comics/transitions">Transitions</a>: the six transitions with pictures. Your class terms win where they differ.</li>
+    </ul>
+  </details>
+</section>
+
+<!-- =============================== BRAIN DUMP =============================== -->
+<div class="topic" id="dump">
+  <div class="kicker">Block 1 · retrieval, not rereading</div>
+  <h2>Brain dump: what is already in your head?</h2>
+  <p class="guiding">Writing from memory makes the memory stronger; rereading only feels like it does.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="d1"><span>Write the HL Paper 1 format, the four criteria and the <span class="term" data-t="analysis chain" tabindex="0" role="button">analysis chain</span> from memory</span></label>
+    <label><input type="checkbox" data-k="d2"><span>Write the Persepolis visual terms from memory: <span class="term" data-t="shot type" tabindex="0" role="button">shot types</span>, <span class="term" data-t="angle" tabindex="0" role="button">angles</span>, gutter, closure, <span class="term" data-t="caption" tabindex="0" role="button">caption</span> and <span class="term" data-t="balloon" tabindex="0" role="button">balloon</span>, <span class="term" data-t="chiaroscuro" tabindex="0" role="button">chiaroscuro</span></span></label>
+  </div>
+
+  <p>Blank paper, three boxes, 5 minutes, no notes. Write fast; spelling does not matter yet.</p>
+  <div class="cards">
+    <div><h4>Box 1: Paper 1</h4><p>Texts, time, marks, weight. The four criteria, A to D, with their names.</p></div>
+    <div><h4>Box 2: The method</h4><p>The four links of the chain. The five Big 5 groups. As many <span class="term" data-t="effect verb" tabindex="0" role="button">effect verbs</span> as you can.</p></div>
+    <div><h4>Box 3: Visual terms</h4><p>Five shot types, three angles, panel, gutter, closure, caption and balloon, chiaroscuro.</p></div>
+  </div>
+
+  <details><summary>Key: open after 5 minutes, tick in your second colour</summary>
+    <p><b>Box 1.</b> HL Paper 1: two unseen <span class="term" data-t="non-literary" tabindex="0" role="button">non-literary</span> passages from two different <span class="term" data-t="text type" tabindex="0" role="button">text types</span>, an analysis of each, 2 h 15, 40 marks (20 per text), 35%. A Understanding and interpretation; B Analysis and evaluation; C Focus and organisation; D Language; 5 marks each.</p>
+    <p><b>Box 2.</b> Chain: spot it, explain it, effect on the reader, purpose. Big 5: Audience, Meaning, Feeling, Craft, Shape. Effect verbs: exposes, ridicules, undermines, invites, positions, implicates, provokes, disarms, reinforces, challenges.</p>
+    <p><b>Box 3.</b> Shots: extreme close-up, close-up, medium shot, long shot, extreme long shot. Angles: high (looks down, subject seems weak), eye level, low (looks up, subject seems powerful). Panel: one box. Gutter: the gap between panels. Closure: the reader's mind joining panels into one story. Caption: the narrator's box; balloon: a character's speech. Chiaroscuro: strong contrast of light and dark.</p>
+    <p>Count what you missed. Every missed item goes into the Error log as "did not know" and onto your flashcard list for this week.</p>
+  </details>
+
+  <h3>Your three rules for today</h3>
+  <p>Your Error log shows which habits cost you marks. Turn your three most common ones into rules you can keep while writing. Examples:</p>
+  <div class="rules"><b>Three rules (write yours on a sticky note)</b>
+    <ol>
+      <li>My first sentence answers the <span class="term" data-t="guiding question" tabindex="0" role="button">guiding question</span>.</li>
+      <li>After every detail I write <i>so</i>, <i>which suggests</i> or <i>because</i>.</li>
+      <li>I read one picture detail and one word choice together.</li>
+    </ol>
+  </div>
+  <div class="tip"><b>Trap.</b> Opening the key after 1 minute turns retrieval back into rereading. Struggling for the full 5 minutes is the part that helps.</div>
+</div>
+
+<!-- =============================== PANELS =============================== -->
+<div class="topic" id="panels">
+  <div class="kicker">Graphic Novels Sessions 4 and 5 · moved from 20 November</div>
+  <h2>Panels, gutters and closure</h2>
+  <p class="guiding">A comic controls time with boxes and gaps, and lets the reader fill the gaps.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="p1"><span>Define closure and the gutter, and explain how panel size and silent panels control <span class="term" data-t="pace" tabindex="0" role="button">pace</span></span></label>
+    <label><input type="checkbox" data-k="p2"><span>Name the six panel transitions from class and analyse the effect of a transition in a <span class="term" data-t="sequence" tabindex="0" role="button">sequence</span></span></label>
+  </div>
+
+  <p>Your Session 5 slide quotes the comics writer Scott McCloud: closure is <i>"observing the parts but perceiving the whole"</i>. <span class="learn">Learn word for word</span> Panels show separate moments; the reader's mind joins them into one story across the <b>gutter</b>, the gap between panels. Time passes in the gutter, and what is never drawn there, the reader imagines.</p>
+
+  <h3>The six panel transitions (McCloud, from class) <span class="learn">Learn word for word</span></h3>
+  <div class="tablewrap"><table>
+    <tr><th>Transition</th><th>What changes between the panels</th><th>Usual effect</th></tr>
+    <tr><td><b>Moment-to-moment</b></td><td>Almost nothing: the same thing a second later</td><td>Slow motion, suspense</td></tr>
+    <tr><td><b>Action-to-action</b></td><td>One subject, the next action</td><td>Steady story; the most common</td></tr>
+    <tr><td><b>Subject-to-subject</b></td><td>Another person or thing, same scene</td><td>Shows reactions; widens the view</td></tr>
+    <tr><td><b>Scene-to-scene</b></td><td>A jump across time or place</td><td>The reader fills a big gap</td></tr>
+    <tr><td><b>Aspect-to-aspect</b></td><td>Different parts of one place or mood</td><td>Time seems to stand still</td></tr>
+    <tr><td><b><span class="term" data-t="non-sequitur" tabindex="0" role="button">Non-sequitur</span></b></td><td>No logical link</td><td>The reader still searches for one</td></tr>
+  </table></div>
+
+  <h3>Pace <span class="fb">Understand and apply</span></h3>
+  <ul>
+    <li><b>Panel size:</b> a big or wide panel makes a moment feel longer and more important; small panels feel quick.</li>
+    <li><b>Silent panel</b> (no words): a pause; the reader stops and looks.</li>
+    <li><b><span class="term" data-t="grid" tabindex="0" role="button">Grid</span>:</b> a regular grid gives a steady rhythm; breaking it draws attention.</li>
+  </ul>
+
+  <div class="worked"><b>Worked example.</b> A made-up sequence. Panel 1: close-up of a girl's hand holding a phone; the screen says "Exam results: 9:00". Panel 2: the same hand, the screen now says 9:01, the thumb hovering. Panel 3: a wide, silent panel of her family round the kitchen table, all staring at her.
+    <ol>
+      <li><b>Spot it:</b> panels 1 to 2 change by one minute and one thumb: <b>moment-to-moment</b>. Panel 2 to 3 shows other people in the same scene: <b>subject-to-subject</b>.</li>
+      <li><b>Explain it:</b> the slow first transition stretches one minute over two panels; the third panel is the widest and has no words.</li>
+      <li><b>Effect:</b> the reader waits with her, then feels the silent pressure of the family. We never see the result: closure makes us imagine it.</li>
+      <li><b><span class="term" data-t="purpose" tabindex="0" role="button">Purpose</span>:</b> shows how heavy family expectations feel to a teenager.</li>
+    </ol>
+    <details class="why2"><summary>Why this step? Why name the transition before the effect?</summary><p>The name is only the "spot it" and "explain it" links. Marks come from step 3: what the gap makes the reader do and feel. Naming first stops you guessing the effect without evidence.</p></details>
+  </div>
+
+  <div class="finish"><b>Finish it.</b> A made-up pair. Panel 1: a boy on a bridge drops a paper boat into a river. Panel 2: an <span class="term" data-t="extreme long shot" tabindex="0" role="button">extreme long shot</span> of a tiny paper boat alone on a wide grey sea.
+    <ol>
+      <li><b>Transition:</b> a jump across time and place: <span class="blank">&nbsp;</span></li>
+      <li><b>Effect on the reader:</b> <span class="blank">&nbsp;</span></li>
+      <li><b>Purpose:</b> <span class="blank">&nbsp;</span></li>
+    </ol>
+    <details><summary>Answer</summary><p>Scene-to-scene. Effect: the reader imagines the whole journey in the gutter, so the boat seems to have travelled impossibly far; the extreme long shot makes it small and alone. Purpose: for example, how small hopes or children travel into a huge, uncaring world. Any purpose that comes from these two panels is right.</p></details>
+  </div>
+
+  <div class="tip"><b>Exam traps.</b> (1) Moment-to-moment is almost <b>no</b> change; action-to-action is the <b>next action</b>. (2) Aspect-to-aspect stays in one place and mood; scene-to-scene <b>jumps</b>. (3) Transition names are class terms: the examiner rewards what the transition does to the reader, not the label.</div>
+
+  <details><summary>Self-check: write two key words for each, then open</summary>
+    <ol>
+      <li>Panel 1: a rainy window. Panel 2: an empty chair. Panel 3: a cold cup of tea. Which transition, and what does it do?</li>
+      <li>Where in a comic does "missing" time pass?</li>
+      <li>Why can a wide panel with no words slow the reader down?</li>
+    </ol>
+    <p><b>Answers.</b> 1: aspect-to-aspect; time stands still and the reader feels the mood (loneliness, absence). 2: in the gutter. 3: there is more to look at and nothing tells you to move on, so the moment lasts longer.</p>
+  </details>
+
+  <h3>Your turn: an exam-style question</h3>
+  <div class="scene"><b>Made-up sequence.</b> Panel 1: close-up of a mother's face, eyes on the front door. Panel 2: extreme close-up of the door handle starting to turn. Panel 3: a completely black panel, no words.<br><b>Question.</b> Analyse how the sequence uses panel transitions and closure to create tension. <span class="nw">[3]</span></div>
+  <details><summary>Model answer (open after writing yours)</summary>
+    <p>The sequence moves subject-to-subject, from the mother's watching face to the turning handle, so the reader sees both the fear and its cause [1]. The black, silent final panel shows nothing at all: through closure the reader must imagine who comes through the door [1]. Because the answer is withheld, the tension is left with the reader, which makes the threat feel larger than any drawing of it could [1].</p>
+    <p><b>Mark:</b> 1 for a correctly named transition with what it shows; 1 for what the reader fills in through closure; 1 for the effect (tension) linked to the choice.</p>
+  </details>
+</div>
+
+<!-- =============================== TIMED CARTOON =============================== -->
+<div class="topic" id="cartoon">
+  <div class="kicker">Block 3 · a second timed paragraph · <span class="term" data-t="unseen" tabindex="0" role="button">unseen</span> cartoon</div>
+  <h2>Timed paragraph: a cartoon you have never seen</h2>
+  <p class="guiding">Annotate, then write against the clock, then mark yourself honestly.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="c1"><span>Write a 150 to 200 word analytical paragraph on an unseen cartoon in 12 minutes, with the chain and my three rules</span></label>
+    <label><input type="checkbox" data-k="c2"><span>Read an image detail and a word choice together, including one less obvious detail</span></label>
+  </div>
+
+  <p><b>Open:</b> <a href="https://www.theguardian.com/commentisfree/picture/2026/nov/07/steve-jones-dangerous-tech-innovations-cartoon-ai-fire">Steve Jones on dangerous tech innovations, The Guardian, 7 November 2026</a> (free, no sign-in; close any cookie or "support us" box; tap the picture to enlarge). Do not read anything below the picture.</p>
+  <p><b>Context:</b> Steve Jones signs his cartoons "Jonesy". The Guardian is a British newspaper; this is its Saturday opinion cartoon. November 2026: people argue about the risks of <span class="nw">artificial intelligence (AI)</span> and who should control it.</p>
+  <p><b>Guiding question</b> (written for this page): <i>How does the cartoonist use visual and verbal features to comment on fears about new technology?</i></p>
+  <p><b>Look at:</b> when and where the scene is set; where the light is, and the colours around it (is there an <span class="term" data-t="accent colour" tabindex="0" role="button">accent colour</span>?); both people's hands; the caption word by word (which word would these people never have used?); the three dots at the end.</p>
+  <p><b>Backup</b> if it does not open: <a href="https://www.theguardian.com/commentisfree/picture/2026/sep/12/steve-jones-pros-cons-ai-datacentres-cartoon">Steve Jones on the pros and cons of AI datacentres, The Guardian, 12 September 2026</a>. Context: AI runs in huge buildings full of computers (datacentres), which need a lot of electricity and often water to keep the machines cool. Question: <i>How does the cartoonist use visual and verbal features to comment on AI datacentres?</i></p>
+
+  <div class="worked"><b>Before the timer: your plan on paper (7 min)</b>
+    <ol>
+      <li><b>Big 5 notes:</b> audience and purpose; meaning and theme; tone and mood; craft; shape (what you see first and last).</li>
+      <li><b>Chain table</b>, three rows: one visual choice, one verbal choice, one colour choice. Four columns: spot it, explain it, effect, purpose.</li>
+      <li><b>Claim:</b> one sentence that answers the guiding question. This becomes your first sentence.</li>
+    </ol>
+  </div>
+  <div class="finish"><b>Paragraph frame</b> (same as 13 November; use it only if you freeze).
+    <p>The cartoonist uses <span class="blank">&nbsp;</span> and <span class="blank">&nbsp;</span> to <span class="blank">(effect verb)</span> <span class="blank">&nbsp;</span>. <span class="blank">(visual detail)</span>, so the reader <span class="blank">&nbsp;</span>. The caption "<span class="blank">&nbsp;</span>" <span class="blank">&nbsp;</span>, because <span class="blank">&nbsp;</span>. This <span class="blank">(effect verb)</span> <span class="blank">&nbsp;</span> and invites the reader to <span class="blank">&nbsp;</span>.</p>
+  </div>
+  <p><b>Write:</b> timer 12 minutes, 150 to 200 words. Then count your words and go straight to <a href="#mark">Self-mark</a>.</p>
+</div>
+
+<!-- =============================== SELF-MARK =============================== -->
+<div class="topic" id="mark">
+  <div class="kicker">Official IB Paper 1 criteria · your mirror</div>
+  <h2>Self-mark with the official criteria</h2>
+  <p class="guiding">The IB's own words, used as a checklist.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="m1"><span>Use the official level words for criteria A to D to give my paragraph a rough level for each, with a reason</span></label>
+  </div>
+
+  <p>The official guide marks a whole Paper 1 answer, not one paragraph, so this gives a <b>rough level</b>, not an exam mark. For each criterion, read level 3 and level 5, decide which is closer, and write one reason.</p>
+  <div class="cards lvlc"><div><h4>A: Understanding and <span class="term" data-t="interpretation" tabindex="0" role="button">interpretation</span></h4><p><b>Level 3:</b> "a satisfactory interpretation of some <span class="term" data-t="implications" tabindex="0" role="button">implications</span>"; references "mostly support the candidate's ideas"</p><p><b>Level 5:</b> "a convincing and insightful interpretation of larger implications and <span class="term" data-t="subtleties" tabindex="0" role="button">subtleties</span>"; references "well-chosen"</p><p><b>Check:</b> Did I say what it <i>means</i> (the implied message), not only what it shows? Is every claim backed by a detail?</p><p>My level: ☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</p></div><div><h4>B: Analysis and <span class="term" data-t="evaluation" tabindex="0" role="button">evaluation</span></h4><p><b>Level 3:</b> "a generally appropriate analysis of textual features and/or authorial choices"</p><p><b>Level 5:</b> "an insightful and convincing analysis"; "a very good evaluation of how such features and/or choices shape meaning"</p><p><b>Check:</b> Is every detail followed by its effect? One less obvious detail? Did I judge how well it works?</p><p>My level: ☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</p></div><div><h4>C: Focus and organisation</h4><p><b>Level 3:</b> "adequately organized in a generally <span class="term" data-t="coherent" tabindex="0" role="button">coherent</span> manner"; "some focus"</p><p><b>Level 5:</b> "effectively organized and coherent"; "well focused"</p><p><b>Check:</b> Does my first sentence answer the guiding question? Does every sentence serve it, and the last one link back?</p><p>My level: ☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</p></div><div><h4>D: Language</h4><p><b>Level 3:</b> "clear and carefully chosen with an adequate degree of accuracy"; <span class="term" data-t="register" tabindex="0" role="button">register</span> "mostly appropriate"</p><p><b>Level 5:</b> "very clear, effective, carefully chosen and precise"; register "effective and appropriate"</p><p><b>Check:</b> Formal register, no "kind of" or "really"; terms used correctly; effect verbs in place of "shows"?</p><p>My level: ☐ 1 ☐ 2 ☐ 3 ☐ 4 ☐ 5</p></div></div>
+  <p>Below level 3, watch for the official words "<span class="term" data-t="descriptive" tabindex="0" role="button">descriptive</span>" (B, level 1) and "reliant on description" (B, level 2): if most sentences say what is there, that is you, and the fix is the chain.</p>
+
+  <details><summary>Model paragraph on the cave cartoon (open after marking yours)</summary>
+    <div class="para">Steve Jones uses an <span class="term" data-t="analogy" tabindex="0" role="button">analogy</span> between the discovery of fire and today's artificial intelligence to suggest, with gentle humour, that every powerful invention brings fear of its misuse. <b>[claim]</b> Two cave dwellers crouch over a small campfire, the only warm yellow in a cold blue-grey cave, so the reader's eye goes straight to the flames as the source of both comfort and danger. <b>[visual + colour, effect]</b> The caption, presumably spoken by the man, "Imagine if this technology fell into the wrong hands...", borrows the modern language of tech warnings and places it in a Stone Age mouth, while his own hands are raised to the fire. <b>[word and image together]</b> This <span class="term" data-t="anachronism" tabindex="0" role="button">anachronism</span> makes the reader laugh, yet the <span class="term" data-t="ellipsis" tabindex="0" role="button">ellipsis</span> leaves the sentence hanging, and the woman's stick, already resting in the flames, hints at how easily a flame becomes a torch or a weapon. <b>[less obvious detail]</b> The cartoon therefore invites readers to see AI as the newest chapter in a very old story, in which the fear of misuse is as old as invention itself. <b>[purpose]</b></div>
+    <p><b>Why it reaches the top levels.</b> A: it reads the implied message (AI) and a subtlety (the stick). B: every detail is followed by an effect, image and words are read together, and "with gentle humour" judges how it works. C: the claim answers the guiding question and the last sentence returns to it. D: precise terms (analogy, anachronism, ellipsis), effect verbs, formal register. 165 words.</p>
+    <p><b>Another fair reading:</b> the cartoon laughs at people who panic about every new invention, since fire turned out to be useful. Either reading is right if the details support it: that is what criterion A rewards.</p>
+  </details>
+  <details><summary>Notes on the backup cartoon (datacentre)</summary>
+    <p>Scale: the huge blank "DATACENTRE" block dwarfs two tiny people at a fence. Setting: a yellow desert, cacti and an animal skeleton suggest the water has gone. Caption: "Of course I miss water, but at least I don't have to think for myself any more..." is <span class="term" data-t="irony" tabindex="0" role="button">verbal irony</span>: he weighs losing water, which keeps us alive, against the "gain" of not thinking, which exposes how much we give up for convenience. Purpose: questions whether AI is worth its cost to the environment and to our own minds.</p>
+  </details>
+
+  <div class="tip"><b>Exam trap.</b> Marking yourself kindly feels good today and costs marks later. If you are between two levels, choose the lower one and write what would lift it.</div>
+</div>
+
+<!-- =============================== QUIZ =============================== -->
+<div class="topic quiz" id="quiz">
+  <div class="kicker">7 clicks + 3 written answers</div>
+  <h2>Quiz</h2>
+  <p>Decide before you click. 8 to 10: write on paper, then open the model answer and mark yourself.</p>
+
+  <div class="q" data-a="2"><p>1. The analysis chain from your revision guide, in the right order, is</p>
+    <button>explain it, spot it, purpose, effect on the reader</button>
+    <button>purpose, spot it, explain it, effect on the reader</button>
+    <button>spot it, explain it, effect on the reader, purpose</button>
+    <button>spot it, effect on the reader, explain it, purpose</button>
+    <div class="why">Spot the choice, name and explain it, say what it does to the reader, then link it to the purpose.</div></div>
+
+  <div class="q" data-a="1"><p>2. Panel 1: a girl at the kitchen table at night. Panel 2: the same girl in the school yard the next morning. Which transition?</p>
+    <button>Moment-to-moment</button>
+    <button>Scene-to-scene</button>
+    <button>Aspect-to-aspect</button>
+    <button>Action-to-action</button>
+    <div class="why">A jump across time and place is scene-to-scene. Action-to-action is the next action in the same scene.</div></div>
+
+  <div class="q" data-a="0"><p>3. Closure is</p>
+    <button>the reader's mind joining separate panels into one story, filling in what is not drawn</button>
+    <button>the last panel of a comic, where the story ends</button>
+    <button>the border line drawn around a panel</button>
+    <button>the narrator's caption box</button>
+    <div class="why">McCloud: "observing the parts but perceiving the whole". The border is the frame; the narrator's box is the caption.</div></div>
+
+  <div class="q" data-a="1"><p>4. In the official guide, a response that "demonstrates some appropriate analysis of textual features and/or authorial choices, but is reliant on description" gets, for criterion B,</p>
+    <button>1 mark</button>
+    <button>2 marks</button>
+    <button>3 marks</button>
+    <button>4 marks</button>
+    <div class="why">Level 2. Level 1 is "descriptive"; level 3 is "a generally appropriate analysis".</div></div>
+
+  <div class="q" data-a="3"><p>5. Which sentence is analysis, not description?</p>
+    <button>The cartoon shows two people sitting by a fire in a cave.</button>
+    <button>There is a caption under the picture.</button>
+    <button>The colours in the cartoon are blue and yellow.</button>
+    <button>The warm firelight is the only bright colour in the cave, so the reader's eye goes straight to it.</button>
+    <div class="why">Only the last one goes on from the detail ("so...") to an effect on the reader.</div></div>
+
+  <div class="q" data-a="0"><p>6. A cartoon is grey-blue everywhere except one yellow flame. In your class terms, the flame is</p>
+    <button>an accent colour</button>
+    <button>a caricature</button>
+    <button>an analogy</button>
+    <button>a caption</button>
+    <div class="why">One strong colour against a dull background pulls the eye to one thing: an accent colour.</div></div>
+
+  <div class="q" data-a="1"><p>7. French: "______ l'arrivée des smartphones, les élèves jouent moins dehors."</p>
+    <button>Parce que</button>
+    <button>À cause de</button>
+    <button>Grâce à</button>
+    <button>Comme</button>
+    <div class="why">A bad result and a noun group ("l'arrivée"): à cause de. Parce que and comme need a subject and verb; grâce à is for a good result.</div></div>
+
+  <div class="score" id="score">Score: 0 / 7 answered 0</div>
+
+  <div class="q written" data-max="2"><p>8. Rewrite this sentence so it completes the chain: "The cartoon shows two people sitting by a fire in a cave." [2]</p>
+    <details><summary>Show model answer</summary>
+      <p>"The two cave dwellers huddle close to the only warm light in a cold blue-grey cave, so the reader feels how much they depend on the fire [1], which prepares the joke that this comforting 'technology' is already something to fear [1]."</p>
+      <p><b>Mark:</b> 1 for a precise detail with its effect on the reader (so, which suggests); 1 for a link to the purpose or the guiding question.</p>
+    </details></div>
+
+  <div class="q written" data-max="2"><p>9. Panel 1: close-up of a boy's worried face at the top of a water slide. Panel 2: the boy at the bottom, laughing, friends cheering. Explain what closure is and what the reader does here. [2]</p>
+    <details><summary>Show model answer</summary>
+      <p>Closure is the reader's mind joining separate panels into one story, filling in what is not drawn [1]. Here the reader imagines the slide down, the moment fear turns to fun, so the change feels sudden and the relief bigger [1].</p>
+      <p><b>Mark:</b> 1 for a correct definition in your own words; 1 for what the reader fills in for these panels, with an effect.</p>
+    </details></div>
+
+  <div class="q written" data-max="3"><p>10. A made-up cartoon: a smiling robot hands a student a perfect essay marked "A+". On the wall behind them a school poster reads "Original thinking only". Caption: "Don't worry, I wrote it in your style." Analyse one visual and one verbal choice, and give the purpose. [3]</p>
+    <details><summary>Show model answer</summary>
+      <p>Visual: the "Original thinking only" poster placed right behind the hand-over is <span class="term" data-t="juxtaposition" tabindex="0" role="button">juxtaposition</span>, so the rule is broken in front of it [1]. Verbal: "in your style" is verbal irony, because the robot copies the one thing that should be the student's own [1]. Purpose: the cartoon ridicules students who let AI think for them and questions what "original" work means [1].</p>
+      <p><b>Mark:</b> 1 per choice spotted, named and given an effect; 1 for a purpose with an effect verb and a <span class="term" data-t="target" tabindex="0" role="button">target</span>.</p>
+    </details></div>
+  <p>After the quiz: for every question you lost, close the page, redo that section's self-check on paper, and write the rule in the Error log.</p>
+</div>
+
+<!-- =============================== FRENCH =============================== -->
+<div class="topic" id="french">
+  <div class="kicker">Block 5 · French B · 30 minutes</div>
+  <h2>French: your corrected text, then cause connectors</h2>
+  <p class="guiding">Learn from your own mistakes first, then make the connectors automatic.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="f1"><span>Correct my screen-time text from the teacher's feedback and log each mistake with its type</span></label>
+    <label><input type="checkbox" data-k="f2"><span>Use the nine cause connectors from the 18 Sep sheet with the right structure (a clause or a noun)</span></label>
+  </div>
+
+  <p><b>Your corrected text.</b> For every correction write one Error log row: what you wrote, the correct form, the type (did not know, wrong method, slip, time, ask teacher) and a rule, for example "<i>parce que</i> + subject + verb, never + noun". <b>Not back yet?</b> Use the self-check list on the <a href="2026-11-20-english-a-hl-persepolis-water-cell.html#fcheck">20 November page</a> on your text instead, and ask your teacher for feedback.</p>
+
+  <h3>The nine cause connectors (18 Sep sheet) <span class="learn">Learn word for word</span></h3>
+  <div class="tablewrap"><table>
+    <tr><th>+ clause (subject + verb)</th><th>+ noun group</th></tr>
+    <tr><td><i>parce que</i> (because), <i>comme</i> (as, starts the sentence), <i>puisque</i> (since, the reader already knows), <i>étant donné que</i> (given that), <i>du fait que</i> (owing to the fact that), <i>sous prétexte que</i> (claiming that, the reason is doubtful)</td><td><i>grâce à</i> (thanks to, good result), <i>à cause de</i> (because of, bad result), <i>en raison de</i> (owing to, neutral and formal)</td></tr>
+  </table></div>
+
+  <div class="worked"><b>Worked example: one idea, two structures.</b>
+    <ol>
+      <li>Clause: <i>Beaucoup d'élèves dorment mal <b>parce qu'ils</b> regardent leur téléphone tard le soir.</i></li>
+      <li>Noun: <i>Beaucoup d'élèves dorment mal <b>à cause des</b> écrans le soir.</i> (à cause de + les écrans = des écrans)</li>
+    </ol>
+    <details class="why2"><summary>Why this step? Why did "que" become "qu'" and "de les" become "des"?</summary><p>Before a vowel, <i>que</i> drops its e (<i>qu'ils</i>). <i>De</i> + <i>les</i> always joins into <i>des</i>, and <i>à</i> + <i>les</i> into <i>aux</i> (<i>grâce aux activités</i>).</p></details>
+  </div>
+
+  <div class="finish"><b>Finish it.</b> Fill the gaps with a connector from the table.
+    <ol>
+      <li>Les élèves ne se parlent plus <span class="blank">&nbsp;</span> leur téléphone.</li>
+      <li><span class="blank">&nbsp;</span> club d'échecs, Lina a rencontré de nouveaux amis.</li>
+      <li>Je sors pendant la pause <span class="blank">&nbsp;</span> j'ai besoin de bouger.</li>
+    </ol>
+    <details><summary>Answer</summary><p>1: à cause de (bad result, + noun). 2: Grâce au (good result; à + le = au). 3: parce que (+ clause).</p></details>
+  </div>
+
+  <div class="tip"><b>Trap.</b> <i>Parce que</i> + noun is the most common mistake: "parce que le téléphone" is wrong; write "à cause du téléphone" or "parce que le téléphone nous distrait".</div>
+
+  <details><summary>Self-check: write the connector, then open</summary>
+    <ol>
+      <li>______ la pause dure vingt minutes, on peut organiser un tournoi de ping-pong. (starts the sentence)</li>
+      <li>Il reste sur son téléphone ______ il attend un message important. (you doubt the reason)</li>
+      <li>______ du nombre d'heures passées devant les écrans, l'école ouvre un club de lecture. (formal, + noun)</li>
+    </ol>
+    <p><b>Answers.</b> 1: Comme. 2: sous prétexte qu'. 3: En raison (en raison de + le nombre = du nombre).</p>
+  </details>
+</div>
+
+<div class="end" id="end">
+  <h2 style="font-size:1.4rem">Before you close this</h2>
+  <ul>
+    <li>Tick the "I can" boxes you are sure of. Unticked ones start Friday 4 December, the last English session.</li>
+    <li><b>Error log:</b> open the <a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">study sheet</a>, Error log tab. One row per lost mark (brain dump, self-checks, your paragraph's criteria, quiz, French), with its type: <b>did not know</b>, <b>wrong method</b>, <b>slip</b>, <b>time</b> or <b>ask teacher</b>, and the rule that fixes it.</li>
+    <li><b>Fix-it:</b> rewrite one lost-mark answer (the weakest sentence of your paragraph, or a quiz answer) to full marks.</li>
+    <li><b>Keep today's paragraph</b> next to your 13 November one: on 4 December you compare both with the Horsey model.</li>
+    <li>Also: <a href="../flashcards.html">flashcards</a>, <a href="../exam.html">exam technique</a>, <a href="../progress.html">progress page</a>.</li>
+  </ul>
+</div>
+
+</main>
+
+<script>
+(function(){
+  // remember ticked "I can" boxes on this device; fails quietly where storage is unavailable
+  var key='ib-english-hl-rev1-ican';
+  var boxes=document.querySelectorAll('.ican input');
+  try{ var saved=JSON.parse(localStorage.getItem(key)||'{}'); boxes.forEach(function(b){ if(saved[b.dataset.k]) b.checked=true; }); }catch(e){}
+  boxes.forEach(function(b){ b.addEventListener('change',function(){ try{ var s={}; boxes.forEach(function(x){ if(x.checked) s[x.dataset.k]=1; }); localStorage.setItem(key,JSON.stringify(s)); }catch(e){} }); });
+
+  // quiz: only the 7 multiple-choice items are scored and saved; written items are self-marked
+  var qs=document.querySelectorAll('.quiz .q:not(.written)'); var right=0, done=0, total=qs.length;
+  qs.forEach(function(q){
+    var a=parseInt(q.dataset.a,10); var btns=q.querySelectorAll('button');
+    btns.forEach(function(b,i){ b.addEventListener('click',function(){
+      if(q.classList.contains('done')) return;
+      q.classList.add('done'); done++;
+      if(i===a){ b.classList.add('right'); right++; } else { b.classList.add('wrong'); btns[a].classList.add('right'); }
+      document.getElementById('score').textContent='Score: '+right+' / '+total+' answered '+done+(done===total?(right>=6?'. Good. Now questions 8 to 10 on paper.':'. For each one you missed: close the page, redo that section self-check, write the rule.'):'');
+      if(done===qs.length){ try{ var KQ='ib-quiz-guide-2026-11-27'; var prev=JSON.parse(localStorage.getItem(KQ)||'null'); localStorage.setItem(KQ,JSON.stringify({right:right,total:qs.length,date:new Date().toISOString().slice(0,10),best:Math.max(right,prev&&prev.best||0)})); }catch(e){} }
+    }); });
+  });
+})();
+</script>
+
+
+<!--terms:start-->
+<div id="termbox" role="dialog" aria-live="polite"><div class="tb-h"><b></b><button type="button">Close</button></div><p class="tb-d"></p></div>
+<script id="terms-data" type="application/json">{"retrieval": {"w": "retrieval, from memory", "d": "Pulling something out of your memory without looking at notes. It strengthens the memory far more than rereading."}, "brain dump": {"w": "brain dump", "d": "Writing down everything you remember about a topic on a blank page, fast and without notes, before checking."}, "error log": {"w": "Error log", "d": "The tab in your study sheet where you write every lost mark, its type and the rule that fixes it."}, "criteria": {"w": "criteria (singular: criterion)", "d": "The standards your answer is marked against. Paper 1 has four, A to D, each worth 5 marks per text."}, "unseen": {"w": "unseen", "d": "Not seen before. In Paper 1 the texts are new to you, so you prepare a method, not answers."}, "non-literary": {"w": "non-literary", "d": "Not a novel, poem or play. Everyday texts such as adverts, speeches, blogs, photographs, infographics and cartoons."}, "text type": {"w": "text type", "d": "The kind of text, such as an advert, a speech or a cartoon. Each type has its own usual features."}, "guiding question": {"w": "guiding question", "d": "The question printed with each Paper 1 text. It points you to one aspect of how the text works; keep coming back to it."}, "analysis chain": {"w": "analysis chain", "d": "Your class method for each point: spot a choice, explain it (name the technique), say its effect on the reader, link it to the purpose."}, "big 5": {"w": "Big 5", "d": "Your class annotation tool: five groups of questions (Audience, Meaning, Feeling, Craft, Shape) to ask about any text."}, "panel": {"w": "panel", "d": "One box (one picture) on a comic page. A page is usually several panels read in order."}, "gutter": {"w": "gutter", "d": "The empty strip between two comic panels. Time passes there, and the reader imagines what happens in it."}, "closure": {"w": "closure", "d": "In comics, the reader's mind joining separate panels into one story and filling in what is not drawn."}, "transition": {"w": "panel transition", "d": "The kind of jump from one panel to the next: a second later, the next action, another person, another time or place."}, "shot type": {"w": "shot type", "d": "How close the camera (or artist) is to the subject: from extreme close-up (one detail) to extreme long shot (a tiny figure in a huge place)."}, "angle": {"w": "camera angle", "d": "How high the camera is compared with the subject: above looking down (high), level (eye level) or below looking up (low)."}, "caption": {"w": "caption", "d": "A line or box of words above, below or inside a picture. In a comic, the narrator's voice; in a cartoon, the line under the picture."}, "balloon": {"w": "speech balloon", "d": "The bubble with a little tail that holds what a character says."}, "chiaroscuro": {"w": "chiaroscuro", "d": "An art word (Italian for \"light-dark\"): strong contrast between light and dark areas. Say it \"kee-ar-oh-SKOO-roh\"."}, "pace": {"w": "pace", "d": "How fast or slowly a story seems to move for the reader."}, "sequence": {"w": "sequence", "d": "A row of panels read one after the other, telling one small part of the story."}, "grid": {"w": "grid", "d": "A page layout of panels in regular rows and columns, all about the same size."}, "non-sequitur": {"w": "non-sequitur", "d": "Latin for \"it does not follow\": something with no logical link to what came before."}, "extreme long shot": {"w": "extreme long shot", "d": "A picture where the character is tiny in a huge setting, which can show isolation or scale."}, "analogy": {"w": "analogy", "d": "Showing an issue as a different, familiar situation, so the reader judges it the same way. Here: the first fire stands for today's AI."}, "anachronism": {"w": "anachronism", "d": "Something placed in the wrong time, such as a modern word or object in a Stone Age scene. Cartoonists use it to make a joke and a point."}, "ellipsis": {"w": "ellipsis", "d": "The three dots ... at the end of a sentence: it trails off and leaves the reader to finish the thought."}, "accent colour": {"w": "accent colour", "d": "One strong colour against a plain or dull background, so the eye goes straight to it."}, "juxtaposition": {"w": "juxtaposition", "d": "Placing two contrasting things side by side so the reader compares them."}, "irony": {"w": "verbal irony", "d": "Words that mean, or hide, the opposite of what they say: \"lovely weather\" in a storm."}, "implications": {"w": "implication, implied", "d": "What a text suggests without saying it directly. You work it out from clues."}, "interpretation": {"w": "interpretation", "d": "Your reasoned idea of what a text means beyond the obvious, supported by details from it."}, "evaluation": {"w": "evaluation", "d": "Judging how well something works, with reasons: is the cartoon effective, and why?"}, "coherent": {"w": "coherent", "d": "Clear and logical: each sentence follows from the one before, so the whole makes sense as one argument."}, "subtleties": {"w": "subtleties", "d": "Small, less obvious details or meanings that a careful reader notices."}, "descriptive": {"w": "descriptive", "d": "Only saying what is there, without explaining how it creates meaning. The IB marks this low in criterion B."}, "register": {"w": "register", "d": "How formal the language is, and whose kind of voice it sounds like. Exam answers need a formal register."}, "annotate": {"w": "annotate", "d": "Write short notes on or next to a text while you study it: circle details, label techniques, jot down ideas."}, "effect verb": {"w": "effect verbs", "d": "Verbs that say what a choice does: exposes, ridicules, undermines, invites, positions, implicates, provokes, disarms, reinforces, challenges."}, "purpose": {"w": "purpose", "d": "What the creator wants the text to do to its audience: expose, warn, persuade, make them laugh at something."}, "target": {"w": "target", "d": "In satire, the person, group or idea being criticised."}, "cartoon bank": {"w": "Cartoon Bank", "d": "Step 6 of your class revision guide: your own collection of cartoons you have analysed, for revision."}, "connector": {"w": "connector", "d": "A word or phrase that links ideas, such as <i>parce que<\/i> (because) or <i>grâce à<\/i> (thanks to)."}, "clause": {"w": "clause", "d": "A group of words with a subject and a conjugated verb: <i>ils regardent leur téléphone<\/i>."}, "noun group": {"w": "noun group", "d": "A noun with its little words, and no verb: <i>les écrans<\/i>, <i>l'arrivée des smartphones<\/i>."}}</script>
+<script>
+(function(){
+  // tap a dotted word to see what it means
+  var T={};
+  try{ T=JSON.parse(document.getElementById('terms-data').textContent); }catch(e){ return; }
+  var box=document.getElementById('termbox'), bt=box.querySelector('.tb-h b'), bd=box.querySelector('.tb-d');
+  function show(el){ var k=el.getAttribute('data-t'); if(!T[k]) return; bt.textContent=T[k].w; bd.innerHTML=T[k].d; box.classList.add('on'); }
+  function hide(){ box.classList.remove('on'); }
+  document.addEventListener('click',function(e){
+    var el=e.target.closest ? e.target.closest('.term') : null;
+    if(el){ e.preventDefault(); e.stopPropagation(); show(el); return; }
+    if(!box.contains(e.target)) hide();
+  },true);
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape') hide();
+    if((e.key==='Enter'||e.key===' ') && e.target.classList && e.target.classList.contains('term')){ e.preventDefault(); show(e.target); }
+  });
+  box.querySelector('button').addEventListener('click',hide);
+})();
+</script><!--terms:end-->
+<!--enhance:start--><script>
+function storageOK(){ try{ var k='__ib_t'; localStorage.setItem(k,'1'); localStorage.removeItem(k); return true; }catch(e){ return false; } }
+function storageNotice(){ if(storageOK() || document.querySelector('.notice.storage')) return;
+  var n=document.createElement('div'); n.className='notice storage'; n.setAttribute('role','status');
+  n.textContent='Progress cannot be saved in this browser (private mode?). Use normal Safari or Chrome.';
+  var sb=document.querySelector('.sitebar');   // under the shared top bar when the page has one
+  if(sb && sb.parentNode){ sb.parentNode.insertBefore(n,sb.nextSibling); return; }
+  var m=document.querySelector('main')||document.body; m.insertBefore(n,m.firstChild); }
+
+function ibQuizEnhance(cfg){
+  if(window.__ibQuizEnh) return; window.__ibQuizEnh=1;
+  if(typeof storageNotice==='function') storageNotice();
+  var KEY=cfg&&cfg.key; if(!KEY) return;
+  var AK=KEY+'-attempts', WK=KEY+'-written';
+  function get(k){ try{ return JSON.parse(localStorage.getItem(k)||'null'); }catch(e){ return null; } }
+  function put(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); }catch(e){} }
+  function pad(n){ return (n<10?'0':'')+n; }
+  function today(){ var d=new Date(); return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()); }
+  function attempts(){ var a=get(AK); return Array.isArray(a)?a:[]; }
+  function addAttempt(r,t,sameDay){ var a=attempts(), d=today(), rec={date:d,right:r,total:t};
+    if(sameDay && a.length && a[a.length-1].date===d) a[a.length-1]=rec; else a.push(rec); put(AK,a); return a; }
+  // keep the score saved before this history existed as the first attempt
+  (function(){ if(get(AK)) return; var r=get(KEY); if(!r||typeof r!=='object') return;
+    var rr=(typeof r.right==='number')?r.right:r.score, tt=(typeof r.total==='number')?r.total:r.max;
+    if(typeof rr==='number' && tt) put(AK,[{date:r.date||today(),right:rr,total:tt}]); })();
+
+  // written answers: self-mark 0..max
+  var W=get(WK); if(!W||typeof W!=='object') W={};
+  [].forEach.call(document.querySelectorAll('.written[data-max]'),function(el,i){
+    var max=parseInt(el.getAttribute('data-max'),10); if(!(max>=0) || el.querySelector('.wm')) return;
+    var id=el.id||el.getAttribute('data-id')||('w'+(i+1));
+    var box=document.createElement('div'); box.className='wm';
+    var lab=document.createElement('label'); lab.appendChild(document.createTextNode('My mark: '));
+    var sel=document.createElement('select'); sel.setAttribute('aria-label','Your mark out of '+max);
+    var o=document.createElement('option'); o.value=''; o.textContent='not marked yet'; sel.appendChild(o);
+    for(var m=0;m<=max;m++){ o=document.createElement('option'); o.value=String(m); o.textContent=m+' out of '+max; sel.appendChild(o); }
+    if(W[id]!=null) sel.value=String(W[id]);
+    sel.addEventListener('change',function(){ var w=get(WK); if(!w||typeof w!=='object') w={};
+      if(sel.value==='') delete w[id]; else w[id]=parseInt(sel.value,10); put(WK,w); });
+    lab.appendChild(sel); box.appendChild(lab); el.appendChild(box);
+  });
+
+  // timed pages save {score,max,date} themselves; keep one history entry per day
+  if(/^ib-timed-/.test(KEY)){
+    var rec=function(){ var r=get(KEY); if(r && typeof r.score==='number' && r.max) addAttempt(r.score,r.max,true); };
+    var sb=document.getElementById('savebtn'); if(sb) sb.addEventListener('click',function(){ setTimeout(rec,0); });
+    [].forEach.call(document.querySelectorAll('.score-t input'),function(i){ i.addEventListener('change',function(){ setTimeout(rec,0); }); });
+  }
+
+  // multiple-choice quiz
+  var q0=document.querySelector('.quiz .q[data-a]'); if(!q0) return;
+  var quiz=q0.closest('.quiz');
+  var own=!!cfg.own, total=0, count=0, right=0, recs=[];
+  function qsAll(){ return [].filter.call(quiz.querySelectorAll('.q[data-a]'),function(q){ return !q.classList.contains('written'); }); }
+  function opts(q){ return [].filter.call(q.children,function(c){ return c.tagName==='BUTTON'; }); }
+  var score=document.getElementById('score');
+  if(!score){ score=document.createElement('div'); score.className='score'; score.id='score'; var l=qsAll(); l[l.length-1].parentNode.insertBefore(score,l[l.length-1].nextSibling); }
+  var rep=document.createElement('div'); rep.className='cfr'; rep.setAttribute('aria-live','polite'); score.parentNode.insertBefore(rep,score.nextSibling);
+  var hint=document.createElement('p'); hint.className='cfh';
+  hint.textContent='Before each answer, say how sure you are. At the end, the ones you were sure about but got wrong are listed first: they matter most.';
+  q0.parentNode.insertBefore(hint,qsAll()[0]);
+  function addConf(q){ var p=q.querySelector('.cf'); if(p) p.parentNode.removeChild(p);
+    var d=document.createElement('div'); d.className='cf'; d.setAttribute('role','group'); d.setAttribute('aria-label','How sure are you?');
+    d.innerHTML='<div class="cfl-h">How sure are you?</div><div class="cfb"><button type="button" data-c="guess" aria-pressed="false">Guessed</button><button type="button" data-c="unsure" aria-pressed="false">Unsure</button><button type="button" data-c="sure" aria-pressed="false">Sure</button></div>';
+    var first=opts(q)[0]; q.insertBefore(d,first||null); q.removeAttribute('data-conf'); }
+  function counters(qs){ qs.forEach(function(q,i){ var c=q.querySelector('.qn'); if(!c){ c=document.createElement('div'); c.className='qn'; q.insertBefore(c,q.firstChild); } c.textContent=(i+1)+' of '+qs.length; }); }
+  function start(){ var qs=qsAll(); total=qs.length; count=0; right=0; recs=[]; qs.forEach(addConf); counters(qs); rep.innerHTML=''; }
+  function msg(){ return 'Score: '+right+' / '+total+' answered '+count+(count===total?(right>=0.8*total?'. Good. Log the ones you missed.':'. Re-read the sections for the ones you missed, then log them.'):''); }
+  function qtext(q){ var p=q.querySelector('p'); var t=p?p.textContent:''; t=t.replace(/\s+/g,' ').trim();
+    var s=p&&p.querySelector('.subj'); if(s) t=t.slice(s.textContent.trim().length).trim();
+    t=t.replace(/^\d+\.\s*/,''); return t.length>110?t.slice(0,107)+'...':t; }
+  function esc(s){ var d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+  quiz.addEventListener('click',function(e){
+    var b=e.target.closest?e.target.closest('button'):null; if(!b) return;
+    var q=b.closest('.q'); if(!q || !quiz.contains(q) || !q.hasAttribute('data-a') || q.classList.contains('written')) return;
+    var cf=b.closest('.cf');
+    if(cf){ if(q.__ibRec) return; var c=b.getAttribute('data-c'); q.setAttribute('data-conf',c);
+      [].forEach.call(cf.querySelectorAll('button'),function(x){ var on=x===b; x.classList.toggle('on',on); x.setAttribute('aria-pressed',on?'true':'false'); }); return; }
+    if(b.parentNode!==q || q.__ibRec) return;
+    if(own){
+      if(q.classList.contains('done')) return;
+      var bs=opts(q), a=parseInt(q.getAttribute('data-a'),10), i=bs.indexOf(b);
+      q.classList.add('done');
+      if(i===a) b.classList.add('right'); else { b.classList.add('wrong'); if(bs[a]) bs[a].classList.add('right'); }
+    } else if(!q.classList.contains('done')) return;
+    q.__ibRec=true; var ok=b.classList.contains('right'); if(ok) right++; count++;
+    recs.push({q:q,ok:ok,conf:q.getAttribute('data-conf')||''});
+    [].forEach.call(q.querySelectorAll('.cf button'),function(x){ x.disabled=true; });
+    if(own) score.textContent=msg();
+    if(count===total) finish();
+  });
+  function finish(){
+    var r=right, t=total;
+    if(own){ try{ var prev=get(KEY); localStorage.setItem(KEY,JSON.stringify({right:r,total:t,date:new Date().toISOString().slice(0,10),best:Math.max(r,prev&&prev.best||0)})); }catch(e){} }
+    else { var s=get(KEY); if(s && typeof s.right==='number' && s.total) { r=s.right; t=s.total; } }
+    var a=addAttempt(r,t,false);
+    var order=qsAll(), num=function(q){ return order.indexOf(q)+1; };
+    var wrong=recs.filter(function(x){ return !x.ok; });
+    wrong.sort(function(x,y){ return (y.conf==='sure')-(x.conf==='sure') || num(x.q)-num(y.q); });
+    var lucky=recs.filter(function(x){ return x.ok && (x.conf==='guess'||x.conf==='unsure'); }).sort(function(x,y){ return num(x.q)-num(y.q); });
+    var lab={sure:'you were sure',unsure:'you were unsure',guess:'you guessed','':'not marked'};
+    var h='';
+    if(wrong.length){ h+='<b>Log these first</b><ol class="cfl">'+wrong.map(function(x){ return '<li'+(x.conf==='sure'?' class="sure"':'')+'>Question '+num(x.q)+' ('+lab[x.conf]+'): '+esc(qtext(x.q))+'</li>'; }).join('')+'</ol>'; }
+    if(lucky.length){ h+='<b>Right, but not sure</b>: read the explanation again for '+lucky.map(function(x){ return 'question '+num(x.q); }).join(', ')+'.'; }
+    if(!wrong.length && !lucky.length) h+='<b>All right.</b> Come back in a few days and try again: a score that lasts is what counts.';
+    var past=a.slice(0,-1).slice(-3).map(function(x){ return x.right+'/'+x.total+' on '+x.date; });
+    h+='<p class="cfa">Try number '+a.length+(past.length?'. Before: '+past.join(', ')+'.':'.')+'</p>';
+    h+='<button type="button" class="retry">Try again (shuffled)</button>';
+    rep.innerHTML=h;
+    rep.querySelector('.retry').addEventListener('click',retry);
+  }
+  function shuffled(arr){ var best=arr.slice();
+    for(var k=0;k<12;k++){ var x=arr.slice(); for(var i=x.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=x[i]; x[i]=x[j]; x[j]=t; }
+      best=x; if(arr.length<2 || x.some(function(v,i){ return v!==arr[i]; })) break; }
+    return best; }
+  function renumber(q,n){ var p=q.querySelector('p'); if(!p) return;
+    var w=document.createTreeWalker(p,4,null), tn;
+    while((tn=w.nextNode())){ if(tn.parentNode.closest && tn.parentNode.closest('.subj')) continue; if(!/\S/.test(tn.data)) continue;
+      if(/^\s*\d+\.\s/.test(tn.data)) tn.data=tn.data.replace(/^(\s*)\d+\./,'$1'+n+'.'); break; } }
+  function retry(){
+    var qs=qsAll(), marks=[], clones=[];
+    qs.forEach(function(q){
+      var m=document.createComment('q'); q.parentNode.insertBefore(m,q); marks.push(m);
+      var c=q.cloneNode(true); c.classList.remove('done'); c.removeAttribute('data-conf');
+      var p=c.querySelector('.cf'); if(p) p.parentNode.removeChild(p); p=c.querySelector('.qn'); if(p) p.parentNode.removeChild(p);
+      var bs=opts(c), a=parseInt(c.getAttribute('data-a'),10), good=bs[a];
+      bs.forEach(function(x){ x.classList.remove('right','wrong'); x.disabled=false; });
+      if(bs.length){ var after=bs[bs.length-1].nextSibling, nb=shuffled(bs);
+        bs.forEach(function(x){ c.removeChild(x); }); nb.forEach(function(x){ c.insertBefore(x,after); });
+        c.setAttribute('data-a',String(nb.indexOf(good))); }
+      q.parentNode.removeChild(q); clones.push(c);
+    });
+    var nq=shuffled(clones);
+    marks.forEach(function(m,i){ m.parentNode.insertBefore(nq[i],m); m.parentNode.removeChild(m); renumber(nq[i],i+1); });
+    own=true; start(); score.textContent='Score: 0 / '+total+' answered 0';
+    var top=quiz.getBoundingClientRect().top+window.pageYOffset-60; try{ window.scrollTo(0,Math.max(0,top)); }catch(e){}
+  }
+  start();
+}
+
+storageNotice();
+ibQuizEnhance({"key": "ib-quiz-guide-2026-11-27", "own": false});
+(function(){
+  if(window.__ibSite) return; window.__ibSite=1;
+  var PAGE='ib-'+((location.pathname.split('/').pop()||'index').replace(/\.html?$/,''));
+  var BK=PAGE+'-blocks';
+  function get(){ try{ var v=JSON.parse(localStorage.getItem(BK)||'null'); return v&&typeof v==='object'?v:{}; }catch(e){ return {}; } }
+  function put(v){ try{ localStorage.setItem(BK,JSON.stringify(v)); }catch(e){} }
+  // guide plan blocks "Block 1 · 25 min" + title -> numbered card with a time chip
+  [].forEach.call(document.querySelectorAll('.plan > div:not(.brk), .step'),function(d){
+    var bh=d.querySelector(':scope > .bh'); if(!bh || bh.querySelector('.bn')) return;
+    var b=bh.querySelector('b'); var m=b && /^\s*Block\s+(\d+[a-z]?)\s*[·.:-]\s*(.+?)\s*$/i.exec(b.textContent); if(!m) return;
+    var s=bh.querySelector('span'); var title=s?s.innerHTML:'';
+    d.classList.add('block'); d.setAttribute('data-n',m[1]);
+    bh.innerHTML='<span class="bn" aria-hidden="true">'+m[1]+'</span><b><span class="sr">Block '+m[1]+': </span>'+(title||('Block '+m[1]))+'</b><span class="bt">'+m[2]+'</span>';
+    // teaching sections linked from this block get a kicker "Block n · ..."
+    [].forEach.call(d.querySelectorAll('a[href^="#"]'),function(a){
+      var t=document.getElementById(a.getAttribute('href').slice(1)); if(!t) return;
+      var k=t.querySelector(':scope > .kicker'); if(!k || k.getAttribute('data-bk')) return;
+      k.setAttribute('data-bk',m[1]); k.insertAdjacentHTML('afterbegin','<span class="bk">Block '+m[1]+' · </span>');
+    });
+  });
+  // long hero intro paragraphs fold to 3 lines; tap to read them all
+  [].forEach.call(document.querySelectorAll('header.hero .wrap > p'),function(p){
+      if(p.textContent.length<160) return;
+      p.classList.add('fold'); if(p.scrollHeight<=p.clientHeight+2){ p.classList.remove('fold'); return; }
+      p.setAttribute('role','button'); p.setAttribute('tabindex','0'); p.setAttribute('aria-expanded','false');
+      function tog(e){ if(e && e.target && e.target.closest && e.target.closest('a,.term')) return; var o=p.classList.toggle('open'); p.setAttribute('aria-expanded',o?'true':'false'); }
+      p.addEventListener('click',tog); p.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); tog(); } });
+  });
+  // keep the Today card on the first screen: shrink the header picture (not below 18% of the screen height) if needed
+  (function(){ var art=document.querySelector('header.hero > svg, header.hero > img'), card=document.querySelector('.todaycard');
+    if(!art || !card) return; var vh=window.innerHeight, over=card.getBoundingClientRect().top+window.pageYOffset-(vh-70);
+    if(over>0){ var h=art.getBoundingClientRect().height; art.style.maxHeight=Math.max(0.18*vh,h-over)+'px'; } })();
+  // "Block done" ticks
+  var st=get();
+  [].forEach.call(document.querySelectorAll('.block'),function(d,i){
+    if(d.querySelector(':scope > .bdone')) return;
+    var n=d.getAttribute('data-n')||String(i+1);
+    var l=document.createElement('label'); l.className='bdone';
+    l.innerHTML='<input type="checkbox"> Block done';
+    var c=l.querySelector('input'); c.checked=!!st[n]; d.classList.toggle('is-done',c.checked);
+    c.addEventListener('change',function(){ var s=get(); if(c.checked) s[n]=new Date().toISOString().slice(0,10); else delete s[n]; put(s); d.classList.toggle('is-done',c.checked); chips(); });
+    d.appendChild(l);
+  });
+  function chips(){ var s=get(); [].forEach.call(document.querySelectorAll('.chip[data-n]'),function(a){ a.classList.toggle('done',!!s[a.getAttribute('data-n')]); }); }
+  chips();
+  // current section in the menu
+  var nav=document.querySelector('nav.toc .wrap'); if(!nav || !('IntersectionObserver' in window)) return;
+  var links={}, secs=[];
+  [].forEach.call(nav.querySelectorAll('a[href^="#"]'),function(a){ var el=document.getElementById(a.getAttribute('href').slice(1)); if(el){ links[el.id]=a; secs.push(el); } });
+  // the current section is the last one whose top has passed under the two bars; the observer (and a
+  // throttled scroll check, for long sections) only decides when to look again
+  function mark(){ var best=null; secs.forEach(function(el){ if(el.getBoundingClientRect().top<=120) best=el; });
+    Object.keys(links).forEach(function(id){ links[id].removeAttribute('aria-current'); });
+    if(best){ var a=links[best.id]; a.setAttribute('aria-current','location');
+      var l=a.offsetLeft-nav.offsetLeft, r=l+a.offsetWidth; if(l<nav.scrollLeft+8 || r>nav.scrollLeft+nav.clientWidth-8) nav.scrollLeft=Math.max(0,l-40); } }
+  secs.sort(function(a,b){ return (a.compareDocumentPosition(b)&2)?1:-1; });
+  var io=new IntersectionObserver(mark,{rootMargin:'-100px 0px -55% 0px'});
+  var tick=false; window.addEventListener('scroll',function(){ if(tick) return; tick=true; requestAnimationFrame(function(){ tick=false; mark(); }); },{passive:true});
+  secs.forEach(function(el){ io.observe(el); });
+})();
+</script><!--enhance:end-->
+</body>
+</html>

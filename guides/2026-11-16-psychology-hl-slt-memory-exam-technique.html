@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Psychology HL study guide: exam technique, social learning theory, memory models, averages (Mon 16 Nov 2026)</title>
+<!--
+  Psychology HL, session 3 of the catch-up plan (psychology-audit.md section 4.2 "Session 3").
+  Official source: IB Diploma Programme Psychology guide, first assessment 2027 (Feb 2025, updated May and Dec 2025),
+  Drive 1Khqsn6PrxoS5UXAEKBpu5G_XG5Viyvtq. Statements checked on 8 Nov against the Drive text export of the guide:
+  Table 3.2 p25 (cognitive models), Table 3.3 p26 (social learning theory), Table 3.4 p27 (descriptive statistics),
+  Table 4.11 and 4.12 p33 (SLT in learning; value of cognitive models), p45-46 (Paper 1 Section A and B), glossary p66 (model),
+  p67-68 (skewness), change log p73 ("Compare two cognitive models" removed).
+  Specimen papers (1KoOk8IT670o-bbr1HKc-Nw2Kub_Gf1Mr): P1 Q3 and markscheme read; P1 Q4 is kept for session 4 (21 Nov), not solved here.
+  Class files read 8 Nov: EX01, EX03, LC02 (task note), LC09, LC10, LC11, LC13, LC14, HL01. File names are the NEW titles from psych-renames.json.
+  Free sources fetched 8 Nov: simplypsychology.org bandura.html, multi-store.html, levelsofprocessing.html (free, no login).
+  Depth (rule 6c): only what the guide and mark schemes reward; social cognitive theory, reciprocal determinism, the agentic
+  perspective and the working memory model are labelled "not needed for the IB exam".
+
+  UNSURE / decisions:
+  1. Levels of measurement (nominal, ordinal, interval, ratio) are NOT named in the official guide. They come from the class lesson HL01
+     and are taught as the tool for choosing a measure of central tendency (official line p27). Marked as class content on the page.
+  2. EX03 exemplar cites "Bandura, Ross and Ross (1963)" for the model-rewarded / model-punished result. Both Bandura, Ross and Ross (1963,
+     "Vicarious reinforcement and imitative learning") and Bandura (1965) report this kind of result; the page keeps the mark scheme's
+     citation and says dates and study details are not marked (p45).
+  3. LC13 slides give Atkinson and Shiffrin as 1971 on one slide and 1968 on another; the page uses 1968 (original paper; Simply Psychology also 1968).
+  4. LC13 slides: the Glanzer and Cunitz "procedure" text actually describes Murdock (1962). Not used on the page beyond "serial position effect".
+  5. Peterson and Peterson figures (about 80% at 3 s, under 10% at 18 s) and Craik and Tulving recognition figures (about 16%, 57%, 83%)
+     are from the class slides; Simply Psychology gives the same Craik and Tulving figures. Study details are not assessed in Paper 1 (p45).
+  6. Sensory memory duration: the slides say "less than a second"; Simply Psychology gives 0.25 to 2 s. The page says "about a second or less".
+  7. HL01 slide 1 says the Neverland mean is 4.3; with the counts as extracted (200, 50, 150, 100, 50, 200, 250) it is 4.35. Not used on the page.
+  8. EX01 time guide (40 min for the 15-marker) differs slightly from the site's exam page (about 37 min). Both are guides; EX01 is used here.
+  9. Ordinal data such as Likert ratings: the page follows HL01 (median or mode). Some textbooks treat summed Likert scores as interval.
+-->
+<style>
+  :root{
+    --paper:#F5F7F4; --ink:#1E2A33; --ink-soft:#4A5862; --rule:#D6DCD8;
+    --indigo:#2F47A6; --indigo-soft:#E6EAF7; --amber:#B8761A; --amber-soft:#FBF1DF;
+    --green:#2E7D4F; --green-soft:#E3F2E8; --red:#B23A3A; --red-soft:#F8E4E4;
+    --card:#FFFFFF;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;overflow-wrap:break-word}
+  h1,h2,h3,h4{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;line-height:1.2;margin:0 0 .4em;font-weight:600}
+  h1{font-size:2.3rem}
+  h2{font-size:1.75rem;margin-top:0}
+  h3{font-size:1.25rem;margin-top:1.8em}
+  h4{font-size:1.05rem;margin-top:1.4em;font-family:inherit;font-weight:700}
+  p{margin:0 0 1em}
+  a{color:var(--indigo)}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
+
+  /* hero: the course map itself (guide Table 1 and Table 2, p19, and the HL assessment outline, p42-43) */
+  .hero{background:#0B0F1A;color:#fff;padding:0 0 28px}
+  .map{display:block;width:100%;max-width:900px;height:auto;margin:0 auto}
+  .hero .wrap{padding-top:18px;padding-bottom:0}
+  .hero h1{color:#fff}
+  .hero p{color:#C9D1E6;max-width:680px}
+  .hero a{color:#F2C46D}
+  .meta{display:flex;flex-wrap:wrap;gap:8px 22px;color:#C9D1E6;font-size:.95rem;margin-top:8px}
+
+  nav.toc{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+  nav.toc .wrap{display:flex;gap:2px;flex-wrap:wrap;padding:6px 20px}
+  nav.toc a{text-decoration:none;color:var(--ink-soft);padding:4px 8px;border-radius:6px;font-size:.9rem}
+  section[id]{scroll-margin-top:84px}
+  nav.toc a:hover,nav.toc a:focus-visible{background:var(--indigo-soft);color:var(--indigo);outline:none}
+
+  .plan{display:grid;grid-template-columns:1fr;gap:12px;margin:22px 0 8px}
+  .plan > div{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);padding:12px 16px}
+  .plan .bh{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-bottom:4px}
+  .plan .bh b{font-size:1.2rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+  .plan .bh span{font-weight:700;color:var(--indigo)}
+  .plan ol{margin:6px 0 0;padding-left:22px}
+  .plan li{margin:4px 0}
+  .plan .t{color:var(--ink-soft);font-size:.88rem;white-space:nowrap}
+  .files{margin:10px 0 0;padding-left:20px}
+  .files li{margin:5px 0;font-size:.95rem}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 20px;background:var(--card);border:1px solid var(--rule);padding:10px 14px;font-size:.92rem;margin:16px 0}
+  .note{background:var(--amber-soft);border:1px solid var(--amber);padding:10px 14px;margin:14px 0;font-size:.95rem}
+
+  section.topic{margin-top:56px;padding-top:28px;border-top:3px solid var(--ink)}
+  section.topic ul{padding-left:22px}
+  section.topic li{margin:4px 0}
+  .kicker{color:var(--indigo);font-weight:700;letter-spacing:.01em;margin-bottom:4px}
+  .guiding{font-style:italic;color:var(--ink-soft);margin-bottom:18px}
+
+  .ican{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:0 0 24px}
+  .ican p{margin:0 0 8px;font-weight:700}
+  .ican label{display:flex;gap:10px;align-items:flex-start;padding:5px 0;cursor:pointer}
+  .ican input{margin-top:6px;width:16px;height:16px;flex:none;accent-color:var(--indigo)}
+
+  /* markers: what to learn word for word and what to understand and apply */
+  .fb,.learn{display:inline-block;font-size:.72rem;font-weight:700;padding:1px 7px;border-radius:3px;vertical-align:middle;margin-left:6px;white-space:nowrap;font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.01em}
+  .fb{background:var(--green);color:#fff}
+  .learn{background:var(--amber);color:#fff}
+
+  table{border-collapse:collapse;width:100%;margin:12px 0 20px;font-size:.95rem;background:var(--card)}
+  th,td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#EDF0EC}
+  td.c,th.c{text-align:center}
+  tr.ao th{background:var(--indigo-soft);color:var(--indigo)}
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:14px 0 20px}
+  .cards > div{background:var(--card);border:1px solid var(--rule);border-top:4px solid var(--indigo);padding:10px 14px}
+  .cards h4{margin:0 0 6px}
+  .cards p{margin:4px 0;font-size:.95rem}
+  .cards .cq{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:1.02rem;border-left:3px solid var(--amber);padding-left:10px}
+  .cards .lab{font-weight:700;color:var(--ink-soft)}
+  figure{margin:20px 0;background:var(--card);border:1px solid var(--rule);padding:12px}
+  figure svg{display:block;width:100%;height:auto}
+  figcaption{font-size:.9rem;color:var(--ink-soft);margin-top:8px}
+
+  .quote{background:var(--card);border-left:5px solid var(--amber);padding:10px 16px;margin:14px 0;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:1.05rem}
+  .quote small{display:block;font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.85rem;color:var(--ink-soft);margin-top:4px}
+  .tip{background:var(--amber-soft);border-left:5px solid var(--amber);padding:12px 16px;margin:18px 0}
+  .tip b:first-child{color:var(--amber)}
+  .worked{background:var(--indigo-soft);border-left:5px solid var(--indigo);padding:12px 16px;margin:18px 0}
+  .worked > b:first-child{color:var(--indigo)}
+  .worked ol{margin:6px 0 0;padding-left:22px}
+  .worked li{margin:3px 0}
+  .nw{white-space:nowrap}
+
+  details{background:var(--card);border:1px solid var(--rule);padding:10px 14px;margin:10px 0}
+  summary{cursor:pointer;font-weight:600}
+  details[open] summary{margin-bottom:8px}
+
+  .quiz .q{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:12px 0}
+  .quiz .q > p{font-weight:600;margin-bottom:8px}
+  .quiz button{display:block;width:100%;text-align:left;background:#F3F5F2;border:1px solid var(--rule);padding:8px 12px;margin:6px 0;border-radius:6px;font:inherit;cursor:pointer;color:var(--ink)}
+  .quiz button:hover,.quiz button:focus-visible{border-color:var(--indigo);outline:none}
+  .quiz button.right{background:var(--green-soft);border-color:var(--green)}
+  .quiz button.wrong{background:var(--red-soft);border-color:var(--red)}
+  .quiz .why{display:none;margin-top:8px;font-size:.95rem;color:var(--ink-soft)}
+  .quiz .q.done .why{display:block}
+  .score{font-weight:700;margin-top:14px}
+
+  .end{margin-top:56px;background:var(--card);border:1px solid var(--rule);padding:18px 20px}
+  .end ul{margin:8px 0 0;padding-left:20px}
+  @media (max-width:600px){section[id]{scroll-margin-top:130px}h1{font-size:1.8rem}body{font-size:16px}th,td{padding:6px}}
+  @media print{nav.toc{position:static}details{break-inside:avoid}.quiz button{border:1px solid #999}}
+
+  .hero svg.map{display:block;width:100%;max-width:900px;height:auto;margin:0 auto}
+  .frame{display:grid;grid-template-columns:1fr;gap:10px;margin:14px 0 20px}
+  .frame > div{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--green);padding:8px 14px}
+  .frame b{color:var(--green)}
+  .frame small{color:var(--ink-soft)}
+  .today{background:var(--card);border:2px solid var(--indigo);border-radius:10px;padding:12px 16px;margin:24px 0 8px}
+  .today p{margin:0 0 6px;font-weight:700;color:var(--indigo)}
+  .today ul{margin:0;padding-left:22px}
+  .star{color:var(--amber);font-weight:700}
+  .plan > div.brk{background:var(--green-soft);border:0;border-left:5px solid var(--green);padding:8px 14px;font-weight:600}
+  .stuckbox{background:var(--amber-soft);border:1px solid var(--amber);border-radius:10px;padding:10px 14px;margin:14px 0}
+  .finish{background:var(--green-soft);border-left:5px solid var(--green);padding:12px 16px;margin:18px 0}
+  .finish > b:first-child{color:var(--green)}
+  .finish ol{margin:6px 0 0;padding-left:22px}
+  .blank{display:inline-block;min-width:5em;border-bottom:2px solid var(--ink-soft)}
+  details.why2{background:transparent;border:1px dashed var(--indigo);margin:8px 0 0}
+  details.extra{border-left:5px solid var(--rule)}
+  .quiz .written{border-left:5px solid var(--green)}
+  .quiz .written .mx{color:var(--ink-soft);font-weight:400}
+
+
+/*terms:start*/
+.term{border-bottom:2px dotted var(--indigo);cursor:pointer;border-radius:2px}
+.term:focus-visible{background:var(--indigo-soft)}
+@media (hover:hover){.term:hover{background:var(--indigo-soft)}}
+#termbox{display:none;position:fixed;left:10px;right:10px;bottom:10px;max-width:640px;margin:0 auto;background:var(--card);border:2px solid var(--indigo);border-radius:8px;padding:14px 16px 12px;box-shadow:0 8px 28px rgba(0,0,0,.22);z-index:60;max-height:60vh;overflow:auto}
+#termbox.on{display:block}
+#termbox .tb-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+#termbox .tb-h b{font-size:1.1rem;color:var(--indigo)}
+#termbox button{font:inherit;border:1px solid var(--rule);background:var(--paper);border-radius:8px;padding:4px 12px;cursor:pointer;flex:none;min-height:44px;min-width:44px}
+#termbox .tb-d{margin:8px 0 0;line-height:1.5}
+.before.block0{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:12px 16px;margin:12px 0}
+.before > details{background:transparent;border:0;padding:0;margin:0}
+.before > details > summary{display:grid;grid-template-columns:32px minmax(0,1fr) auto auto;align-items:center;gap:4px 10px;min-height:44px;list-style:none;cursor:pointer}
+.before > details > summary::-webkit-details-marker{display:none}
+.before > details > summary::after{content:"Hide";font-size:.85rem;font-weight:600;color:var(--indigo)}
+.before > details:not([open]) > summary::after{content:"Show"}
+.before .bn{flex:none;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--indigo);color:#fff;font-weight:700}
+.before .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.before .b0t{font-size:1.15rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-weight:600;color:var(--ink)}
+.before .bt{white-space:nowrap;font-size:.8rem;font-weight:700;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:4px;padding:2px 8px}
+.before .bgi{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);border-radius:8px;padding:12px 16px;margin:12px 0}
+.before .bgi h3{margin:0 0 6px;font-size:1.08rem}
+.before .bgi p{margin:6px 0}
+.before .bgi svg{max-width:100%;height:auto;display:block;margin:8px auto}
+.before .more{font-size:.95rem;color:var(--ink-soft)}
+.before .stuck{background:var(--amber-soft);border-radius:8px;padding:10px 14px}
+/*terms:end*/
+</style>
+<!--enhance:start--><meta name="color-scheme" content="light"><style>
+.warmup{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--amber);padding:12px 16px 4px;margin:24px 0}
+.warmup h2{margin:0 0 6px;font-size:1.3rem}
+.warmup .wu-how{font-size:.95rem;color:var(--ink-soft);margin:0 0 8px}
+.warmup ol{margin:0;padding-left:24px}
+.warmup li{margin:10px 0}
+.warmup .wu-m{font-size:.8rem;color:var(--ink-soft)}
+.warmup .wu-f{font-weight:600}
+.warmup details{margin-top:4px}
+.warmup summary{cursor:pointer;color:var(--indigo);font-size:.92rem}
+.warmup .wu-b{border-top:1px solid var(--rule);margin-top:6px;padding-top:6px}
+.warmup .wu-b a{font-size:.88rem;margin-left:6px;white-space:nowrap}
+.warmup .wu-foot{font-size:.92rem;margin:12px 0 8px}
+
+:root{--amber-ink:#8A6416}
+:focus-visible{outline:3px solid var(--indigo);outline-offset:2px}
+.quiz button:focus-visible,.quiz .q .cf button:focus-visible{outline:3px solid var(--indigo);outline-offset:2px}
+@media (hover:none){.quiz button:not(.right):not(.wrong):hover{border-color:var(--rule)}}
+.quiz button.right::before{content:"✓ Correct: ";font-weight:700;color:var(--green)}
+.quiz button.wrong::before{content:"✗ Your answer: ";font-weight:700;color:var(--red)}
+.quiz .q .qn{font-size:.8rem;font-weight:700;color:var(--ink-soft);margin-bottom:2px}
+.quiz .q .cf{margin:4px 0 10px}
+.quiz .q .cf .cfl-h{font-size:.88rem;font-weight:600;color:var(--ink-soft);margin-bottom:4px}
+.quiz .q .cf .cfb{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;max-width:420px}
+.quiz .q .cf button{display:block;width:100%;min-height:44px;margin:0;padding:6px 8px;text-align:center;font-size:.92rem;border:1px solid var(--rule);border-radius:8px;background:var(--card);color:var(--ink)}
+.quiz .q .cf button.on{background:var(--indigo-soft);border:2px solid var(--indigo);font-weight:700}
+.quiz .q .cf button:disabled{cursor:default;opacity:1;color:var(--ink-soft)}
+.quiz .q .cf button.on:disabled{color:var(--ink)}
+.quiz .cfh{font-size:.92rem;color:var(--ink-soft)}
+.quiz .cfr{margin-top:10px}
+.quiz .cfr ol{margin:6px 0 10px;padding-left:22px}
+.quiz .cfr li{margin:4px 0}
+.quiz .cfr li.sure{font-weight:600}
+.quiz .cfr .cfa{font-size:.9rem;color:var(--ink-soft);margin:8px 0}
+.quiz .cfr button.retry{display:inline-block;width:auto;min-height:44px;text-align:center;background:var(--indigo);color:#fff;border-color:var(--indigo);font-weight:700;padding:8px 16px}
+.wm{margin-top:8px;font-size:.92rem}
+.wm select{font:inherit;min-height:44px;padding:4px 6px;border:1px solid var(--rule);border-radius:8px;background:var(--card);color:var(--ink);max-width:100%}
+.notice{background:var(--amber-soft);border:1px solid var(--amber);color:var(--ink);padding:10px 14px;margin:12px 0;border-radius:8px;font-weight:600}
+
+:root{--amber-ink:#8A6416;--grey:#5F6B72;--purple:#6A3D9A;--green-ink:#256B43;--r-sm:4px;--r:8px}
+/* top bar: back to today, flashcards, progress, sheet */
+.sitebar{position:sticky;top:0;z-index:30;height:44px;background:var(--paper);box-shadow:0 1px 0 var(--rule)}
+.sitebar .sb{max-width:820px;height:44px;margin:0 auto;padding:0 10px;display:flex;align-items:stretch;gap:2px;overflow-x:auto;scrollbar-width:none;white-space:nowrap}
+.sitebar .sb::-webkit-scrollbar{display:none}
+.sitebar a{flex:none;display:flex;align-items:center;min-height:44px;padding:0 10px;color:var(--indigo);text-decoration:none;font:600 .95rem/1 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;border-radius:var(--r-sm)}
+.sitebar a.sb-home{font-weight:700}
+@media (hover:hover){.sitebar a:hover{background:var(--indigo-soft)}}
+/* guide section menu: one row that scrolls sideways, 44 px targets, current section marked */
+nav.toc{top:44px;z-index:29}
+nav.toc .wrap{display:flex;flex-wrap:nowrap;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;white-space:nowrap;padding:0 10px}
+nav.toc .wrap::-webkit-scrollbar{display:none}
+nav.toc a{flex:none;display:flex;align-items:center;min-height:44px;padding:12px 10px;line-height:1.2;border-radius:0}
+nav.toc a[href$="index.html"]{display:none}
+nav.toc a[aria-current]{color:var(--indigo);font-weight:700;background:var(--indigo-soft);box-shadow:inset 0 -3px 0 var(--indigo)}
+[id]{scroll-margin-top:56px}
+html:has(nav.toc) [id]{scroll-margin-top:100px}
+/* focus: always visible */
+:focus-visible{outline:3px solid var(--indigo)!important;outline-offset:2px!important}
+header.hero :focus-visible,header.top :focus-visible{outline-color:#F2C46D!important}
+/* readable text */
+main p,main li,.why{max-width:68ch}
+@media (max-width:600px){.wrap{padding-left:16px;padding-right:16px}}
+small{font-size:max(12px,.8em)}
+.sig small{font-size:max(12px,.62em)}
+/* hero: title first, then the picture (at most 30% of the screen height, as wide as the text column),
+   so the title and the Today card share the first screen; long intro paragraphs fold to 3 lines (tap to read) */
+header.hero{display:flex;flex-direction:column}
+header.hero > .wrap{order:-1;width:100%}
+header.hero > svg,header.hero > img{max-height:30vh;max-width:780px;margin:14px auto 0}
+header.hero p.fold{position:relative;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;cursor:pointer}
+header.hero p.fold::after{content:"more";position:absolute;right:0;bottom:0;padding:0 2px 0 28px;background:linear-gradient(90deg,rgba(11,15,26,0),#0B0F1A 22px);color:#F2C46D;font-weight:700}
+header.hero .wrap > p ~ p.fold{-webkit-line-clamp:2}
+header.hero p.fold.open{display:block;-webkit-line-clamp:unset}
+header.hero p.fold.open::after{content:none}
+@media (max-width:600px){header.hero > svg,header.hero > img{max-height:28vh} header.hero .meta{font-size:.85rem;gap:0 14px}}
+/* contrast: amber and grey text */
+body .tip b:first-child,body .src > b:first-child,body .star,body .col.l > h3,body .timer.low .tdisp{color:var(--amber-ink)}
+/* one badge system: Learn = solid amber; Given / in booklet = neutral outline; Apply = indigo outline; HL = purple outline; green = done */
+.badge,.fb,.learn,.tag,span.hl,.quiz .subj,.written .wsubj,.wsubj,.pill,.soon{display:inline-block;font:700 .8rem/1.4 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.01em;padding:1px 7px;border:1px solid currentColor;border-radius:var(--r-sm);background:var(--card);vertical-align:middle;white-space:nowrap}
+.learn,.badge.learn{background:var(--amber-ink);border-color:var(--amber-ink);color:#fff}
+.fb,.badge.apply{color:var(--indigo);border-color:var(--indigo)}
+.fb.given,.badge.given,.tag,.quiz .subj,.written .wsubj,.wsubj,.badge.subj{color:var(--ink);border-color:var(--grey)}
+span.hl,.badge.hl{color:var(--purple);border-color:var(--purple)}
+.pill{margin-left:6px}
+.p-done,.badge.done{color:var(--green-ink);border-color:var(--green);background:var(--green-soft)}
+.p-soon,.soon{color:var(--grey);border-color:var(--grey)}
+/* radii: 4 px small things, 8 px boxes */
+.today,.goals,.able,.todaycard,#termbox,.before .bgi,.before .stuck,.quiz button,.go,.notice,.btn,.timer button,.tl,.chip,.plan > div,.step,.block{border-radius:var(--r)}
+/* 44 px targets */
+.go{min-height:44px;display:inline-flex;align-items:center}
+main details>summary{min-height:44px;display:flex;align-items:center;cursor:pointer}
+ul.files a,.files li>a{display:inline-flex;align-items:center;min-height:44px}
+input[type=number],input[type=text],select{min-height:44px}
+#box a#src,a.src{display:inline-flex;align-items:center;min-height:44px}
+#termbox .tb-h button{min-height:44px;min-width:44px}
+.top .crumb{display:flex;flex-wrap:nowrap;align-items:center;gap:0 6px;overflow-x:auto;scrollbar-width:none;white-space:nowrap;margin-bottom:2px}
+.top .crumb::-webkit-scrollbar{display:none}
+.top .crumb a{flex:none;display:inline-flex;align-items:center;min-height:44px;padding-right:4px}
+/* timed blocks: one card for guide plans, review steps and mock plans */
+.plan > div,.block,.step{background:var(--card);border:1px solid var(--rule);padding:12px 16px}
+.plan > div.brk{background:var(--green-soft);border-color:var(--green)}
+.bh{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;margin-bottom:4px}
+.block > .bh{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:4px 10px;align-items:center}
+.plan .bh .bn,.step .bh .bn,.bh .bn{flex:none;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--indigo);color:#fff;font:700 1rem/1 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif}
+.plan .bh > b,.step .bh > b,.bh > b{font-size:1.15rem;line-height:1.25;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;color:var(--ink)}
+.plan .bh .bt,.step .bh .bt,.bh .bt{flex:none;display:inline-block;font:700 .8rem/1.4 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:var(--r-sm);padding:2px 8px}
+.bdone{display:flex;align-items:center;gap:10px;min-height:44px;margin:8px 0 0;padding-top:4px;border-top:1px solid var(--rule);font-weight:600;color:var(--ink-soft);cursor:pointer;max-width:none}
+.bdone input{width:20px;height:20px;margin:0;flex:none;accent-color:var(--green)}
+.block.is-done{border-color:var(--green)} .block.is-done .bn{background:var(--green)} .block.is-done .bdone{color:var(--green-ink)}
+.blocks{display:grid;gap:10px;margin:16px 0}
+.blocks > .block p{margin:4px 0 0}
+.brkc{background:var(--green-soft);border:1px solid var(--green);border-radius:var(--r);padding:8px 16px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* Today card on guides: goals, plan chips, warm-up */
+.todaycard{background:var(--card);border:2px solid var(--indigo);padding:14px 16px 6px;margin:20px 0 10px}
+.todaycard .tc-goals > *{background:transparent!important;border:0!important;padding:0!important;margin:0!important;box-shadow:none!important;border-radius:0!important}
+.todaycard .tc-goals h2,.todaycard .tc-goals h3,.todaycard .tc-goals > * > p:first-child,.todaycard .tc-goals > * > b:first-child{display:block;font:600 1.25rem/1.25 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;color:var(--ink);margin:0 0 6px}
+.todaycard .tc-goals ol,.todaycard .tc-goals ul{margin:0;padding-left:22px}
+.todaycard .tc-goals li{margin:3px 0}
+.todaycard .tc-plan{margin:0 0 12px;padding-bottom:12px;border-bottom:1px solid var(--rule)}
+@media (max-width:600px){.todaycard .chips{display:grid;grid-template-columns:1fr 1fr;gap:6px}.todaycard .chip{padding:4px 10px;font-size:.9rem}.todaycard .chip.c0{grid-column:1 / -1}}
+.todaycard .tc-h{font-weight:700;margin:0 0 6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:4px;min-height:44px;padding:4px 12px;border:1px solid var(--indigo);background:var(--card);color:var(--indigo);text-decoration:none;font-size:.95rem;line-height:1.2}
+.chip b{font-weight:700}
+.chip.done{border-color:var(--green);color:var(--green-ink);background:var(--green-soft)}
+.chip.done::before{content:"\2713";font-weight:700}
+.todaycard .warmup{border:0;border-top:1px solid var(--rule);border-radius:0;padding:12px 0 4px;margin:12px 0 0;background:transparent}
+.todaycard .tc-plan + .warmup{border-top:0;margin-top:0;padding-top:0}
+.todaycard .warmup h2{font-size:1.15rem}
+.sitebar + .notice{margin:8px max(16px,calc((100% - 780px) / 2))}
+@media print{.sitebar,.notice,#termbox,.go,.chips,.bdone{display:none!important}nav.toc{position:static}.quiz button{display:list-item}.todaycard{border-width:1px}}
+</style><!--enhance:end-->
+</head>
+<body><!--enhance:start--><nav class="sitebar" aria-label="Study site"><div class="sb"><a class="sb-home" href="../index.html#today">← Today</a><a href="../flashcards.html">Flashcards</a><a href="../progress.html">Progress</a><a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">Sheet</a></div></nav><!--enhance:end-->
+
+
+<header class="hero">
+  <svg class="map" viewBox="0 0 1000 410" role="img" aria-label="The multi-store model of memory: information from the senses enters sensory memory; attention moves it to short-term memory; rehearsal moves it to long-term memory; retrieval brings it back to short-term memory; unattended or unrehearsed information is lost.">
+    <rect width="1000" height="410" fill="#0B0F1A"/>
+    <defs>
+      <marker id="hw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#F2C46D"/></marker>
+      <marker id="hg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8FD9A8"/></marker>
+      <marker id="hr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#FF8A8A"/></marker>
+    </defs>
+    <g font-family="Arial,Helvetica,sans-serif" font-size="32" text-anchor="middle">
+      <text x="140" y="40" fill="#C9D1E6">Senses</text>
+      <line x1="140" y1="52" x2="140" y2="96" stroke="#F2C46D" stroke-width="4" marker-end="url(#hw)"/>
+      <!-- three stores -->
+      <rect x="20" y="100" width="240" height="180" rx="12" fill="#2A2410" stroke="#F2C46D" stroke-width="3"/>
+      <rect x="380" y="100" width="240" height="180" rx="12" fill="#1B2550" stroke="#9FB3FF" stroke-width="3"/>
+      <rect x="740" y="100" width="240" height="180" rx="12" fill="#123222" stroke="#8FD9A8" stroke-width="3"/>
+      <g font-weight="bold">
+        <text x="140" y="145" fill="#F7E3B5">Sensory</text><text x="140" y="182" fill="#F7E3B5">memory</text>
+        <text x="500" y="145" fill="#DCE3FF">Short-term</text><text x="500" y="182" fill="#DCE3FF">memory</text>
+        <text x="860" y="145" fill="#D3F2DE">Long-term</text><text x="860" y="182" fill="#D3F2DE">memory</text>
+      </g>
+      <g fill="#C9D1E6">
+        <text x="140" y="250">under 1 s</text>
+        <text x="500" y="230">7 ± 2 items</text><text x="500" y="266">15-30 s</text>
+        <text x="860" y="250">no known limit</text>
+      </g>
+      <!-- forward arrows -->
+      <line x1="262" y1="160" x2="374" y2="160" stroke="#F2C46D" stroke-width="4" marker-end="url(#hw)"/>
+      <line x1="622" y1="160" x2="734" y2="160" stroke="#F2C46D" stroke-width="4" marker-end="url(#hw)"/>
+      <text x="320" y="86" fill="#F2C46D">attention</text>
+      <text x="680" y="86" fill="#F2C46D">rehearsal</text>
+      <!-- rehearsal loop over STM -->
+      <path d="M455,100 C455,46 545,46 545,96" fill="none" stroke="#9FB3FF" stroke-width="4" marker-end="url(#hw)"/>
+      <text x="500" y="36" fill="#9FB3FF">repeat</text>
+      <!-- retrieval back arrow -->
+      <line x1="738" y1="230" x2="628" y2="230" stroke="#8FD9A8" stroke-width="4" marker-end="url(#hg)"/>
+      <text x="680" y="320" fill="#8FD9A8">retrieval</text>
+      <!-- lost -->
+      <line x1="140" y1="282" x2="140" y2="346" stroke="#FF8A8A" stroke-width="4" stroke-dasharray="8 6" marker-end="url(#hr)"/>
+      <line x1="500" y1="282" x2="500" y2="346" stroke="#FF8A8A" stroke-width="4" stroke-dasharray="8 6" marker-end="url(#hr)"/>
+      <text x="140" y="388" fill="#FF8A8A">lost</text>
+      <text x="500" y="388" fill="#FF8A8A">lost</text>
+    </g>
+  </svg>
+  <div class="wrap">
+    <h1>Psychology HL: exam technique, social learning theory and memory</h1>
+    <p>Study guide for Monday 16 November 2026, your third Psychology session. The picture above is the <b>multi-store model of memory</b>, one of today's topics: information from the senses enters sensory memory, <b>attention</b> moves it into short-term memory, <b>rehearsal</b> (repeating it) moves it into long-term memory, and <b>retrieval</b> brings it back when you need it. What you do not attend to or rehearse is lost. You will be able to draw this from memory by the end of the session.</p>
+    <p>Today has four parts: how to write a 4-mark Paper 1 answer, social learning theory (learning by watching others), two models of memory, and your first HL statistics skill: choosing the right average.</p>
+    <div class="meta"><span>About 2 hours</span><span>Psychology HL catch-up, session 3 of 4</span><span>Checked against the official IB Psychology guide (first assessment 2027) and the official specimen papers. Anything that comes only from your class files is labelled "class".</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <a href="../index.html" style="font-weight:700;color:var(--indigo)">All days</a><a href="#plan">Plan</a><a href="#technique">4-markers</a><a href="#slt">Social learning</a><a href="#mem">Memory models</a><a href="#data">HL averages</a><a href="#quiz">Quiz</a><a href="#end">Finish</a>
+  </div>
+</nav>
+
+<main class="wrap"><!--enhance:start-->
+<section class="todaycard" aria-label="Today"><div class="tc-plan"><p class="tc-h">Today: tap a block to jump to it</p><div class="chips"><a class="chip c0" href="#before"><b>Block 0</b> · Before you start</a><a class="chip" href="#wu"><b>Warm-up</b> · 8 min</a><a class="chip" href="#b1" data-n="1"><b>Block 1</b> · 25 min</a><a class="chip" href="#b2" data-n="2"><b>Block 2</b> · 25 min</a><a class="chip" href="#b3" data-n="3"><b>Block 3</b> · 32 min</a><a class="chip" href="#b4" data-n="4"><b>Block 4</b> · 35 min</a></div></div><div class="tc-goals"><!--enhance:end--><!--enhance:moved--><div class="today">
+  <p>Today you will be able to</p>
+  <ul>
+    <li>write a 4-mark Paper 1 answer in PEEL in 10 minutes and mark it with the official <span class="term" data-t="markband" tabindex="0" role="button">markband</span>;</li>
+    <li><span class="term" data-t="explain" tabindex="0" role="button">explain</span> and apply social learning <span class="term" data-t="theory" tabindex="0" role="button">theory</span>, and <span class="term" data-t="describe" tabindex="0" role="button">describe</span> the multi-store and levels of processing models of memory;</li>
+    <li>choose the right average (mean, median or mode) for a set of <span class="term" data-t="data" tabindex="0" role="button">data</span> and say why (HL).</li>
+  </ul>
+</div><!--enhance:/moved--><!--enhance:start--></div>
+<section class="warmup" id="wu" aria-label="Warm-up from earlier days">
+<h2>Warm-up from earlier days (8 min)</h2>
+<p class="wu-how">Answer from memory before you read on: write the answer on paper, then tap to check it.</p><ol>
+<li><div class="wu-m">Psychology · RM 3 · from Sat 14 Nov</div><div class="wu-f">Population vs ecological validity</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">Population: is the sample like the population (who)? Ecological: are the setting and task like real life (where and how)? <a href="../guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#external">open the section</a></div></details></li>
+<li><div class="wu-m">English · Colour · from Fri 13 Nov</div><div class="wu-f">How to write about colour (class guide)</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">Not "Red makes the reader angry" but "Here, red suggests danger because ..." <a href="../guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html#colour">open the section</a></div></details></li>
+<li><div class="wu-m">Psychology · Frame · from Mon 9 Nov</div><div class="wu-f">HL papers: time, marks, weight</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">P1 1 h 30, 35 marks, 25%. P2 1 h 30, 35 marks, 25%. P3 1 h 45, 30 marks, 30%. <a href="../guides/2026-11-09-psychology-hl-frame-research-methods.html#frame">open the section</a></div></details></li>
+<li><div class="wu-m">Psychology · Concepts · from Mon 9 Nov</div><div class="wu-f">Bias (opening statement)</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">A bias is a limitation in objective thinking; it is a tendency to perceive information through a cognitive filter of experience and preference. <a href="../guides/2026-11-09-psychology-hl-frame-research-methods.html#concepts">open the section</a></div></details></li>
+<li><div class="wu-m">Biology · B1.1.4 · from Sun 15 Nov</div><div class="wu-f">α-glucose versus β-glucose</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">They differ only at carbon 1: the -OH is below the ring in α-glucose, above it in β-glucose. <a href="../guides/2026-11-15-biology-hl-b1.1-carbohydrates-lipids.html#b11a">open the section</a></div></details></li>
+</ol>
+<p class="wu-foot">Missed one? Put it in the <a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">Error log</a>.</p></section>
+</section><!--enhance:end-->
+
+
+<!--enhance:origin-->
+<div id="warmup"></div>
+
+
+
+
+<section id="plan">
+  <h2 style="margin-top:28px">How to spend the two hours</h2>  <p style="margin:10px 0 0">Four blocks and a short break. Do them in order and tick each step off on paper. File links open your IB Psychology folder in Drive; section links jump down this page. Sessions 1 and 2 covered research methods and conditioning; today does not repeat them. You need a timer and blank paper.</p>
+  <p style="margin:10px 0 0"><b>Short on time: skip <span class="star">★</span> steps, still do the quiz.</b></p>
+  <div class="plan"><!--terms:start--><div id="before" class="before block0"><details open>
+  <summary><span class="bn" aria-hidden="true">0</span><span class="b0t"><span class="sr">Block 0: </span>Before you start</span><span class="bt">about 7 min</span></summary>
+  <p style="margin:10px 0 0">This page builds on the ideas below. Read them first so you do not have to stop later (about 7 min, not counted in the blocks below). Words with a <span style="border-bottom:2px dotted var(--indigo)">dotted underline</span> anywhere on the page: tap them for a short explanation.</p>
+  <div class="bgi"><h3>How Paper 1 answers are marked</h3><p>Psychology exams have no multiple choice. You write answers, and examiners mark them with <b>markbands</b>: short descriptions of what an answer at each level looks like. For a 4-mark question there are two bands, 1-2 marks and 3-4 marks.</p><p>The first word of the question, the <b>command term</b>, says what kind of answer gets the top band. <b>Describe</b> means give a detailed account. <b>Explain</b> means a detailed account <i>plus</i> reasons or causes. Answering "describe" when the question says "explain" keeps you in the lower band, even if every sentence is true.</p></div><div class="bgi"><h3>Two kinds of learning you met in session 2</h3><p><b>Classical conditioning</b>: learning by linking two things that happen together. Pavlov's dogs drooled at a sound that always came just before food.</p><p><b><span class="term" data-t="operant conditioning" tabindex="0" role="button">Operant conditioning</span></b>: learning from what happens <i>after</i> you do something. A behaviour that is rewarded (reinforced) happens more; a behaviour that is punished happens less.</p><p>In both, the learner experiences things directly. Today's social learning theory adds a third way: learning by <b>watching other people</b> and what happens to them.</p></div><div class="bgi"><h3>What a theory and a model are</h3><p>A <b>theory</b> is an explanation of why or how something happens, which can be checked against evidence.</p><p>A <b>model</b> is a simplified picture of how something works, often drawn as boxes and arrows, like a map of the underground: it leaves out details so you can see the main route.</p><p>Neither is ever "proven". Researchers use them to make <b>predictions</b> ("if this is true, then people should forget a word within 20 seconds"), then run studies to see whether the predictions come true. Studies that fit <b>support</b> the model; studies that do not fit show it needs changing.</p></div><div class="bgi"><h3>Memory in everyday words: in, kept, out</h3><p>Every memory has three steps:</p><ul><li><b>In</b>: you notice something and take it in, for example a new classmate's name.</li><li><b>Kept</b>: it is stored, for a few seconds or for years.</li><li><b>Out</b>: you get it back when you need it, for example when you see her the next day. Getting it back is called <b>retrieval</b>.</li></ul><p>Forgetting can happen at any step: you never really noticed, it was not kept, or you cannot find it when you need it (the name is "on the tip of your tongue").</p></div><div class="bgi"><h3>Averages and putting numbers in order</h3><p>An <b>average</b> is one number that sums up a whole set of numbers. Psychology uses three:</p><ul><li><b>Mean</b>: add them all and divide by how many. Scores 4, 6 and 8: 18 ÷ 3 = 6.</li><li><b>Median</b>: write them in order from smallest to largest and take the middle one. For 3, 9, 5 that is 3, 5, 9, so the median is 5.</li><li><b>Mode</b>: the one that appears most often. In 2, 3, 3, 7 the mode is 3.</li></ul><p>Always sort the numbers first when you need the median.</p></div><div class="bgi"><h3>Percentages and milliseconds</h3><p>A <b>percentage</b> is "out of 100". 80% recalled means 80 out of every 100 items were remembered; under 10% means fewer than 10 out of 100.</p><p>A <b>millisecond</b> (ms) is one thousandth of a second. Reaction times are often around 400 to 500 ms: just under half a second. 1&nbsp;240 ms is about one and a quarter seconds, which is very slow for a simple reaction task.</p></div>
+  <p class="stuck"><b>Still stuck on a word?</b> Do not search for long. Write it in the <b>Error log</b> tab of the study sheet starting with "word:" (for example "word: composition") and carry on. It will be explained in the next guide.</p>
+</details></div><!--terms:end-->
+
+    <div id="b1">
+      <div class="bh"><b>Block 1 · 25 min</b><span>Exam technique: the timed 4-marker</span></div>
+      <ol>
+        <li>Read the <a href="#technique">4-markers section</a> down to the marking checklist, including the model answer and its "Why this step?". <span class="t">(7 min)</span></li>
+        <li>Do the "Finish it" box in that section on paper, then open its answer. <span class="t">(3 min)</span></li>
+        <li>Close everything. Timer 10 minutes, no notes: <b>"Describe classical conditioning with reference to one example. (4 marks)"</b> Use a <b>different, human</b> example from the Finish it box (for example fear of the dentist's drill, or feeling sick at the smell of a food that once made you ill). First minute: jot your key terms, as EX01 advises. <span class="t">(10 min)</span></li>
+        <li>Mark it with the <a href="#cc-check">marking checklist</a> and the slide "TASK: Explain classical conditioning with the use of one example. The examiner will be looking for..." near the end of <a href="https://drive.google.com/file/d/18G55fgHqH329URQeM2Ykm0o_JpWRWZsf/view">LC02 Learning and cognition - Classical conditioning - Slides (class)</a>. Give yourself a band (1-2 or 3-4) and log each lost mark in the Error log with its type. <span class="t">(4 min)</span></li>
+        <li><span class="star">★ If time:</span> read "General Tips" in <a href="https://drive.google.com/file/d/1PRhaPPsIOqIk3SR-hFoj-ihbJioLIbcv/view">EX01 Paper 1 practice - Classical conditioning 4-marker and operant conditioning 6-marker - Questions and answer structures (class, 21 Sep)</a>. <span class="t">(1 min)</span></li>
+      </ol>
+    </div>
+    <div id="b2">
+      <div class="bh"><b>Block 2 · 25 min</b><span>Social learning theory</span></div>
+      <ol>
+        <li>Read the <a href="#slt">social learning theory section</a>, including the 6-mark model answer and its "Why this step?". <span class="t">(11 min)</span></li>
+        <li>Do the "Finish it" box (the recycling question): write principles 2 and 3 on paper, then open the answer and tick what matches. <span class="t">(6 min)</span></li>
+        <li>Open <a href="https://drive.google.com/file/d/1JUhZK_tTTblZ0womqTrPS9RU19fci850/view">LC10 Learning and cognition - Social learning theory - Key terms (class)</a>. Cover the definition column and say out loud: <span class="term" data-t="observational learning" tabindex="0" role="button">observational learning</span>, <span class="term" data-t="vicarious" tabindex="0" role="button">vicarious</span> reinforcement, <span class="term" data-t="self-efficacy" tabindex="0" role="button">self-efficacy</span>, the four processes and the four sources of self-efficacy. Mark any you could not say. <span class="t">(3 min)</span></li>
+        <li>Do the self-check at the end of the section (two key words each, then open). Log what you missed. <span class="t">(2 min)</span></li>
+        <li><span class="star">★ If time:</span> close everything and redraw the four processes and the four sources of self-efficacy from memory; check against <a href="https://drive.google.com/file/d/1BK35SHCOZ60enGlCcuTp4Ce4PyoFfHRb/view">LC11 Learning and cognition - Social cognitive theory - Mindmap (class)</a>. <span class="t">(3 min)</span></li>
+      </ol>
+    </div>
+    <div class="brk">Break · 3 min. Stand up, drink some water, look out of a window. No phone.</div>
+    <div id="b3">
+      <div class="bh"><b>Block 3 · 32 min</b><span>Memory: multi-store model and levels of processing</span></div>
+      <ol>
+        <li>Read the <a href="#mem">memory models section</a>, including both worked examples and their "Why this step?". <span class="t">(10 min)</span></li>
+        <li>Do the "Finish it" box (the value of the levels of processing model), then open the answer. <span class="t">(4 min)</span></li>
+        <li>Cover the top of the page and draw the multi-store model from memory: three <span class="term" data-t="store" tabindex="0" role="button">stores</span>, attention, <span class="term" data-t="rehearsal" tabindex="0" role="button">rehearsal</span>, retrieval, "lost". Check it against the picture. <span class="t">(2 min)</span></li>
+        <li>Open <a href="https://drive.google.com/file/d/1KoOk8IT670o-bbr1HKc-Nw2Kub_Gf1Mr/view">REF - Specimen papers 1, 2 and 3 with markschemes (official, first assessment 2027)</a>, Paper 1 <b>question 3</b> (the imagination model and the toy creatures). Plan a 6-mark answer in bullet points in the IEA shape of worked example 2: what makes a model valuable, each point applied to this study. <span class="t">(6 min)</span></li>
+        <li>In the same file, find the Paper 1 <span class="term" data-t="markscheme" tabindex="0" role="button">markscheme</span> for question 3 and tick each point your plan has. Note its last point: a part of the model the study did not test. Log the points you missed. <span class="t">(4 min)</span></li>
+        <li><span class="star">★ If time:</span> <a href="https://drive.google.com/file/d/1k8Zn60K1jfXQIEJIRxgeXYkuNbfThLil/view">LC14 Cognitive approach - Cognitive models - Revision worksheet (Giddens)</a>: answer activities 1, 2 and 7 in two to four sentences each (no answers in Drive: check against the memory section). Skip activity 3, the working memory model: not needed for the IB exam. <span class="t">(4 min)</span></li>
+        <li><span class="star">★ If time:</span> skim the HM slides at the end of <a href="https://drive.google.com/file/d/1em1IyD-CEsjzBsy13z6RBcjn_h4wzOt_/view">LC13 Learning and cognition - Cognitive models, multi-store model, levels of processing, HM - Slides (class)</a>. <span class="t">(2 min)</span></li>
+      </ol>
+    </div>
+    <div id="b4">
+      <div class="bh"><b>Block 4 · 35 min</b><span>HL averages, then the quiz</span></div>
+      <ol>
+        <li>Read the <a href="#data">HL averages section</a>, including worked example 5 and its "Why this step?". <span class="t">(6 min)</span></li>
+        <li>Do the "Finish it" box there, then open the answer. <span class="t">(2 min)</span></li>
+        <li><a href="#quiz">Quiz</a>, part 1: the 7 multiple-choice questions. Decide before you click. <span class="t">(4 min)</span></li>
+        <li>Quiz, part 2, on paper with no notes: written item 8 (social learning theory and <span class="term" data-t="aggression" tabindex="0" role="button">aggression</span>, timed 10 min; this is question 13 of your 6 October class quiz), item 9 (levels of processing, 6 min) and item 10 (averages, 4 min). <span class="t">(20 min)</span></li>
+        <li>Mark items 8 to 10 with the model answers. For item 8 also use Section D of <a href="https://drive.google.com/file/d/1XdzFHCKtH4ON-6unUNZ2lNobc45Szg3A/view">EX03 Learning and cognition quiz, 24 marks - Mark scheme (class, 6 Oct)</a>: up to 2 marks per point (1 for a social learning theory idea applied to aggression, 1 for evidence that is explained). <span class="t">(3 min)</span></li>
+      </ol>
+    </div>
+  </div>
+  <p>Total: 25 + 25 + 3 + 32 + 35 = 120 minutes. The <span class="star">★</span> steps add up to 10 minutes: skipping all of them gives you 10 minutes of slack.</p>
+
+  <div class="stuckbox"><b>Stuck?</b> (1) Look at the worked example in that section again. (2) Redo the section's self-check. (3) Still stuck after 10 minutes: write it in the Error log as "ask teacher" and move on to the next step.</div>
+
+  <p><b>Files for today in the IB folder</b></p>
+  <ul class="files">
+    <li><a href="https://drive.google.com/file/d/1PRhaPPsIOqIk3SR-hFoj-ihbJioLIbcv/view">EX01 Paper 1 practice - Classical conditioning 4-marker and operant conditioning 6-marker - Questions and answer structures (class, 21 Sep)</a> (answer frames, no model answers)</li>
+    <li><a href="https://drive.google.com/file/d/18G55fgHqH329URQeM2Ykm0o_JpWRWZsf/view">LC02 Learning and cognition - Classical conditioning - Slides (class)</a>, only the "examiner will be looking for" slide today</li>
+    <li><a href="https://drive.google.com/file/d/1JUhZK_tTTblZ0womqTrPS9RU19fci850/view">LC10 Learning and cognition - Social learning theory - Key terms (class)</a></li>
+    <li><a href="https://drive.google.com/file/d/1BK35SHCOZ60enGlCcuTp4Ce4PyoFfHRb/view">LC11 Learning and cognition - Social cognitive theory - Mindmap (class)</a></li>
+    <li><a href="https://drive.google.com/file/d/1uFDHyaGy0dTjFsQOHTMkk06TWdiFrdgD/view">LC09 Learning and cognition - Social learning theory and social cognitive theory - Slides (class)</a> (the class slides behind the social learning theory section; not needed today if the page is clear)</li>
+    <li><a href="https://drive.google.com/file/d/1XdzFHCKtH4ON-6unUNZ2lNobc45Szg3A/view">EX03 Learning and cognition quiz, 24 marks - Mark scheme (class, 6 Oct)</a> (answers only; the question paper is not in Drive, so use Section D, question 13)</li>
+    <li><a href="https://drive.google.com/file/d/1em1IyD-CEsjzBsy13z6RBcjn_h4wzOt_/view">LC13 Learning and cognition - Cognitive models, multi-store model, levels of processing, HM - Slides (class)</a></li>
+    <li><a href="https://drive.google.com/file/d/1k8Zn60K1jfXQIEJIRxgeXYkuNbfThLil/view">LC14 Cognitive approach - Cognitive models - Revision worksheet (Giddens)</a> (questions only, no answers)</li>
+    <li><a href="https://drive.google.com/file/d/1WASZdO0iLXxNuY7JfEdTtwbAoYVITuWv/view">HL01 Data analysis and interpretation - Levels of measurement and central tendency, Paper 3 lesson 1 - Slides (class)</a> (the class lesson behind the HL section)</li>
+    <li><a href="https://drive.google.com/file/d/1KoOk8IT670o-bbr1HKc-Nw2Kub_Gf1Mr/view">REF - Specimen papers 1, 2 and 3 with markschemes (official, first assessment 2027)</a>, Paper 1 question 3 today (question 4 is saved for Saturday's timed practice: do not look at it yet)</li>
+    <li><a href="https://drive.google.com/file/d/1Khqsn6PrxoS5UXAEKBpu5G_XG5Viyvtq/view">REF - IB Psychology Subject Guide (official, first assessment 2027)</a>, for the official statements quoted below (p25-27, p33, p45)</li>
+  </ul>
+
+  <div class="legend" aria-label="Legend for the markers">
+    <span><span class="learn" style="margin-left:0">Learn word for word</span> official statements and definitions: you must be able to write them exactly</span>
+    <span><span class="fb" style="margin-left:0">Understand and apply</span> skills: you must be able to use them on a question you have never seen</span>
+  </div>
+
+  <details class="extra"><summary>Extra, not needed today: free reading</summary>
+    <p>Only if a slide is unclear. Simply Psychology (free, no login): <a href="https://www.simplypsychology.org/bandura.html">Social learning theory (Bandura)</a>, <a href="https://www.simplypsychology.org/multi-store.html">Multi-store memory model</a>, <a href="https://www.simplypsychology.org/levelsofprocessing.html">Levels of processing</a>. They go further than the IB exam needs: skip the parts on media violence debates, moral disengagement and "contemporary research". Their words differ a little from your class: they call the four processes "mediational processes" and say "motor reproduction"; they say "phonemic" where your slides say "phonetic". Both are fine in an answer.</p>
+  </details>
+</section>
+
+<!-- =============================== EXAM TECHNIQUE =============================== -->
+<section class="topic" id="technique">
+  <div class="kicker">Exam technique · guide p42 and p45 · EX01 (class)</div>
+  <h2>Paper 1: how to write a 4-marker</h2>
+  <p class="guiding">Four marks in ten minutes: one idea, one example, and the example must be explained.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="t1"><span>State the three sections of Paper 1, their marks and how long to spend on each question</span></label>
+    <label><input type="checkbox" data-k="t2"><span>Write a 4-mark Section A answer in PEEL in 10 minutes</span></label>
+    <label><input type="checkbox" data-k="t3"><span>Mark a 4-mark answer against the official Section A markband</span></label>
+  </div>
+
+  <h3>Paper 1 and your time</h3>
+  <p>EX01's time guide: Section A, two 4-markers, <b>10 minutes</b> each (about 200 words); Section B, two 6-markers applying knowledge to a new situation, <b>15 minutes</b> each (about 300 words); Section C, one 15-mark concept essay, <b>40 minutes</b> (about 800 words). 2 × 10 + 2 × 15 + 40 = 90 minutes, the whole paper.</p>
+
+  <h3>What the guide says about Section A</h3>
+  <div class="quote">"These questions may ask students to explain or describe a psychological idea or a theory and provide an example. Examples may be a research study or a real or <span class="term" data-t="hypothetical" tabindex="0" role="button">hypothetical</span> situation." ... "Knowledge of details of research studies will not be assessed."<small>Official guide, Paper 1 Section A, p45</small></div>
+  <p>So a made-up everyday example is fine, and nobody marks dates or sample sizes.</p>
+  <div class="tablewrap"><table>
+    <tr class="ao"><th class="c">Marks</th><th>Official Section A markband (p45) <span class="learn">Learn word for word</span></th></tr>
+    <tr><td class="c">1-2</td><td>"The response demonstrates limited knowledge relevant to the question." "The example is relevant but is not explained."</td></tr>
+    <tr><td class="c">3-4</td><td>"The response demonstrates detailed knowledge relevant to the question." "The example is relevant and explained."</td></tr>
+  </table></div>
+
+  <h3>PEEL: the class structure for a 4-marker</h3>
+  <div class="tablewrap"><table>
+    <tr><th>Part</th><th class="c">Words (EX01)</th><th>What goes in it</th></tr>
+    <tr><td><b>P</b>oint</td><td class="c">25-30</td><td>What the idea or theory is, in key terms.</td></tr>
+    <tr><td><b>E</b>vidence</td><td class="c">50-60</td><td>The example: a study (very briefly) or an everyday situation.</td></tr>
+    <tr><td><b>E</b>xplain</td><td class="c">80-90</td><td>The biggest part. Match each part of the example to a part of the theory, and say why.</td></tr>
+    <tr><td><b>L</b>ink</td><td class="c">20-30</td><td>What this shows, for example about learning.</td></tr>
+  </table></div>
+
+  <div class="worked"><b>Worked example 1: a full PEEL 4-marker.</b> "Describe operant conditioning with reference to one example. (4 marks)" <span class="fb">Understand and apply</span>
+    <ol>
+      <li><b>Point.</b> Operant conditioning is learning in which a behaviour becomes more or less likely because of its consequences: reinforcement makes it more likely and punishment makes it less likely.</li>
+      <li><b>Evidence.</b> A hypothetical example: a teacher gives a student a merit point every time she hands in her homework on time. Before this she was late about half the time; after a few weeks she is on time every week.</li>
+      <li><b>Explain.</b> Handing in homework on time is the behaviour. The merit point is a pleasant consequence added straight after it, so it is <span class="term" data-t="positive reinforcement" tabindex="0" role="button">positive reinforcement</span>. Because the behaviour is followed by the reward every time, the student links being on time with the merit point, and the behaviour becomes more frequent. If the merit points stopped, the behaviour could fade again (<span class="term" data-t="extinction" tabindex="0" role="button">extinction</span>).</li>
+      <li><b>Link.</b> So operant conditioning explains learning as a change in behaviour shaped by what follows it.</li>
+    </ol>
+    <details class="why2"><summary>Why this step? Why does the Explain part name "positive reinforcement" and say what was added?</summary><p>Because the 3-4 band needs the example to be <b>explained</b>, not only relevant. Naming each part of the example with its theory term (behaviour, consequence, positive reinforcement) is what turns a story into an explanation.</p></details></div>
+
+  <div class="finish"><b>Finish it.</b> "Describe classical conditioning with reference to one example. (4 marks)" The Point and Evidence are done. On paper, write the Explain and the Link using the starters.
+    <ol>
+      <li><b>Point (done).</b> Classical conditioning is learning by association: a neutral <span class="term" data-t="stimulus" tabindex="0" role="button">stimulus</span> (NS) is repeatedly paired with an <span class="term" data-t="unconditioned" tabindex="0" role="button">unconditioned</span> stimulus (UCS), which causes a natural, unlearned response (UCR), until the NS alone causes a learned, conditioned response (CR).</li>
+      <li><b>Evidence (done).</b> Pavlov's dogs salivated when they were given food. He sounded a <span class="term" data-t="metronome" tabindex="0" role="button">metronome</span> just before giving them food, many times. Later the dogs salivated at the metronome alone.</li>
+      <li><b>Explain (you).</b> At first the metronome was a <span class="blank"></span> stimulus because <span class="blank"></span>. Food was the <span class="blank"></span> and salivating at food was the <span class="blank"></span>. After repeated pairing the metronome became the <span class="blank"></span> ...</li>
+      <li><b>Link (you).</b> Because Pavlov used dogs, <span class="blank"></span> (an animal-human link, as EX01 asks) ...</li>
+    </ol>
+    <details><summary>Show the answer</summary><p><b>Explain:</b> At first the metronome was a neutral stimulus because on its own it caused no salivation. Food was the unconditioned stimulus and salivating at food the unconditioned response, as no learning was needed. After repeated pairing the metronome became a conditioned stimulus, and salivating at it is a conditioned response, learned through association. <b>Link:</b> Because Pavlov used dogs, we must link it to humans: a child who has a painful injection may later feel fear at the sight of the nurse's uniform. Classical conditioning shows that learning can happen through association alone, without any reward.</p></details></div>
+
+  <h3 id="cc-check">Marking checklist for your timed classical conditioning answer</h3>
+  <ul>
+    <li><b>Point</b>: learning by pairing a neutral stimulus with an unconditioned stimulus.</li>
+    <li><b>All five terms used correctly</b>: NS, UCS, UCR, CS, CR. LC02: the examiner looks for "An example that is explained with regard to the neutral stimulus, unconditioned stimulus, and conditioned stimulus".</li>
+    <li><b>Example explained</b>: each part of it named as NS, UCS, CS and so on.</li>
+    <li><b>Animal study?</b> One sentence linking it to humans (EX01).</li>
+    <li><b>Link</b> sentence; <b>one example only</b>; no <span class="term" data-t="evaluation" tabindex="0" role="button">evaluation</span>.</li>
+  </ul>
+  <p>All six ticked: 3-4 band. Example there but not explained term by term: 1-2 band.</p>
+
+  <div class="tip"><b>Exam traps.</b> (1) Naming a study is not explaining it: "Pavlov showed this with dogs" is a relevant example that is "not explained", so 1-2 marks at most. (2) Only your first example is credited (<span class="term" data-t="specimen" tabindex="0" role="button">specimen</span> markscheme), so a second example wastes time. (3) A 4-marker that runs to 15 minutes steals time from the essay.</div>
+
+  <details><summary>Self-check: 4-markers (write two key words for each, then open)</summary>
+    <ol>
+      <li>How many minutes does EX01 give a Section B 6-marker, and about how many words?</li>
+      <li>An answer names the Bobo doll study correctly but never says how it shows the theory. Which band?</li>
+      <li>Does a Section A example have to be a research study?</li>
+      <li>What does PEEL stand for, and which part is the longest?</li>
+    </ol>
+    <p><b>Answers.</b> 1: 15 minutes, about 300 words. 2: 1-2: "The example is relevant but is not explained." 3: No: "a research study or a real or hypothetical situation" (p45). 4: Point, Evidence, Explain, Link; Explain (80-90 words).</p>
+  </details>
+</section>
+
+<!-- =============================== SOCIAL LEARNING THEORY =============================== -->
+<section class="topic" id="slt">
+  <div class="kicker"><span class="term" data-t="sociocultural" tabindex="0" role="button">Sociocultural</span> <span class="term" data-t="approach" tabindex="0" role="button">approach</span> · guide p26 and p33 · LC09, LC10 (class)</div>
+  <h2>Social learning theory</h2>
+  <p class="guiding">We watch someone, see what happens to them, and copy them later.</p>
+
+  <div class="frame">
+    <div><b>Content: sociocultural approach</b> (Table 3.3, p26) <span class="learn">Learn word for word</span><br>"Social learning theory: The application of social learning theory to explain and change behaviour."</div>
+    <div><b><span class="term" data-t="context" tabindex="0" role="button">Context</span>: learning and cognition</b> (Table 4.11, p33)<br>"Social learning theory: The role of social learning theory in learning. Application of social learning theory to explain and change behaviour."</div>
+  </div>
+  <p>So it is a <b>sociocultural</b> theory here, although your class files sit under learning and cognition. You must use it to <b>explain</b> and to <b>change</b> behaviour.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="s1"><span>Explain the role of social learning theory in learning: observational learning, models, vicarious reinforcement, learning versus performance (p33)</span></label>
+    <label><input type="checkbox" data-k="s2"><span>Describe the four processes (attention, <span class="term" data-t="retention" tabindex="0" role="button">retention</span>, reproduction, motivation) and what makes a model more likely to be copied</span></label>
+    <label><input type="checkbox" data-k="s3"><span>Explain self-efficacy and its four sources</span></label>
+    <label><input type="checkbox" data-k="s4"><span>Use the <span class="term" data-t="bobo doll" tabindex="0" role="button">Bobo doll</span> study (Bandura, Ross and Ross, 1961) as an explained example of social learning theory and aggression</span></label>
+    <label><input type="checkbox" data-k="s5"><span>Apply social learning theory to explain and change behaviour in a situation I have never seen (p26, p33)</span></label>
+  </div>
+
+  <h3>The core idea</h3>
+  <p>Your slides (LC09) put it in one line: <b>"Humans learn not only through personal experience but also by observing models."</b> <span class="learn">Learn word for word</span> (class definition)</p>
+  <ul>
+    <li><b>Observational learning</b>: learning by watching a <b>model</b> (a parent, friend, film character, <span class="term" data-t="influencer" tabindex="0" role="button">influencer</span>).</li>
+    <li><b>Vicarious reinforcement</b>: "By watching the rewards and punishments others receive, we decide whether to imitate their behavior" (LC09). Vicarious means "through someone else"; seeing a model punished makes copying less likely.</li>
+  </ul>
+  <p>In operant conditioning (session 2) the learner's <i>own</i> behaviour is rewarded; here the learner only <i>watches</i>.</p>
+  <p><b>Learning is not the same as performing.</b> A child can learn a behaviour by watching and only do it weeks later, when there is a reason (EX03, question 10).</p>
+
+  <h3>The four processes</h3>
+  <figure>
+    <svg viewBox="0 0 700 330" role="img" aria-label="The four processes of observational learning in order: attention, retention, reproduction, motivation, leading to the behaviour being copied.">
+      <defs><marker id="sa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1E2A33"/></marker></defs>
+      <g font-family="Arial,Helvetica,sans-serif" font-size="26" text-anchor="middle">
+        <rect x="20" y="20" width="280" height="70" rx="10" fill="#E6EAF7" stroke="#2F47A6" stroke-width="2"/>
+        <text x="160" y="55" font-weight="bold" fill="#2F47A6">1 Attention</text><text x="160" y="80" font-size="22" fill="#1E2A33">notice the model</text>
+        <rect x="400" y="20" width="280" height="70" rx="10" fill="#E6EAF7" stroke="#2F47A6" stroke-width="2"/>
+        <text x="540" y="55" font-weight="bold" fill="#2F47A6">2 Retention</text><text x="540" y="80" font-size="22" fill="#1E2A33">remember it</text>
+        <rect x="400" y="135" width="280" height="70" rx="10" fill="#E6EAF7" stroke="#2F47A6" stroke-width="2"/>
+        <text x="540" y="170" font-weight="bold" fill="#2F47A6">3 Reproduction</text><text x="540" y="195" font-size="22" fill="#1E2A33">able to do it</text>
+        <rect x="20" y="135" width="280" height="70" rx="10" fill="#E6EAF7" stroke="#2F47A6" stroke-width="2"/>
+        <text x="160" y="170" font-weight="bold" fill="#2F47A6">4 Motivation</text><text x="160" y="195" font-size="22" fill="#1E2A33">want to do it</text>
+        <rect x="200" y="250" width="300" height="64" rx="10" fill="#E3F2E8" stroke="#2E7D4F" stroke-width="2"/>
+        <text x="350" y="291" font-weight="bold" fill="#2E7D4F">Behaviour copied</text>
+        <line x1="302" y1="55" x2="394" y2="55" stroke="#1E2A33" stroke-width="3" marker-end="url(#sa)"/>
+        <line x1="540" y1="92" x2="540" y2="129" stroke="#1E2A33" stroke-width="3" marker-end="url(#sa)"/>
+        <line x1="398" y1="170" x2="306" y2="170" stroke="#1E2A33" stroke-width="3" marker-end="url(#sa)"/>
+        <line x1="160" y1="207" x2="228" y2="246" stroke="#1E2A33" stroke-width="3" marker-end="url(#sa)"/>
+      </g>
+    </svg>
+    <figcaption>All four must happen (LC09, LC10). <b>Attention</b>: noticing how the model behaves. <b>Retention</b>: remembering it well enough to repeat it. <b>Reproduction</b>: being able to do it, helped by self-efficacy. <b>Motivation</b>: a reason to do it, mostly from reinforcement, including vicarious reinforcement.</figcaption>
+  </figure>
+  <p><b>Who gets copied?</b> (LC09) Models we <b><span class="term" data-t="identification" tabindex="0" role="button">identify</span></b> with (same age or gender), models we <b>like</b>, models who behave <b>consistently</b>, and models whose behaviour is <b>rewarded</b>.</p>
+  <p>The specimen markscheme (Paper 1, question 4) credits exactly these: vicarious reinforcement, self-efficacy, identification, the four processes, and liking the model.</p>
+
+  <h3>Self-efficacy</h3>
+  <p><b>Self-efficacy</b>: "the expectation of personal success in a task, based on the view that one is in control of one's actions and abilities" (LC09, class definition). In plain words: believing you can do it, which affects reproduction. Its four sources (LC09):</p>
+  <ul>
+    <li><b><span class="term" data-t="mastery" tabindex="0" role="button">Mastery</span> experiences</b>: your own past successes (failures lower it).</li>
+    <li><b>Vicarious experiences</b>: seeing someone like you succeed.</li>
+    <li><b><span class="term" data-t="persuasion" tabindex="0" role="button">Social persuasion</span></b>: being told you can do it.</li>
+    <li><b>Emotional and physical states</b>: a good mood raises it, a low mood lowers it.</li>
+  </ul>
+
+  <h3>A study you can use as your example</h3>
+  <p>Details are not marked in Paper 1 (p45): know which part of the theory it shows.</p>
+  <div class="cards">
+    <div><h4>Bandura, Ross and Ross (1961): Bobo doll</h4>
+      <p>72 children aged 3 to 6 watched an adult attack an inflatable Bobo doll, or a calm adult, or no adult. Those who saw the aggressive model copied the same hitting and words more than the others. Boys copied physical aggression more, especially from a male model.</p>
+      <p class="cq">Shows: observational learning (no reward to the child) and identification (same-sex model copied more).</p></div>
+  </div>
+
+  <details class="extra"><summary>Extra, not needed today</summary>
+    <p>Bandura later widened social learning theory into "social cognitive theory", with the agentic perspective and (triadic) reciprocal determinism (LC09, LC10, LC11). The official guide names only social learning theory and the specimen markscheme does not ask for these: not needed for the IB exam. Self-efficacy is the one idea from that part you do need.</p>
+    <p>Coates <span class="term" data-t="et al" tabindex="0" role="button">et al</span>. (2019), in LC09, is a second study: children who saw an influencer with unhealthy snacks ate more, useful for health questions. Social learning theory also comes back in two later contexts: "The role of social learning theory in understanding one or more health problems" (health and well-being, p29) and "The application of social learning theory to explain and change group behaviour(s)" (human relationships, p32).</p>
+  </details>
+
+  <div class="worked"><b>Worked example 2: a full 6-mark application answer (IEA).</b> "A primary school wants more children to eat the vegetables served at lunch. Explain how social learning theory could be used to achieve this goal. (6 marks)" For 6-markers EX01 uses <b>IEA</b>, two or three times: <b>I</b>dentify a principle, <b>E</b>xplain how it works, <b>A</b>pply it to the situation. <span class="fb">Understand and apply</span>
+    <ol>
+      <li><b>Introduction.</b> Social learning theory (Bandura) says people learn behaviour by observing models and are more likely to copy behaviour they see rewarded.</li>
+      <li><b>I:</b> attention and identification. <b>E:</b> children pay more attention to models they see as similar and like, and copy them more. <b>A:</b> the school chooses popular older pupils, boys and girls, as "lunch leaders" who sit with younger classes and eat their vegetables where everyone can see, so every child has a liked model of their own gender to watch.</li>
+      <li><b>I:</b> vicarious reinforcement. <b>E:</b> when observers see a model rewarded, their motivation to copy rises, even though they were not rewarded themselves. <b>A:</b> the lunch supervisor praises the leaders out loud and gives them a sticker in front of the class, so the younger children see that eating vegetables is rewarded.</li>
+      <li><b>I:</b> self-efficacy. <b>E:</b> children only reproduce a behaviour if they believe they can do it. <b>A:</b> start with one small piece; each small success (mastery experience) and a leader saying "you can do it" (social persuasion) raise the child's belief that they can eat a full portion.</li>
+      <li><b>Conclusion.</b> This should work because social learning theory says behaviour is learned by watching rewarded, similar models, not only through rewards a child receives directly.</li>
+    </ol>
+    <details class="why2"><summary>Why this step? Why does every A part mention the lunch leaders, stickers or small pieces?</summary><p>Because Section B rewards application: the top band (5-6) needs "The application of relevant knowledge is well developed" (p46). A correct description of the theory with no link to <i>this</i> school stays in a lower band. A study is not required in a 6-marker (EX01).</p></details></div>
+
+  <div class="finish"><b>Finish it.</b> "A secondary school wants students to put more of their rubbish in the recycling bins. Explain how social learning theory could be used to achieve this goal. (6 marks)" The introduction and principle 1 are done. Write principles 2 and 3 and a conclusion.
+    <ol>
+      <li><b>Introduction (done).</b> Social learning theory says people learn behaviour by observing models, especially models who are rewarded.</li>
+      <li><b>Principle 1 (done). I:</b> identification and liking. <b>E:</b> students copy models they identify with and like. <b>A:</b> well-liked students from each year group are filmed sorting their rubbish into the right bins, and the clip is shown in assemblies.</li>
+      <li><b>Principle 2 (you).</b> I: vicarious reinforcement. E: <span class="blank"></span> A: <span class="blank"></span></li>
+      <li><b>Principle 3 (you).</b> I: retention (or self-efficacy). E: <span class="blank"></span> A: <span class="blank"></span></li>
+    </ol>
+    <details><summary>Show the answer</summary><p><b>Principle 2.</b> E: seeing a model rewarded raises the observer's motivation to do the same, without being rewarded themselves. A: each week the form with the best recycling gets a shout-out and a small prize in assembly, so everyone sees recycling being rewarded. <b>Principle 3.</b> E: a behaviour can only be copied if it is remembered. A: put a simple picture of what goes in each bin above every bin, so students can recall what the models did at the moment they throw something away. (Or self-efficacy: show that sorting is quick and easy, so students believe they can do it.) <b>Conclusion:</b> recycling should rise because students watch liked models being rewarded for it, which is how social learning theory says behaviour is learned.</p></details></div>
+
+  <div class="tip"><b>Exam traps.</b> (1) "The child gets a sticker, so eats more" is operant conditioning, not social learning theory: the learner must <i>watch</i> someone else being rewarded. EX03 gives no marks for describing conditioning. (2) The 1961 Bobo doll model was not rewarded or punished, so that study does not show vicarious reinforcement (EX03). For that, use the later study your EX03 exemplar cites (Bandura, Ross and Ross, 1963) or an everyday example. (3) In an application question, every paragraph must refer back to the situation.</div>
+
+  <details><summary>Self-check: social learning theory (write two key words for each, then open)</summary>
+    <ol>
+      <li>Under which approach does the official guide put social learning theory?</li>
+      <li>Leo sees his brother get a laugh from friends for swearing. A month later Leo swears to impress his own friends. Name the two key ideas.</li>
+      <li>A child watches a gymnast's backflip, remembers it perfectly and wants to do it, but cannot. Which process fails?</li>
+      <li>Name the four sources of self-efficacy.</li>
+    </ol>
+    <p><b>Answers.</b> 1: sociocultural (Table 3.3, p26). 2: vicarious reinforcement (the brother is rewarded, not Leo) and learning versus performance (learned a month ago, performed when he had a reason). 3: reproduction. 4: mastery experiences, vicarious experiences, social persuasion, emotional and physical states.</p>
+  </details>
+</section>
+
+<!-- =============================== MEMORY MODELS =============================== -->
+<section class="topic" id="mem">
+  <div class="kicker"><span class="term" data-t="cognitive" tabindex="0" role="button">Cognitive</span> approach · guide p25 and p33 · LC13, LC14 (class)</div>
+  <h2>Memory: the multi-store model and levels of processing</h2>
+  <p class="guiding">A model is a simplified picture of a process, valuable when studies can test it.</p>
+
+  <div class="frame">
+    <div><b>Content: cognitive approach</b> (Table 3.2, p25) <span class="learn">Learn word for word</span><br>"<span class="term" data-t="cognitive model" tabindex="0" role="button">Cognitive models</span>: The role of one or more cognitive models in understanding a cognitive process or behaviour."</div>
+    <div><b>Context: learning and cognition</b> (Table 4.12, p33) <span class="learn">Learn word for word</span><br>"Cognitive models: The value of one or more cognitive models in understanding one or more cognitive processes."</div>
+  </div>
+  <p>The guide's glossary defines a <b>model</b> as "A theoretical representation or <span class="term" data-t="framework" tabindex="0" role="button">framework</span> used to explain and understand complex processes in order to test <span class="term" data-t="hypothesis" tabindex="0" role="button">hypotheses</span> and make predictions." (p66) <span class="learn">Learn word for word</span></p>
+  <p>"One or more": one model known well is enough. Learn the multi-store model, and levels of processing as its challenger.</p>
+  <details class="extra"><summary>Extra, not needed today</summary><p>In December 2025 the IB removed the objective "Compare two cognitive models used in understanding one cognitive process" (change log, p73), so the working memory model in LC14 is not needed for the IB exam. Memory is one of five cognitive processes schools may choose: "attention, memory, perception, thinking/decision-making or language" (p33).</p></details>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="m1"><span>Describe the multi-store model: three stores, attention, rehearsal and retrieval, with <span class="term" data-t="capacity" tabindex="0" role="button">capacity</span> and <span class="term" data-t="duration" tabindex="0" role="button">duration</span> (p25)</span></label>
+    <label><input type="checkbox" data-k="m2"><span>Use Peterson and Peterson (1959) as an explained example for the multi-store model</span></label>
+    <label><input type="checkbox" data-k="m3"><span>Describe the levels of processing model and Craik and Tulving (1975), and how it challenges the multi-store model</span></label>
+    <label><input type="checkbox" data-k="m4"><span>Explain the value of cognitive models in understanding memory, with one limitation of the multi-store model (p33)</span></label>
+  </div>
+
+  <h3>The multi-store model (Atkinson and Shiffrin, 1968)</h3>
+  <p>Look at the picture at the top of the page. Memory is three separate <b>stores</b>, and information flows through them in one direction:</p>
+  <div class="tablewrap"><table>
+    <tr><th>Store</th><th>Capacity (how much)</th><th>Duration (how long)</th><th>Gets there by</th></tr>
+    <tr><td>Sensory memory</td><td>very large: everything the senses pick up</td><td>about a second or less for what you see</td><td>input from the senses</td></tr>
+    <tr><td>Short-term memory (STM)</td><td>7 ± 2 items (Miller, 1956); newer research suggests about 4 <span class="term" data-t="chunking" tabindex="0" role="button">chunks</span></td><td>about 15-30 seconds without rehearsal</td><td><b>attention</b></td></tr>
+    <tr><td>Long-term memory (LTM)</td><td>no known limit</td><td>days to a lifetime</td><td><b>rehearsal</b></td></tr>
+  </table></div>
+  <ul>
+    <li><b>Maintenance rehearsal</b>: repeating something to keep it in STM, like saying a phone number over and over. In the model, rehearsal also passes information to LTM.</li>
+    <li><b>Chunking</b>: grouping items so STM holds more. MTVCNNABCFOX is 12 letters; MTV CNN ABC FOX is 4 chunks (LC13).</li>
+    <li>Information leaves STM by <b><span class="term" data-t="decay" tabindex="0" role="button">decay</span></b> (it fades) or <b>displacement</b> (new items push old ones out).</li>
+  </ul>
+  <p><b>Evidence</b> (LC13). <b>Peterson and Peterson (1959)</b>: see worked example 3. The <b><span class="term" data-t="serial position effect" tabindex="0" role="button">serial position effect</span></b> (Glanzer and Cunitz, 1966): from a word list people recall the first words (rehearsed into LTM) and the last words (still in STM) better than the middle: two effects, two stores.</p>
+
+  <div class="worked"><b>Worked example 3: a full PEEL 4-marker.</b> "Explain one cognitive model with reference to one example. (4 marks)" <span class="fb">Understand and apply</span>
+    <ol>
+      <li><b>Point.</b> The multi-store model (Atkinson and Shiffrin, 1968) explains memory as three separate stores: sensory memory, short-term memory (STM) and long-term memory (LTM). Attention moves information into STM, and rehearsal moves it from STM into LTM.</li>
+      <li><b>Evidence.</b> Peterson and Peterson (1959) gave <span class="term" data-t="participant" tabindex="0" role="button">participants</span> three-consonant <span class="term" data-t="trigram" tabindex="0" role="button">trigrams</span>, then made them count backwards in threes before recalling them after 3 to 18 seconds. Recall fell from about 80% after 3 seconds to under 10% after 18 seconds.</li>
+      <li><b>Explain.</b> Counting backwards stopped maintenance rehearsal, so the trigrams could not be kept in STM or passed on to LTM, and they were lost within seconds. This is what the model predicts: STM has a limited duration, and without rehearsal information never reaches LTM, a separate store where it could last for years.</li>
+      <li><b>Link.</b> So the model explains why we forget a new phone number seconds after hearing it unless we keep repeating it.</li>
+    </ol>
+    <details class="why2"><summary>Why this step? Why does the Explain part start with what the counting did?</summary><p>The counting task is the part of the example that connects to the theory: it removed rehearsal. Saying that first lets you tie the result (fast forgetting) to two parts of the model, limited STM duration and rehearsal as the route to LTM. That is what "the example is relevant and explained" (p45) means.</p></details></div>
+
+  <h3>Levels of processing (Craik and Lockhart, 1972)</h3>
+  <p>This model says what matters is <b>how deeply you process</b> information when you first meet it, not how many stores there are or how often you repeat it (LC13):</p>
+  <div class="tablewrap"><table>
+    <tr><th>Depth</th><th>Type</th><th>You think about</th><th>Craik and Tulving question</th></tr>
+    <tr><td rowspan="2">Shallow</td><td><span class="term" data-t="structural" tabindex="0" role="button">Structural</span></td><td>what it looks like</td><td>"Is the word in capital letters?"</td></tr>
+    <tr><td>Phonetic</td><td>what it sounds like</td><td>"Does the word rhyme with 'weight'?"</td></tr>
+    <tr><td>Deep</td><td>Semantic</td><td>what it means</td><td>"Is the word a type of fish?"</td></tr>
+  </table></div>
+  <p><b>Craik and Tulving (1975)</b>: participants answered one of these yes/no questions about each word, without being told there would be a memory test. Later they <span class="term" data-t="recognition" tabindex="0" role="button">recognised</span> about 16% of the structural words, 57% of the phonetic words and 83% of the semantic words (LC13). Deeper processing, better memory.</p>
+  <p><b>Elaborative rehearsal</b> (thinking about meaning, linking to what you know) is deep processing; it works better than just repeating.</p>
+
+  <h3>The value of cognitive models</h3>
+  <p>The specimen markscheme for Paper 1 question 3 gives the general points: models are "tested in <span class="term" data-t="empirical" tabindex="0" role="button">empirical</span> research studies"; "different studies are required to test different parts of the model"; and "Models are based on <span class="term" data-t="construct" tabindex="0" role="button">constructs</span> that must be measured; it is important that these constructs are well <span class="term" data-t="operationalise" tabindex="0" role="button">operationalized</span>."</p>
+  <div class="worked"><b>Worked example 4: the value of the multi-store model.</b> <span class="fb">Understand and apply</span>
+    <ol>
+      <li><b>It makes testable predictions.</b> If STM is a separate store with a short duration, blocking rehearsal should make information vanish within seconds. Peterson and Peterson tested exactly that, and it did.</li>
+      <li><b>Different studies test different parts:</b> STM duration (Peterson and Peterson), STM capacity (Miller), two stores (serial position effect).</li>
+      <li><b>Constructs are operationalised.</b> "Short-term memory" cannot be seen, so it is measured as the number of trigrams recalled correctly after a set number of seconds.</li>
+      <li><b>Models are revised.</b> Craik and Tulving showed that the <i>type</i> of processing matters, which the multi-store model ignores, so the model was challenged and improved: models change with evidence (LC14).</li>
+    </ol>
+    <details class="why2"><summary>Why this step? Why is point 4 (a weakness) part of the model's value?</summary><p>Because a model is valuable precisely when it can be tested and shown to be incomplete. A model that no study could challenge would explain nothing. The specimen markscheme also rewards saying what a study did <i>not</i> test.</p></details></div>
+
+  <div class="finish"><b>Finish it.</b> "Explain the value of the levels of processing model for understanding memory." Point 1 is done. Write points 2 and 3.
+    <ol>
+      <li><b>Testable prediction (done).</b> The model predicts that deeper processing gives better memory. Craik and Tulving tested this with structural, phonetic and semantic questions, and semantic words were recognised best (about 83% against 16%).</li>
+      <li><b>Operationalised constructs (you).</b> "Depth of processing" cannot be seen, so <span class="blank"></span></li>
+      <li><b>Real-life use (you).</b> The model explains why <span class="blank"></span></li>
+    </ol>
+    <details><summary>Show the answer</summary><p><b>2:</b> "Depth of processing" cannot be seen, so it was operationalised as the type of question asked about each word (capital letters, rhyme or meaning), and memory as the percentage of words recognised. <b>3:</b> The model explains why revising by explaining ideas in your own words, or linking them to examples, works better than rereading: it is deeper, semantic processing. This connects to the guide's "potential for improving a cognitive process" (p33-34).</p></details></div>
+
+  <p><b>Limitations of the multi-store model</b> (LC13): too simple (the patient HM learned new <span class="term" data-t="motor skills" tabindex="0" role="button">motor skills</span> without remembering learning them, so LTM seems to have several types); it ignores the type of rehearsal; its word-list studies are unlike everyday memory (low <span class="term" data-t="ecological validity" tabindex="0" role="button">ecological validity</span>).</p>
+
+  <div class="tip"><b>Exam traps.</b> (1) A study "supports" a model; it never "proves" it. (2) Repeating something keeps it in STM but does not guarantee it reaches LTM: that is the levels of processing criticism (EX03, question 7). (3) In specimen question 3 the model is the topic, not the study: say why models are useful, use the study as your example, and say what it did not test.</div>
+
+  <details><summary>Self-check: memory models (write two key words for each, then open)</summary>
+    <ol>
+      <li>Which process moves information from sensory memory to STM, and which from STM to LTM?</li>
+      <li>Why did Peterson and Peterson make participants count backwards?</li>
+      <li>"Does the word rhyme with 'train'?" Which level of processing?</li>
+      <li>Give one point about the value of cognitive models from the specimen markscheme.</li>
+    </ol>
+    <p><b>Answers.</b> 1: attention; rehearsal. 2: to stop rehearsal, so STM duration without rehearsal could be measured. 3: phonetic (shallow). 4: any one of: models are tested in empirical studies; different studies test different parts; the constructs must be well operationalised.</p>
+  </details>
+</section>
+
+<!-- =============================== HL DATA =============================== -->
+<section class="topic" id="data">
+  <div class="kicker">HL data analysis and interpretation · guide p27 · HL01 (class)</div>
+  <h2>HL: levels of measurement and choosing the right average</h2>
+  <p class="guiding">Before you calculate an average, ask: what kind of data is it, and what shape is it?</p>
+
+  <p>The official line (Table 3.4, p27; assessed at HL only, in <span class="term" data-t="paper 3" tabindex="0" role="button">Paper 3</span>) <span class="learn">Learn word for word</span>: "<span class="term" data-t="descriptive statistics" tabindex="0" role="button">Descriptive statistics</span>: <span class="term" data-t="analyse" tabindex="0" role="button">Analyse</span> and interpret results of typical measures of <span class="term" data-t="central tendency" tabindex="0" role="button">central tendency</span> (mean, median, mode) and measures of <span class="term" data-t="dispersion" tabindex="0" role="button">dispersion</span> (range, <span class="term" data-t="standard deviation" tabindex="0" role="button">standard deviation</span>, semi-interquartile range)." Today: the three <b>measures of central tendency</b> (kinds of average); dispersion comes later. The four <b>levels of measurement</b> are class content (HL01), not named in the guide.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="d1"><span>Identify whether data are <span class="term" data-t="nominal" tabindex="0" role="button">nominal</span>, <span class="term" data-t="ordinal" tabindex="0" role="button">ordinal</span>, <span class="term" data-t="interval" tabindex="0" role="button">interval</span> or <span class="term" data-t="ratio data" tabindex="0" role="button">ratio</span> (class, HL01)</span></label>
+    <label><input type="checkbox" data-k="d2"><span>Calculate the mean, median and mode, including the median of an even number of values</span></label>
+    <label><input type="checkbox" data-k="d3"><span>Choose and justify the best measure of central tendency for a data set (p27)</span></label>
+    <label><input type="checkbox" data-k="d4"><span>Explain what <span class="term" data-t="skew" tabindex="0" role="button">skewness</span> is and how outliers pull the mean (guide glossary)</span></label>
+  </div>
+
+  <div class="tablewrap"><table>
+    <tr><th>Level (NOIR)</th><th>What it is (HL01)</th><th>Examples</th><th>Best average</th></tr>
+    <tr><td><b>N</b>ominal</td><td>categories, no order</td><td>preferred therapy, nationality</td><td>mode</td></tr>
+    <tr><td><b>O</b>rdinal</td><td>ordered, gaps not equal</td><td>mild / moderate / severe; a 1-to-5 rating</td><td>median (or mode)</td></tr>
+    <tr><td><b>I</b>nterval</td><td>equal gaps, no true zero</td><td>temperature in °C, <span class="term" data-t="iq" tabindex="0" role="button">IQ</span> score</td><td>mean if <span class="term" data-t="symmetrical" tabindex="0" role="button">symmetrical</span>, median if skewed</td></tr>
+    <tr><td><b>R</b>atio</td><td>equal gaps and a true zero</td><td>reaction time, age, words recalled</td><td>mean if symmetrical, median if skewed</td></tr>
+  </table></div>
+  <p>A <b>true zero</b> means "none of it": 0 ms reaction time is no time at all (ratio), but 0 °C is not "no temperature" (interval).</p>
+  <ul>
+    <li><b>Mean</b>: add all values, divide by how many. Uses every value, so one extreme value pulls it a long way.</li>
+    <li><b>Median</b>: put the values in order, take the middle one. With an even number of values, the mean of the middle two.</li>
+    <li><b>Mode</b>: the most frequent value or category (there may be none).</li>
+  </ul>
+  <p><b>Skewness</b> (guide glossary, p67-68): "The degree to which the <span class="term" data-t="distribution" tabindex="0" role="button">distribution</span> of data in a dataset is asymmetrical, as shown when graphed. A positively skewed distribution has a longer tail on the right side, while a negatively skewed distribution has a longer tail on the left side."</p>
+
+  <figure>
+    <svg viewBox="0 0 700 400" role="img" aria-label="Histogram of how many times 34 students checked their phone in a one-hour study session. Most checked 1 or 2 times, a few up to 10 times: a positively skewed shape. The mode is 1, the median is 2 and the mean is about 3.2.">
+      <g font-family="Arial,Helvetica,sans-serif" font-size="22" text-anchor="middle">
+        <line x1="50" y1="330" x2="666" y2="330" stroke="#1E2A33" stroke-width="2"/>
+        <g fill="#E6EAF7" stroke="#2F47A6" stroke-width="2">
+          <rect x="50" y="280" width="56" height="50"/>
+          <rect x="106" y="105" width="56" height="225"/>
+          <rect x="162" y="155" width="56" height="175"/>
+          <rect x="218" y="230" width="56" height="100"/>
+          <rect x="274" y="255" width="56" height="75"/>
+          <rect x="330" y="280" width="56" height="50"/>
+          <rect x="386" y="280" width="56" height="50"/>
+          <rect x="442" y="280" width="56" height="50"/>
+          <rect x="498" y="305" width="56" height="25"/>
+          <rect x="554" y="305" width="56" height="25"/>
+          <rect x="610" y="305" width="56" height="25"/>
+        </g>
+        <g fill="#1E2A33">
+          <text x="78" y="358">0</text><text x="134" y="358">1</text><text x="190" y="358">2</text><text x="246" y="358">3</text><text x="302" y="358">4</text><text x="358" y="358">5</text><text x="414" y="358">6</text><text x="470" y="358">7</text><text x="526" y="358">8</text><text x="582" y="358">9</text><text x="638" y="358">10</text>
+          <text x="358" y="392">times phone checked</text>
+        </g>
+        <line x1="134" y1="96" x2="134" y2="40" stroke="#2E7D4F" stroke-width="3"/>
+        <text x="134" y="30" fill="#2E7D4F" font-weight="bold">mode</text>
+        <line x1="190" y1="146" x2="190" y2="82" stroke="#B8761A" stroke-width="3"/>
+        <text x="215" y="72" fill="#B8761A" font-weight="bold">median</text>
+        <line x1="259" y1="221" x2="259" y2="128" stroke="#B23A3A" stroke-width="3" stroke-dasharray="6 5"/>
+        <text x="300" y="120" fill="#B23A3A" font-weight="bold">mean</text>
+        <text x="560" y="260" fill="#4A5862">long tail</text>
+        <line x1="500" y1="270" x2="640" y2="270" stroke="#4A5862" stroke-width="2" stroke-dasharray="5 5"/>
+      </g>
+    </svg>
+    <figcaption>Made-up data: how many times each of 34 students checked their phone in a one-hour study session (2, 9, 7, 4, 3, 2, 2, 2, 1, 1, 1 students for 0 to 10 checks). Tail on the right: positively skewed. Mode = 1, median = 2, mean = 110 ÷ 34 ≈ 3.2: the few heavy checkers pull the mean up.</figcaption>
+  </figure>
+
+  <div class="worked"><b>Worked example 5: one slow student.</b> Reaction times (ms) of 8 students: 412, 398, 455, 430, 1&nbsp;240, 405, 441, 420. Which average is typical? <span class="fb">Understand and apply</span>
+    <ol>
+      <li>Level: reaction time has a true zero, so it is <b>ratio</b> data.</li>
+      <li>Put in order: 398, 405, 412, 420, 430, 441, 455, 1&nbsp;240.</li>
+      <li>Mean: <span class="nw">4&nbsp;201 ÷ 8 = 525.125</span>, about 525 ms.</li>
+      <li>Median: 8 values, so the mean of the 4th and 5th: <span class="nw">(420 + 430) ÷ 2 = 425</span> ms. Mode: none, all values differ.</li>
+      <li>Shape: 1&nbsp;240 is far above the rest, an <b><span class="term" data-t="outlier" tabindex="0" role="button">outlier</span></b>, so the data are positively skewed; 7 of the 8 students were faster than the mean.</li>
+      <li>Conclusion, Paper 3 style: "The median (425 ms) is the better measure of central tendency, because the outlier of 1&nbsp;240 ms pulls the mean up to 525 ms, above 7 of the 8 values."</li>
+    </ol>
+    <details class="why2"><summary>Why this step? Why check the shape (step 5) when ratio data "usually" use the mean?</summary><p>Because the level tells you which averages are <i>allowed</i>, and the shape tells you which is <i>fair</i>. Ratio data allow the mean, but one outlier makes it untypical (HL01: "Check the level first, then check the shape of the graph"). Without the outlier the mean would be 423 ms, almost the same as the median.</p></details></div>
+
+  <div class="finish"><b>Finish it.</b> Words recalled out of 20 by 6 participants: 11, 13, 9, 12, 14, 19. Which average should you report?
+    <ol>
+      <li><b>Level (done):</b> ratio (0 words means none).</li>
+      <li><b>In order (done):</b> 9, 11, 12, 13, 14, 19.</li>
+      <li><b>Median (you):</b> <span class="blank"></span> &nbsp; <b>Mean (you):</b> <span class="blank"></span></li>
+      <li><b>Shape and choice (you):</b> <span class="blank"></span></li>
+    </ol>
+    <details><summary>Show the answer</summary><p>Median = (12 + 13) ÷ 2 = 12.5. Mean = 78 ÷ 6 = 13. The mean and median are close, so no value is pulling the mean far: the data are roughly symmetrical, and the mean is a fair choice because it uses every value.</p></details></div>
+
+  <div class="tip"><b>Exam traps.</b> (1) The median needs the values <b>in order</b> first. (2) Never give a mean of nominal data: a "mean therapy" makes no sense. (3) Ratio data that are skewed still need the median.</div>
+
+  <details><summary>Self-check: averages (write two key words for each, then open)</summary>
+    <ol>
+      <li>Quiz scores: 6, 9, 4, 7, 12, 8. Find the mean and the median.</li>
+      <li>Nationality of participants: which level, and which average?</li>
+      <li>Pain rated mild, moderate or severe: which level?</li>
+      <li>A data set has mean 18 and median 16. Which way is it probably skewed?</li>
+    </ol>
+    <p><b>Answers.</b> 1: mean = 46 ÷ 6 ≈ 7.67; in order 4, 6, 7, 8, 9, 12, so median = (7 + 8) ÷ 2 = 7.5. 2: nominal; the mode. 3: ordinal. 4: positively (to the right): a few high values pull the mean above the median.</p>
+  </details>
+</section>
+
+<!-- =============================== QUIZ =============================== -->
+<section class="topic quiz" id="quiz">
+  <div class="kicker">Seven multiple-choice questions and three written items</div>
+  <h2>Quiz</h2>
+  <p>Part 1: decide your answer before you click; each question explains the trap. Part 2: write items 8 to 10 on paper with no notes, then open the model answer and mark yourself. The saved score counts the 7 multiple-choice questions.</p>
+
+  <div class="q" data-a="1"><p>1. What does the top band (3-4 marks) of Paper 1 Section A need?</p>
+    <button>A named study with its date and sample size</button>
+    <button>Detailed knowledge, and an example that is relevant and explained</button>
+    <button>Two examples, so the examiner can choose the better one</button>
+    <button>A strength and a limitation of the theory</button>
+    <div class="why">The markband (p45) asks for "detailed knowledge" and an example that "is relevant and explained". Study details are not assessed, only the first example is credited, and "describe" or "explain" does not ask for evaluation.</div></div>
+
+  <div class="q" data-a="0"><p>2. Zara sees her friend Mei praised by the teacher for sharing, and later Zara starts sharing too. This is</p>
+    <button>vicarious reinforcement</button>
+    <button>positive reinforcement</button>
+    <button>classical conditioning</button>
+    <button>extinction</button>
+    <div class="why">Zara was not rewarded herself; she watched Mei being rewarded. Positive reinforcement (operant conditioning) would need Zara's own sharing to be rewarded.</div></div>
+
+  <div class="q" data-a="2"><p>3. In the official guide (first assessment 2027), social learning theory is listed under the</p>
+    <button>biological approach</button>
+    <button>cognitive approach</button>
+    <button>sociocultural approach</button>
+    <button>research methodology</button>
+    <div class="why">Table 3.3 (p26): sociocultural. The trap is "cognitive": the theory involves thinking, and your class filed it under learning and cognition, which is a context, not an approach.</div></div>
+
+  <div class="q" data-a="3"><p>4. A boy watched a film of a model hitting a doll but did not hit it afterwards. Weeks later he hit a doll after seeing a friend praised for it. This shows</p>
+    <button>that he did not learn anything from the film</button>
+    <button>classical conditioning of aggression</button>
+    <button>extinction of the behaviour</button>
+    <button>the difference between learning and performance</button>
+    <div class="why">He learned (attention, retention) from the film but only performed it once he had a motivation (vicarious reinforcement). Saying he "did not learn" is the error EX03 warns about.</div></div>
+
+  <div class="q" data-a="1"><p>5. Which is the best point about the <b>value</b> of a cognitive model?</p>
+    <button>A model is proven true once one study supports it</button>
+    <button>A model makes predictions that studies can test, part by part</button>
+    <button>A model is valuable because it is simple to draw</button>
+    <button>A model replaces the need for research studies</button>
+    <div class="why">The specimen markscheme credits "Models are tested in empirical research studies" and "different studies are required to test different parts of the model". Models are supported, never proven.</div></div>
+
+  <div class="q" data-a="2"><p>6. In Craik and Tulving (1975), "Is the word a type of fish?" leads to which processing, and how good is memory?</p>
+    <button>Structural, the worst memory</button>
+    <button>Phonetic, the best memory</button>
+    <button>Semantic, the best memory</button>
+    <button>Semantic, the worst memory</button>
+    <div class="why">Thinking about meaning is semantic, deep processing: the best recognition (about 83%). Capital letters is structural, rhymes are phonetic: both shallow.</div></div>
+
+  <div class="q" data-a="1"><p>7. Reaction times (ms): 400, 410, 420, 430, 1&nbsp;500. Which value best describes a typical participant?</p>
+    <button>The mean, 632 ms</button>
+    <button>The median, 420 ms</button>
+    <button>The mode, 400 ms</button>
+    <button>The mean, 420 ms</button>
+    <div class="why">Mean = 3&nbsp;160 ÷ 5 = 632 ms, pulled up by the outlier, higher than four of the five values. The median (middle of the ordered list) is 420 ms. There is no mode: every value is different.</div></div>
+
+  <div class="score" id="score">Score: 0 / 7 answered 0</div>
+
+  <div class="q written" data-max="4"><p>8. Explain how social learning theory can account for the development of aggressive behaviour in children. <span class="mx">(4 marks, 10 minutes)</span></p>
+    <details><summary>Show model answer and checklist</summary>
+      <p><b>Model answer (two developed points).</b> Social learning theory says children learn aggression through observational learning: they attend to a model's aggressive behaviour and retain it, with no reward needed. In Bandura, Ross and Ross (1961), children aged 3 to 6 who watched an adult hit a Bobo doll later copied the same hits and words more than children who saw a calm model or none. This shows new aggressive acts were learned just by watching. Children also copy models they identify with: boys copied physical aggression more after a male model, so aggression is more likely to develop when children see it in people similar to them.</p>
+      <p><b>Checklist</b> (EX03 Section D: 2 marks per point). For each point: 1 mark for a social learning theory idea applied to aggression (observational learning, identification, vicarious reinforcement, the four processes); 1 mark for evidence that is <i>explained</i>, not just described. No marks for describing conditioning. Then read the exemplar in <a href="https://drive.google.com/file/d/1XdzFHCKtH4ON-6unUNZ2lNobc45Szg3A/view">EX03</a>.</p>
+    </details></div>
+
+  <div class="q written" data-max="4"><p>9. Describe the levels of processing model of memory with reference to one example. <span class="mx">(4 marks, 6 minutes)</span></p>
+    <details><summary>Show model answer and checklist</summary>
+      <p><b>Model answer.</b> The levels of processing model (Craik and Lockhart, 1972) says memory depends on how deeply information is processed when it is first met: shallow processing (structural, what it looks like, or phonetic, what it sounds like) gives weak memories, and deep semantic processing (what it means) gives strong ones. Craik and Tulving (1975) asked participants questions about words without warning them of a test: "Is it in capital letters?" (structural), "Does it rhyme with weight?" (phonetic) or "Is it a type of fish?" (semantic). In a later recognition test about 83% of semantic words were recognised but only about 16% of structural words. The semantic question made participants think about meaning, which is deep processing, so those words were remembered best. This shows that how we process information, not just repeating it, decides how well we remember it.</p>
+      <p><b>Checklist</b> (Section A markband, p45): shallow and deep named with their types; one example; the example explained (which question is which level, and why semantic words were remembered best); a link. Example missing or not explained: 1-2 marks.</p>
+    </details></div>
+
+  <div class="q written" data-max="4"><p>10. Seven participants' times (seconds) to solve a puzzle: 14, 15, 15, 16, 17, 18, 30. Calculate the mean and the median, and explain which better describes a typical participant. <span class="mx">(4 marks, 4 minutes)</span></p>
+    <details><summary>Show model answer and checklist</summary>
+      <p><b>Model answer.</b> Mean = 125 ÷ 7 ≈ 17.9 s. Median: the values are already in order and the 4th of 7 is 16 s. The median better describes a typical participant, because the time of 30 s is an outlier that pulls the mean up: five of the seven participants were faster than the mean.</p>
+      <p><b>Checklist:</b> mean correct (1); median correct (1); median chosen (1); reason: the outlier 30 s pulls the mean up / data positively skewed (1).</p>
+    </details></div>
+</section>
+
+<section class="end" id="end">
+  <h2 style="font-size:1.4rem">Before you close this</h2>
+  <ul>
+    <li>Tick the "I can" boxes you are confident about. The unticked ones are the first ten minutes of your next Psychology session (Saturday 21 November: timed exam-style practice with no notes, including a social learning theory 6-marker).</li>
+    <li>For every quiz question you got wrong: close the page, redo that section's self-check, and write the rule in the Error log.</li>
+    <li>Open the <a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">study sheet</a>, <b>Error log</b> tab. One row for every lost mark from today's timed answers, Finish it boxes, self-checks and quiz, with its type: <b>did not know</b> / <b>wrong method</b> / <b>slip</b> / <b>time</b> / <b>ask teacher</b>, and the rule that fixes it (for example "did not know: the Bobo doll model was not rewarded, so it does not show vicarious reinforcement").</li>
+    <li><b>Fix-it</b> (5 min, at the start of your next study slot): take one answer where you lost marks today, usually the timed classical conditioning or aggression 4-marker, and rewrite it to full marks using the checklist.</li>
+    <li>Add to your one-page course map from session 1: social learning theory under the sociocultural approach; multi-store model and levels of processing under the cognitive approach; central tendency under HL data analysis.</li>
+    <li>Also on the study site: <a href="../flashcards.html">flashcards</a> (5 to 10 minutes a day: today's terms are in there), <a href="../exam-psychology-hl.html">exam technique</a> for Psychology, and your <a href="../progress.html">progress page</a>, which turns green as you tick the "I can" boxes and pass the quiz.</li>
+  </ul>
+</section>
+
+</main>
+
+<script>
+(function(){
+  // remember ticked "I can" boxes on this device; fails quietly where storage is unavailable
+  var key='ib-psych-hl-slt-mem-ican';
+  var boxes=document.querySelectorAll('.ican input');
+  try{ var saved=JSON.parse(localStorage.getItem(key)||'{}'); boxes.forEach(function(b){ if(saved[b.dataset.k]) b.checked=true; }); }catch(e){}
+  boxes.forEach(function(b){ b.addEventListener('change',function(){ try{ var s={}; boxes.forEach(function(x){ if(x.checked) s[x.dataset.k]=1; }); localStorage.setItem(key,JSON.stringify(s)); }catch(e){} }); });
+
+  // quiz
+  var qs=document.querySelectorAll('.quiz .q:not(.written)'); var right=0, done=0, total=qs.length;
+  qs.forEach(function(q){
+    var a=parseInt(q.dataset.a,10); var btns=q.querySelectorAll('button');
+    btns.forEach(function(b,i){ b.addEventListener('click',function(){
+      if(q.classList.contains('done')) return;
+      q.classList.add('done'); done++;
+      if(i===a){ b.classList.add('right'); right++; } else { b.classList.add('wrong'); btns[a].classList.add('right'); }
+      document.getElementById('score').textContent='Score: '+right+' / '+total+' answered '+done+(done===total?(right>=6?'. Good. Log any you missed with its type.':'. For each one you missed: close the page, redo that section\'s self-check, write the rule in the Error log.'):'');
+      if(done===qs.length){ try{ var KQ='ib-quiz-guide-2026-11-16'; var prev=JSON.parse(localStorage.getItem(KQ)||'null'); localStorage.setItem(KQ,JSON.stringify({right:right,total:qs.length,date:new Date().toISOString().slice(0,10),best:Math.max(right,prev&&prev.best||0)})); }catch(e){} }
+    }); });
+  });
+})();
+</script>
+
+<!--terms:start-->
+<div id="termbox" role="dialog" aria-live="polite"><div class="tb-h"><b></b><button type="button">Close</button></div><p class="tb-d"></p></div>
+<script id="terms-data" type="application/json">{"approach": {"w": "approach", "d": "In IB Psychology, one of three ways of explaining behaviour: biological (body and brain), cognitive (thinking and memory) or sociocultural (other people and culture)."}, "sociocultural": {"w": "sociocultural", "d": "To do with other people, groups and culture. The sociocultural approach explains behaviour through the people around us."}, "cognitive": {"w": "cognitive", "d": "To do with thinking: paying attention, remembering, deciding. The cognitive approach explains behaviour through what goes on in the mind."}, "context": {"w": "context", "d": "In this course, one of four real-life areas where psychology is used, such as learning and cognition, or health and well-being."}, "markband": {"w": "markband", "d": "A level on the examiners' marking grid, such as 1-2 marks or 3-4 marks. Each band describes what an answer must contain to get those marks."}, "markscheme": {"w": "markscheme (mark scheme)", "d": "The examiners' guide to marking a paper: what earns marks and what does not."}, "specimen": {"w": "specimen paper", "d": "A sample exam made by the IB to show what the real papers for this course will look like."}, "describe": {"w": "describe (command term)", "d": "IB command term: \"Give a detailed account.\" Say what something is or what happened, with detail. No reasons needed."}, "explain": {"w": "explain (command term)", "d": "IB command term: \"Give a detailed account including reasons or causes.\" Describe, then say why or how."}, "hypothetical": {"w": "hypothetical", "d": "Made up for the purpose of an example, but realistic. \"Imagine a teacher gives a merit point...\" is a hypothetical example."}, "stimulus": {"w": "stimulus (plural: stimuli)", "d": "Anything in the surroundings that a person or animal can sense and react to: a sound, a smell, food, a picture."}, "unconditioned": {"w": "unconditioned, conditioned", "d": "Unconditioned means natural, not learned (drooling at food). Conditioned means learned (drooling at a sound that has been linked with food)."}, "operant conditioning": {"w": "operant conditioning", "d": "Learning from consequences: a behaviour that is followed by a reward happens more often, and one followed by punishment happens less often."}, "positive reinforcement": {"w": "positive reinforcement", "d": "Adding something pleasant, such as praise or a merit point, straight after a behaviour, so the behaviour happens more often."}, "extinction": {"w": "extinction", "d": "When a learned behaviour fades away because the link or the reward that kept it going has stopped."}, "metronome": {"w": "metronome", "d": "A device that makes a regular ticking sound, used by musicians to keep time."}, "vicarious": {"w": "vicarious", "d": "Experienced through someone else. Vicarious reinforcement: you see someone else rewarded, and that makes you more likely to do the same."}, "observational learning": {"w": "observational learning", "d": "Learning by watching another person (the model) and later copying what they did."}, "identification": {"w": "identification (with a model)", "d": "Feeling that a model is like you, for example the same age or gender. We copy people we identify with more."}, "retention": {"w": "retention", "d": "Keeping something in memory. In social learning theory: remembering what the model did well enough to copy it later."}, "self-efficacy": {"w": "self-efficacy", "d": "Your belief that you can succeed at a particular task. High self-efficacy makes you more likely to try."}, "aggression": {"w": "aggression, aggressive", "d": "Behaviour meant to hurt or harm someone or something, by hitting, kicking or hurtful words."}, "bobo doll": {"w": "Bobo doll", "d": "A large inflatable toy clown that springs back up when hit. Bandura used it to see whether children would copy an adult hitting it."}, "influencer": {"w": "influencer", "d": "A person with many followers on social media whose posts can affect what followers buy, eat or do."}, "theory": {"w": "theory", "d": "An explanation of why or how something happens, which can be tested against evidence."}, "cognitive model": {"w": "cognitive model", "d": "A simplified picture, often boxes and arrows, of how a mental process such as memory works, used to make predictions that studies can test."}, "empirical": {"w": "empirical", "d": "Based on real observation or measurement, not on opinion or pure reasoning."}, "operationalise": {"w": "operationalise", "d": "State exactly how something will be measured, so anyone could do it the same way. \"Memory\" becomes \"number of trigrams recalled after 18 seconds\"."}, "construct": {"w": "construct", "d": "An idea you cannot see or touch directly, such as memory or intelligence. It must be turned into something measurable first."}, "framework": {"w": "framework, representation", "d": "A framework is a basic structure of ideas. A representation is something that stands for something else, like a map stands for a city."}, "hypothesis": {"w": "hypothesis (plural: hypotheses)", "d": "A clear, testable prediction of what a study will find."}, "capacity": {"w": "capacity", "d": "How much something can hold. The capacity of short-term memory is how many items it can hold at once."}, "duration": {"w": "duration", "d": "How long something lasts."}, "store": {"w": "store (memory store)", "d": "In the multi-store model, a separate place or system where information is held: sensory memory, short-term memory or long-term memory."}, "rehearsal": {"w": "rehearsal", "d": "Going over information again in your head. Maintenance rehearsal is just repeating it; elaborative rehearsal is thinking about what it means."}, "chunking": {"w": "chunking", "d": "Grouping separate items into bigger meaningful units so you can hold more at once: 1, 9, 4, 5 becomes the year 1945."}, "decay": {"w": "decay, displacement", "d": "Two ways of losing information from short-term memory. Decay: it fades with time. Displacement: new items push old ones out because there is little room."}, "trigram": {"w": "trigram", "d": "A group of three letters with no meaning, such as TGH, used so that people cannot link it to anything they already know."}, "serial position effect": {"w": "serial position effect", "d": "When people learn a list, they remember the first items and the last items better than those in the middle."}, "structural": {"w": "structural, phonetic, semantic", "d": "Three kinds of processing a word. Structural: how it looks. Phonetic: how it sounds. Semantic: what it means."}, "recognition": {"w": "recognition test", "d": "A memory test where you pick out items you saw before from a longer list, instead of recalling them from nothing."}, "ecological validity": {"w": "ecological validity", "d": "How well a study's task and setting match real life. Learning lists of nonsense letters is not much like everyday memory, so ecological validity is low."}, "motor skills": {"w": "motor skills", "d": "Skills of body movement, such as riding a bike or drawing, that improve with practice."}, "data": {"w": "data", "d": "Information collected in a study: numbers such as scores, or words such as interview answers."}, "descriptive statistics": {"w": "descriptive statistics", "d": "Numbers that sum up a set of data, such as an average or how spread out the scores are."}, "central tendency": {"w": "measure of central tendency", "d": "One number that describes the typical or middle value of a set of data: the mean, the median or the mode."}, "dispersion": {"w": "dispersion", "d": "How spread out a set of data is. The range (largest minus smallest) is the simplest measure. Coming in a later lesson."}, "standard deviation": {"w": "standard deviation, semi-interquartile range", "d": "Two measures of how spread out data are, which you will learn in a later HL lesson. Not needed today."}, "nominal": {"w": "nominal", "d": "Data that are just names of categories with no order, such as favourite colour."}, "ordinal": {"w": "ordinal", "d": "Data that can be put in order, but the gaps between steps are not equal, such as mild, moderate, severe."}, "interval": {"w": "interval", "d": "Data with equal steps but no true zero, such as temperature in degrees Celsius."}, "ratio data": {"w": "ratio (data)", "d": "Data with equal steps and a true zero, where 0 means none at all, such as reaction time or number of words recalled."}, "outlier": {"w": "outlier", "d": "A value far away from all the others in a data set, such as one reaction time of 1 240 ms when the rest are around 420 ms."}, "skew": {"w": "skewed, skewness", "d": "When a graph of the data is lopsided, with a long tail on one side. Positively skewed: a few very high values make a long tail on the right."}, "symmetrical": {"w": "symmetrical, asymmetrical", "d": "Symmetrical: the same on both sides of the middle, like a mirror image. Asymmetrical: not the same on both sides."}, "distribution": {"w": "distribution", "d": "How the values in a data set are spread out, usually seen as the shape of a bar graph of how often each value occurs."}, "paper 3": {"w": "Paper 3", "d": "The HL-only exam (1 h 45, 30% of your grade) where you analyse graphs, tables and research findings."}, "analyse": {"w": "analyse, interpret", "d": "Analyse: break something down to show its main parts. Interpret: work out what data or results mean and what conclusion they support."}, "iq": {"w": "IQ", "d": "Intelligence quotient: a score from an intelligence test, where 100 is average."}, "et al": {"w": "et al.", "d": "Latin for \"and others\". \"Coates et al.\" means Coates and the other researchers who wrote the study."}, "participant": {"w": "participant", "d": "A person who takes part in a study."}, "mastery": {"w": "mastery", "d": "Being successful at something through your own effort. Mastery experiences are your own past successes."}, "persuasion": {"w": "social persuasion", "d": "Other people telling you that you can do something, which makes you try harder."}, "evaluation": {"w": "evaluation", "d": "Weighing up strengths and limitations, then giving a judgement. A \"describe\" or \"explain\" question does not ask for it."}}</script>
+<script>
+(function(){
+  // tap a dotted word to see what it means
+  var T={};
+  try{ T=JSON.parse(document.getElementById('terms-data').textContent); }catch(e){ return; }
+  var box=document.getElementById('termbox'), bt=box.querySelector('.tb-h b'), bd=box.querySelector('.tb-d');
+  function show(el){ var k=el.getAttribute('data-t'); if(!T[k]) return; bt.textContent=T[k].w; bd.innerHTML=T[k].d; box.classList.add('on'); }
+  function hide(){ box.classList.remove('on'); }
+  document.addEventListener('click',function(e){
+    var el=e.target.closest ? e.target.closest('.term') : null;
+    if(el){ e.preventDefault(); e.stopPropagation(); show(el); return; }
+    if(!box.contains(e.target)) hide();
+  },true);
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape') hide();
+    if((e.key==='Enter'||e.key===' ') && e.target.classList && e.target.classList.contains('term')){ e.preventDefault(); show(e.target); }
+  });
+  box.querySelector('button').addEventListener('click',hide);
+})();
+</script><!--terms:end-->
+<!--enhance:start--><script>
+function storageOK(){ try{ var k='__ib_t'; localStorage.setItem(k,'1'); localStorage.removeItem(k); return true; }catch(e){ return false; } }
+function storageNotice(){ if(storageOK() || document.querySelector('.notice.storage')) return;
+  var n=document.createElement('div'); n.className='notice storage'; n.setAttribute('role','status');
+  n.textContent='Progress cannot be saved in this browser (private mode?). Use normal Safari or Chrome.';
+  var sb=document.querySelector('.sitebar');   // under the shared top bar when the page has one
+  if(sb && sb.parentNode){ sb.parentNode.insertBefore(n,sb.nextSibling); return; }
+  var m=document.querySelector('main')||document.body; m.insertBefore(n,m.firstChild); }
+
+function ibQuizEnhance(cfg){
+  if(window.__ibQuizEnh) return; window.__ibQuizEnh=1;
+  if(typeof storageNotice==='function') storageNotice();
+  var KEY=cfg&&cfg.key; if(!KEY) return;
+  var AK=KEY+'-attempts', WK=KEY+'-written';
+  function get(k){ try{ return JSON.parse(localStorage.getItem(k)||'null'); }catch(e){ return null; } }
+  function put(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); }catch(e){} }
+  function pad(n){ return (n<10?'0':'')+n; }
+  function today(){ var d=new Date(); return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()); }
+  function attempts(){ var a=get(AK); return Array.isArray(a)?a:[]; }
+  function addAttempt(r,t,sameDay){ var a=attempts(), d=today(), rec={date:d,right:r,total:t};
+    if(sameDay && a.length && a[a.length-1].date===d) a[a.length-1]=rec; else a.push(rec); put(AK,a); return a; }
+  // keep the score saved before this history existed as the first attempt
+  (function(){ if(get(AK)) return; var r=get(KEY); if(!r||typeof r!=='object') return;
+    var rr=(typeof r.right==='number')?r.right:r.score, tt=(typeof r.total==='number')?r.total:r.max;
+    if(typeof rr==='number' && tt) put(AK,[{date:r.date||today(),right:rr,total:tt}]); })();
+
+  // written answers: self-mark 0..max
+  var W=get(WK); if(!W||typeof W!=='object') W={};
+  [].forEach.call(document.querySelectorAll('.written[data-max]'),function(el,i){
+    var max=parseInt(el.getAttribute('data-max'),10); if(!(max>=0) || el.querySelector('.wm')) return;
+    var id=el.id||el.getAttribute('data-id')||('w'+(i+1));
+    var box=document.createElement('div'); box.className='wm';
+    var lab=document.createElement('label'); lab.appendChild(document.createTextNode('My mark: '));
+    var sel=document.createElement('select'); sel.setAttribute('aria-label','Your mark out of '+max);
+    var o=document.createElement('option'); o.value=''; o.textContent='not marked yet'; sel.appendChild(o);
+    for(var m=0;m<=max;m++){ o=document.createElement('option'); o.value=String(m); o.textContent=m+' out of '+max; sel.appendChild(o); }
+    if(W[id]!=null) sel.value=String(W[id]);
+    sel.addEventListener('change',function(){ var w=get(WK); if(!w||typeof w!=='object') w={};
+      if(sel.value==='') delete w[id]; else w[id]=parseInt(sel.value,10); put(WK,w); });
+    lab.appendChild(sel); box.appendChild(lab); el.appendChild(box);
+  });
+
+  // timed pages save {score,max,date} themselves; keep one history entry per day
+  if(/^ib-timed-/.test(KEY)){
+    var rec=function(){ var r=get(KEY); if(r && typeof r.score==='number' && r.max) addAttempt(r.score,r.max,true); };
+    var sb=document.getElementById('savebtn'); if(sb) sb.addEventListener('click',function(){ setTimeout(rec,0); });
+    [].forEach.call(document.querySelectorAll('.score-t input'),function(i){ i.addEventListener('change',function(){ setTimeout(rec,0); }); });
+  }
+
+  // multiple-choice quiz
+  var q0=document.querySelector('.quiz .q[data-a]'); if(!q0) return;
+  var quiz=q0.closest('.quiz');
+  var own=!!cfg.own, total=0, count=0, right=0, recs=[];
+  function qsAll(){ return [].filter.call(quiz.querySelectorAll('.q[data-a]'),function(q){ return !q.classList.contains('written'); }); }
+  function opts(q){ return [].filter.call(q.children,function(c){ return c.tagName==='BUTTON'; }); }
+  var score=document.getElementById('score');
+  if(!score){ score=document.createElement('div'); score.className='score'; score.id='score'; var l=qsAll(); l[l.length-1].parentNode.insertBefore(score,l[l.length-1].nextSibling); }
+  var rep=document.createElement('div'); rep.className='cfr'; rep.setAttribute('aria-live','polite'); score.parentNode.insertBefore(rep,score.nextSibling);
+  var hint=document.createElement('p'); hint.className='cfh';
+  hint.textContent='Before each answer, say how sure you are. At the end, the ones you were sure about but got wrong are listed first: they matter most.';
+  q0.parentNode.insertBefore(hint,qsAll()[0]);
+  function addConf(q){ var p=q.querySelector('.cf'); if(p) p.parentNode.removeChild(p);
+    var d=document.createElement('div'); d.className='cf'; d.setAttribute('role','group'); d.setAttribute('aria-label','How sure are you?');
+    d.innerHTML='<div class="cfl-h">How sure are you?</div><div class="cfb"><button type="button" data-c="guess" aria-pressed="false">Guessed</button><button type="button" data-c="unsure" aria-pressed="false">Unsure</button><button type="button" data-c="sure" aria-pressed="false">Sure</button></div>';
+    var first=opts(q)[0]; q.insertBefore(d,first||null); q.removeAttribute('data-conf'); }
+  function counters(qs){ qs.forEach(function(q,i){ var c=q.querySelector('.qn'); if(!c){ c=document.createElement('div'); c.className='qn'; q.insertBefore(c,q.firstChild); } c.textContent=(i+1)+' of '+qs.length; }); }
+  function start(){ var qs=qsAll(); total=qs.length; count=0; right=0; recs=[]; qs.forEach(addConf); counters(qs); rep.innerHTML=''; }
+  function msg(){ return 'Score: '+right+' / '+total+' answered '+count+(count===total?(right>=0.8*total?'. Good. Log the ones you missed.':'. Re-read the sections for the ones you missed, then log them.'):''); }
+  function qtext(q){ var p=q.querySelector('p'); var t=p?p.textContent:''; t=t.replace(/\s+/g,' ').trim();
+    var s=p&&p.querySelector('.subj'); if(s) t=t.slice(s.textContent.trim().length).trim();
+    t=t.replace(/^\d+\.\s*/,''); return t.length>110?t.slice(0,107)+'...':t; }
+  function esc(s){ var d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+  quiz.addEventListener('click',function(e){
+    var b=e.target.closest?e.target.closest('button'):null; if(!b) return;
+    var q=b.closest('.q'); if(!q || !quiz.contains(q) || !q.hasAttribute('data-a') || q.classList.contains('written')) return;
+    var cf=b.closest('.cf');
+    if(cf){ if(q.__ibRec) return; var c=b.getAttribute('data-c'); q.setAttribute('data-conf',c);
+      [].forEach.call(cf.querySelectorAll('button'),function(x){ var on=x===b; x.classList.toggle('on',on); x.setAttribute('aria-pressed',on?'true':'false'); }); return; }
+    if(b.parentNode!==q || q.__ibRec) return;
+    if(own){
+      if(q.classList.contains('done')) return;
+      var bs=opts(q), a=parseInt(q.getAttribute('data-a'),10), i=bs.indexOf(b);
+      q.classList.add('done');
+      if(i===a) b.classList.add('right'); else { b.classList.add('wrong'); if(bs[a]) bs[a].classList.add('right'); }
+    } else if(!q.classList.contains('done')) return;
+    q.__ibRec=true; var ok=b.classList.contains('right'); if(ok) right++; count++;
+    recs.push({q:q,ok:ok,conf:q.getAttribute('data-conf')||''});
+    [].forEach.call(q.querySelectorAll('.cf button'),function(x){ x.disabled=true; });
+    if(own) score.textContent=msg();
+    if(count===total) finish();
+  });
+  function finish(){
+    var r=right, t=total;
+    if(own){ try{ var prev=get(KEY); localStorage.setItem(KEY,JSON.stringify({right:r,total:t,date:new Date().toISOString().slice(0,10),best:Math.max(r,prev&&prev.best||0)})); }catch(e){} }
+    else { var s=get(KEY); if(s && typeof s.right==='number' && s.total) { r=s.right; t=s.total; } }
+    var a=addAttempt(r,t,false);
+    var order=qsAll(), num=function(q){ return order.indexOf(q)+1; };
+    var wrong=recs.filter(function(x){ return !x.ok; });
+    wrong.sort(function(x,y){ return (y.conf==='sure')-(x.conf==='sure') || num(x.q)-num(y.q); });
+    var lucky=recs.filter(function(x){ return x.ok && (x.conf==='guess'||x.conf==='unsure'); }).sort(function(x,y){ return num(x.q)-num(y.q); });
+    var lab={sure:'you were sure',unsure:'you were unsure',guess:'you guessed','':'not marked'};
+    var h='';
+    if(wrong.length){ h+='<b>Log these first</b><ol class="cfl">'+wrong.map(function(x){ return '<li'+(x.conf==='sure'?' class="sure"':'')+'>Question '+num(x.q)+' ('+lab[x.conf]+'): '+esc(qtext(x.q))+'</li>'; }).join('')+'</ol>'; }
+    if(lucky.length){ h+='<b>Right, but not sure</b>: read the explanation again for '+lucky.map(function(x){ return 'question '+num(x.q); }).join(', ')+'.'; }
+    if(!wrong.length && !lucky.length) h+='<b>All right.</b> Come back in a few days and try again: a score that lasts is what counts.';
+    var past=a.slice(0,-1).slice(-3).map(function(x){ return x.right+'/'+x.total+' on '+x.date; });
+    h+='<p class="cfa">Try number '+a.length+(past.length?'. Before: '+past.join(', ')+'.':'.')+'</p>';
+    h+='<button type="button" class="retry">Try again (shuffled)</button>';
+    rep.innerHTML=h;
+    rep.querySelector('.retry').addEventListener('click',retry);
+  }
+  function shuffled(arr){ var best=arr.slice();
+    for(var k=0;k<12;k++){ var x=arr.slice(); for(var i=x.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=x[i]; x[i]=x[j]; x[j]=t; }
+      best=x; if(arr.length<2 || x.some(function(v,i){ return v!==arr[i]; })) break; }
+    return best; }
+  function renumber(q,n){ var p=q.querySelector('p'); if(!p) return;
+    var w=document.createTreeWalker(p,4,null), tn;
+    while((tn=w.nextNode())){ if(tn.parentNode.closest && tn.parentNode.closest('.subj')) continue; if(!/\S/.test(tn.data)) continue;
+      if(/^\s*\d+\.\s/.test(tn.data)) tn.data=tn.data.replace(/^(\s*)\d+\./,'$1'+n+'.'); break; } }
+  function retry(){
+    var qs=qsAll(), marks=[], clones=[];
+    qs.forEach(function(q){
+      var m=document.createComment('q'); q.parentNode.insertBefore(m,q); marks.push(m);
+      var c=q.cloneNode(true); c.classList.remove('done'); c.removeAttribute('data-conf');
+      var p=c.querySelector('.cf'); if(p) p.parentNode.removeChild(p); p=c.querySelector('.qn'); if(p) p.parentNode.removeChild(p);
+      var bs=opts(c), a=parseInt(c.getAttribute('data-a'),10), good=bs[a];
+      bs.forEach(function(x){ x.classList.remove('right','wrong'); x.disabled=false; });
+      if(bs.length){ var after=bs[bs.length-1].nextSibling, nb=shuffled(bs);
+        bs.forEach(function(x){ c.removeChild(x); }); nb.forEach(function(x){ c.insertBefore(x,after); });
+        c.setAttribute('data-a',String(nb.indexOf(good))); }
+      q.parentNode.removeChild(q); clones.push(c);
+    });
+    var nq=shuffled(clones);
+    marks.forEach(function(m,i){ m.parentNode.insertBefore(nq[i],m); m.parentNode.removeChild(m); renumber(nq[i],i+1); });
+    own=true; start(); score.textContent='Score: 0 / '+total+' answered 0';
+    var top=quiz.getBoundingClientRect().top+window.pageYOffset-60; try{ window.scrollTo(0,Math.max(0,top)); }catch(e){}
+  }
+  start();
+}
+
+storageNotice();
+ibQuizEnhance({"key": "ib-quiz-guide-2026-11-16", "own": false});
+(function(){
+  if(window.__ibSite) return; window.__ibSite=1;
+  var PAGE='ib-'+((location.pathname.split('/').pop()||'index').replace(/\.html?$/,''));
+  var BK=PAGE+'-blocks';
+  function get(){ try{ var v=JSON.parse(localStorage.getItem(BK)||'null'); return v&&typeof v==='object'?v:{}; }catch(e){ return {}; } }
+  function put(v){ try{ localStorage.setItem(BK,JSON.stringify(v)); }catch(e){} }
+  // guide plan blocks "Block 1 · 25 min" + title -> numbered card with a time chip
+  [].forEach.call(document.querySelectorAll('.plan > div:not(.brk), .step'),function(d){
+    var bh=d.querySelector(':scope > .bh'); if(!bh || bh.querySelector('.bn')) return;
+    var b=bh.querySelector('b'); var m=b && /^\s*Block\s+(\d+[a-z]?)\s*[·.:-]\s*(.+?)\s*$/i.exec(b.textContent); if(!m) return;
+    var s=bh.querySelector('span'); var title=s?s.innerHTML:'';
+    d.classList.add('block'); d.setAttribute('data-n',m[1]);
+    bh.innerHTML='<span class="bn" aria-hidden="true">'+m[1]+'</span><b><span class="sr">Block '+m[1]+': </span>'+(title||('Block '+m[1]))+'</b><span class="bt">'+m[2]+'</span>';
+    // teaching sections linked from this block get a kicker "Block n · ..."
+    [].forEach.call(d.querySelectorAll('a[href^="#"]'),function(a){
+      var t=document.getElementById(a.getAttribute('href').slice(1)); if(!t) return;
+      var k=t.querySelector(':scope > .kicker'); if(!k || k.getAttribute('data-bk')) return;
+      k.setAttribute('data-bk',m[1]); k.insertAdjacentHTML('afterbegin','<span class="bk">Block '+m[1]+' · </span>');
+    });
+  });
+  // long hero intro paragraphs fold to 3 lines; tap to read them all
+  [].forEach.call(document.querySelectorAll('header.hero .wrap > p'),function(p){
+      if(p.textContent.length<160) return;
+      p.classList.add('fold'); if(p.scrollHeight<=p.clientHeight+2){ p.classList.remove('fold'); return; }
+      p.setAttribute('role','button'); p.setAttribute('tabindex','0'); p.setAttribute('aria-expanded','false');
+      function tog(e){ if(e && e.target && e.target.closest && e.target.closest('a,.term')) return; var o=p.classList.toggle('open'); p.setAttribute('aria-expanded',o?'true':'false'); }
+      p.addEventListener('click',tog); p.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); tog(); } });
+  });
+  // keep the Today card on the first screen: shrink the header picture (not below 18% of the screen height) if needed
+  (function(){ var art=document.querySelector('header.hero > svg, header.hero > img'), card=document.querySelector('.todaycard');
+    if(!art || !card) return; var vh=window.innerHeight, over=card.getBoundingClientRect().top+window.pageYOffset-(vh-70);
+    if(over>0){ var h=art.getBoundingClientRect().height; art.style.maxHeight=Math.max(0.18*vh,h-over)+'px'; } })();
+  // "Block done" ticks
+  var st=get();
+  [].forEach.call(document.querySelectorAll('.block'),function(d,i){
+    if(d.querySelector(':scope > .bdone')) return;
+    var n=d.getAttribute('data-n')||String(i+1);
+    var l=document.createElement('label'); l.className='bdone';
+    l.innerHTML='<input type="checkbox"> Block done';
+    var c=l.querySelector('input'); c.checked=!!st[n]; d.classList.toggle('is-done',c.checked);
+    c.addEventListener('change',function(){ var s=get(); if(c.checked) s[n]=new Date().toISOString().slice(0,10); else delete s[n]; put(s); d.classList.toggle('is-done',c.checked); chips(); });
+    d.appendChild(l);
+  });
+  function chips(){ var s=get(); [].forEach.call(document.querySelectorAll('.chip[data-n]'),function(a){ a.classList.toggle('done',!!s[a.getAttribute('data-n')]); }); }
+  chips();
+  // current section in the menu
+  var nav=document.querySelector('nav.toc .wrap'); if(!nav || !('IntersectionObserver' in window)) return;
+  var links={}, secs=[];
+  [].forEach.call(nav.querySelectorAll('a[href^="#"]'),function(a){ var el=document.getElementById(a.getAttribute('href').slice(1)); if(el){ links[el.id]=a; secs.push(el); } });
+  // the current section is the last one whose top has passed under the two bars; the observer (and a
+  // throttled scroll check, for long sections) only decides when to look again
+  function mark(){ var best=null; secs.forEach(function(el){ if(el.getBoundingClientRect().top<=120) best=el; });
+    Object.keys(links).forEach(function(id){ links[id].removeAttribute('aria-current'); });
+    if(best){ var a=links[best.id]; a.setAttribute('aria-current','location');
+      var l=a.offsetLeft-nav.offsetLeft, r=l+a.offsetWidth; if(l<nav.scrollLeft+8 || r>nav.scrollLeft+nav.clientWidth-8) nav.scrollLeft=Math.max(0,l-40); } }
+  secs.sort(function(a,b){ return (a.compareDocumentPosition(b)&2)?1:-1; });
+  var io=new IntersectionObserver(mark,{rootMargin:'-100px 0px -55% 0px'});
+  var tick=false; window.addEventListener('scroll',function(){ if(tick) return; tick=true; requestAnimationFrame(function(){ tick=false; mark(); }); },{passive:true});
+  secs.forEach(function(el){ io.observe(el); });
+})();
+</script><!--enhance:end-->
+</body>
+</html>

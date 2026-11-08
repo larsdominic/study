@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biology HL study guide: B1.2 Proteins and C1.1 Enzymes and metabolism (Wed 18 Nov 2026)</title>
+<!--
+  CHECKED AGAINST: the official IB Biology guide, first assessment 2025 (published February 2023), which the IB serves free
+  at https://www.ibo.org/globalassets/new-structure/university-admission/pdfs/subject-guides/biology-guide.pdf
+  (text read on 8 Nov 2026; linked from the ibo.org Biology page). The guide is NOT in the IB Drive folder.
+  Statement codes and titles B1.2.1-B1.2.12 and C1.1.1-C1.1.17, the SL/HL split, the guiding questions and the
+  HL exam format below are copied from that guide. "I can" lines and explanations are written in plain words from the
+  guide's statements and guidance plus the class mark schemes; they are not official wording.
+  Other sources: C1.1 Enzymes and Metabolism - Summary Notes HL (Revision Village) 1meJNCi9WbEl-xS0APA0aHqWE1rnbOyds;
+  B1.2 and C1.1 Topical Past Paper HL questions + mark schemes (SaveMyExams); mock exam questions (to avoid overlaps);
+  Khan Academy pages listed in "Extra, not needed today" (fetched and read 8 Nov 2026, free, no login).
+  No B1.2 notes file exists in the Drive and the teacher's Grade 11 Part 2 deck could not be opened, so B1.2 is taught
+  from the official guide, the mark scheme tips and Khan Academy.
+  Pack questions set today: B1.2 HL Q13(b), Q9(a)-(e), star Q13(d); C1.1 HL Q10(a)-(d), Q16(a), star Q16(b).
+  Avoided because they are also in the mock exam practice paper (21 Nov selection uses some of them):
+  B1.2 HL Q1-Q8 (= mock Q1, 7, 8, 19, 22, 29, 31); C1.1 HL Q1, Q2, Q4-Q9 (= mock Q10, 11, 14, 16, 35, 38, 39, 48).
+  InThinking B1.2 and C1.1 topic tests are not used (kept for 2 Dec).
+  UNSURE:
+  1. Haemoglobin chain lengths (alpha 141, beta 146 amino acids) and insulin chain lengths (A 21, B 30) are standard
+     textbook values, not from a class file.
+  2. "Plant proteins are often low in one or more essential amino acids" is general nutrition knowledge (the guide only
+     says vegan diets need attention).
+  3. The Grade 11 Part 2 deck (unreadable) may present B1.2 and C1.1 in a different order or with extra examples.
+-->
+<style>
+  :root{
+    --paper:#F5F7F4; --ink:#1E2A33; --ink-soft:#4A5862; --rule:#D6DCD8;
+    --indigo:#2F47A6; --indigo-soft:#E6EAF7; --amber:#B8761A; --amber-soft:#FBF1DF;
+    --green:#2E7D4F; --green-soft:#E3F2E8; --red:#B23A3A; --red-soft:#F8E4E4;
+    --card:#FFFFFF;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;overflow-wrap:break-word}
+  h1,h2,h3,h4{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;line-height:1.2;margin:0 0 .4em;font-weight:600}
+  h1{font-size:2.3rem}
+  h2{font-size:1.75rem;margin-top:0}
+  h3{font-size:1.25rem;margin-top:1.8em}
+  h4{font-size:1.05rem;margin-top:1.4em;font-family:inherit;font-weight:700}
+  p{margin:0 0 1em}
+  a{color:var(--indigo)}
+  sup,sub{line-height:0}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
+
+  /* hero: an amino acid chain folding into an enzyme, which is the day's content */
+  .hero{background:#0B0F1A;color:#fff;padding:0 0 28px}
+  .banner{display:block;width:100%;height:auto;max-height:300px}
+  .hero .wrap{padding-top:18px;padding-bottom:0}
+  .hero h1{color:#fff}
+  .hero p{color:#C9D1E6;max-width:660px}
+  .hero .series{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:1.15rem;color:#F2C46D;margin:0 0 14px}
+  .meta{display:flex;flex-wrap:wrap;gap:8px 22px;color:#C9D1E6;font-size:.95rem;margin-top:8px}
+
+  nav.toc{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+  nav.toc .wrap{display:flex;gap:4px;flex-wrap:wrap;padding:8px 20px}
+  nav.toc a{text-decoration:none;color:var(--ink-soft);padding:6px 10px;border-radius:6px;font-size:.92rem}
+  nav.toc a:hover,nav.toc a:focus-visible{background:var(--indigo-soft);color:var(--indigo);outline:none}
+
+  .today{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--green);padding:12px 16px;margin:28px 0 10px}
+  .today p{margin:0 0 6px;font-weight:700}
+  .today ol{margin:0;padding-left:22px}
+
+  .plan{display:grid;grid-template-columns:1fr;gap:12px;margin:22px 0 8px}
+  .plan > div{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);padding:12px 16px}
+  .plan > div.brk{border-left-color:var(--green);background:var(--green-soft);padding:8px 16px}
+  .plan .bh{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-bottom:4px}
+  .plan .bh b{font-size:1.2rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+  .plan .bh span{font-weight:700;color:var(--indigo)}
+  .plan ol{margin:6px 0 0;padding-left:22px}
+  .plan li{margin:4px 0}
+  .plan .t{color:var(--ink-soft);font-size:.88rem;white-space:nowrap}
+  .star{color:var(--amber);font-weight:700}
+  .files{margin:16px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+  .files li a{display:inline-block;background:var(--card);border:1px solid var(--rule);padding:5px 10px;border-radius:999px;font-size:.9rem;text-decoration:none}
+  .files li a:hover{border-color:var(--indigo)}
+  .hl{display:inline-block;background:var(--indigo);color:#fff;font-size:.72rem;font-weight:700;padding:1px 6px;border-radius:3px;vertical-align:middle;margin-left:6px;font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif}
+  .note{background:var(--amber-soft);border:1px solid var(--amber);padding:10px 14px;margin:14px 0 0;font-size:.95rem}
+  .stuckbox{background:var(--card);border:1px dashed var(--indigo);padding:10px 14px;margin:14px 0;font-size:.95rem}
+  section.topic ul{padding-left:22px}
+  section.topic li{margin:4px 0}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 20px;background:var(--card);border:1px solid var(--rule);padding:10px 14px;font-size:.92rem;margin:16px 0}
+
+  section.topic{margin-top:56px;padding-top:28px;border-top:3px solid var(--ink)}
+  .kicker{color:var(--indigo);font-weight:700;letter-spacing:.01em;margin-bottom:4px}
+  .guiding{font-style:italic;color:var(--ink-soft);margin-bottom:18px}
+
+  .ican{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:0 0 24px}
+  .ican p{margin:0 0 8px;font-weight:700}
+  .ican label{display:flex;gap:10px;align-items:flex-start;padding:5px 0;cursor:pointer}
+  .ican input{margin-top:6px;width:16px;height:16px;flex:none;accent-color:var(--indigo)}
+
+  .learn{display:inline-block;font-size:.72rem;font-weight:700;padding:1px 7px;border-radius:3px;vertical-align:middle;margin-left:6px;white-space:nowrap;font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.01em;background:var(--amber);color:#fff}
+
+  table{border-collapse:collapse;width:100%;margin:12px 0 20px;font-size:.95rem;background:var(--card)}
+  th,td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#EDF0EC}
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+  figure{margin:20px 0;background:var(--card);border:1px solid var(--rule);padding:12px}
+  figure svg{display:block;width:100%;height:auto}
+  figcaption{font-size:.9rem;color:var(--ink-soft);margin-top:8px}
+
+  .tip{background:var(--amber-soft);border-left:5px solid var(--amber);padding:12px 16px;margin:18px 0}
+  .tip b:first-child{color:var(--amber)}
+  .worked{background:var(--indigo-soft);border-left:5px solid var(--indigo);padding:12px 16px;margin:18px 0}
+  .worked > b:first-child{color:var(--indigo)}
+  .worked ol{margin:6px 0 0;padding-left:22px}
+  .worked li{margin:3px 0}
+  .worked details,.finish details{margin:8px 0 0}
+  .finish{background:var(--card);border:1px solid var(--indigo);border-left:5px solid var(--indigo);padding:12px 16px;margin:12px 0 18px}
+  .finish > b:first-child{color:var(--indigo)}
+  .nw{white-space:nowrap}
+
+  details{background:var(--card);border:1px solid var(--rule);padding:10px 14px;margin:10px 0}
+  summary{cursor:pointer;font-weight:600}
+  details[open] summary{margin-bottom:8px}
+
+  .quiz .q,.quiz .written{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:12px 0}
+  .quiz .q > p,.quiz .written > p{font-weight:600;margin-bottom:8px}
+  .quiz button{display:block;width:100%;text-align:left;background:#F3F5F2;border:1px solid var(--rule);padding:8px 12px;margin:6px 0;border-radius:6px;font:inherit;cursor:pointer;color:var(--ink)}
+  .quiz button:hover,.quiz button:focus-visible{border-color:var(--indigo);outline:none}
+  .quiz button.right{background:var(--green-soft);border-color:var(--green)}
+  .quiz button.wrong{background:var(--red-soft);border-color:var(--red)}
+  .quiz .why{display:none;margin-top:8px;font-size:.95rem;color:var(--ink-soft)}
+  .quiz .q.done .why{display:block}
+  .score{font-weight:700;margin-top:14px}
+
+  .end{margin-top:56px;background:var(--card);border:1px solid var(--rule);padding:18px 20px}
+  .end ul{margin:8px 0 0;padding-left:20px}
+  @media (max-width:600px){h1{font-size:1.8rem}body{font-size:16px}th,td{padding:6px}}
+  @media print{nav.toc{position:static}details{break-inside:avoid}.quiz button{border:1px solid #999}}
+
+/*terms:start*/
+.term{border-bottom:2px dotted var(--indigo);cursor:pointer;border-radius:2px}
+.term:focus-visible{background:var(--indigo-soft)}
+@media (hover:hover){.term:hover{background:var(--indigo-soft)}}
+#termbox{display:none;position:fixed;left:10px;right:10px;bottom:10px;max-width:640px;margin:0 auto;background:var(--card);border:2px solid var(--indigo);border-radius:8px;padding:14px 16px 12px;box-shadow:0 8px 28px rgba(0,0,0,.22);z-index:60;max-height:60vh;overflow:auto}
+#termbox.on{display:block}
+#termbox .tb-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+#termbox .tb-h b{font-size:1.1rem;color:var(--indigo)}
+#termbox button{font:inherit;border:1px solid var(--rule);background:var(--paper);border-radius:8px;padding:4px 12px;cursor:pointer;flex:none;min-height:44px;min-width:44px}
+#termbox .tb-d{margin:8px 0 0;line-height:1.5}
+.before.block0{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:12px 16px;margin:12px 0}
+.before > details{background:transparent;border:0;padding:0;margin:0}
+.before > details > summary{display:grid;grid-template-columns:32px minmax(0,1fr) auto auto;align-items:center;gap:4px 10px;min-height:44px;list-style:none;cursor:pointer}
+.before > details > summary::-webkit-details-marker{display:none}
+.before > details > summary::after{content:"Hide";font-size:.85rem;font-weight:600;color:var(--indigo)}
+.before > details:not([open]) > summary::after{content:"Show"}
+.before .bn{flex:none;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--indigo);color:#fff;font-weight:700}
+.before .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.before .b0t{font-size:1.15rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-weight:600;color:var(--ink)}
+.before .bt{white-space:nowrap;font-size:.8rem;font-weight:700;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:4px;padding:2px 8px}
+.before .bgi{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);border-radius:8px;padding:12px 16px;margin:12px 0}
+.before .bgi h3{margin:0 0 6px;font-size:1.08rem}
+.before .bgi p{margin:6px 0}
+.before .bgi svg{max-width:100%;height:auto;display:block;margin:8px auto}
+.before .more{font-size:.95rem;color:var(--ink-soft)}
+.before .stuck{background:var(--amber-soft);border-radius:8px;padding:10px 14px}
+/*terms:end*/
+</style>
+<!--enhance:start--><meta name="color-scheme" content="light"><style>
+.warmup{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--amber);padding:12px 16px 4px;margin:24px 0}
+.warmup h2{margin:0 0 6px;font-size:1.3rem}
+.warmup .wu-how{font-size:.95rem;color:var(--ink-soft);margin:0 0 8px}
+.warmup ol{margin:0;padding-left:24px}
+.warmup li{margin:10px 0}
+.warmup .wu-m{font-size:.8rem;color:var(--ink-soft)}
+.warmup .wu-f{font-weight:600}
+.warmup details{margin-top:4px}
+.warmup summary{cursor:pointer;color:var(--indigo);font-size:.92rem}
+.warmup .wu-b{border-top:1px solid var(--rule);margin-top:6px;padding-top:6px}
+.warmup .wu-b a{font-size:.88rem;margin-left:6px;white-space:nowrap}
+.warmup .wu-foot{font-size:.92rem;margin:12px 0 8px}
+
+:root{--amber-ink:#8A6416}
+:focus-visible{outline:3px solid var(--indigo);outline-offset:2px}
+.quiz button:focus-visible,.quiz .q .cf button:focus-visible{outline:3px solid var(--indigo);outline-offset:2px}
+@media (hover:none){.quiz button:not(.right):not(.wrong):hover{border-color:var(--rule)}}
+.quiz button.right::before{content:"✓ Correct: ";font-weight:700;color:var(--green)}
+.quiz button.wrong::before{content:"✗ Your answer: ";font-weight:700;color:var(--red)}
+.quiz .q .qn{font-size:.8rem;font-weight:700;color:var(--ink-soft);margin-bottom:2px}
+.quiz .q .cf{margin:4px 0 10px}
+.quiz .q .cf .cfl-h{font-size:.88rem;font-weight:600;color:var(--ink-soft);margin-bottom:4px}
+.quiz .q .cf .cfb{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;max-width:420px}
+.quiz .q .cf button{display:block;width:100%;min-height:44px;margin:0;padding:6px 8px;text-align:center;font-size:.92rem;border:1px solid var(--rule);border-radius:8px;background:var(--card);color:var(--ink)}
+.quiz .q .cf button.on{background:var(--indigo-soft);border:2px solid var(--indigo);font-weight:700}
+.quiz .q .cf button:disabled{cursor:default;opacity:1;color:var(--ink-soft)}
+.quiz .q .cf button.on:disabled{color:var(--ink)}
+.quiz .cfh{font-size:.92rem;color:var(--ink-soft)}
+.quiz .cfr{margin-top:10px}
+.quiz .cfr ol{margin:6px 0 10px;padding-left:22px}
+.quiz .cfr li{margin:4px 0}
+.quiz .cfr li.sure{font-weight:600}
+.quiz .cfr .cfa{font-size:.9rem;color:var(--ink-soft);margin:8px 0}
+.quiz .cfr button.retry{display:inline-block;width:auto;min-height:44px;text-align:center;background:var(--indigo);color:#fff;border-color:var(--indigo);font-weight:700;padding:8px 16px}
+.wm{margin-top:8px;font-size:.92rem}
+.wm select{font:inherit;min-height:44px;padding:4px 6px;border:1px solid var(--rule);border-radius:8px;background:var(--card);color:var(--ink);max-width:100%}
+.notice{background:var(--amber-soft);border:1px solid var(--amber);color:var(--ink);padding:10px 14px;margin:12px 0;border-radius:8px;font-weight:600}
+
+:root{--amber-ink:#8A6416;--grey:#5F6B72;--purple:#6A3D9A;--green-ink:#256B43;--r-sm:4px;--r:8px}
+/* top bar: back to today, flashcards, progress, sheet */
+.sitebar{position:sticky;top:0;z-index:30;height:44px;background:var(--paper);box-shadow:0 1px 0 var(--rule)}
+.sitebar .sb{max-width:820px;height:44px;margin:0 auto;padding:0 10px;display:flex;align-items:stretch;gap:2px;overflow-x:auto;scrollbar-width:none;white-space:nowrap}
+.sitebar .sb::-webkit-scrollbar{display:none}
+.sitebar a{flex:none;display:flex;align-items:center;min-height:44px;padding:0 10px;color:var(--indigo);text-decoration:none;font:600 .95rem/1 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;border-radius:var(--r-sm)}
+.sitebar a.sb-home{font-weight:700}
+@media (hover:hover){.sitebar a:hover{background:var(--indigo-soft)}}
+/* guide section menu: one row that scrolls sideways, 44 px targets, current section marked */
+nav.toc{top:44px;z-index:29}
+nav.toc .wrap{display:flex;flex-wrap:nowrap;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;white-space:nowrap;padding:0 10px}
+nav.toc .wrap::-webkit-scrollbar{display:none}
+nav.toc a{flex:none;display:flex;align-items:center;min-height:44px;padding:12px 10px;line-height:1.2;border-radius:0}
+nav.toc a[href$="index.html"]{display:none}
+nav.toc a[aria-current]{color:var(--indigo);font-weight:700;background:var(--indigo-soft);box-shadow:inset 0 -3px 0 var(--indigo)}
+[id]{scroll-margin-top:56px}
+html:has(nav.toc) [id]{scroll-margin-top:100px}
+/* focus: always visible */
+:focus-visible{outline:3px solid var(--indigo)!important;outline-offset:2px!important}
+header.hero :focus-visible,header.top :focus-visible{outline-color:#F2C46D!important}
+/* readable text */
+main p,main li,.why{max-width:68ch}
+@media (max-width:600px){.wrap{padding-left:16px;padding-right:16px}}
+small{font-size:max(12px,.8em)}
+.sig small{font-size:max(12px,.62em)}
+/* hero: title first, then the picture (at most 30% of the screen height, as wide as the text column),
+   so the title and the Today card share the first screen; long intro paragraphs fold to 3 lines (tap to read) */
+header.hero{display:flex;flex-direction:column}
+header.hero > .wrap{order:-1;width:100%}
+header.hero > svg,header.hero > img{max-height:30vh;max-width:780px;margin:14px auto 0}
+header.hero p.fold{position:relative;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;cursor:pointer}
+header.hero p.fold::after{content:"more";position:absolute;right:0;bottom:0;padding:0 2px 0 28px;background:linear-gradient(90deg,rgba(11,15,26,0),#0B0F1A 22px);color:#F2C46D;font-weight:700}
+header.hero .wrap > p ~ p.fold{-webkit-line-clamp:2}
+header.hero p.fold.open{display:block;-webkit-line-clamp:unset}
+header.hero p.fold.open::after{content:none}
+@media (max-width:600px){header.hero > svg,header.hero > img{max-height:28vh} header.hero .meta{font-size:.85rem;gap:0 14px}}
+/* contrast: amber and grey text */
+body .tip b:first-child,body .src > b:first-child,body .star,body .col.l > h3,body .timer.low .tdisp{color:var(--amber-ink)}
+/* one badge system: Learn = solid amber; Given / in booklet = neutral outline; Apply = indigo outline; HL = purple outline; green = done */
+.badge,.fb,.learn,.tag,span.hl,.quiz .subj,.written .wsubj,.wsubj,.pill,.soon{display:inline-block;font:700 .8rem/1.4 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.01em;padding:1px 7px;border:1px solid currentColor;border-radius:var(--r-sm);background:var(--card);vertical-align:middle;white-space:nowrap}
+.learn,.badge.learn{background:var(--amber-ink);border-color:var(--amber-ink);color:#fff}
+.fb,.badge.apply{color:var(--indigo);border-color:var(--indigo)}
+.fb.given,.badge.given,.tag,.quiz .subj,.written .wsubj,.wsubj,.badge.subj{color:var(--ink);border-color:var(--grey)}
+span.hl,.badge.hl{color:var(--purple);border-color:var(--purple)}
+.pill{margin-left:6px}
+.p-done,.badge.done{color:var(--green-ink);border-color:var(--green);background:var(--green-soft)}
+.p-soon,.soon{color:var(--grey);border-color:var(--grey)}
+/* radii: 4 px small things, 8 px boxes */
+.today,.goals,.able,.todaycard,#termbox,.before .bgi,.before .stuck,.quiz button,.go,.notice,.btn,.timer button,.tl,.chip,.plan > div,.step,.block{border-radius:var(--r)}
+/* 44 px targets */
+.go{min-height:44px;display:inline-flex;align-items:center}
+main details>summary{min-height:44px;display:flex;align-items:center;cursor:pointer}
+ul.files a,.files li>a{display:inline-flex;align-items:center;min-height:44px}
+input[type=number],input[type=text],select{min-height:44px}
+#box a#src,a.src{display:inline-flex;align-items:center;min-height:44px}
+#termbox .tb-h button{min-height:44px;min-width:44px}
+.top .crumb{display:flex;flex-wrap:nowrap;align-items:center;gap:0 6px;overflow-x:auto;scrollbar-width:none;white-space:nowrap;margin-bottom:2px}
+.top .crumb::-webkit-scrollbar{display:none}
+.top .crumb a{flex:none;display:inline-flex;align-items:center;min-height:44px;padding-right:4px}
+/* timed blocks: one card for guide plans, review steps and mock plans */
+.plan > div,.block,.step{background:var(--card);border:1px solid var(--rule);padding:12px 16px}
+.plan > div.brk{background:var(--green-soft);border-color:var(--green)}
+.bh{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;margin-bottom:4px}
+.block > .bh{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:4px 10px;align-items:center}
+.plan .bh .bn,.step .bh .bn,.bh .bn{flex:none;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--indigo);color:#fff;font:700 1rem/1 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif}
+.plan .bh > b,.step .bh > b,.bh > b{font-size:1.15rem;line-height:1.25;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;color:var(--ink)}
+.plan .bh .bt,.step .bh .bt,.bh .bt{flex:none;display:inline-block;font:700 .8rem/1.4 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:var(--r-sm);padding:2px 8px}
+.bdone{display:flex;align-items:center;gap:10px;min-height:44px;margin:8px 0 0;padding-top:4px;border-top:1px solid var(--rule);font-weight:600;color:var(--ink-soft);cursor:pointer;max-width:none}
+.bdone input{width:20px;height:20px;margin:0;flex:none;accent-color:var(--green)}
+.block.is-done{border-color:var(--green)} .block.is-done .bn{background:var(--green)} .block.is-done .bdone{color:var(--green-ink)}
+.blocks{display:grid;gap:10px;margin:16px 0}
+.blocks > .block p{margin:4px 0 0}
+.brkc{background:var(--green-soft);border:1px solid var(--green);border-radius:var(--r);padding:8px 16px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* Today card on guides: goals, plan chips, warm-up */
+.todaycard{background:var(--card);border:2px solid var(--indigo);padding:14px 16px 6px;margin:20px 0 10px}
+.todaycard .tc-goals > *{background:transparent!important;border:0!important;padding:0!important;margin:0!important;box-shadow:none!important;border-radius:0!important}
+.todaycard .tc-goals h2,.todaycard .tc-goals h3,.todaycard .tc-goals > * > p:first-child,.todaycard .tc-goals > * > b:first-child{display:block;font:600 1.25rem/1.25 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;color:var(--ink);margin:0 0 6px}
+.todaycard .tc-goals ol,.todaycard .tc-goals ul{margin:0;padding-left:22px}
+.todaycard .tc-goals li{margin:3px 0}
+.todaycard .tc-plan{margin:0 0 12px;padding-bottom:12px;border-bottom:1px solid var(--rule)}
+@media (max-width:600px){.todaycard .chips{display:grid;grid-template-columns:1fr 1fr;gap:6px}.todaycard .chip{padding:4px 10px;font-size:.9rem}.todaycard .chip.c0{grid-column:1 / -1}}
+.todaycard .tc-h{font-weight:700;margin:0 0 6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:4px;min-height:44px;padding:4px 12px;border:1px solid var(--indigo);background:var(--card);color:var(--indigo);text-decoration:none;font-size:.95rem;line-height:1.2}
+.chip b{font-weight:700}
+.chip.done{border-color:var(--green);color:var(--green-ink);background:var(--green-soft)}
+.chip.done::before{content:"\2713";font-weight:700}
+.todaycard .warmup{border:0;border-top:1px solid var(--rule);border-radius:0;padding:12px 0 4px;margin:12px 0 0;background:transparent}
+.todaycard .tc-plan + .warmup{border-top:0;margin-top:0;padding-top:0}
+.todaycard .warmup h2{font-size:1.15rem}
+.sitebar + .notice{margin:8px max(16px,calc((100% - 780px) / 2))}
+@media print{.sitebar,.notice,#termbox,.go,.chips,.bdone{display:none!important}nav.toc{position:static}.quiz button{display:list-item}.todaycard{border-width:1px}}
+</style><!--enhance:end-->
+</head>
+<body><!--enhance:start--><nav class="sitebar" aria-label="Study site"><div class="sb"><a class="sb-home" href="../index.html#today">← Today</a><a href="../flashcards.html">Flashcards</a><a href="../progress.html">Progress</a><a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">Sheet</a></div></nav><!--enhance:end-->
+
+
+<header class="hero">
+<svg class="banner" viewBox="0 0 1000 330" role="img" aria-label="A chain of amino acids (primary structure) coils into an alpha helix held by hydrogen bonds (secondary structure) and folds into a globular enzyme whose active site fits a substrate (tertiary structure)">
+<rect width="1000" height="330" fill="#0B0F1A"/>
+<polyline points="50,132 92,168 134,132 176,168 218,132 260,168 302,132" fill="none" stroke="#C9D1E6" stroke-width="5"/>
+<circle cx="50" cy="132" r="17" fill="#E39A5E"/>
+<circle cx="92" cy="168" r="17" fill="#7FC98A"/>
+<circle cx="134" cy="132" r="17" fill="#6F8EF0"/>
+<circle cx="176" cy="168" r="17" fill="#E39A5E"/>
+<circle cx="218" cy="132" r="17" fill="#6F8EF0"/>
+<circle cx="260" cy="168" r="17" fill="#7FC98A"/>
+<circle cx="302" cy="132" r="17" fill="#E39A5E"/>
+<path d="M330,150 H370" stroke="#F2C46D" stroke-width="5"/><polygon points="370,140 386,150 370,160" fill="#F2C46D"/>
+<line x1="422.2" y1="82" x2="422.2" y2="218" stroke="#F2C46D" stroke-width="3" stroke-dasharray="6 5"/>
+<line x1="467.2" y1="82" x2="467.2" y2="218" stroke="#F2C46D" stroke-width="3" stroke-dasharray="6 5"/>
+<line x1="512.2" y1="82" x2="512.2" y2="218" stroke="#F2C46D" stroke-width="3" stroke-dasharray="6 5"/>
+<line x1="557.2" y1="82" x2="557.2" y2="218" stroke="#F2C46D" stroke-width="3" stroke-dasharray="6 5"/>
+<polyline points="405.0,150.0 406.0,157.7 407.0,165.2 408.0,172.4 409.0,179.1 410.0,185.4 411.0,190.9 412.0,195.6 413.0,199.4 414.0,202.3 415.0,204.2 416.0,205.0 417.0,204.7 418.0,203.4 419.0,201.0 420.0,197.6 421.0,193.3 422.0,188.2 423.0,182.3 424.0,175.8 425.0,168.8 426.0,161.4 427.0,153.8 428.0,146.2 429.0,138.6 430.0,131.2 431.0,124.2 432.0,117.7 433.0,111.8 434.0,106.7 435.0,102.4 436.0,99.0 437.0,96.6 438.0,95.3 439.0,95.0 440.0,95.8 441.0,97.7 442.0,100.6 443.0,104.4 444.0,109.1 445.0,114.6 446.0,120.9 447.0,127.6 448.0,134.8 449.0,142.3 450.0,150.0 451.0,157.7 452.0,165.2 453.0,172.4 454.0,179.1 455.0,185.4 456.0,190.9 457.0,195.6 458.0,199.4 459.0,202.3 460.0,204.2 461.0,205.0 462.0,204.7 463.0,203.4 464.0,201.0 465.0,197.6 466.0,193.3 467.0,188.2 468.0,182.3 469.0,175.8 470.0,168.8 471.0,161.4 472.0,153.8 473.0,146.2 474.0,138.6 475.0,131.2 476.0,124.2 477.0,117.7 478.0,111.8 479.0,106.7 480.0,102.4 481.0,99.0 482.0,96.6 483.0,95.3 484.0,95.0 485.0,95.8 486.0,97.7 487.0,100.6 488.0,104.4 489.0,109.1 490.0,114.6 491.0,120.9 492.0,127.6 493.0,134.8 494.0,142.3 495.0,150.0 496.0,157.7 497.0,165.2 498.0,172.4 499.0,179.1 500.0,185.4 501.0,190.9 502.0,195.6 503.0,199.4 504.0,202.3 505.0,204.2 506.0,205.0 507.0,204.7 508.0,203.4 509.0,201.0 510.0,197.6 511.0,193.3 512.0,188.2 513.0,182.3 514.0,175.8 515.0,168.8 516.0,161.4 517.0,153.8 518.0,146.2 519.0,138.6 520.0,131.2 521.0,124.2 522.0,117.7 523.0,111.8 524.0,106.7 525.0,102.4 526.0,99.0 527.0,96.6 528.0,95.3 529.0,95.0 530.0,95.8 531.0,97.7 532.0,100.6 533.0,104.4 534.0,109.1 535.0,114.6 536.0,120.9 537.0,127.6 538.0,134.8 539.0,142.3 540.0,150.0 541.0,157.7 542.0,165.2 543.0,172.4 544.0,179.1 545.0,185.4 546.0,190.9 547.0,195.6 548.0,199.4 549.0,202.3 550.0,204.2 551.0,205.0 552.0,204.7 553.0,203.4 554.0,201.0 555.0,197.6 556.0,193.3 557.0,188.2 558.0,182.3 559.0,175.8 560.0,168.8 561.0,161.4 562.0,153.8 563.0,146.2 564.0,138.6 565.0,131.2 566.0,124.2 567.0,117.7 568.0,111.8 569.0,106.7 570.0,102.4 571.0,99.0 572.0,96.6 573.0,95.3 574.0,95.0 575.0,95.8 576.0,97.7 577.0,100.6 578.0,104.4 579.0,109.1 580.0,114.6 581.0,120.9 582.0,127.6 583.0,134.8 584.0,142.3 585.0,150.0" fill="none" stroke="#9FD8DB" stroke-width="9" stroke-linecap="round"/>
+<path d="M610,150 H650" stroke="#F2C46D" stroke-width="5"/><polygon points="650,140 666,150 650,160" fill="#F2C46D"/>
+<path d="M700,150 C700,80 760,52 820,60 C880,68 905,95 905,120 L870,120 L858,150 L870,180 L905,180 C905,215 875,245 815,245 C755,245 700,220 700,150 Z" fill="#6F8EF0"/>
+<path d="M930,120 L918,150 L930,180 L975,180 L975,120 Z" fill="#E5534B"/>
+<g font-family="Arial,Helvetica,sans-serif" font-size="30" fill="#C9D1E6" text-anchor="middle">
+<text x="176" y="270">primary</text><text x="495" y="270">secondary</text><text x="800" y="290">tertiary</text>
+</g>
+<g font-family="Arial,Helvetica,sans-serif" font-size="24" fill="#F2C46D">
+<text x="760" y="40">active site</text><text x="905" y="225">substrate</text>
+</g>
+<path d="M868,46 L870,112" stroke="#F2C46D" stroke-width="2"/>
+</svg>
+  <div class="wrap">
+    <p class="series">One chain of amino acids coils, folds and becomes an enzyme with an active site.</p>
+    <h1>Biology HL: proteins and enzymes</h1>
+    <p>Study guide for Wednesday 18 November 2026. The picture is today's whole story. On the left, amino acids joined in a chain: the primary structure (B1.2). In the middle, the chain coils into an alpha helix held by hydrogen bonds: secondary structure. On the right, it folds into a 3D shape with a pocket, the active site, that fits one substrate: an enzyme (C1.1).</p>
+    <div class="meta"><span>About 2 hours</span><span>B1.2 and C1.1, SL and HL, HL parts marked</span><span>Checked against the official IB Biology guide on ibo.org</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <a href="../index.html" style="font-weight:700;color:var(--indigo)">All days</a><a href="#plan">Plan</a><a href="#b12">B1.2 Proteins</a><a href="#b12hl">B1.2 HL</a><a href="#c11">C1.1 Enzymes</a><a href="#c11hl">C1.1 HL</a><a href="#quiz">Quiz</a><a href="#end">Finish</a>
+  </div>
+</nav>
+
+<main class="wrap"><!--enhance:start-->
+<section class="todaycard" aria-label="Today"><div class="tc-plan"><p class="tc-h">Today: tap a block to jump to it</p><div class="chips"><a class="chip c0" href="#before"><b>Block 0</b> · Before you start</a><a class="chip" href="#wu"><b>Warm-up</b> · 8 min</a><a class="chip" href="#b1" data-n="1"><b>Block 1</b> · 30 min</a><a class="chip" href="#b2" data-n="2"><b>Block 2</b> · 29 min</a><a class="chip" href="#b3" data-n="3"><b>Block 3</b> · 29 min</a><a class="chip" href="#b4" data-n="4"><b>Block 4</b> · 29 min</a></div></div><div class="tc-goals"><!--enhance:end--><!--enhance:moved--><div class="today">
+  <p>Today you will be able to</p>
+  <ol>
+    <li><span class="term" data-t="draw" tabindex="0" role="button">draw</span> an <span class="term" data-t="amino acid" tabindex="0" role="button">amino acid</span> and a <span class="term" data-t="dipeptide" tabindex="0" role="button">dipeptide</span>, and <span class="term" data-t="explain" tabindex="0" role="button">explain</span> how heat and <span class="term" data-t="ph" tabindex="0" role="button">pH</span> <span class="term" data-t="denatured" tabindex="0" role="button">denature</span> a <span class="term" data-t="protein" tabindex="0" role="button">protein</span>;</li>
+    <li>(HL) explain how the amino acid <span class="term" data-t="sequence" tabindex="0" role="button">sequence</span> and four kinds of bonds give a protein its shape, from primary to quaternary structure;</li>
+    <li>explain how <span class="term" data-t="enzyme" tabindex="0" role="button">enzymes</span> work, how temperature, pH, <span class="term" data-t="substrate" tabindex="0" role="button">substrate</span> concentration and (HL) <span class="term" data-t="inhibitor" tabindex="0" role="button">inhibitors</span> change the rate, and <span class="term" data-t="calculate" tabindex="0" role="button">calculate</span> a rate.</li>
+  </ol>
+</div><!--enhance:/moved--><!--enhance:start--></div>
+<section class="warmup" id="wu" aria-label="Warm-up from earlier days">
+<h2>Warm-up from earlier days (8 min)</h2>
+<p class="wu-how">Answer from memory before you read on: write the answer on paper, then tap to check it.</p><ol>
+<li><div class="wu-m">Maths · SL 2.3 · from Tue 17 Nov</div><div class="wu-f">What must every sketch of a graph show?</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">Labelled axes, intercepts, turning points, asymptotes (dashed, with equations), end points of a restricted domain, and the right shape at both ends. <a href="../guides/2026-11-10-maths-aa-sl-2.2-2.5.html#s23">open the section</a></div></details></li>
+<li><div class="wu-m">Psychology · Cognitive models · from Mon 16 Nov</div><div class="wu-f">Official statement: cognitive models (Table 4.12, p33)</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">"Cognitive models: The value of one or more cognitive models in understanding one or more cognitive processes." <a href="../guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#mem">open the section</a></div></details></li>
+<li><div class="wu-m">Biology · A1.2 · from Wed 11 Nov</div><div class="wu-f">(HL) What is at the 5′ end and at the 3′ end of a strand? Which end grows?</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">5′ end: phosphate on carbon 5′. 3′ end: sugar with a free -OH on carbon 3′. New nucleotides are added only to the 3′ end, so strands grow 5′ to 3′. <a href="../guides/2026-11-05-biology-hl-a1.1-a1.2.html#a12hl">open the section</a></div></details></li>
+<li><div class="wu-m">Biology · A1.2 · from Wed 11 Nov</div><div class="wu-f">(HL) Structure of a nucleosome</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">DNA wound about twice round a core of eight histone proteins (two each of four types), held by an H1 histone, with linker DNA to the next nucleosome. Prokaryotes have none. <a href="../guides/2026-11-05-biology-hl-a1.1-a1.2.html#a12hl">open the section</a></div></details></li>
+<li><div class="wu-m">Psychology · Paper 1 exam technique · from Mon 16 Nov</div><div class="wu-f">Section A markband, 3-4 marks (guide p45)</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">"The response demonstrates detailed knowledge relevant to the question." "The example is relevant and explained." <a href="../guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#technique">open the section</a></div></details></li>
+</ol>
+<p class="wu-foot">Missed one? Put it in the <a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">Error log</a>.</p></section>
+</section><!--enhance:end-->
+
+
+<!--enhance:origin-->
+<div id="warmup"></div>
+
+
+<section id="plan">
+  <h2 style="margin-top:28px">How to spend the two hours</h2>  <div class="note"><b>What this page was checked against.</b> The official <a href="https://www.ibo.org/globalassets/new-structure/university-admission/pdfs/subject-guides/biology-guide.pdf">IB Biology guide (first assessment 2025)</a>, which the IB publishes free on ibo.org, and your class mark schemes. A copy is also in your Biology folder: <a href="https://drive.google.com/file/d/1F7GqAtoP27a_CmFNtSiCDtE6-Z3JDBPo/view">REF - IB Biology Subject Guide (official, first assessment 2025)</a>. The statement codes and titles below are the official ones; the explanations are written for you in plain words. Your teacher's Part 2 slides could not be opened, so if your teacher taught something differently, follow your teacher and tell Lars.</div>
+  <p style="margin:10px 0 0">Four blocks with a short break. Tick each step off on paper. Pack work is planned at 1.5 minutes a mark. Steps marked <span class="star">★ If time</span> are extras. <b>Short on time: skip ★ steps, still do the quiz.</b></p>
+  <div class="plan"><!--terms:start--><div id="before" class="before block0"><details open>
+  <summary><span class="bn" aria-hidden="true">0</span><span class="b0t"><span class="sr">Block 0: </span>Before you start</span><span class="bt">about 7 min</span></summary>
+  <p style="margin:10px 0 0">This page builds on the ideas below. Read them first so you do not have to stop later (about 7 min, not counted in the blocks below). Words with a <span style="border-bottom:2px dotted var(--indigo)">dotted underline</span> anywhere on the page: tap them for a short explanation.</p>
+  <div class="bgi"><h3>Atoms, molecules and bonds</h3><p>Everything is made of tiny particles called <b><span class="term" data-t="atom" tabindex="0" role="button">atoms</span></b>: carbon (C), hydrogen (H), oxygen (O), nitrogen (N) and sulfur (S) are the ones in proteins. Atoms join into <b>molecules</b>.</p><ul><li><b><span class="term" data-t="covalent bond" tabindex="0" role="button">Covalent bond</span></b>: two atoms share electrons. Strong. It holds the atoms of one molecule together, drawn as a solid line, like C-N.</li><li><b><span class="term" data-t="hydrogen bond" tabindex="0" role="button">Hydrogen bond</span></b>: a weak attraction between a slightly positive H and a slightly negative O or N nearby.</li><li><b><span class="term" data-t="ionic bond" tabindex="0" role="button">Ionic bond</span></b>: the attraction between a positive and a negative charge.</li></ul><p>Rule of thumb: strong covalent bonds build a chain; many weak bonds decide how the chain folds.</p></div><div class="bgi"><h3>Charges, polar and non-polar</h3><p>Opposite <span class="term" data-t="charge" tabindex="0" role="button">charges</span> (+ and −) attract; like charges push apart. A group of atoms is <b><span class="term" data-t="polar" tabindex="0" role="button">polar</span></b> when it has a slightly positive end and a slightly negative end, for example −OH. Polar and charged groups are attracted to water: they are <b><span class="term" data-t="hydrophilic" tabindex="0" role="button">hydrophilic</span></b> (water-loving).</p><p>Groups made only of carbon and hydrogen, such as −CH<sub>3</sub>, have no charged ends: they are <b><span class="term" data-t="non-polar" tabindex="0" role="button">non-polar</span></b> and <b><span class="term" data-t="hydrophobic" tabindex="0" role="button">hydrophobic</span></b> (water-hating). In water they cluster together, like oil drops.</p></div><div class="bgi"><h3>Monomers, polymers, condensation and hydrolysis</h3><p>A <b><span class="term" data-t="polymer" tabindex="0" role="button">polymer</span></b> is a long chain of small repeating units, the <b><span class="term" data-t="monomer" tabindex="0" role="button">monomers</span></b>, like beads on a string. Proteins are polymers of amino acids; starch and <span class="term" data-t="glycogen" tabindex="0" role="button">glycogen</span> are polymers of glucose.</p><p>A <b><span class="term" data-t="condensation" tabindex="0" role="button">condensation</span></b> reaction joins two monomers and releases a water molecule. <b><span class="term" data-t="hydrolysis" tabindex="0" role="button">Hydrolysis</span></b> is the opposite: water is used to split the bond, as in digestion.</p></div><div class="bgi"><h3>Chemical reactions, energy and catalysts</h3><p>In a <b>chemical reaction</b>, bonds break and new bonds form. The starting molecules are reactants (for an enzyme: the <b>substrate</b>); the new ones are <b>products</b>.</p><p>Every reaction needs a push of energy to get started, even one that releases energy overall, like a match that must be struck before it burns. A <b><span class="term" data-t="catalyst" tabindex="0" role="button">catalyst</span></b> makes a reaction go faster without being used up. In living things the catalysts are <b>enzymes</b>, which are proteins.</p></div><div class="bgi"><h3>Genes decide the order of amino acids</h3><p>A <b>gene</b> is a section of <span class="term" data-t="dna" tabindex="0" role="button">DNA</span>. Its order of bases is a code for the order of amino acids in one <span class="term" data-t="polypeptide" tabindex="0" role="button">polypeptide</span>. The cell reads the gene and joins amino acids in that order at a ribosome.</p><p>So a change in the DNA (a <b><span class="term" data-t="mutation" tabindex="0" role="button">mutation</span></b>) can change one amino acid in the protein. You learn how the code is read in D1.2; today you only need: gene → order of amino acids → shape of the protein.</p></div><div class="bgi"><h3>pH: acid, neutral, alkaline</h3><p>The <b>pH</b> scale runs from about 0 to 14. pH 7 is neutral (pure water); below 7 is <span class="term" data-t="acidic" tabindex="0" role="button">acidic</span> (stomach juice is about pH 2); above 7 is alkaline.</p><p>Acids contain many hydrogen ions, H<sup>+</sup>. Groups on a protein can pick up or lose H<sup>+</sup>, which changes their charge. That is why pH can change a protein's shape.</p></div><div class="bgi"><h3>Rates, units and sketch graphs</h3><p>A <b>rate</b> is how much something changes per unit of time. In units, a power of −1 means "per": cm<sup>3</sup> s<sup>−1</sup> is read "cubic centimetres per second".</p><p>A <b><span class="term" data-t="sketch" tabindex="0" role="button">sketch</span> graph</b> shows the shape of a relationship without exact numbers: rising, peaking, levelling off. The thing you change goes on the x-axis (across), the thing you measure on the y-axis (up).</p><p>Percentage change: (difference ÷ starting value) × 100.</p></div>
+  <p class="stuck"><b>Still stuck on a word?</b> Do not search for long. Write it in the <b>Error log</b> tab of the study sheet starting with "word:" (for example "word: composition") and carry on. It will be explained in the next guide.</p>
+</details></div><!--terms:end-->
+
+    <div id="b1">
+      <div class="bh"><b>Block 1 · 30 min</b><span>B1.2 Proteins: learn it</span></div>
+      <ol>
+        <li>Read <a href="#b12">B1.2.1 to B1.2.5</a>. Then draw an amino acid and a dipeptide from memory and <span class="term" data-t="compare" tabindex="0" role="button">compare</span> with the figures. <span class="t">(6 min)</span></li>
+        <li>Do the "Finish it" items and <a href="#check12">Self-check B1.2</a>: write two key words for each question on paper, then open it. <span class="t">(3 min)</span></li>
+        <li>Read the <a href="#b12hl">B1.2 HL part</a>. The bonds table and the <span class="term" data-t="globular" tabindex="0" role="button">globular</span> and <span class="term" data-t="fibrous" tabindex="0" role="button">fibrous</span> table are "Learn". <span class="t">(9 min)</span></li>
+        <li>"Finish it" items and <a href="#check12hl">Self-check B1.2 HL</a>, same way. <span class="t">(3 min)</span></li>
+        <li>Open the <a href="https://drive.google.com/file/d/1akQqhFxyv-Br_QT6gVbuRUOk0fDtkE5Y/view">B1.2 Proteins HL pack</a> and do <b>question 13(b)</b> (2 marks) on paper. Mark it with the <a href="https://drive.google.com/file/d/1neUWjQfWI5VM8Pr1II-OXGtiEmgZiC78/view">B1.2 HL mark scheme</a>. <span class="t">(4 min)</span></li>
+        <li><span class="star">★ If time:</span> Khan Academy, <a href="https://www.khanacademy.org/science/biology/macromolecules/proteins-and-amino-acids/a/orders-of-protein-structure">Orders of protein structure</a>: look only at the alpha helix, beta pleated sheet and tertiary structure diagrams. Skip sickle cell anaemia, proline and the "Want to learn more" parts: not needed for the IB exam. Khan calls the amine group the "amino group" and writes US spelling (hemoglobin). <span class="t">(5 min)</span></li>
+      </ol>
+    </div>
+    <div id="b2">
+      <div class="bh"><b>Block 2 · 29 min</b><span>B1.2 exam practice</span></div>
+      <ol>
+        <li>In the <a href="https://drive.google.com/file/d/1akQqhFxyv-Br_QT6gVbuRUOk0fDtkE5Y/view">B1.2 HL pack</a> do <b>question 9(a) to 9(e)</b> (13 marks) on paper. For 9(e), worth 6 marks, plan first: one line per kind of bond, saying between which groups it forms. <span class="t">(19 min)</span></li>
+        <li>Mark with the <a href="https://drive.google.com/file/d/1neUWjQfWI5VM8Pr1II-OXGtiEmgZiC78/view">B1.2 HL mark scheme</a>. Each [1 mark] line is one idea; you get it only if your answer says that idea. 9(e) is "any six of" seven points. <span class="t">(4 min)</span></li>
+        <li>Error log: one row per lost mark, with its type (see <a href="#end">Finish</a>). <span class="t">(1 min)</span></li>
+        <li>Fix-it: rewrite one answer that lost marks so it would get full marks. <span class="t">(2 min)</span></li>
+        <li><span class="star">★ If time:</span> question 13(d) (2 marks), then mark it: the mark scheme shows the working. <span class="t">(3 min)</span></li>
+      </ol>
+    </div>
+    <div class="brk"><b>Break · 3 min.</b> Stand up, drink some water, look out of a window. No phone.</div>
+    <div id="b3">
+      <div class="bh"><b>Block 3 · 29 min</b><span>C1.1 Enzymes: learn it, then a data question</span></div>
+      <ol>
+        <li>Read <a href="#c11">C1.1.1 to C1.1.10</a>. Sketch the three rate graphs from memory once. <span class="t">(8 min)</span></li>
+        <li>"Finish it" items and <a href="#check11">Self-check C1.1</a>: two key words each, then open. <span class="t">(3 min)</span></li>
+        <li>Open the <a href="https://drive.google.com/file/d/13qg60J1odzTkDIDiyujJlONsVCyt-eem/view">C1.1 Enzymes HL pack</a> and do <b>question 10(a) to 10(d)</b> (8 marks): the pepsin graph. In 10(a) give the units. <span class="t">(12 min)</span></li>
+        <li>Mark with the <a href="https://drive.google.com/file/d/1DgkqjNngIKSiV6Lityt-hnozdafoZeCz/view">C1.1 HL mark scheme</a> and log each lost mark with its type. <span class="t">(4 min)</span></li>
+        <li><span class="star">★ If time:</span> skim the first half of the <a href="https://drive.google.com/file/d/1meJNCi9WbEl-xS0APA0aHqWE1rnbOyds/view">C1.1 summary notes</a> (up to "Effect of Enzymes on <span class="term" data-t="activation energy" tabindex="0" role="button">Activation Energy</span>") for the lock-and-key and induced-fit pictures. <span class="t">(2 min)</span></li>
+      </ol>
+    </div>
+    <div id="b4">
+      <div class="bh"><b>Block 4 · 29 min</b><span>C1.1 HL: inhibition and pathways, then the quiz</span></div>
+      <ol>
+        <li>Read the <a href="#c11hl">C1.1 HL part</a>. The inhibition table is "Learn". <span class="t">(6 min)</span></li>
+        <li>"Finish it" item and <a href="#check11hl">Self-check C1.1 HL</a>. <span class="t">(2 min)</span></li>
+        <li><a href="https://drive.google.com/file/d/13qg60J1odzTkDIDiyujJlONsVCyt-eem/view">C1.1 HL pack</a> <b>question 16(a)</b> (3 marks); mark with the <a href="https://drive.google.com/file/d/1DgkqjNngIKSiV6Lityt-hnozdafoZeCz/view">mark scheme</a> and log. <span class="t">(6 min)</span></li>
+        <li><span class="star">★ If time:</span> question 16(b) (3 marks), then mark it. <span class="t">(5 min)</span></li>
+        <li>The <a href="#quiz">quiz</a>: 7 multiple-choice questions, then 3 written ones on paper with model answers. <span class="t">(9 min)</span></li>
+        <li>Error log rows for the quiz. <span class="t">(1 min)</span></li>
+      </ol>
+    </div>
+  </div>
+  <p><b>Files for today in the IB folder</b></p>
+  <ul class="files">
+    <li><a href="https://drive.google.com/file/d/1akQqhFxyv-Br_QT6gVbuRUOk0fDtkE5Y/view">B1.2 Proteins HL questions</a></li>
+    <li><a href="https://drive.google.com/file/d/1neUWjQfWI5VM8Pr1II-OXGtiEmgZiC78/view">B1.2 HL mark scheme</a></li>
+    <li><a href="https://drive.google.com/file/d/13qg60J1odzTkDIDiyujJlONsVCyt-eem/view">C1.1 Enzymes HL questions</a></li>
+    <li><a href="https://drive.google.com/file/d/1DgkqjNngIKSiV6Lityt-hnozdafoZeCz/view">C1.1 HL mark scheme</a></li>
+    <li><a href="https://drive.google.com/file/d/1meJNCi9WbEl-xS0APA0aHqWE1rnbOyds/view">C1.1 summary notes</a></li>
+  </ul>
+  <div class="note"><b>Skip these today.</b> B1.2 pack questions 1 and 3 to 8 and C1.1 pack questions 1, 2 and 4 to 9 are also in the <b>mock exam practice paper</b> (some are in the Saturday 21 November selection): leave them so the mock stays unseen. Do not open the InThinking B1.2 and C1.1 topic tests either: they are your timed check on Wednesday 2 December.</div>
+  <div class="stuckbox"><b>Stuck?</b> Look at the worked example above the question. Then redo that section's self-check. Still stuck after 10 minutes: write it in the Error log as "ask teacher" and move on.</div>
+  <div class="legend" aria-label="Legend for the markers">
+    <span><span class="learn" style="margin-left:0">Learn</span> a fact or definition to know by heart. The official guide lists no data booklet for Biology, so learn it all.</span>
+    <span><span class="hl" style="margin-left:0">HL</span> Higher Level only</span>
+  </div>
+  <details>
+    <summary>Extra, not needed today</summary>
+    <p><b>Exam format (official guide, HL).</b> Paper 1, 2 hours, 75 marks, 36%: Paper 1A is 40 multiple-choice questions, Paper 1B is four data-based questions (35 marks). Paper 2, 2 hours 30 minutes, 80 marks, 44%: Section A data-based and short-answer questions (48 marks), Section B extended-response questions, two of three (32 marks). Internal assessment 20%. The quiz below is in Paper 1A style plus short Paper 2 style items.</p>
+    <p><b>Statement numbers.</b> B1.2 has statements 1 to 5 for everyone and 6 to 12 for HL only. C1.1 has 1 to 10 for everyone and 11 to 17 for HL only.</p>
+    <p><b>Your teacher's slides.</b> The Term 1 slide deck stops at B1.1. The Part 2 deck, which probably covers B1.2 and C1.1, could not be opened, so it is not used today.</p>
+    <p><b>Extra free reading (optional).</b> All free, no login needed, checked on 8 November. They use US spelling and say "amino group" where the IB says "amine group".</p>
+    <ul>
+      <li><a href="https://www.khanacademy.org/science/biology/macromolecules/proteins-and-amino-acids/a/introduction-to-proteins-and-amino-acids">Khan Academy: Introduction to proteins and amino acids</a> (B1.2.1, B1.2.2). The parts on charges at pH 7.4 and on named amino acids are not needed for the IB exam.</li>
+      <li><a href="https://www.khanacademy.org/science/biology/macromolecules/proteins-and-amino-acids/a/orders-of-protein-structure">Khan Academy: Orders of protein structure</a> (B1.2.7 to B1.2.11). Sickle cell anaemia belongs to a later topic.</li>
+      <li><a href="https://www.khanacademy.org/science/biology/energy-and-enzymes/introduction-to-enzymes/a/enzymes-and-the-active-site">Khan Academy: Enzymes and the active site</a> (C1.1.4 to C1.1.10). "ΔG" is not needed for the IB exam.</li>
+      <li><a href="https://www.khanacademy.org/science/ap-biology/cellular-energetics/environmental-impacts-on-enzyme-function/a/enzyme-regulation">Khan Academy: Enzyme regulation</a> (C1.1.14 to C1.1.16). Cofactors, coenzymes and compartmentalisation are not needed for the IB exam.</li>
+      <li><a href="https://www.ibo.org/programmes/diploma-programme/curriculum/sciences/biology/">IB Biology page on ibo.org</a> and the <a href="https://www.ibo.org/globalassets/new-structure/university-admission/pdfs/subject-guides/biology-guide.pdf">official Biology guide (PDF)</a>: B1.2 is on the pages headed "B1.2 Proteins", C1.1 under "C1.1 Enzymes and metabolism".</li>
+    </ul>
+  </details>
+</section>
+
+<!-- =============================== B1.2 SL =============================== -->
+<section class="topic" id="b12">
+  <div class="kicker">B1.2 · SL and HL</div>
+  <h2>Proteins</h2>
+  <p class="guiding">Official guiding question: What is the relationship between amino acid sequence and the diversity in form and function of proteins?</p>
+
+  <div class="ican">
+    <p>By the end of this section (official statement, then what it means for you):</p>
+    <label><input type="checkbox" data-k="p1"><span><b>B1.2.1</b> Generalized structure of an amino acid. I can draw a generalised amino acid: the alpha carbon with an amine group, a carboxyl group, an R-group and a hydrogen atom</span></label>
+    <label><input type="checkbox" data-k="p2"><span><b>B1.2.2</b> Condensation reactions forming dipeptides and longer chains of amino acids. I can write the word equation for joining two amino acids by condensation, and draw a dipeptide with its peptide bond</span></label>
+    <label><input type="checkbox" data-k="p3"><span><b>B1.2.3</b> Dietary requirements for amino acids. I can explain the difference between essential and non-essential amino acids, and why vegan diets need care</span></label>
+    <label><input type="checkbox" data-k="p4"><span><b>B1.2.4</b> Infinite variety of possible peptide chains. I can explain why the number of possible peptide chains is almost infinite, and work out 20<sup>n</sup></span></label>
+    <label><input type="checkbox" data-k="p5"><span><b>B1.2.5</b> Effect of pH and temperature on protein structure. I can explain how high temperature and a change in pH denature a protein</span></label>
+  </div>
+
+  <h3>B1.2.1 Generalized structure of an amino acid</h3>
+  <p>Proteins are polymers, and their monomers are amino acids. Every amino acid has the same <span class="term" data-t="core" tabindex="0" role="button">core</span>: one central carbon atom, the <b>alpha carbon</b>, with four things bonded to it: an <b>amine group</b> (−NH<sub>2</sub>), a <b>carboxyl group</b> (−COOH), a <b>hydrogen atom</b> and an <b>R-group</b>.<span class="learn">Learn</span> Only the R-group differs between the 20 amino acids, so the R-group gives each amino acid its properties.</p>
+  <figure>
+<svg viewBox="0 0 700 330" role="img" aria-label="Generalised amino acid: a central alpha carbon bonded to an amine group NH2 on the left, a carboxyl group COOH on the right, an R-group above and a hydrogen atom below.">
+<rect width="700" height="330" fill="#fff"/>
+<rect x="95" y="105" width="185" height="160" rx="12" fill="#E6EAF7" stroke="#2F47A6" stroke-width="2" stroke-dasharray="7 5"/>
+<rect x="425" y="40" width="250" height="160" rx="12" fill="#E3F2E8" stroke="#2E7D4F" stroke-width="2" stroke-dasharray="7 5"/>
+<circle cx="350" cy="62" r="34" fill="#FBF1DF" stroke="#B8761A" stroke-width="2" stroke-dasharray="7 5"/>
+<line x1="140" y1="150" x2="205" y2="150" stroke="#1E2A33" stroke-width="4"/>
+<line x1="230" y1="172" x2="230" y2="222" stroke="#1E2A33" stroke-width="4"/>
+<line x1="255" y1="150" x2="330" y2="150" stroke="#1E2A33" stroke-width="4"/>
+<line x1="350" y1="96" x2="350" y2="128" stroke="#1E2A33" stroke-width="4"/>
+<line x1="350" y1="172" x2="350" y2="222" stroke="#1E2A33" stroke-width="4"/>
+<line x1="370" y1="150" x2="450" y2="150" stroke="#1E2A33" stroke-width="4"/>
+<line x1="462" y1="128" x2="462" y2="96" stroke="#1E2A33" stroke-width="4"/>
+<line x1="476" y1="128" x2="476" y2="96" stroke="#1E2A33" stroke-width="4"/>
+<line x1="490" y1="150" x2="560" y2="150" stroke="#1E2A33" stroke-width="4"/>
+<line x1="590" y1="150" x2="630" y2="150" stroke="#1E2A33" stroke-width="4"/>
+<g font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="700" fill="#1E2A33" text-anchor="middle">
+<text x="125" y="160">H</text>
+<text x="230" y="160">N</text>
+<text x="230" y="252">H</text>
+<text x="350" y="160">C</text>
+<text x="350" y="72">R</text>
+<text x="350" y="252">H</text>
+<text x="470" y="160">C</text>
+<text x="470" y="86">O</text>
+<text x="575" y="160">O</text>
+<text x="648" y="160">H</text>
+</g>
+<g font-family="Arial,Helvetica,sans-serif" font-size="24" text-anchor="middle">
+<text x="188" y="300" fill="#2F47A6">amine group</text>
+<text x="350" y="300" fill="#1E2A33">alpha carbon</text>
+<text x="550" y="235" fill="#2E7D4F">carboxyl group</text>
+<text x="250" y="45" fill="#B8761A">R-group</text>
+</g>
+</svg>
+    <figcaption>A generalised amino acid. R stands for any of 20 side groups. In exams show all four bonds to the alpha carbon.</figcaption>
+  </figure>
+
+  <h3>B1.2.2 Condensation reactions forming dipeptides and longer chains of amino acids</h3>
+  <p>Word equation:<span class="learn">Learn</span> <b>amino acid + amino acid → dipeptide + water</b>. The −OH of one carboxyl group and one −H of the next amine group leave as a water molecule, and the C and the N join by a covalent bond: the <b>peptide bond</b>. Adding more amino acids the same way gives a <b>polypeptide</b>. A chain of n amino acids has n − 1 peptide bonds, and n − 1 water molecules were released when it was made. Splitting a peptide bond by adding water (as in digestion) is hydrolysis.</p>
+  <figure>
+<svg viewBox="0 0 700 300" role="img" aria-label="A dipeptide: amine group, first alpha carbon with R1, carbon double-bonded to oxygen, peptide bond to nitrogen with hydrogen, second alpha carbon with R2, carboxyl group. One water molecule was released when the peptide bond formed.">
+<rect width="700" height="300" fill="#fff"/>
+<rect x="248" y="118" width="58" height="64" rx="8" fill="#FBF1DF" stroke="#B8761A" stroke-width="2"/>
+<line x1="85" y1="150" x2="122" y2="150" stroke="#1E2A33" stroke-width="4"/>
+<line x1="158" y1="150" x2="212" y2="150" stroke="#1E2A33" stroke-width="4"/>
+<line x1="248" y1="150" x2="302" y2="150" stroke="#1E2A33" stroke-width="4"/>
+<line x1="338" y1="150" x2="392" y2="150" stroke="#1E2A33" stroke-width="4"/>
+<line x1="428" y1="150" x2="482" y2="150" stroke="#1E2A33" stroke-width="4"/>
+<line x1="518" y1="150" x2="572" y2="150" stroke="#1E2A33" stroke-width="4"/>
+<line x1="608" y1="150" x2="642" y2="150" stroke="#1E2A33" stroke-width="4"/>
+<line x1="140" y1="128" x2="140" y2="98" stroke="#1E2A33" stroke-width="4"/>
+<line x1="140" y1="172" x2="140" y2="202" stroke="#1E2A33" stroke-width="4"/>
+<line x1="223" y1="128" x2="223" y2="98" stroke="#1E2A33" stroke-width="4"/>
+<line x1="237" y1="128" x2="237" y2="98" stroke="#1E2A33" stroke-width="4"/>
+<line x1="320" y1="172" x2="320" y2="202" stroke="#1E2A33" stroke-width="4"/>
+<line x1="410" y1="128" x2="410" y2="98" stroke="#1E2A33" stroke-width="4"/>
+<line x1="410" y1="172" x2="410" y2="202" stroke="#1E2A33" stroke-width="4"/>
+<line x1="493" y1="128" x2="493" y2="98" stroke="#1E2A33" stroke-width="4"/>
+<line x1="507" y1="128" x2="507" y2="98" stroke="#1E2A33" stroke-width="4"/>
+<g font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#1E2A33" text-anchor="middle">
+<text x="50" y="160">H<tspan font-size="20" dy="6">2</tspan><tspan dy="-6">N</tspan></text>
+<text x="140" y="160">C</text>
+<text x="230" y="160">C</text>
+<text x="320" y="160">N</text>
+<text x="410" y="160">C</text>
+<text x="500" y="160">C</text>
+<text x="590" y="160">O</text>
+<text x="660" y="160">H</text>
+<text x="140" y="88">R<tspan font-size="20" dy="6">1</tspan></text>
+<text x="140" y="232">H</text>
+<text x="230" y="88">O</text>
+<text x="320" y="232">H</text>
+<text x="410" y="88">R<tspan font-size="20" dy="6">2</tspan></text>
+<text x="410" y="232">H</text>
+<text x="500" y="88">O</text>
+</g>
+<path d="M277,185 L277,262" stroke="#B8761A" stroke-width="2"/>
+<g font-family="Arial,Helvetica,sans-serif" font-size="24">
+<text x="290" y="285" fill="#B8761A">peptide bond</text>
+<text x="560" y="250" fill="#2F47A6" font-weight="700">+ H<tspan font-size="18" dy="5">2</tspan><tspan dy="-5">O</tspan></text>
+</g></svg>
+    <figcaption>A dipeptide. The shaded C-N bond is the peptide bond; + H<sub>2</sub>O is the water released when it formed. Free amine and carboxyl groups at the ends let more amino acids join.</figcaption>
+  </figure>
+  <div class="worked"><b>Worked example: counting peptide bonds.</b> "<span class="term" data-t="insulin" tabindex="0" role="button">Insulin</span> is made of two polypeptide chains, of 21 and 30 amino acids. How many peptide bonds does one insulin molecule contain?"
+    <ol>
+      <li>Count each chain separately: 21 − 1 = 20 and 30 − 1 = 29.</li>
+      <li>Add: 20 + 29 = <b>49</b> peptide bonds.</li>
+    </ol>
+    <details><summary>Why this step? Why not 21 + 30 − 1 = 50?</summary>Peptide bonds only join neighbours in one chain; insulin's two chains are joined by disulfide bonds instead.</details>
+  </div>
+  <div class="finish"><b>Finish it.</b> <span class="term" data-t="haemoglobin" tabindex="0" role="button">Haemoglobin</span> has four chains: two of 141 amino acids and two of 146. How many peptide bonds? First half done: the two 141 chains have 2 × (141 − 1) = 280.
+    <details><summary>Show the answer</summary>The two 146 chains: 2 × (146 − 1) = 290. Total 280 + 290 = <b>570</b>.</details>
+  </div>
+
+  <h3>B1.2.3 Dietary requirements for amino acids</h3>
+  <p><b>Essential amino acids</b> cannot be <span class="term" data-t="synthesise" tabindex="0" role="button">synthesised</span> by the body, so they must come from food. <b>Non-essential amino acids</b> can be made in the body from other amino acids.<span class="learn">Learn</span> You do not need to name examples. Vegan diets need attention: many plant foods contain little of one or more essential amino acids, so vegans eat a variety of protein sources (for example beans together with grains) to get all of them.</p>
+
+  <h3>B1.2.4 Infinite variety of possible peptide chains</h3>
+  <p>The <span class="term" data-t="genetic code" tabindex="0" role="button">genetic code</span> codes for 20 amino acids. A chain can have any number of them, from a few to thousands, in any order. So with n amino acids there are 20<sup>n</sup> possible sequences: almost infinite variety. Examples of polypeptides: the chains of insulin, haemoglobin and <span class="term" data-t="collagen" tabindex="0" role="button">collagen</span>.</p>
+  <div class="worked"><b>Worked example.</b> "How many different chains of 3 amino acids are possible? And of 5?"
+    <ol>
+      <li>Each of the 3 positions can be any of 20: 20 × 20 × 20 = 20<sup>3</sup> = 8&nbsp;000.</li>
+      <li>For 5 positions: 20<sup>5</sup> = 3&nbsp;200&nbsp;000.</li>
+    </ol>
+    <details><summary>Why this step? Why multiply, not add?</summary>Each choice at one position combines with every choice at the next, so choices multiply.</details>
+  </div>
+  <div class="finish"><b>Finish it.</b> How many chains of 3 amino acids are possible if all three must be <i>different</i>? First half done: position 1 has 20 choices; position 2 has only 19, because one amino acid is already used.
+    <details><summary>Show the answer</summary>Position 3 has 18 choices, so 20 × 19 × 18 = <b>6&nbsp;840</b>.</details>
+  </div>
+
+  <h3>B1.2.5 Effect of pH and temperature on protein structure</h3>
+  <p>A protein's 3D shape is held by weak bonds between R-groups (details in the HL part). <b>High temperature</b> makes the molecule vibrate so much that these bonds break. A <b>pH far from normal</b> changes the charges on R-groups, so ionic and hydrogen bonds break. Either way the shape changes permanently: the protein is <b>denatured</b> and loses its function.<span class="learn">Learn</span> The peptide bonds do not break, so the amino acid sequence stays the same. Egg white turning solid when cooked is denaturation.</p>
+  <div class="tip"><b>Exam trap.</b> Write "bonds between R-groups break" and "3D shape changes"; "peptide bonds break" gets no mark. Low temperature does not denature. Write "denatured", never "killed".</div>
+
+  <details id="check12"><summary>Self-check B1.2 (write two key words for each on paper, then open)</summary>
+    <ol>
+      <li>Name the four things bonded to the alpha carbon.</li>
+      <li>Give the word equation for making a dipeptide.</li>
+      <li>A polypeptide of 75 amino acids: how many water molecules were released when it was made?</li>
+      <li>What makes an amino acid "essential"?</li>
+      <li>How many different dipeptides are possible?</li>
+      <li>Which bonds break when a protein is denatured, and which do not?</li>
+    </ol>
+    <p><b>Answers.</b> 1: amine group, carboxyl group, R-group, hydrogen atom. 2: amino acid + amino acid → dipeptide + water. 3: 74. 4: the body cannot synthesise it, so it must come from the diet. 5: 20<sup>2</sup> = 400. 6: the bonds between R-groups (hydrogen and ionic bonds) break; peptide bonds do not.</p>
+  </details>
+</section>
+
+<!-- =============================== B1.2 HL =============================== -->
+<section class="topic" id="b12hl">
+  <div class="kicker">B1.2 · additional higher level</div>
+  <h2>How a protein gets its shape <span class="hl">HL</span></h2>
+  <p class="guiding">Official guiding question: How are protein molecules affected by their chemical and physical environments?</p>
+
+  <div class="ican">
+    <p>By the end of this section (official statement, then what it means for you):</p>
+    <label><input type="checkbox" data-k="p6"><span><b>B1.2.6</b> Chemical diversity in the R-groups of amino acids as a basis for the immense diversity in protein form and function. I can explain how R-groups (hydrophobic or hydrophilic; polar or charged; acidic or basic) give the huge diversity of protein form and function<span class="hl">HL</span></span></label>
+    <label><input type="checkbox" data-k="p7"><span><b>B1.2.7</b> Impact of primary structure on the <span class="term" data-t="conformation" tabindex="0" role="button">conformation</span> of proteins. I can explain how the primary structure decides the 3D shape<span class="hl">HL</span></span></label>
+    <label><input type="checkbox" data-k="p8"><span><b>B1.2.8</b> Pleating and coiling of secondary structure of proteins. I can <span class="term" data-t="describe" tabindex="0" role="button">describe</span> alpha helices and beta-pleated sheets and the hydrogen bonds that hold them<span class="hl">HL</span></span></label>
+    <label><input type="checkbox" data-k="p9"><span><b>B1.2.9</b> Dependence of tertiary structure on hydrogen bonds, ionic bonds, disulfide covalent bonds and hydrophobic interactions. I can name the four kinds of bonds in tertiary structure and say between which groups each forms<span class="hl">HL</span></span></label>
+    <label><input type="checkbox" data-k="p10"><span><b>B1.2.10</b> Effect of polar and non-polar amino acids on tertiary structure of proteins. I can explain where polar and non-polar amino acids sit in <span class="term" data-t="soluble" tabindex="0" role="button">soluble</span> proteins and in <span class="term" data-t="membrane" tabindex="0" role="button">membrane</span> proteins<span class="hl">HL</span></span></label>
+    <label><input type="checkbox" data-k="p11"><span><b>B1.2.11</b> Quaternary structure of non-conjugated and conjugated proteins. I can <span class="term" data-t="distinguish" tabindex="0" role="button">distinguish</span> non-conjugated (insulin, collagen) and conjugated (haemoglobin) quaternary structure<span class="hl">HL</span></span></label>
+    <label><input type="checkbox" data-k="p12"><span><b>B1.2.12</b> Relationship of form and function in globular and fibrous proteins. I can compare globular and fibrous proteins and link form to function in insulin and collagen<span class="hl">HL</span></span></label>
+  </div>
+
+  <h3>B1.2.6 Chemical diversity in the R-groups of amino acids</h3>
+  <p>R-groups are either <b>hydrophobic</b> (non-polar, made of carbon and hydrogen only) or <b>hydrophilic</b>. Hydrophilic R-groups are <b>polar</b> (for example with −OH) or <b>charged</b>; charged ones are <b>acidic</b> (negative, −COO<sup>−</sup>) or <b>basic</b> (positive, −NH<sub>3</sub><sup>+</sup>).<span class="learn">Learn</span> You do not need named examples. The mix of R-groups decides how a chain folds and so what the protein can do.</p>
+
+  <h3>B1.2.7 Impact of primary structure on the conformation of proteins</h3>
+  <p>The <b>primary structure</b> is the sequence of amino acids. The sequence, and the exact position of each amino acid, decide which R-groups end up next to each other and bond, so they decide the 3D shape (the conformation). So the shape is precise, predictable and repeatable. Changing one amino acid (a mutation) can change the shape and stop the protein working.</p>
+
+  <h3>B1.2.8 Pleating and coiling of secondary structure of proteins</h3>
+  <p>Hydrogen bonds form between the <b>C=O</b> of one amino acid and the <b>N−H</b> of another a few places along the chain. They are part of the backbone, not the R-groups, and form at regular positions.<span class="learn">Learn</span></p>
+  <ul>
+    <li><b>Alpha helix</b>: the chain coils, with hydrogen bonds between one turn and the next.</li>
+    <li><b>Beta-pleated sheet</b>: stretches of chain lie side by side and are linked by hydrogen bonds; the sheet is folded like a fan (pleated).</li>
+  </ul>
+  <p>Each hydrogen bond is weak, but many together make the structure stable.</p>
+
+  <h3>B1.2.9 Dependence of tertiary structure on hydrogen bonds, ionic bonds, disulfide covalent bonds and hydrophobic interactions</h3>
+  <p>The <b>tertiary structure</b> is how the whole polypeptide folds into its 3D shape. It is held by four kinds of interaction between R-groups:<span class="learn">Learn</span></p>
+  <div class="tablewrap"><table>
+    <tr><th>Bond or interaction</th><th>Forms between</th></tr>
+    <tr><td>Hydrogen bonds</td><td>polar R-groups</td></tr>
+    <tr><td>Ionic bonds</td><td>a positive and a negative R-group. Amine groups in R-groups gain H<sup>+</sup> (become −NH<sub>3</sub><sup>+</sup>), carboxyl groups lose H<sup>+</sup> (become −COO<sup>−</sup>). This is why pH matters.</td></tr>
+    <tr><td>Disulfide bonds (covalent, the strongest)</td><td>the sulfur atoms of two <span class="term" data-t="cysteine" tabindex="0" role="button">cysteines</span>: −S−S−. Cysteine is the only amino acid you need to name.</td></tr>
+    <tr><td>Hydrophobic interactions</td><td>non-polar R-groups, which cluster together away from water</td></tr>
+  </table></div>
+  <div class="worked"><b>Worked example: which bond?</b> "Two R-groups meet when a chain folds: −CH<sub>2</sub>−COO<sup>−</sup> and −CH<sub>2</sub>−CH<sub>2</sub>−NH<sub>3</sub><sup>+</sup>. Which bond forms?"
+    <ol>
+      <li>Any −SH on both? No, so not a disulfide bond.</li>
+      <li>Any charges? Yes: one negative, one positive. Opposite charges attract: an <b>ionic bond</b>.</li>
+    </ol>
+    <details><summary>Why this step? Why check for −SH first?</summary>Only cysteine (−SH) makes the covalent disulfide bond, so it is the quickest to rule out. Then check charges (ionic), then −OH or −NH (hydrogen bond); only C and H means hydrophobic.</details>
+  </div>
+  <div class="finish"><b>Finish it.</b> Which bond: (a) −CH<sub>2</sub>−OH with −CH<sub>2</sub>−OH; (b) −CH<sub>3</sub> with −CH(CH<sub>3</sub>)<sub>2</sub>? First step done for (a): no −SH and no charges.
+    <details><summary>Show the answer</summary>(a) Both are polar (−OH), so a hydrogen bond. (b) Only carbon and hydrogen: non-polar, so a hydrophobic interaction.</details>
+  </div>
+
+  <h3>B1.2.10 Effect of polar and non-polar amino acids on tertiary structure of proteins</h3>
+  <p>In proteins that dissolve in water, hydrophobic amino acids cluster in the <b>core</b>, away from water; hydrophilic ones are on the surface. <span class="term" data-t="integral protein" tabindex="0" role="button">Integral proteins</span>, which cross a membrane, have a band of hydrophobic amino acids inside the hydrophobic middle of the membrane and hydrophilic parts outside in the watery fluid.</p>
+
+  <h3>B1.2.11 Quaternary structure of non-conjugated and conjugated proteins</h3>
+  <p>Quaternary structure: two or more polypeptides joined into one protein. Not every protein has it; many are a single chain.</p>
+  <ul>
+    <li><b>Non-conjugated</b>: made only of polypeptides. <b>Insulin</b>: two chains joined by disulfide bonds. <b>Collagen</b>: three chains wound into a triple helix.</li>
+    <li><b>Conjugated</b>: also has a non-polypeptide part (a <span class="term" data-t="prosthetic group" tabindex="0" role="button">prosthetic group</span>). <b>Haemoglobin</b>: four chains, each with a haem group containing iron, which binds oxygen.</li>
+  </ul>
+  <p style="font-size:.95rem;color:var(--ink-soft)">For context: cryogenic electron microscopy now lets scientists image single protein molecules, which the eye could never see.</p>
+
+  <h3>B1.2.12 Relationship of form and function in globular and fibrous proteins</h3>
+  <div class="tablewrap"><table>
+    <tr><th></th><th>Globular, example insulin</th><th>Fibrous, example collagen</th></tr>
+    <tr><td>Shape</td><td>rounded, compact</td><td>long, narrow strands</td></tr>
+    <tr><td>In water</td><td>usually soluble</td><td>insoluble</td></tr>
+    <tr><td>Form fits function</td><td>insulin is a soluble <span class="term" data-t="hormone" tabindex="0" role="button">hormone</span> carried in blood; its precise shape binds to <span class="term" data-t="receptor" tabindex="0" role="button">receptors</span> on target cells</td><td>three chains in a triple helix, many molecules cross-linked into fibres: great strength when pulled, in skin, <span class="term" data-t="tendon" tabindex="0" role="button">tendons</span>, ligaments and blood vessel walls</td></tr>
+  </table></div>
+  <p><span class="learn" style="margin-left:0">Learn</span> the whole table.</p>
+  <div class="worked"><b>Worked example: a 3-mark "<span class="term" data-t="suggest" tabindex="0" role="button">suggest</span>".</b> "A mutation replaces a non-polar amino acid in the core of a soluble enzyme with a negatively charged one. Suggest the effect."
+    <ol>
+      <li>The primary structure changes: one R-group is different.</li>
+      <li>The new R-group is hydrophilic, so it cannot take part in the hydrophobic interactions of the core, and it may form ionic bonds in new places.</li>
+      <li>So the chain folds differently: the tertiary structure, and possibly the <span class="term" data-t="active site" tabindex="0" role="button">active site</span>, changes, and the enzyme may no longer bind its substrate.</li>
+    </ol>
+    <details><summary>Why this step? Why start from the primary structure?</summary>Mark schemes follow the chain: sequence, bonds, shape, function. Each link is usually one mark.</details>
+  </div>
+  <div class="finish"><b>Finish it.</b> Now a polar amino acid on the outer surface of the same enzyme is replaced by another polar one. Suggest the effect. First point done: the primary structure changes, but the new R-group is still hydrophilic.
+    <details><summary>Show the answer</summary>It is still on the surface, where hydrophilic groups belong, and can still form hydrogen bonds, so the folding hardly changes and the enzyme probably still works: little or no effect.</details>
+  </div>
+
+  <details id="check12hl"><summary>Self-check B1.2 HL (write two key words for each on paper, then open)</summary>
+    <ol>
+      <li>Between which groups do the hydrogen bonds of secondary structure form?</li>
+      <li>Name the four bonds or interactions of tertiary structure.</li>
+      <li>Which one is covalent, and which amino acid forms it?</li>
+      <li>Where are hydrophobic R-groups in a soluble globular protein?</li>
+      <li>Why is haemoglobin conjugated but insulin not?</li>
+      <li>Give two differences between globular and fibrous proteins.</li>
+    </ol>
+    <p><b>Answers.</b> 1: C=O of one amino acid and N−H of another, in the backbone. 2: hydrogen bonds, ionic bonds, disulfide bonds, hydrophobic interactions. 3: the disulfide bond, between two cysteines. 4: in the core, away from water. 5: haemoglobin has haem groups (with iron), a non-polypeptide part; insulin is only polypeptide. 6: any two of rounded against long and narrow; soluble against insoluble; precise shape for binding against strength.</p>
+  </details>
+</section>
+
+<!-- =============================== C1.1 SL =============================== -->
+<section class="topic" id="c11">
+  <div class="kicker">C1.1 · SL and HL</div>
+  <h2>Enzymes and metabolism</h2>
+  <p class="guiding">Official guiding question: In what ways do enzymes interact with other molecules?</p>
+
+  <div class="ican">
+    <p>By the end of this section (official statement, then what it means for you):</p>
+    <label><input type="checkbox" data-k="e1"><span><b>C1.1.1</b> Enzymes as catalysts. I can explain why cells need enzymes as catalysts</span></label>
+    <label><input type="checkbox" data-k="e2"><span><b>C1.1.2</b> Role of enzymes in <span class="term" data-t="metabolism" tabindex="0" role="button">metabolism</span>. I can explain why metabolism needs many different enzymes and how enzymes let a cell control it</span></label>
+    <label><input type="checkbox" data-k="e3"><span><b>C1.1.3</b> <span class="term" data-t="anabolism" tabindex="0" role="button">Anabolic</span> and <span class="term" data-t="catabolism" tabindex="0" role="button">catabolic</span> reactions. I can distinguish anabolic and catabolic reactions, with examples</span></label>
+    <label><input type="checkbox" data-k="e4"><span><b>C1.1.4</b> Enzymes as globular proteins with an active site for catalysis. I can describe enzymes as globular proteins with an active site made of a few amino acids</span></label>
+    <label><input type="checkbox" data-k="e5"><span><b>C1.1.5</b> Interactions between substrate and active site to allow induced-fit binding. I can describe induced-fit binding: both substrate and enzyme change shape</span></label>
+    <label><input type="checkbox" data-k="e6"><span><b>C1.1.6</b> Role of molecular motion and substrate-active site <span class="term" data-t="collision" tabindex="0" role="button">collisions</span> in enzyme catalysis. I can explain why molecular motion and collisions are needed, with <span class="term" data-t="immobilised" tabindex="0" role="button">immobilised</span> examples</span></label>
+    <label><input type="checkbox" data-k="e7"><span><b>C1.1.7</b> Relationships between the structure of the active site, enzyme–substrate <span class="term" data-t="specificity" tabindex="0" role="button">specificity</span> and denaturation. I can explain how the active site links specificity and denaturation</span></label>
+    <label><input type="checkbox" data-k="e8"><span><b>C1.1.8</b> Effects of temperature, pH and substrate concentration on the rate of enzyme activity. I can explain and sketch the effects of temperature, pH and substrate concentration on the rate</span></label>
+    <label><input type="checkbox" data-k="e9"><span><b>C1.1.9</b> Measurements in enzyme-catalysed reactions. I can calculate reaction rates from an experiment or from data</span></label>
+    <label><input type="checkbox" data-k="e10"><span><b>C1.1.10</b> Effect of enzymes on activation energy. I can explain and sketch how enzymes lower the activation energy</span></label>
+  </div>
+
+  <h3>C1.1.1 Enzymes as catalysts and C1.1.2 Role of enzymes in metabolism</h3>
+  <p>A <b>catalyst</b> speeds up a reaction without being used up. Enzymes are biological catalysts, made of protein. They make reactions fast enough at body temperature for life. <b>Metabolism</b> is the complex network of interdependent and interacting chemical reactions in a living thing.<span class="learn">Learn</span> Each enzyme is specific, so many enzymes are needed, and a cell controls its metabolism through which enzymes it makes and how active they are.</p>
+
+  <h3>C1.1.3 Anabolic and catabolic reactions</h3>
+  <div class="tablewrap"><table>
+    <tr><th></th><th>Anabolism</th><th>Catabolism</th></tr>
+    <tr><td>What happens</td><td>builds <span class="term" data-t="macromolecule" tabindex="0" role="button">macromolecules</span> from monomers</td><td>breaks macromolecules into monomers or smaller molecules</td></tr>
+    <tr><td>Type of reaction</td><td>condensation</td><td>hydrolysis; <span class="term" data-t="oxidation" tabindex="0" role="button">oxidation</span> in <span class="term" data-t="respiration" tabindex="0" role="button">respiration</span></td></tr>
+    <tr><td>Energy</td><td>needs energy</td><td>releases energy</td></tr>
+    <tr><td>Examples</td><td>protein synthesis, glycogen formation, <span class="term" data-t="photosynthesis" tabindex="0" role="button">photosynthesis</span></td><td>digestion, respiration</td></tr>
+  </table></div>
+  <p><span class="learn" style="margin-left:0">Learn</span> the table. Metabolism = anabolism + catabolism.</p>
+
+  <h3>C1.1.4 Enzymes as globular proteins with an active site for catalysis</h3>
+  <p>Enzymes are globular proteins. The <b>active site</b> is the pocket where the substrate binds and reacts. It is made of only a few amino acids, but the folding of the whole enzyme holds them in place, giving the site its shape and chemical properties.</p>
+
+  <h3>C1.1.5 Interactions between substrate and active site to allow induced-fit binding</h3>
+  <p>When the substrate binds, <b>both the substrate and the enzyme change shape</b> slightly, so they fit more tightly: <b>induced fit</b>.<span class="learn">Learn</span> This strains bonds in the substrate, which helps them break. The substrate and enzyme together are the <span class="term" data-t="enzyme-substrate complex" tabindex="0" role="button">enzyme-substrate complex</span>. It replaced the older "lock and key" model with a rigid active site.</p>
+
+  <h3>C1.1.6 Role of molecular motion and substrate-active site collisions in enzyme catalysis</h3>
+  <p>Substrate and enzyme molecules move at random. A reaction only happens when a substrate molecule <b>collides</b> with an active site; faster movement or more molecules means more collisions. Sometimes one side is fixed (immobilised): a large substrate such as DNA, or an enzyme embedded in a membrane, such as ATP synthase.</p>
+
+  <h3>C1.1.7 Relationships between the structure of the active site, enzyme-substrate specificity and denaturation</h3>
+  <p><b>Specificity</b>: the active site's shape and chemical properties match (are <span class="term" data-t="complementary" tabindex="0" role="button">complementary</span> to) one substrate, so only that substrate binds. <b>Denaturation</b>: heat or extreme pH breaks the bonds that hold the enzyme's 3D shape, the active site changes shape, the substrate no longer fits, no enzyme-substrate complexes form, and activity is lost, usually for good.</p>
+
+  <h3>C1.1.8 Effects of temperature, pH and substrate concentration on the rate of enzyme activity</h3>
+  <figure>
+<svg viewBox="0 0 1050 340" role="img" aria-label="Three sketch graphs of rate of reaction. Temperature: rate rises gradually to an optimum, then falls steeply. pH: a peak at the optimum pH with falls on both sides. Substrate concentration: rate rises, then levels off.">
+<rect width="1050" height="340" fill="#fff"/>
+<path d="M60,30 V250 H330" stroke="#1E2A33" stroke-width="3" fill="none"/>
+<text x="195" y="300" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="34" fill="#1E2A33">temperature</text>
+<text transform="translate(42,150) rotate(-90)" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="34" fill="#1E2A33">rate</text>
+<path d="M410,30 V250 H680" stroke="#1E2A33" stroke-width="3" fill="none"/>
+<text x="545" y="300" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="34" fill="#1E2A33">pH</text>
+<text transform="translate(392,150) rotate(-90)" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="34" fill="#1E2A33">rate</text>
+<path d="M760,30 V250 H1030" stroke="#1E2A33" stroke-width="3" fill="none"/>
+<text x="895" y="300" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="34" fill="#1E2A33">substrate</text>
+<text transform="translate(742,150) rotate(-90)" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="34" fill="#1E2A33">rate</text>
+<polyline points="70.0,240.0 73.0,239.2 76.0,238.3 79.0,237.5 82.0,236.6 85.0,235.6 88.0,234.6 91.0,233.6 94.0,232.6 97.0,231.5 100.0,230.3 103.0,229.2 106.0,227.9 109.0,226.7 112.0,225.4 115.0,224.0 118.0,222.6 121.0,221.1 124.0,219.6 127.0,218.0 130.0,216.4 133.0,214.7 136.0,213.0 139.0,211.1 142.0,209.2 145.0,207.3 148.0,205.2 151.0,203.1 154.0,200.9 157.0,198.7 160.0,196.3 163.0,193.8 166.0,191.3 169.0,188.7 172.0,185.9 175.0,183.1 178.0,180.2 181.0,177.1 184.0,174.0 187.0,170.7 190.0,167.3 193.0,163.7 196.0,160.1 199.0,156.3 202.0,152.3 205.0,148.3 208.0,144.0 211.0,139.6 214.0,135.1 217.0,130.3 220.0,125.4 223.0,120.3 226.0,115.0 229.0,109.6 232.0,103.9 235.0,98.0 238.0,91.8 241.0,85.5 244.0,78.9 247.0,72.1 250.0,65.0 258.0,70.0 268.0,95.0 280.0,150.0 292.0,210.0 300.0,245.0" fill="none" stroke="#2F47A6" stroke-width="5" stroke-linejoin="round"/>
+<line x1="250" y1="62" x2="250" y2="250" stroke="#B8761A" stroke-width="2" stroke-dasharray="6 5"/>
+<polyline points="430.0,244.7 432.9,244.6 435.8,244.5 438.6,244.3 441.5,244.1 444.4,243.8 447.2,243.4 450.1,242.9 453.0,242.2 455.9,241.4 458.8,240.4 461.6,239.2 464.5,237.7 467.4,235.8 470.2,233.6 473.1,231.0 476.0,227.9 478.9,224.2 481.8,220.0 484.6,215.2 487.5,209.8 490.4,203.8 493.2,197.0 496.1,189.7 499.0,181.7 501.9,173.2 504.8,164.1 507.6,154.7 510.5,145.0 513.4,135.2 516.2,125.3 519.1,115.7 522.0,106.4 524.9,97.6 527.8,89.6 530.6,82.5 533.5,76.4 536.4,71.5 539.2,67.9 542.1,65.7 545.0,65.0 547.9,65.7 550.8,67.9 553.6,71.5 556.5,76.4 559.4,82.5 562.2,89.6 565.1,97.6 568.0,106.4 570.9,115.7 573.8,125.3 576.6,135.2 579.5,145.0 582.4,154.7 585.2,164.1 588.1,173.2 591.0,181.7 593.9,189.7 596.8,197.0 599.6,203.8 602.5,209.8 605.4,215.2 608.2,220.0 611.1,224.2 614.0,227.9 616.9,231.0 619.8,233.6 622.6,235.8 625.5,237.7 628.4,239.2 631.2,240.4 634.1,241.4 637.0,242.2 639.9,242.9 642.8,243.4 645.6,243.8 648.5,244.1 651.4,244.3 654.2,244.5 657.1,244.6 660.0,244.7" fill="none" stroke="#2F47A6" stroke-width="5"/>
+<line x1="545" y1="62" x2="545" y2="250" stroke="#B8761A" stroke-width="2" stroke-dasharray="6 5"/>
+<polyline points="765.0,248.0 768.2,235.3 771.4,224.4 774.6,214.8 777.8,206.3 780.9,198.8 784.1,192.1 787.3,186.1 790.5,180.7 793.7,175.8 796.9,171.2 800.1,167.1 803.2,163.3 806.4,159.8 809.6,156.6 812.8,153.6 816.0,150.8 819.2,148.2 822.4,145.7 825.6,143.4 828.8,141.3 831.9,139.3 835.1,137.4 838.3,135.6 841.5,133.9 844.7,132.3 847.9,130.7 851.1,129.3 854.2,127.9 857.4,126.6 860.6,125.3 863.8,124.1 867.0,123.0 870.2,121.9 873.4,120.9 876.6,119.9 879.8,118.9 882.9,118.0 886.1,117.1 889.3,116.2 892.5,115.4 895.7,114.6 898.9,113.9 902.1,113.1 905.2,112.4 908.4,111.8 911.6,111.1 914.8,110.5 918.0,109.8 921.2,109.2 924.4,108.7 927.6,108.1 930.8,107.6 933.9,107.0 937.1,106.5 940.3,106.0 943.5,105.6 946.7,105.1 949.9,104.6 953.1,104.2 956.2,103.8 959.4,103.4 962.6,102.9 965.8,102.6 969.0,102.2 972.2,101.8 975.4,101.4 978.6,101.1 981.8,100.7 984.9,100.4 988.1,100.1 991.3,99.7 994.5,99.4 997.7,99.1 1000.9,98.8 1004.1,98.5 1007.2,98.2 1010.4,97.9 1013.6,97.7 1016.8,97.4 1020.0,97.1" fill="none" stroke="#2F47A6" stroke-width="5"/>
+<g font-family="Arial,Helvetica,sans-serif" font-size="30" fill="#B8761A" text-anchor="middle"><text x="250" y="52">optimum</text><text x="545" y="52">optimum</text></g>
+</svg>
+    <figcaption>Rate against temperature, pH and substrate concentration. Sketch graphs like these are models, tested against real results.</figcaption>
+  </figure>
+  <ul>
+    <li><b>Temperature.</b> Rising temperature gives molecules more <span class="term" data-t="kinetic energy" tabindex="0" role="button">kinetic energy</span>, so collisions with the active site are more frequent and the rate rises. Above the <b><span class="term" data-t="optimum" tabindex="0" role="button">optimum</span></b>, the enzyme denatures and the rate falls steeply.</li>
+    <li><b>pH.</b> Each enzyme has an optimum pH (often near 7; the stomach enzyme pepsin about 2). Away from it, the charges on R-groups change, ionic and hydrogen bonds break, and the active site changes shape; at extreme pH the enzyme denatures.</li>
+    <li><b>Substrate concentration.</b> More substrate means more collisions, so the rate rises. It levels off when all the active sites are occupied at any moment: the amount of enzyme now limits the rate.</li>
+  </ul>
+  <div class="worked"><b>Worked example: 2-mark "explain".</b> "Explain the change in rate as the temperature rises from 10 °C to 35 °C (below the optimum)."
+    <ol>
+      <li>The enzyme and substrate molecules gain kinetic energy and move faster.</li>
+      <li>So they collide more often and more enzyme-substrate complexes form per second: the rate increases.</li>
+    </ol>
+    <details><summary>Why this step? Why mention enzyme-substrate complexes?</summary>The mark is for linking collisions to the active site: more complexes, more product per second.</details>
+  </div>
+  <div class="finish"><b>Finish it.</b> "Explain the change in rate above the optimum temperature." First point done: the bonds holding the enzyme's 3D shape vibrate and break.
+    <details><summary>Show the answer</summary>So the active site changes shape and the substrate no longer fits; enzyme-substrate complexes cannot form; the enzyme is denatured and the rate falls.</details>
+  </div>
+  <div class="tip"><b>Exam trap.</b> "Describe" the graph = say what it does, with numbers from the axes ("rises to a peak at 40 °C, then falls to zero at 60 °C"). "Explain" = give the reasons. Always name the active site.</div>
+
+  <h3>C1.1.9 Measurements in enzyme-catalysed reactions</h3>
+  <p>Rate = amount of product made (or substrate used) ÷ time.<span class="learn">Learn</span> The unit is "amount per time", for example cm<sup>3</sup> s<sup>−1</sup> (cubic centimetres per second). Methods: collect the oxygen from <span class="term" data-t="catalase" tabindex="0" role="button">catalase</span> splitting hydrogen peroxide (gas syringe, or upside-down measuring cylinder of water); or time how long <span class="term" data-t="amylase" tabindex="0" role="button">amylase</span> takes to digest starch (iodine stops turning blue-black) and use rate = 1 ÷ time. Repeat three times and use the <span class="term" data-t="mean" tabindex="0" role="button">mean</span>.</p>
+  <div class="worked"><b>Worked example.</b> "Catalase releases 24 cm<sup>3</sup> of oxygen in 40 s. Calculate the rate."
+    <ol>
+      <li>Rate = amount ÷ time = 24 ÷ 40 = 0.6.</li>
+      <li>Units: cm<sup>3</sup> ÷ s, so <b>0.6 cm<sup>3</sup> s<sup>−1</sup></b>.</li>
+    </ol>
+    <details><summary>Why this step? Why write the units?</summary>There is often a separate mark for the unit: amount unit, then time unit with power −1.</details>
+  </div>
+  <div class="finish"><b>Finish it.</b> Starch disappears after 50 s at 30 °C and after 125 s at 20 °C. Use rate = 1 ÷ time. How many times faster is the reaction at 30 °C? First half done: at 30 °C, 1 ÷ 50 = 0.02 s<sup>−1</sup>.
+    <details><summary>Show the answer</summary>At 20 °C, 1 ÷ 125 = 0.008 s<sup>−1</sup>. 0.02 ÷ 0.008 = <b>2.5 times</b> faster.</details>
+  </div>
+
+  <h3>C1.1.10 Effect of enzymes on activation energy</h3>
+  <p>Energy is needed to break bonds in the substrate before it can react: the <b>activation energy</b>. Energy is released when the new bonds of the products form. Enzymes <b>lower the activation energy</b>, so many more molecules can react at body temperature.<span class="learn">Learn</span> The overall energy change of the reaction stays the same.</p>
+  <figure>
+<svg viewBox="0 0 700 380" role="img" aria-label="Energy against progress of reaction. The substrate starts at a higher energy than the products. Without an enzyme the energy hump (activation energy) is tall; with an enzyme it is much lower. The start and end energies are the same in both.">
+<rect width="700" height="380" fill="#fff"/>
+<path d="M70,20 V320 H680" stroke="#1E2A33" stroke-width="3" fill="none"/>
+<text transform="translate(45,170) rotate(-90)" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="26" fill="#1E2A33">energy</text>
+<text x="375" y="360" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="26" fill="#1E2A33">progress of reaction</text>
+<polyline points="90.0,200.0 95.6,200.0 101.2,200.0 106.8,200.0 112.4,200.0 118.0,200.0 123.6,200.0 129.2,200.0 134.8,200.0 140.4,200.0 146.0,200.0 151.6,200.1 157.2,200.1 162.8,200.1 168.4,200.1 174.0,200.0 179.6,200.0 185.2,200.0 190.8,199.9 196.4,199.8 202.0,199.7 207.6,199.4 213.2,199.1 218.8,198.7 224.4,198.1 230.0,197.3 235.6,196.2 241.2,194.9 246.8,193.1 252.4,191.0 258.0,188.3 263.6,185.1 269.2,181.3 274.8,176.7 280.4,171.4 286.0,165.4 291.6,158.6 297.2,151.1 302.8,142.9 308.4,134.1 314.0,124.8 319.6,115.2 325.2,105.5 330.8,95.9 336.4,86.7 342.0,78.1 347.6,70.5 353.2,64.0 358.8,59.2 364.4,56.1 370.0,55.0 375.6,56.1 381.2,59.5 386.8,65.1 392.4,73.0 398.0,82.8 403.6,94.3 409.2,107.2 414.8,121.1 420.4,135.6 426.0,150.4 431.6,165.1 437.2,179.3 442.8,192.8 448.4,205.4 454.0,216.9 459.6,227.2 465.2,236.4 470.8,244.3 476.4,251.2 482.0,257.0 487.6,261.8 493.2,265.8 498.8,269.0 504.4,271.5 510.0,273.6 515.6,275.2 521.2,276.4 526.8,277.3 532.4,278.0 538.0,278.5 543.6,278.9 549.2,279.2 554.8,279.4 560.4,279.6 566.0,279.7 571.6,279.8 577.2,279.8 582.8,279.9 588.4,279.9 594.0,279.9 599.6,279.9 605.2,280.0 610.8,280.0 616.4,280.0 622.0,280.0 627.6,280.0 633.2,280.0 638.8,280.0 644.4,280.0 650.0,280.0" fill="none" stroke="#8A949B" stroke-width="4" stroke-dasharray="9 7"/>
+<polyline points="90.0,200.0 95.6,200.0 101.2,200.0 106.8,200.0 112.4,200.0 118.0,200.0 123.6,200.0 129.2,200.0 134.8,200.0 140.4,200.0 146.0,200.1 151.6,200.1 157.2,200.1 162.8,200.1 168.4,200.1 174.0,200.1 179.6,200.1 185.2,200.1 190.8,200.1 196.4,200.1 202.0,200.1 207.6,200.1 213.2,200.0 218.8,199.9 224.4,199.8 230.0,199.6 235.6,199.4 241.2,199.0 246.8,198.6 252.4,198.0 258.0,197.2 263.6,196.3 269.2,195.2 274.8,193.9 280.4,192.3 286.0,190.5 291.6,188.4 297.2,186.0 302.8,183.4 308.4,180.5 314.0,177.4 319.6,174.1 325.2,170.6 330.8,167.0 336.4,163.5 342.0,160.1 347.6,156.9 353.2,154.1 358.8,151.9 364.4,150.5 370.0,150.0 375.6,150.6 381.2,152.3 386.8,155.2 392.4,159.4 398.0,164.7 403.6,171.1 409.2,178.3 414.8,186.2 420.4,194.5 426.0,203.0 431.6,211.5 437.2,219.8 442.8,227.7 448.4,235.1 454.0,242.0 459.6,248.1 465.2,253.6 470.8,258.3 476.4,262.4 482.0,265.9 487.6,268.8 493.2,271.2 498.8,273.1 504.4,274.7 510.0,275.9 515.6,276.9 521.2,277.7 526.8,278.2 532.4,278.7 538.0,279.0 543.6,279.3 549.2,279.4 554.8,279.6 560.4,279.7 566.0,279.8 571.6,279.8 577.2,279.9 582.8,279.9 588.4,279.9 594.0,279.9 599.6,279.9 605.2,280.0 610.8,280.0 616.4,280.0 622.0,280.0 627.6,280.0 633.2,280.0 638.8,280.0 644.4,280.0 650.0,280.0" fill="none" stroke="#2F47A6" stroke-width="5"/>
+<line x1="90" y1="200" x2="330" y2="200" stroke="#B8761A" stroke-width="2" stroke-dasharray="4 4"/>
+<line x1="250" y1="55" x2="370" y2="55" stroke="#8A949B" stroke-width="2" stroke-dasharray="4 4"/>
+<line x1="300" y1="150" x2="370" y2="150" stroke="#2F47A6" stroke-width="2" stroke-dasharray="4 4"/>
+<line x1="250" y1="200" x2="250" y2="65" stroke="#8A949B" stroke-width="3"/><polygon points="242,67 258,67 250,55" fill="#8A949B"/>
+<line x1="300" y1="200" x2="300" y2="160" stroke="#2F47A6" stroke-width="3"/><polygon points="292,162 308,162 300,150" fill="#2F47A6"/>
+<g font-family="Arial,Helvetica,sans-serif" font-size="24">
+<text x="96" y="190" fill="#1E2A33">substrate</text>
+<text x="540" y="270" fill="#1E2A33">products</text>
+<text x="430" y="70" fill="#5C666D">without enzyme</text>
+<text x="440" y="175" fill="#2F47A6">with enzyme</text>
+</g></svg>
+    <figcaption>The arrows are the activation energies, without (grey) and with (blue) an enzyme. Start and end levels are the same.</figcaption>
+  </figure>
+
+  <details id="check11"><summary>Self-check C1.1 (write two key words for each on paper, then open)</summary>
+    <ol>
+      <li>Anabolic or catabolic: digestion of starch; glycogen formation?</li>
+      <li>What does induced fit say that lock and key did not?</li>
+      <li>Why does the rate level off at high substrate concentration?</li>
+      <li>Why does an enzyme stop working at 70 °C, but not at 5 °C?</li>
+      <li>18 cm<sup>3</sup> of oxygen in 45 s: what is the rate?</li>
+      <li>Does an enzyme change the energy released by a reaction?</li>
+    </ol>
+    <p><b>Answers.</b> 1: catabolic; anabolic. 2: both the enzyme and the substrate change shape when binding. 3: all the active sites are occupied at any moment. 4: at 70 °C it is denatured (active site changes shape); at 5 °C it is only slow, because collisions are rare. 5: 18 ÷ 45 = 0.4 cm<sup>3</sup> s<sup>−1</sup>. 6: no, it only lowers the activation energy.</p>
+  </details>
+</section>
+
+<!-- =============================== C1.1 HL =============================== -->
+<section class="topic" id="c11hl">
+  <div class="kicker">C1.1 · additional higher level</div>
+  <h2>Pathways and inhibitors <span class="hl">HL</span></h2>
+  <p class="guiding">Official guiding question: What are the interdependent components of metabolism?</p>
+
+  <div class="ican">
+    <p>By the end of this section (official statement, then what it means for you):</p>
+    <label><input type="checkbox" data-k="e11"><span><b>C1.1.11</b> <span class="term" data-t="intracellular" tabindex="0" role="button">Intracellular</span> and extracellular enzyme-catalysed reactions. I can give intracellular (<span class="term" data-t="glycolysis" tabindex="0" role="button">glycolysis</span>, <span class="term" data-t="krebs cycle" tabindex="0" role="button">Krebs cycle</span>) and extracellular (digestion in the gut) examples of enzyme reactions<span class="hl">HL</span></span></label>
+    <label><input type="checkbox" data-k="e12"><span><b>C1.1.12</b> Generation of heat energy by the reactions of metabolism. I can explain why metabolism always releases heat, and why mammals and birds depend on it<span class="hl">HL</span></span></label>
+    <label><input type="checkbox" data-k="e13"><span><b>C1.1.13</b> Cyclical and linear pathways in metabolism. I can distinguish linear (glycolysis) and cyclical (Krebs cycle, <span class="term" data-t="calvin cycle" tabindex="0" role="button">Calvin cycle</span>) pathways<span class="hl">HL</span></span></label>
+    <label><input type="checkbox" data-k="e14"><span><b>C1.1.14</b> Allosteric sites and non-competitive inhibition. I can explain non-competitive inhibition at an <span class="term" data-t="allosteric site" tabindex="0" role="button">allosteric site</span><span class="hl">HL</span></span></label>
+    <label><input type="checkbox" data-k="e15"><span><b>C1.1.15</b> Competitive inhibition as a consequence of an inhibitor binding <span class="term" data-t="reversible" tabindex="0" role="button">reversibly</span> to an active site. I can explain competitive inhibition using <span class="term" data-t="statin" tabindex="0" role="button">statins</span>, and how substrate concentration affects each type of inhibition<span class="hl">HL</span></span></label>
+    <label><input type="checkbox" data-k="e16"><span><b>C1.1.16</b> Regulation of metabolic pathways by feedback inhibition. I can explain feedback inhibition using the isoleucine pathway<span class="hl">HL</span></span></label>
+    <label><input type="checkbox" data-k="e17"><span><b>C1.1.17</b> Mechanism-based inhibition as a consequence of chemical changes to the active site caused by the irreversible binding of an inhibitor. I can explain mechanism-based inhibition using <span class="term" data-t="penicillin" tabindex="0" role="button">penicillin</span>, and how <span class="term" data-t="resistance" tabindex="0" role="button">resistance</span> arises<span class="hl">HL</span></span></label>
+  </div>
+
+  <h3>C1.1.11 to C1.1.13 Where reactions happen, heat, and pathway shapes</h3>
+  <ul>
+    <li><b>Intracellular</b> enzymes work inside cells: glycolysis in the <span class="term" data-t="cytoplasm" tabindex="0" role="button">cytoplasm</span>, the Krebs cycle in the <span class="term" data-t="mitochondria" tabindex="0" role="button">mitochondria</span>. <b>Extracellular</b> enzymes are secreted and work outside cells: digestive enzymes in the gut.</li>
+    <li><b>Heat.</b> No energy transfer in metabolism is 100% efficient, so some energy is always released as heat. Mammals and birds (and some other animals) depend on this heat to keep their body temperature constant.</li>
+    <li><b>Linear pathways</b> run from a start molecule to an <span class="term" data-t="end product" tabindex="0" role="button">end product</span>: glycolysis (glucose to pyruvate). In <b>cyclical pathways</b> the last step <span class="term" data-t="regenerate" tabindex="0" role="button">regenerates</span> the first molecule: the Krebs cycle and the Calvin cycle (details in C1.2 and C1.3).</li>
+  </ul>
+
+  <h3>C1.1.14 Allosteric sites and non-competitive inhibition</h3>
+  <p>An <b>allosteric site</b> is a binding site on the enzyme away from the active site; only specific substances fit it. When an inhibitor binds there, the enzyme changes shape and the active site changes enough to stop catalysis. Binding is reversible. The inhibitor does not compete with the substrate, so adding more substrate does not help: the maximum rate is lower.</p>
+
+  <h3>C1.1.15 Competitive inhibition</h3>
+  <p>A <b>competitive inhibitor</b> has a shape similar to the substrate and binds reversibly to the <b>active site</b>, blocking it. Substrate and inhibitor compete, so at high substrate concentration the substrate wins most collisions and the rate gets close to the normal maximum. Example: <b>statins</b> inhibit an enzyme in the liver that makes <span class="term" data-t="cholesterol" tabindex="0" role="button">cholesterol</span>, lowering blood cholesterol.</p>
+  <figure>
+<svg viewBox="0 0 700 380" role="img" aria-label="Rate of reaction against substrate concentration. With no inhibitor the rate rises and levels off at a maximum. With a competitive inhibitor the rate is lower at low substrate concentrations but approaches the same maximum at high concentrations. With a non-competitive inhibitor the curve levels off at a lower maximum.">
+<rect width="700" height="380" fill="#fff"/>
+<path d="M70,20 V320 H680" stroke="#1E2A33" stroke-width="3" fill="none"/>
+<text transform="translate(45,170) rotate(-90)" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="26" fill="#1E2A33">rate</text>
+<text x="375" y="360" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="26" fill="#1E2A33">substrate concentration</text>
+<polyline points="72.0,318.0 76.4,255.5 80.8,218.0 85.2,193.0 89.6,175.1 94.0,161.8 98.4,151.3 102.8,143.0 107.2,136.2 111.6,130.5 116.0,125.7 120.4,121.6 124.8,118.0 129.2,114.9 133.6,112.1 138.0,109.7 142.4,107.5 146.8,105.5 151.2,103.7 155.6,102.1 160.0,100.6 164.4,99.2 168.8,98.0 173.2,96.8 177.6,95.8 182.0,94.8 186.4,93.9 190.8,93.0 195.2,92.2 199.6,91.4 204.0,90.7 208.4,90.1 212.8,89.4 217.2,88.8 221.6,88.3 226.0,87.7 230.4,87.2 234.8,86.8 239.2,86.3 243.6,85.9 248.0,85.4 252.4,85.0 256.8,84.7 261.2,84.3 265.6,84.0 270.0,83.6 274.4,83.3 278.8,83.0 283.2,82.7 287.6,82.4 292.0,82.2 296.4,81.9 300.8,81.6 305.2,81.4 309.6,81.2 314.0,80.9 318.4,80.7 322.8,80.5 327.2,80.3 331.6,80.1 336.0,79.9 340.4,79.7 344.8,79.5 349.2,79.4 353.6,79.2 358.0,79.0 362.4,78.9 366.8,78.7 371.2,78.6 375.6,78.4 380.0,78.3 384.4,78.1 388.8,78.0 393.2,77.9 397.6,77.7 402.0,77.6 406.4,77.5 410.8,77.4 415.2,77.3 419.6,77.1 424.0,77.0 428.4,76.9 432.8,76.8 437.2,76.7 441.6,76.6 446.0,76.5 450.4,76.4 454.8,76.3 459.2,76.2 463.6,76.2 468.0,76.1 472.4,76.0 476.8,75.9 481.2,75.8 485.6,75.7 490.0,75.7 494.4,75.6 498.8,75.5 503.2,75.4 507.6,75.4 512.0,75.3" fill="none" stroke="#2E7D4F" stroke-width="5"/>
+<polyline points="72.0,318.0 76.4,295.3 80.8,276.3 85.2,260.3 89.6,246.6 94.0,234.7 98.4,224.2 102.8,215.1 107.2,206.9 111.6,199.6 116.0,193.0 120.4,187.0 124.8,181.6 129.2,176.7 133.6,172.2 138.0,168.0 142.4,164.2 146.8,160.6 151.2,157.3 155.6,154.2 160.0,151.3 164.4,148.6 168.8,146.1 173.2,143.8 177.6,141.5 182.0,139.4 186.4,137.4 190.8,135.6 195.2,133.8 199.6,132.1 204.0,130.5 208.4,129.0 212.8,127.5 217.2,126.1 221.6,124.8 226.0,123.6 230.4,122.3 234.8,121.2 239.2,120.1 243.6,119.0 248.0,118.0 252.4,117.0 256.8,116.1 261.2,115.2 265.6,114.3 270.0,113.5 274.4,112.6 278.8,111.9 283.2,111.1 287.6,110.4 292.0,109.7 296.4,109.0 300.8,108.3 305.2,107.7 309.6,107.1 314.0,106.5 318.4,105.9 322.8,105.3 327.2,104.8 331.6,104.2 336.0,103.7 340.4,103.2 344.8,102.7 349.2,102.2 353.6,101.8 358.0,101.3 362.4,100.9 366.8,100.5 371.2,100.1 375.6,99.6 380.0,99.2 384.4,98.9 388.8,98.5 393.2,98.1 397.6,97.8 402.0,97.4 406.4,97.1 410.8,96.7 415.2,96.4 419.6,96.1 424.0,95.8 428.4,95.5 432.8,95.2 437.2,94.9 441.6,94.6 446.0,94.3 450.4,94.0 454.8,93.8 459.2,93.5 463.6,93.3 468.0,93.0 472.4,92.8 476.8,92.5 481.2,92.3 485.6,92.0 490.0,91.8 494.4,91.6 498.8,91.4 503.2,91.1 507.6,90.9 512.0,90.7" fill="none" stroke="#2F47A6" stroke-width="5" stroke-dasharray="12 6"/>
+<polyline points="72.0,318.0 76.4,286.8 80.8,268.0 85.2,255.5 89.6,246.6 94.0,239.9 98.4,234.7 102.8,230.5 107.2,227.1 111.6,224.2 116.0,221.8 120.4,219.8 124.8,218.0 129.2,216.4 133.6,215.1 138.0,213.8 142.4,212.7 146.8,211.8 151.2,210.9 155.6,210.0 160.0,209.3 164.4,208.6 168.8,208.0 173.2,207.4 177.6,206.9 182.0,206.4 186.4,205.9 190.8,205.5 195.2,205.1 199.6,204.7 204.0,204.4 208.4,204.0 212.8,203.7 217.2,203.4 221.6,203.1 226.0,202.9 230.4,202.6 234.8,202.4 239.2,202.1 243.6,201.9 248.0,201.7 252.4,201.5 256.8,201.3 261.2,201.2 265.6,201.0 270.0,200.8 274.4,200.7 278.8,200.5 283.2,200.4 287.6,200.2 292.0,200.1 296.4,199.9 300.8,199.8 305.2,199.7 309.6,199.6 314.0,199.5 318.4,199.4 322.8,199.2 327.2,199.1 331.6,199.0 336.0,199.0 340.4,198.9 344.8,198.8 349.2,198.7 353.6,198.6 358.0,198.5 362.4,198.4 366.8,198.4 371.2,198.3 375.6,198.2 380.0,198.1 384.4,198.1 388.8,198.0 393.2,197.9 397.6,197.9 402.0,197.8 406.4,197.7 410.8,197.7 415.2,197.6 419.6,197.6 424.0,197.5 428.4,197.5 432.8,197.4 437.2,197.4 441.6,197.3 446.0,197.3 450.4,197.2 454.8,197.2 459.2,197.1 463.6,197.1 468.0,197.0 472.4,197.0 476.8,196.9 481.2,196.9 485.6,196.9 490.0,196.8 494.4,196.8 498.8,196.8 503.2,196.7 507.6,196.7 512.0,196.6" fill="none" stroke="#B23A3A" stroke-width="5"/>
+<g font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="700">
+<text x="522" y="73" fill="#2E7D4F">none</text>
+<text x="522" y="121" fill="#2F47A6">competitive</text>
+<text x="522" y="193" fill="#B23A3A">non-</text>
+<text x="522" y="221" fill="#B23A3A">competitive</text>
+</g></svg>
+    <figcaption>Green: no inhibitor. Blue dashed: competitive, reaching almost the same maximum. Red: non-competitive, a lower maximum.</figcaption>
+  </figure>
+  <div class="tablewrap"><table>
+    <tr><th></th><th>Competitive</th><th>Non-competitive</th><th>Mechanism-based</th></tr>
+    <tr><td>Binds to</td><td>active site</td><td>allosteric site</td><td>active site</td></tr>
+    <tr><td>Reversible?</td><td>yes</td><td>yes</td><td>no: a permanent covalent bond</td></tr>
+    <tr><td>More substrate</td><td>overcomes it</td><td>does not help</td><td>does not help</td></tr>
+    <tr><td>Example</td><td>statins</td><td>isoleucine on its own pathway</td><td>penicillin</td></tr>
+  </table></div>
+  <p><span class="learn" style="margin-left:0">Learn</span> the table.</p>
+  <div class="worked"><b>Worked example: which type of inhibitor?</b> Rates (arbitrary units) at low and high substrate concentration, without and with inhibitor X: low 10 and 4; high 50 and 48.
+    <ol>
+      <li>Low substrate: (10 − 4) ÷ 10 × 100 = 60% lower.</li>
+      <li>High substrate: (50 − 48) ÷ 50 × 100 = 4% lower.</li>
+      <li>The effect almost disappears at high substrate, so X is <b>competitive</b>.</li>
+    </ol>
+    <details><summary>Why this step? Why compare low and high substrate?</summary>Only competitive inhibition depends on substrate concentration.</details>
+  </div>
+  <div class="finish"><b>Finish it.</b> Inhibitor Y: low substrate 10 and 5; high substrate 50 and 25. First half done: at low substrate (10 − 5) ÷ 10 × 100 = 50% lower.
+    <details><summary>Show the answer</summary>High substrate: (50 − 25) ÷ 50 × 100 = 50% lower. The same at both ends, so more substrate does not help: Y is non-competitive.</details>
+  </div>
+
+  <h3>C1.1.16 Regulation of metabolic pathways by feedback inhibition</h3>
+  <p>The end product of a pathway inhibits the <b>first enzyme</b> of that pathway, by binding to its allosteric site. Example: the pathway from threonine to isoleucine. When isoleucine builds up, it binds to the first enzyme (threonine deaminase) and the whole pathway slows. When isoleucine is used up, it leaves the enzyme and the pathway restarts: no waste.</p>
+  <figure>
+<svg viewBox="0 0 700 250" role="img" aria-label="A pathway from threonine through several intermediate steps to isoleucine. Isoleucine, the end product, binds to the allosteric site of the first enzyme and inhibits it.">
+<rect width="700" height="250" fill="#fff"/>
+<rect x="10" y="150" width="160" height="56" rx="10" fill="#E6EAF7" stroke="#2F47A6" stroke-width="2"/>
+<rect x="520" y="150" width="170" height="56" rx="10" fill="#E3F2E8" stroke="#2E7D4F" stroke-width="2"/>
+<line x1="175" y1="178" x2="259" y2="178" stroke="#1E2A33" stroke-width="3"/><polygon points="257,170 267,178 257,186" fill="#1E2A33"/>
+<line x1="295" y1="178" x2="349" y2="178" stroke="#1E2A33" stroke-width="3"/><polygon points="347,170 357,178 347,186" fill="#1E2A33"/>
+<line x1="385" y1="178" x2="439" y2="178" stroke="#1E2A33" stroke-width="3"/><polygon points="437,170 447,178 437,186" fill="#1E2A33"/>
+<line x1="475" y1="178" x2="506" y2="178" stroke="#1E2A33" stroke-width="3"/><polygon points="504,170 514,178 504,186" fill="#1E2A33"/>
+<circle cx="280" cy="178" r="11" fill="#C9D1E6"/>
+<circle cx="370" cy="178" r="11" fill="#C9D1E6"/>
+<circle cx="460" cy="178" r="11" fill="#C9D1E6"/>
+<circle cx="220" cy="178" r="13" fill="#F2C46D" stroke="#B8761A" stroke-width="2"/>
+<path d="M605,148 C605,40 225,40 222,158" fill="none" stroke="#B23A3A" stroke-width="4" stroke-dasharray="10 6"/>
+<polygon points="212,146 232,146 222,163" fill="#B23A3A"/>
+<g font-family="Arial,Helvetica,sans-serif" font-size="24">
+<text x="90" y="186" text-anchor="middle" fill="#1E2A33">threonine</text>
+<text x="605" y="186" text-anchor="middle" fill="#1E2A33">isoleucine</text>
+<text x="220" y="232" text-anchor="middle" fill="#B8761A">enzyme 1</text>
+<text x="415" y="40" text-anchor="middle" fill="#B23A3A">inhibits</text>
+</g></svg>
+    <figcaption>Several steps, each with its own enzyme. The end product inhibits enzyme 1.</figcaption>
+  </figure>
+
+  <h3>C1.1.17 Mechanism-based inhibition</h3>
+  <p>The inhibitor binds to the active site and is chemically changed there, forming a <b>permanent covalent bond</b>: the enzyme is blocked for good. <b>Penicillin</b> does this to <b>transpeptidase</b>, the <span class="term" data-t="bacteria" tabindex="0" role="button">bacterial</span> enzyme that builds cross-links in the <span class="term" data-t="cell wall" tabindex="0" role="button">cell wall</span>. Without them the wall is weak and the bacterium bursts. <b>Resistance</b>: in some bacteria a change in the transpeptidase's active site means penicillin no longer binds, while the enzyme still works.</p>
+  <div class="tip"><b>Exam trap.</b> Non-competitive inhibitors do not "block the active site"; they change its shape from elsewhere. And competitive inhibition is reversible: say so, because mark schemes often give a mark for it.</div>
+
+  <details id="check11hl"><summary>Self-check C1.1 HL (write two key words for each on paper, then open)</summary>
+    <ol>
+      <li>Intracellular or extracellular: amylase in the small intestine; Krebs cycle enzymes?</li>
+      <li>Why is the Krebs cycle called cyclical?</li>
+      <li>Where does a non-competitive inhibitor bind, and does more substrate help?</li>
+      <li>Why do statins lower blood cholesterol?</li>
+      <li>In feedback inhibition, which enzyme is inhibited, and by what?</li>
+      <li>Why can penicillin's inhibition not be reversed, and how do resistant bacteria escape it?</li>
+    </ol>
+    <p><b>Answers.</b> 1: extracellular; intracellular. 2: its last step regenerates the molecule it starts with. 3: the allosteric site; no. 4: they are competitive inhibitors of a liver enzyme that makes cholesterol. 5: the first enzyme of the pathway, by the end product. 6: it forms a permanent covalent bond in the active site; their transpeptidase's active site has changed so penicillin does not bind.</p>
+  </details>
+</section>
+
+<!-- =============================== QUIZ =============================== -->
+<section class="topic quiz" id="quiz">
+  <div class="kicker">7 multiple-choice questions (Paper 1A style), then 3 written ones (Paper 2 style)</div>
+  <h2>Quick quiz</h2>
+  <p>Decide on your answer before you click. Every question explains the trap after you answer. Questions 4, 5 and 7 and written items B and C are HL. If you miss one: close the page, redo that section's self-check from memory, and write the rule in the Error log.</p>
+
+  <div class="q" data-a="1"><p>1. A polypeptide of 150 amino acids is made by condensation reactions. How many water molecules are released?</p>
+    <button>150</button>
+    <button>149</button>
+    <button>151</button>
+    <button>300</button>
+    <div class="why">One water molecule per peptide bond, and a chain of n amino acids has n − 1 peptide bonds: 149. 150 forgets that the first amino acid has nothing to join to yet.</div></div>
+
+  <div class="q" data-a="0"><p>2. Which statement about essential amino acids is correct?</p>
+    <button>They cannot be synthesised by the body, so they must be obtained from food.</button>
+    <button>They are needed in larger amounts than non-essential amino acids.</button>
+    <button>They are found only in animal protein.</button>
+    <button>They can be made in the body from other amino acids.</button>
+    <div class="why">"Essential" means essential in the diet. Option 4 describes non-essential amino acids. Plant foods do contain essential amino acids, which is why a varied vegan diet can supply them all.</div></div>
+
+  <div class="q" data-a="3"><p>3. An enzyme is heated to 80 °C and denatured. Which bonds are NOT broken?</p>
+    <button>Hydrogen bonds between R-groups</button>
+    <button>Ionic bonds between R-groups</button>
+    <button>Hydrophobic interactions between R-groups</button>
+    <button>Peptide bonds between amino acids</button>
+    <div class="why">Denaturation breaks the weaker bonds that hold the 3D shape. Peptide bonds are strong covalent bonds in the chain itself, so the primary structure is unchanged.</div></div>
+
+  <div class="q" data-a="2"><p>4. (HL) What holds an alpha helix in shape?</p>
+    <button>Disulfide bonds between cysteine R-groups</button>
+    <button>Peptide bonds between neighbouring amino acids</button>
+    <button>Hydrogen bonds between C=O and N−H groups at regular positions in the chain</button>
+    <button>Hydrophobic interactions between non-polar R-groups</button>
+    <div class="why">Secondary structure comes from hydrogen bonds in the backbone, not from R-groups. Disulfide bonds and hydrophobic interactions belong to tertiary structure; peptide bonds make the primary structure.</div></div>
+
+  <div class="q" data-a="2"><p>5. (HL) Which protein is conjugated?</p>
+    <button>Insulin</button>
+    <button>Collagen</button>
+    <button>Haemoglobin</button>
+    <button>Any protein with more than one polypeptide chain</button>
+    <div class="why">Conjugated means it has a non-polypeptide part: haemoglobin's haem groups with iron. Insulin and collagen have several chains but are only polypeptide, so they are non-conjugated. Several chains is quaternary structure, not conjugation.</div></div>
+
+  <div class="q" data-a="0"><p>6. In an enzyme experiment the rate stops rising when more substrate is added. Why?</p>
+    <button>All the active sites are occupied at any moment.</button>
+    <button>The enzyme has been denatured by the substrate.</button>
+    <button>The substrate has all been used up.</button>
+    <button>The activation energy has risen.</button>
+    <div class="why">With excess substrate every active site is busy, so the amount of enzyme limits the rate. Substrate does not denature enzymes, and if substrate had run out the rate would fall, not level off.</div></div>
+
+  <div class="q" data-a="1"><p>7. (HL) Isoleucine binds to the allosteric site of the first enzyme in the pathway that makes isoleucine. This is an example of</p>
+    <button>competitive inhibition at the active site</button>
+    <button>feedback inhibition by an end product</button>
+    <button>mechanism-based, irreversible inhibition</button>
+    <button>denaturation of the enzyme</button>
+    <div class="why">The end product inhibits the first enzyme of its own pathway: feedback (end-product) inhibition. It binds the allosteric site reversibly, so it is not competitive and not mechanism-based.</div></div>
+
+  <div class="score" id="score">Score: 0 / 7 answered 0</div>
+
+  <h3>Written questions (on paper, then open the model answer)</h3>
+  <div class="written" data-max="2"><p>A. Explain why people on a vegan diet need to pay attention to the proteins they eat. [2]</p>
+    <details><summary>Show model answer</summary>Mark-scheme style checklist, one mark each, up to 2:
+      <ul><li>essential amino acids cannot be synthesised by the body / must be obtained from the diet;</li>
+      <li>some plant proteins contain little of one or more essential amino acids;</li>
+      <li>so vegans need a variety of plant protein sources to get all of them.</li></ul></details></div>
+
+  <div class="written" data-max="2"><p>B. (HL) Explain why heat is released by the reactions of metabolism and why this matters to a bird. [2]</p>
+    <details><summary>Show model answer</summary>
+      <ul><li>energy transfers in metabolic reactions are not 100% efficient, so some energy is always lost as heat;</li>
+      <li>birds use this heat to keep a constant body temperature.</li></ul></details></div>
+
+  <div class="written" data-max="3"><p>C. (HL) <span class="term" data-t="outline" tabindex="0" role="button">Outline</span> how penicillin kills bacteria and how resistance to penicillin can arise. [3]</p>
+    <details><summary>Show model answer</summary>One mark each, up to 3:
+      <ul><li>penicillin binds to the active site of transpeptidase and forms a permanent covalent bond / irreversible, mechanism-based inhibition;</li>
+      <li>the bacterium cannot build cross-links in its cell wall, so the wall is weak and the cell bursts;</li>
+      <li>resistance: a change (mutation) in the transpeptidase's active site, so penicillin no longer binds.</li></ul></details></div>
+  <p style="font-size:.95rem;color:var(--ink-soft)">Mark A to C yourself against the checklists: a point counts only if your answer says that idea. Only the 7 multiple-choice answers count in the score saved on this device.</p>
+</section>
+
+<section class="end" id="end">
+  <h2 style="font-size:1.4rem">Before you close this</h2>
+  <ul>
+    <li>Tick the "I can" boxes you are sure about. The unticked ones are the first ten minutes of your next Biology session.</li>
+    <li>Mark every pack question against the mark scheme, point by point.</li>
+    <li>Open the <a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">study sheet, Error log tab</a>. One row per lost mark, with its type: <b>did not know</b>, <b>wrong method</b>, <b>slip</b>, <b>time</b> or <b>ask teacher</b>, and the rule that fixes it (for example "denaturation: bonds between R-groups break, not peptide bonds").</li>
+    <li>Fix-it: rewrite one answer that lost marks so it would get full marks, and keep it with your notes.</li>
+    <li>Draw from memory before you sleep: an amino acid, a dipeptide, and the rate against substrate graph with both kinds of inhibitor.</li>
+    <li>Also on the study site: <a href="../flashcards.html">flashcards</a> (5 to 10 minutes a day), <a href="../exam.html">exam technique</a>, and your <a href="../progress.html">progress page</a>, which turns green as you tick the "I can" boxes and pass the quiz.</li>
+  </ul>
+</section>
+
+</main>
+
+<script>
+(function(){
+  // remember ticked "I can" boxes on this device; fails quietly where storage is unavailable
+  var key='ib-bio-b12-c11-ican';
+  var boxes=document.querySelectorAll('.ican input');
+  try{ var saved=JSON.parse(localStorage.getItem(key)||'{}'); boxes.forEach(function(b){ if(saved[b.dataset.k]) b.checked=true; }); }catch(e){}
+  boxes.forEach(function(b){ b.addEventListener('change',function(){ try{ var s={}; boxes.forEach(function(x){ if(x.checked) s[x.dataset.k]=1; }); localStorage.setItem(key,JSON.stringify(s)); }catch(e){} }); });
+
+  // quiz: only the multiple-choice items (.q) are scored; written items (.written) are self-marked
+  var qs=document.querySelectorAll('.quiz .q'); var right=0, done=0, total=qs.length;
+  qs.forEach(function(q){
+    var a=parseInt(q.dataset.a,10); var btns=q.querySelectorAll(':scope > button');
+    btns.forEach(function(b,i){ b.addEventListener('click',function(){
+      if(q.classList.contains('done')) return;
+      q.classList.add('done'); done++;
+      if(i===a){ b.classList.add('right'); right++; } else { b.classList.add('wrong'); btns[a].classList.add('right'); }
+      document.getElementById('score').textContent='Score: '+right+' / '+total+' answered '+done+(done===total?(right>=6?'. Good. Log the ones you missed.':'. Close the page, redo the self-check for the ones you missed, then log them.'):'');
+      if(done===qs.length){ try{ var KQ='ib-quiz-guide-2026-11-18'; var prev=JSON.parse(localStorage.getItem(KQ)||'null'); localStorage.setItem(KQ,JSON.stringify({right:right,total:qs.length,date:new Date().toISOString().slice(0,10),best:Math.max(right,prev&&prev.best||0)})); }catch(e){} }
+    }); });
+  });
+})();
+</script>
+<!--terms:start-->
+<div id="termbox" role="dialog" aria-live="polite"><div class="tb-h"><b></b><button type="button">Close</button></div><p class="tb-d"></p></div>
+<script id="terms-data" type="application/json">{"amino acid": {"w": "amino acid", "d": "The small building blocks (monomers) of proteins. There are 20 kinds; a protein is a chain of them in a particular order."}, "protein": {"w": "protein", "d": "A large molecule made of one or more chains of amino acids folded into a particular shape. Enzymes, insulin and collagen are proteins."}, "polymer": {"w": "polymer", "d": "A large molecule made of many similar small units (monomers) joined in a chain, like beads on a string."}, "monomer": {"w": "monomer", "d": "One of the small units that join in a chain to make a polymer."}, "atom": {"w": "atom", "d": "The smallest particle of an element. Proteins are made of carbon, hydrogen, oxygen, nitrogen and sulfur atoms."}, "covalent bond": {"w": "covalent bond", "d": "A strong bond in which two atoms share electrons (tiny negative particles). It holds the atoms of a molecule together."}, "hydrogen bond": {"w": "hydrogen bond", "d": "A weak attraction between a slightly positive H atom and a slightly negative O or N atom nearby. One is weak, but many together are strong."}, "ionic bond": {"w": "ionic bond", "d": "An attraction between a positively charged group and a negatively charged group."}, "charge": {"w": "charge", "d": "Electric charge is positive (+) or negative (−). Opposite charges attract; like charges push apart."}, "polar": {"w": "polar", "d": "Having a slightly positive end and a slightly negative end, like −OH. Polar groups are attracted to water."}, "non-polar": {"w": "non-polar", "d": "Having no charged ends. Groups made only of carbon and hydrogen are non-polar, so water is not attracted to them."}, "hydrophilic": {"w": "hydrophilic", "d": "\"Water-loving\": attracted to water. Polar and charged groups are hydrophilic."}, "hydrophobic": {"w": "hydrophobic", "d": "\"Water-hating\": not attracted to water, so such groups cluster together away from it, like oil in water."}, "acidic": {"w": "acidic and basic R-groups", "d": "An acidic R-group can lose a hydrogen ion (H<sup>+<\/sup>) and become negative. A basic R-group can gain one and become positive."}, "condensation": {"w": "condensation reaction", "d": "A reaction that joins two molecules with a covalent bond and releases a molecule of water."}, "hydrolysis": {"w": "hydrolysis", "d": "A reaction that uses a water molecule to split a covalent bond, breaking a large molecule into smaller ones. The opposite of condensation."}, "polypeptide": {"w": "polypeptide", "d": "A chain of many amino acids joined by peptide bonds. A protein is one or more polypeptides, folded."}, "dipeptide": {"w": "dipeptide", "d": "Two amino acids joined by one peptide bond."}, "synthesise": {"w": "synthesise", "d": "To make a substance by building it from smaller ones. Protein synthesis is making proteins."}, "genetic code": {"w": "genetic code", "d": "The rule by which the order of bases in DNA stands for the order of amino acids in a protein."}, "sequence": {"w": "sequence", "d": "The order in which things come one after another, like letters in a word."}, "mutation": {"w": "mutation", "d": "A change in the DNA of a gene. It can change one amino acid in the protein the gene codes for."}, "denatured": {"w": "denatured", "d": "A protein is denatured when the bonds holding its 3D shape break, so it loses its shape and stops working. Usually permanent."}, "ph": {"w": "pH", "d": "A scale of how acidic or alkaline a liquid is: 7 is neutral, below 7 acidic, above 7 alkaline. Stomach juice is about pH 2."}, "conformation": {"w": "conformation", "d": "The exact 3D shape of a protein."}, "cysteine": {"w": "cysteine", "d": "An amino acid whose R-group contains sulfur (−SH). Two cysteines can join by a covalent disulfide bond."}, "core": {"w": "core", "d": "The inside or centre of a folded protein, away from the surrounding water."}, "membrane": {"w": "membrane", "d": "The very thin layer around a cell (and some structures inside it). Its middle is made of hydrophobic fatty tails."}, "integral protein": {"w": "integral protein", "d": "A protein that sits inside a membrane, often crossing it from one side to the other."}, "globular": {"w": "globular", "d": "Rounded and compact, like a ball. Globular proteins are usually soluble, for example enzymes and insulin."}, "fibrous": {"w": "fibrous", "d": "Long and thin, like threads. Fibrous proteins are usually insoluble and strong, for example collagen."}, "soluble": {"w": "soluble", "d": "Soluble: able to dissolve in water. Insoluble: does not dissolve."}, "insulin": {"w": "insulin", "d": "A small protein hormone made in the pancreas. It travels in the blood and helps cells take up glucose, lowering blood sugar."}, "haemoglobin": {"w": "haemoglobin", "d": "The red protein in red blood cells that carries oxygen. It has four chains, each with an iron-containing haem group."}, "collagen": {"w": "collagen", "d": "A strong fibrous protein made of three chains wound together. It gives strength to skin, tendons, ligaments and bones."}, "hormone": {"w": "hormone", "d": "A chemical messenger released into the blood that changes how certain target cells work."}, "receptor": {"w": "receptor", "d": "A protein on or in a cell that a particular messenger molecule fits and binds to, which triggers a response."}, "prosthetic group": {"w": "prosthetic group", "d": "A part of a protein that is not made of amino acids, such as the iron-containing haem in haemoglobin."}, "tendon": {"w": "tendons and ligaments", "d": "Tendons are tough cords joining muscles to bones. Ligaments join bones to other bones."}, "catalyst": {"w": "catalyst", "d": "A substance that speeds up a chemical reaction without being used up."}, "enzyme": {"w": "enzyme", "d": "A protein that speeds up one particular reaction in a living thing without being used up: a biological catalyst."}, "substrate": {"w": "substrate", "d": "The molecule an enzyme acts on. It binds to the enzyme's active site and is changed into products."}, "active site": {"w": "active site", "d": "The small pocket on an enzyme where the substrate binds and the reaction happens."}, "metabolism": {"w": "metabolism", "d": "All the chemical reactions going on in a living thing, linked to each other."}, "anabolism": {"w": "anabolism", "d": "Reactions that build big molecules from small ones. They need energy."}, "catabolism": {"w": "catabolism", "d": "Reactions that break big molecules into smaller ones. They release energy."}, "macromolecule": {"w": "macromolecule", "d": "A very large molecule, such as a protein, starch or DNA, usually a polymer."}, "glycogen": {"w": "glycogen", "d": "The store of glucose in animals (liver and muscles): a branched polymer of glucose."}, "photosynthesis": {"w": "photosynthesis", "d": "The process in plants that uses light energy to make sugar from carbon dioxide and water."}, "respiration": {"w": "respiration", "d": "The process in every cell that releases energy from glucose. It is not the same as breathing."}, "oxidation": {"w": "oxidation", "d": "Here: the removal of electrons (often with hydrogen) from a molecule, which releases energy, as in respiration."}, "kinetic energy": {"w": "kinetic energy", "d": "Energy of movement. Warmer molecules have more kinetic energy, so they move faster."}, "collision": {"w": "collide", "d": "To bump into each other. An enzyme can only act when a substrate molecule bumps into its active site."}, "optimum": {"w": "optimum", "d": "The best value: the temperature or pH at which an enzyme works fastest."}, "catalase": {"w": "catalase", "d": "An enzyme in most cells that splits hydrogen peroxide (a harmful substance) into water and oxygen."}, "amylase": {"w": "amylase", "d": "An enzyme in saliva and the gut that digests starch into sugars."}, "mean": {"w": "mean", "d": "The average: add the values and divide by how many there are."}, "activation energy": {"w": "activation energy", "d": "The energy needed to start a reaction by breaking bonds in the substrate. Enzymes lower it."}, "specificity": {"w": "specificity", "d": "Each enzyme acts on only one substrate (or a small group), because only that substrate fits its active site."}, "complementary": {"w": "complementary", "d": "Fitting together as a matching pair, in shape and in charges."}, "enzyme-substrate complex": {"w": "enzyme-substrate complex", "d": "The enzyme and its substrate while they are bound together, before the products leave."}, "immobilised": {"w": "immobilised", "d": "Fixed in one place so it cannot move about."}, "intracellular": {"w": "intracellular", "d": "Inside a cell. Extracellular means outside cells."}, "glycolysis": {"w": "glycolysis", "d": "The first stage of respiration, in the cytoplasm: glucose is split into two pyruvate molecules."}, "krebs cycle": {"w": "Krebs cycle", "d": "A cycle of reactions in the mitochondria that continues breaking down the products of glycolysis in respiration."}, "calvin cycle": {"w": "Calvin cycle", "d": "A cycle of reactions in chloroplasts that builds sugar from carbon dioxide in photosynthesis."}, "cytoplasm": {"w": "cytoplasm", "d": "Everything inside a cell's membrane except the nucleus: a watery fluid where many reactions happen."}, "mitochondria": {"w": "mitochondria", "d": "Small structures in cells where most of the energy is released from food in respiration."}, "regenerate": {"w": "regenerates", "d": "Makes again, so it can be used again."}, "inhibitor": {"w": "inhibitor", "d": "A substance that slows down or stops an enzyme."}, "allosteric site": {"w": "allosteric site", "d": "A binding site on an enzyme away from the active site. A molecule binding there changes the enzyme's shape."}, "reversible": {"w": "reversible", "d": "Able to undo: a reversibly bound inhibitor can come off the enzyme again."}, "statin": {"w": "statins", "d": "Medicines that lower blood cholesterol by blocking an enzyme in the liver that makes cholesterol."}, "cholesterol": {"w": "cholesterol", "d": "A fatty substance made in the liver. Too much in the blood raises the risk of heart disease."}, "end product": {"w": "end product", "d": "The final product of a chain of reactions."}, "penicillin": {"w": "penicillin", "d": "An antibiotic: a medicine that kills bacteria by stopping them building their cell walls."}, "cell wall": {"w": "cell wall", "d": "A stiff layer outside the membrane of bacteria (and plant cells) that stops the cell bursting."}, "bacteria": {"w": "bacteria", "d": "Tiny single-celled living things with no nucleus. Some cause disease."}, "resistance": {"w": "resistance", "d": "Here: bacteria are resistant when an antibiotic no longer kills them."}, "dna": {"w": "DNA", "d": "The molecule that carries genes: the instructions for making an organism's proteins."}, "explain": {"w": "explain", "d": "IB command term: give a detailed account including reasons or causes. Say why or how, using \"because\" and \"so\"."}, "describe": {"w": "describe", "d": "IB command term: give a detailed account. Say what happens; reasons are not needed."}, "outline": {"w": "outline", "d": "IB command term: give a brief account or summary."}, "suggest": {"w": "suggest", "d": "IB command term: propose a solution, hypothesis or other possible answer, using what you know."}, "distinguish": {"w": "distinguish", "d": "IB command term: make clear the differences between two or more things."}, "compare": {"w": "compare", "d": "To look at two things side by side. In IB \"compare and contrast\": give similarities and differences, mentioning both things each time."}, "calculate": {"w": "calculate", "d": "IB command term: work out a number answer, showing the steps of your working."}, "sketch": {"w": "sketch", "d": "IB command term: draw a diagram or graph that shows the general shape, with labels, but not exact values."}, "draw": {"w": "draw", "d": "IB command term: make a labelled, accurate diagram in pencil, with a ruler for straight lines."}}</script>
+<script>
+(function(){
+  // tap a dotted word to see what it means
+  var T={};
+  try{ T=JSON.parse(document.getElementById('terms-data').textContent); }catch(e){ return; }
+  var box=document.getElementById('termbox'), bt=box.querySelector('.tb-h b'), bd=box.querySelector('.tb-d');
+  function show(el){ var k=el.getAttribute('data-t'); if(!T[k]) return; bt.textContent=T[k].w; bd.innerHTML=T[k].d; box.classList.add('on'); }
+  function hide(){ box.classList.remove('on'); }
+  document.addEventListener('click',function(e){
+    var el=e.target.closest ? e.target.closest('.term') : null;
+    if(el){ e.preventDefault(); e.stopPropagation(); show(el); return; }
+    if(!box.contains(e.target)) hide();
+  },true);
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape') hide();
+    if((e.key==='Enter'||e.key===' ') && e.target.classList && e.target.classList.contains('term')){ e.preventDefault(); show(e.target); }
+  });
+  box.querySelector('button').addEventListener('click',hide);
+})();
+</script><!--terms:end-->
+<!--enhance:start--><script>
+function storageOK(){ try{ var k='__ib_t'; localStorage.setItem(k,'1'); localStorage.removeItem(k); return true; }catch(e){ return false; } }
+function storageNotice(){ if(storageOK() || document.querySelector('.notice.storage')) return;
+  var n=document.createElement('div'); n.className='notice storage'; n.setAttribute('role','status');
+  n.textContent='Progress cannot be saved in this browser (private mode?). Use normal Safari or Chrome.';
+  var sb=document.querySelector('.sitebar');   // under the shared top bar when the page has one
+  if(sb && sb.parentNode){ sb.parentNode.insertBefore(n,sb.nextSibling); return; }
+  var m=document.querySelector('main')||document.body; m.insertBefore(n,m.firstChild); }
+
+function ibQuizEnhance(cfg){
+  if(window.__ibQuizEnh) return; window.__ibQuizEnh=1;
+  if(typeof storageNotice==='function') storageNotice();
+  var KEY=cfg&&cfg.key; if(!KEY) return;
+  var AK=KEY+'-attempts', WK=KEY+'-written';
+  function get(k){ try{ return JSON.parse(localStorage.getItem(k)||'null'); }catch(e){ return null; } }
+  function put(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); }catch(e){} }
+  function pad(n){ return (n<10?'0':'')+n; }
+  function today(){ var d=new Date(); return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()); }
+  function attempts(){ var a=get(AK); return Array.isArray(a)?a:[]; }
+  function addAttempt(r,t,sameDay){ var a=attempts(), d=today(), rec={date:d,right:r,total:t};
+    if(sameDay && a.length && a[a.length-1].date===d) a[a.length-1]=rec; else a.push(rec); put(AK,a); return a; }
+  // keep the score saved before this history existed as the first attempt
+  (function(){ if(get(AK)) return; var r=get(KEY); if(!r||typeof r!=='object') return;
+    var rr=(typeof r.right==='number')?r.right:r.score, tt=(typeof r.total==='number')?r.total:r.max;
+    if(typeof rr==='number' && tt) put(AK,[{date:r.date||today(),right:rr,total:tt}]); })();
+
+  // written answers: self-mark 0..max
+  var W=get(WK); if(!W||typeof W!=='object') W={};
+  [].forEach.call(document.querySelectorAll('.written[data-max]'),function(el,i){
+    var max=parseInt(el.getAttribute('data-max'),10); if(!(max>=0) || el.querySelector('.wm')) return;
+    var id=el.id||el.getAttribute('data-id')||('w'+(i+1));
+    var box=document.createElement('div'); box.className='wm';
+    var lab=document.createElement('label'); lab.appendChild(document.createTextNode('My mark: '));
+    var sel=document.createElement('select'); sel.setAttribute('aria-label','Your mark out of '+max);
+    var o=document.createElement('option'); o.value=''; o.textContent='not marked yet'; sel.appendChild(o);
+    for(var m=0;m<=max;m++){ o=document.createElement('option'); o.value=String(m); o.textContent=m+' out of '+max; sel.appendChild(o); }
+    if(W[id]!=null) sel.value=String(W[id]);
+    sel.addEventListener('change',function(){ var w=get(WK); if(!w||typeof w!=='object') w={};
+      if(sel.value==='') delete w[id]; else w[id]=parseInt(sel.value,10); put(WK,w); });
+    lab.appendChild(sel); box.appendChild(lab); el.appendChild(box);
+  });
+
+  // timed pages save {score,max,date} themselves; keep one history entry per day
+  if(/^ib-timed-/.test(KEY)){
+    var rec=function(){ var r=get(KEY); if(r && typeof r.score==='number' && r.max) addAttempt(r.score,r.max,true); };
+    var sb=document.getElementById('savebtn'); if(sb) sb.addEventListener('click',function(){ setTimeout(rec,0); });
+    [].forEach.call(document.querySelectorAll('.score-t input'),function(i){ i.addEventListener('change',function(){ setTimeout(rec,0); }); });
+  }
+
+  // multiple-choice quiz
+  var q0=document.querySelector('.quiz .q[data-a]'); if(!q0) return;
+  var quiz=q0.closest('.quiz');
+  var own=!!cfg.own, total=0, count=0, right=0, recs=[];
+  function qsAll(){ return [].filter.call(quiz.querySelectorAll('.q[data-a]'),function(q){ return !q.classList.contains('written'); }); }
+  function opts(q){ return [].filter.call(q.children,function(c){ return c.tagName==='BUTTON'; }); }
+  var score=document.getElementById('score');
+  if(!score){ score=document.createElement('div'); score.className='score'; score.id='score'; var l=qsAll(); l[l.length-1].parentNode.insertBefore(score,l[l.length-1].nextSibling); }
+  var rep=document.createElement('div'); rep.className='cfr'; rep.setAttribute('aria-live','polite'); score.parentNode.insertBefore(rep,score.nextSibling);
+  var hint=document.createElement('p'); hint.className='cfh';
+  hint.textContent='Before each answer, say how sure you are. At the end, the ones you were sure about but got wrong are listed first: they matter most.';
+  q0.parentNode.insertBefore(hint,qsAll()[0]);
+  function addConf(q){ var p=q.querySelector('.cf'); if(p) p.parentNode.removeChild(p);
+    var d=document.createElement('div'); d.className='cf'; d.setAttribute('role','group'); d.setAttribute('aria-label','How sure are you?');
+    d.innerHTML='<div class="cfl-h">How sure are you?</div><div class="cfb"><button type="button" data-c="guess" aria-pressed="false">Guessed</button><button type="button" data-c="unsure" aria-pressed="false">Unsure</button><button type="button" data-c="sure" aria-pressed="false">Sure</button></div>';
+    var first=opts(q)[0]; q.insertBefore(d,first||null); q.removeAttribute('data-conf'); }
+  function counters(qs){ qs.forEach(function(q,i){ var c=q.querySelector('.qn'); if(!c){ c=document.createElement('div'); c.className='qn'; q.insertBefore(c,q.firstChild); } c.textContent=(i+1)+' of '+qs.length; }); }
+  function start(){ var qs=qsAll(); total=qs.length; count=0; right=0; recs=[]; qs.forEach(addConf); counters(qs); rep.innerHTML=''; }
+  function msg(){ return 'Score: '+right+' / '+total+' answered '+count+(count===total?(right>=0.8*total?'. Good. Log the ones you missed.':'. Re-read the sections for the ones you missed, then log them.'):''); }
+  function qtext(q){ var p=q.querySelector('p'); var t=p?p.textContent:''; t=t.replace(/\s+/g,' ').trim();
+    var s=p&&p.querySelector('.subj'); if(s) t=t.slice(s.textContent.trim().length).trim();
+    t=t.replace(/^\d+\.\s*/,''); return t.length>110?t.slice(0,107)+'...':t; }
+  function esc(s){ var d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+  quiz.addEventListener('click',function(e){
+    var b=e.target.closest?e.target.closest('button'):null; if(!b) return;
+    var q=b.closest('.q'); if(!q || !quiz.contains(q) || !q.hasAttribute('data-a') || q.classList.contains('written')) return;
+    var cf=b.closest('.cf');
+    if(cf){ if(q.__ibRec) return; var c=b.getAttribute('data-c'); q.setAttribute('data-conf',c);
+      [].forEach.call(cf.querySelectorAll('button'),function(x){ var on=x===b; x.classList.toggle('on',on); x.setAttribute('aria-pressed',on?'true':'false'); }); return; }
+    if(b.parentNode!==q || q.__ibRec) return;
+    if(own){
+      if(q.classList.contains('done')) return;
+      var bs=opts(q), a=parseInt(q.getAttribute('data-a'),10), i=bs.indexOf(b);
+      q.classList.add('done');
+      if(i===a) b.classList.add('right'); else { b.classList.add('wrong'); if(bs[a]) bs[a].classList.add('right'); }
+    } else if(!q.classList.contains('done')) return;
+    q.__ibRec=true; var ok=b.classList.contains('right'); if(ok) right++; count++;
+    recs.push({q:q,ok:ok,conf:q.getAttribute('data-conf')||''});
+    [].forEach.call(q.querySelectorAll('.cf button'),function(x){ x.disabled=true; });
+    if(own) score.textContent=msg();
+    if(count===total) finish();
+  });
+  function finish(){
+    var r=right, t=total;
+    if(own){ try{ var prev=get(KEY); localStorage.setItem(KEY,JSON.stringify({right:r,total:t,date:new Date().toISOString().slice(0,10),best:Math.max(r,prev&&prev.best||0)})); }catch(e){} }
+    else { var s=get(KEY); if(s && typeof s.right==='number' && s.total) { r=s.right; t=s.total; } }
+    var a=addAttempt(r,t,false);
+    var order=qsAll(), num=function(q){ return order.indexOf(q)+1; };
+    var wrong=recs.filter(function(x){ return !x.ok; });
+    wrong.sort(function(x,y){ return (y.conf==='sure')-(x.conf==='sure') || num(x.q)-num(y.q); });
+    var lucky=recs.filter(function(x){ return x.ok && (x.conf==='guess'||x.conf==='unsure'); }).sort(function(x,y){ return num(x.q)-num(y.q); });
+    var lab={sure:'you were sure',unsure:'you were unsure',guess:'you guessed','':'not marked'};
+    var h='';
+    if(wrong.length){ h+='<b>Log these first</b><ol class="cfl">'+wrong.map(function(x){ return '<li'+(x.conf==='sure'?' class="sure"':'')+'>Question '+num(x.q)+' ('+lab[x.conf]+'): '+esc(qtext(x.q))+'</li>'; }).join('')+'</ol>'; }
+    if(lucky.length){ h+='<b>Right, but not sure</b>: read the explanation again for '+lucky.map(function(x){ return 'question '+num(x.q); }).join(', ')+'.'; }
+    if(!wrong.length && !lucky.length) h+='<b>All right.</b> Come back in a few days and try again: a score that lasts is what counts.';
+    var past=a.slice(0,-1).slice(-3).map(function(x){ return x.right+'/'+x.total+' on '+x.date; });
+    h+='<p class="cfa">Try number '+a.length+(past.length?'. Before: '+past.join(', ')+'.':'.')+'</p>';
+    h+='<button type="button" class="retry">Try again (shuffled)</button>';
+    rep.innerHTML=h;
+    rep.querySelector('.retry').addEventListener('click',retry);
+  }
+  function shuffled(arr){ var best=arr.slice();
+    for(var k=0;k<12;k++){ var x=arr.slice(); for(var i=x.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=x[i]; x[i]=x[j]; x[j]=t; }
+      best=x; if(arr.length<2 || x.some(function(v,i){ return v!==arr[i]; })) break; }
+    return best; }
+  function renumber(q,n){ var p=q.querySelector('p'); if(!p) return;
+    var w=document.createTreeWalker(p,4,null), tn;
+    while((tn=w.nextNode())){ if(tn.parentNode.closest && tn.parentNode.closest('.subj')) continue; if(!/\S/.test(tn.data)) continue;
+      if(/^\s*\d+\.\s/.test(tn.data)) tn.data=tn.data.replace(/^(\s*)\d+\./,'$1'+n+'.'); break; } }
+  function retry(){
+    var qs=qsAll(), marks=[], clones=[];
+    qs.forEach(function(q){
+      var m=document.createComment('q'); q.parentNode.insertBefore(m,q); marks.push(m);
+      var c=q.cloneNode(true); c.classList.remove('done'); c.removeAttribute('data-conf');
+      var p=c.querySelector('.cf'); if(p) p.parentNode.removeChild(p); p=c.querySelector('.qn'); if(p) p.parentNode.removeChild(p);
+      var bs=opts(c), a=parseInt(c.getAttribute('data-a'),10), good=bs[a];
+      bs.forEach(function(x){ x.classList.remove('right','wrong'); x.disabled=false; });
+      if(bs.length){ var after=bs[bs.length-1].nextSibling, nb=shuffled(bs);
+        bs.forEach(function(x){ c.removeChild(x); }); nb.forEach(function(x){ c.insertBefore(x,after); });
+        c.setAttribute('data-a',String(nb.indexOf(good))); }
+      q.parentNode.removeChild(q); clones.push(c);
+    });
+    var nq=shuffled(clones);
+    marks.forEach(function(m,i){ m.parentNode.insertBefore(nq[i],m); m.parentNode.removeChild(m); renumber(nq[i],i+1); });
+    own=true; start(); score.textContent='Score: 0 / '+total+' answered 0';
+    var top=quiz.getBoundingClientRect().top+window.pageYOffset-60; try{ window.scrollTo(0,Math.max(0,top)); }catch(e){}
+  }
+  start();
+}
+
+storageNotice();
+ibQuizEnhance({"key": "ib-quiz-guide-2026-11-18", "own": false});
+(function(){
+  if(window.__ibSite) return; window.__ibSite=1;
+  var PAGE='ib-'+((location.pathname.split('/').pop()||'index').replace(/\.html?$/,''));
+  var BK=PAGE+'-blocks';
+  function get(){ try{ var v=JSON.parse(localStorage.getItem(BK)||'null'); return v&&typeof v==='object'?v:{}; }catch(e){ return {}; } }
+  function put(v){ try{ localStorage.setItem(BK,JSON.stringify(v)); }catch(e){} }
+  // guide plan blocks "Block 1 · 25 min" + title -> numbered card with a time chip
+  [].forEach.call(document.querySelectorAll('.plan > div:not(.brk), .step'),function(d){
+    var bh=d.querySelector(':scope > .bh'); if(!bh || bh.querySelector('.bn')) return;
+    var b=bh.querySelector('b'); var m=b && /^\s*Block\s+(\d+[a-z]?)\s*[·.:-]\s*(.+?)\s*$/i.exec(b.textContent); if(!m) return;
+    var s=bh.querySelector('span'); var title=s?s.innerHTML:'';
+    d.classList.add('block'); d.setAttribute('data-n',m[1]);
+    bh.innerHTML='<span class="bn" aria-hidden="true">'+m[1]+'</span><b><span class="sr">Block '+m[1]+': </span>'+(title||('Block '+m[1]))+'</b><span class="bt">'+m[2]+'</span>';
+    // teaching sections linked from this block get a kicker "Block n · ..."
+    [].forEach.call(d.querySelectorAll('a[href^="#"]'),function(a){
+      var t=document.getElementById(a.getAttribute('href').slice(1)); if(!t) return;
+      var k=t.querySelector(':scope > .kicker'); if(!k || k.getAttribute('data-bk')) return;
+      k.setAttribute('data-bk',m[1]); k.insertAdjacentHTML('afterbegin','<span class="bk">Block '+m[1]+' · </span>');
+    });
+  });
+  // long hero intro paragraphs fold to 3 lines; tap to read them all
+  [].forEach.call(document.querySelectorAll('header.hero .wrap > p'),function(p){
+      if(p.textContent.length<160) return;
+      p.classList.add('fold'); if(p.scrollHeight<=p.clientHeight+2){ p.classList.remove('fold'); return; }
+      p.setAttribute('role','button'); p.setAttribute('tabindex','0'); p.setAttribute('aria-expanded','false');
+      function tog(e){ if(e && e.target && e.target.closest && e.target.closest('a,.term')) return; var o=p.classList.toggle('open'); p.setAttribute('aria-expanded',o?'true':'false'); }
+      p.addEventListener('click',tog); p.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); tog(); } });
+  });
+  // keep the Today card on the first screen: shrink the header picture (not below 18% of the screen height) if needed
+  (function(){ var art=document.querySelector('header.hero > svg, header.hero > img'), card=document.querySelector('.todaycard');
+    if(!art || !card) return; var vh=window.innerHeight, over=card.getBoundingClientRect().top+window.pageYOffset-(vh-70);
+    if(over>0){ var h=art.getBoundingClientRect().height; art.style.maxHeight=Math.max(0.18*vh,h-over)+'px'; } })();
+  // "Block done" ticks
+  var st=get();
+  [].forEach.call(document.querySelectorAll('.block'),function(d,i){
+    if(d.querySelector(':scope > .bdone')) return;
+    var n=d.getAttribute('data-n')||String(i+1);
+    var l=document.createElement('label'); l.className='bdone';
+    l.innerHTML='<input type="checkbox"> Block done';
+    var c=l.querySelector('input'); c.checked=!!st[n]; d.classList.toggle('is-done',c.checked);
+    c.addEventListener('change',function(){ var s=get(); if(c.checked) s[n]=new Date().toISOString().slice(0,10); else delete s[n]; put(s); d.classList.toggle('is-done',c.checked); chips(); });
+    d.appendChild(l);
+  });
+  function chips(){ var s=get(); [].forEach.call(document.querySelectorAll('.chip[data-n]'),function(a){ a.classList.toggle('done',!!s[a.getAttribute('data-n')]); }); }
+  chips();
+  // current section in the menu
+  var nav=document.querySelector('nav.toc .wrap'); if(!nav || !('IntersectionObserver' in window)) return;
+  var links={}, secs=[];
+  [].forEach.call(nav.querySelectorAll('a[href^="#"]'),function(a){ var el=document.getElementById(a.getAttribute('href').slice(1)); if(el){ links[el.id]=a; secs.push(el); } });
+  // the current section is the last one whose top has passed under the two bars; the observer (and a
+  // throttled scroll check, for long sections) only decides when to look again
+  function mark(){ var best=null; secs.forEach(function(el){ if(el.getBoundingClientRect().top<=120) best=el; });
+    Object.keys(links).forEach(function(id){ links[id].removeAttribute('aria-current'); });
+    if(best){ var a=links[best.id]; a.setAttribute('aria-current','location');
+      var l=a.offsetLeft-nav.offsetLeft, r=l+a.offsetWidth; if(l<nav.scrollLeft+8 || r>nav.scrollLeft+nav.clientWidth-8) nav.scrollLeft=Math.max(0,l-40); } }
+  secs.sort(function(a,b){ return (a.compareDocumentPosition(b)&2)?1:-1; });
+  var io=new IntersectionObserver(mark,{rootMargin:'-100px 0px -55% 0px'});
+  var tick=false; window.addEventListener('scroll',function(){ if(tick) return; tick=true; requestAnimationFrame(function(){ tick=false; mark(); }); },{passive:true});
+  secs.forEach(function(el){ io.observe(el); });
+})();
+</script><!--enhance:end-->
+</body>
+</html>

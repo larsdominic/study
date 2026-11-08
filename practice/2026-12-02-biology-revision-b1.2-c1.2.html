@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biology revision: B1.2, C1.1, C1.2 timed tests (Wed 2 Dec 2026)</title>
+<style>
+  :root{--paper:#F5F7F4;--ink:#1E2A33;--ink-soft:#4A5862;--rule:#D6DCD8;--indigo:#2F47A6;--indigo-soft:#E6EAF7;--amber:#B8761A;--amber-soft:#FBF1DF;--green:#2E7D4F;--green-soft:#E3F2E8;--red:#B23A3A;--red-soft:#F8E4E4;--grey:#8A949B;--card:#FFFFFF}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;overflow-wrap:break-word}
+  h1,h2,h3{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;line-height:1.2;margin:0 0 .4em;font-weight:600}
+  h1{font-size:2.1rem} h2{font-size:1.5rem;margin-top:1.6em} h3{font-size:1.15rem;margin-top:1.4em}
+  p{margin:0 0 1em} a{color:var(--indigo)}
+  sup,sub{line-height:0}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
+  .top{background:#0B0F1A;color:#fff;padding:26px 0 22px}
+  .top h1{color:#fff} .top p{color:#C9D1E6;max-width:660px;margin-bottom:0}
+  .top .crumb{font-size:.9rem;margin-bottom:8px} .top .crumb a{color:#F2C46D}
+  table{border-collapse:collapse;width:100%;margin:12px 0 20px;font-size:.95rem;background:var(--card)}
+  th,td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#EDF0EC}
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .card{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:12px 0}
+  .tip{background:var(--amber-soft);border-left:5px solid var(--amber);padding:12px 16px;margin:18px 0}
+  .tip b:first-child{color:var(--amber)}
+  .step{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);padding:12px 16px;margin:12px 0}
+  .step .bh{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-bottom:4px}
+  .step .bh b{font-size:1.15rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+  .step .bh span{font-weight:700;color:var(--indigo)}
+  .step ol{margin:6px 0 0;padding-left:22px} .step li{margin:4px 0}
+  .t{color:var(--ink-soft);font-size:.88rem;white-space:nowrap}
+  .tag{display:inline-block;font-size:.72rem;font-weight:700;padding:1px 7px;border-radius:3px;color:#fff;vertical-align:middle;white-space:nowrap}
+  .quiz .q{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:12px 0}
+  .quiz .q > p{font-weight:600;margin-bottom:8px}
+  .quiz .subj{display:inline-block;font-size:.75rem;font-weight:700;color:var(--indigo);background:var(--indigo-soft);padding:1px 7px;border-radius:3px;margin-right:6px;vertical-align:middle}
+  .quiz button{display:block;width:100%;text-align:left;background:#F3F5F2;border:1px solid var(--rule);padding:8px 12px;margin:6px 0;border-radius:6px;font:inherit;cursor:pointer;color:var(--ink)}
+  .quiz button:hover,.quiz button:focus-visible{border-color:var(--indigo);outline:none}
+  .quiz button.right{background:var(--green-soft);border-color:var(--green)}
+  .quiz button.wrong{background:var(--red-soft);border-color:var(--red)}
+  .quiz .why{display:none;margin-top:8px;font-size:.95rem;color:var(--ink-soft)}
+  .quiz .q.done .why{display:block}
+  .score{font-weight:700;margin-top:14px}
+  .frac{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;font-size:.92em;line-height:1.15;margin:0 2px}
+  .frac>span:first-child{border-bottom:1px solid currentColor;padding:0 3px}
+  .frac>span:last-child{padding:0 3px}
+  .nw{white-space:nowrap}
+  @media (max-width:600px){h1{font-size:1.7rem}body{font-size:16px}th,td{padding:6px}}
+
+  .timer{background:var(--card);border:1px solid var(--rule);border-top:6px solid var(--indigo);padding:16px;margin:16px 0;text-align:center}
+  .timer .tlabel{font-weight:700;margin-bottom:2px}
+  .timer .tdisp{font:700 4.2rem/1.1 "SF Mono",Menlo,Consolas,monospace;letter-spacing:.02em;margin:6px 0;color:var(--ink);font-variant-numeric:tabular-nums}
+  .timer .tstat{color:var(--ink-soft);font-size:.95rem;min-height:1.5em}
+  .timer .tbtns{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:10px}
+  .timer button,.btn{font:inherit;font-weight:700;padding:10px 20px;border-radius:6px;border:1px solid var(--indigo);background:var(--indigo);color:#fff;cursor:pointer;min-width:96px}
+  .timer button.sec,.btn.sec{background:#fff;color:var(--indigo)}
+  .timer button:disabled{opacity:.4;cursor:default}
+  .timer.low{border-top-color:var(--amber)} .timer.low .tdisp{color:var(--amber)}
+  .timer.up{border-top-color:var(--red);background:var(--red-soft)} .timer.up .tdisp{color:var(--red)} .timer.up .tstat{color:var(--red);font-weight:700}
+  details{background:var(--card);border:1px solid var(--rule);padding:10px 14px;margin:10px 0}
+  summary{cursor:pointer;font-weight:600} details[open] summary{margin-bottom:8px}
+  .score-t input{font:inherit;width:4.6em;padding:4px 6px;border:1px solid var(--grey);border-radius:4px}
+  .score-t td{vertical-align:middle}
+  .saved{font-weight:700;margin:6px 0 0}
+  .miss{background:var(--red-soft);border-left:5px solid var(--red);padding:12px 16px;margin:14px 0}
+  .ok{background:var(--green-soft);border-left:5px solid var(--green);padding:12px 16px;margin:14px 0}
+  .card ul,.card ol{margin:4px 0;padding-left:22px} .card li{margin:4px 0}
+  .muted{color:var(--ink-soft);font-size:.92rem}
+  @media (max-width:600px){.timer .tdisp{font-size:3.4rem}}
+
+  .note{background:var(--amber-soft);border:1px solid var(--amber);padding:10px 14px;margin:14px 0 0;font-size:.95rem}
+  .checked{background:var(--indigo-soft);border:1px solid var(--indigo);padding:10px 14px;margin:14px 0 0;font-size:.95rem}
+  .top .crumb a{margin-right:4px}
+  .mark ul{margin:6px 0;padding-left:22px} .mark li{margin:5px 0}
+  .tips ul{margin:6px 0;padding-left:22px} .tips li{margin:6px 0}
+
+/*terms:start*/
+.term{border-bottom:2px dotted var(--indigo);cursor:pointer;border-radius:2px}
+.term:focus-visible{background:var(--indigo-soft)}
+@media (hover:hover){.term:hover{background:var(--indigo-soft)}}
+#termbox{display:none;position:fixed;left:10px;right:10px;bottom:10px;max-width:640px;margin:0 auto;background:var(--card);border:2px solid var(--indigo);border-radius:8px;padding:14px 16px 12px;box-shadow:0 8px 28px rgba(0,0,0,.22);z-index:60;max-height:60vh;overflow:auto}
+#termbox.on{display:block}
+#termbox .tb-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+#termbox .tb-h b{font-size:1.1rem;color:var(--indigo)}
+#termbox button{font:inherit;border:1px solid var(--rule);background:var(--paper);border-radius:8px;padding:4px 12px;cursor:pointer;flex:none;min-height:44px;min-width:44px}
+#termbox .tb-d{margin:8px 0 0;line-height:1.5}
+.before.block0{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:12px 16px;margin:12px 0}
+.before > details{background:transparent;border:0;padding:0;margin:0}
+.before > details > summary{display:grid;grid-template-columns:32px minmax(0,1fr) auto auto;align-items:center;gap:4px 10px;min-height:44px;list-style:none;cursor:pointer}
+.before > details > summary::-webkit-details-marker{display:none}
+.before > details > summary::after{content:"Hide";font-size:.85rem;font-weight:600;color:var(--indigo)}
+.before > details:not([open]) > summary::after{content:"Show"}
+.before .bn{flex:none;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--indigo);color:#fff;font-weight:700}
+.before .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.before .b0t{font-size:1.15rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-weight:600;color:var(--ink)}
+.before .bt{white-space:nowrap;font-size:.8rem;font-weight:700;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:4px;padding:2px 8px}
+.before .bgi{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);border-radius:8px;padding:12px 16px;margin:12px 0}
+.before .bgi h3{margin:0 0 6px;font-size:1.08rem}
+.before .bgi p{margin:6px 0}
+.before .bgi svg{max-width:100%;height:auto;display:block;margin:8px auto}
+.before .more{font-size:.95rem;color:var(--ink-soft)}
+.before .stuck{background:var(--amber-soft);border-radius:8px;padding:10px 14px}
+/*terms:end*/
+</style>
+<!--enhance:start--><meta name="color-scheme" content="light"><style>
+.warmup{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--amber);padding:12px 16px 4px;margin:24px 0}
+.warmup h2{margin:0 0 6px;font-size:1.3rem}
+.warmup .wu-how{font-size:.95rem;color:var(--ink-soft);margin:0 0 8px}
+.warmup ol{margin:0;padding-left:24px}
+.warmup li{margin:10px 0}
+.warmup .wu-m{font-size:.8rem;color:var(--ink-soft)}
+.warmup .wu-f{font-weight:600}
+.warmup details{margin-top:4px}
+.warmup summary{cursor:pointer;color:var(--indigo);font-size:.92rem}
+.warmup .wu-b{border-top:1px solid var(--rule);margin-top:6px;padding-top:6px}
+.warmup .wu-b a{font-size:.88rem;margin-left:6px;white-space:nowrap}
+.warmup .wu-foot{font-size:.92rem;margin:12px 0 8px}
+
+:root{--amber-ink:#8A6416}
+:focus-visible{outline:3px solid var(--indigo);outline-offset:2px}
+.quiz button:focus-visible,.quiz .q .cf button:focus-visible{outline:3px solid var(--indigo);outline-offset:2px}
+@media (hover:none){.quiz button:not(.right):not(.wrong):hover{border-color:var(--rule)}}
+.quiz button.right::before{content:"✓ Correct: ";font-weight:700;color:var(--green)}
+.quiz button.wrong::before{content:"✗ Your answer: ";font-weight:700;color:var(--red)}
+.quiz .q .qn{font-size:.8rem;font-weight:700;color:var(--ink-soft);margin-bottom:2px}
+.quiz .q .cf{margin:4px 0 10px}
+.quiz .q .cf .cfl-h{font-size:.88rem;font-weight:600;color:var(--ink-soft);margin-bottom:4px}
+.quiz .q .cf .cfb{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;max-width:420px}
+.quiz .q .cf button{display:block;width:100%;min-height:44px;margin:0;padding:6px 8px;text-align:center;font-size:.92rem;border:1px solid var(--rule);border-radius:8px;background:var(--card);color:var(--ink)}
+.quiz .q .cf button.on{background:var(--indigo-soft);border:2px solid var(--indigo);font-weight:700}
+.quiz .q .cf button:disabled{cursor:default;opacity:1;color:var(--ink-soft)}
+.quiz .q .cf button.on:disabled{color:var(--ink)}
+.quiz .cfh{font-size:.92rem;color:var(--ink-soft)}
+.quiz .cfr{margin-top:10px}
+.quiz .cfr ol{margin:6px 0 10px;padding-left:22px}
+.quiz .cfr li{margin:4px 0}
+.quiz .cfr li.sure{font-weight:600}
+.quiz .cfr .cfa{font-size:.9rem;color:var(--ink-soft);margin:8px 0}
+.quiz .cfr button.retry{display:inline-block;width:auto;min-height:44px;text-align:center;background:var(--indigo);color:#fff;border-color:var(--indigo);font-weight:700;padding:8px 16px}
+.wm{margin-top:8px;font-size:.92rem}
+.wm select{font:inherit;min-height:44px;padding:4px 6px;border:1px solid var(--rule);border-radius:8px;background:var(--card);color:var(--ink);max-width:100%}
+.notice{background:var(--amber-soft);border:1px solid var(--amber);color:var(--ink);padding:10px 14px;margin:12px 0;border-radius:8px;font-weight:600}
+
+:root{--amber-ink:#8A6416;--grey:#5F6B72;--purple:#6A3D9A;--green-ink:#256B43;--r-sm:4px;--r:8px}
+/* top bar: back to today, flashcards, progress, sheet */
+.sitebar{position:sticky;top:0;z-index:30;height:44px;background:var(--paper);box-shadow:0 1px 0 var(--rule)}
+.sitebar .sb{max-width:820px;height:44px;margin:0 auto;padding:0 10px;display:flex;align-items:stretch;gap:2px;overflow-x:auto;scrollbar-width:none;white-space:nowrap}
+.sitebar .sb::-webkit-scrollbar{display:none}
+.sitebar a{flex:none;display:flex;align-items:center;min-height:44px;padding:0 10px;color:var(--indigo);text-decoration:none;font:600 .95rem/1 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;border-radius:var(--r-sm)}
+.sitebar a.sb-home{font-weight:700}
+@media (hover:hover){.sitebar a:hover{background:var(--indigo-soft)}}
+/* guide section menu: one row that scrolls sideways, 44 px targets, current section marked */
+nav.toc{top:44px;z-index:29}
+nav.toc .wrap{display:flex;flex-wrap:nowrap;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;white-space:nowrap;padding:0 10px}
+nav.toc .wrap::-webkit-scrollbar{display:none}
+nav.toc a{flex:none;display:flex;align-items:center;min-height:44px;padding:12px 10px;line-height:1.2;border-radius:0}
+nav.toc a[href$="index.html"]{display:none}
+nav.toc a[aria-current]{color:var(--indigo);font-weight:700;background:var(--indigo-soft);box-shadow:inset 0 -3px 0 var(--indigo)}
+[id]{scroll-margin-top:56px}
+html:has(nav.toc) [id]{scroll-margin-top:100px}
+/* focus: always visible */
+:focus-visible{outline:3px solid var(--indigo)!important;outline-offset:2px!important}
+header.hero :focus-visible,header.top :focus-visible{outline-color:#F2C46D!important}
+/* readable text */
+main p,main li,.why{max-width:68ch}
+@media (max-width:600px){.wrap{padding-left:16px;padding-right:16px}}
+small{font-size:max(12px,.8em)}
+.sig small{font-size:max(12px,.62em)}
+/* hero: title first, then the picture (at most 30% of the screen height, as wide as the text column),
+   so the title and the Today card share the first screen; long intro paragraphs fold to 3 lines (tap to read) */
+header.hero{display:flex;flex-direction:column}
+header.hero > .wrap{order:-1;width:100%}
+header.hero > svg,header.hero > img{max-height:30vh;max-width:780px;margin:14px auto 0}
+header.hero p.fold{position:relative;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;cursor:pointer}
+header.hero p.fold::after{content:"more";position:absolute;right:0;bottom:0;padding:0 2px 0 28px;background:linear-gradient(90deg,rgba(11,15,26,0),#0B0F1A 22px);color:#F2C46D;font-weight:700}
+header.hero .wrap > p ~ p.fold{-webkit-line-clamp:2}
+header.hero p.fold.open{display:block;-webkit-line-clamp:unset}
+header.hero p.fold.open::after{content:none}
+@media (max-width:600px){header.hero > svg,header.hero > img{max-height:28vh} header.hero .meta{font-size:.85rem;gap:0 14px}}
+/* contrast: amber and grey text */
+body .tip b:first-child,body .src > b:first-child,body .star,body .col.l > h3,body .timer.low .tdisp{color:var(--amber-ink)}
+/* one badge system: Learn = solid amber; Given / in booklet = neutral outline; Apply = indigo outline; HL = purple outline; green = done */
+.badge,.fb,.learn,.tag,span.hl,.quiz .subj,.written .wsubj,.wsubj,.pill,.soon{display:inline-block;font:700 .8rem/1.4 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.01em;padding:1px 7px;border:1px solid currentColor;border-radius:var(--r-sm);background:var(--card);vertical-align:middle;white-space:nowrap}
+.learn,.badge.learn{background:var(--amber-ink);border-color:var(--amber-ink);color:#fff}
+.fb,.badge.apply{color:var(--indigo);border-color:var(--indigo)}
+.fb.given,.badge.given,.tag,.quiz .subj,.written .wsubj,.wsubj,.badge.subj{color:var(--ink);border-color:var(--grey)}
+span.hl,.badge.hl{color:var(--purple);border-color:var(--purple)}
+.pill{margin-left:6px}
+.p-done,.badge.done{color:var(--green-ink);border-color:var(--green);background:var(--green-soft)}
+.p-soon,.soon{color:var(--grey);border-color:var(--grey)}
+/* radii: 4 px small things, 8 px boxes */
+.today,.goals,.able,.todaycard,#termbox,.before .bgi,.before .stuck,.quiz button,.go,.notice,.btn,.timer button,.tl,.chip,.plan > div,.step,.block{border-radius:var(--r)}
+/* 44 px targets */
+.go{min-height:44px;display:inline-flex;align-items:center}
+main details>summary{min-height:44px;display:flex;align-items:center;cursor:pointer}
+ul.files a,.files li>a{display:inline-flex;align-items:center;min-height:44px}
+input[type=number],input[type=text],select{min-height:44px}
+#box a#src,a.src{display:inline-flex;align-items:center;min-height:44px}
+#termbox .tb-h button{min-height:44px;min-width:44px}
+.top .crumb{display:flex;flex-wrap:nowrap;align-items:center;gap:0 6px;overflow-x:auto;scrollbar-width:none;white-space:nowrap;margin-bottom:2px}
+.top .crumb::-webkit-scrollbar{display:none}
+.top .crumb a{flex:none;display:inline-flex;align-items:center;min-height:44px;padding-right:4px}
+/* timed blocks: one card for guide plans, review steps and mock plans */
+.plan > div,.block,.step{background:var(--card);border:1px solid var(--rule);padding:12px 16px}
+.plan > div.brk{background:var(--green-soft);border-color:var(--green)}
+.bh{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;margin-bottom:4px}
+.block > .bh{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:4px 10px;align-items:center}
+.plan .bh .bn,.step .bh .bn,.bh .bn{flex:none;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--indigo);color:#fff;font:700 1rem/1 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif}
+.plan .bh > b,.step .bh > b,.bh > b{font-size:1.15rem;line-height:1.25;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;color:var(--ink)}
+.plan .bh .bt,.step .bh .bt,.bh .bt{flex:none;display:inline-block;font:700 .8rem/1.4 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:var(--r-sm);padding:2px 8px}
+.bdone{display:flex;align-items:center;gap:10px;min-height:44px;margin:8px 0 0;padding-top:4px;border-top:1px solid var(--rule);font-weight:600;color:var(--ink-soft);cursor:pointer;max-width:none}
+.bdone input{width:20px;height:20px;margin:0;flex:none;accent-color:var(--green)}
+.block.is-done{border-color:var(--green)} .block.is-done .bn{background:var(--green)} .block.is-done .bdone{color:var(--green-ink)}
+.blocks{display:grid;gap:10px;margin:16px 0}
+.blocks > .block p{margin:4px 0 0}
+.brkc{background:var(--green-soft);border:1px solid var(--green);border-radius:var(--r);padding:8px 16px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* Today card on guides: goals, plan chips, warm-up */
+.todaycard{background:var(--card);border:2px solid var(--indigo);padding:14px 16px 6px;margin:20px 0 10px}
+.todaycard .tc-goals > *{background:transparent!important;border:0!important;padding:0!important;margin:0!important;box-shadow:none!important;border-radius:0!important}
+.todaycard .tc-goals h2,.todaycard .tc-goals h3,.todaycard .tc-goals > * > p:first-child,.todaycard .tc-goals > * > b:first-child{display:block;font:600 1.25rem/1.25 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;color:var(--ink);margin:0 0 6px}
+.todaycard .tc-goals ol,.todaycard .tc-goals ul{margin:0;padding-left:22px}
+.todaycard .tc-goals li{margin:3px 0}
+.todaycard .tc-plan{margin:0 0 12px;padding-bottom:12px;border-bottom:1px solid var(--rule)}
+@media (max-width:600px){.todaycard .chips{display:grid;grid-template-columns:1fr 1fr;gap:6px}.todaycard .chip{padding:4px 10px;font-size:.9rem}.todaycard .chip.c0{grid-column:1 / -1}}
+.todaycard .tc-h{font-weight:700;margin:0 0 6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:4px;min-height:44px;padding:4px 12px;border:1px solid var(--indigo);background:var(--card);color:var(--indigo);text-decoration:none;font-size:.95rem;line-height:1.2}
+.chip b{font-weight:700}
+.chip.done{border-color:var(--green);color:var(--green-ink);background:var(--green-soft)}
+.chip.done::before{content:"\2713";font-weight:700}
+.todaycard .warmup{border:0;border-top:1px solid var(--rule);border-radius:0;padding:12px 0 4px;margin:12px 0 0;background:transparent}
+.todaycard .tc-plan + .warmup{border-top:0;margin-top:0;padding-top:0}
+.todaycard .warmup h2{font-size:1.15rem}
+.sitebar + .notice{margin:8px max(16px,calc((100% - 780px) / 2))}
+@media print{.sitebar,.notice,#termbox,.go,.chips,.bdone{display:none!important}nav.toc{position:static}.quiz button{display:list-item}.todaycard{border-width:1px}}
+</style><!--enhance:end-->
+</head>
+<body><!--enhance:start--><nav class="sitebar" aria-label="Study site"><div class="sb"><a class="sb-home" href="../index.html#today">← Today</a><a href="../flashcards.html">Flashcards</a><a href="../progress.html">Progress</a><a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">Sheet</a></div></nav><!--enhance:end-->
+
+<header class="top"><div class="wrap" style="padding-bottom:0">
+  <div class="crumb"><a href="../index.html" style="font-weight:700">All days</a> · <a href="#plan">Plan</a> · <a href="#c11">C1.1 test</a> · <a href="#c12">C1.2 test</a> · <a href="#reread">Re-read</a> · <a href="#b12">★ B1.2</a> · <a href="#tips">Exam tips</a> · <a href="#scores">Scores</a></div>
+  <h1>Biology revision: B1.2, C1.1 and C1.2</h1>
+  <p>Wednesday 2 December 2026. Biology revision for B1.2, C1.1 and C1.2: a brain dump and the 21 November mock mistakes first, then two timed InThinking topic tests (C1.1 and C1.2, 35 minutes each), each marked straight away; B1.2 if there is time.</p>
+</div></header>
+<main class="wrap"><!--enhance:start-->
+<section class="todaycard" aria-label="Today"><div class="tc-plan"><p class="tc-h">Today: tap a block to jump to it</p><div class="chips"><a class="chip c0" href="#before"><b>Block 0</b> · Before you start</a><a class="chip" href="#wu"><b>Warm-up</b> · 8 min</a><a class="chip" href="#b1" data-n="1"><b>Block 1</b> · 15 min</a><a class="chip" href="#b2" data-n="2"><b>Block 2</b> · 46 min</a><a class="chip" href="#b3" data-n="3"><b>Block 3</b> · 46 min</a><a class="chip" href="#b4" data-n="4"><b>Block 4</b> · 10 min</a></div></div><div class="tc-goals"><!--enhance:end--><!--enhance:moved--><div class="ok" style="margin-top:22px"><b>Today you will be able to:</b><br>answer C1.1 and C1.2 exam questions in <span class="term" data-t="hl" tabindex="0" role="button">HL</span> exam time;<br>mark your own answers point by point with a <span class="term" data-t="mark scheme" tabindex="0" role="button">mark scheme</span>;<br>fix the mistakes from your 21 November mock for good.</div><!--enhance:/moved--><!--enhance:start--></div>
+<section class="warmup" id="wu" aria-label="Warm-up from earlier days">
+<h2>Warm-up from earlier days (8 min)</h2>
+<p class="wu-how">Answer from memory before you read on: write the answer on paper, then tap to check it.</p><ol>
+<li><div class="wu-m">Psychology · Drill · from Mon 30 Nov</div><div class="wu-f">Interpret (command term)</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">Use knowledge and understanding to recognize trends and draw conclusions from given information. <a href="../guides/2026-11-30-psychology-hl-data-analysis.html#drill">open the section</a></div></details></li>
+<li><div class="wu-m">Business · 2.2 · from Thu 19 Nov</div><div class="wu-f">Chain of command</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">The line of authority through which instructions pass down and reports pass up. <a href="../guides/2026-11-19-business-sl-unit2-hrm.html#s22">open the section</a></div></details></li>
+<li><div class="wu-m">Psychology · Q3 · from Mon 30 Nov</div><div class="wu-f">Strategies to improve credibility (specimen markscheme)</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">Member checking; triangulation (other methods, data sources or a second researcher); peer review of methods and themes; being open about biases and conflicts of interest; careful transcripts. <a href="../guides/2026-11-30-psychology-hl-data-analysis.html#q3">open the section</a></div></details></li>
+<li><div class="wu-m">Psychology · Drill · from Mon 30 Nov</div><div class="wu-f">To what extent? (command term)</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">Consider the merits or otherwise of an argument or concept. Opinions and conclusions should be presented clearly and supported with appropriate evidence and sound argument. <a href="../guides/2026-11-30-psychology-hl-data-analysis.html#drill">open the section</a></div></details></li>
+<li><div class="wu-m">Psychology · RM · from Mon 9 Nov</div><div class="wu-f">Extraneous vs confounding variable</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">Extraneous: anything other than the IV that could affect the DV. Confounding: an extraneous variable not controlled that differs between conditions. <a href="../guides/2026-11-09-psychology-hl-frame-research-methods.html#exp">open the section</a></div></details></li>
+</ol>
+<p class="wu-foot">Missed one? Put it in the <a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">Error log</a>.</p></section>
+</section><!--enhance:end-->
+
+<!-- UNSURE / decisions (8 Nov build):
+ - C1.1 and C1.2 statements NOT checked against the official guide (the text I could read stops in B1.2).
+ - Penicillin: test MS says "permanent competitive inhibitor"; RV C1.1 summary notes say mechanism-based (irreversible) inhibition; page tells her to use the notes&#39; name. Not checked in the official guide.
+ - C1.2 Q6: "38 ATP" in the MS called an older textbook figure; the summary notes give no total. No official figure checked.
+ - C1.1 Q5 IV: MS 0.55/5 = 0.11 (typo "+"); unit per minute added by me; (0.55-0.01)/5 = 0.108 also called sound (my judgement).
+ - 21 Nov readout reads ib-timed-2026-11-21 items whose keys start with "bio-" (keys as in that page).
+ - The Biology exam date is unknown (window 23 Nov to 4 Dec).
+-->
+
+<!--enhance:origin-->
+<div id="warmup"></div>
+<p style="margin-top:22px">Revision day: no new topics. You test yourself on C1.1 <span class="term" data-t="enzyme" tabindex="0" role="button">enzymes</span> and metabolism and C1.2 cell <span class="term" data-t="respiration" tabindex="0" role="button">respiration</span> under exam timing, after fixing the Biology mistakes from your 21 November mock. B1.2 proteins comes last, if there is time. This is the 2 hours of Biology; your hour of class follow-up comes on top.</p>
+<p class="checked"><b>Checked against:</b> the topic codes and titles against the <a href="https://www.ibo.org/programmes/diploma-programme/curriculum/sciences/biology/">IB Biology course page</a> and the IB Biology guide (first assessment 2025) that the IB publishes free on ibo.org; the HL-only part of B1.2 and the four bond types in B1.2 question 8 against the same guide. The times and marks come from the covers and mark schemes of the InThinking tests in your Drive, not from the IB.</p>
+<div class="note"><b>Please note.</b> The C1.1 and C1.2 points on this page were checked against the official guide (first assessment 2025), which is also in your Biology folder ("REF - IB Biology Subject Guide (official, first assessment 2025)"). The marking notes follow the InThinking mark schemes; where a scheme uses other words than the guide (penicillin, "38 <span class="term" data-t="atp" tabindex="0" role="button">ATP</span>"), the note says so.</div>
+<p class="muted" style="margin-top:12px">If your Biology exam is before Wednesday 2 December, do this page earlier. Ask your teacher for the Biology exam date.</p>
+
+
+<section id="plan">
+<h2>How to spend the 2 hours</h2><!--terms:start--><div id="before" class="before block0"><details open>
+  <summary><span class="bn" aria-hidden="true">0</span><span class="b0t"><span class="sr">Block 0: </span>Before you start</span><span class="bt">about 5 min</span></summary>
+  <p style="margin:10px 0 0">This page builds on the ideas below. Read them first so you do not have to stop later (about 5 min, not counted in the blocks below). Words with a <span style="border-bottom:2px dotted var(--indigo)">dotted underline</span> anywhere on the page: tap them for a short explanation.</p>
+  <div class="bgi"><h3>What a timed topic test is for</h3><p>A topic test checks one topic the way an exam does: a fixed time, no notes, marks printed in brackets after each question, for example [3]. Today the times come from the test covers: they are exam pace, a bit faster than normal homework.</p><p>The point is not the score. The point is to find out <b>which exact points</b> you cannot yet write down under time, so you can fix them before the exam.</p></div><div class="bgi"><h3>How a mark scheme gives marks</h3><p>A mark scheme is the list of answers a marker accepts. For a written question it lists separate points, and each different correct point is worth one mark, up to the number in brackets. A scheme often lists more points than there are marks ("any 4 of these details").</p><ul><li>Say the same thing twice: still one mark.</li><li>Your words can differ from the scheme if the meaning is the same.</li><li>For a calculation, the working is part of the marks.</li></ul></div><div class="bgi"><h3>Command words: what the question wants</h3><p>The first word of a question tells you how much to write.</p><ul><li><b>List</b> or <b>state</b>: short answers, no explanation.</li><li><b><span class="term" data-t="outline" tabindex="0" role="button">Outline</span></b>: the main points, briefly.</li><li><b>Describe</b>: say what something is like or what happens.</li><li><b><span class="term" data-t="explain" tabindex="0" role="button">Explain</span></b>: say why or how, with "because" and "so".</li><li><b>Distinguish</b>: make the differences clear.</li><li><b>Suggest</b>: a sensible idea, even for something you were not taught.</li></ul></div><div class="bgi"><h3>Rate: how fast something happens</h3><p>A rate is a change divided by the time it took. If 0.55 units of glucose appear in 5 minutes, the rate is <span class="nw">0.55 ÷ 5 = 0.11</span> units <b>per minute</b>.</p><p>On a graph, a steep line is a fast rate, a flat line means nothing is happening any more. Always write "per minute" (min<sup>−1</sup>) in the unit of a rate.</p></div>
+  <p class="stuck"><b>Still stuck on a word?</b> Do not search for long. Write it in the <b>Error log</b> tab of the study sheet starting with "word:" (for example "word: composition") and carry on. It will be explained in the next guide.</p>
+</details></div><!--terms:end-->
+<div class="tablewrap"><table>
+<tr><th>Block</th><th>What</th><th>Minutes</th></tr>
+<tr><td>1</td><td>Blank-page <span class="term" data-t="brain dump" tabindex="0" role="button">brain dump</span> (5), then the 21 November mock mistakes and your B1.2, C1.1, C1.2 Error log rows (10)</td><td>15</td></tr>
+<tr><td>2</td><td>C1.1 test, <span class="term" data-t="timed" tabindex="0" role="button">timed</span> (35), then mark it (11)</td><td>46</td></tr>
+<tr><td></td><td>Break: stand up, drink some water, no phone</td><td>3</td></tr>
+<tr><td>3</td><td>C1.2 test, timed (35), then mark it (11)</td><td>46</td></tr>
+<tr><td>4</td><td>Re-read the <span class="term" data-t="summary notes" tabindex="0" role="button">summary notes</span> only for what you got wrong (6), then Fix-it: rewrite one lost-mark answer to full marks (4)</td><td>10</td></tr>
+<tr><th colspan="2">Total</th><th>120</th></tr>
+</table></div>
+<p><b>★ If time:</b> the B1.2 test (30 minutes, then about 10 minutes to mark). Otherwise do it on another day before your Biology exam.</p>
+<p class="muted">Short on time: skip ★ steps, still do both timed tests and mark them. Pace: the usual pack pace is about 1.5 minutes a mark plus marking (31 marks would be 46.5 minutes), but today you use the times printed on the test covers, which are exam pace.</p>
+<div class="card"><b>You need:</b> paper, pen, pencil, ruler, a calculator (C1.1 question 5), and the files below. Open each question paper only when its timer starts. The timers work offline and keep the right time if the phone screen locks.
+<ul>
+<li><a href="https://drive.google.com/file/d/1bWufdbYTQQuz1TxMx_4ZDPoS8SWV8gBd/view">C1.1 enzymes and metabolism test</a> and its <a href="https://drive.google.com/file/d/1jPTfhkPdN4UAKgRoZBFwzm_Iq45IXlVJ/view">mark scheme</a></li>
+<li><a href="https://drive.google.com/file/d/1x9ETyIewHLbTA4iHBd_XJ1l8e2W5Qlwu/view">C1.2 cell respiration test</a> and its <a href="https://drive.google.com/file/d/1HSNmbJniMdlr895yTTlfaUWYztFz7Ut5/view">mark scheme</a></li>
+<li>★ If time: <a href="https://drive.google.com/file/d/1Q6UY3cWhUJRK8voRZ6PNc9m7G3AMQI-S/view">B1.2 proteins test</a> and its <a href="https://drive.google.com/file/d/1qDi7Bj8WtQTwJlpO_qKHVGDQTVy5yxDs/view">mark scheme</a></li>
+</ul></div>
+</section>
+
+<div id="errlog" class="sec">
+<h2 id="b1">Block 1. Brain dump, Error log and the 21 November mock (15 min)</h2>
+<div class="step"><div class="bh"><b>Brain dump</b><span>5 min</span></div><ol>
+<li>Blank page, no notes, 5 minutes: write everything you remember about proteins, enzymes and cell respiration. Key words, quick diagrams (an amino acid, an enzyme and its <span class="term" data-t="active site" tabindex="0" role="button">active site</span>, where each stage of respiration happens), anything.</li>
+<li>Then compare with the "I can" lists in the <a href="../guides/2026-11-18-biology-hl-b1.2-c1.1.html">B1.2 and C1.1 guide</a> and the <a href="../guides/2026-11-22-biology-hl-c1.2-cell-respiration.html">C1.2 guide</a>, and circle what you left out. Those are the first things to check when you mark.</li></ol></div>
+<div class="step"><div class="bh"><b>Redo your mistakes</b><span>10 min</span></div><ol>
+<li>Open the <a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">study sheet</a>, <b>Error log</b> tab. Take the Biology rows from the <a href="2026-11-21-mock-papers.html">21 November mock papers</a> first (the <a href="https://drive.google.com/file/d/1-fhyVSaXdMn9DuMLD5SWpO5TV37zB8eW/view">Grade 11 combined paper</a> and, if you did it, the <a href="https://drive.google.com/file/d/1S-X8BUmQiUTuiLWlr382zDg1dFsjcyLW/view">mock selection</a> with its <a href="https://drive.google.com/file/d/1bS3dMIiu8HZOnYBdk5U3FvWgjHS5gJLe/view">mark scheme</a>), then the B1.2, C1.1 and C1.2 rows from your 18 and 22 November guides.</li>
+<li>For each row, cover the fix and answer the question again on paper from memory <span class="t">(about 1 min each)</span>.</li>
+<li>Right this time: mark the row "fixed". Wrong again: leave it open and add a star. Starred rows are what you re-read in block 4.</li>
+<li>Too many rows for 10 minutes? Do the mock and the C1.1 and C1.2 ones first; ★ the rest if time, or at the weekend.</li></ol>
+<p class="muted" id="mock21"></p></div>
+</div>
+
+<div id="c11" class="sec">
+<h2 id="b2">Block 2. C1.1 enzymes and metabolism test, 35 min, and marking (31 marks HL, 46 min)</h2>
+<p>All the tests today are InThinking "IB Style" topic tests: one paper for <span class="term" data-t="sl" tabindex="0" role="button">SL</span> and HL, with the HL-only questions at the end. You are HL, so you do every question. Each mark scheme is a copy of the paper with the answers filled in, so open it only after the timer.</p>
+<p><a href="https://drive.google.com/file/d/1bWufdbYTQQuz1TxMx_4ZDPoS8SWV8gBd/view">C1.1 test</a> (Drive file "C1.1 Enzymes and Metabolism - Topic Test SL-HL - Questions (InThinking).pdf"): questions 1 to 4 <span class="term" data-t="multiple choice" tabindex="0" role="button">multiple choice</span> (4 marks), question 5 on the enzyme <span class="term" data-t="invertase" tabindex="0" role="button">invertase</span> with a data table (13), question 6 a short <span class="term" data-t="extended response" tabindex="0" role="button">extended response</span> (3), then the HL questions 7 on penicillin (6) and 8 on ATP and feedback inhibition (5). The cover gives 25 minutes for SL and <b>35 minutes for HL</b>, and the marks as 20 SL and 31 HL; the printed marks add up to the same.</p>
+<div class="timer" data-id="c11" data-sec="2100"><div class="tlabel">C1.1 enzymes and metabolism, HL</div><div class="tdisp" aria-live="off">35:00</div><div class="tstat">Ready.</div><div class="tbtns"><button class="tstart">Start</button><button class="tpause sec">Pause</button><button class="treset sec">Reset</button></div></div>
+<div class="step mark"><div class="bh"><b>How to mark it</b><span>11 min</span></div>
+<p>Open the <a href="https://drive.google.com/file/d/1jPTfhkPdN4UAKgRoZBFwzm_Iq45IXlVJ/view">C1.1 mark scheme</a>. The right answers for questions 1 to 4 are <b>highlighted in yellow</b>.</p>
+<ul>
+<li><b>Q5 I [2]:</b> invertase <span class="term" data-t="hydrolyses" tabindex="0" role="button">hydrolyses</span> sucrose into two <span class="term" data-t="monosaccharide" tabindex="0" role="button">monosaccharides</span>; one of them is glucose. <b>II [2]:</b> temperature and pH (or any other sensible pair).</li>
+<li><b>Q5 III [2]:</b> yes, constant: the glucose goes up by 0.14&nbsp;mmol/dm<sup>3</sup> every minute (0.01, 0.15, 0.29, 0.43). Quote the numbers.</li>
+<li><b>Q5 IV [2]:</b> the scheme gives <span class="nw">0.55 ÷ 5 = 0.11</span> (it is printed "0.55/5+0.11"; the + is a typing slip for =). A rate is per minute, so write the unit as mmol&nbsp;dm<sup>−3</sup>&nbsp;min<sup>−1</sup>. Taking off the starting value, <span class="nw">(0.55 − 0.01) ÷ 5 = 0.108</span>, is also a sound method.</li>
+<li><b>Q5 V [2]:</b> the rate falls gradually and the reaction stops at minute 7 (0.62 at minutes 7 and 8). <b>VI [1]:</b> the reaction was complete: no <span class="term" data-t="substrate" tabindex="0" role="button">substrate</span> left. <b>VII [2]:</b> 0.59&nbsp;mmol/dm<sup>3</sup>, because each sucrose gives one glucose and one fructose.</li>
+<li><b>Q6 [3]:</b> any three of its four points (one specific enzyme for each step, so making or blocking that enzyme controls the pathway).</li>
+<li><b>Q7 [6], HL:</b> I: humans have no <span class="term" data-t="transpeptidase" tabindex="0" role="button">transpeptidase</span> or cell walls, and an <span class="term" data-t="inhibitor" tabindex="0" role="button">inhibitor</span> fits only its own enzyme&apos;s active site. II: penicillin binds in the active site and stays, so the enzyme never works again. Your <a href="https://drive.google.com/file/d/1meJNCi9WbEl-xS0APA0aHqWE1rnbOyds/view">C1.1 summary notes</a> call this <b><span class="term" data-t="mechanism-based inhibition" tabindex="0" role="button">mechanism-based inhibition</span></b> (<span class="term" data-t="irreversible" tabindex="0" role="button">irreversible</span>); the test calls it a "permanent competitive inhibitor". Same idea: use the summary notes&apos; name. III: <span class="term" data-t="mutation" tabindex="0" role="button">mutations</span> change the shape of the active site, or let bacteria break the antibiotic down.</li>
+<li><b>Q8 [5], HL:</b> the scheme words it "Discuss the importance"; the paper says "Explain the role". Any five of its points: <span class="term" data-t="allosteric" tabindex="0" role="button">allosteric</span> and reversible; when ATP builds up it slows <span class="term" data-t="glycolysis" tabindex="0" role="button">glycolysis</span> and respiration; when the cell uses ATP the inhibition stops; so ATP controls its own production.</li>
+</ul>
+<p>Then one Error log row for every mark you lost, with its type (see the <a href="#end">Error log routine</a> at the end).</p></div>
+</div>
+
+<p class="ok"><b>Break, 3 minutes.</b> Stand up, drink some water, look out of the window. No phone. Then start block 3.</p>
+
+<div id="c12" class="sec">
+<h2 id="b3">Block 3. C1.2 cell respiration test, 35 min, and marking (27 marks HL, 46 min)</h2>
+<p><a href="https://drive.google.com/file/d/1x9ETyIewHLbTA4iHBd_XJ1l8e2W5Qlwu/view">C1.2 test</a> (Drive file "C1.2 Cell Respiration - Topic Test SL-HL - Questions (InThinking).pdf"): questions 1 to 4 multiple choice (4 marks), question 5 on a <span class="term" data-t="respirometer" tabindex="0" role="button">respirometer</span> (6), question 6 a table comparing <span class="term" data-t="aerobic" tabindex="0" role="button">aerobic</span> and anaerobic respiration (4), question 7 extended response on uses of ATP (6), then HL questions 8 and 9 (7). The cover gives 25 minutes for SL and <b>35 minutes for HL</b>, and the marks as 20 SL and 27 HL; the printed marks add up to the same.</p>
+<div class="timer" data-id="c12" data-sec="2100"><div class="tlabel">C1.2 cell respiration, HL</div><div class="tdisp" aria-live="off">35:00</div><div class="tstat">Ready.</div><div class="tbtns"><button class="tstart">Start</button><button class="tpause sec">Pause</button><button class="treset sec">Reset</button></div></div>
+<div class="step mark"><div class="bh"><b>How to mark it</b><span>11 min</span></div>
+<p>Open the <a href="https://drive.google.com/file/d/1HSNmbJniMdlr895yTTlfaUWYztFz7Ut5/view">C1.2 mark scheme</a>. The right answers for questions 1 to 4 are <b>highlighted in yellow</b>. The scheme numbers the table question "5"; it is question 6 on the paper.</p>
+<ul>
+<li><b>Q5 I [2]:</b> two of: the seeds take in oxygen for aerobic respiration; the carbon dioxide they give out is absorbed by the <span class="term" data-t="potassium hydroxide" tabindex="0" role="button">potassium hydroxide</span>; so the change in gas volume is the oxygen used.</li>
+<li><b>Q5 II [1]:</b> the glass beads tube is the <span class="term" data-t="control" tabindex="0" role="button">control</span>: it shows it is the beans that use the oxygen. <b>III [1]:</b> to let oxygen back in for aerobic respiration.</li>
+<li><b>Q5 IV [2]:</b> name the <span class="term" data-t="variable" tabindex="0" role="button">variable</span> and say how you would change it (for example the water bath temperature, the mass of beans, or beans at different stages of <span class="term" data-t="germination" tabindex="0" role="button">germination</span>).</li>
+<li><b>Q6 [4]:</b> 1 mark per row, only when both columns are right: where (<span class="term" data-t="cytoplasm" tabindex="0" role="button">cytoplasm</span> and <span class="term" data-t="mitochondria" tabindex="0" role="button">mitochondria</span>, against cytoplasm only); energy (large against small); waste (carbon dioxide, against ethanol and carbon dioxide in yeast or lactic acid in humans); lipids (can be used, against cannot). The scheme&apos;s "38 ATP" is a figure from older textbooks and your summary notes give no total: "a large amount, much more than anaerobic" answers the row.</li>
+<li><b>Q7 [6]:</b> the scheme gives 1 mark for each use of ATP and 1 for an example of it: three uses with three examples (building molecules such as proteins; active transport by membrane pumps; movement inside the cell or of the whole cell).</li>
+<li><b>Q8 [3], HL:</b> with oxygen, the <span class="term" data-t="nad" tabindex="0" role="button">reduced NAD</span> from glycolysis passes its hydrogen to the <span class="term" data-t="electron transport chain" tabindex="0" role="button">electron transport chain</span> in the mitochondrion, which makes more ATP; without oxygen the chain cannot work.</li>
+<li><b>Q9 [4], HL:</b> any four of its seven points: the <span class="term" data-t="dehydrogenase" tabindex="0" role="button">dehydrogenase</span> removes hydrogen from the substrate; NAD accepts it and becomes reduced NAD; reduced NAD gives the hydrogen to the electron transport chain; this builds a <span class="term" data-t="proton gradient" tabindex="0" role="button">proton gradient</span> that drives ATP formation (<span class="term" data-t="chemiosmosis" tabindex="0" role="button">chemiosmosis</span>).</li>
+</ul>
+<p>Then one Error log row for every mark you lost, with its type (see the <a href="#end">Error log routine</a> at the end).</p></div>
+</div>
+
+<div id="reread" class="sec">
+<h2 id="b4">Block 4. Re-read what you got wrong, then Fix-it (10 min)</h2>
+<div class="step"><div class="bh"><b>Targeted re-reading</b><span>6 min</span></div><ol>
+<li>Take today&apos;s new Error log rows and the starred rows from block 1. For each one, read <b>only the matching part</b> of:
+<ul>
+<li>C1.1: <a href="https://drive.google.com/file/d/1meJNCi9WbEl-xS0APA0aHqWE1rnbOyds/view">C1.1 enzymes and metabolism summary notes</a></li>
+<li>C1.2: <a href="https://drive.google.com/file/d/139mP607DbLhM4Dg7YFm-uVQoN07iMOW-/view">C1.2 cell respiration summary notes</a></li>
+<li>B1.2: there are no summary notes in your Drive, so use the <a href="../guides/2026-11-18-biology-hl-b1.2-c1.1.html">B1.2 and C1.1 guide</a> and the "Examiner Tips" in the <a href="https://drive.google.com/file/d/1neUWjQfWI5VM8Pr1II-OXGtiEmgZiC78/view">B1.2 HL topical pack mark scheme</a>.</li>
+</ul></li>
+<li>★ If time: if the notes are not enough, go back to the guide pages: <a href="../guides/2026-11-18-biology-hl-b1.2-c1.1.html">B1.2 and C1.1 guide</a> and <a href="../guides/2026-11-22-biology-hl-c1.2-cell-respiration.html">C1.2 guide</a>.</li>
+<li>Write the fix in the row in one sentence, in the words the mark scheme used.</li></ol></div>
+<div class="step"><div class="bh"><b>Fix-it</b><span>4 min</span></div><ol>
+<li>Pick the written answer where you lost the most marks today (for example C1.1 Q8 or C1.2 Q7).</li>
+<li>Close the mark scheme. Rewrite your answer on paper so it would get full marks: one clear point per mark, with the key words.</li>
+<li>Then open the scheme and tick each point you now have. Missing one? Add it in a different colour.</li></ol></div>
+<div class="tip"><b>Stuck?</b> During a timed test: skip the question, mark it with a star and come back at the end. While marking: read the mark scheme point, then find it in the summary notes. Still unclear after 10 minutes? Log it as "ask teacher" and move on.</div>
+</div>
+
+<div id="b12" class="sec">
+<h2>★ If time: B1.2 proteins test (25 marks HL, 30 min)</h2>
+<p><a href="https://drive.google.com/file/d/1Q6UY3cWhUJRK8voRZ6PNc9m7G3AMQI-S/view">B1.2 test</a> (Drive file "B1.2 Proteins - Topic Test SL-HL - Questions (InThinking).pdf"): questions 1 to 3 multiple choice (3 marks), 4 and 5 <span class="term" data-t="structured" tabindex="0" role="button">structured</span> (6), 6 extended response (4), then "Additional Higher Level only" questions 7 to 9 (12). The cover gives 20 minutes for SL and <b>30 minutes for HL</b>, and the marks as 13 SL and 25 HL; the printed marks add up to the same.</p>
+<div class="timer" data-id="b12" data-sec="1800"><div class="tlabel">B1.2 proteins, HL, if time</div><div class="tdisp" aria-live="off">30:00</div><div class="tstat">Ready.</div><div class="tbtns"><button class="tstart">Start</button><button class="tpause sec">Pause</button><button class="treset sec">Reset</button></div></div>
+<div class="step mark"><div class="bh"><b>How to mark it</b><span>about 10 min</span></div>
+<p>Open the <a href="https://drive.google.com/file/d/1qDi7Bj8WtQTwJlpO_qKHVGDQTVy5yxDs/view">B1.2 mark scheme</a>. The right answers for questions 1 to 3 are <b>highlighted in yellow</b>. Careful: the scheme numbers the later questions differently. Paper question 6 is "1" in the scheme, 7 is "6", 8 is "7" and 9 is "8".</p>
+<ul>
+<li><b>Q4 [4]:</b> any four of: <span class="term" data-t="peptide bond" tabindex="0" role="button">peptide bond</span> drawn correctly; <span class="term" data-t="amine group" tabindex="0" role="button">amine group</span> at one end; <span class="term" data-t="carboxyl group" tabindex="0" role="button">carboxyl group</span> at the other; the <span class="term" data-t="alpha carbon" tabindex="0" role="button">alpha carbons</span> in the right places; an <span class="term" data-t="r group" tabindex="0" role="button">R group</span> on each alpha carbon.</li>
+<li><b>Q5 [2]:</b> any two of its three points: the base sequence of a gene sets the order of amino acids, and that order gives the protein its structure.</li>
+<li><b>Q6 [4]:</b> <span class="term" data-t="essential amino acid" tabindex="0" role="button">essential amino acids</span> must come from the diet because the body cannot make them; all twenty are needed to make every protein; give one protein and its job (the scheme uses haemoglobin carrying oxygen).</li>
+<li><b>Q7 [5], HL:</b> any five of: insulin is a hormone, <span class="term" data-t="globular" tabindex="0" role="button">globular</span>, soluble, carried in the blood; collagen is a structural protein (skin, connective tissue), <span class="term" data-t="fibrous" tabindex="0" role="button">fibrous</span>, insoluble.</li>
+<li><b>Q8 [3], HL:</b> any three of the four: hydrogen bonds, ionic bonds, disulfide covalent bonds, hydrophobic interactions. These are the same four the official IB guide lists for <span class="term" data-t="tertiary structure" tabindex="0" role="button">tertiary structure</span>.</li>
+<li><b>Q9 [4], HL:</b> a <span class="term" data-t="conjugated" tabindex="0" role="button">conjugated</span> protein has a non-protein group attached (example: haemoglobin); a non-conjugated protein is made of amino acids only (example: insulin or collagen).</li>
+</ul></div>
+</div>
+
+<div id="tips" class="sec">
+<h2>Exam tips for Biology</h2>
+<div class="card tips"><p class="muted">Only what these InThinking mark schemes show; they are not official IB rules.</p>
+<ul>
+<li><b>One point, one mark.</b> Schemes list more points than marks ("any 4 of these details", "Max: 4"). For a 4-mark question, write at least four separate, clear points.</li>
+<li><b>Use the numbers in the data.</b> C1.1 Q5 III is answered with the figure: 0.14 more each minute.</li>
+<li><b>Name it, then give an example.</b> C1.2 Q7 gives a mark for each use of ATP and another for its example.</li>
+<li><b>Tables: both columns.</b> C1.2 Q6 gives a row&apos;s mark only when the aerobic and the anaerobic answers are both right.</li>
+<li><b>Experiments: say what and how.</b> C1.2 Q5 IV wants the variable and how you would change it; Q5 II wants what the control shows.</li>
+<li><b>Use the key word.</b> The schemes underline the words they look for: globular, fibrous, essential. A vague word may not get the mark.</li>
+<li><b>Diagrams: label every part asked for.</b> B1.2 Q4 marks each group (amine, carboxyl, alpha carbon, R group, peptide bond) separately.</li>
+</ul></div>
+</div>
+
+<div id="scores" class="sec">
+<h2>Your scores</h2>
+<p class="muted">Leave a row empty if you did not do that part; it then does not count. The main tests add up to 31 (C1.1) + 27 (C1.2) = 58 marks; with the B1.2 test (25) the maximum is 83.</p>
+<div class="tablewrap"><table class="score-t"><tr><th>Item</th><th>Marks gained</th><th>Out of</th></tr>
+<tr data-item="c11-mcq"><td>C1.1 questions 1 to 4 (multiple choice)</td><td><input class="sc" type="number" min="0" max="4" step="1" inputmode="numeric" aria-label="marks gained, C1.1 questions 1 to 4 (multiple choice)"></td><td><span class="mx" data-max="4">4</span></td></tr>
+<tr data-item="c11-q5"><td>C1.1 question 5 (invertase data)</td><td><input class="sc" type="number" min="0" max="13" step="1" inputmode="numeric" aria-label="marks gained, C1.1 question 5 (invertase data)"></td><td><span class="mx" data-max="13">13</span></td></tr>
+<tr data-item="c11-q6"><td>C1.1 question 6 (enzyme specificity)</td><td><input class="sc" type="number" min="0" max="3" step="1" inputmode="numeric" aria-label="marks gained, C1.1 question 6 (enzyme specificity)"></td><td><span class="mx" data-max="3">3</span></td></tr>
+<tr data-item="c11-hl"><td>C1.1 questions 7 and 8 (HL only)</td><td><input class="sc" type="number" min="0" max="11" step="1" inputmode="numeric" aria-label="marks gained, C1.1 questions 7 and 8 (HL only)"></td><td><span class="mx" data-max="11">11</span></td></tr>
+<tr data-item="c12-mcq"><td>C1.2 questions 1 to 4 (multiple choice)</td><td><input class="sc" type="number" min="0" max="4" step="1" inputmode="numeric" aria-label="marks gained, C1.2 questions 1 to 4 (multiple choice)"></td><td><span class="mx" data-max="4">4</span></td></tr>
+<tr data-item="c12-q5"><td>C1.2 question 5 (respirometer)</td><td><input class="sc" type="number" min="0" max="6" step="1" inputmode="numeric" aria-label="marks gained, C1.2 question 5 (respirometer)"></td><td><span class="mx" data-max="6">6</span></td></tr>
+<tr data-item="c12-q6"><td>C1.2 question 6 (aerobic and anaerobic table)</td><td><input class="sc" type="number" min="0" max="4" step="1" inputmode="numeric" aria-label="marks gained, C1.2 question 6 (aerobic and anaerobic table)"></td><td><span class="mx" data-max="4">4</span></td></tr>
+<tr data-item="c12-q7"><td>C1.2 question 7 (uses of ATP)</td><td><input class="sc" type="number" min="0" max="6" step="1" inputmode="numeric" aria-label="marks gained, C1.2 question 7 (uses of ATP)"></td><td><span class="mx" data-max="6">6</span></td></tr>
+<tr data-item="c12-hl"><td>C1.2 questions 8 and 9 (HL only)</td><td><input class="sc" type="number" min="0" max="7" step="1" inputmode="numeric" aria-label="marks gained, C1.2 questions 8 and 9 (HL only)"></td><td><span class="mx" data-max="7">7</span></td></tr>
+<tr data-item="b12-mcq"><td>★ If time: B1.2 questions 1 to 3 (multiple choice)</td><td><input class="sc" type="number" min="0" max="3" step="1" inputmode="numeric" aria-label="marks gained, ★ If time: B1.2 questions 1 to 3 (multiple choice)"></td><td><span class="mx" data-max="3">3</span></td></tr>
+<tr data-item="b12-q45"><td>★ If time: B1.2 questions 4 and 5 (structured)</td><td><input class="sc" type="number" min="0" max="6" step="1" inputmode="numeric" aria-label="marks gained, ★ If time: B1.2 questions 4 and 5 (structured)"></td><td><span class="mx" data-max="6">6</span></td></tr>
+<tr data-item="b12-q6"><td>★ If time: B1.2 question 6 (extended response)</td><td><input class="sc" type="number" min="0" max="4" step="1" inputmode="numeric" aria-label="marks gained, ★ If time: B1.2 question 6 (extended response)"></td><td><span class="mx" data-max="4">4</span></td></tr>
+<tr data-item="b12-hl"><td>★ If time: B1.2 questions 7 to 9 (HL only)</td><td><input class="sc" type="number" min="0" max="12" step="1" inputmode="numeric" aria-label="marks gained, ★ If time: B1.2 questions 7 to 9 (HL only)"></td><td><span class="mx" data-max="12">12</span></td></tr>
+</table></div><p><button class="btn" id="savebtn">Save score</button></p><p class="saved" id="saved"></p>
+</div>
+
+<div id="end" class="sec">
+<h2>Error log and what next</h2>
+<div class="step"><div class="bh"><b>Error log routine</b><span>part of each marking step</span></div><ol>
+<li>Open the <a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">study sheet</a>, <b>Error log</b> tab.</li>
+<li>One row for every mark you lost: the date, Biology, the test and question (for example "IT A1.2 Q8"), what went wrong, and the rule that fixes it.</li>
+<li>Give each lost mark a type: <b>did not know</b> (re-read the notes), <b>wrong method</b> (for example a calculation set up wrongly, or describing when the question says explain), <b>slip</b> (misread, copied wrongly, left out a unit), <b>time</b> (did not reach it) or <b>ask teacher</b> (you still do not understand the mark scheme point).</li>
+<li>Timing: write which question you were on when the timer ended.</li><li>Count your mistakes by type across the 21 November mock and today. The type that comes up most is what you practise last before the exam.</li></ol></div>
+<p>Also on the study site: <a href="../flashcards.html">flashcards</a>, <a href="../exam.html">exam technique</a> and your <a href="../progress.html">progress page</a>.</p>
+</div>
+
+</main>
+<script>(function(){
+  var PAGE="2026-12-02";
+  var store=true; try{localStorage.setItem("_t","1");localStorage.removeItem("_t");}catch(e){store=false;}
+  function load(k){ if(!store) return null; try{ return JSON.parse(localStorage.getItem(k)); }catch(e){ return null; } }
+  function save(k,v){ if(!store) return; try{ localStorage.setItem(k,JSON.stringify(v)); }catch(e){} }
+  function pad(n){ return (n<10?"0":"")+n; }
+  function fmt(ms){ var s=Math.ceil(Math.max(ms,0)/1000); return pad(Math.floor(s/60))+":"+pad(s%60); }
+  var ac=null;
+  function unlock(){ try{ if(!ac){ var C=window.AudioContext||window.webkitAudioContext; if(C) ac=new C(); } if(ac&&ac.state==="suspended") ac.resume(); }catch(e){} }
+  function beep(){ if(!ac) return; try{ var t0=ac.currentTime+0.05; for(var i=0;i<3;i++){ var o=ac.createOscillator(), g=ac.createGain(); o.frequency.value=880; o.connect(g); g.connect(ac.destination); var t=t0+i*0.5; g.gain.setValueAtTime(0.0001,t); g.gain.exponentialRampToValueAtTime(0.3,t+0.02); g.gain.exponentialRampToValueAtTime(0.0001,t+0.35); o.start(t); o.stop(t+0.4); } }catch(e){} }
+  var timers=[]; var baseTitle=document.title;
+  // The timer stores the moment it was started (Date.now()), never a tick count,
+  // so it stays correct when the phone screen sleeps or the page is reloaded.
+  document.querySelectorAll(".timer").forEach(function(el){
+    var t={el:el, dur:parseInt(el.getAttribute("data-sec"),10)*1000, key:"ib-timer-"+PAGE+"-"+el.getAttribute("data-id"),
+      st:{start:null, used:0, alerted:false},
+      disp:el.querySelector(".tdisp"), stat:el.querySelector(".tstat"),
+      bStart:el.querySelector(".tstart"), bPause:el.querySelector(".tpause"), bReset:el.querySelector(".treset")};
+    var s=load(t.key); if(s && typeof s.used==="number") t.st=s;
+    t.bStart.addEventListener("click",function(){ unlock(); if(t.st.start) return; t.st.start=Date.now(); save(t.key,t.st); render(t); });
+    t.bPause.addEventListener("click",function(){ if(!t.st.start) return; t.st.used+=Date.now()-t.st.start; t.st.start=null; save(t.key,t.st); render(t); });
+    t.bReset.addEventListener("click",function(){ t.st={start:null, used:0, alerted:false}; save(t.key,t.st); render(t); });
+    timers.push(t);
+  });
+  function used(t){ return t.st.used+(t.st.start?Date.now()-t.st.start:0); }
+  function render(t){
+    var r=t.dur-used(t), running=!!t.st.start;
+    t.bStart.disabled=running; t.bPause.disabled=!running;
+    t.bStart.textContent=(t.st.used>0&&!running&&r>0)?"Resume":"Start";
+    if(r>0){
+      t.el.classList.remove("up"); t.el.classList.toggle("low", r<=300000);
+      t.disp.textContent=fmt(r);
+      if(running){ var end=new Date(Date.now()+r); t.stat.textContent="Running. Ends at "+pad(end.getHours())+":"+pad(end.getMinutes())+"."; }
+      else t.stat.textContent=t.st.used>0?"Paused.":"Ready. Press Start when you turn the paper over.";
+    } else {
+      t.el.classList.remove("low"); t.el.classList.add("up"); t.disp.textContent="00:00";
+      t.stat.textContent="Time is up. Pens down."+(running?" Over by "+fmt(-r)+".":"");
+      if(!t.st.alerted){ t.st.alerted=true; save(t.key,t.st); beep(); try{ if(navigator.vibrate) navigator.vibrate([400,200,400]); }catch(e){} }
+    }
+  }
+  function all(){ var up=false; timers.forEach(function(t){ render(t); if(t.st.start && used(t)>=t.dur) up=true; }); document.title=(up?"Time is up | ":"")+baseTitle; }
+  all(); setInterval(all,250);
+  document.addEventListener("visibilitychange",all); window.addEventListener("focus",all); window.addEventListener("pageshow",all);
+
+  // score entry: one row per item; total saved as {score, max, date, items}
+  var KEY="ib-timed-"+PAGE, rows=document.querySelectorAll(".score-t tr[data-item]"), out=document.getElementById("saved");
+  function maxOf(r){ var m=r.querySelector(".mx"); return parseFloat(m.tagName==="INPUT"?m.value:m.getAttribute("data-max")); }
+  function today(){ var d=new Date(); return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate()); }
+  function show(rec){ out.textContent=rec?("Saved on this device: "+rec.score+" / "+rec.max+" ("+Math.round(100*rec.score/rec.max)+"%), "+rec.date+"."):"Nothing saved yet. Rows you leave empty do not count."; }
+  function saveScore(){
+    var items={}, sc=0, mx=0, any=false;
+    rows.forEach(function(r){ var v=r.querySelector(".sc").value, m=maxOf(r);
+      if(v!=="" && !isNaN(parseFloat(v)) && m>0){ var x=Math.min(Math.max(parseFloat(v),0),m); if(x!==parseFloat(v)) r.querySelector(".sc").value=x; items[r.getAttribute("data-item")]={s:x,m:m}; sc+=x; mx+=m; any=true; } });
+    if(!any){ if(store){ try{ localStorage.removeItem(KEY); }catch(e){} } show(null); return; }
+    var rec={score:sc, max:mx, date:today(), items:items}; save(KEY,rec); show(rec);
+  }
+  var rec=load(KEY);
+  if(rec && rec.items){ rows.forEach(function(r){ var it=rec.items[r.getAttribute("data-item")]; if(it){ r.querySelector(".sc").value=it.s; var m=r.querySelector(".mx"); if(m.tagName==="INPUT") m.value=it.m; } }); }
+  show(rec && rec.items ? rec : null);
+  rows.forEach(function(r){ r.querySelectorAll("input").forEach(function(i){ i.addEventListener("change",saveScore); }); });
+  document.getElementById("savebtn").addEventListener("click",saveScore);
+  if(!store) out.textContent="This browser is not letting the page save (private mode?). Write your score on paper.";
+
+  // show what the 21 Nov Biology mock rows say (read only)
+  (function(){ var box=document.getElementById("mock21"); if(!box) return;
+    var r=load("ib-timed-2026-11-21"); if(!r||!r.items){ box.textContent="No 21 November score is saved on this device, so use your marked papers."; return; }
+    var lost=0, max=0, n=0; for(var k in r.items){ if(k.indexOf("bio-")===0){ lost+=r.items[k].m-r.items[k].s; max+=r.items[k].m; n++; } }
+    box.textContent = n ? ("On 21 November you saved "+n+" Biology rows: "+lost+" of "+max+" marks lost. Each lost mark should have an Error log row.") : "Your 21 November save has no Biology rows, so use your marked papers."; })();
+})();</script>
+<!--terms:start-->
+<div id="termbox" role="dialog" aria-live="polite"><div class="tb-h"><b></b><button type="button">Close</button></div><p class="tb-d"></p></div>
+<script id="terms-data" type="application/json">{"mark scheme": {"w": "mark scheme", "d": "The list of answers the marker accepts, with how many marks each point earns."}, "timed": {"w": "timed", "d": "Done against a clock, with the time limit of the real exam, and no notes."}, "hl": {"w": "HL", "d": "Higher level: the longer Biology course you take. HL exams have extra questions on the HL-only parts."}, "sl": {"w": "SL", "d": "Standard level: the shorter Biology course. The tests show the SL time and total too, but you use the HL ones."}, "multiple choice": {"w": "multiple choice", "d": "A question with answers A, B, C and D where you pick one. One mark each."}, "structured": {"w": "structured", "d": "A question split into short parts, each worth a few marks."}, "extended response": {"w": "extended response", "d": "A longer written answer, worth about 4 to 8 marks, where you make several separate points."}, "brain dump": {"w": "brain dump", "d": "Writing down everything you remember about a topic on a blank page, from memory, before you look at anything."}, "summary notes": {"w": "summary notes", "d": "Short revision notes for each topic (Revision Village, in your Drive), one or two pages long."}, "enzyme": {"w": "enzyme", "d": "A protein that speeds up one particular chemical reaction in a living thing without being used up."}, "active site": {"w": "active site", "d": "The pocket on an enzyme where the substrate fits and the reaction happens."}, "substrate": {"w": "substrate", "d": "The molecule an enzyme works on. Sucrose is the substrate of invertase."}, "invertase": {"w": "invertase", "d": "An enzyme that splits sucrose (table sugar) into glucose and fructose."}, "hydrolyses": {"w": "hydrolyses", "d": "Splits a molecule into smaller ones by adding water."}, "monosaccharide": {"w": "monosaccharide", "d": "A single sugar unit, such as glucose or fructose."}, "inhibitor": {"w": "inhibitor", "d": "A substance that slows down or stops an enzyme."}, "transpeptidase": {"w": "transpeptidase", "d": "The bacterial enzyme that builds cross-links in the bacterial cell wall. Penicillin blocks it."}, "mechanism-based inhibition": {"w": "mechanism-based inhibition", "d": "An inhibitor binds in the active site and becomes fixed there for good, so that enzyme molecule can never work again. Penicillin is the example."}, "irreversible": {"w": "irreversible", "d": "Cannot be undone."}, "mutation": {"w": "mutation", "d": "A random change in the base sequence of DNA. It can change the shape of a protein."}, "allosteric": {"w": "allosteric", "d": "Binding at a second site on an enzyme, away from the active site, which changes the shape of the active site."}, "glycolysis": {"w": "glycolysis", "d": "The first stage of cell respiration, in the cytoplasm: glucose is split into two pyruvate, making a little ATP."}, "atp": {"w": "ATP", "d": "Adenosine triphosphate: the small molecule that carries energy to wherever the cell needs it."}, "respiration": {"w": "respiration", "d": "Cell respiration: the chemical reactions in cells that release energy from food molecules to make ATP. Not the same as breathing."}, "respirometer": {"w": "respirometer", "d": "Apparatus that measures how fast living things use oxygen, from the change in gas volume in a sealed tube."}, "potassium hydroxide": {"w": "potassium hydroxide", "d": "A chemical that absorbs carbon dioxide, so only the oxygen used changes the gas volume."}, "germination": {"w": "germination", "d": "When a seed starts to grow."}, "control": {"w": "control", "d": "In an experiment, a set-up that leaves out the thing being tested (here, glass beads instead of beans) to show the result is caused by it."}, "variable": {"w": "variable", "d": "Anything in an experiment that can change, such as temperature. You change one and keep the others the same."}, "aerobic": {"w": "aerobic", "d": "Using oxygen. Aerobic respiration releases much more energy than anaerobic respiration (without oxygen)."}, "cytoplasm": {"w": "cytoplasm", "d": "The jelly-like inside of a cell, outside the nucleus, where many reactions happen."}, "mitochondria": {"w": "mitochondria", "d": "Small parts inside a cell (one is a mitochondrion) where aerobic respiration makes most of the ATP."}, "nad": {"w": "NAD", "d": "A helper molecule that picks up hydrogen in respiration (becoming reduced NAD) and hands it on to the electron transport chain."}, "electron transport chain": {"w": "electron transport chain", "d": "A chain of proteins in the mitochondrion that passes on electrons from hydrogen and uses their energy to make most of the ATP."}, "dehydrogenase": {"w": "dehydrogenase", "d": "An enzyme that removes hydrogen from a molecule."}, "proton gradient": {"w": "proton gradient", "d": "Many more protons (hydrogen ions, H<sup>+<\/sup>) on one side of a membrane than the other. Their flow back drives ATP making."}, "chemiosmosis": {"w": "chemiosmosis", "d": "Making ATP using the flow of protons back across a membrane through the enzyme ATP synthase."}, "amine group": {"w": "amine group", "d": "The -NH<sub>2<\/sub> group at one end of an amino acid."}, "carboxyl group": {"w": "carboxyl group", "d": "The -COOH group at the other end of an amino acid."}, "alpha carbon": {"w": "alpha carbon", "d": "The central carbon atom of an amino acid, holding the amine group, the carboxyl group, a hydrogen and the R group."}, "r group": {"w": "R group", "d": "The part of an amino acid that is different in each of the 20 kinds."}, "peptide bond": {"w": "peptide bond", "d": "The bond joining two amino acids, made in a condensation reaction (water is given off)."}, "essential amino acid": {"w": "essential amino acids", "d": "Amino acids your body cannot make, so they must come from food."}, "globular": {"w": "globular", "d": "Folded into a rounded shape; usually soluble. Enzymes and insulin are globular."}, "fibrous": {"w": "fibrous", "d": "Long and thread-like; usually insoluble and strong. Collagen is fibrous."}, "conjugated": {"w": "conjugated protein", "d": "A protein with a non-protein part attached, such as the haem group in haemoglobin."}, "tertiary structure": {"w": "tertiary structure", "d": "The overall 3D folded shape of one protein chain."}, "outline": {"w": "outline", "d": "IB command word: give the main points briefly."}, "explain": {"w": "explain", "d": "IB command word: say why or how, with reasons (use \"because\" and \"so\")."}}</script>
+<script>
+(function(){
+  // tap a dotted word to see what it means
+  var T={};
+  try{ T=JSON.parse(document.getElementById('terms-data').textContent); }catch(e){ return; }
+  var box=document.getElementById('termbox'), bt=box.querySelector('.tb-h b'), bd=box.querySelector('.tb-d');
+  function show(el){ var k=el.getAttribute('data-t'); if(!T[k]) return; bt.textContent=T[k].w; bd.innerHTML=T[k].d; box.classList.add('on'); }
+  function hide(){ box.classList.remove('on'); }
+  document.addEventListener('click',function(e){
+    var el=e.target.closest ? e.target.closest('.term') : null;
+    if(el){ e.preventDefault(); e.stopPropagation(); show(el); return; }
+    if(!box.contains(e.target)) hide();
+  },true);
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape') hide();
+    if((e.key==='Enter'||e.key===' ') && e.target.classList && e.target.classList.contains('term')){ e.preventDefault(); show(e.target); }
+  });
+  box.querySelector('button').addEventListener('click',hide);
+})();
+</script><!--terms:end-->
+<!--enhance:start--><script>
+function storageOK(){ try{ var k='__ib_t'; localStorage.setItem(k,'1'); localStorage.removeItem(k); return true; }catch(e){ return false; } }
+function storageNotice(){ if(storageOK() || document.querySelector('.notice.storage')) return;
+  var n=document.createElement('div'); n.className='notice storage'; n.setAttribute('role','status');
+  n.textContent='Progress cannot be saved in this browser (private mode?). Use normal Safari or Chrome.';
+  var sb=document.querySelector('.sitebar');   // under the shared top bar when the page has one
+  if(sb && sb.parentNode){ sb.parentNode.insertBefore(n,sb.nextSibling); return; }
+  var m=document.querySelector('main')||document.body; m.insertBefore(n,m.firstChild); }
+
+function ibQuizEnhance(cfg){
+  if(window.__ibQuizEnh) return; window.__ibQuizEnh=1;
+  if(typeof storageNotice==='function') storageNotice();
+  var KEY=cfg&&cfg.key; if(!KEY) return;
+  var AK=KEY+'-attempts', WK=KEY+'-written';
+  function get(k){ try{ return JSON.parse(localStorage.getItem(k)||'null'); }catch(e){ return null; } }
+  function put(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); }catch(e){} }
+  function pad(n){ return (n<10?'0':'')+n; }
+  function today(){ var d=new Date(); return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()); }
+  function attempts(){ var a=get(AK); return Array.isArray(a)?a:[]; }
+  function addAttempt(r,t,sameDay){ var a=attempts(), d=today(), rec={date:d,right:r,total:t};
+    if(sameDay && a.length && a[a.length-1].date===d) a[a.length-1]=rec; else a.push(rec); put(AK,a); return a; }
+  // keep the score saved before this history existed as the first attempt
+  (function(){ if(get(AK)) return; var r=get(KEY); if(!r||typeof r!=='object') return;
+    var rr=(typeof r.right==='number')?r.right:r.score, tt=(typeof r.total==='number')?r.total:r.max;
+    if(typeof rr==='number' && tt) put(AK,[{date:r.date||today(),right:rr,total:tt}]); })();
+
+  // written answers: self-mark 0..max
+  var W=get(WK); if(!W||typeof W!=='object') W={};
+  [].forEach.call(document.querySelectorAll('.written[data-max]'),function(el,i){
+    var max=parseInt(el.getAttribute('data-max'),10); if(!(max>=0) || el.querySelector('.wm')) return;
+    var id=el.id||el.getAttribute('data-id')||('w'+(i+1));
+    var box=document.createElement('div'); box.className='wm';
+    var lab=document.createElement('label'); lab.appendChild(document.createTextNode('My mark: '));
+    var sel=document.createElement('select'); sel.setAttribute('aria-label','Your mark out of '+max);
+    var o=document.createElement('option'); o.value=''; o.textContent='not marked yet'; sel.appendChild(o);
+    for(var m=0;m<=max;m++){ o=document.createElement('option'); o.value=String(m); o.textContent=m+' out of '+max; sel.appendChild(o); }
+    if(W[id]!=null) sel.value=String(W[id]);
+    sel.addEventListener('change',function(){ var w=get(WK); if(!w||typeof w!=='object') w={};
+      if(sel.value==='') delete w[id]; else w[id]=parseInt(sel.value,10); put(WK,w); });
+    lab.appendChild(sel); box.appendChild(lab); el.appendChild(box);
+  });
+
+  // timed pages save {score,max,date} themselves; keep one history entry per day
+  if(/^ib-timed-/.test(KEY)){
+    var rec=function(){ var r=get(KEY); if(r && typeof r.score==='number' && r.max) addAttempt(r.score,r.max,true); };
+    var sb=document.getElementById('savebtn'); if(sb) sb.addEventListener('click',function(){ setTimeout(rec,0); });
+    [].forEach.call(document.querySelectorAll('.score-t input'),function(i){ i.addEventListener('change',function(){ setTimeout(rec,0); }); });
+  }
+
+  // multiple-choice quiz
+  var q0=document.querySelector('.quiz .q[data-a]'); if(!q0) return;
+  var quiz=q0.closest('.quiz');
+  var own=!!cfg.own, total=0, count=0, right=0, recs=[];
+  function qsAll(){ return [].filter.call(quiz.querySelectorAll('.q[data-a]'),function(q){ return !q.classList.contains('written'); }); }
+  function opts(q){ return [].filter.call(q.children,function(c){ return c.tagName==='BUTTON'; }); }
+  var score=document.getElementById('score');
+  if(!score){ score=document.createElement('div'); score.className='score'; score.id='score'; var l=qsAll(); l[l.length-1].parentNode.insertBefore(score,l[l.length-1].nextSibling); }
+  var rep=document.createElement('div'); rep.className='cfr'; rep.setAttribute('aria-live','polite'); score.parentNode.insertBefore(rep,score.nextSibling);
+  var hint=document.createElement('p'); hint.className='cfh';
+  hint.textContent='Before each answer, say how sure you are. At the end, the ones you were sure about but got wrong are listed first: they matter most.';
+  q0.parentNode.insertBefore(hint,qsAll()[0]);
+  function addConf(q){ var p=q.querySelector('.cf'); if(p) p.parentNode.removeChild(p);
+    var d=document.createElement('div'); d.className='cf'; d.setAttribute('role','group'); d.setAttribute('aria-label','How sure are you?');
+    d.innerHTML='<div class="cfl-h">How sure are you?</div><div class="cfb"><button type="button" data-c="guess" aria-pressed="false">Guessed</button><button type="button" data-c="unsure" aria-pressed="false">Unsure</button><button type="button" data-c="sure" aria-pressed="false">Sure</button></div>';
+    var first=opts(q)[0]; q.insertBefore(d,first||null); q.removeAttribute('data-conf'); }
+  function counters(qs){ qs.forEach(function(q,i){ var c=q.querySelector('.qn'); if(!c){ c=document.createElement('div'); c.className='qn'; q.insertBefore(c,q.firstChild); } c.textContent=(i+1)+' of '+qs.length; }); }
+  function start(){ var qs=qsAll(); total=qs.length; count=0; right=0; recs=[]; qs.forEach(addConf); counters(qs); rep.innerHTML=''; }
+  function msg(){ return 'Score: '+right+' / '+total+' answered '+count+(count===total?(right>=0.8*total?'. Good. Log the ones you missed.':'. Re-read the sections for the ones you missed, then log them.'):''); }
+  function qtext(q){ var p=q.querySelector('p'); var t=p?p.textContent:''; t=t.replace(/\s+/g,' ').trim();
+    var s=p&&p.querySelector('.subj'); if(s) t=t.slice(s.textContent.trim().length).trim();
+    t=t.replace(/^\d+\.\s*/,''); return t.length>110?t.slice(0,107)+'...':t; }
+  function esc(s){ var d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+  quiz.addEventListener('click',function(e){
+    var b=e.target.closest?e.target.closest('button'):null; if(!b) return;
+    var q=b.closest('.q'); if(!q || !quiz.contains(q) || !q.hasAttribute('data-a') || q.classList.contains('written')) return;
+    var cf=b.closest('.cf');
+    if(cf){ if(q.__ibRec) return; var c=b.getAttribute('data-c'); q.setAttribute('data-conf',c);
+      [].forEach.call(cf.querySelectorAll('button'),function(x){ var on=x===b; x.classList.toggle('on',on); x.setAttribute('aria-pressed',on?'true':'false'); }); return; }
+    if(b.parentNode!==q || q.__ibRec) return;
+    if(own){
+      if(q.classList.contains('done')) return;
+      var bs=opts(q), a=parseInt(q.getAttribute('data-a'),10), i=bs.indexOf(b);
+      q.classList.add('done');
+      if(i===a) b.classList.add('right'); else { b.classList.add('wrong'); if(bs[a]) bs[a].classList.add('right'); }
+    } else if(!q.classList.contains('done')) return;
+    q.__ibRec=true; var ok=b.classList.contains('right'); if(ok) right++; count++;
+    recs.push({q:q,ok:ok,conf:q.getAttribute('data-conf')||''});
+    [].forEach.call(q.querySelectorAll('.cf button'),function(x){ x.disabled=true; });
+    if(own) score.textContent=msg();
+    if(count===total) finish();
+  });
+  function finish(){
+    var r=right, t=total;
+    if(own){ try{ var prev=get(KEY); localStorage.setItem(KEY,JSON.stringify({right:r,total:t,date:new Date().toISOString().slice(0,10),best:Math.max(r,prev&&prev.best||0)})); }catch(e){} }
+    else { var s=get(KEY); if(s && typeof s.right==='number' && s.total) { r=s.right; t=s.total; } }
+    var a=addAttempt(r,t,false);
+    var order=qsAll(), num=function(q){ return order.indexOf(q)+1; };
+    var wrong=recs.filter(function(x){ return !x.ok; });
+    wrong.sort(function(x,y){ return (y.conf==='sure')-(x.conf==='sure') || num(x.q)-num(y.q); });
+    var lucky=recs.filter(function(x){ return x.ok && (x.conf==='guess'||x.conf==='unsure'); }).sort(function(x,y){ return num(x.q)-num(y.q); });
+    var lab={sure:'you were sure',unsure:'you were unsure',guess:'you guessed','':'not marked'};
+    var h='';
+    if(wrong.length){ h+='<b>Log these first</b><ol class="cfl">'+wrong.map(function(x){ return '<li'+(x.conf==='sure'?' class="sure"':'')+'>Question '+num(x.q)+' ('+lab[x.conf]+'): '+esc(qtext(x.q))+'</li>'; }).join('')+'</ol>'; }
+    if(lucky.length){ h+='<b>Right, but not sure</b>: read the explanation again for '+lucky.map(function(x){ return 'question '+num(x.q); }).join(', ')+'.'; }
+    if(!wrong.length && !lucky.length) h+='<b>All right.</b> Come back in a few days and try again: a score that lasts is what counts.';
+    var past=a.slice(0,-1).slice(-3).map(function(x){ return x.right+'/'+x.total+' on '+x.date; });
+    h+='<p class="cfa">Try number '+a.length+(past.length?'. Before: '+past.join(', ')+'.':'.')+'</p>';
+    h+='<button type="button" class="retry">Try again (shuffled)</button>';
+    rep.innerHTML=h;
+    rep.querySelector('.retry').addEventListener('click',retry);
+  }
+  function shuffled(arr){ var best=arr.slice();
+    for(var k=0;k<12;k++){ var x=arr.slice(); for(var i=x.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=x[i]; x[i]=x[j]; x[j]=t; }
+      best=x; if(arr.length<2 || x.some(function(v,i){ return v!==arr[i]; })) break; }
+    return best; }
+  function renumber(q,n){ var p=q.querySelector('p'); if(!p) return;
+    var w=document.createTreeWalker(p,4,null), tn;
+    while((tn=w.nextNode())){ if(tn.parentNode.closest && tn.parentNode.closest('.subj')) continue; if(!/\S/.test(tn.data)) continue;
+      if(/^\s*\d+\.\s/.test(tn.data)) tn.data=tn.data.replace(/^(\s*)\d+\./,'$1'+n+'.'); break; } }
+  function retry(){
+    var qs=qsAll(), marks=[], clones=[];
+    qs.forEach(function(q){
+      var m=document.createComment('q'); q.parentNode.insertBefore(m,q); marks.push(m);
+      var c=q.cloneNode(true); c.classList.remove('done'); c.removeAttribute('data-conf');
+      var p=c.querySelector('.cf'); if(p) p.parentNode.removeChild(p); p=c.querySelector('.qn'); if(p) p.parentNode.removeChild(p);
+      var bs=opts(c), a=parseInt(c.getAttribute('data-a'),10), good=bs[a];
+      bs.forEach(function(x){ x.classList.remove('right','wrong'); x.disabled=false; });
+      if(bs.length){ var after=bs[bs.length-1].nextSibling, nb=shuffled(bs);
+        bs.forEach(function(x){ c.removeChild(x); }); nb.forEach(function(x){ c.insertBefore(x,after); });
+        c.setAttribute('data-a',String(nb.indexOf(good))); }
+      q.parentNode.removeChild(q); clones.push(c);
+    });
+    var nq=shuffled(clones);
+    marks.forEach(function(m,i){ m.parentNode.insertBefore(nq[i],m); m.parentNode.removeChild(m); renumber(nq[i],i+1); });
+    own=true; start(); score.textContent='Score: 0 / '+total+' answered 0';
+    var top=quiz.getBoundingClientRect().top+window.pageYOffset-60; try{ window.scrollTo(0,Math.max(0,top)); }catch(e){}
+  }
+  start();
+}
+
+storageNotice();
+ibQuizEnhance({"key": "ib-timed-2026-12-02", "own": false});
+(function(){
+  if(window.__ibSite) return; window.__ibSite=1;
+  var PAGE='ib-'+((location.pathname.split('/').pop()||'index').replace(/\.html?$/,''));
+  var BK=PAGE+'-blocks';
+  function get(){ try{ var v=JSON.parse(localStorage.getItem(BK)||'null'); return v&&typeof v==='object'?v:{}; }catch(e){ return {}; } }
+  function put(v){ try{ localStorage.setItem(BK,JSON.stringify(v)); }catch(e){} }
+  // guide plan blocks "Block 1 · 25 min" + title -> numbered card with a time chip
+  [].forEach.call(document.querySelectorAll('.plan > div:not(.brk), .step'),function(d){
+    var bh=d.querySelector(':scope > .bh'); if(!bh || bh.querySelector('.bn')) return;
+    var b=bh.querySelector('b'); var m=b && /^\s*Block\s+(\d+[a-z]?)\s*[·.:-]\s*(.+?)\s*$/i.exec(b.textContent); if(!m) return;
+    var s=bh.querySelector('span'); var title=s?s.innerHTML:'';
+    d.classList.add('block'); d.setAttribute('data-n',m[1]);
+    bh.innerHTML='<span class="bn" aria-hidden="true">'+m[1]+'</span><b><span class="sr">Block '+m[1]+': </span>'+(title||('Block '+m[1]))+'</b><span class="bt">'+m[2]+'</span>';
+    // teaching sections linked from this block get a kicker "Block n · ..."
+    [].forEach.call(d.querySelectorAll('a[href^="#"]'),function(a){
+      var t=document.getElementById(a.getAttribute('href').slice(1)); if(!t) return;
+      var k=t.querySelector(':scope > .kicker'); if(!k || k.getAttribute('data-bk')) return;
+      k.setAttribute('data-bk',m[1]); k.insertAdjacentHTML('afterbegin','<span class="bk">Block '+m[1]+' · </span>');
+    });
+  });
+  // long hero intro paragraphs fold to 3 lines; tap to read them all
+  [].forEach.call(document.querySelectorAll('header.hero .wrap > p'),function(p){
+      if(p.textContent.length<160) return;
+      p.classList.add('fold'); if(p.scrollHeight<=p.clientHeight+2){ p.classList.remove('fold'); return; }
+      p.setAttribute('role','button'); p.setAttribute('tabindex','0'); p.setAttribute('aria-expanded','false');
+      function tog(e){ if(e && e.target && e.target.closest && e.target.closest('a,.term')) return; var o=p.classList.toggle('open'); p.setAttribute('aria-expanded',o?'true':'false'); }
+      p.addEventListener('click',tog); p.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); tog(); } });
+  });
+  // keep the Today card on the first screen: shrink the header picture (not below 18% of the screen height) if needed
+  (function(){ var art=document.querySelector('header.hero > svg, header.hero > img'), card=document.querySelector('.todaycard');
+    if(!art || !card) return; var vh=window.innerHeight, over=card.getBoundingClientRect().top+window.pageYOffset-(vh-70);
+    if(over>0){ var h=art.getBoundingClientRect().height; art.style.maxHeight=Math.max(0.18*vh,h-over)+'px'; } })();
+  // "Block done" ticks
+  var st=get();
+  [].forEach.call(document.querySelectorAll('.block'),function(d,i){
+    if(d.querySelector(':scope > .bdone')) return;
+    var n=d.getAttribute('data-n')||String(i+1);
+    var l=document.createElement('label'); l.className='bdone';
+    l.innerHTML='<input type="checkbox"> Block done';
+    var c=l.querySelector('input'); c.checked=!!st[n]; d.classList.toggle('is-done',c.checked);
+    c.addEventListener('change',function(){ var s=get(); if(c.checked) s[n]=new Date().toISOString().slice(0,10); else delete s[n]; put(s); d.classList.toggle('is-done',c.checked); chips(); });
+    d.appendChild(l);
+  });
+  function chips(){ var s=get(); [].forEach.call(document.querySelectorAll('.chip[data-n]'),function(a){ a.classList.toggle('done',!!s[a.getAttribute('data-n')]); }); }
+  chips();
+  // current section in the menu
+  var nav=document.querySelector('nav.toc .wrap'); if(!nav || !('IntersectionObserver' in window)) return;
+  var links={}, secs=[];
+  [].forEach.call(nav.querySelectorAll('a[href^="#"]'),function(a){ var el=document.getElementById(a.getAttribute('href').slice(1)); if(el){ links[el.id]=a; secs.push(el); } });
+  // the current section is the last one whose top has passed under the two bars; the observer (and a
+  // throttled scroll check, for long sections) only decides when to look again
+  function mark(){ var best=null; secs.forEach(function(el){ if(el.getBoundingClientRect().top<=120) best=el; });
+    Object.keys(links).forEach(function(id){ links[id].removeAttribute('aria-current'); });
+    if(best){ var a=links[best.id]; a.setAttribute('aria-current','location');
+      var l=a.offsetLeft-nav.offsetLeft, r=l+a.offsetWidth; if(l<nav.scrollLeft+8 || r>nav.scrollLeft+nav.clientWidth-8) nav.scrollLeft=Math.max(0,l-40); } }
+  secs.sort(function(a,b){ return (a.compareDocumentPosition(b)&2)?1:-1; });
+  var io=new IntersectionObserver(mark,{rootMargin:'-100px 0px -55% 0px'});
+  var tick=false; window.addEventListener('scroll',function(){ if(tick) return; tick=true; requestAnimationFrame(function(){ tick=false; mark(); }); },{passive:true});
+  secs.forEach(function(el){ io.observe(el); });
+})();
+</script><!--enhance:end-->
+</body>
+</html>

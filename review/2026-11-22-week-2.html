@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weekly review: week 2 (Sun 22 Nov 2026)</title>
+<style>
+  :root{--paper:#F5F7F4;--ink:#1E2A33;--ink-soft:#4A5862;--rule:#D6DCD8;--indigo:#2F47A6;--indigo-soft:#E6EAF7;--amber:#B8761A;--amber-soft:#FBF1DF;--green:#2E7D4F;--green-soft:#E3F2E8;--red:#B23A3A;--red-soft:#F8E4E4;--grey:#5F6B72;--amber-ink:#8A6416;--card:#FFFFFF}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;overflow-wrap:break-word}
+  h1,h2,h3{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;line-height:1.2;margin:0 0 .4em;font-weight:600}
+  h1{font-size:2.1rem} h2{font-size:1.5rem;margin-top:1.6em} h3{font-size:1.15rem;margin-top:1.4em}
+  p{margin:0 0 1em} a{color:var(--indigo)}
+  sup,sub{line-height:0}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
+  .top{background:#0B0F1A;color:#fff;padding:26px 0 22px}
+  .top h1{color:#fff} .top p{color:#C9D1E6;max-width:660px;margin-bottom:0}
+  .top .crumb{font-size:.9rem;margin-bottom:8px} .top .crumb a{color:#F2C46D}
+  table{border-collapse:collapse;width:100%;margin:12px 0 20px;font-size:.95rem;background:var(--card)}
+  th,td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#EDF0EC}
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .card{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:12px 0}
+  .tip{background:var(--amber-soft);border-left:5px solid var(--amber);padding:12px 16px;margin:18px 0}
+  .tip b:first-child{color:var(--amber-ink)}
+  .step{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);padding:12px 16px;margin:12px 0}
+  .step .bh{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-bottom:4px}
+  .step .bh b{font-size:1.15rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+  .step .bh span{font-weight:700;color:var(--indigo)}
+  .step ol{margin:6px 0 0;padding-left:22px} .step li{margin:4px 0}
+  .t{color:var(--ink-soft);font-size:.88rem;white-space:nowrap}
+  .tag{display:inline-block;font-size:.72rem;font-weight:700;padding:1px 7px;border-radius:4px;color:#fff;vertical-align:middle;white-space:nowrap}
+  .quiz .q{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:12px 0}
+  .quiz .q > p{font-weight:600;margin-bottom:8px}
+  .quiz .subj{display:inline-block;font-size:.75rem;font-weight:700;color:var(--indigo);background:var(--indigo-soft);padding:1px 7px;border-radius:4px;margin-right:6px;vertical-align:middle}
+  .quiz button{display:block;width:100%;text-align:left;background:#F3F5F2;border:1px solid var(--rule);padding:8px 12px;margin:6px 0;border-radius:6px;font:inherit;cursor:pointer;color:var(--ink)}
+  .quiz button:focus-visible{border-color:var(--indigo)}
+  @media (hover:hover){.quiz button:hover{border-color:var(--indigo)}}
+  .quiz button.right{background:var(--green-soft);border-color:var(--green)}
+  .quiz button.wrong{background:var(--red-soft);border-color:var(--red)}
+  .quiz .why{display:none;margin-top:8px;font-size:.95rem;color:var(--ink-soft)}
+  .quiz .q.done .why{display:block}
+  .score{font-weight:700;margin-top:14px}
+  .frac{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;font-size:.92em;line-height:1.15;margin:0 2px}
+  .frac>span:first-child{border-bottom:1px solid currentColor;padding:0 3px}
+  .frac>span:last-child{padding:0 3px}
+  .nw{white-space:nowrap}
+  @media (max-width:600px){h1{font-size:1.7rem}body{font-size:16px}th,td{padding:6px}}
+</style>
+<!--enhance:start--><meta name="color-scheme" content="light"><style>
+.warmup{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--amber);padding:12px 16px 4px;margin:24px 0}
+.warmup h2{margin:0 0 6px;font-size:1.3rem}
+.warmup .wu-how{font-size:.95rem;color:var(--ink-soft);margin:0 0 8px}
+.warmup ol{margin:0;padding-left:24px}
+.warmup li{margin:10px 0}
+.warmup .wu-m{font-size:.8rem;color:var(--ink-soft)}
+.warmup .wu-f{font-weight:600}
+.warmup details{margin-top:4px}
+.warmup summary{cursor:pointer;color:var(--indigo);font-size:.92rem}
+.warmup .wu-b{border-top:1px solid var(--rule);margin-top:6px;padding-top:6px}
+.warmup .wu-b a{font-size:.88rem;margin-left:6px;white-space:nowrap}
+.warmup .wu-foot{font-size:.92rem;margin:12px 0 8px}
+
+:root{--amber-ink:#8A6416}
+:focus-visible{outline:3px solid var(--indigo);outline-offset:2px}
+.quiz button:focus-visible,.quiz .q .cf button:focus-visible{outline:3px solid var(--indigo);outline-offset:2px}
+@media (hover:none){.quiz button:not(.right):not(.wrong):hover{border-color:var(--rule)}}
+.quiz button.right::before{content:"✓ Correct: ";font-weight:700;color:var(--green)}
+.quiz button.wrong::before{content:"✗ Your answer: ";font-weight:700;color:var(--red)}
+.quiz .q .qn{font-size:.8rem;font-weight:700;color:var(--ink-soft);margin-bottom:2px}
+.quiz .q .cf{margin:4px 0 10px}
+.quiz .q .cf .cfl-h{font-size:.88rem;font-weight:600;color:var(--ink-soft);margin-bottom:4px}
+.quiz .q .cf .cfb{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;max-width:420px}
+.quiz .q .cf button{display:block;width:100%;min-height:44px;margin:0;padding:6px 8px;text-align:center;font-size:.92rem;border:1px solid var(--rule);border-radius:8px;background:var(--card);color:var(--ink)}
+.quiz .q .cf button.on{background:var(--indigo-soft);border:2px solid var(--indigo);font-weight:700}
+.quiz .q .cf button:disabled{cursor:default;opacity:1;color:var(--ink-soft)}
+.quiz .q .cf button.on:disabled{color:var(--ink)}
+.quiz .cfh{font-size:.92rem;color:var(--ink-soft)}
+.quiz .cfr{margin-top:10px}
+.quiz .cfr ol{margin:6px 0 10px;padding-left:22px}
+.quiz .cfr li{margin:4px 0}
+.quiz .cfr li.sure{font-weight:600}
+.quiz .cfr .cfa{font-size:.9rem;color:var(--ink-soft);margin:8px 0}
+.quiz .cfr button.retry{display:inline-block;width:auto;min-height:44px;text-align:center;background:var(--indigo);color:#fff;border-color:var(--indigo);font-weight:700;padding:8px 16px}
+.wm{margin-top:8px;font-size:.92rem}
+.wm select{font:inherit;min-height:44px;padding:4px 6px;border:1px solid var(--rule);border-radius:8px;background:var(--card);color:var(--ink);max-width:100%}
+.notice{background:var(--amber-soft);border:1px solid var(--amber);color:var(--ink);padding:10px 14px;margin:12px 0;border-radius:8px;font-weight:600}
+
+:root{--amber-ink:#8A6416;--grey:#5F6B72;--purple:#6A3D9A;--green-ink:#256B43;--r-sm:4px;--r:8px}
+/* top bar: back to today, flashcards, progress, sheet */
+.sitebar{position:sticky;top:0;z-index:30;height:44px;background:var(--paper);box-shadow:0 1px 0 var(--rule)}
+.sitebar .sb{max-width:820px;height:44px;margin:0 auto;padding:0 10px;display:flex;align-items:stretch;gap:2px;overflow-x:auto;scrollbar-width:none;white-space:nowrap}
+.sitebar .sb::-webkit-scrollbar{display:none}
+.sitebar a{flex:none;display:flex;align-items:center;min-height:44px;padding:0 10px;color:var(--indigo);text-decoration:none;font:600 .95rem/1 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;border-radius:var(--r-sm)}
+.sitebar a.sb-home{font-weight:700}
+@media (hover:hover){.sitebar a:hover{background:var(--indigo-soft)}}
+/* guide section menu: one row that scrolls sideways, 44 px targets, current section marked */
+nav.toc{top:44px;z-index:29}
+nav.toc .wrap{display:flex;flex-wrap:nowrap;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;white-space:nowrap;padding:0 10px}
+nav.toc .wrap::-webkit-scrollbar{display:none}
+nav.toc a{flex:none;display:flex;align-items:center;min-height:44px;padding:12px 10px;line-height:1.2;border-radius:0}
+nav.toc a[href$="index.html"]{display:none}
+nav.toc a[aria-current]{color:var(--indigo);font-weight:700;background:var(--indigo-soft);box-shadow:inset 0 -3px 0 var(--indigo)}
+[id]{scroll-margin-top:56px}
+html:has(nav.toc) [id]{scroll-margin-top:100px}
+/* focus: always visible */
+:focus-visible{outline:3px solid var(--indigo)!important;outline-offset:2px!important}
+header.hero :focus-visible,header.top :focus-visible{outline-color:#F2C46D!important}
+/* readable text */
+main p,main li,.why{max-width:68ch}
+@media (max-width:600px){.wrap{padding-left:16px;padding-right:16px}}
+small{font-size:max(12px,.8em)}
+.sig small{font-size:max(12px,.62em)}
+/* hero: title first, then the picture (at most 30% of the screen height, as wide as the text column),
+   so the title and the Today card share the first screen; long intro paragraphs fold to 3 lines (tap to read) */
+header.hero{display:flex;flex-direction:column}
+header.hero > .wrap{order:-1;width:100%}
+header.hero > svg,header.hero > img{max-height:30vh;max-width:780px;margin:14px auto 0}
+header.hero p.fold{position:relative;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;cursor:pointer}
+header.hero p.fold::after{content:"more";position:absolute;right:0;bottom:0;padding:0 2px 0 28px;background:linear-gradient(90deg,rgba(11,15,26,0),#0B0F1A 22px);color:#F2C46D;font-weight:700}
+header.hero .wrap > p ~ p.fold{-webkit-line-clamp:2}
+header.hero p.fold.open{display:block;-webkit-line-clamp:unset}
+header.hero p.fold.open::after{content:none}
+@media (max-width:600px){header.hero > svg,header.hero > img{max-height:28vh} header.hero .meta{font-size:.85rem;gap:0 14px}}
+/* contrast: amber and grey text */
+body .tip b:first-child,body .src > b:first-child,body .star,body .col.l > h3,body .timer.low .tdisp{color:var(--amber-ink)}
+/* one badge system: Learn = solid amber; Given / in booklet = neutral outline; Apply = indigo outline; HL = purple outline; green = done */
+.badge,.fb,.learn,.tag,span.hl,.quiz .subj,.written .wsubj,.wsubj,.pill,.soon{display:inline-block;font:700 .8rem/1.4 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.01em;padding:1px 7px;border:1px solid currentColor;border-radius:var(--r-sm);background:var(--card);vertical-align:middle;white-space:nowrap}
+.learn,.badge.learn{background:var(--amber-ink);border-color:var(--amber-ink);color:#fff}
+.fb,.badge.apply{color:var(--indigo);border-color:var(--indigo)}
+.fb.given,.badge.given,.tag,.quiz .subj,.written .wsubj,.wsubj,.badge.subj{color:var(--ink);border-color:var(--grey)}
+span.hl,.badge.hl{color:var(--purple);border-color:var(--purple)}
+.pill{margin-left:6px}
+.p-done,.badge.done{color:var(--green-ink);border-color:var(--green);background:var(--green-soft)}
+.p-soon,.soon{color:var(--grey);border-color:var(--grey)}
+/* radii: 4 px small things, 8 px boxes */
+.today,.goals,.able,.todaycard,#termbox,.before .bgi,.before .stuck,.quiz button,.go,.notice,.btn,.timer button,.tl,.chip,.plan > div,.step,.block{border-radius:var(--r)}
+/* 44 px targets */
+.go{min-height:44px;display:inline-flex;align-items:center}
+main details>summary{min-height:44px;display:flex;align-items:center;cursor:pointer}
+ul.files a,.files li>a{display:inline-flex;align-items:center;min-height:44px}
+input[type=number],input[type=text],select{min-height:44px}
+#box a#src,a.src{display:inline-flex;align-items:center;min-height:44px}
+#termbox .tb-h button{min-height:44px;min-width:44px}
+.top .crumb{display:flex;flex-wrap:nowrap;align-items:center;gap:0 6px;overflow-x:auto;scrollbar-width:none;white-space:nowrap;margin-bottom:2px}
+.top .crumb::-webkit-scrollbar{display:none}
+.top .crumb a{flex:none;display:inline-flex;align-items:center;min-height:44px;padding-right:4px}
+/* timed blocks: one card for guide plans, review steps and mock plans */
+.plan > div,.block,.step{background:var(--card);border:1px solid var(--rule);padding:12px 16px}
+.plan > div.brk{background:var(--green-soft);border-color:var(--green)}
+.bh{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;margin-bottom:4px}
+.block > .bh{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:4px 10px;align-items:center}
+.plan .bh .bn,.step .bh .bn,.bh .bn{flex:none;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--indigo);color:#fff;font:700 1rem/1 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif}
+.plan .bh > b,.step .bh > b,.bh > b{font-size:1.15rem;line-height:1.25;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;color:var(--ink)}
+.plan .bh .bt,.step .bh .bt,.bh .bt{flex:none;display:inline-block;font:700 .8rem/1.4 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:var(--r-sm);padding:2px 8px}
+.bdone{display:flex;align-items:center;gap:10px;min-height:44px;margin:8px 0 0;padding-top:4px;border-top:1px solid var(--rule);font-weight:600;color:var(--ink-soft);cursor:pointer;max-width:none}
+.bdone input{width:20px;height:20px;margin:0;flex:none;accent-color:var(--green)}
+.block.is-done{border-color:var(--green)} .block.is-done .bn{background:var(--green)} .block.is-done .bdone{color:var(--green-ink)}
+.blocks{display:grid;gap:10px;margin:16px 0}
+.blocks > .block p{margin:4px 0 0}
+.brkc{background:var(--green-soft);border:1px solid var(--green);border-radius:var(--r);padding:8px 16px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* Today card on guides: goals, plan chips, warm-up */
+.todaycard{background:var(--card);border:2px solid var(--indigo);padding:14px 16px 6px;margin:20px 0 10px}
+.todaycard .tc-goals > *{background:transparent!important;border:0!important;padding:0!important;margin:0!important;box-shadow:none!important;border-radius:0!important}
+.todaycard .tc-goals h2,.todaycard .tc-goals h3,.todaycard .tc-goals > * > p:first-child,.todaycard .tc-goals > * > b:first-child{display:block;font:600 1.25rem/1.25 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;color:var(--ink);margin:0 0 6px}
+.todaycard .tc-goals ol,.todaycard .tc-goals ul{margin:0;padding-left:22px}
+.todaycard .tc-goals li{margin:3px 0}
+.todaycard .tc-plan{margin:0 0 12px;padding-bottom:12px;border-bottom:1px solid var(--rule)}
+@media (max-width:600px){.todaycard .chips{display:grid;grid-template-columns:1fr 1fr;gap:6px}.todaycard .chip{padding:4px 10px;font-size:.9rem}.todaycard .chip.c0{grid-column:1 / -1}}
+.todaycard .tc-h{font-weight:700;margin:0 0 6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:4px;min-height:44px;padding:4px 12px;border:1px solid var(--indigo);background:var(--card);color:var(--indigo);text-decoration:none;font-size:.95rem;line-height:1.2}
+.chip b{font-weight:700}
+.chip.done{border-color:var(--green);color:var(--green-ink);background:var(--green-soft)}
+.chip.done::before{content:"\2713";font-weight:700}
+.todaycard .warmup{border:0;border-top:1px solid var(--rule);border-radius:0;padding:12px 0 4px;margin:12px 0 0;background:transparent}
+.todaycard .tc-plan + .warmup{border-top:0;margin-top:0;padding-top:0}
+.todaycard .warmup h2{font-size:1.15rem}
+.sitebar + .notice{margin:8px max(16px,calc((100% - 780px) / 2))}
+@media print{.sitebar,.notice,#termbox,.go,.chips,.bdone{display:none!important}nav.toc{position:static}.quiz button{display:list-item}.todaycard{border-width:1px}}
+</style><!--enhance:end-->
+</head>
+<body><!--enhance:start--><nav class="sitebar" aria-label="Study site"><div class="sb"><a class="sb-home" href="../index.html#today">← Today</a><a href="../flashcards.html">Flashcards</a><a href="../progress.html">Progress</a><a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">Sheet</a></div></nav><!--enhance:end-->
+
+<header class="top"><div class="wrap" style="padding-bottom:0">
+  <div class="crumb"><a href="../index.html">All days</a></div>
+  <h1>Weekly review: week 2</h1>
+  <p>Sunday 22 November 2026. One hour (the rest of today is Biology C1.2 and planning the exam fortnight): pull week 2 out of memory, test yourself on both weeks mixed together, write three exam answers, then turn your mistakes into a revision plan.</p>
+</div></header>
+<main class="wrap"><!--enhance:start-->
+<section class="todaycard" aria-label="Today"><div class="tc-plan"><p class="tc-h">Today: tap a block to jump to it</p><div class="chips"><a class="chip" href="#wu"><b>Warm-up</b> · 8 min</a><a class="chip" href="#b1" data-n="1"><b>Block 1</b> · 7 min</a><a class="chip" href="#b2" data-n="2"><b>Block 2</b> · 21 min</a><a class="chip" href="#b3" data-n="3"><b>Block 3</b> · 15 min</a><a class="chip" href="#b4" data-n="4"><b>Block 4</b> · 4 min</a><a class="chip" href="#plan-exams" data-n="5"><b>Block 5</b> · 10 min</a></div></div><div class="tc-goals"><!--enhance:end--><!--enhance:moved--><div class="goals"><b>Today you will be able to</b><ol>
+<li>pull week 2 out of memory and see which lines are still weak;</li>
+<li>answer mixed questions from both weeks, choosing the method without being told the subject;</li>
+<li>write and mark three exam answers, then turn your lost marks into a revision list for the exam fortnight.</li></ol></div><!--enhance:/moved--><!--enhance:start--></div>
+<section class="warmup" id="wu" aria-label="Warm-up from earlier days">
+<h2>Warm-up from earlier days (8 min)</h2>
+<p class="wu-how">Answer from memory before you read on: write the answer on paper, then tap to check it.</p><ol>
+<li><div class="wu-m">English · English A HL: Persepolis visual analysis · from Fri 20 Nov</div><div class="wu-f">Part 2 rows: the three-mark pattern</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">Name the visual feature (1), link it to meaning (1), effect on the reader (1). <a href="../guides/2026-11-20-english-a-hl-persepolis-water-cell.html#parts">open the section</a></div></details></li>
+<li><div class="wu-m">Business · 2.3 · from Thu 19 Nov</div><div class="wu-f">Situational leadership</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">The leader changes style to fit the situation: the task, the staff's skills and the time available. <a href="../guides/2026-11-19-business-sl-unit2-hrm.html#s23">open the section</a></div></details></li>
+<li><div class="wu-m">Biology · A1.1 · from Wed 11 Nov</div><div class="wu-f">Which property forms a meniscus and drives capillary action in cell walls and soil?</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">Adhesion (to polar surfaces), with cohesion pulling the following molecules along. Not cohesion or surface tension alone. <a href="../guides/2026-11-05-biology-hl-a1.1-a1.2.html#a11">open the section</a></div></details></li>
+<li><div class="wu-m">Psychology · Frame · from Mon 9 Nov</div><div class="wu-f">Psychology (class definition)</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">The scientific study of behaviour and mental processes. <a href="../guides/2026-11-09-psychology-hl-frame-research-methods.html#frame">open the section</a></div></details></li>
+<li><div class="wu-m">English · English A HL: Persepolis visual analysis · from Fri 20 Nov</div><div class="wu-f">High angle vs low angle: usual effects</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">High (camera above, looking down): subject small, weak, vulnerable. Low (camera below, looking up): subject powerful, threatening, heroic. <a href="../guides/2026-11-20-english-a-hl-persepolis-water-cell.html#shots">open the section</a></div></details></li>
+</ol>
+<p class="wu-foot">Missed one? Put it in the <a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">Error log</a>.</p></section>
+</section><!--enhance:end-->
+
+<style>
+.quiz .q:not(.done) .subj{display:none}
+.written .wh{font-weight:700;margin-bottom:6px}
+.written .wsubj{display:inline-block;font-size:.75rem;font-weight:700;color:var(--indigo);background:var(--indigo-soft);padding:1px 7px;border-radius:3px}
+.written details{background:#F7F8F6;border:1px solid var(--rule);padding:8px 12px;margin:10px 0}
+.written summary{cursor:pointer;font-weight:600}
+.written ul{padding-left:22px}
+.written .hint{font-size:.92rem;color:var(--ink-soft)}
+.stuck{background:var(--amber-soft);border-left:5px solid var(--amber);padding:10px 16px;margin:14px 0}
+.star{color:var(--amber);font-weight:700}
+.brk{text-align:center;font-weight:700;color:var(--green);background:var(--green-soft);padding:10px;margin:16px 0}
+.goals{background:var(--green-soft);border-left:5px solid var(--green);padding:12px 16px;margin:24px 0 12px}
+.goals ol{margin:6px 0 0;padding-left:22px}
+.checked{font-size:.92rem;color:var(--ink-soft)}
+</style>
+<!--enhance:origin-->
+<div id="warmup"></div>
+<p class="checked">Checked against: your study pages for 9 to 22 November, which were checked against the official IB guides (Psychology, Maths, Business, Biology, Language and Literature) and your class mark schemes. The Psychology markband wording is quoted from the official guide; the Business and Biology mark points are written for this site, not taken from an official IB mark scheme.</p>
+<div class="card"><b>How the hour goes:</b> 7 min brain dump, 21 min mixed quiz, a 3-minute break, 15 min on three written questions, 4 min Error log, 10 min planning the exam fortnight. That is 60 minutes. The planning hour later today finishes the plan.<br>
+<span class="star">★</span> steps are extras. <b>Short on time: skip ★ steps, still do the quiz.</b></div>
+<div class="stuck"><b>Stuck?</b> Look at the worked example in that day's guide (every quiz answer links to its section), then redo that section's self-check. Still stuck after 10 minutes? Log it as "ask teacher" in the Error log and move on.</div>
+
+<div id="b1" class="step"><div class="bh"><b>Block 1 · 7 min</b><span>Brain dump on a blank page</span></div><ol>
+<li><b>5 min, no notes, page scrolled away.</b> Write the six headings below on a blank sheet. Under each, write every "I can" line you remember from that day, in your own words. Key words are enough.<ul><li><b>Psychology, Mon 16 Nov</b>: the 4-marker (PEEL and the markband), social learning theory, the multi-store model and levels of processing, HL averages (<a href="../guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html">guide</a>)</li><li><b>Maths, Tue 17 Nov</b>: functions 2.2 to 2.5: domain and range, graphs, key features, composite and inverse functions (<a href="../guides/2026-11-10-maths-aa-sl-2.2-2.5.html">guide</a>)</li><li><b>Biology, Wed 18 Nov</b>: B1.2 proteins and C1.1 enzymes (<a href="../guides/2026-11-18-biology-hl-b1.2-c1.1.html">guide</a>)</li><li><b>Business, Thu 19 Nov</b>: Unit 2, 2.1 to 2.4: HR planning and change, structure, leadership, motivation (<a href="../guides/2026-11-19-business-sl-unit2-hrm.html">guide</a>)</li><li><b>English, Fri 20 Nov</b>: Persepolis, "The Water Cell": shots and angles, panels and closure, words and pictures, the analysis chain (<a href="../guides/2026-11-20-english-a-hl-persepolis-water-cell.html">guide</a>)</li><li><b>Mock papers, Sat 21 Nov</b>: not "I can" lines: write the three things you would do differently next time (<a href="../practice/2026-11-21-mock-papers.html">page</a>)</li></ul></li>
+<li><b>2 min, check.</b> Open each guide and compare with its "I can" boxes. Tick what you had; add what you missed in a different colour. The missed lines are your weak spots for the quiz.</li>
+<li><span class="star">★ If time:</span> add one example under each line you missed.</li></ol></div>
+
+<div id="b2" class="step"><div class="bh"><b>Block 2 · 21 min</b><span>Mixed quiz, both weeks (below)</span></div><ol>
+<li>31 questions: 23 from this week and 8 from week 1, mixed together. <b>The subject label is hidden until you answer.</b> Before you click, write in the margin which subject and which rule or method it needs (for example "Maths: inverse, swap x and y"). Spotting the method is what the exams test; mixing trains it.</li>
+<li>Work each one on paper first, then click. Every answer explains the trap and links to the guide section. Maths without a calculator; Biology calculations may use one.</li>
+<li>Two questions are on today's Biology (C1.2 cell respiration). If you have not done today's Biology block yet, reason them out: they are a preview and need no Error log row.</li>
+<li><span class="star">★ If time:</span> any you got right by guessing count as wrong for the Error log.</li></ol></div>
+
+<p class="brk">3-minute break: stand up, drink water, look out of a window. No phone.</p>
+
+<div id="b3" class="step"><div class="bh"><b>Block 3 · 15 min</b><span>Three written exam questions (11 marks)</span></div><ol>
+<li><b>12 min:</b> write all three on paper, page scrolled away: about 5 min for the Psychology one, 4 for Business, 3 for Biology.</li>
+<li><b>3 min:</b> open each "Show model answer", mark yours with the tick list or mark points, and choose your mark in the "My mark" menu under the question. It saves on this device.</li>
+<li><span class="star">★ If time:</span> underline in your answer the words that earned each mark.</li></ol></div>
+<section id="written"><h2>Written questions</h2>
+
+<div class="written card" id="w-psy" data-k="w2-psy" data-max="4"><p class="wh"><span class="wsubj">Psychology</span> Paper 1 Section A style, 4 marks</p>
+<p><b>Describe the multi-store model of memory with reference to one example.</b> [4]</p><p class="hint">Use a different example from the 16 Nov worked example (Peterson and Peterson): try the serial position effect.</p>
+<details><summary>Show model answer (only after you have written yours on paper)</summary><p><b>Model answer</b> (written for this site, not an official IB answer):</p>
+<p><b>Point.</b> The multi-store model (Atkinson and Shiffrin, 1968) describes memory as three separate stores: sensory memory, short-term memory (STM) and long-term memory (LTM). Information flows one way: attention moves it from sensory memory into STM, which holds about 7 ± 2 items for about 15 to 30 seconds without rehearsal, and rehearsal moves it into LTM, which has no known limit.</p>
+<p><b>Evidence.</b> The serial position effect (Glanzer and Cunitz, 1966): when people hear a list of words and recall it straight away, they remember the first words and the last words better than the words in the middle.</p>
+<p><b>Explain.</b> The first words had the most time to be rehearsed, so they were passed on to LTM. The last words are still in STM at the moment of recall. The middle words were rehearsed little and were pushed out of STM by newer words (displacement). Two separate effects fit two separate stores, which is what the model describes.</p>
+<p><b>Link.</b> So the model explains why forgetting depends on whether information was rehearsed into LTM.</p>
+<p><b>Check it against the official markband</b> (Paper 1 Section A, IB Psychology guide p45):</p>
+<ul><li>1 to 2 marks: "The response demonstrates limited knowledge relevant to the question." "The example is relevant but is not explained."</li>
+<li>3 to 4 marks: "The response demonstrates detailed knowledge relevant to the question." "The example is relevant and explained."</li></ul>
+<p><b>Tick list:</b> three stores named? attention and rehearsal as the routes between them? at least one capacity or duration? <b>one</b> example (only the first counts)? each part of the example matched to a part of the model (first words: LTM; last words: STM)? a link sentence, and no evaluation? All six: 3 to 4 band. Example named but not explained: 1 to 2. See the <a href="../guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#mem">16 Nov memory section</a>.</p></details></div>
+<div class="written card" id="w-bus" data-k="w2-bus" data-max="4"><p class="wh"><span class="wsubj">Business</span> Paper 1 style, short case, 4 marks</p>
+<p><i>PetPal sells pet food and accessories from 3 shops. Its 15 sales staff earn a fixed salary. Sales have not grown for a year, so the owner plans to pay a lower basic salary plus 5% commission on what each person sells.</i></p>
+<p><b>Explain one advantage and one disadvantage for PetPal of paying its sales staff commission.</b> [4]</p>
+<details><summary>Show model answer (only after you have written yours on paper)</summary><p><b>Model answer</b> (written for this site, not an official IB answer):</p>
+<p><b>Advantage.</b> Commission links pay to sales, so each of the 15 staff now has a reason to sell more, for example suggesting a lead or a bed to a customer who came in for food. This could end PetPal's year of flat sales, and PetPal's pay bill only rises when sales rise.</p>
+<p><b>Disadvantage.</b> Pay now falls when sales fall. In quiet months staff earn less and may feel insecure (security is a hygiene factor in Herzberg's theory), so some may leave and PetPal must recruit and train new staff. Staff in the same shop may also compete for customers, which can harm teamwork.</p>
+<p><b>How to mark it</b> (the 2 + 2 pattern from your <a href="../guides/2026-11-19-business-sl-unit2-hrm.html#s23">19 Nov Business guide</a>: each a point plus why, tied to the case; not an official mark scheme): advantage identified (1) and explained with PetPal's case (1); disadvantage identified (1) and explained with PetPal's case (1). No case facts (15 staff, 3 shops, flat sales, pet products): only the first mark of each pair. Describing piece rate or a pay rise instead of commission: 0 for that half.</p></details></div>
+<div class="written card" id="w-bio" data-k="w2-bio" data-max="3"><p class="wh"><span class="wsubj">Biology</span> short written answer, 3 marks</p>
+<p><b>Explain how the structure of the active site makes an enzyme specific, and why a denatured enzyme no longer works.</b> [3]</p>
+<details><summary>Show model answer (only after you have written yours on paper)</summary><p><b>Mark points</b> (written for this site in the style of your class mark schemes, one mark per point, max 3; not an official IB mark scheme. The official guide asks you to "explain these relationships" for C1.1.7):</p>
+<ul><li>the active site's shape and chemical properties match (are complementary to) one substrate;</li>
+<li>so only that substrate binds / forms an enzyme-substrate complex;</li>
+<li>high temperature or extreme pH breaks the bonds that hold the enzyme's 3D shape (hydrogen and ionic bonds between R-groups);</li>
+<li>so the active site changes shape and the substrate no longer fits / no enzyme-substrate complexes form;</li></ul>
+<p>No mark for "peptide bonds break" or "the enzyme is killed". See C1.1.7 and B1.2.5 in your <a href="../guides/2026-11-18-biology-hl-b1.2-c1.1.html#c11">18 Nov Biology guide</a> if you missed one.</p></details></div>
+</section>
+
+<div id="b4" class="step"><div class="bh"><b>Block 4 · 4 min</b><span>Error log</span></div><ol>
+<li>Open the <a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">study sheet</a>, Error log tab. Write one row for every mark you lost today (quiz and written), with its type: <b>did not know</b>, <b>wrong method</b>, <b>slip</b>, <b>time</b> or <b>ask teacher</b>, and the rule that fixes it (for example "wrong method: in g ∘ f, f goes first").</li>
+<li><b>Fix-it</b> (first 5 minutes of today's planning hour): take one written answer where you lost marks and rewrite it to full marks, using the tick list but your own words. Then close the page, redo that section's self-check from memory and write the rule.</li>
+<li><span class="star">★ If time:</span> mark each new row with the week it came from, so repeats from week 1 stand out.</li></ol></div>
+
+<div class="step" id="plan-exams"><div class="bh"><b>Block 5 · 10 min</b><span>Plan the exam fortnight (23 Nov to 4 Dec)</span></div><ol>
+<li><b>3 min.</b> On a sheet, make a table with one row per subject (Psychology, Maths, Biology, Business, English, French) and four columns: exam date, paper and topics, my top three Error log rules, my revision day. Fill in what you already know.</li>
+<li><b>Tomorrow, ask each teacher for the exam date and the topics</b> (and which paper or question types). Write the six questions now, so you only have to ask: "When is our exam, and which topics and papers does it cover?"</li>
+<li><b>4 min.</b> Read the whole Error log in the <a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">study sheet</a>. For each subject, pick the three rows that came up most or cost the most marks and copy their rules into your table.</li>
+<li><b>3 min.</b> In the study sheet's Daily plan tab, every weekday from 23 Nov already has one subject's revision. Write each subject's three rules into the Notes column of its revision day. If a date you learn tomorrow comes before that subject's revision day, swap the days so you revise first.</li>
+<li><span class="star">★ If time:</span> put every exam date into your phone calendar with a reminder the day before.</li></ol></div>
+<div class="card"><b>Later today</b>, in the planning hour: the Fix-it rewrite first, then finish the table, log CAS. Also useful: the <a href="../flashcards.html">flashcards</a> ("to repeat" cards), your <a href="../progress.html">progress page</a> (topics still amber or red), and the exam technique pages for <a href="../exam-psychology-hl.html">Psychology</a>, <a href="../exam-maths-aa-sl.html">Maths</a>, <a href="../exam-business-management-sl.html">Business</a> and <a href="../exam.html">all subjects</a>.</div>
+
+<section class="quiz" id="quiz"><h2>Mixed quiz: weeks 1 and 2</h2>
+<p style="font-size:.95rem;color:var(--ink-soft)">The subject appears after you answer. First decide: which subject, which method?</p>
+  <div class="q" data-a="1"><p><span class="subj">Psychology · Mon 16 Nov</span>1. Amira is nervous about her driving test. Her cousin, who is the same age and was just as nervous, passed last month. Now Amira believes she can pass too. Which source of self-efficacy raised her belief?</p>
+    <button>Mastery experiences</button>
+    <button>Vicarious experiences</button>
+    <button>Social persuasion</button>
+    <button>Emotional and physical states</button>
+    <div class="why">Seeing someone like you succeed is a vicarious experience. Mastery experiences are her own past successes; social persuasion is being told she can do it; emotional and physical states are her mood and body. Do not mix it up with vicarious reinforcement, which is watching a model being rewarded. <a href="../guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#slt">Revisit: 16 Nov, social learning theory</a></div></div>
+
+  <div class="q" data-a="1"><p><span class="subj">Maths · Tue 17 Nov</span>2. The largest possible domain of f(x) = <span class='frac'><span>1</span><span>x + 4</span></span> is</p>
+    <button>x ≠ 4</button>
+    <button>x ≠ −4</button>
+    <button>x &gt; −4</button>
+    <button>x ≥ −4</button>
+    <div class="why">You cannot divide by zero, and x + 4 = 0 when x = −4, so x ≠ −4. Every other number, above or below −4, is allowed. x ≠ 4 has the wrong sign; x &gt; −4 and x ≥ −4 throw away all the numbers below −4 (that is the kind of rule a square root gives, not a fraction). <a href="../guides/2026-11-10-maths-aa-sl-2.2-2.5.html#s22">Revisit: 17 Nov, SL 2.2 domain and range</a></div></div>
+
+  <div class="q" data-a="1"><p><span class="subj">Business · Thu 19 Nov</span>3. A firm brings in new stock-control software. Several older warehouse staff say they are worried they will not cope with the computers. Which strategy tackles this cause most directly?</p>
+    <button>Coercion</button>
+    <button>Facilitation and support</button>
+    <button>Manipulation and co-option</button>
+    <button>Negotiation and agreement</button>
+    <div class="why">The cause is fear of not coping (low tolerance of change), so training and time to adjust remove it, although that costs money. Coercion forces the change through and may make staff leave; manipulation risks trust; negotiation (for example a bonus) fits a group that will clearly lose something, not a worry about skills. <a href="../guides/2026-11-19-business-sl-unit2-hrm.html#s21">Revisit: 19 Nov, 2.1 resistance to change</a></div></div>
+
+  <div class="q" data-a="1"><p><span class="subj">English · Fri 20 Nov</span>4. A panel shows a tiny figure in a huge desert, seen from high above. Which shot type and angle?</p>
+    <button>A low-angle close-up</button>
+    <button>A high-angle extreme long shot</button>
+    <button>An eye-level medium shot</button>
+    <button>A low-angle extreme long shot</button>
+    <div class="why">Tiny in a huge setting is an extreme long shot; looking down from above is a high angle. Shot type (how much we see) and angle (where we look from) are two separate choices. Together they usually make the figure look isolated and vulnerable. <a href="../guides/2026-11-20-english-a-hl-persepolis-water-cell.html#shots">Revisit: 20 Nov, shots and angles</a></div></div>
+
+  <div class="q" data-a="1"><p><span class="subj">Biology · Wed 11 Nov (week 1)</span>5. In a sample of double-stranded DNA, 22% of the bases are thymine. What percentage of the bases are cytosine?</p>
+    <button>22%</button>
+    <button>28%</button>
+    <button>56%</button>
+    <button>78%</button>
+    <div class="why">T pairs with A, so A is also 22%, and A + T = 44%. The remaining 56% is shared equally by G and C: 56 ÷ 2 = 28% cytosine. 56% forgets to halve; 22% assumes all four bases are equal; 78% is 100 − 22. <a href="../guides/2026-11-05-biology-hl-a1.1-a1.2.html#a12">Revisit: 11 Nov, A1.2 base pairing</a></div></div>
+
+  <div class="q" data-a="0"><p><span class="subj">Psychology · Mon 16 Nov</span>6. Remembering the phone number 0 7 9 1 2 0 3 4 5 6 as 079, 120, 3456 makes it easier to hold in short-term memory. This is</p>
+    <button>chunking</button>
+    <button>maintenance rehearsal</button>
+    <button>displacement</button>
+    <button>retrieval</button>
+    <div class="why">Grouping items into bigger units is chunking: 10 digits become 3 chunks, so short-term memory (7 ± 2 items, or about 4 chunks) can hold them. Maintenance rehearsal is repeating; displacement is new items pushing old ones out; retrieval is getting a memory back. <a href="../guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#mem">Revisit: 16 Nov, memory models</a></div></div>
+
+  <div class="q" data-a="1"><p><span class="subj">Maths · Tue 17 Nov</span>7. f(x) = 2x − 1 and g(x) = x<sup>2</sup>. The value of (g ∘ f)(3) is</p>
+    <button>17</button>
+    <button>25</button>
+    <button>14</button>
+    <button>45</button>
+    <div class="why">In (g ∘ f)(3), f acts first: f(3) = 5, then g(5) = 25. 17 is (f ∘ g)(3) = f(9), the wrong order; 14 adds f(3) + g(3); 45 multiplies them. A composite is neither a sum nor a product. <a href="../guides/2026-11-10-maths-aa-sl-2.2-2.5.html#s25">Revisit: 17 Nov, SL 2.5 composite functions</a></div></div>
+
+  <div class="q" data-a="0"><p><span class="subj">Biology · Wed 18 Nov</span>8. Catalase releases 30 cm<sup>3</sup> of oxygen in 75 s. The rate of reaction is</p>
+    <button>0.4 cm<sup>3</sup> s<sup>−1</sup></button>
+    <button>2.5 cm<sup>3</sup> s<sup>−1</sup></button>
+    <button>2&nbsp;250 cm<sup>3</sup> s<sup>−1</sup></button>
+    <button>0.4 cm<sup>3</sup></button>
+    <div class="why">Rate = amount ÷ time = 30 ÷ 75 = 0.4, and the unit is amount per time: cm<sup>3</sup> s<sup>−1</sup>. 2.5 divides the time by the amount; 2&nbsp;250 multiplies; "0.4 cm<sup>3</sup>" has lost the per-second part of the unit, which often has its own mark. <a href="../guides/2026-11-18-biology-hl-b1.2-c1.1.html#c11">Revisit: 18 Nov, C1.1.9 measuring rates</a></div></div>
+
+  <div class="q" data-a="0"><p><span class="subj">Business · Thu 12 Nov (week 1)</span>9. A coffee brand lets local owners open cafés under its name. Each owner pays a fee plus a share of sales. This method of growth is</p>
+    <button>franchising</button>
+    <button>a joint venture</button>
+    <button>a merger</button>
+    <button>a takeover</button>
+    <div class="why">Franchisees buy the right to trade under the franchisor's brand for a fee plus royalties (a share of sales): growth paid for by the franchisees, but less control over quality. A joint venture sets up a new company owned by both firms; a merger combines two firms into one; a takeover gains control of another firm, even against its managers' wishes. <a href="../guides/2026-11-06-business-sl-1.1-1.6.html#s15">Revisit: 12 Nov, 1.5 growth</a></div></div>
+
+  <div class="q" data-a="1"><p><span class="subj">Psychology · Sat 14 Nov (week 1)</span>10. A reaction-time app always adds exactly 50 ms to every time it records. The app is</p>
+    <button>valid but not reliable</button>
+    <button>reliable but not valid</button>
+    <button>both reliable and valid</button>
+    <button>neither reliable nor valid</button>
+    <div class="why">It makes the same error every time, so its results are consistent (reliable) but always wrong (not valid), like a bathroom scale that is always 2 kg too heavy. A valid measure must also be reliable, so "valid but not reliable" cannot happen. <a href="../guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#relval">Revisit: 14 Nov, reliability and validity</a></div></div>
+
+  <div class="q" data-a="1"><p><span class="subj">Business · Thu 19 Nov</span>11. A retailer has a chief executive, 4 directors, 16 area managers and 64 store managers. It removes all the area managers, so the store managers report straight to the directors. What is each director's span of control now?</p>
+    <button>4</button>
+    <button>16</button>
+    <button>20</button>
+    <button>64</button>
+    <div class="why">The 64 store managers are shared between 4 directors: 64 ÷ 4 = 16. Span of control counts only direct reports. 4 was each director's span before (16 ÷ 4); 64 is all the store managers; 20 adds the old and new numbers. Wider spans and fewer levels are what delayering does. <a href="../guides/2026-11-19-business-sl-unit2-hrm.html#s22">Revisit: 19 Nov, 2.2 structure</a></div></div>
+
+  <div class="q" data-a="1"><p><span class="subj">Maths · Tue 10 Nov (week 1)</span>12. S<sub>n</sub> = n<sup>2</sup> + 3n is the sum of the first n terms of a sequence. Find u<sub>5</sub>.</p>
+    <button>40</button>
+    <button>12</button>
+    <button>28</button>
+    <button>36</button>
+    <div class="why">u<sub>5</sub> = S<sub>5</sub> − S<sub>4</sub> = 40 − 28 = 12. 40 is S<sub>5</sub>, the sum of five terms, not the fifth term; 28 is S<sub>4</sub>; 36 is S<sub>5</sub> − S<sub>1</sub>, which removes only the first term. <a href="../guides/2026-11-04-maths-aa-sl-1.2-1.6.html#s12">Revisit: 10 Nov, SL 1.2 given S<sub>n</sub>, find u<sub>n</sub></a></div></div>
+
+  <div class="q" data-a="2"><p><span class="subj">English · Fri 20 Nov</span>13. A panel shows a smiling family on a beach. The caption reads: "A week later, the war began." Which word-picture combination is this?</p>
+    <button>Duo-specific</button>
+    <button>Picture-specific</button>
+    <button>Interdependent</button>
+    <button>Word-specific</button>
+    <div class="why">The picture alone is a happy holiday; the words alone give a date. Together they say something neither says alone: this happiness is about to end, and the reader knows it before the family does. Duo-specific would need words and picture to say the same thing; picture-specific would need the picture to tell it all. <a href="../guides/2026-11-20-english-a-hl-persepolis-water-cell.html#words">Revisit: 20 Nov, words and pictures</a></div></div>
+
+  <div class="q" data-a="2"><p><span class="subj">Biology · Wed 18 Nov</span>14. A protein has two polypeptide chains, of 40 and 25 amino acids, joined to each other by disulfide bonds. How many peptide bonds does it contain?</p>
+    <button>65</button>
+    <button>64</button>
+    <button>63</button>
+    <button>39</button>
+    <div class="why">Count each chain separately: 40 − 1 = 39 and 25 − 1 = 24, total 63. 64 treats the two chains as one long chain; 65 counts amino acids, not bonds; 39 counts only the longer chain. The chains are joined by disulfide bonds, not peptide bonds. <a href="../guides/2026-11-18-biology-hl-b1.2-c1.1.html#b12">Revisit: 18 Nov, B1.2.2 peptide bonds</a></div></div>
+
+  <div class="q" data-a="1"><p><span class="subj">Psychology · Mon 16 Nov</span>15. In a Paper 1 Section A 4-marker, a student explains the theory and then gives two examples, just in case. How are the examples marked?</p>
+    <button>Both are marked and the better one counts</button>
+    <button>Only the first example is credited</button>
+    <button>Two examples move the answer into the top band</button>
+    <button>Each example earns 2 extra marks</button>
+    <div class="why">The specimen markscheme credits only the first example, so a second one wastes minutes you need for the essay. The top band needs one example that is "relevant and explained" (guide p45). <a href="../guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#technique">Revisit: 16 Nov, the 4-marker</a></div></div>
+
+  <div class="q" data-a="0"><p><span class="subj">Biology C1.2 · Sun 22 Nov (today)</span>16. In human muscle cells without enough oxygen, glucose is converted to</p>
+    <button>lactate, with no carbon dioxide</button>
+    <button>lactate and carbon dioxide</button>
+    <button>ethanol and carbon dioxide</button>
+    <button>carbon dioxide and water</button>
+    <div class="why">Anaerobic respiration in humans: glucose → lactate, with no carbon dioxide. Ethanol and carbon dioxide come from yeast; carbon dioxide and water are the products of aerobic respiration. If you have not done today's C1.2 block yet, this was a preview: no Error log row needed. <a href="../guides/2026-11-22-biology-hl-c1.2-cell-respiration.html#c12sl">Revisit: 22 Nov, C1.2.5 aerobic and anaerobic</a></div></div>
+
+  <div class="q" data-a="1"><p><span class="subj">Maths · Tue 17 Nov</span>17. The range of f(x) = 3 − x<sup>2</sup>, x ∈ ℝ, is</p>
+    <button>f(x) ≥ 3</button>
+    <button>f(x) ≤ 3</button>
+    <button>x ≤ 3</button>
+    <button>f(x) ≥ 0</button>
+    <div class="why">x<sup>2</sup> is never negative, so 3 − x<sup>2</sup> is at most 3 (at x = 0) and goes down without limit: f(x) ≤ 3. "x ≤ 3" writes the range with x, which the mark scheme does not accept; f(x) ≥ 3 has the direction wrong; f(x) ≥ 0 is the range of a square root. <a href="../guides/2026-11-10-maths-aa-sl-2.2-2.5.html#s22">Revisit: 17 Nov, SL 2.2 range</a></div></div>
+
+  <div class="q" data-a="0"><p><span class="subj">Biology · Sun 15 Nov (week 1)</span>18. A triglyceride forms from one glycerol and three fatty acids. Which bonds form, and what happens to water?</p>
+    <button>Three ester bonds; three water molecules are released</button>
+    <button>Three glycosidic bonds; three water molecules are released</button>
+    <button>Three ester bonds; one water molecule is released</button>
+    <button>Three ester bonds; three water molecules are used up</button>
+    <div class="why">Each fatty acid joins glycerol by a condensation reaction that makes one ester bond and releases one water molecule: three of each. Glycosidic bonds join sugars; using water up is hydrolysis, the reverse. <a href="../guides/2026-11-15-biology-hl-b1.1-carbohydrates-lipids.html#b11c">Revisit: 15 Nov, B1.1.9 triglycerides</a></div></div>
+
+  <div class="q" data-a="2"><p><span class="subj">Business · Thu 19 Nov</span>19. A research lab's manager sets the goal and the deadline, then lets her team of experienced scientists decide how to reach it. Her leadership style is</p>
+    <button>autocratic</button>
+    <button>paternalistic</button>
+    <button>laissez-faire</button>
+    <button>situational</button>
+    <div class="why">Setting the goal and letting expert, self-motivated staff decide how is laissez-faire. It is not "no leader": she still sets the goal. Autocratic and paternalistic leaders decide alone; situational means switching between styles to fit the task. <a href="../guides/2026-11-19-business-sl-unit2-hrm.html#s23">Revisit: 19 Nov, 2.3 leadership</a></div></div>
+
+  <div class="q" data-a="1"><p><span class="subj">Psychology · Mon 16 Nov</span>20. Reaction times (ms) of six students: 300, 320, 340, 360, 380, 1&nbsp;000. The median is</p>
+    <button>340 ms</button>
+    <button>350 ms</button>
+    <button>360 ms</button>
+    <button>450 ms</button>
+    <div class="why">Six values, already in order, so the median is the mean of the 3rd and 4th: (340 + 360) ÷ 2 = 350 ms. 340 or 360 takes only one of the middle two; 450 ms is the mean (2&nbsp;700 ÷ 6), pulled up by the outlier of 1&nbsp;000 ms, which is why the median is the better average here. <a href="../guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#data">Revisit: 16 Nov, HL averages</a></div></div>
+
+  <div class="q" data-a="2"><p><span class="subj">Biology · Sat 21 Nov mock</span>21. A Biology paper has 45 marks and no time printed. Using your mock page's pace of 1.2 minutes a mark, how long should you allow?</p>
+    <button>37.5 minutes</button>
+    <button>45 minutes</button>
+    <button>54 minutes</button>
+    <button>60 minutes</button>
+    <div class="why">45 × 1.2 = 54 minutes. 37.5 divides by 1.2 instead of multiplying; 45 minutes is one minute a mark and leaves no time to check. Set a timer and move on when one question goes over its share. <a href="../practice/2026-11-21-mock-papers.html#bio-combined">Revisit: 21 Nov, mock timing</a></div></div>
+
+  <div class="q" data-a="1"><p><span class="subj">English · Fri 13 Nov (week 1)</span>22. A cartoon furiously attacks a company whose factory poisoned a river, drawing its boss as a vulture over dead fish. Its angry, harsh tone makes it</p>
+    <button>Horatian satire</button>
+    <button>Juvenalian satire</button>
+    <button>a comic strip</button>
+    <button>a stereotype</button>
+    <div class="why">Juvenalian satire is harsh and angry and attacks serious harm; Horatian satire is gentle and amused. A comic strip mainly amuses. The vulture is a symbol (an animal standing for an idea), not a stereotype of a group. <a href="../guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html#satire">Revisit: 13 Nov, satire</a></div></div>
+
+  <div class="q" data-a="2"><p><span class="subj">Biology · Wed 18 Nov</span>23. Which of the bonds that hold a protein's tertiary structure is covalent?</p>
+    <button>Hydrogen bonds between polar R-groups</button>
+    <button>Ionic bonds between charged R-groups</button>
+    <button>Disulfide bonds between two cysteines</button>
+    <button>Hydrophobic interactions between non-polar R-groups</button>
+    <div class="why">The disulfide bond (−S−S−) between the sulfur atoms of two cysteines is covalent, the strongest of the four. The other three are weaker, which is why heat and pH can break them and denature the protein. <a href="../guides/2026-11-18-biology-hl-b1.2-c1.1.html#b12hl">Revisit: 18 Nov, B1.2.9 tertiary structure</a></div></div>
+
+  <div class="q" data-a="0"><p><span class="subj">Maths · Tue 17 Nov</span>24. f(x) = 4x − 7. f<sup>−1</sup>(x) is</p>
+    <button><span class='frac'><span>x + 7</span><span>4</span></span></button>
+    <button><span class='frac'><span>x − 7</span><span>4</span></span></button>
+    <button>4x + 7</button>
+    <button><span class='frac'><span>1</span><span>4x − 7</span></span></button>
+    <div class="why">Swap: x = 4y − 7, so 4y = x + 7 and y = <span class='frac'><span>x + 7</span><span>4</span></span>. Check: f(3) = 5 and f<sup>−1</sup>(5) = 12 ÷ 4 = 3. <span class='frac'><span>x − 7</span><span>4</span></span> undoes the multiplying but not the subtracting; 4x + 7 undoes only the subtracting; <span class='frac'><span>1</span><span>4x − 7</span></span> is the reciprocal: f<sup>−1</sup> never means 1 over f. <a href="../guides/2026-11-10-maths-aa-sl-2.2-2.5.html#s25">Revisit: 17 Nov, SL 2.5 finding the inverse</a></div></div>
+
+  <div class="q" data-a="1"><p><span class="subj">Psychology · Mon 9 Nov (week 1)</span>25. A study compares revising with flashcards and rereading. The flashcard group revises in a quiet library, the rereading group in a noisy canteen. The flashcard group scores higher. The noise is</p>
+    <button>a control variable</button>
+    <button>a confounding variable</button>
+    <button>the dependent variable</button>
+    <button>the independent variable</button>
+    <div class="why">The noise was not controlled and differs between the conditions, so it could explain the result instead of the revision method: a confounding variable. A control variable is kept the same in every condition; the IV is the revision method and the DV is the test score. <a href="../guides/2026-11-09-psychology-hl-frame-research-methods.html#exp">Revisit: 9 Nov, confounding variables</a></div></div>
+
+  <div class="q" data-a="2"><p><span class="subj">Business · Thu 19 Nov</span>26. Which is a hygiene factor in Herzberg's motivation-hygiene theory?</p>
+    <button>Recognition</button>
+    <button>Responsibility</button>
+    <button>Working conditions</button>
+    <button>Promotion</button>
+    <div class="why">Hygiene factors are around the job (pay, conditions, security, supervision): poor ones cause dissatisfaction, good ones only remove it. Recognition, responsibility and promotion are motivators, in the job itself. <a href="../guides/2026-11-19-business-sl-unit2-hrm.html#s24">Revisit: 19 Nov, 2.4 Herzberg</a></div></div>
+
+  <div class="q" data-a="1"><p><span class="subj">Biology C1.2 · Sun 22 Nov (today)</span>27. A respirometer's capillary tube has an internal diameter of 1.0 mm. The coloured fluid moves 3.0 cm in 5 minutes. The rate of oxygen uptake is about</p>
+    <button>0.47 mm<sup>3</sup> min<sup>−1</sup></button>
+    <button>4.7 mm<sup>3</sup> min<sup>−1</sup></button>
+    <button>18.8 mm<sup>3</sup> min<sup>−1</sup></button>
+    <button>23.6 mm<sup>3</sup> min<sup>−1</sup></button>
+    <div class="why">r = 1.0 ÷ 2 = 0.5 mm and d = 3.0 cm = 30 mm, so volume = π × 0.5<sup>2</sup> × 30 = 23.6 mm<sup>3</sup>, and rate = 23.6 ÷ 5 = 4.7 mm<sup>3</sup> min<sup>−1</sup>. 18.8 uses the diameter as the radius; 0.47 leaves the distance in cm; 23.6 is the volume, not yet divided by the time. A calculator is fine here. A preview if you have not done today's Biology yet. <a href="../guides/2026-11-22-biology-hl-c1.2-cell-respiration.html#rate">Revisit: 22 Nov, C1.2.6 respirometer</a></div></div>
+
+  <div class="q" data-a="2"><p><span class="subj">Maths · Tue 10 Nov (week 1)</span>28. <span class='nw'>Σ from r = 5 to 12</span> of (3r − 1) equals</p>
+    <button>161</button>
+    <button>182</button>
+    <button>196</button>
+    <button>222</button>
+    <div class="why">Number of terms: 12 − 5 + 1 = 8. First term 3 × 5 − 1 = 14, last term 3 × 12 − 1 = 35, so the sum is <span class='frac'><span>8</span><span>2</span></span>(14 + 35) = 4 × 49 = 196. 161 uses only 7 terms (12 − 5, forgetting the + 1); 182 starts at r = 6; 222 starts at r = 1. <a href="../guides/2026-11-04-maths-aa-sl-1.2-1.6.html#s12">Revisit: 10 Nov, sigma notation</a></div></div>
+
+  <div class="q" data-a="2"><p><span class="subj">English · Fri 20 Nov</span>29. Panel 1: a girl packs a suitcase in her bedroom at night. Panel 2: the same girl, years older, walks out of an airport in another country. Which panel transition is this?</p>
+    <button>Moment-to-moment</button>
+    <button>Action-to-action</button>
+    <button>Scene-to-scene</button>
+    <button>Aspect-to-aspect</button>
+    <div class="why">A jump across a lot of time and space is scene-to-scene: the reader fills a big gap (closure). Action-to-action shows one subject doing one thing after another; moment-to-moment shows almost no change; aspect-to-aspect shows different parts of one place or mood. <a href="../guides/2026-11-20-english-a-hl-persepolis-water-cell.html#pace">Revisit: 20 Nov, panels and closure</a></div></div>
+
+  <div class="q" data-a="0"><p><span class="subj">Biology · Wed 18 Nov</span>30. An inhibitor lowers the rate of an enzyme reaction, but adding much more substrate brings the rate back close to normal. The inhibitor is most likely</p>
+    <button>competitive, binding reversibly to the active site</button>
+    <button>non-competitive, binding to an allosteric site</button>
+    <button>mechanism-based, binding permanently to the active site</button>
+    <button>denaturing the enzyme</button>
+    <div class="why">Only competitive inhibition depends on substrate concentration: substrate and inhibitor compete for the active site, so lots of substrate wins most collisions. With a non-competitive or mechanism-based inhibitor, or a denatured enzyme, more substrate does not help. <a href="../guides/2026-11-18-biology-hl-b1.2-c1.1.html#c11hl">Revisit: 18 Nov, C1.1 inhibitors (HL)</a></div></div>
+
+  <div class="q" data-a="1"><p><span class="subj">Business · Thu 19 Nov</span>31. Lena earns a basic salary of $1&nbsp;500 a month plus 4% commission on her sales. This month she sold $20&nbsp;000. Her total pay is</p>
+    <button>$800</button>
+    <button>$2&nbsp;300</button>
+    <button>$9&nbsp;500</button>
+    <button>$81&nbsp;500</button>
+    <div class="why">4% = 0.04, and 0.04 × 20&nbsp;000 = $800 commission, plus the $1&nbsp;500 basic: $2&nbsp;300. $800 forgets the basic salary; $9&nbsp;500 uses 0.4 (that is 40%); $81&nbsp;500 multiplies by 4 instead of 0.04. <a href="../guides/2026-11-19-business-sl-unit2-hrm.html#s24">Revisit: 19 Nov, 2.4 financial rewards</a></div></div>
+
+  <div class="score" id="score">Score: 0 / 31 answered 0</div>
+</section>
+
+</main>
+<script>
+function storageOK(){ try{ var k='__ib_t'; localStorage.setItem(k,'1'); localStorage.removeItem(k); return true; }catch(e){ return false; } }
+function storageNotice(){ if(storageOK() || document.querySelector('.notice.storage')) return;
+  var n=document.createElement('div'); n.className='notice storage'; n.setAttribute('role','status');
+  n.textContent='Progress cannot be saved in this browser (private mode?). Use normal Safari or Chrome.';
+  var sb=document.querySelector('.sitebar');   // under the shared top bar when the page has one
+  if(sb && sb.parentNode){ sb.parentNode.insertBefore(n,sb.nextSibling); return; }
+  var m=document.querySelector('main')||document.body; m.insertBefore(n,m.firstChild); }
+
+function ibQuizEnhance(cfg){
+  if(window.__ibQuizEnh) return; window.__ibQuizEnh=1;
+  if(typeof storageNotice==='function') storageNotice();
+  var KEY=cfg&&cfg.key; if(!KEY) return;
+  var AK=KEY+'-attempts', WK=KEY+'-written';
+  function get(k){ try{ return JSON.parse(localStorage.getItem(k)||'null'); }catch(e){ return null; } }
+  function put(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); }catch(e){} }
+  function pad(n){ return (n<10?'0':'')+n; }
+  function today(){ var d=new Date(); return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()); }
+  function attempts(){ var a=get(AK); return Array.isArray(a)?a:[]; }
+  function addAttempt(r,t,sameDay){ var a=attempts(), d=today(), rec={date:d,right:r,total:t};
+    if(sameDay && a.length && a[a.length-1].date===d) a[a.length-1]=rec; else a.push(rec); put(AK,a); return a; }
+  // keep the score saved before this history existed as the first attempt
+  (function(){ if(get(AK)) return; var r=get(KEY); if(!r||typeof r!=='object') return;
+    var rr=(typeof r.right==='number')?r.right:r.score, tt=(typeof r.total==='number')?r.total:r.max;
+    if(typeof rr==='number' && tt) put(AK,[{date:r.date||today(),right:rr,total:tt}]); })();
+
+  // written answers: self-mark 0..max
+  var W=get(WK); if(!W||typeof W!=='object') W={};
+  [].forEach.call(document.querySelectorAll('.written[data-max]'),function(el,i){
+    var max=parseInt(el.getAttribute('data-max'),10); if(!(max>=0) || el.querySelector('.wm')) return;
+    var id=el.id||el.getAttribute('data-id')||('w'+(i+1));
+    var box=document.createElement('div'); box.className='wm';
+    var lab=document.createElement('label'); lab.appendChild(document.createTextNode('My mark: '));
+    var sel=document.createElement('select'); sel.setAttribute('aria-label','Your mark out of '+max);
+    var o=document.createElement('option'); o.value=''; o.textContent='not marked yet'; sel.appendChild(o);
+    for(var m=0;m<=max;m++){ o=document.createElement('option'); o.value=String(m); o.textContent=m+' out of '+max; sel.appendChild(o); }
+    if(W[id]!=null) sel.value=String(W[id]);
+    sel.addEventListener('change',function(){ var w=get(WK); if(!w||typeof w!=='object') w={};
+      if(sel.value==='') delete w[id]; else w[id]=parseInt(sel.value,10); put(WK,w); });
+    lab.appendChild(sel); box.appendChild(lab); el.appendChild(box);
+  });
+
+  // timed pages save {score,max,date} themselves; keep one history entry per day
+  if(/^ib-timed-/.test(KEY)){
+    var rec=function(){ var r=get(KEY); if(r && typeof r.score==='number' && r.max) addAttempt(r.score,r.max,true); };
+    var sb=document.getElementById('savebtn'); if(sb) sb.addEventListener('click',function(){ setTimeout(rec,0); });
+    [].forEach.call(document.querySelectorAll('.score-t input'),function(i){ i.addEventListener('change',function(){ setTimeout(rec,0); }); });
+  }
+
+  // multiple-choice quiz
+  var q0=document.querySelector('.quiz .q[data-a]'); if(!q0) return;
+  var quiz=q0.closest('.quiz');
+  var own=!!cfg.own, total=0, count=0, right=0, recs=[];
+  function qsAll(){ return [].filter.call(quiz.querySelectorAll('.q[data-a]'),function(q){ return !q.classList.contains('written'); }); }
+  function opts(q){ return [].filter.call(q.children,function(c){ return c.tagName==='BUTTON'; }); }
+  var score=document.getElementById('score');
+  if(!score){ score=document.createElement('div'); score.className='score'; score.id='score'; var l=qsAll(); l[l.length-1].parentNode.insertBefore(score,l[l.length-1].nextSibling); }
+  var rep=document.createElement('div'); rep.className='cfr'; rep.setAttribute('aria-live','polite'); score.parentNode.insertBefore(rep,score.nextSibling);
+  var hint=document.createElement('p'); hint.className='cfh';
+  hint.textContent='Before each answer, say how sure you are. At the end, the ones you were sure about but got wrong are listed first: they matter most.';
+  q0.parentNode.insertBefore(hint,qsAll()[0]);
+  function addConf(q){ var p=q.querySelector('.cf'); if(p) p.parentNode.removeChild(p);
+    var d=document.createElement('div'); d.className='cf'; d.setAttribute('role','group'); d.setAttribute('aria-label','How sure are you?');
+    d.innerHTML='<div class="cfl-h">How sure are you?</div><div class="cfb"><button type="button" data-c="guess" aria-pressed="false">Guessed</button><button type="button" data-c="unsure" aria-pressed="false">Unsure</button><button type="button" data-c="sure" aria-pressed="false">Sure</button></div>';
+    var first=opts(q)[0]; q.insertBefore(d,first||null); q.removeAttribute('data-conf'); }
+  function counters(qs){ qs.forEach(function(q,i){ var c=q.querySelector('.qn'); if(!c){ c=document.createElement('div'); c.className='qn'; q.insertBefore(c,q.firstChild); } c.textContent=(i+1)+' of '+qs.length; }); }
+  function start(){ var qs=qsAll(); total=qs.length; count=0; right=0; recs=[]; qs.forEach(addConf); counters(qs); rep.innerHTML=''; }
+  function msg(){ return 'Score: '+right+' / '+total+' answered '+count+(count===total?(right>=0.8*total?'. Good. Log the ones you missed.':'. Re-read the sections for the ones you missed, then log them.'):''); }
+  function qtext(q){ var p=q.querySelector('p'); var t=p?p.textContent:''; t=t.replace(/\s+/g,' ').trim();
+    var s=p&&p.querySelector('.subj'); if(s) t=t.slice(s.textContent.trim().length).trim();
+    t=t.replace(/^\d+\.\s*/,''); return t.length>110?t.slice(0,107)+'...':t; }
+  function esc(s){ var d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+  quiz.addEventListener('click',function(e){
+    var b=e.target.closest?e.target.closest('button'):null; if(!b) return;
+    var q=b.closest('.q'); if(!q || !quiz.contains(q) || !q.hasAttribute('data-a') || q.classList.contains('written')) return;
+    var cf=b.closest('.cf');
+    if(cf){ if(q.__ibRec) return; var c=b.getAttribute('data-c'); q.setAttribute('data-conf',c);
+      [].forEach.call(cf.querySelectorAll('button'),function(x){ var on=x===b; x.classList.toggle('on',on); x.setAttribute('aria-pressed',on?'true':'false'); }); return; }
+    if(b.parentNode!==q || q.__ibRec) return;
+    if(own){
+      if(q.classList.contains('done')) return;
+      var bs=opts(q), a=parseInt(q.getAttribute('data-a'),10), i=bs.indexOf(b);
+      q.classList.add('done');
+      if(i===a) b.classList.add('right'); else { b.classList.add('wrong'); if(bs[a]) bs[a].classList.add('right'); }
+    } else if(!q.classList.contains('done')) return;
+    q.__ibRec=true; var ok=b.classList.contains('right'); if(ok) right++; count++;
+    recs.push({q:q,ok:ok,conf:q.getAttribute('data-conf')||''});
+    [].forEach.call(q.querySelectorAll('.cf button'),function(x){ x.disabled=true; });
+    if(own) score.textContent=msg();
+    if(count===total) finish();
+  });
+  function finish(){
+    var r=right, t=total;
+    if(own){ try{ var prev=get(KEY); localStorage.setItem(KEY,JSON.stringify({right:r,total:t,date:new Date().toISOString().slice(0,10),best:Math.max(r,prev&&prev.best||0)})); }catch(e){} }
+    else { var s=get(KEY); if(s && typeof s.right==='number' && s.total) { r=s.right; t=s.total; } }
+    var a=addAttempt(r,t,false);
+    var order=qsAll(), num=function(q){ return order.indexOf(q)+1; };
+    var wrong=recs.filter(function(x){ return !x.ok; });
+    wrong.sort(function(x,y){ return (y.conf==='sure')-(x.conf==='sure') || num(x.q)-num(y.q); });
+    var lucky=recs.filter(function(x){ return x.ok && (x.conf==='guess'||x.conf==='unsure'); }).sort(function(x,y){ return num(x.q)-num(y.q); });
+    var lab={sure:'you were sure',unsure:'you were unsure',guess:'you guessed','':'not marked'};
+    var h='';
+    if(wrong.length){ h+='<b>Log these first</b><ol class="cfl">'+wrong.map(function(x){ return '<li'+(x.conf==='sure'?' class="sure"':'')+'>Question '+num(x.q)+' ('+lab[x.conf]+'): '+esc(qtext(x.q))+'</li>'; }).join('')+'</ol>'; }
+    if(lucky.length){ h+='<b>Right, but not sure</b>: read the explanation again for '+lucky.map(function(x){ return 'question '+num(x.q); }).join(', ')+'.'; }
+    if(!wrong.length && !lucky.length) h+='<b>All right.</b> Come back in a few days and try again: a score that lasts is what counts.';
+    var past=a.slice(0,-1).slice(-3).map(function(x){ return x.right+'/'+x.total+' on '+x.date; });
+    h+='<p class="cfa">Try number '+a.length+(past.length?'. Before: '+past.join(', ')+'.':'.')+'</p>';
+    h+='<button type="button" class="retry">Try again (shuffled)</button>';
+    rep.innerHTML=h;
+    rep.querySelector('.retry').addEventListener('click',retry);
+  }
+  function shuffled(arr){ var best=arr.slice();
+    for(var k=0;k<12;k++){ var x=arr.slice(); for(var i=x.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=x[i]; x[i]=x[j]; x[j]=t; }
+      best=x; if(arr.length<2 || x.some(function(v,i){ return v!==arr[i]; })) break; }
+    return best; }
+  function renumber(q,n){ var p=q.querySelector('p'); if(!p) return;
+    var w=document.createTreeWalker(p,4,null), tn;
+    while((tn=w.nextNode())){ if(tn.parentNode.closest && tn.parentNode.closest('.subj')) continue; if(!/\S/.test(tn.data)) continue;
+      if(/^\s*\d+\.\s/.test(tn.data)) tn.data=tn.data.replace(/^(\s*)\d+\./,'$1'+n+'.'); break; } }
+  function retry(){
+    var qs=qsAll(), marks=[], clones=[];
+    qs.forEach(function(q){
+      var m=document.createComment('q'); q.parentNode.insertBefore(m,q); marks.push(m);
+      var c=q.cloneNode(true); c.classList.remove('done'); c.removeAttribute('data-conf');
+      var p=c.querySelector('.cf'); if(p) p.parentNode.removeChild(p); p=c.querySelector('.qn'); if(p) p.parentNode.removeChild(p);
+      var bs=opts(c), a=parseInt(c.getAttribute('data-a'),10), good=bs[a];
+      bs.forEach(function(x){ x.classList.remove('right','wrong'); x.disabled=false; });
+      if(bs.length){ var after=bs[bs.length-1].nextSibling, nb=shuffled(bs);
+        bs.forEach(function(x){ c.removeChild(x); }); nb.forEach(function(x){ c.insertBefore(x,after); });
+        c.setAttribute('data-a',String(nb.indexOf(good))); }
+      q.parentNode.removeChild(q); clones.push(c);
+    });
+    var nq=shuffled(clones);
+    marks.forEach(function(m,i){ m.parentNode.insertBefore(nq[i],m); m.parentNode.removeChild(m); renumber(nq[i],i+1); });
+    own=true; start(); score.textContent='Score: 0 / '+total+' answered 0';
+    var top=quiz.getBoundingClientRect().top+window.pageYOffset-60; try{ window.scrollTo(0,Math.max(0,top)); }catch(e){}
+  }
+  start();
+}
+
+(function(){ var s=document.createElement('style'); s.textContent="\n:root{--amber-ink:#8A6416}\n:focus-visible{outline:3px solid var(--indigo);outline-offset:2px}\n.quiz button:focus-visible,.quiz .q .cf button:focus-visible{outline:3px solid var(--indigo);outline-offset:2px}\n@media (hover:none){.quiz button:not(.right):not(.wrong):hover{border-color:var(--rule)}}\n.quiz button.right::before{content:\"\u2713 Correct: \";font-weight:700;color:var(--green)}\n.quiz button.wrong::before{content:\"\u2717 Your answer: \";font-weight:700;color:var(--red)}\n.quiz .q .qn{font-size:.8rem;font-weight:700;color:var(--ink-soft);margin-bottom:2px}\n.quiz .q .cf{margin:4px 0 10px}\n.quiz .q .cf .cfl-h{font-size:.88rem;font-weight:600;color:var(--ink-soft);margin-bottom:4px}\n.quiz .q .cf .cfb{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;max-width:420px}\n.quiz .q .cf button{display:block;width:100%;min-height:44px;margin:0;padding:6px 8px;text-align:center;font-size:.92rem;border:1px solid var(--rule);border-radius:8px;background:var(--card);color:var(--ink)}\n.quiz .q .cf button.on{background:var(--indigo-soft);border:2px solid var(--indigo);font-weight:700}\n.quiz .q .cf button:disabled{cursor:default;opacity:1;color:var(--ink-soft)}\n.quiz .q .cf button.on:disabled{color:var(--ink)}\n.quiz .cfh{font-size:.92rem;color:var(--ink-soft)}\n.quiz .cfr{margin-top:10px}\n.quiz .cfr ol{margin:6px 0 10px;padding-left:22px}\n.quiz .cfr li{margin:4px 0}\n.quiz .cfr li.sure{font-weight:600}\n.quiz .cfr .cfa{font-size:.9rem;color:var(--ink-soft);margin:8px 0}\n.quiz .cfr button.retry{display:inline-block;width:auto;min-height:44px;text-align:center;background:var(--indigo);color:#fff;border-color:var(--indigo);font-weight:700;padding:8px 16px}\n.wm{margin-top:8px;font-size:.92rem}\n.wm select{font:inherit;min-height:44px;padding:4px 6px;border:1px solid var(--rule);border-radius:8px;background:var(--card);color:var(--ink);max-width:100%}\n.notice{background:var(--amber-soft);border:1px solid var(--amber);color:var(--ink);padding:10px 14px;margin:12px 0;border-radius:8px;font-weight:600}\n"; document.head.appendChild(s); })();
+ibQuizEnhance({key:"ib-quiz-review-2026-11-22", own:true});</script>
+<!--enhance:start--><script>
+function storageOK(){ try{ var k='__ib_t'; localStorage.setItem(k,'1'); localStorage.removeItem(k); return true; }catch(e){ return false; } }
+function storageNotice(){ if(storageOK() || document.querySelector('.notice.storage')) return;
+  var n=document.createElement('div'); n.className='notice storage'; n.setAttribute('role','status');
+  n.textContent='Progress cannot be saved in this browser (private mode?). Use normal Safari or Chrome.';
+  var sb=document.querySelector('.sitebar');   // under the shared top bar when the page has one
+  if(sb && sb.parentNode){ sb.parentNode.insertBefore(n,sb.nextSibling); return; }
+  var m=document.querySelector('main')||document.body; m.insertBefore(n,m.firstChild); }
+
+function ibQuizEnhance(cfg){
+  if(window.__ibQuizEnh) return; window.__ibQuizEnh=1;
+  if(typeof storageNotice==='function') storageNotice();
+  var KEY=cfg&&cfg.key; if(!KEY) return;
+  var AK=KEY+'-attempts', WK=KEY+'-written';
+  function get(k){ try{ return JSON.parse(localStorage.getItem(k)||'null'); }catch(e){ return null; } }
+  function put(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); }catch(e){} }
+  function pad(n){ return (n<10?'0':'')+n; }
+  function today(){ var d=new Date(); return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()); }
+  function attempts(){ var a=get(AK); return Array.isArray(a)?a:[]; }
+  function addAttempt(r,t,sameDay){ var a=attempts(), d=today(), rec={date:d,right:r,total:t};
+    if(sameDay && a.length && a[a.length-1].date===d) a[a.length-1]=rec; else a.push(rec); put(AK,a); return a; }
+  // keep the score saved before this history existed as the first attempt
+  (function(){ if(get(AK)) return; var r=get(KEY); if(!r||typeof r!=='object') return;
+    var rr=(typeof r.right==='number')?r.right:r.score, tt=(typeof r.total==='number')?r.total:r.max;
+    if(typeof rr==='number' && tt) put(AK,[{date:r.date||today(),right:rr,total:tt}]); })();
+
+  // written answers: self-mark 0..max
+  var W=get(WK); if(!W||typeof W!=='object') W={};
+  [].forEach.call(document.querySelectorAll('.written[data-max]'),function(el,i){
+    var max=parseInt(el.getAttribute('data-max'),10); if(!(max>=0) || el.querySelector('.wm')) return;
+    var id=el.id||el.getAttribute('data-id')||('w'+(i+1));
+    var box=document.createElement('div'); box.className='wm';
+    var lab=document.createElement('label'); lab.appendChild(document.createTextNode('My mark: '));
+    var sel=document.createElement('select'); sel.setAttribute('aria-label','Your mark out of '+max);
+    var o=document.createElement('option'); o.value=''; o.textContent='not marked yet'; sel.appendChild(o);
+    for(var m=0;m<=max;m++){ o=document.createElement('option'); o.value=String(m); o.textContent=m+' out of '+max; sel.appendChild(o); }
+    if(W[id]!=null) sel.value=String(W[id]);
+    sel.addEventListener('change',function(){ var w=get(WK); if(!w||typeof w!=='object') w={};
+      if(sel.value==='') delete w[id]; else w[id]=parseInt(sel.value,10); put(WK,w); });
+    lab.appendChild(sel); box.appendChild(lab); el.appendChild(box);
+  });
+
+  // timed pages save {score,max,date} themselves; keep one history entry per day
+  if(/^ib-timed-/.test(KEY)){
+    var rec=function(){ var r=get(KEY); if(r && typeof r.score==='number' && r.max) addAttempt(r.score,r.max,true); };
+    var sb=document.getElementById('savebtn'); if(sb) sb.addEventListener('click',function(){ setTimeout(rec,0); });
+    [].forEach.call(document.querySelectorAll('.score-t input'),function(i){ i.addEventListener('change',function(){ setTimeout(rec,0); }); });
+  }
+
+  // multiple-choice quiz
+  var q0=document.querySelector('.quiz .q[data-a]'); if(!q0) return;
+  var quiz=q0.closest('.quiz');
+  var own=!!cfg.own, total=0, count=0, right=0, recs=[];
+  function qsAll(){ return [].filter.call(quiz.querySelectorAll('.q[data-a]'),function(q){ return !q.classList.contains('written'); }); }
+  function opts(q){ return [].filter.call(q.children,function(c){ return c.tagName==='BUTTON'; }); }
+  var score=document.getElementById('score');
+  if(!score){ score=document.createElement('div'); score.className='score'; score.id='score'; var l=qsAll(); l[l.length-1].parentNode.insertBefore(score,l[l.length-1].nextSibling); }
+  var rep=document.createElement('div'); rep.className='cfr'; rep.setAttribute('aria-live','polite'); score.parentNode.insertBefore(rep,score.nextSibling);
+  var hint=document.createElement('p'); hint.className='cfh';
+  hint.textContent='Before each answer, say how sure you are. At the end, the ones you were sure about but got wrong are listed first: they matter most.';
+  q0.parentNode.insertBefore(hint,qsAll()[0]);
+  function addConf(q){ var p=q.querySelector('.cf'); if(p) p.parentNode.removeChild(p);
+    var d=document.createElement('div'); d.className='cf'; d.setAttribute('role','group'); d.setAttribute('aria-label','How sure are you?');
+    d.innerHTML='<div class="cfl-h">How sure are you?</div><div class="cfb"><button type="button" data-c="guess" aria-pressed="false">Guessed</button><button type="button" data-c="unsure" aria-pressed="false">Unsure</button><button type="button" data-c="sure" aria-pressed="false">Sure</button></div>';
+    var first=opts(q)[0]; q.insertBefore(d,first||null); q.removeAttribute('data-conf'); }
+  function counters(qs){ qs.forEach(function(q,i){ var c=q.querySelector('.qn'); if(!c){ c=document.createElement('div'); c.className='qn'; q.insertBefore(c,q.firstChild); } c.textContent=(i+1)+' of '+qs.length; }); }
+  function start(){ var qs=qsAll(); total=qs.length; count=0; right=0; recs=[]; qs.forEach(addConf); counters(qs); rep.innerHTML=''; }
+  function msg(){ return 'Score: '+right+' / '+total+' answered '+count+(count===total?(right>=0.8*total?'. Good. Log the ones you missed.':'. Re-read the sections for the ones you missed, then log them.'):''); }
+  function qtext(q){ var p=q.querySelector('p'); var t=p?p.textContent:''; t=t.replace(/\s+/g,' ').trim();
+    var s=p&&p.querySelector('.subj'); if(s) t=t.slice(s.textContent.trim().length).trim();
+    t=t.replace(/^\d+\.\s*/,''); return t.length>110?t.slice(0,107)+'...':t; }
+  function esc(s){ var d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+  quiz.addEventListener('click',function(e){
+    var b=e.target.closest?e.target.closest('button'):null; if(!b) return;
+    var q=b.closest('.q'); if(!q || !quiz.contains(q) || !q.hasAttribute('data-a') || q.classList.contains('written')) return;
+    var cf=b.closest('.cf');
+    if(cf){ if(q.__ibRec) return; var c=b.getAttribute('data-c'); q.setAttribute('data-conf',c);
+      [].forEach.call(cf.querySelectorAll('button'),function(x){ var on=x===b; x.classList.toggle('on',on); x.setAttribute('aria-pressed',on?'true':'false'); }); return; }
+    if(b.parentNode!==q || q.__ibRec) return;
+    if(own){
+      if(q.classList.contains('done')) return;
+      var bs=opts(q), a=parseInt(q.getAttribute('data-a'),10), i=bs.indexOf(b);
+      q.classList.add('done');
+      if(i===a) b.classList.add('right'); else { b.classList.add('wrong'); if(bs[a]) bs[a].classList.add('right'); }
+    } else if(!q.classList.contains('done')) return;
+    q.__ibRec=true; var ok=b.classList.contains('right'); if(ok) right++; count++;
+    recs.push({q:q,ok:ok,conf:q.getAttribute('data-conf')||''});
+    [].forEach.call(q.querySelectorAll('.cf button'),function(x){ x.disabled=true; });
+    if(own) score.textContent=msg();
+    if(count===total) finish();
+  });
+  function finish(){
+    var r=right, t=total;
+    if(own){ try{ var prev=get(KEY); localStorage.setItem(KEY,JSON.stringify({right:r,total:t,date:new Date().toISOString().slice(0,10),best:Math.max(r,prev&&prev.best||0)})); }catch(e){} }
+    else { var s=get(KEY); if(s && typeof s.right==='number' && s.total) { r=s.right; t=s.total; } }
+    var a=addAttempt(r,t,false);
+    var order=qsAll(), num=function(q){ return order.indexOf(q)+1; };
+    var wrong=recs.filter(function(x){ return !x.ok; });
+    wrong.sort(function(x,y){ return (y.conf==='sure')-(x.conf==='sure') || num(x.q)-num(y.q); });
+    var lucky=recs.filter(function(x){ return x.ok && (x.conf==='guess'||x.conf==='unsure'); }).sort(function(x,y){ return num(x.q)-num(y.q); });
+    var lab={sure:'you were sure',unsure:'you were unsure',guess:'you guessed','':'not marked'};
+    var h='';
+    if(wrong.length){ h+='<b>Log these first</b><ol class="cfl">'+wrong.map(function(x){ return '<li'+(x.conf==='sure'?' class="sure"':'')+'>Question '+num(x.q)+' ('+lab[x.conf]+'): '+esc(qtext(x.q))+'</li>'; }).join('')+'</ol>'; }
+    if(lucky.length){ h+='<b>Right, but not sure</b>: read the explanation again for '+lucky.map(function(x){ return 'question '+num(x.q); }).join(', ')+'.'; }
+    if(!wrong.length && !lucky.length) h+='<b>All right.</b> Come back in a few days and try again: a score that lasts is what counts.';
+    var past=a.slice(0,-1).slice(-3).map(function(x){ return x.right+'/'+x.total+' on '+x.date; });
+    h+='<p class="cfa">Try number '+a.length+(past.length?'. Before: '+past.join(', ')+'.':'.')+'</p>';
+    h+='<button type="button" class="retry">Try again (shuffled)</button>';
+    rep.innerHTML=h;
+    rep.querySelector('.retry').addEventListener('click',retry);
+  }
+  function shuffled(arr){ var best=arr.slice();
+    for(var k=0;k<12;k++){ var x=arr.slice(); for(var i=x.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=x[i]; x[i]=x[j]; x[j]=t; }
+      best=x; if(arr.length<2 || x.some(function(v,i){ return v!==arr[i]; })) break; }
+    return best; }
+  function renumber(q,n){ var p=q.querySelector('p'); if(!p) return;
+    var w=document.createTreeWalker(p,4,null), tn;
+    while((tn=w.nextNode())){ if(tn.parentNode.closest && tn.parentNode.closest('.subj')) continue; if(!/\S/.test(tn.data)) continue;
+      if(/^\s*\d+\.\s/.test(tn.data)) tn.data=tn.data.replace(/^(\s*)\d+\./,'$1'+n+'.'); break; } }
+  function retry(){
+    var qs=qsAll(), marks=[], clones=[];
+    qs.forEach(function(q){
+      var m=document.createComment('q'); q.parentNode.insertBefore(m,q); marks.push(m);
+      var c=q.cloneNode(true); c.classList.remove('done'); c.removeAttribute('data-conf');
+      var p=c.querySelector('.cf'); if(p) p.parentNode.removeChild(p); p=c.querySelector('.qn'); if(p) p.parentNode.removeChild(p);
+      var bs=opts(c), a=parseInt(c.getAttribute('data-a'),10), good=bs[a];
+      bs.forEach(function(x){ x.classList.remove('right','wrong'); x.disabled=false; });
+      if(bs.length){ var after=bs[bs.length-1].nextSibling, nb=shuffled(bs);
+        bs.forEach(function(x){ c.removeChild(x); }); nb.forEach(function(x){ c.insertBefore(x,after); });
+        c.setAttribute('data-a',String(nb.indexOf(good))); }
+      q.parentNode.removeChild(q); clones.push(c);
+    });
+    var nq=shuffled(clones);
+    marks.forEach(function(m,i){ m.parentNode.insertBefore(nq[i],m); m.parentNode.removeChild(m); renumber(nq[i],i+1); });
+    own=true; start(); score.textContent='Score: 0 / '+total+' answered 0';
+    var top=quiz.getBoundingClientRect().top+window.pageYOffset-60; try{ window.scrollTo(0,Math.max(0,top)); }catch(e){}
+  }
+  start();
+}
+
+storageNotice();
+ibQuizEnhance({"key": "ib-quiz-review-2026-11-22", "own": false});
+(function(){
+  if(window.__ibSite) return; window.__ibSite=1;
+  var PAGE='ib-'+((location.pathname.split('/').pop()||'index').replace(/\.html?$/,''));
+  var BK=PAGE+'-blocks';
+  function get(){ try{ var v=JSON.parse(localStorage.getItem(BK)||'null'); return v&&typeof v==='object'?v:{}; }catch(e){ return {}; } }
+  function put(v){ try{ localStorage.setItem(BK,JSON.stringify(v)); }catch(e){} }
+  // guide plan blocks "Block 1 · 25 min" + title -> numbered card with a time chip
+  [].forEach.call(document.querySelectorAll('.plan > div:not(.brk), .step'),function(d){
+    var bh=d.querySelector(':scope > .bh'); if(!bh || bh.querySelector('.bn')) return;
+    var b=bh.querySelector('b'); var m=b && /^\s*Block\s+(\d+[a-z]?)\s*[·.:-]\s*(.+?)\s*$/i.exec(b.textContent); if(!m) return;
+    var s=bh.querySelector('span'); var title=s?s.innerHTML:'';
+    d.classList.add('block'); d.setAttribute('data-n',m[1]);
+    bh.innerHTML='<span class="bn" aria-hidden="true">'+m[1]+'</span><b><span class="sr">Block '+m[1]+': </span>'+(title||('Block '+m[1]))+'</b><span class="bt">'+m[2]+'</span>';
+    // teaching sections linked from this block get a kicker "Block n · ..."
+    [].forEach.call(d.querySelectorAll('a[href^="#"]'),function(a){
+      var t=document.getElementById(a.getAttribute('href').slice(1)); if(!t) return;
+      var k=t.querySelector(':scope > .kicker'); if(!k || k.getAttribute('data-bk')) return;
+      k.setAttribute('data-bk',m[1]); k.insertAdjacentHTML('afterbegin','<span class="bk">Block '+m[1]+' · </span>');
+    });
+  });
+  // long hero intro paragraphs fold to 3 lines; tap to read them all
+  [].forEach.call(document.querySelectorAll('header.hero .wrap > p'),function(p){
+      if(p.textContent.length<160) return;
+      p.classList.add('fold'); if(p.scrollHeight<=p.clientHeight+2){ p.classList.remove('fold'); return; }
+      p.setAttribute('role','button'); p.setAttribute('tabindex','0'); p.setAttribute('aria-expanded','false');
+      function tog(e){ if(e && e.target && e.target.closest && e.target.closest('a,.term')) return; var o=p.classList.toggle('open'); p.setAttribute('aria-expanded',o?'true':'false'); }
+      p.addEventListener('click',tog); p.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); tog(); } });
+  });
+  // keep the Today card on the first screen: shrink the header picture (not below 18% of the screen height) if needed
+  (function(){ var art=document.querySelector('header.hero > svg, header.hero > img'), card=document.querySelector('.todaycard');
+    if(!art || !card) return; var vh=window.innerHeight, over=card.getBoundingClientRect().top+window.pageYOffset-(vh-70);
+    if(over>0){ var h=art.getBoundingClientRect().height; art.style.maxHeight=Math.max(0.18*vh,h-over)+'px'; } })();
+  // "Block done" ticks
+  var st=get();
+  [].forEach.call(document.querySelectorAll('.block'),function(d,i){
+    if(d.querySelector(':scope > .bdone')) return;
+    var n=d.getAttribute('data-n')||String(i+1);
+    var l=document.createElement('label'); l.className='bdone';
+    l.innerHTML='<input type="checkbox"> Block done';
+    var c=l.querySelector('input'); c.checked=!!st[n]; d.classList.toggle('is-done',c.checked);
+    c.addEventListener('change',function(){ var s=get(); if(c.checked) s[n]=new Date().toISOString().slice(0,10); else delete s[n]; put(s); d.classList.toggle('is-done',c.checked); chips(); });
+    d.appendChild(l);
+  });
+  function chips(){ var s=get(); [].forEach.call(document.querySelectorAll('.chip[data-n]'),function(a){ a.classList.toggle('done',!!s[a.getAttribute('data-n')]); }); }
+  chips();
+  // current section in the menu
+  var nav=document.querySelector('nav.toc .wrap'); if(!nav || !('IntersectionObserver' in window)) return;
+  var links={}, secs=[];
+  [].forEach.call(nav.querySelectorAll('a[href^="#"]'),function(a){ var el=document.getElementById(a.getAttribute('href').slice(1)); if(el){ links[el.id]=a; secs.push(el); } });
+  // the current section is the last one whose top has passed under the two bars; the observer (and a
+  // throttled scroll check, for long sections) only decides when to look again
+  function mark(){ var best=null; secs.forEach(function(el){ if(el.getBoundingClientRect().top<=120) best=el; });
+    Object.keys(links).forEach(function(id){ links[id].removeAttribute('aria-current'); });
+    if(best){ var a=links[best.id]; a.setAttribute('aria-current','location');
+      var l=a.offsetLeft-nav.offsetLeft, r=l+a.offsetWidth; if(l<nav.scrollLeft+8 || r>nav.scrollLeft+nav.clientWidth-8) nav.scrollLeft=Math.max(0,l-40); } }
+  secs.sort(function(a,b){ return (a.compareDocumentPosition(b)&2)?1:-1; });
+  var io=new IntersectionObserver(mark,{rootMargin:'-100px 0px -55% 0px'});
+  var tick=false; window.addEventListener('scroll',function(){ if(tick) return; tick=true; requestAnimationFrame(function(){ tick=false; mark(); }); },{passive:true});
+  secs.forEach(function(el){ io.observe(el); });
+})();
+</script><!--enhance:end-->
+</body>
+</html>

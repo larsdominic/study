@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Psychology HL study guide: evaluating research, classical and operant conditioning (Sat 14 Nov 2026)</title>
+<!--
+  Psychology HL, session 2 of the catch-up plan (psychology-audit.md section 4.2, "Session 2, Sat 14 Nov").
+  Official source: IB Diploma Programme Psychology guide, first assessment 2027, Drive 1Khqsn6PrxoS5UXAEKBpu5G_XG5Viyvtq.
+  Wording from the Drive text export of the guide (scratchpad psych/guide_pg.txt, subjgloss.txt), psych-syllabus.json and the audit.
+  Pages cited: p20-23 (concept related terms), p24-25 (cognitive approach intro + Table 3.2), p27-28 (research considerations, methods),
+  p33 (learning and cognition: conditioning), p45 (P1 A markbands), p55-56 (IA data collection challenges), glossary p62-69.
+  Class files read on 8 Nov: RM01 slides 60-148 (text export), RM04, LC01, LC02, LC03, LC04, LC06, LC07, LC08. File names are the NEW titles (psych-renames.json).
+  Free web pages fetched 8 Nov (free, no login, on topic): Simply Psychology classical-conditioning, operant-conditioning, validity, demand-characteristics.
+  Depth rule 6c: only what the guide and the mark schemes need; extras are labelled "not needed for the IB exam".
+
+  UNSURE / decisions:
+  1. The RM01 slide quizzes come in pairs (question, then the same slide with the answer highlighted). The text export does not show the highlight,
+     so the answer key on this page is ours, worked out from the guide glossary and the slide text. Session 1 found slide 97 highlights A (wrong; B is right).
+  2. RM01 slide 63 says an independent samples design needs fewer participants. It is the other way round (repeated measures needs fewer). Flagged on the page.
+  3. RM01 slide 66 ("What's tricky: one group might just have better memory skills") sits under repeated measures but describes independent samples. Flagged.
+  4. The guide glossary (p69) words internal validity as "the extent that a measurement conducted within a study accurately measures or assesses what it claims to measure";
+     the class deck (slide 114) and the guide's concept Causality (p21, "internal vs external validity") use the cause-and-effect meaning. Both shown; we advise the class meaning for experiments.
+  5. Population validity and ecological validity are class words (RM01 slides 131-132, RM04 Q6), not in the guide list; the guide says generalizability and external validity.
+  6. Expectancy effect, screw-you effect, social desirability effect, reactivity, funding bias, researcher triangulation: class words (RM01 slides 119-129).
+     Simply Psychology uses "expectancy effect" for the researcher's expectations (Rosenthal); noted on the page.
+  7. RM04 has no mark scheme in the Drive. Model answers for Q1-4 are ours. Q5-6 are left for the 21 Nov session (timed), so no model answer here.
+  8. LC06 schedules table text is garbled in the export (the fixed ratio row shows "Rat gets a pellet each lever press", which is continuous reinforcement).
+     The table on this page is rebuilt; extinction pattern checked with Simply Psychology (variable ratio slowest to extinguish).
+  9. Garcia: LC02 says Garcia (1955), saccharin during radiation, aversion after one pairing, lasted over a month. LC03 adds "even when there is a significant delay".
+     Kept at that level; no other details.
+ 10. Dallery et al. (2017) figures come only from the class screenshot LC07; not checked against the paper. The guide says knowledge of study details is not assessed in P1 A (p45).
+ 11. Skittles experiment: the worksheet does not say whether a buzzer-alone test trial was run. The causality notes say "if".
+ 12. Cognitive approach assumptions (LC01) are class content, not a guide syllabus line. No progress topic code given; ican key g1 is left out of the progress map.
+-->
+<style>
+  :root{
+    --paper:#F5F7F4; --ink:#1E2A33; --ink-soft:#4A5862; --rule:#D6DCD8;
+    --indigo:#2F47A6; --indigo-soft:#E6EAF7; --amber:#B8761A; --amber-soft:#FBF1DF;
+    --green:#2E7D4F; --green-soft:#E3F2E8; --red:#B23A3A; --red-soft:#F8E4E4;
+    --card:#FFFFFF;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;overflow-wrap:break-word}
+  h1,h2,h3,h4{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;line-height:1.2;margin:0 0 .4em;font-weight:600}
+  h1{font-size:2.3rem}
+  h2{font-size:1.75rem;margin-top:0}
+  h3{font-size:1.25rem;margin-top:1.8em}
+  h4{font-size:1.05rem;margin-top:1.4em;font-family:inherit;font-weight:700}
+  p{margin:0 0 1em}
+  a{color:var(--indigo)}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
+
+  /* hero: the course map itself (guide Table 1 and Table 2, p19, and the HL assessment outline, p42-43) */
+  .hero{background:#0B0F1A;color:#fff;padding:0 0 28px}
+  .map{display:block;width:100%;max-width:900px;height:auto;margin:0 auto}
+  .hero .wrap{padding-top:18px;padding-bottom:0}
+  .hero h1{color:#fff}
+  .hero p{color:#C9D1E6;max-width:680px}
+  .hero a{color:#F2C46D}
+  .meta{display:flex;flex-wrap:wrap;gap:8px 22px;color:#C9D1E6;font-size:.95rem;margin-top:8px}
+
+  nav.toc{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+  nav.toc .wrap{display:flex;gap:2px;flex-wrap:wrap;padding:6px 20px}
+  nav.toc a{text-decoration:none;color:var(--ink-soft);padding:4px 8px;border-radius:6px;font-size:.9rem}
+  section[id]{scroll-margin-top:84px}
+  nav.toc a:hover,nav.toc a:focus-visible{background:var(--indigo-soft);color:var(--indigo);outline:none}
+
+  .plan{display:grid;grid-template-columns:1fr;gap:12px;margin:22px 0 8px}
+  .plan > div{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);padding:12px 16px}
+  .plan .bh{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-bottom:4px}
+  .plan .bh b{font-size:1.2rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+  .plan .bh span{font-weight:700;color:var(--indigo)}
+  .plan ol{margin:6px 0 0;padding-left:22px}
+  .plan li{margin:4px 0}
+  .plan .t{color:var(--ink-soft);font-size:.88rem;white-space:nowrap}
+  .files{margin:10px 0 0;padding-left:20px}
+  .files li{margin:5px 0;font-size:.95rem}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 20px;background:var(--card);border:1px solid var(--rule);padding:10px 14px;font-size:.92rem;margin:16px 0}
+  .note{background:var(--amber-soft);border:1px solid var(--amber);padding:10px 14px;margin:14px 0;font-size:.95rem}
+
+  section.topic{margin-top:56px;padding-top:28px;border-top:3px solid var(--ink)}
+  section.topic ul{padding-left:22px}
+  section.topic li{margin:4px 0}
+  .kicker{color:var(--indigo);font-weight:700;letter-spacing:.01em;margin-bottom:4px}
+  .guiding{font-style:italic;color:var(--ink-soft);margin-bottom:18px}
+
+  .ican{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:0 0 24px}
+  .ican p{margin:0 0 8px;font-weight:700}
+  .ican label{display:flex;gap:10px;align-items:flex-start;padding:5px 0;cursor:pointer}
+  .ican input{margin-top:6px;width:16px;height:16px;flex:none;accent-color:var(--indigo)}
+
+  /* markers: what to learn word for word and what to understand and apply */
+  .fb,.learn{display:inline-block;font-size:.72rem;font-weight:700;padding:1px 7px;border-radius:3px;vertical-align:middle;margin-left:6px;white-space:nowrap;font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.01em}
+  .fb{background:var(--green);color:#fff}
+  .learn{background:var(--amber);color:#fff}
+
+  table{border-collapse:collapse;width:100%;margin:12px 0 20px;font-size:.95rem;background:var(--card)}
+  th,td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#EDF0EC}
+  td.c,th.c{text-align:center}
+  tr.ao th{background:var(--indigo-soft);color:var(--indigo)}
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:14px 0 20px}
+  .cards > div{background:var(--card);border:1px solid var(--rule);border-top:4px solid var(--indigo);padding:10px 14px}
+  .cards h4{margin:0 0 6px}
+  .cards p{margin:4px 0;font-size:.95rem}
+  .cards .cq{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:1.02rem;border-left:3px solid var(--amber);padding-left:10px}
+  .cards .lab{font-weight:700;color:var(--ink-soft)}
+  figure{margin:20px 0;background:var(--card);border:1px solid var(--rule);padding:12px}
+  figure svg{display:block;width:100%;height:auto}
+  figcaption{font-size:.9rem;color:var(--ink-soft);margin-top:8px}
+
+  .quote{background:var(--card);border-left:5px solid var(--amber);padding:10px 16px;margin:14px 0;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:1.05rem}
+  .quote small{display:block;font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.85rem;color:var(--ink-soft);margin-top:4px}
+  .tip{background:var(--amber-soft);border-left:5px solid var(--amber);padding:12px 16px;margin:18px 0}
+  .tip b:first-child{color:var(--amber)}
+  .worked{background:var(--indigo-soft);border-left:5px solid var(--indigo);padding:12px 16px;margin:18px 0}
+  .worked > b:first-child{color:var(--indigo)}
+  .worked ol{margin:6px 0 0;padding-left:22px}
+  .worked li{margin:3px 0}
+  .nw{white-space:nowrap}
+
+  details{background:var(--card);border:1px solid var(--rule);padding:10px 14px;margin:10px 0}
+  summary{cursor:pointer;font-weight:600}
+  details[open] summary{margin-bottom:8px}
+
+  .quiz .q{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:12px 0}
+  .quiz .q > p{font-weight:600;margin-bottom:8px}
+  .quiz button{display:block;width:100%;text-align:left;background:#F3F5F2;border:1px solid var(--rule);padding:8px 12px;margin:6px 0;border-radius:6px;font:inherit;cursor:pointer;color:var(--ink)}
+  .quiz button:hover,.quiz button:focus-visible{border-color:var(--indigo);outline:none}
+  .quiz button.right{background:var(--green-soft);border-color:var(--green)}
+  .quiz button.wrong{background:var(--red-soft);border-color:var(--red)}
+  .quiz .why{display:none;margin-top:8px;font-size:.95rem;color:var(--ink-soft)}
+  .quiz .q.done .why{display:block}
+  .score{font-weight:700;margin-top:14px}
+
+  .end{margin-top:56px;background:var(--card);border:1px solid var(--rule);padding:18px 20px}
+  .end ul{margin:8px 0 0;padding-left:20px}
+  @media (max-width:600px){section[id]{scroll-margin-top:130px}h1{font-size:1.8rem}body{font-size:16px}th,td{padding:6px}}
+  @media print{nav.toc{position:static}details{break-inside:avoid}.quiz button{border:1px solid #999}}
+
+
+  /* page extras */
+  .hero .note-light{color:#C9D1E6;font-size:.92rem;margin-top:10px}
+  .today{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--green);padding:12px 16px;margin:24px 0 0}
+  .today h2{font-size:1.2rem;margin:0 0 6px}
+  .today ul{margin:4px 0 0;padding-left:20px}
+  .today li{margin:4px 0}
+  .model{background:var(--green-soft);border-left:5px solid var(--green);padding:10px 14px;margin:10px 0}
+  .model p:last-child{margin-bottom:0}
+  .grid2 svg{max-width:560px;margin:0 auto}
+  .quiz .wq{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--amber);padding:14px 16px;margin:12px 0}
+  .quiz .wq > p{margin-bottom:8px}
+
+
+/*terms:start*/
+.term{border-bottom:2px dotted var(--indigo);cursor:pointer;border-radius:2px}
+.term:focus-visible{background:var(--indigo-soft)}
+@media (hover:hover){.term:hover{background:var(--indigo-soft)}}
+#termbox{display:none;position:fixed;left:10px;right:10px;bottom:10px;max-width:640px;margin:0 auto;background:var(--card);border:2px solid var(--indigo);border-radius:8px;padding:14px 16px 12px;box-shadow:0 8px 28px rgba(0,0,0,.22);z-index:60;max-height:60vh;overflow:auto}
+#termbox.on{display:block}
+#termbox .tb-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+#termbox .tb-h b{font-size:1.1rem;color:var(--indigo)}
+#termbox button{font:inherit;border:1px solid var(--rule);background:var(--paper);border-radius:8px;padding:4px 12px;cursor:pointer;flex:none;min-height:44px;min-width:44px}
+#termbox .tb-d{margin:8px 0 0;line-height:1.5}
+.before.block0{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:12px 16px;margin:12px 0}
+.before > details{background:transparent;border:0;padding:0;margin:0}
+.before > details > summary{display:grid;grid-template-columns:32px minmax(0,1fr) auto auto;align-items:center;gap:4px 10px;min-height:44px;list-style:none;cursor:pointer}
+.before > details > summary::-webkit-details-marker{display:none}
+.before > details > summary::after{content:"Hide";font-size:.85rem;font-weight:600;color:var(--indigo)}
+.before > details:not([open]) > summary::after{content:"Show"}
+.before .bn{flex:none;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--indigo);color:#fff;font-weight:700}
+.before .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.before .b0t{font-size:1.15rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-weight:600;color:var(--ink)}
+.before .bt{white-space:nowrap;font-size:.8rem;font-weight:700;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:4px;padding:2px 8px}
+.before .bgi{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);border-radius:8px;padding:12px 16px;margin:12px 0}
+.before .bgi h3{margin:0 0 6px;font-size:1.08rem}
+.before .bgi p{margin:6px 0}
+.before .bgi svg{max-width:100%;height:auto;display:block;margin:8px auto}
+.before .more{font-size:.95rem;color:var(--ink-soft)}
+.before .stuck{background:var(--amber-soft);border-radius:8px;padding:10px 14px}
+/*terms:end*/
+</style>
+<!--enhance:start--><meta name="color-scheme" content="light"><style>
+.warmup{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--amber);padding:12px 16px 4px;margin:24px 0}
+.warmup h2{margin:0 0 6px;font-size:1.3rem}
+.warmup .wu-how{font-size:.95rem;color:var(--ink-soft);margin:0 0 8px}
+.warmup ol{margin:0;padding-left:24px}
+.warmup li{margin:10px 0}
+.warmup .wu-m{font-size:.8rem;color:var(--ink-soft)}
+.warmup .wu-f{font-weight:600}
+.warmup details{margin-top:4px}
+.warmup summary{cursor:pointer;color:var(--indigo);font-size:.92rem}
+.warmup .wu-b{border-top:1px solid var(--rule);margin-top:6px;padding-top:6px}
+.warmup .wu-b a{font-size:.88rem;margin-left:6px;white-space:nowrap}
+.warmup .wu-foot{font-size:.92rem;margin:12px 0 8px}
+
+:root{--amber-ink:#8A6416}
+:focus-visible{outline:3px solid var(--indigo);outline-offset:2px}
+.quiz button:focus-visible,.quiz .q .cf button:focus-visible{outline:3px solid var(--indigo);outline-offset:2px}
+@media (hover:none){.quiz button:not(.right):not(.wrong):hover{border-color:var(--rule)}}
+.quiz button.right::before{content:"✓ Correct: ";font-weight:700;color:var(--green)}
+.quiz button.wrong::before{content:"✗ Your answer: ";font-weight:700;color:var(--red)}
+.quiz .q .qn{font-size:.8rem;font-weight:700;color:var(--ink-soft);margin-bottom:2px}
+.quiz .q .cf{margin:4px 0 10px}
+.quiz .q .cf .cfl-h{font-size:.88rem;font-weight:600;color:var(--ink-soft);margin-bottom:4px}
+.quiz .q .cf .cfb{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;max-width:420px}
+.quiz .q .cf button{display:block;width:100%;min-height:44px;margin:0;padding:6px 8px;text-align:center;font-size:.92rem;border:1px solid var(--rule);border-radius:8px;background:var(--card);color:var(--ink)}
+.quiz .q .cf button.on{background:var(--indigo-soft);border:2px solid var(--indigo);font-weight:700}
+.quiz .q .cf button:disabled{cursor:default;opacity:1;color:var(--ink-soft)}
+.quiz .q .cf button.on:disabled{color:var(--ink)}
+.quiz .cfh{font-size:.92rem;color:var(--ink-soft)}
+.quiz .cfr{margin-top:10px}
+.quiz .cfr ol{margin:6px 0 10px;padding-left:22px}
+.quiz .cfr li{margin:4px 0}
+.quiz .cfr li.sure{font-weight:600}
+.quiz .cfr .cfa{font-size:.9rem;color:var(--ink-soft);margin:8px 0}
+.quiz .cfr button.retry{display:inline-block;width:auto;min-height:44px;text-align:center;background:var(--indigo);color:#fff;border-color:var(--indigo);font-weight:700;padding:8px 16px}
+.wm{margin-top:8px;font-size:.92rem}
+.wm select{font:inherit;min-height:44px;padding:4px 6px;border:1px solid var(--rule);border-radius:8px;background:var(--card);color:var(--ink);max-width:100%}
+.notice{background:var(--amber-soft);border:1px solid var(--amber);color:var(--ink);padding:10px 14px;margin:12px 0;border-radius:8px;font-weight:600}
+
+:root{--amber-ink:#8A6416;--grey:#5F6B72;--purple:#6A3D9A;--green-ink:#256B43;--r-sm:4px;--r:8px}
+/* top bar: back to today, flashcards, progress, sheet */
+.sitebar{position:sticky;top:0;z-index:30;height:44px;background:var(--paper);box-shadow:0 1px 0 var(--rule)}
+.sitebar .sb{max-width:820px;height:44px;margin:0 auto;padding:0 10px;display:flex;align-items:stretch;gap:2px;overflow-x:auto;scrollbar-width:none;white-space:nowrap}
+.sitebar .sb::-webkit-scrollbar{display:none}
+.sitebar a{flex:none;display:flex;align-items:center;min-height:44px;padding:0 10px;color:var(--indigo);text-decoration:none;font:600 .95rem/1 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;border-radius:var(--r-sm)}
+.sitebar a.sb-home{font-weight:700}
+@media (hover:hover){.sitebar a:hover{background:var(--indigo-soft)}}
+/* guide section menu: one row that scrolls sideways, 44 px targets, current section marked */
+nav.toc{top:44px;z-index:29}
+nav.toc .wrap{display:flex;flex-wrap:nowrap;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;white-space:nowrap;padding:0 10px}
+nav.toc .wrap::-webkit-scrollbar{display:none}
+nav.toc a{flex:none;display:flex;align-items:center;min-height:44px;padding:12px 10px;line-height:1.2;border-radius:0}
+nav.toc a[href$="index.html"]{display:none}
+nav.toc a[aria-current]{color:var(--indigo);font-weight:700;background:var(--indigo-soft);box-shadow:inset 0 -3px 0 var(--indigo)}
+[id]{scroll-margin-top:56px}
+html:has(nav.toc) [id]{scroll-margin-top:100px}
+/* focus: always visible */
+:focus-visible{outline:3px solid var(--indigo)!important;outline-offset:2px!important}
+header.hero :focus-visible,header.top :focus-visible{outline-color:#F2C46D!important}
+/* readable text */
+main p,main li,.why{max-width:68ch}
+@media (max-width:600px){.wrap{padding-left:16px;padding-right:16px}}
+small{font-size:max(12px,.8em)}
+.sig small{font-size:max(12px,.62em)}
+/* hero: title first, then the picture (at most 30% of the screen height, as wide as the text column),
+   so the title and the Today card share the first screen; long intro paragraphs fold to 3 lines (tap to read) */
+header.hero{display:flex;flex-direction:column}
+header.hero > .wrap{order:-1;width:100%}
+header.hero > svg,header.hero > img{max-height:30vh;max-width:780px;margin:14px auto 0}
+header.hero p.fold{position:relative;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;cursor:pointer}
+header.hero p.fold::after{content:"more";position:absolute;right:0;bottom:0;padding:0 2px 0 28px;background:linear-gradient(90deg,rgba(11,15,26,0),#0B0F1A 22px);color:#F2C46D;font-weight:700}
+header.hero .wrap > p ~ p.fold{-webkit-line-clamp:2}
+header.hero p.fold.open{display:block;-webkit-line-clamp:unset}
+header.hero p.fold.open::after{content:none}
+@media (max-width:600px){header.hero > svg,header.hero > img{max-height:28vh} header.hero .meta{font-size:.85rem;gap:0 14px}}
+/* contrast: amber and grey text */
+body .tip b:first-child,body .src > b:first-child,body .star,body .col.l > h3,body .timer.low .tdisp{color:var(--amber-ink)}
+/* one badge system: Learn = solid amber; Given / in booklet = neutral outline; Apply = indigo outline; HL = purple outline; green = done */
+.badge,.fb,.learn,.tag,span.hl,.quiz .subj,.written .wsubj,.wsubj,.pill,.soon{display:inline-block;font:700 .8rem/1.4 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.01em;padding:1px 7px;border:1px solid currentColor;border-radius:var(--r-sm);background:var(--card);vertical-align:middle;white-space:nowrap}
+.learn,.badge.learn{background:var(--amber-ink);border-color:var(--amber-ink);color:#fff}
+.fb,.badge.apply{color:var(--indigo);border-color:var(--indigo)}
+.fb.given,.badge.given,.tag,.quiz .subj,.written .wsubj,.wsubj,.badge.subj{color:var(--ink);border-color:var(--grey)}
+span.hl,.badge.hl{color:var(--purple);border-color:var(--purple)}
+.pill{margin-left:6px}
+.p-done,.badge.done{color:var(--green-ink);border-color:var(--green);background:var(--green-soft)}
+.p-soon,.soon{color:var(--grey);border-color:var(--grey)}
+/* radii: 4 px small things, 8 px boxes */
+.today,.goals,.able,.todaycard,#termbox,.before .bgi,.before .stuck,.quiz button,.go,.notice,.btn,.timer button,.tl,.chip,.plan > div,.step,.block{border-radius:var(--r)}
+/* 44 px targets */
+.go{min-height:44px;display:inline-flex;align-items:center}
+main details>summary{min-height:44px;display:flex;align-items:center;cursor:pointer}
+ul.files a,.files li>a{display:inline-flex;align-items:center;min-height:44px}
+input[type=number],input[type=text],select{min-height:44px}
+#box a#src,a.src{display:inline-flex;align-items:center;min-height:44px}
+#termbox .tb-h button{min-height:44px;min-width:44px}
+.top .crumb{display:flex;flex-wrap:nowrap;align-items:center;gap:0 6px;overflow-x:auto;scrollbar-width:none;white-space:nowrap;margin-bottom:2px}
+.top .crumb::-webkit-scrollbar{display:none}
+.top .crumb a{flex:none;display:inline-flex;align-items:center;min-height:44px;padding-right:4px}
+/* timed blocks: one card for guide plans, review steps and mock plans */
+.plan > div,.block,.step{background:var(--card);border:1px solid var(--rule);padding:12px 16px}
+.plan > div.brk{background:var(--green-soft);border-color:var(--green)}
+.bh{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;margin-bottom:4px}
+.block > .bh{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:4px 10px;align-items:center}
+.plan .bh .bn,.step .bh .bn,.bh .bn{flex:none;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--indigo);color:#fff;font:700 1rem/1 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif}
+.plan .bh > b,.step .bh > b,.bh > b{font-size:1.15rem;line-height:1.25;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;color:var(--ink)}
+.plan .bh .bt,.step .bh .bt,.bh .bt{flex:none;display:inline-block;font:700 .8rem/1.4 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:var(--r-sm);padding:2px 8px}
+.bdone{display:flex;align-items:center;gap:10px;min-height:44px;margin:8px 0 0;padding-top:4px;border-top:1px solid var(--rule);font-weight:600;color:var(--ink-soft);cursor:pointer;max-width:none}
+.bdone input{width:20px;height:20px;margin:0;flex:none;accent-color:var(--green)}
+.block.is-done{border-color:var(--green)} .block.is-done .bn{background:var(--green)} .block.is-done .bdone{color:var(--green-ink)}
+.blocks{display:grid;gap:10px;margin:16px 0}
+.blocks > .block p{margin:4px 0 0}
+.brkc{background:var(--green-soft);border:1px solid var(--green);border-radius:var(--r);padding:8px 16px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* Today card on guides: goals, plan chips, warm-up */
+.todaycard{background:var(--card);border:2px solid var(--indigo);padding:14px 16px 6px;margin:20px 0 10px}
+.todaycard .tc-goals > *{background:transparent!important;border:0!important;padding:0!important;margin:0!important;box-shadow:none!important;border-radius:0!important}
+.todaycard .tc-goals h2,.todaycard .tc-goals h3,.todaycard .tc-goals > * > p:first-child,.todaycard .tc-goals > * > b:first-child{display:block;font:600 1.25rem/1.25 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;color:var(--ink);margin:0 0 6px}
+.todaycard .tc-goals ol,.todaycard .tc-goals ul{margin:0;padding-left:22px}
+.todaycard .tc-goals li{margin:3px 0}
+.todaycard .tc-plan{margin:0 0 12px;padding-bottom:12px;border-bottom:1px solid var(--rule)}
+@media (max-width:600px){.todaycard .chips{display:grid;grid-template-columns:1fr 1fr;gap:6px}.todaycard .chip{padding:4px 10px;font-size:.9rem}.todaycard .chip.c0{grid-column:1 / -1}}
+.todaycard .tc-h{font-weight:700;margin:0 0 6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:4px;min-height:44px;padding:4px 12px;border:1px solid var(--indigo);background:var(--card);color:var(--indigo);text-decoration:none;font-size:.95rem;line-height:1.2}
+.chip b{font-weight:700}
+.chip.done{border-color:var(--green);color:var(--green-ink);background:var(--green-soft)}
+.chip.done::before{content:"\2713";font-weight:700}
+.todaycard .warmup{border:0;border-top:1px solid var(--rule);border-radius:0;padding:12px 0 4px;margin:12px 0 0;background:transparent}
+.todaycard .tc-plan + .warmup{border-top:0;margin-top:0;padding-top:0}
+.todaycard .warmup h2{font-size:1.15rem}
+.sitebar + .notice{margin:8px max(16px,calc((100% - 780px) / 2))}
+@media print{.sitebar,.notice,#termbox,.go,.chips,.bdone{display:none!important}nav.toc{position:static}.quiz button{display:list-item}.todaycard{border-width:1px}}
+</style><!--enhance:end-->
+</head>
+<body><!--enhance:start--><nav class="sitebar" aria-label="Study site"><div class="sb"><a class="sb-home" href="../index.html#today">← Today</a><a href="../flashcards.html">Flashcards</a><a href="../progress.html">Progress</a><a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">Sheet</a></div></nav><!--enhance:end-->
+
+
+<header class="hero">
+  <svg class="map" viewBox="0 0 1000 640" role="img" aria-label="Classical conditioning in your class's Skittles experiment: before conditioning the buzzer causes no salivation and the Skittle causes salivation; during conditioning the buzzer and Skittle are paired many times; after conditioning the buzzer alone causes salivation">
+    <rect width="1000" height="640" fill="#0B0F1A"/>
+    <g font-family="Arial,Helvetica,sans-serif" text-anchor="middle">
+      <g font-size="30" font-weight="bold" letter-spacing="1">
+        <text x="420" y="44" fill="#F2C46D">STIMULUS</text>
+        <text x="845" y="44" fill="#8FD9A8">RESPONSE</text>
+      </g>
+      <!-- row labels -->
+      <g fill="#1B2550" stroke="#9FB3FF" stroke-width="2">
+        <rect x="20" y="70" width="190" height="110" rx="10"/>
+        <rect x="20" y="195" width="190" height="110" rx="10"/>
+        <rect x="20" y="320" width="190" height="130" rx="10"/>
+        <rect x="20" y="465" width="190" height="130" rx="10"/>
+      </g>
+      <g fill="#DCE3FF" font-size="30" font-weight="bold">
+        <text x="115" y="135">BEFORE</text>
+        <text x="115" y="260">BEFORE</text>
+        <text x="115" y="378">DURING</text>
+        <text x="115" y="535">AFTER</text>
+      </g>
+      <text x="115" y="418" fill="#C9D1E6" font-size="26">many times</text>
+      <!-- stimulus boxes -->
+      <rect x="230" y="70" width="380" height="110" rx="10" fill="#26292F" stroke="#9AA3AD" stroke-width="2"/>
+      <rect x="230" y="195" width="380" height="110" rx="10" fill="#2A2410" stroke="#F2C46D" stroke-width="2"/>
+      <rect x="230" y="320" width="380" height="130" rx="10" fill="#2A2410" stroke="#F2C46D" stroke-width="2"/>
+      <rect x="230" y="465" width="380" height="130" rx="10" fill="#123222" stroke="#8FD9A8" stroke-width="3"/>
+      <g font-size="32" fill="#FFFFFF">
+        <text x="420" y="120">Buzzer</text>
+        <text x="420" y="245">Skittle</text>
+        <text x="420" y="375">Buzzer + Skittle</text>
+        <text x="420" y="520">Buzzer alone</text>
+      </g>
+      <g font-size="28" font-weight="bold">
+        <text x="420" y="160" fill="#C8CED6">NS</text>
+        <text x="420" y="285" fill="#F2C46D">UCS</text>
+        <text x="420" y="420" fill="#F2C46D">NS + UCS</text>
+        <text x="420" y="567" fill="#8FD9A8">CS</text>
+      </g>
+      <!-- arrows -->
+      <g stroke="#FFFFFF" stroke-width="4" fill="#FFFFFF">
+        <line x1="620" y1="125" x2="690" y2="125"/><polygon points="690,113 712,125 690,137" stroke="none"/>
+        <line x1="620" y1="250" x2="690" y2="250"/><polygon points="690,238 712,250 690,262" stroke="none"/>
+        <line x1="620" y1="385" x2="690" y2="385"/><polygon points="690,373 712,385 690,397" stroke="none"/>
+        <line x1="620" y1="530" x2="690" y2="530"/><polygon points="690,518 712,530 690,542" stroke="none"/>
+      </g>
+      <!-- response boxes -->
+      <rect x="725" y="70" width="255" height="110" rx="10" fill="#26292F" stroke="#9AA3AD" stroke-width="2"/>
+      <rect x="725" y="195" width="255" height="110" rx="10" fill="#2B1838" stroke="#E0B3FF" stroke-width="2"/>
+      <rect x="725" y="320" width="255" height="130" rx="10" fill="#2B1838" stroke="#E0B3FF" stroke-width="2"/>
+      <rect x="725" y="465" width="255" height="130" rx="10" fill="#123222" stroke="#8FD9A8" stroke-width="3"/>
+      <g font-size="32" fill="#FFFFFF">
+        <text x="852" y="135">No saliva</text>
+        <text x="852" y="245">Saliva</text>
+        <text x="852" y="375">Saliva</text>
+        <text x="852" y="520">Saliva</text>
+      </g>
+      <g font-size="28" font-weight="bold">
+        <text x="852" y="285" fill="#E0B3FF">UCR</text>
+        <text x="852" y="420" fill="#E0B3FF">UCR</text>
+        <text x="852" y="567" fill="#8FD9A8">CR</text>
+      </g>
+    </g>
+  </svg>
+  <div class="wrap">
+    <h1>Psychology HL: evaluating research, classical and operant conditioning</h1>
+    <p>Study guide for Saturday 14 November 2026, Psychology session 2 of 4. The picture is your own class's Skittles experiment from September, drawn as classical conditioning. At first the buzzer means nothing to you (NS, neutral stimulus) and only the sweet makes your mouth water. After the buzzer and the sweet come together many times, the buzzer alone makes your mouth water. That is learning by association, and the second half of today explains it. The first half teaches you how to judge whether a study like that one can be trusted.</p>
+    <div class="meta"><span>Psychology: about 2 hours</span><span>Psychology HL catch-up, session 2 of 4</span><span>Sources: official IB Psychology guide (first assessment 2027), your class slides and worksheets</span></div>
+    <p class="note-light">Checked against the official IB Psychology guide (first assessment 2027) in your Drive folder: syllabus lines on p25, p27-28 and p33, the glossary on p62-69 and the IA list on p55-56. Words your class uses that are not in the guide are marked "class word".</p>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <a href="../index.html" style="font-weight:700;color:var(--indigo)">All days</a><a href="#today">Today also</a><a href="#plan">Plan</a><a href="#designs">Designs</a><a href="#relval">Reliability, validity</a><a href="#threats">Biases</a><a href="#external">Generalising</a><a href="#task">RM04 answers</a><a href="#cog">Cognitive approach</a><a href="#classical">Classical</a><a href="#operant">Operant</a><a href="#quiz">Quiz</a><a href="#end">Finish</a>
+  </div>
+</nav>
+
+<main class="wrap"><!--enhance:start-->
+<section class="todaycard" aria-label="Today"><div class="tc-plan"><p class="tc-h">Today: tap a block to jump to it</p><div class="chips"><a class="chip c0" href="#before"><b>Block 0</b> · Before you start</a><a class="chip" href="#wu"><b>Warm-up</b> · 8 min</a><a class="chip" href="#b1" data-n="1"><b>Block 1</b> · 28 min</a><a class="chip" href="#b2" data-n="2"><b>Block 2</b> · 28 min</a><a class="chip" href="#b3" data-n="3"><b>Block 3</b> · 21 min</a><a class="chip" href="#b4" data-n="4"><b>Block 4</b> · 40 min</a></div></div><div class="tc-goals"><!--enhance:end--><!--enhance:moved--><div class="today" id="goals" style="border-left-color:var(--indigo)">
+  <h2>Today you will be able to</h2>
+  <ul>
+    <li>choose an experimental <span class="term" data-t="design" tabindex="0" role="button">design</span> and spot <span class="term" data-t="order effects" tabindex="0" role="button">order effects</span>, <span class="term" data-t="confounding variable" tabindex="0" role="button">confounds</span> and <span class="term" data-t="bias" tabindex="0" role="button">biases</span> in a study you have never seen;</li>
+    <li>judge a study's <span class="term" data-t="reliable" tabindex="0" role="button">reliability</span> and its internal and <span class="term" data-t="external validity" tabindex="0" role="button">external validity</span>, and <span class="term" data-t="suggest" tabindex="0" role="button">suggest</span> fixes;</li>
+    <li><span class="term" data-t="explain" tabindex="0" role="button">explain</span> classical and operant conditioning with their key terms and use them to change a behaviour.</li>
+  </ul>
+</div><!--enhance:/moved--><!--enhance:start--></div>
+<section class="warmup" id="wu" aria-label="Warm-up from earlier days">
+<h2>Warm-up from earlier days (8 min)</h2>
+<p class="wu-how">Answer from memory before you read on: write the answer on paper, then tap to check it.</p><ol>
+<li><div class="wu-m">Business · 1.3 · from Thu 12 Nov</div><div class="wu-f">Vision statement vs mission statement</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">Vision: the long-term ideal future the organisation wants to reach. Mission: its purpose now, what it does, for whom and what it values. <a href="../guides/2026-11-06-business-sl-1.1-1.6.html#s13">open the section</a></div></details></li>
+<li><div class="wu-m">English · Satire · from Fri 13 Nov</div><div class="wu-f">Target (of a cartoon)</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">Who or what the cartoon criticises. <a href="../guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html#satire">open the section</a></div></details></li>
+<li><div class="wu-m">Business · 1.5 · from Thu 12 Nov</div><div class="wu-f">Six internal economies of scale</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">Purchasing (bulk buying), technical, financial, marketing, managerial, risk-bearing. <a href="../guides/2026-11-06-business-sl-1.1-1.6.html#s15">open the section</a></div></details></li>
+<li><div class="wu-m">English · Satire · from Fri 13 Nov</div><div class="wu-f">Horatian vs Juvenalian satire</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">Horatian: gentle, amused, invites us to laugh at ourselves. Juvenalian: harsh, angry, attacks serious harm. <a href="../guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html#satire">open the section</a></div></details></li>
+<li><div class="wu-m">English · Cartoons · from Fri 13 Nov</div><div class="wu-f">Caricature vs exaggeration</div><details><summary>Write the answer on paper, then tap</summary><div class="wu-b">Caricature: a real person with features stretched or shrunk. Exaggeration: anything shown as more extreme than in real life. <a href="../guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html#visual">open the section</a></div></details></li>
+</ol>
+<p class="wu-foot">Missed one? Put it in the <a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">Error log</a>.</p></section>
+</section><!--enhance:end-->
+
+
+<!--enhance:origin-->
+<div id="warmup"></div>
+
+<div class="today" id="today">
+  <h2>Today also (Saturday 14 November)</h2>
+  <p style="margin:0 0 4px">Today is a 4-hour day. Psychology (this page) is 2 hours. Do the other two hours first or after, with a break in between.</p>
+  <ul>
+    <li><b>1 h timed Maths, sequences, no calculator:</b> open the <a href="../practice/2026-11-07-timed-maths-sequences.html">timed set page</a> and follow it. It links the <a href="https://drive.google.com/file/d/1HUMbO0pFdie-qUVSvB5vzkLBLLErWCnL/view">1.2-1.4 + 1.8 Sequences and Series (school 1.2-1.5) - Practice Questions (IB Questionbank)</a> and the <a href="https://drive.google.com/file/d/13_E6OeummnBtiEB9_BRN9tZCKe2HhilT/view">Mark Scheme</a>.</li>
+    <li><b>1 h TOK, exhibition prep:</b> work through <a href="https://drive.google.com/file/d/1k4p3RV7H_Qlt3tY9MRwgu9gJwx4R994Y/view">TOK Exhibition - Independent Investigation Worksheet (28 Oct 2026)</a>, using <a href="https://drive.google.com/file/d/174JzLTpQ04ZtAsEBQeunwMmylTXKU5Jh/view">REF - TOK Subject Report May 2026 - Exhibition Section (pp. 13-18)</a> and <a href="https://drive.google.com/file/d/1ZVIRvkEVU_Gc0R5pVikFLhjWLaJoXixZ/view">REF - TOK Exhibition Assessment Instrument (holistic rubric, image)</a>.</li>
+  </ul>
+</div>
+
+
+
+
+<section id="plan">
+  <h2 style="margin-top:28px">How to spend the two Psychology hours</h2>  <p style="margin:10px 0 0">Four blocks and one short break. Do them in order and tick each step off on paper. On Monday (<a href="2026-11-09-psychology-hl-frame-research-methods.html">session 1 page</a>) you learned variables, true and quasi-experiments, hypotheses and sampling; today builds on that. The page teaches everything in your slides, so you only open the class files for the tasks.</p>
+  <p style="margin:10px 0 0"><b>Short on time: skip ★ steps, still do the quiz.</b></p>
+  <div class="plan"><!--terms:start--><div id="before" class="before block0"><details open>
+  <summary><span class="bn" aria-hidden="true">0</span><span class="b0t"><span class="sr">Block 0: </span>Before you start</span><span class="bt">about 6 min</span></summary>
+  <p style="margin:10px 0 0">This page builds on the ideas below. Read them first so you do not have to stop later (about 6 min, not counted in the blocks below). Words with a <span style="border-bottom:2px dotted var(--indigo)">dotted underline</span> anywhere on the page: tap them for a short explanation.</p>
+  <div class="bgi"><h3>What it means to evaluate a study</h3><p>To <b><span class="term" data-t="evaluate" tabindex="0" role="button">evaluate</span></b> a study is to weigh up its strengths and its limitations, then decide how far you can trust its conclusion. A study is only as good as the way it was done.</p><p>Three questions do most of the work:</p><ul><li><b>Cause:</b> did the thing the researcher changed really cause the result, or could something else explain it?</li><li><b>Measuring:</b> was the behaviour measured in a way that is consistent and accurate?</li><li><b>Reach:</b> would the result also hold for other people and in real life?</li></ul><p>Today's first half gives each of these questions its proper name.</p></div><div class="bgi"><h3>Monday's experiment words, in one example</h3><p>A researcher wants to know if music helps memory. She <b>changes</b> one thing: music or silence. That is the <b><span class="term" data-t="iv" tabindex="0" role="button">IV</span></b> (independent variable). She <b>measures</b> one thing: how many of 20 words people recall. That is the <b><span class="term" data-t="dv" tabindex="0" role="button">DV</span></b> (dependent variable).</p><p>"Music" and "silence" are the two <b><span class="term" data-t="condition" tabindex="0" role="button">conditions</span></b>. The people taking part are <b><span class="term" data-t="participant" tabindex="0" role="button">participants</span></b>. If chance (a coin toss) decides who goes into which condition, that is <b><span class="term" data-t="random allocation" tabindex="0" role="button">random allocation</span></b>. Anything else that could change the score, such as a noisy room for one group only, is a <b>confounding variable</b>.</p></div><div class="bgi"><h3>Consistent is not the same as correct</h3><p>Imagine throwing darts. If all your darts land close together, you are <b>consistent</b>. If they land on the bullseye, you are <b>accurate</b>.</p><p>You can be consistent but wrong: all darts close together in the top corner. In research, consistent is called <b>reliable</b> and accurate is called <b><span class="term" data-t="valid" tabindex="0" role="button">valid</span></b>. A good measure needs both.</p></div><div class="bgi"><h3>Reflexes: responses you do not choose</h3><p>A <b><span class="term" data-t="reflex" tabindex="0" role="button">reflex</span></b> is something your body does automatically, without you deciding. Your mouth waters when you smell food. You blink when something flies at your eye. You jump at a sudden loud bang.</p><p>You cannot stop a reflex just by wanting to. Classical conditioning is about how a new signal can come to trigger one of these automatic responses.</p></div><div class="bgi"><h3>Learning by linking things together</h3><p>Your brain links things that keep happening together. If your phone's message sound has often been followed by news from a friend, you may feel a little lift just hearing it. The smell of a certain shampoo may remind you of a holiday.</p><p>Nobody taught you these links on purpose. They formed because two things happened together many times. Psychologists call this learning by <b><span class="term" data-t="association" tabindex="0" role="button">association</span></b>.</p></div><div class="bgi"><h3>Consequences shape what we do</h3><p>What happens <b>after</b> we do something changes how often we do it again. Praise for helping makes helping more likely. A fine for parking in the wrong place makes it less likely.</p><p>In operant conditioning, "positive" and "negative" are used like plus and minus in maths: positive means something is <b>added</b>, negative means something is <b>taken away</b>. They do not mean good and bad.</p></div>
+  <p class="stuck"><b>Still stuck on a word?</b> Do not search for long. Write it in the <b>Error log</b> tab of the study sheet starting with "word:" (for example "word: composition") and carry on. It will be explained in the next guide.</p>
+</details></div><!--terms:end-->
+
+    <div id="b1">
+      <div class="bh"><b>Block 1 · 28 min</b><span>Evaluating research</span></div>
+      <ol>
+        <li>Read the <a href="#designs">designs section</a>, do its "Finish it" and its self-check. <span class="t">(7 min)</span></li>
+        <li>Same for the <a href="#relval">reliability and validity section</a>. <span class="t">(6 min)</span></li>
+        <li>Same for the <a href="#threats">biases section</a>. <span class="t">(8 min)</span></li>
+        <li>Same for the <a href="#external">generalising section</a>. <span class="t">(5 min)</span></li>
+        <li>★ If time: in <a href="https://drive.google.com/file/d/1cZcJIRkFGJhbWusL1hGaQZF7k2K-Wq3H/view">RM01 Research methodology - What is psychology, quantitative research, experiments, sampling, evaluating research - Slides (class)</a>, answer the quiz slides 72-84 and 134-148 out loud; check with the key in "Extra, not needed today" below the blocks. <span class="t">(2 min)</span></li>
+      </ol>
+    </div>
+    <div id="b2">
+      <div class="bh"><b>Block 2 · 28 min</b><span>Apply it: the breathing study (RM04)</span></div>
+      <ol>
+        <li>Open <a href="https://drive.google.com/file/d/1flZ_D46k42AkC-ctI-Syh2qtVWKygnG1/view">RM04 Research methodology - Evaluating research, breathing study - Application task (class)</a>. Read the study twice and underline every problem you see. <span class="t">(2 min)</span></li>
+        <li>Answer <b>questions 1, 2 and 3</b> on paper, open book. 4 marks each, about 6 minutes each. <span class="t">(18 min)</span></li>
+        <li>★ If time: question 4. <span class="t">(6 min)</span></li>
+        <li>No mark scheme is in the Drive: mark yourself with the <a href="#task">model answers and checklists</a> on this page. Questions 5 and 6 are for Saturday 21 November. <span class="t">(2 min)</span></li>
+      </ol>
+    </div>
+  </div>
+  <p class="note" style="text-align:center"><b>Break, 3 minutes.</b> Stand up, drink some water, look out of a window. Then Block 3.</p>
+  <div class="plan">
+    <div id="b3">
+      <div class="bh"><b>Block 3 · 21 min</b><span>The <span class="term" data-t="cognitive approach" tabindex="0" role="button">cognitive approach</span> and classical conditioning</span></div>
+      <ol>
+        <li>Read the <a href="#cog">cognitive approach section</a>. <span class="t">(2 min)</span></li>
+        <li>Read the <a href="#classical">classical conditioning section</a>. <span class="t">(6 min)</span></li>
+        <li>Do its "Finish it" and self-check. <span class="t">(3 min)</span></li>
+        <li>Open <a href="https://drive.google.com/file/d/1goFIwsIryUI9nB4CuG9HAXkTCPv5v-X0/view">LC03 Learning and cognition - Classical conditioning, Skittles experiment - Worksheet (class, 14 Sep)</a>. Write short notes for step 2, step 3 (measurement and responsibility only) and step 4. Check them with the "LC03 check points" box. <span class="t">(6 min)</span></li>
+        <li>★ If time: <a href="https://drive.google.com/file/d/1c28EekOLQbyQaaCn7iZbxiuwkcN7n6pE/view">LC04 Learning and cognition - Classical conditioning - Revision worksheet (Giddens)</a>, <b>activities 2 and 6</b>, 3 sentences each; check with the "LC04 check points" box. <span class="t">(4 min)</span></li>
+      </ol>
+    </div>
+    <div id="b4">
+      <div class="bh"><b>Block 4 · 40 min</b><span>Operant conditioning, quiz, Error log</span></div>
+      <ol>
+        <li>Read the <a href="#operant">operant conditioning section</a>. <span class="t">(6 min)</span></li>
+        <li>Do its "Finish it" and self-check. <span class="t">(3 min)</span></li>
+        <li>Do the "Chris" task from <a href="https://drive.google.com/file/d/1DP96OHhubbSrZTsFbdy0U4VuoAbPIXqo/view">LC06 Learning and cognition - Operant conditioning - Slides (class)</a> out loud (the task is quoted in the operant section), then open the model plan. <span class="t">(2 min)</span></li>
+        <li>★ If time: <a href="https://drive.google.com/file/d/1mtWzn46CN5Gu0s5RIE2uwnzKCCB8fo4m/view">LC08 Learning and cognition - Operant conditioning - Revision worksheet (Giddens)</a>, <b>activities 4 and 10</b> in note form; check with the "LC08 check points" box. <span class="t">(3 min)</span></li>
+        <li><a href="#quiz">Quiz</a> Part A: the 7 multiple-choice questions. <span class="t">(4 min)</span></li>
+        <li>Quiz Part B: written questions 8 and 9 on paper (6 minutes each), then mark them with the model answers. <span class="t">(14 min)</span></li>
+        <li>★ If time: written question 10, then mark it. <span class="t">(6 min)</span></li>
+        <li>Error log and Fix-it (see <a href="#end">Before you close this</a>). <span class="t">(2 min)</span></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="tip"><b>Stuck?</b> 1. Look at the worked example in that section again. 2. Redo the section's self-check. 3. Still stuck after 10 minutes? Write it in the Error log as "ask teacher" and move on.</div>
+
+  <p><b>Files for today in the IB folder</b></p>
+  <ul class="files">
+    <li><a href="https://drive.google.com/file/d/1flZ_D46k42AkC-ctI-Syh2qtVWKygnG1/view">RM04 Research methodology - Evaluating research, breathing study - Application task (class)</a>, Q1-4 (model answers on this page)</li>
+    <li><a href="https://drive.google.com/file/d/1goFIwsIryUI9nB4CuG9HAXkTCPv5v-X0/view">LC03 Learning and cognition - Classical conditioning, Skittles experiment - Worksheet (class, 14 Sep)</a></li>
+    <li><a href="https://drive.google.com/file/d/1c28EekOLQbyQaaCn7iZbxiuwkcN7n6pE/view">LC04 Learning and cognition - Classical conditioning - Revision worksheet (Giddens)</a> ★</li>
+    <li><a href="https://drive.google.com/file/d/1DP96OHhubbSrZTsFbdy0U4VuoAbPIXqo/view">LC06 Learning and cognition - Operant conditioning - Slides (class)</a>, the "Chris" task</li>
+    <li><a href="https://drive.google.com/file/d/1mtWzn46CN5Gu0s5RIE2uwnzKCCB8fo4m/view">LC08 Learning and cognition - Operant conditioning - Revision worksheet (Giddens)</a> ★</li>
+    <li>Taught on this page, open only to look something up: <a href="https://drive.google.com/file/d/1cZcJIRkFGJhbWusL1hGaQZF7k2K-Wq3H/view">RM01 slides (60-148)</a>, <a href="https://drive.google.com/file/d/1lkfhHQ-iViZRwBVG8Nt9_yxnMVmHmsNu/view">LC01 Learning and cognition - Cognitive approach, assumptions and cognitive misers - Slides (class)</a>, <a href="https://drive.google.com/file/d/18G55fgHqH329URQeM2Ykm0o_JpWRWZsf/view">LC02 Learning and cognition - Classical conditioning - Slides (class)</a>, <a href="https://drive.google.com/file/d/1g3T5D0BLCgjobVuQfgqqGmJvEbqFsalW/view">LC07 Learning and cognition - Operant conditioning, Dallery et al. 2017 - Supporting study (class screenshot, 18 Sep)</a>, <a href="https://drive.google.com/file/d/1Khqsn6PrxoS5UXAEKBpu5G_XG5Viyvtq/view">REF - IB Psychology Subject Guide (official, first assessment 2027)</a></li>
+  </ul>
+  <div class="legend" aria-label="Legend for the markers">
+    <span><span class="learn" style="margin-left:0">Learn word for word</span> official definitions and statements: you must be able to write them exactly</span>
+    <span><span class="fb" style="margin-left:0">Understand and apply</span> skills: you must be able to use them on a study you have never seen</span>
+  </div>
+
+  <details id="slidekey"><summary>Extra, not needed today: slide quiz answer key, free reading, spelling</summary>
+    <p style="font-size:.95rem">Each RM01 quiz slide comes twice: the question, then the same slide with the answer marked. This key is ours, checked against the official guide's definitions. If a slide marks something different, trust this key and tell your teacher (slide 97 marks A; by the guide's definition it is B).</p>
+    <div class="tablewrap"><table>
+      <tr><th>Slides</th><th>Answer</th><th>Why, in one line</th></tr>
+      <tr><td>73-74</td><td class="c">D</td><td>The IV is the variable the researcher changes.</td></tr>
+      <tr><td>75-76</td><td class="c">D</td><td>Repeating a study checks that the finding is reliable.</td></tr>
+      <tr><td>77-78</td><td class="c">D</td><td>Operationalising says exactly what is measured and how.</td></tr>
+      <tr><td>79-80</td><td class="c">A</td><td>The same people do every condition, so order effects can creep in.</td></tr>
+      <tr><td>81-82</td><td class="c">B</td><td>Independent samples: each person is randomly put in one condition only.</td></tr>
+      <tr><td>83-84</td><td class="c">C</td><td>Being open about limitations keeps research credible.</td></tr>
+      <tr><td>96-97</td><td class="c">B</td><td>Random allocation, not the setting, is the difference.</td></tr>
+      <tr><td>98-105</td><td class="c">B, C, C, A</td><td>Natural IV; cross-sectional = one point in time; one event may not be like others; longitudinal = same people over years.</td></tr>
+      <tr><td>135-136</td><td class="c">C</td><td>Internal validity: did the IV cause the change in the DV?</td></tr>
+      <tr><td>137-138</td><td class="c">C</td><td>An artificial setting lowers ecological validity, not internal validity.</td></tr>
+      <tr><td>139-140</td><td class="c">B</td><td>Deception hides the aim (slide 123).</td></tr>
+      <tr><td>141-142</td><td class="c">A</td><td>Counterbalancing: conditions in different orders.</td></tr>
+      <tr><td>143-144</td><td class="c">D</td><td>Researcher triangulation: several researchers rate the same data.</td></tr>
+      <tr><td>145-146</td><td class="c">A</td><td>A highly controlled lab is least like real life.</td></tr>
+      <tr><td>147-148</td><td class="c">A</td><td>Funding bias: whoever pays may sway the result.</td></tr>
+      <tr><td>LC02 mini quiz</td><td class="c">C, B, B</td><td>Extinction; a UCS gives a natural response; radiation was the UCS.</td></tr>
+      <tr><td>LC06 mini quiz</td><td class="c">C, D, D, C, D, C</td><td>Reward or punishment; law of effect; adding something unpleasant; the beep stops when you buckle up; a set number of miles is fixed ratio; accidental reinforcement.</td></tr>
+    </table></div>
+    <p style="font-size:.95rem"><b>Free reading</b>, only if a slide stays unclear (Simply Psychology, free, no login): <a href="https://www.simplypsychology.org/classical-conditioning.html">Classical conditioning</a>, <a href="https://www.simplypsychology.org/operant-conditioning.html">Operant conditioning</a>, <a href="https://www.simplypsychology.org/validity.html">Validity</a>, <a href="https://www.simplypsychology.org/demand-characteristics.html">Demand characteristics</a>. They go further than the IB needs: skip anything this page does not mention. One word differs: Simply Psychology uses "expectancy effect" for the researcher's expectations; your deck uses it for participants doing what they think is expected.</p>
+    <p style="font-size:.95rem"><b>Spelling and format.</b> The real papers have no multiple choice; the quiz uses it only so the page can mark it. Quotes keep the guide's American spelling (generalizability); British spelling is fine in your answers.</p>
+  </details>
+</section>
+
+<!-- =============================== DESIGNS =============================== -->
+<section class="topic" id="designs">
+  <div class="kicker">Research methods · guide p28, p55-56, glossary p67 · RM01 slides 60-70 and 124-127</div>
+  <h2>Experimental designs, order effects and counterbalancing</h2>
+  <p class="guiding">Does each person do one condition, or all of them? That choice decides what can go wrong.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="d1"><span><span class="term" data-t="describe" tabindex="0" role="button">Describe</span> <span class="term" data-t="independent samples" tabindex="0" role="button">independent samples</span>, <span class="term" data-t="repeated measures" tabindex="0" role="button">repeated measures</span> and <span class="term" data-t="matched pairs" tabindex="0" role="button">matched pairs</span> designs</span></label>
+    <label><input type="checkbox" data-k="d2"><span>Give "The advantages and disadvantages of different research methods" (p28) for each design, and choose one for a research question</span></label>
+    <label><input type="checkbox" data-k="d3"><span>Explain order effects and how <span class="term" data-t="counterbalancing" tabindex="0" role="button">counterbalancing</span> controls them</span></label>
+  </div>
+
+  <p>The <b>design</b> says how participants are spread over the conditions. Your deck teaches three (slides 62-68); the guide lists their typical problems (<span class="term" data-t="participant variables" tabindex="0" role="button">participant variability</span>, practice and order effects) for the IA (p55-56).</p>
+  <div class="cards">
+    <div><h4>Independent samples</h4><p><span class="lab">Who:</span> different people in each condition, by random allocation</p><p><span class="lab">Good:</span> no order effects; harder to guess the aim</p><p><span class="lab">Problem:</span> participant variables: the groups may differ by chance</p></div>
+    <div><h4>Repeated measures</h4><p><span class="lab">Who:</span> the same people do every condition</p><p><span class="lab">Good:</span> each person is compared with themselves; fewer people needed</p><p><span class="lab">Problem:</span> order effects; easier to guess the aim; needs two equally hard sets of materials</p></div>
+    <div><h4>Matched pairs</h4><p><span class="lab">Who:</span> people are pre-tested, paired with someone similar, one of each pair per condition</p><p><span class="lab">Good:</span> groups balanced on that trait; no order effects</p><p><span class="lab">Problem:</span> pre-testing takes time; if one drops out, the pair is lost</p></div>
+  </div>
+  <div class="quote">Repeated measures design: "A research design in which the same group of participants is measured or tested more than once under different conditions. This design allows for the examination of changes within the same individuals." <span class="learn">Learn word for word</span><small>Guide glossary, p67</small></div>
+  <p><b>Participant variables</b> are differences between people (ability, mood, language level) that could affect the DV.</p>
+
+  <h3>Order effects and counterbalancing</h3>
+  <p><b>Order effects</b> are changes in performance caused by the order of the conditions, not by the IV (slide 124): a <b><span class="term" data-t="practice effect" tabindex="0" role="button">practice effect</span></b> (better the second time) or a <b>fatigue or boredom effect</b> (worse the second time). <b>Counterbalancing</b> controls them: half the participants do A then B, the other half B then A (slide 127). Practice or tiredness now affects both conditions equally. It balances order effects out; it does not stop them.</p>
+  <figure>
+    <svg viewBox="0 0 700 250" role="img" aria-label="Counterbalancing: group 1 does condition A first and B second; group 2 does B first and A second">
+      <g font-family="Arial,Helvetica,sans-serif" font-size="24" text-anchor="middle">
+        <text x="390" y="30" fill="#4A5862" font-weight="bold">1st</text>
+        <text x="590" y="30" fill="#4A5862" font-weight="bold">2nd</text>
+        <rect x="20" y="50" width="200" height="80" rx="10" fill="#E6EAF7" stroke="#2F47A6" stroke-width="2"/>
+        <rect x="20" y="155" width="200" height="80" rx="10" fill="#E6EAF7" stroke="#2F47A6" stroke-width="2"/>
+        <text x="120" y="98" fill="#2F47A6" font-weight="bold">Group 1</text>
+        <text x="120" y="203" fill="#2F47A6" font-weight="bold">Group 2</text>
+        <rect x="300" y="50" width="180" height="80" rx="10" fill="#FBF1DF" stroke="#B8761A" stroke-width="2"/>
+        <rect x="500" y="50" width="180" height="80" rx="10" fill="#E3F2E8" stroke="#2E7D4F" stroke-width="2"/>
+        <rect x="300" y="155" width="180" height="80" rx="10" fill="#E3F2E8" stroke="#2E7D4F" stroke-width="2"/>
+        <rect x="500" y="155" width="180" height="80" rx="10" fill="#FBF1DF" stroke="#B8761A" stroke-width="2"/>
+        <g font-size="30" font-weight="bold" fill="#1E2A33">
+          <text x="390" y="101">A</text><text x="590" y="101">B</text>
+          <text x="390" y="206">B</text><text x="590" y="206">A</text>
+        </g>
+        <g stroke="#1E2A33" stroke-width="3"><line x1="228" y1="90" x2="292" y2="90"/><line x1="228" y1="195" x2="292" y2="195"/></g>
+      </g>
+    </svg>
+    <figcaption>Counterbalancing: each condition comes first for half the people and second for the other half.</figcaption>
+  </figure>
+
+  <div class="worked"><b>Worked example 1: choose a design.</b> "Does chewing gum improve concentration?" You have 30 students. <span class="fb">Understand and apply</span>
+    <ol>
+      <li><span class="term" data-t="operationalise" tabindex="0" role="button">Operationalise</span>: IV = chewing mint gum or not during a 5-minute spot-the-difference task; DV = differences found.</li>
+      <li>People differ a lot at spotting details, so participant variables are a big risk.</li>
+      <li>Choose <b>repeated measures</b>: each student is compared with themselves, and you get 30 scores per condition instead of 15.</li>
+      <li>Doing the task twice gives practice, so use two equally hard pictures and <b>counterbalancing</b>: 15 do gum first, 15 do no gum first.</li>
+    </ol>
+    <details><summary>Why this step? Why does step 4 need two different pictures?</summary><p>With the same picture, students would remember where the differences are, so the second score would rise because of memory, not gum. The two pictures must be equally hard, or picture difficulty becomes a confounding variable.</p></details></div>
+
+  <div class="worked"><b>Finish it.</b> "Does reading on paper or on a screen give better recall?" You have only 12 students and some are much better readers than others. Step 1 is done: IV = reading a 300-word article on paper or on a tablet; DV = correct answers out of 10. Write the design you would choose and one control, then open.
+    <details><summary>Answer</summary><p>Repeated measures (each student compared with themselves, which matters with only 12 people of very different reading ability), using two articles of equal length and difficulty, and counterbalancing: 6 read on paper first, 6 on the tablet first. Matched pairs (pre-test reading, pair similar readers) is also a good answer.</p></details></div>
+
+  <div class="tip"><b>Exam traps.</b> (1) Repeated measures needs <b>fewer</b> participants. RM01 slide 63 says the opposite: a slip on the slide. Slide 66 ("one group might just have better memory skills") sits under repeated measures but describes independent samples. (2) Order effects only happen when the same people do more than one condition: never give them as a problem of independent samples.</div>
+
+  <details><summary>Self-check: designs (write two key words for each, then open)</summary>
+    <ol>
+      <li>15 people learn one word list in the morning and another in the evening. Design? One problem?</li>
+      <li>You need 20 scores per condition. How many people for independent samples, and for repeated measures?</li>
+    </ol>
+    <p><b>Answers.</b> 1: repeated measures; order effects (practice, or tiredness in the evening) and lists that may not be equally hard. 2: 2 × 20 = 40, and 20.</p>
+  </details>
+</section>
+
+<!-- =============================== RELIABILITY AND VALIDITY =============================== -->
+<section class="topic" id="relval">
+  <div class="kicker">Research considerations · guide p27 and glossary p67-69 · RM01 slides 107-114 and 118</div>
+  <h2>Reliability and validity</h2>
+  <p class="guiding">A bathroom scale that always shows the same weight is reliable. If that weight is your real weight, it is also valid (slide 109).</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="r1"><span>Define reliability (guide glossary) and explain test-retest and <span class="term" data-t="inter-rater" tabindex="0" role="button">inter-rater reliability</span></span></label>
+    <label><input type="checkbox" data-k="r2"><span>Explain the kinds of validity the guide lists: "Validity (internal, external, content, face, <span class="term" data-t="construct" tabindex="0" role="button">construct</span>)" (p27)</span></label>
+    <label><input type="checkbox" data-k="r3"><span>Judge a measure on reliability and validity, and explain why it can be reliable but not valid</span></label>
+  </div>
+
+  <div class="quote">Reliability: "The consistency of measurement tools or methods. A reliable measure or assessment should yield consistent results when administered repeatedly under similar conditions and with a similar population." <span class="learn">Learn word for word</span><small>Guide glossary, p67</small></div>
+  <ul>
+    <li><b><span class="term" data-t="test-retest" tabindex="0" role="button">Test-retest reliability</span></b> (class word): the same people do the same test twice; similar scores mean it is reliable.</li>
+    <li><b>Inter-rater reliability</b> (guide p21): two or more people score the same thing separately; if they agree, the scoring is reliable. One marker alone gives no check.</li>
+  </ul>
+  <p>Validity asks: are we really measuring, or showing, what we claim? The guide names five kinds (p27):</p>
+  <div class="tablewrap"><table>
+    <tr><th>Kind</th><th>The question it asks</th></tr>
+    <tr><td><b>Internal</b></td><td>Did the IV really cause the change in the DV? (slide 114)</td></tr>
+    <tr><td><b>External</b></td><td>Can the results be <span class="term" data-t="generalise" tabindex="0" role="button">generalised</span> to other people and settings?</td></tr>
+    <tr><td><b>Construct</b></td><td>Does the measure capture the idea (the <b>construct</b>) it is meant to? Owning an iPhone is a poor measure of "pro-American attitudes" (slide 118).</td></tr>
+    <tr><td><b>Content</b></td><td>Does it cover all parts of the idea? An "anxiety" scale that only asks about sleep does not.</td></tr>
+    <tr><td><b>Face</b></td><td>At first sight, does it look like it measures the right thing?</td></tr>
+  </table></div>
+  <p><b>Reliable but not valid:</b> a scale that is always 2 kg too heavy is consistent but wrong. A valid measure must also be reliable (slide 113).</p>
+  <details><summary>Extra, not needed today: two notes on the wording</summary>
+    <p>The guide glossary (p69) words internal validity as "the extent that a measurement conducted within a study accurately measures or assesses what it claims to measure". Your deck and the guide's concept causality (p21, "internal vs external validity") use the cause-and-effect meaning; use that one when you evaluate an experiment. Slides 111-112 also mention internal consistency, Cronbach's alpha and criterion validity: not in the guide's list, not needed for the IB exam.</p>
+  </details>
+
+  <div class="worked"><b>Worked example 2: judge a measure.</b> One observer counts how many times each child pushes another during a 15-minute break, as a measure of aggression. <span class="fb">Understand and apply</span>
+    <ol>
+      <li>Reliability: one observer, so nobody checks the counts. Fix: two observers count separately with the same checklist and compare (inter-rater reliability).</li>
+      <li><span class="term" data-t="construct validity" tabindex="0" role="button">Construct validity</span>: pushing can be part of a friendly game, and aggression can be words, so the count may miss or wrongly include the construct.</li>
+      <li>Fix: a checklist agreed in advance ("hits, kicks or pushes with angry words or face; insults").</li>
+    </ol>
+    <details><summary>Why this step? Why are steps 1 and 2 about different problems?</summary><p>Step 1 asks whether the count is consistent (reliability); step 2 asks whether it counts the right thing (validity). Two observers could agree perfectly and still both count friendly pushing.</p></details></div>
+
+  <div class="worked"><b>Finish it.</b> A school measures "stress" with one question: "How many hours did you sleep last night?" Step 1 is done: reliability: sleep changes from night to night, so asking again next week may give a different answer (low test-retest reliability). Write step 2 (validity) and one fix, then open.
+    <details><summary>Answer</summary><p>Construct and content validity are low: sleep is only one possible sign of stress (it can also be short because of a late film), and one question misses worry, mood and body signs. Fix: a short questionnaire with several items on worry, mood, sleep and body tension, checked against how students describe their own stress.</p></details></div>
+
+  <div class="tip"><b>Exam traps.</b> (1) Reliable = <b>consistent</b>, valid = <b>accurate</b>. (2) "Valid" alone is vague: say which kind. (3) A bigger <span class="term" data-t="sample" tabindex="0" role="button">sample</span> does not make a questionnaire more reliable or valid.</div>
+
+  <details><summary>Self-check: reliability and validity (write two key words for each, then open)</summary>
+    <ol>
+      <li>Two teachers mark the same 10 essays; their marks differ by up to 8 out of 20. Which kind of reliability is low?</li>
+      <li>A stopwatch is always started half a second late. Reliable? Valid?</li>
+    </ol>
+    <p><b>Answers.</b> 1: inter-rater reliability. 2: reliable (the same error every time) but not valid (every time is wrong).</p>
+  </details>
+</section>
+
+<!-- =============================== THREATS: BIASES =============================== -->
+<section class="topic" id="threats">
+  <div class="kicker">Research considerations · guide p21, p27-28, p56, glossary · RM01 slides 115-129</div>
+  <h2>Threats to internal validity: participant and researcher bias</h2>
+  <p class="guiding">Anything except the IV that could explain the result is a threat to <span class="term" data-t="internal validity" tabindex="0" role="button">internal validity</span>.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="t1"><span>Explain <span class="term" data-t="participant bias" tabindex="0" role="button">participant bias</span> and <span class="term" data-t="demand characteristics" tabindex="0" role="button">demand characteristics</span>, and how to reduce them</span></label>
+    <label><input type="checkbox" data-k="t2"><span>Explain <span class="term" data-t="researcher bias" tabindex="0" role="button">researcher bias</span> (confirmation, funding, <span class="term" data-t="publication bias" tabindex="0" role="button">publication bias</span>) and how to reduce it</span></label>
+    <label><input type="checkbox" data-k="t3"><span>Explain "The role of external variables in drawing conclusions about <span class="term" data-t="causality" tabindex="0" role="button">causality</span>" (p28): confounds and the controls that remove them</span></label>
+  </div>
+
+  <p>A <b>confounding variable</b> could explain the result instead of the IV (Monday's <a href="2026-11-09-psychology-hl-frame-research-methods.html#exp">experiments section</a>). Look for it in the materials (one word list is easier), the measure (low construct validity) and the people themselves:</p>
+
+  <h3>Participant bias</h3>
+  <div class="quote">Participant bias: "Occurs when participants in a study alter their behaviour or responses due to their awareness of being observed or their expectations about the study's purpose." <span class="learn">Learn word for word</span><small>Guide glossary, p66</small></div>
+  <p><b>Demand characteristics</b> are clues that tell participants what the researcher wants (guide p56 lists "demand characteristics/<span class="term" data-t="social desirability" tabindex="0" role="button">social desirability bias</span>"). Your deck names four kinds (class words, slides 119-122):</p>
+  <ul>
+    <li><b><span class="term" data-t="expectancy effect" tabindex="0" role="button">Expectancy effect</span></b>: acting the way they think the researcher wants.</li>
+    <li><b><span class="term" data-t="screw-you effect" tabindex="0" role="button">Screw-you effect</span></b>: working out the aim and doing the opposite (rare).</li>
+    <li><b>Social desirability effect</b>: giving the answer that looks good, not the true one.</li>
+    <li><b><span class="term" data-t="reactivity" tabindex="0" role="button">Reactivity</span></b>: acting differently just because they are watched.</li>
+  </ul>
+  <p><b>Reduce it</b> (slide 123): do not reveal the exact aim (mild <span class="term" data-t="deception" tabindex="0" role="button">deception</span>, then a full <b><span class="term" data-t="debriefing" tabindex="0" role="button">debriefing</span></b>); independent samples; a <b><span class="term" data-t="single-blind" tabindex="0" role="button">single-blind</span></b> design (participants do not know their condition, for example a <span class="term" data-t="placebo" tabindex="0" role="button">placebo</span> drink). Deception must not cause harm.</p>
+
+  <h3>Researcher bias</h3>
+  <div class="quote">Researcher bias: "When a researcher's personal values or expectations influence the design, data collection or interpretation of findings, potentially leading to biased results." <span class="learn">Learn word for word</span><small>Guide glossary, p67</small></div>
+  <ul>
+    <li><b><span class="term" data-t="confirmation bias" tabindex="0" role="button">Confirmation bias</span></b>: "The tendency to seek, interpret and remember information that confirms pre-existing beliefs while ignoring or downplaying contradictory evidence" (glossary p63).</li>
+    <li><b><span class="term" data-t="funding bias" tabindex="0" role="button">Funding bias</span></b> (class word): whoever pays may influence the result.</li>
+    <li><b>Publication bias</b> (glossary p66): studies with positive, significant results are more likely to be published.</li>
+  </ul>
+  <p><b>Reduce it</b> (slide 129): a <b><span class="term" data-t="double-blind" tabindex="0" role="button">double-blind</span></b> design; random allocation; several researchers score the same data and compare (<span class="term" data-t="triangulation" tabindex="0" role="button">researcher triangulation</span>); <span class="term" data-t="peer review" tabindex="0" role="button">peer review</span> before publication.</p>
+  <div class="quote">Double-blind design: "When neither the participants nor the researchers conducting the study are aware who is in the <span class="term" data-t="control group" tabindex="0" role="button">control group</span> and who is in the experimental group. This is done to minimize bias and increase the reliability of results." <span class="learn">Learn word for word</span><small>Guide glossary, p64</small></div>
+  <details><summary>Extra, not needed today: which concept does each idea belong to? (guide p20-23)</summary>
+    <div class="tablewrap"><table>
+      <tr><th>Concept</th><th>Today's ideas in its list of related terms</th></tr>
+      <tr><td>Bias</td><td>researcher, participant, sampling, confirmation and publication bias; inter-rater reliability; credibility, reflexivity</td></tr>
+      <tr><td>Causality</td><td>internal vs external validity; controls (extraneous variables, placebos, double-blind)</td></tr>
+      <tr><td>Measurement</td><td>constructs and variables, operationalisation; self-reported data</td></tr>
+      <tr><td>Responsibility</td><td>deception, <span class="term" data-t="informed consent" tabindex="0" role="button">informed consent</span>, debriefing, right to withdraw, protection from harm</td></tr>
+    </table></div>
+    <p>Useful for Paper 2 Section B, which asks you to discuss a study "with reference to two or more" concepts.</p>
+  </details>
+
+  <div class="worked"><b>Worked example 3: spot the biases.</b> A drinks company pays for a study of its energy drink. Participants are told it "boosts focus", then do a reaction-time test. The person timing them knows who had the drink. Drinkers react faster. <span class="fb">Understand and apply</span>
+    <ol>
+      <li>Participant bias: "boosts focus" is a demand characteristic; drinkers may try harder (expectancy effect).</li>
+      <li>Researcher bias: the timer expects faster times (confirmation bias); the company paid (funding bias).</li>
+      <li>Either could explain the faster times instead of the drink, so internal validity is low.</li>
+      <li>Fixes: a placebo drink that looks and tastes the same; neither participants nor timer know who had which (double-blind); a computer records the times.</li>
+    </ol>
+    <details><summary>Why this step? Why does step 3 matter for the marks?</summary><p>Naming a bias earns little. The marks come from explaining how it could change the results in this study, and so why we cannot be sure the IV caused them.</p></details></div>
+
+  <div class="worked"><b>Finish it.</b> A therapist tests her own new therapy. She interviews each client afterwards and rates how much better they are, knowing who had her therapy. Clients were told the therapy "works for most people". Step 1 is done: participant bias: clients told it "works" may say they feel better to please her (expectancy effect). Write step 2 (researcher bias) and one fix for each, then open.
+    <details><summary>Answer</summary><p>Researcher bias: she believes in her therapy and knows who had it, so she may rate those clients as more improved (confirmation bias). Fixes: clients are not told what result is expected; a second interviewer who does not know who had which treatment does the ratings (double-blind), ideally with a standard questionnaire.</p></details></div>
+
+  <div class="tip"><b>Exam traps.</b> (1) Demand characteristics are about the <b>participants</b>, not the researcher. (2) Single-blind hides the condition from participants only; double-blind also from the researchers collecting the data.</div>
+
+  <details><summary>Self-check: biases (write two key words for each, then open)</summary>
+    <ol>
+      <li>In an interview people say they always recycle, but their bins show otherwise. Which bias?</li>
+      <li>Why does an independent samples design reduce demand characteristics?</li>
+    </ol>
+    <p><b>Answers.</b> 1: social desirability effect (participant bias). 2: each person sees only one condition, so the aim is harder to work out.</p>
+  </details>
+</section>
+
+<!-- =============================== EXTERNAL VALIDITY =============================== -->
+<section class="topic" id="external">
+  <div class="kicker">Research considerations · guide p27-28 and glossary · RM01 slides 130-133</div>
+  <h2>External validity: can we generalise?</h2>
+  <p class="guiding">A result is only useful outside the study if it holds for other people and other places.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="x1"><span>Explain "Factors that should be considered when generalizing findings to another population or context" (p27): population and <span class="term" data-t="ecological validity" tabindex="0" role="button">ecological validity</span></span></label>
+    <label><input type="checkbox" data-k="x2"><span>Say in plain words what generalizability, transferability, credibility and reflexivity mean</span></label>
+  </div>
+
+  <div class="quote">Generalizability: "The extent to which research findings or conclusions drawn from a study can be applied to a different population or other settings. It demonstrates the external validity of research." <span class="learn">Learn word for word</span><small>Guide glossary, p65</small></div>
+  <ul>
+    <li><b><span class="term" data-t="population validity" tabindex="0" role="button">Population validity</span></b> (class word): is the <b>sample</b> <span class="term" data-t="representative" tabindex="0" role="button">representative</span>? Only volunteers, one school or one country may not stand for everyone (Monday's <a href="2026-11-09-psychology-hl-frame-research-methods.html#samp">sampling section</a>).</li>
+    <li><b>Ecological validity</b> (class word): are the <b>setting and task</b> like real life? Learning nonsense words in a silent lab is not.</li>
+  </ul>
+  <p>The trade-off: more control raises internal validity but often lowers ecological validity.</p>
+  <p>The guide lists three more words here (p27-28), used mainly for <b><span class="term" data-t="qualitative" tabindex="0" role="button">qualitative</span></b> research such as interviews (later in the course): <b>transferability</b>, how far findings apply to other settings (the qualitative word for generalising); <b>credibility</b>, how far the study gives a true picture of what participants think and feel; <b>reflexivity</b>, the researcher's awareness of how their own views and biases may shape the study.</p>
+
+  <div class="worked"><b>Worked example 4: evaluate generalisation.</b> 30 psychology students at one American university learn 20 unrelated words in a silent lab. The researcher concludes that "background noise harms everyone's memory". <span class="fb">Understand and apply</span>
+    <ol>
+      <li>Population validity: one university, subject, age group and country; children or older adults may react differently.</li>
+      <li>Ecological validity: unrelated words in a silent lab are not like revising real notes at home.</li>
+      <li>So "everyone" goes too far. Improve: a <span class="term" data-t="stratified sample" tabindex="0" role="button">stratified sample</span> of ages from several schools, and a real study task (read a text, answer questions) in a normal room.</li>
+    </ol>
+    <details><summary>Why this step? Why a stratified sample in step 3?</summary><p>It includes each group (age, school) in the same proportions as the population, so the sample looks like the people the conclusion is about.</p></details></div>
+
+  <div class="worked"><b>Finish it.</b> A study of phone use and sleep asks 50 volunteers from one gym in Singapore to wear a sleep tracker at home for a week. Step 1 is done: ecological validity is fairly high, because they sleep in their own beds with their own phones. Write step 2 (population validity), then open.
+    <details><summary>Answer</summary><p>Population validity is low: volunteers from one gym in one city are probably fitter and more health-minded than most people, and may differ in age and income, so the results may not generalise to teenagers or people who do not exercise.</p></details></div>
+
+  <div class="tip"><b>Exam traps.</b> (1) Population validity is about <b>who</b>; ecological validity about <b>where and how</b>. (2) A small sample is not the same as a biased one.</div>
+
+  <details><summary>Self-check: generalising (write two key words for each, then open)</summary>
+    <ol>
+      <li>A stress study uses only male office workers in Tokyo. Main problem?</li>
+      <li>Which guide word is the qualitative version of generalisability?</li>
+    </ol>
+    <p><b>Answers.</b> 1: population validity. 2: transferability.</p>
+  </details>
+</section>
+
+<!-- =============================== RM04 MODEL ANSWERS =============================== -->
+<section class="topic" id="task">
+  <div class="kicker">Block 2 · RM04 breathing study · our model answers (there is no mark scheme in the Drive)</div>
+  <h2>RM04: model answers for questions 1-4</h2>
+  <p>Write your own answers first, then open each box and tick the points you made. These answers are ours, written to the IB command terms: your teacher may also reward other good points. RM04 also uses "identify", "name" and "<span class="term" data-t="justify" tabindex="0" role="button">justify</span>", which are not on the Psychology command-term list (guide p60-61): treat "identify" and "name" like <b><span class="term" data-t="state" tabindex="0" role="button">state</span></b> (a short answer), and "justify" as "give a reason, with evidence from the study".</p>
+
+  <details><summary>Question 1 [4]: counterbalancing and internal validity</summary>
+    <div class="model">
+      <p>Counterbalancing is a way to control order effects in a repeated measures design: half of the participants do condition A first and then B, the other half do B first and then A, so any effect of order is spread evenly over both conditions.</p>
+      <p>In Ms Patel's study all 24 students did Condition A (no breathing) on Monday and Condition B (breathing) on Friday, so Condition B always came second. Students may have done better in the second mock because of a practice effect: they had already sat one mock that week and knew the format. They may also have felt less anxious simply because the second mock felt familiar. So the improvement could be caused by the order rather than by the breathing exercise. This lowers internal validity: we cannot be confident that the IV (breathing) caused the change in the DV (anxiety and exam score).</p>
+    </div>
+    <p><b>Checklist (1 mark each):</b> counterbalancing defined (two orders, half and half) · states that every student did A before B here · names an order effect and links it to Condition B · concludes the cause may be the order, so internal validity is lower.</p>
+  </details>
+
+  <details><summary>Question 2 [4]: one other confounding variable</summary>
+    <div class="model">
+      <p>One confounding variable is the <b>exam paper</b>: Condition A used Mock Exam 1 and Condition B used Mock Exam 2. If Mock Exam 2 was easier, students would score higher in Condition B whether or not they did the breathing exercise.</p>
+      <p>Justification: the two papers are different materials, and nothing in the study says they were checked to be equally hard. The difference in difficulty changes together with the IV, so it is a second possible cause of the 6-mark rise (6 out of 50 is 12%). Ms Patel cannot tell whether the breathing or the easier paper caused it, which lowers internal validity.</p>
+    </div>
+    <p><b>Checklist:</b> one confounding variable that is not order (the different papers; or the day, since Friday came after four more days of revision; or Ms Patel leading the exercise herself) · how it differs between the conditions · how it could raise the Condition B scores · link to not being able to say the breathing caused the result.</p>
+  </details>
+
+  <details><summary>Question 3 [4]: demand characteristic</summary>
+    <div class="model">
+      <p>The most likely demand characteristic is the <b>expectancy effect</b> (participant bias): participants act the way they think the researcher wants.</p>
+      <p>Ms Patel told the class she was testing whether breathing exercises "reduce your exam stress and help you perform better", and she is their own teacher, so students knew the expected result. Before Mock Exam 2 they may have rated their anxiety lower on her questionnaire to please her, and tried harder in the second exam to "help" the study. So the lower anxiety and higher scores in Condition B may come from students' expectations, not from the breathing exercise itself.</p>
+    </div>
+    <p><b>Checklist:</b> names the expectancy effect (social desirability effect also accepted if explained) · telling the aim, and her being their teacher, gave the clue · effect on the <span class="term" data-t="self-report" tabindex="0" role="button">self-report</span> anxiety scores · effect on exam effort, so the result may not be caused by the IV.</p>
+  </details>
+
+  <details><summary>Question 4 [4]: researcher bias and one fix</summary>
+    <div class="model">
+      <p>A researcher bias here is <b>confirmation bias</b>: Ms Patel expects the breathing exercise to work, marks both exams herself with her own rubric, knows which script belongs to which condition, and nobody checks her marking. She may, without meaning to, give borderline answers in Condition B the benefit of the doubt and mark Condition A more strictly.</p>
+      <p>Change: <b>blind marking with a second marker</b>. Another teacher removes names and dates and gives each script a code, so the marker does not know whether it is from Monday or Friday. A second teacher who does not know the hypothesis also marks every script with the same rubric, and the two sets of marks are compared (inter-rater reliability).</p>
+    </div>
+    <p><b>Checklist:</b> names a researcher bias (confirmation bias, or researcher expectations) · uses the details of the study (she knows the condition, own rubric, no cross-check) · one specific change (scripts coded, or an independent second marker) · says how it reduces the bias.</p>
+  </details>
+  <p style="font-size:.95rem;color:var(--ink-soft)">Questions 5 (reliability and construct validity of the questionnaire) and 6 (population and ecological validity) come in your timed practice on Saturday 21 November. Everything you need is in the <a href="#relval">reliability and validity</a> and <a href="#external">generalising</a> sections.</p>
+</section>
+
+<!-- =============================== COGNITIVE APPROACH =============================== -->
+<section class="topic" id="cog">
+  <div class="kicker">Cognitive approach · guide p24-25 and p33 · LC01</div>
+  <h2>The cognitive approach, and why conditioning sits in it</h2>
+  <p class="guiding">The cognitive approach explains behaviour through what happens in the mind between what we sense and what we do.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="g1"><span>State the four assumptions of the cognitive approach from my class slides, and say where conditioning fits</span></label>
+  </div>
+
+  <p>The guide (p24-25) sees "the mind acting as an <span class="term" data-t="information processor" tabindex="0" role="button">information processor</span> that bridges the gap between a <span class="term" data-t="stimulus" tabindex="0" role="button">stimulus</span> input and the behavioural output." Your class slides (LC01) give four assumptions (class content, not a guide line):</p>
+  <ol>
+    <li><b>Humans are information processors</b>: input (your phone's "ding") → processing (you recognise a WhatsApp message) → output (you pick up the phone).</li>
+    <li><b>Mental processes can be studied scientifically</b>, for example with an experiment on noise and memory.</li>
+    <li><b><span class="term" data-t="mental representations" tabindex="0" role="button">Mental representations</span> guide behaviour</b>: what you believe and expect shapes what you do.</li>
+    <li><b><span class="term" data-t="soft determinism" tabindex="0" role="button">Soft determinism</span></b>: we still have some <span class="term" data-t="free will" tabindex="0" role="button">free will</span>, so changing how we think can change what we do.</li>
+  </ol>
+  <p>The cognitive approach "emerged as a reaction to <span class="term" data-t="behaviourism" tabindex="0" role="button">behaviourism</span>", which introduced conditioning (p24), and the guide still lists conditioning under it (Table 3.2, p25): "Conditioning is a simpler form of learning that can operate on the level of overt behaviours without requiring participation of cognitive processes" (p33).</p>
+  <p style="font-size:.95rem;color:var(--ink-soft)">LC01 also shows Kant (not needed for the IB exam) and "<span class="term" data-t="cognitive misers" tabindex="0" role="button">cognitive misers</span>" (we take thinking shortcuts; this comes back later under cognitive biases).</p>
+</section>
+
+<!-- =============================== CLASSICAL CONDITIONING =============================== -->
+<section class="topic" id="classical">
+  <div class="kicker">Cognitive approach · guide p25 and p33 · LC02, LC03, LC04</div>
+  <h2>Classical conditioning</h2>
+  <p class="guiding">A signal that meant nothing comes to trigger an automatic response, because it keeps arriving just before something that already triggers it.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="cc1"><span>Describe "The process of classical conditioning" (p25) using <span class="term" data-t="ns" tabindex="0" role="button">NS</span>, <span class="term" data-t="ucs" tabindex="0" role="button">UCS</span>, <span class="term" data-t="ucr" tabindex="0" role="button">UCR</span>, <span class="term" data-t="cs" tabindex="0" role="button">CS</span> and <span class="term" data-t="cr" tabindex="0" role="button">CR</span></span></label>
+    <label><input type="checkbox" data-k="cc2"><span>Explain <span class="term" data-t="extinction" tabindex="0" role="button">extinction</span> and <span class="term" data-t="spontaneous recovery" tabindex="0" role="button">spontaneous recovery</span></span></label>
+    <label><input type="checkbox" data-k="cc3"><span>Explain "its role in behaviour" (p25) with one example (<span class="term" data-t="taste aversion" tabindex="0" role="button">taste aversion</span>, <span class="term" data-t="aversion therapy" tabindex="0" role="button">aversion therapy</span>, fears)</span></label>
+    <label><input type="checkbox" data-k="cc4"><span>Evaluate a conditioning study using the concepts measurement, causality and responsibility</span></label>
+  </div>
+
+  <div class="quote">Classical conditioning: "The process of classical conditioning and its role in behaviour." <span class="learn">Learn word for word</span><small>Guide, Table 3.2, p25. Also in learning and cognition (p33): "Examples of classical and operant conditioning as a way of learning."</small></div>
+  <p>Classical conditioning is learning by <b>association</b>: a neutral stimulus is paired again and again with a stimulus that already causes a reflex, until it alone causes a similar response (LC02). The response is <b><span class="term" data-t="involuntary" tabindex="0" role="button">involuntary</span></b>.</p>
+
+  <h3>The five terms (Pavlov's dogs)</h3>
+  <p>Pavlov, studying digestion, noticed dogs <span class="term" data-t="salivate" tabindex="0" role="button">salivated</span> before the food arrived. He paired a sound (a <span class="term" data-t="metronome" tabindex="0" role="button">metronome</span>, not a bell, LC04) with food.</p>
+  <div class="tablewrap"><table>
+    <tr><th>Term</th><th>Meaning (LC02)</th><th>Pavlov</th></tr>
+    <tr><td><b>UCS</b> unconditioned stimulus</td><td>causes a natural, unlearned response</td><td>food</td></tr>
+    <tr><td><b>UCR</b> unconditioned response</td><td>the natural response to the UCS</td><td>salivating at the food</td></tr>
+    <tr><td><b>NS</b> neutral stimulus</td><td>causes no natural response before conditioning</td><td>metronome, at first</td></tr>
+    <tr><td><b>CS</b> conditioned stimulus</td><td>the old NS, after repeated pairing with the UCS</td><td>metronome, after pairing</td></tr>
+    <tr><td><b>CR</b> conditioned response</td><td>the learned response to the CS</td><td>salivating at the metronome alone</td></tr>
+  </table></div>
+  <p><b>Extinction</b>: if the CS keeps coming without the UCS, the CR fades and stops (the metronome without food). <b>Spontaneous recovery</b>: after a rest, the CR can suddenly come back, usually weaker, which shows the learning was not fully wiped out.</p>
+
+  <h3>Its role in behaviour</h3>
+  <ul>
+    <li><b>Taste aversion</b> (LC02): Garcia (1955) gave rats sweet <span class="term" data-t="saccharin" tabindex="0" role="button">saccharin</span> water during <span class="term" data-t="radiation" tabindex="0" role="button">radiation</span>, which made them sick. They then avoided saccharin for over a month, after <b>a single pairing</b>; LC03 adds that it works even when the sickness comes much later.</li>
+    <li><b>Aversion therapy</b> (LC02): a drug that causes vomiting (UCS) is given with alcohol (NS); alcohol becomes a CS for <span class="term" data-t="nausea" tabindex="0" role="button">nausea</span> (CR), so the patient avoids it. Its misuse as "<span class="term" data-t="conversion therapy" tabindex="0" role="button">conversion therapy</span>" is a responsibility (ethics) example.</li>
+    <li><b>Emotions and fears</b> (LC04): a strict teacher's tone can come to make students anxious; adverts pair a product with happy music.</li>
+  </ul>
+
+  <div class="worked"><b>Worked example 5: label a new example.</b> A toddler is at a party. A balloon pops loudly next to her (she startles and cries) just as a clown walks in. This happens three times. Now she cries whenever she sees a clown. <span class="fb">Understand and apply</span>
+    <ol>
+      <li>What causes a response without learning? The loud pop: <b>UCS</b>. Startle and fear: <b>UCR</b>.</li>
+      <li>What meant nothing at first? The clown: <b>NS</b>.</li>
+      <li>Pairing: clown + pop, three times.</li>
+      <li>After: the clown alone is the <b>CS</b>, and the fear at the clown is the <b>CR</b>.</li>
+      <li>Role in behaviour: classical conditioning can explain how a fear of something harmless is learned.</li>
+    </ol>
+    <details><summary>Why this step? Why is the fear a UCR in step 1 but a CR in step 4?</summary><p>The behaviour is the same (fear), but what triggers it is different. Fear at the loud pop is natural, so it is the UCR. Fear at the clown was learned, so it is the CR. Always name the trigger.</p></details></div>
+
+  <div class="worked"><b>Finish it.</b> Your cat runs to the kitchen and miaows when it hears the can opener. Before, it only did this when it smelled its food. Step 1 is done: UCS = the smell of cat food; UCR = running and miaowing at the food smell. Now write steps 2 to 4 (NS, CS, CR), then open.
+    <details><summary>Answer</summary><p>NS: the sound of the can opener, before pairing. Pairing: the opener sound comes just before the food every day. CS: the can opener sound, after pairing. CR: running and miaowing at the sound alone. If you then open cans of beans for a few weeks with no cat food, the CR fades: extinction.</p></details></div>
+
+  <details><summary>LC03 check points (open after steps 2-4 of the worksheet)</summary>
+    <p><b>Step 2 (NS to CS):</b> the buzzer at first caused no salivation; it was sounded each time just before a Skittle (UCS), which naturally causes salivation (UCR); after many pairings the buzzer alone became a CS that caused salivation (CR).</p>
+    <p><b>Step 3, measurement:</b> "dampness" is a judgement, and tissues and timing differ. Better: weigh each tissue before and after 30 seconds in the mouth (grams of saliva), same brand for all. <b>Responsibility:</b> mild deception, probably justified (knowing the aim would change the result, no harm), but students must be debriefed, offered to withdraw their data, and asked about allergies and food rules first (informed consent).</p>
+    <p><b>Causality</b> is quiz question 9: leave it for now.</p>
+    <p><b>Step 4:</b> similar: an NS (taste) paired with a UCS (sickness) becomes a CS. Different: one pairing is enough and the gap can be long; Pavlov needed many close pairings. A therapist pairs the unwanted behaviour (alcohol) with something that causes nausea.</p>
+  </details>
+  <details><summary>LC04 check points (activities 2 and 6)</summary>
+    <p><b>2:</b> the clinic smell (NS) was paired with pain during treatment (UCS → UCR); the smell becomes a CS, so the patient feels anxious (CR) on walking in. <b>6:</b> manipulative when people are conditioned without knowing or agreeing (advertising, conversion therapy); less so when someone chooses it with informed consent, as in aversion therapy.</p>
+  </details>
+
+  <div class="tip"><b>Exam traps.</b> (1) The NS and the CS are the <b>same thing</b> before and after learning. (2) Classical = <b>involuntary</b> responses; choosing to do something for a reward is operant. (3) Paper 1: "knowledge of details of research studies will not be assessed" (guide p45), so one example explained with all five terms beats a list of dates.</div>
+
+  <details><summary>Self-check: classical conditioning (write two key words for each, then open)</summary>
+    <ol>
+      <li>In Garcia's study, which is the UCS, and which is the CS after conditioning?</li>
+      <li>A dog stops salivating to a buzzer after weeks of buzzers with no food. What is this called?</li>
+      <li>A week later the buzzer sounds and the dog salivates a little. What is this called?</li>
+    </ol>
+    <p><b>Answers.</b> 1: UCS = radiation (causing sickness); CS = the saccharin taste. 2: extinction. 3: spontaneous recovery.</p>
+  </details>
+</section>
+
+<!-- =============================== OPERANT CONDITIONING =============================== -->
+<section class="topic" id="operant">
+  <div class="kicker">Cognitive approach · guide p25 and p33 · LC06, LC07, LC08</div>
+  <h2>Operant conditioning</h2>
+  <p class="guiding">Behaviour that is followed by a good result is repeated; behaviour followed by a bad result is not.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="oc1"><span>Describe "The process of operant conditioning" (p25): the <span class="term" data-t="law of effect" tabindex="0" role="button">law of effect</span>, and how it differs from classical conditioning</span></label>
+    <label><input type="checkbox" data-k="oc2"><span>Tell positive and negative <span class="term" data-t="reinforcement" tabindex="0" role="button">reinforcement</span> and positive and negative <span class="term" data-t="punishment" tabindex="0" role="button">punishment</span> apart in any example</span></label>
+    <label><input type="checkbox" data-k="oc3"><span>Explain why reinforcement schedules matter, and the problems with punishment</span></label>
+    <label><input type="checkbox" data-k="oc4"><span>Show the "Application of operant conditioning to change behaviour" (p33) with an example</span></label>
+  </div>
+
+  <div class="quote">Operant conditioning: "The process of operant conditioning and its role in behaviour." <span class="learn">Learn word for word</span><small>Guide, Table 3.2, p25. Learning and cognition (p33) adds: "Application of operant conditioning to change behaviour."</small></div>
+  <p>Thorndike's <b>law of effect</b>: behaviours followed by pleasant <span class="term" data-t="consequence" tabindex="0" role="button">consequences</span> are more likely to be repeated; those followed by unpleasant consequences less likely (LC06). Skinner built operant conditioning on it (rats pressing a lever for food). The behaviour is <b><span class="term" data-t="voluntary" tabindex="0" role="button">voluntary</span></b> and learned from its <b>consequences</b>; classical conditioning links two stimuli that come before an involuntary response.</p>
+
+  <h3>Four kinds of consequence</h3>
+  <figure class="grid2">
+    <svg viewBox="0 0 700 420" role="img" aria-label="Two by two grid: adding something pleasant is positive reinforcement; removing something unpleasant is negative reinforcement; adding something unpleasant is positive punishment; removing something pleasant is negative punishment">
+      <g font-family="Arial,Helvetica,sans-serif" font-size="24" text-anchor="middle">
+        <text x="355" y="34" fill="#4A5862" font-weight="bold">Add</text>
+        <text x="575" y="34" fill="#4A5862" font-weight="bold">Remove</text>
+        <text x="120" y="140" fill="#2E7D4F" font-weight="bold">More</text>
+        <text x="120" y="170" fill="#2E7D4F" font-weight="bold">behaviour</text>
+        <text x="120" y="315" fill="#B23A3A" font-weight="bold">Less</text>
+        <text x="120" y="345" fill="#B23A3A" font-weight="bold">behaviour</text>
+        <rect x="250" y="55" width="210" height="170" rx="10" fill="#E3F2E8" stroke="#2E7D4F" stroke-width="2"/>
+        <rect x="470" y="55" width="210" height="170" rx="10" fill="#E3F2E8" stroke="#2E7D4F" stroke-width="2"/>
+        <rect x="250" y="235" width="210" height="170" rx="10" fill="#F8E4E4" stroke="#B23A3A" stroke-width="2"/>
+        <rect x="470" y="235" width="210" height="170" rx="10" fill="#F8E4E4" stroke="#B23A3A" stroke-width="2"/>
+        <g fill="#1E2A33" font-weight="bold">
+          <text x="355" y="128">Positive</text><text x="355" y="160">reinforcement</text>
+          <text x="575" y="128">Negative</text><text x="575" y="160">reinforcement</text>
+          <text x="355" y="308">Positive</text><text x="355" y="340">punishment</text>
+          <text x="575" y="308">Negative</text><text x="575" y="340">punishment</text>
+        </g>
+        <g fill="#4A5862">
+          <text x="355" y="196">+ pleasant</text><text x="575" y="196">− unpleasant</text>
+          <text x="355" y="376">+ unpleasant</text><text x="575" y="376">− pleasant</text>
+        </g>
+      </g>
+    </svg>
+    <figcaption>"Positive" means something is <b>added</b>, "negative" means something is <b>taken away</b>. They do not mean good or bad. Reinforcement always increases a behaviour; punishment always decreases it.</figcaption>
+  </figure>
+  <ul>
+    <li><b>Positive reinforcement</b>: a sticker for finished homework.</li>
+    <li><b>Negative reinforcement</b>: finishing homework so that parents stop nagging (the nagging is removed).</li>
+    <li><b>Positive punishment</b>: extra chores for breaking curfew.</li>
+    <li><b>Negative punishment</b>: losing video-game time for not doing chores.</li>
+  </ul>
+  <p><b>Problems with punishment</b> (LC06): it may only hide the behaviour; it can cause fear or anger; it does not teach what to do instead.</p>
+
+  <h3>Schedules of reinforcement</h3>
+  <p>How often the reward comes matters: a reward every time is learned fast but stops fast once rewards end (extinction); an unpredictable reward is the hardest to stop, which is why gambling is hard to give up.</p>
+  <details><summary>Extra, not needed today: the five schedules (class slides LC06)</summary>
+    <div class="tablewrap"><table>
+      <tr><th>Schedule</th><th>Reward comes</th><th>Example</th><th>Extinction</th></tr>
+      <tr><td>Continuous</td><td>every time</td><td>a pellet for every lever press</td><td>fast</td></tr>
+      <tr><td>Fixed ratio</td><td>after a set number of behaviours</td><td>a star for every 5 correct answers</td><td>medium</td></tr>
+      <tr><td>Fixed interval</td><td>after a set time</td><td>pay every hour</td><td>medium</td></tr>
+      <tr><td>Variable ratio</td><td>after an unpredictable number</td><td>slot machines, fishing</td><td>very slow</td></tr>
+      <tr><td>Variable interval</td><td>after an unpredictable time</td><td>checking notifications</td><td>slow</td></tr>
+    </table></div>
+    <p>The LC06 table mixes up the example rows in places (a pellet for every lever press is continuous, not fixed ratio): use this table. Skinner's "superstitious" pigeons (food every 30 seconds whatever they did, so they repeated whatever they happened to be doing) show accidental reinforcement.</p>
+  </details>
+
+  <h3>Applying it to change behaviour</h3>
+  <p><b>Dallery <span class="term" data-t="et al" tabindex="0" role="button">et al</span>. (2017)</b> (LC07): smokers were paid only when an online breath test showed they had not smoked (positive reinforcement); a control group was paid just for sending samples. After 4 weeks, 39.6% versus 13% had stopped, about three times as many; by 3 and 6 months the difference was gone. The idea, not the numbers, is what you need.</p>
+
+  <div class="worked"><b>Worked example 6: plan a behaviour change.</b> Parents want their 7-year-old to brush his teeth every evening without being asked. <span class="fb">Understand and apply</span>
+    <ol>
+      <li>Target behaviour, stated so you can count it: brushing for 2 minutes before 8 pm without a reminder.</li>
+      <li>Choose a consequence: <b>positive reinforcement</b>, a sticker on a chart straight after brushing; 7 stickers earn a trip to the park.</li>
+      <li>Explain why it should work: by the law of effect, a pleasant consequence that follows the behaviour quickly makes it more likely to be repeated.</li>
+      <li>Plan for later: once brushing is a habit, give stickers only some evenings (an unpredictable schedule), so the habit does not stop as soon as the stickers do.</li>
+    </ol>
+    <details><summary>Why this step? Why does step 2 give the sticker straight after brushing?</summary><p>The child must connect the consequence with the behaviour. A reward that comes much later may reinforce whatever he happened to be doing then instead.</p></details></div>
+
+  <div class="worked"><b>Finish it.</b> A teenager keeps leaving dirty plates in her room. Step 1 is done: target = plates taken to the kitchen every evening. Write step 2 (one <b>negative punishment</b> her parents could use) and step 3 (why it should work), then open.
+    <details><summary>Answer</summary><p>Step 2: if plates are left in her room, she loses 30 minutes of phone time that evening (something pleasant is removed). Step 3: by the law of effect an unpleasant consequence makes the behaviour (leaving plates) less likely; a limitation is that it does not reward what she should do, so adding praise when she clears the plates (positive reinforcement) would work better.</p></details></div>
+
+  <p><b>The Chris task (LC06):</b> "Chris is highly disruptive in class. He talks a lot with his friends, often making it difficult for others to focus on the teacher's presentation. Explain how operant conditioning could be used to change Chris's behavior." Say your answer out loud: one technique, the correct term, and why it would work.</p>
+  <details><summary>Model plan for the Chris task (open after you have said yours)</summary>
+    <p>Positive reinforcement: praise or a house point each time Chris works quietly for 10 minutes, so working quietly becomes more likely. Negative punishment: if he talks during the presentation he is moved away from his friends (the chat is removed), so talking becomes less likely. It works because the consequence comes straight after the behaviour, every time at first. Limitation: if rewards stop suddenly, the behaviour may return.</p>
+  </details>
+  <details><summary>LC08 check points (activities 4 and 10)</summary>
+    <p><b>4:</b> praise straight after "please" and "thank you" (positive reinforcement), every time at first. <b>10:</b> for "manipulative": it can change behaviour without the person knowing (apps with unpredictable rewards). Against: it is often used openly and with consent to help, as with Dallery's smokers.</p>
+  </details>
+
+  <div class="tip"><b>Exam traps.</b> (1) Negative reinforcement is <b>not</b> punishment: it increases behaviour by taking something unpleasant away. (2) Name the behaviour that changes, then the consequence, then whether it is added or removed. (3) Operant = voluntary behaviour and its consequences; classical = involuntary responses and two linked stimuli.</div>
+
+  <details><summary>Self-check: operant conditioning (write two key words for each, then open)</summary>
+    <ol>
+      <li>You buckle your seatbelt and the beeping stops, so you buckle up faster next time. Which consequence?</li>
+      <li>A footballer is fined for a bad tackle and makes fewer of them. Which consequence?</li>
+      <li>Which schedule is hardest to extinguish?</li>
+    </ol>
+    <p><b>Answers.</b> 1: negative reinforcement (the beep is taken away; behaviour increases). 2: positive punishment (a fine is added; behaviour decreases). 3: variable ratio.</p>
+  </details>
+</section>
+
+<!-- =============================== QUIZ =============================== -->
+<section class="topic quiz" id="quiz">
+  <div class="kicker">Seven quick questions, then three written exam-style answers</div>
+  <h2>Quiz</h2>
+  <p>Part A: decide your answer before you click. Each question explains the trap after you answer. For any you miss: close the page, redo that section's self-check, and write the rule in the Error log.</p>
+
+  <div class="q" data-a="0"><p>1. 20 students do a memory task with music, then the same task without music. What is the main problem with this design?</p>
+    <button>Order effects such as practice or boredom</button>
+    <button>It needs more participants than other designs</button>
+    <button>Participant variables differ between the conditions</button>
+    <button>The same students cannot be tested twice</button>
+    <div class="why">This is repeated measures, so order effects are the risk (fix: counterbalancing). It needs fewer participants, and it controls participant variables because each person is compared with themselves.</div></div>
+
+  <div class="q" data-a="1"><p>2. The same people fill in a questionnaire twice, two weeks apart, and get almost the same scores. This shows the questionnaire is</p>
+    <button>valid</button>
+    <button>reliable</button>
+    <button>both reliable and valid</button>
+    <button>high in ecological validity</button>
+    <div class="why">Consistent scores show test-retest reliability. It could still measure the wrong thing, so it does not prove validity.</div></div>
+
+  <div class="q" data-a="3"><p>3. Before a study, a teacher tells her students she thinks breathing exercises reduce stress. Afterwards they report less stress. The best name for this problem is</p>
+    <button>researcher bias</button>
+    <button>sampling bias</button>
+    <button>an order effect</button>
+    <button>participant bias (a demand characteristic)</button>
+    <div class="why">The participants changed their answers because they knew what was expected (expectancy effect). Researcher bias would be the teacher's own expectations changing how she collects or scores the data.</div></div>
+
+  <div class="q" data-a="0"><p>4. A memory study uses only 18 to 22 year-old university students. A critic says the results may not apply to older adults. This criticism is about</p>
+    <button>population validity</button>
+    <button>ecological validity</button>
+    <button>reliability</button>
+    <button>construct validity</button>
+    <div class="why">It is about who was in the sample: population validity, part of external validity. Ecological validity would be about the setting or task.</div></div>
+
+  <div class="q" data-a="2"><p>5. Garcia's rats drank sweet saccharin water during radiation and then avoided it. After conditioning, the saccharin taste is the</p>
+    <button>UCS</button>
+    <button>UCR</button>
+    <button>CS</button>
+    <button>NS</button>
+    <div class="why">The radiation (sickness) is the UCS. The taste was an NS before pairing and is the CS after it. "NS" is the trap: the question says after conditioning.</div></div>
+
+  <div class="q" data-a="1"><p>6. Every time Mia takes a painkiller, her headache goes away, so she takes painkillers more often. This is</p>
+    <button>positive reinforcement</button>
+    <button>negative reinforcement</button>
+    <button>positive punishment</button>
+    <button>negative punishment</button>
+    <div class="why">Something unpleasant (the headache) is removed and the behaviour increases: negative reinforcement. "Negative" means taken away, not bad.</div></div>
+
+  <div class="q" data-a="2"><p>7. A teenager loses phone time for coming home late, and comes home late less often. This is</p>
+    <button>positive punishment</button>
+    <button>negative reinforcement</button>
+    <button>negative punishment</button>
+    <button>extinction</button>
+    <div class="why">Something pleasant (phone time) is taken away and the behaviour decreases: negative punishment. Extinction is when a behaviour stops because the reinforcement stops.</div></div>
+
+  <div class="score" id="score">Score: 0 / 7 answered 0</div>
+
+  <h3>Part B: three written questions (4 marks each)</h3>
+  <p>Write each answer on paper in about 6 minutes (about 1.5 minutes per mark), then open the model answer and give yourself a mark with the checklist.</p>
+
+  <div class="wq written" data-max="4">
+    <p><b>8. Paper 1 Section A style.</b> Describe operant conditioning with reference to one example of human behaviour. [4]</p>
+    <details><summary>Show model answer</summary>
+      <div class="model"><p>Operant conditioning is learning from the consequences of voluntary behaviour. It is based on Thorndike's law of effect: behaviour followed by a pleasant consequence is more likely to be repeated, and behaviour followed by an unpleasant consequence is less likely. Reinforcement increases a behaviour; punishment decreases it. "Positive" means something is added and "negative" means something is taken away.</p>
+      <p>Example: a student who gets praise and a house point each time she hands in homework on time (positive reinforcement) is more likely to hand it in on time again. If she instead loses her break when it is late (negative punishment), late homework becomes less likely. The consequence comes straight after the behaviour, so she links the two.</p></div>
+      <p><b><span class="term" data-t="markband" tabindex="0" role="button">Markband</span> (guide p45):</b> 3-4 marks = detailed, accurate knowledge (law of effect, reinforcement vs punishment, positive vs negative) <b>and</b> an example that is relevant and explained. 1-2 marks = limited knowledge, or an example that is named but not explained.</p>
+    </details>
+  </div>
+
+  <div class="wq written" data-max="4">
+    <p><b>9. Paper 2 Section A style.</b> Explain the concept of causality in relation to your class's Skittles experiment (buzzer every 2 minutes, then a Skittle, salivation measured on a tissue). [4]</p>
+    <details><summary>Show model answer</summary>
+      <div class="model"><p>Causality means showing that one variable causes a change in another. In the Skittles experiment the claim is that the buzzer (now a CS) caused salivation (CR) because it had been paired with the Skittle. To be sure, the buzzer would have to be tested alone, with no Skittle, and salivation measured then.</p>
+      <p>Other explanations weaken this claim. The buzzer came every 2 minutes, so students could have started salivating because they expected a sweet at regular times, not because of the buzzer. Hunger and the sight of the bag of Skittles could also cause salivation. There was no control group (for example students who got Skittles at random times with no buzzer), so we cannot rule these out. Sounding the buzzer at unpredictable times and adding a control group would make the causal claim stronger.</p></div>
+      <p><b>Markband (guide p47, Paper 2 Section A question 2):</b> 3-4 marks = the concept is well developed and the links to the study are clear and detailed. 1-2 marks = the concept is relevant but limited, with only some links.</p>
+    </details>
+  </div>
+
+  <div class="wq written" data-max="4">
+    <p><b>10. Research methods.</b> Explain how researcher bias could affect the results of an experiment, and one way to reduce it. Use an example. [4]</p>
+    <details><summary>Show model answer</summary>
+      <div class="model"><p>Researcher bias is when a researcher's personal values or expectations influence the design, data collection or interpretation of findings. For example, a psychologist who believes a new reading app helps children, and who scores the children's reading tests herself knowing who used the app, may give app users the benefit of the doubt on unclear answers (confirmation bias). The app group would then score higher because of her expectations, not the app, which lowers internal validity.</p>
+      <p>To reduce it, a double-blind design can be used: the tests are scored by someone who does not know which children used the app, so their expectations cannot affect the scores.</p></div>
+      <p><b>Checklist:</b> accurate definition (1) · how it changes the results in this study (1) · link to internal validity or causality (1) · one specific way to reduce it, explained (1).</p>
+    </details>
+  </div>
+</section>
+
+<section class="end" id="end">
+  <h2 style="font-size:1.4rem">Before you close this</h2>
+  <ul>
+    <li>Tick the "I can" boxes you are confident about. The unticked ones are the first ten minutes of your next Psychology session (Monday 16 November: exam technique, social learning theory, memory).</li>
+    <li>Open the <a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">study sheet</a>, <b>Error log</b> tab. Write one row for every lost mark today (RM04, worksheets, self-checks, quiz), with its type: <b>did not know</b> / <b>wrong method</b> / <b>slip</b> / <b>time</b> / <b>ask teacher</b>, and the rule that fixes it (for example "negative reinforcement = take away something unpleasant, behaviour goes up").</li>
+    <li><b>Fix-it:</b> pick one answer where you lost marks (an RM04 question or a written quiz item) and rewrite it now to full marks, using the model answer's checklist, not its words.</li>
+    <li>Also on the study site: <a href="../flashcards.html">flashcards</a> (today's designs, biases and conditioning terms are in there), <a href="../exam-psychology-hl.html">exam technique</a> for Psychology, and your <a href="../progress.html">progress page</a>, which turns green as you tick the "I can" boxes and pass the quiz.</li>
+  </ul>
+</section>
+
+</main>
+
+<script>
+(function(){
+  // remember ticked "I can" boxes on this device; fails quietly where storage is unavailable
+  var key='ib-psych-hl-eval-cond-ican';
+  var boxes=document.querySelectorAll('.ican input');
+  try{ var saved=JSON.parse(localStorage.getItem(key)||'{}'); boxes.forEach(function(b){ if(saved[b.dataset.k]) b.checked=true; }); }catch(e){}
+  boxes.forEach(function(b){ b.addEventListener('change',function(){ try{ var s={}; boxes.forEach(function(x){ if(x.checked) s[x.dataset.k]=1; }); localStorage.setItem(key,JSON.stringify(s)); }catch(e){} }); });
+
+  // quiz: only the 7 multiple-choice questions are scored and saved; written items are self-marked
+  var qs=document.querySelectorAll('.quiz .q'); var right=0, done=0, total=qs.length;
+  qs.forEach(function(q){
+    var a=parseInt(q.dataset.a,10); var btns=q.querySelectorAll('button');
+    btns.forEach(function(b,i){ b.addEventListener('click',function(){
+      if(q.classList.contains('done')) return;
+      q.classList.add('done'); done++;
+      if(i===a){ b.classList.add('right'); right++; } else { b.classList.add('wrong'); btns[a].classList.add('right'); }
+      document.getElementById('score').textContent='Score: '+right+' / '+total+' answered '+done+(done===total?(right>=6?'. Good. Log the ones you missed.':'. For each miss: close the page, redo that section self-check, write the rule.'):'');
+      if(done===qs.length){ try{ var KQ='ib-quiz-guide-2026-11-14'; var prev=JSON.parse(localStorage.getItem(KQ)||'null'); localStorage.setItem(KQ,JSON.stringify({right:right,total:qs.length,date:new Date().toISOString().slice(0,10),best:Math.max(right,prev&&prev.best||0)})); }catch(e){} }
+    }); });
+  });
+})();
+</script>
+
+<!--terms:start-->
+<div id="termbox" role="dialog" aria-live="polite"><div class="tb-h"><b></b><button type="button">Close</button></div><p class="tb-d"></p></div>
+<script id="terms-data" type="application/json">{"evaluate": {"w": "evaluate", "d": "IB command term: \"Make an appraisal by weighing up the strengths and limitations.\" In plain words: say what is good and what is weak, then judge."}, "explain": {"w": "explain", "d": "IB command term: \"Give a detailed account including reasons or causes.\" Not just what happens, but why."}, "describe": {"w": "describe", "d": "IB command term: \"Give a detailed account.\" Say what something is or what happens, in detail."}, "suggest": {"w": "suggest", "d": "IB command term: \"Propose a solution, hypothesis or other possible answer.\""}, "state": {"w": "state", "d": "IB command term: \"Give a specific name, value or other brief answer without explanation or calculation.\""}, "justify": {"w": "justify", "d": "Give a reason for your answer, backed by evidence (here: details from the study)."}, "markband": {"w": "markband", "d": "A level in the IB marking table (for example 3-4 marks) with a description of what an answer must show to get those marks."}, "participant": {"w": "participant", "d": "A person who takes part in a study."}, "condition": {"w": "condition", "d": "One version of an experiment, for example \"with music\" or \"in silence\". Each condition is one value of the IV."}, "iv": {"w": "IV (independent variable)", "d": "The thing the researcher changes on purpose, to see if it has an effect. Example: music or silence."}, "dv": {"w": "DV (dependent variable)", "d": "The thing the researcher measures, to see if the IV changed it. Example: the number of words recalled."}, "operationalise": {"w": "operationalise", "d": "Say exactly how a variable will be changed or measured, so anyone could repeat it. \"Memory\" becomes \"words recalled out of 20 in 2 minutes\"."}, "design": {"w": "experimental design", "d": "The plan for how participants are spread over the conditions: different people in each, the same people in all, or matched pairs."}, "independent samples": {"w": "independent samples design", "d": "A design where different people do each condition, put there by random allocation."}, "repeated measures": {"w": "repeated measures design", "d": "A design where the same people do every condition, so each person is compared with themselves."}, "matched pairs": {"w": "matched pairs design", "d": "People are tested first on a trait (for example memory), paired with someone similar, and one of each pair goes into each condition."}, "random allocation": {"w": "random allocation", "d": "Chance (a coin toss, drawing names) decides which condition each participant goes into, so differences between people are spread evenly."}, "participant variables": {"w": "participant variables", "d": "Differences between people, such as ability, mood or language level, that could affect the DV."}, "order effects": {"w": "order effects", "d": "Changes in how people do a task that come from the order of the conditions (practice, tiredness, boredom), not from the IV."}, "practice effect": {"w": "practice effect", "d": "Doing better the second time because you have already practised the task."}, "counterbalancing": {"w": "counterbalancing", "d": "Half the participants do condition A then B, the other half B then A, so order effects hit both conditions equally."}, "confounding variable": {"w": "confounding variable", "d": "Something other than the IV that differs between the conditions and could explain the result instead of the IV."}, "reliable": {"w": "reliable / reliability", "d": "Consistent: the measure gives the same result when it is used again in the same way."}, "test-retest": {"w": "test-retest reliability", "d": "Checking reliability by giving the same people the same test twice: similar scores mean it is reliable."}, "inter-rater": {"w": "inter-rater reliability", "d": "Checking reliability by having two or more people score the same thing separately: if they agree, the scoring is reliable."}, "valid": {"w": "valid / validity", "d": "Accurate: the study measures, or shows, what it claims to."}, "internal validity": {"w": "internal validity", "d": "How sure we can be that the IV, and nothing else, caused the change in the DV."}, "external validity": {"w": "external validity", "d": "How far the results can be applied to other people, places and times outside the study."}, "construct": {"w": "construct", "d": "An idea that cannot be seen directly, such as anxiety, intelligence or aggression. It must be operationalised to be measured."}, "construct validity": {"w": "construct validity", "d": "Whether a measure really captures the idea (construct) it is meant to, and not something else."}, "population validity": {"w": "population validity", "d": "Class word: whether the sample is like the wider population, so the results apply to them too."}, "ecological validity": {"w": "ecological validity", "d": "Class word: whether the setting and task are like real life, so the results show what people do in everyday situations."}, "generalise": {"w": "generalise", "d": "Apply a result from the people and setting of one study to other people and settings."}, "sample": {"w": "sample", "d": "The group of people actually studied, chosen from the larger group (the population) the researcher wants to know about."}, "representative": {"w": "representative", "d": "A sample is representative when it is like the population in the ways that matter (age, gender, background)."}, "stratified sample": {"w": "stratified sample", "d": "A sample that includes each subgroup (for example each age group) in the same proportion as in the population."}, "bias": {"w": "bias", "d": "Something that pushes results in one direction, away from the truth."}, "participant bias": {"w": "participant bias", "d": "Participants change how they act or answer because they know they are being studied or think they know the aim."}, "researcher bias": {"w": "researcher bias", "d": "The researcher's own beliefs or expectations affect how the study is planned, run, scored or explained."}, "confirmation bias": {"w": "confirmation bias", "d": "Noticing and believing what fits what you already think, and ignoring what does not."}, "funding bias": {"w": "funding bias", "d": "Class word: the person or company paying for a study influences its result or how it is reported."}, "publication bias": {"w": "publication bias", "d": "Studies that found a clear effect are more likely to be published than studies that found nothing, so the published picture is one-sided."}, "demand characteristics": {"w": "demand characteristics", "d": "Clues in a study that tell participants what the researcher wants, so they change how they behave."}, "expectancy effect": {"w": "expectancy effect", "d": "Class word: participants act the way they think the researcher wants them to."}, "screw-you effect": {"w": "screw-you effect", "d": "Class word: a participant works out the aim and deliberately does the opposite to spoil the study."}, "social desirability": {"w": "social desirability effect", "d": "Giving the answer that makes you look good rather than the true one."}, "reactivity": {"w": "reactivity", "d": "Class word: acting differently simply because you know you are being watched."}, "deception": {"w": "deception", "d": "Misleading participants about the real aim of a study. It is allowed only if it does no harm and is followed by a debriefing."}, "debriefing": {"w": "debriefing", "d": "Telling participants the real aim after the study, answering their questions and offering to remove their data."}, "informed consent": {"w": "informed consent", "d": "A participant agrees to take part after being told what they will do and any risks. Under 16, a parent must agree too."}, "placebo": {"w": "placebo", "d": "A fake treatment with no real effect (for example a drink without the active ingredient), given so people cannot tell which condition they are in."}, "single-blind": {"w": "single-blind", "d": "The participants do not know which condition they are in."}, "double-blind": {"w": "double-blind", "d": "Neither the participants nor the researchers collecting the data know who is in which condition."}, "triangulation": {"w": "researcher triangulation", "d": "Class word: several researchers score or analyse the same data separately, then compare."}, "peer review": {"w": "peer review", "d": "Other experts check a study before it is published."}, "qualitative": {"w": "qualitative research", "d": "Research that collects words and meanings (for example from interviews) rather than numbers."}, "self-report": {"w": "self-report", "d": "Data that people give about themselves, for example by filling in a questionnaire."}, "causality": {"w": "causality", "d": "One of the six IB concepts: whether one thing really causes another, not just goes with it."}, "cognitive approach": {"w": "cognitive approach", "d": "One of the three IB approaches: explaining behaviour through mental processes such as attention, memory and thinking."}, "behaviourism": {"w": "behaviourism", "d": "An older school of psychology that studied only behaviour you can see, and treated the mind as a closed box."}, "information processor": {"w": "information processor", "d": "Something that takes information in, works on it and gives an output, like a computer. The cognitive approach sees the mind this way."}, "mental representations": {"w": "mental representation", "d": "The ideas and pictures of the world we carry in our heads, built from experience."}, "soft determinism": {"w": "soft determinism", "d": "The view that behaviour is shaped by causes such as experience, but people still have some free choice."}, "free will": {"w": "free will", "d": "The ability to choose what you do, rather than it being decided by outside causes."}, "stimulus": {"w": "stimulus", "d": "Anything in the surroundings that can cause a response: a sound, a smell, a taste, a sight."}, "reflex": {"w": "reflex", "d": "An automatic response the body makes without learning or choosing, such as salivating at food."}, "association": {"w": "association", "d": "A link the brain forms between two things that keep happening together."}, "involuntary": {"w": "involuntary", "d": "Not chosen: it happens automatically."}, "voluntary": {"w": "voluntary", "d": "Chosen: you decide to do it."}, "ns": {"w": "NS (neutral stimulus)", "d": "A stimulus that causes no natural response before conditioning, such as the buzzer at the start."}, "ucs": {"w": "UCS (unconditioned stimulus)", "d": "A stimulus that causes a natural, unlearned response, such as food or a Skittle."}, "ucr": {"w": "UCR (unconditioned response)", "d": "The natural, unlearned response to the UCS, such as salivating at food."}, "cs": {"w": "CS (conditioned stimulus)", "d": "The old neutral stimulus after it has been paired with the UCS many times; now it causes a response on its own."}, "cr": {"w": "CR (conditioned response)", "d": "The learned response to the CS, such as salivating at the buzzer alone."}, "salivate": {"w": "salivate", "d": "Produce saliva (spit): your mouth waters."}, "metronome": {"w": "metronome", "d": "A device that makes a steady ticking sound, used by musicians to keep time."}, "extinction": {"w": "extinction", "d": "The learned response fades and stops because the link is no longer kept up (the CS comes without the UCS, or the reward stops)."}, "spontaneous recovery": {"w": "spontaneous recovery", "d": "After extinction and a rest, the learned response suddenly comes back, usually weaker."}, "taste aversion": {"w": "taste aversion", "d": "A strong dislike of a taste after it was once followed by feeling sick."}, "saccharin": {"w": "saccharin", "d": "A sweetener with no sugar; the rats got sweet-tasting water."}, "radiation": {"w": "radiation", "d": "Invisible energy (like X-rays) that in large doses makes animals feel sick."}, "aversion therapy": {"w": "aversion therapy", "d": "A treatment that pairs an unwanted habit (such as drinking alcohol) with something unpleasant, so the habit becomes linked with feeling bad."}, "conversion therapy": {"w": "conversion therapy", "d": "Attempts to change someone's sexual orientation or gender identity. It does not work and is widely condemned as harmful."}, "nausea": {"w": "nausea", "d": "Feeling sick, as if you might vomit."}, "law of effect": {"w": "law of effect", "d": "Thorndike's rule: behaviour followed by something pleasant is repeated more; behaviour followed by something unpleasant is repeated less."}, "consequence": {"w": "consequence", "d": "What happens straight after a behaviour, as a result of it."}, "reinforcement": {"w": "reinforcement", "d": "Any consequence that makes a behaviour more likely to happen again."}, "punishment": {"w": "punishment", "d": "Any consequence that makes a behaviour less likely to happen again."}, "cognitive misers": {"w": "cognitive misers", "d": "Class idea: people save mental effort by taking thinking shortcuts instead of thinking everything through."}, "et al": {"w": "et al.", "d": "Latin for \"and others\": the study has more authors than the first one named."}, "control group": {"w": "control group", "d": "A group that does not get the treatment, so the treatment group can be compared with it."}}</script>
+<script>
+(function(){
+  // tap a dotted word to see what it means
+  var T={};
+  try{ T=JSON.parse(document.getElementById('terms-data').textContent); }catch(e){ return; }
+  var box=document.getElementById('termbox'), bt=box.querySelector('.tb-h b'), bd=box.querySelector('.tb-d');
+  function show(el){ var k=el.getAttribute('data-t'); if(!T[k]) return; bt.textContent=T[k].w; bd.innerHTML=T[k].d; box.classList.add('on'); }
+  function hide(){ box.classList.remove('on'); }
+  document.addEventListener('click',function(e){
+    var el=e.target.closest ? e.target.closest('.term') : null;
+    if(el){ e.preventDefault(); e.stopPropagation(); show(el); return; }
+    if(!box.contains(e.target)) hide();
+  },true);
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape') hide();
+    if((e.key==='Enter'||e.key===' ') && e.target.classList && e.target.classList.contains('term')){ e.preventDefault(); show(e.target); }
+  });
+  box.querySelector('button').addEventListener('click',hide);
+})();
+</script><!--terms:end-->
+<!--enhance:start--><script>
+function storageOK(){ try{ var k='__ib_t'; localStorage.setItem(k,'1'); localStorage.removeItem(k); return true; }catch(e){ return false; } }
+function storageNotice(){ if(storageOK() || document.querySelector('.notice.storage')) return;
+  var n=document.createElement('div'); n.className='notice storage'; n.setAttribute('role','status');
+  n.textContent='Progress cannot be saved in this browser (private mode?). Use normal Safari or Chrome.';
+  var sb=document.querySelector('.sitebar');   // under the shared top bar when the page has one
+  if(sb && sb.parentNode){ sb.parentNode.insertBefore(n,sb.nextSibling); return; }
+  var m=document.querySelector('main')||document.body; m.insertBefore(n,m.firstChild); }
+
+function ibQuizEnhance(cfg){
+  if(window.__ibQuizEnh) return; window.__ibQuizEnh=1;
+  if(typeof storageNotice==='function') storageNotice();
+  var KEY=cfg&&cfg.key; if(!KEY) return;
+  var AK=KEY+'-attempts', WK=KEY+'-written';
+  function get(k){ try{ return JSON.parse(localStorage.getItem(k)||'null'); }catch(e){ return null; } }
+  function put(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); }catch(e){} }
+  function pad(n){ return (n<10?'0':'')+n; }
+  function today(){ var d=new Date(); return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()); }
+  function attempts(){ var a=get(AK); return Array.isArray(a)?a:[]; }
+  function addAttempt(r,t,sameDay){ var a=attempts(), d=today(), rec={date:d,right:r,total:t};
+    if(sameDay && a.length && a[a.length-1].date===d) a[a.length-1]=rec; else a.push(rec); put(AK,a); return a; }
+  // keep the score saved before this history existed as the first attempt
+  (function(){ if(get(AK)) return; var r=get(KEY); if(!r||typeof r!=='object') return;
+    var rr=(typeof r.right==='number')?r.right:r.score, tt=(typeof r.total==='number')?r.total:r.max;
+    if(typeof rr==='number' && tt) put(AK,[{date:r.date||today(),right:rr,total:tt}]); })();
+
+  // written answers: self-mark 0..max
+  var W=get(WK); if(!W||typeof W!=='object') W={};
+  [].forEach.call(document.querySelectorAll('.written[data-max]'),function(el,i){
+    var max=parseInt(el.getAttribute('data-max'),10); if(!(max>=0) || el.querySelector('.wm')) return;
+    var id=el.id||el.getAttribute('data-id')||('w'+(i+1));
+    var box=document.createElement('div'); box.className='wm';
+    var lab=document.createElement('label'); lab.appendChild(document.createTextNode('My mark: '));
+    var sel=document.createElement('select'); sel.setAttribute('aria-label','Your mark out of '+max);
+    var o=document.createElement('option'); o.value=''; o.textContent='not marked yet'; sel.appendChild(o);
+    for(var m=0;m<=max;m++){ o=document.createElement('option'); o.value=String(m); o.textContent=m+' out of '+max; sel.appendChild(o); }
+    if(W[id]!=null) sel.value=String(W[id]);
+    sel.addEventListener('change',function(){ var w=get(WK); if(!w||typeof w!=='object') w={};
+      if(sel.value==='') delete w[id]; else w[id]=parseInt(sel.value,10); put(WK,w); });
+    lab.appendChild(sel); box.appendChild(lab); el.appendChild(box);
+  });
+
+  // timed pages save {score,max,date} themselves; keep one history entry per day
+  if(/^ib-timed-/.test(KEY)){
+    var rec=function(){ var r=get(KEY); if(r && typeof r.score==='number' && r.max) addAttempt(r.score,r.max,true); };
+    var sb=document.getElementById('savebtn'); if(sb) sb.addEventListener('click',function(){ setTimeout(rec,0); });
+    [].forEach.call(document.querySelectorAll('.score-t input'),function(i){ i.addEventListener('change',function(){ setTimeout(rec,0); }); });
+  }
+
+  // multiple-choice quiz
+  var q0=document.querySelector('.quiz .q[data-a]'); if(!q0) return;
+  var quiz=q0.closest('.quiz');
+  var own=!!cfg.own, total=0, count=0, right=0, recs=[];
+  function qsAll(){ return [].filter.call(quiz.querySelectorAll('.q[data-a]'),function(q){ return !q.classList.contains('written'); }); }
+  function opts(q){ return [].filter.call(q.children,function(c){ return c.tagName==='BUTTON'; }); }
+  var score=document.getElementById('score');
+  if(!score){ score=document.createElement('div'); score.className='score'; score.id='score'; var l=qsAll(); l[l.length-1].parentNode.insertBefore(score,l[l.length-1].nextSibling); }
+  var rep=document.createElement('div'); rep.className='cfr'; rep.setAttribute('aria-live','polite'); score.parentNode.insertBefore(rep,score.nextSibling);
+  var hint=document.createElement('p'); hint.className='cfh';
+  hint.textContent='Before each answer, say how sure you are. At the end, the ones you were sure about but got wrong are listed first: they matter most.';
+  q0.parentNode.insertBefore(hint,qsAll()[0]);
+  function addConf(q){ var p=q.querySelector('.cf'); if(p) p.parentNode.removeChild(p);
+    var d=document.createElement('div'); d.className='cf'; d.setAttribute('role','group'); d.setAttribute('aria-label','How sure are you?');
+    d.innerHTML='<div class="cfl-h">How sure are you?</div><div class="cfb"><button type="button" data-c="guess" aria-pressed="false">Guessed</button><button type="button" data-c="unsure" aria-pressed="false">Unsure</button><button type="button" data-c="sure" aria-pressed="false">Sure</button></div>';
+    var first=opts(q)[0]; q.insertBefore(d,first||null); q.removeAttribute('data-conf'); }
+  function counters(qs){ qs.forEach(function(q,i){ var c=q.querySelector('.qn'); if(!c){ c=document.createElement('div'); c.className='qn'; q.insertBefore(c,q.firstChild); } c.textContent=(i+1)+' of '+qs.length; }); }
+  function start(){ var qs=qsAll(); total=qs.length; count=0; right=0; recs=[]; qs.forEach(addConf); counters(qs); rep.innerHTML=''; }
+  function msg(){ return 'Score: '+right+' / '+total+' answered '+count+(count===total?(right>=0.8*total?'. Good. Log the ones you missed.':'. Re-read the sections for the ones you missed, then log them.'):''); }
+  function qtext(q){ var p=q.querySelector('p'); var t=p?p.textContent:''; t=t.replace(/\s+/g,' ').trim();
+    var s=p&&p.querySelector('.subj'); if(s) t=t.slice(s.textContent.trim().length).trim();
+    t=t.replace(/^\d+\.\s*/,''); return t.length>110?t.slice(0,107)+'...':t; }
+  function esc(s){ var d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+  quiz.addEventListener('click',function(e){
+    var b=e.target.closest?e.target.closest('button'):null; if(!b) return;
+    var q=b.closest('.q'); if(!q || !quiz.contains(q) || !q.hasAttribute('data-a') || q.classList.contains('written')) return;
+    var cf=b.closest('.cf');
+    if(cf){ if(q.__ibRec) return; var c=b.getAttribute('data-c'); q.setAttribute('data-conf',c);
+      [].forEach.call(cf.querySelectorAll('button'),function(x){ var on=x===b; x.classList.toggle('on',on); x.setAttribute('aria-pressed',on?'true':'false'); }); return; }
+    if(b.parentNode!==q || q.__ibRec) return;
+    if(own){
+      if(q.classList.contains('done')) return;
+      var bs=opts(q), a=parseInt(q.getAttribute('data-a'),10), i=bs.indexOf(b);
+      q.classList.add('done');
+      if(i===a) b.classList.add('right'); else { b.classList.add('wrong'); if(bs[a]) bs[a].classList.add('right'); }
+    } else if(!q.classList.contains('done')) return;
+    q.__ibRec=true; var ok=b.classList.contains('right'); if(ok) right++; count++;
+    recs.push({q:q,ok:ok,conf:q.getAttribute('data-conf')||''});
+    [].forEach.call(q.querySelectorAll('.cf button'),function(x){ x.disabled=true; });
+    if(own) score.textContent=msg();
+    if(count===total) finish();
+  });
+  function finish(){
+    var r=right, t=total;
+    if(own){ try{ var prev=get(KEY); localStorage.setItem(KEY,JSON.stringify({right:r,total:t,date:new Date().toISOString().slice(0,10),best:Math.max(r,prev&&prev.best||0)})); }catch(e){} }
+    else { var s=get(KEY); if(s && typeof s.right==='number' && s.total) { r=s.right; t=s.total; } }
+    var a=addAttempt(r,t,false);
+    var order=qsAll(), num=function(q){ return order.indexOf(q)+1; };
+    var wrong=recs.filter(function(x){ return !x.ok; });
+    wrong.sort(function(x,y){ return (y.conf==='sure')-(x.conf==='sure') || num(x.q)-num(y.q); });
+    var lucky=recs.filter(function(x){ return x.ok && (x.conf==='guess'||x.conf==='unsure'); }).sort(function(x,y){ return num(x.q)-num(y.q); });
+    var lab={sure:'you were sure',unsure:'you were unsure',guess:'you guessed','':'not marked'};
+    var h='';
+    if(wrong.length){ h+='<b>Log these first</b><ol class="cfl">'+wrong.map(function(x){ return '<li'+(x.conf==='sure'?' class="sure"':'')+'>Question '+num(x.q)+' ('+lab[x.conf]+'): '+esc(qtext(x.q))+'</li>'; }).join('')+'</ol>'; }
+    if(lucky.length){ h+='<b>Right, but not sure</b>: read the explanation again for '+lucky.map(function(x){ return 'question '+num(x.q); }).join(', ')+'.'; }
+    if(!wrong.length && !lucky.length) h+='<b>All right.</b> Come back in a few days and try again: a score that lasts is what counts.';
+    var past=a.slice(0,-1).slice(-3).map(function(x){ return x.right+'/'+x.total+' on '+x.date; });
+    h+='<p class="cfa">Try number '+a.length+(past.length?'. Before: '+past.join(', ')+'.':'.')+'</p>';
+    h+='<button type="button" class="retry">Try again (shuffled)</button>';
+    rep.innerHTML=h;
+    rep.querySelector('.retry').addEventListener('click',retry);
+  }
+  function shuffled(arr){ var best=arr.slice();
+    for(var k=0;k<12;k++){ var x=arr.slice(); for(var i=x.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=x[i]; x[i]=x[j]; x[j]=t; }
+      best=x; if(arr.length<2 || x.some(function(v,i){ return v!==arr[i]; })) break; }
+    return best; }
+  function renumber(q,n){ var p=q.querySelector('p'); if(!p) return;
+    var w=document.createTreeWalker(p,4,null), tn;
+    while((tn=w.nextNode())){ if(tn.parentNode.closest && tn.parentNode.closest('.subj')) continue; if(!/\S/.test(tn.data)) continue;
+      if(/^\s*\d+\.\s/.test(tn.data)) tn.data=tn.data.replace(/^(\s*)\d+\./,'$1'+n+'.'); break; } }
+  function retry(){
+    var qs=qsAll(), marks=[], clones=[];
+    qs.forEach(function(q){
+      var m=document.createComment('q'); q.parentNode.insertBefore(m,q); marks.push(m);
+      var c=q.cloneNode(true); c.classList.remove('done'); c.removeAttribute('data-conf');
+      var p=c.querySelector('.cf'); if(p) p.parentNode.removeChild(p); p=c.querySelector('.qn'); if(p) p.parentNode.removeChild(p);
+      var bs=opts(c), a=parseInt(c.getAttribute('data-a'),10), good=bs[a];
+      bs.forEach(function(x){ x.classList.remove('right','wrong'); x.disabled=false; });
+      if(bs.length){ var after=bs[bs.length-1].nextSibling, nb=shuffled(bs);
+        bs.forEach(function(x){ c.removeChild(x); }); nb.forEach(function(x){ c.insertBefore(x,after); });
+        c.setAttribute('data-a',String(nb.indexOf(good))); }
+      q.parentNode.removeChild(q); clones.push(c);
+    });
+    var nq=shuffled(clones);
+    marks.forEach(function(m,i){ m.parentNode.insertBefore(nq[i],m); m.parentNode.removeChild(m); renumber(nq[i],i+1); });
+    own=true; start(); score.textContent='Score: 0 / '+total+' answered 0';
+    var top=quiz.getBoundingClientRect().top+window.pageYOffset-60; try{ window.scrollTo(0,Math.max(0,top)); }catch(e){}
+  }
+  start();
+}
+
+storageNotice();
+ibQuizEnhance({"key": "ib-quiz-guide-2026-11-14", "own": false});
+(function(){
+  if(window.__ibSite) return; window.__ibSite=1;
+  var PAGE='ib-'+((location.pathname.split('/').pop()||'index').replace(/\.html?$/,''));
+  var BK=PAGE+'-blocks';
+  function get(){ try{ var v=JSON.parse(localStorage.getItem(BK)||'null'); return v&&typeof v==='object'?v:{}; }catch(e){ return {}; } }
+  function put(v){ try{ localStorage.setItem(BK,JSON.stringify(v)); }catch(e){} }
+  // guide plan blocks "Block 1 · 25 min" + title -> numbered card with a time chip
+  [].forEach.call(document.querySelectorAll('.plan > div:not(.brk), .step'),function(d){
+    var bh=d.querySelector(':scope > .bh'); if(!bh || bh.querySelector('.bn')) return;
+    var b=bh.querySelector('b'); var m=b && /^\s*Block\s+(\d+[a-z]?)\s*[·.:-]\s*(.+?)\s*$/i.exec(b.textContent); if(!m) return;
+    var s=bh.querySelector('span'); var title=s?s.innerHTML:'';
+    d.classList.add('block'); d.setAttribute('data-n',m[1]);
+    bh.innerHTML='<span class="bn" aria-hidden="true">'+m[1]+'</span><b><span class="sr">Block '+m[1]+': </span>'+(title||('Block '+m[1]))+'</b><span class="bt">'+m[2]+'</span>';
+    // teaching sections linked from this block get a kicker "Block n · ..."
+    [].forEach.call(d.querySelectorAll('a[href^="#"]'),function(a){
+      var t=document.getElementById(a.getAttribute('href').slice(1)); if(!t) return;
+      var k=t.querySelector(':scope > .kicker'); if(!k || k.getAttribute('data-bk')) return;
+      k.setAttribute('data-bk',m[1]); k.insertAdjacentHTML('afterbegin','<span class="bk">Block '+m[1]+' · </span>');
+    });
+  });
+  // long hero intro paragraphs fold to 3 lines; tap to read them all
+  [].forEach.call(document.querySelectorAll('header.hero .wrap > p'),function(p){
+      if(p.textContent.length<160) return;
+      p.classList.add('fold'); if(p.scrollHeight<=p.clientHeight+2){ p.classList.remove('fold'); return; }
+      p.setAttribute('role','button'); p.setAttribute('tabindex','0'); p.setAttribute('aria-expanded','false');
+      function tog(e){ if(e && e.target && e.target.closest && e.target.closest('a,.term')) return; var o=p.classList.toggle('open'); p.setAttribute('aria-expanded',o?'true':'false'); }
+      p.addEventListener('click',tog); p.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); tog(); } });
+  });
+  // keep the Today card on the first screen: shrink the header picture (not below 18% of the screen height) if needed
+  (function(){ var art=document.querySelector('header.hero > svg, header.hero > img'), card=document.querySelector('.todaycard');
+    if(!art || !card) return; var vh=window.innerHeight, over=card.getBoundingClientRect().top+window.pageYOffset-(vh-70);
+    if(over>0){ var h=art.getBoundingClientRect().height; art.style.maxHeight=Math.max(0.18*vh,h-over)+'px'; } })();
+  // "Block done" ticks
+  var st=get();
+  [].forEach.call(document.querySelectorAll('.block'),function(d,i){
+    if(d.querySelector(':scope > .bdone')) return;
+    var n=d.getAttribute('data-n')||String(i+1);
+    var l=document.createElement('label'); l.className='bdone';
+    l.innerHTML='<input type="checkbox"> Block done';
+    var c=l.querySelector('input'); c.checked=!!st[n]; d.classList.toggle('is-done',c.checked);
+    c.addEventListener('change',function(){ var s=get(); if(c.checked) s[n]=new Date().toISOString().slice(0,10); else delete s[n]; put(s); d.classList.toggle('is-done',c.checked); chips(); });
+    d.appendChild(l);
+  });
+  function chips(){ var s=get(); [].forEach.call(document.querySelectorAll('.chip[data-n]'),function(a){ a.classList.toggle('done',!!s[a.getAttribute('data-n')]); }); }
+  chips();
+  // current section in the menu
+  var nav=document.querySelector('nav.toc .wrap'); if(!nav || !('IntersectionObserver' in window)) return;
+  var links={}, secs=[];
+  [].forEach.call(nav.querySelectorAll('a[href^="#"]'),function(a){ var el=document.getElementById(a.getAttribute('href').slice(1)); if(el){ links[el.id]=a; secs.push(el); } });
+  // the current section is the last one whose top has passed under the two bars; the observer (and a
+  // throttled scroll check, for long sections) only decides when to look again
+  function mark(){ var best=null; secs.forEach(function(el){ if(el.getBoundingClientRect().top<=120) best=el; });
+    Object.keys(links).forEach(function(id){ links[id].removeAttribute('aria-current'); });
+    if(best){ var a=links[best.id]; a.setAttribute('aria-current','location');
+      var l=a.offsetLeft-nav.offsetLeft, r=l+a.offsetWidth; if(l<nav.scrollLeft+8 || r>nav.scrollLeft+nav.clientWidth-8) nav.scrollLeft=Math.max(0,l-40); } }
+  secs.sort(function(a,b){ return (a.compareDocumentPosition(b)&2)?1:-1; });
+  var io=new IntersectionObserver(mark,{rootMargin:'-100px 0px -55% 0px'});
+  var tick=false; window.addEventListener('scroll',function(){ if(tick) return; tick=true; requestAnimationFrame(function(){ tick=false; mark(); }); },{passive:true});
+  secs.forEach(function(el){ io.observe(el); });
+})();
+</script><!--enhance:end-->
+</body>
+</html>
