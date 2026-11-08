@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Psychology HL study guide: the course map and research methods (Mon 9 Nov 2026)</title>
+<!--
+  Psychology HL, session 1 of the catch-up plan (psychology-audit.md section 4.2).
+  Official source: IB Diploma Programme Psychology guide, first assessment 2027 (published Feb 2025, updated May and Dec 2025),
+  Drive 1Khqsn6PrxoS5UXAEKBpu5G_XG5Viyvtq. Wording taken from the audit extracts (sections 1.1 to 1.10), psych-syllabus.json,
+  psych-assessment.json, and checked against the Drive text export of the guide on 8 Nov (p45 Section A note, glossary p62-69).
+  Class files read on 8 Nov: RM01 slides 1-99 (only 1-59 assigned today), RM02, RM03, GLO Measurement, GLO Perspective.
+  File names are the NEW titles from psych-renames.json.
+
+  UNSURE / decisions:
+  1. Page numbers come from the footers of Drive's text export of the guide, not from the PDF itself. Text inside tables may be one page out.
+  2. The guide lists only "experiments (true or quasi-)" (p28) and its glossary has no entry for field or natural experiments.
+     Field and natural experiments are taught here from the class deck (RM01 slides 92-94) and the class Measurement sheet
+     (Piliavin 1969 "field experiment"), and marked on the page as class words, not official terms.
+  3. The guide names the five sampling techniques (p28) but does not define them. Definitions, advantages and disadvantages
+     come from RM03 (Giddens) and RM01 slides 30-34, cross-checked with Simply Psychology "Sampling Methods" (fetched 8 Nov).
+  4. Hypotheses (null, one-tailed, two-tailed) are not a separate line in the guide. They are taught in the class deck (slides 50-59)
+     and needed for the IA, Paper 2 Section A Q4 (design) and the command term "suggest". Kept as class content.
+  5. RM01 slide 97 (next session's range) highlights answer A as correct; by the guide glossary the correct answer is B
+     (random allocation). Flagged on the page in the experiments section.
+  6. RM01 slide 39 (scenario card) describes quota sampling, which is not one of the five guide techniques. Flagged in the sampling section.
+  7. RM01 slides 62-63 (next session) say an independent samples design needs fewer participants; usually it is repeated measures
+     that needs fewer. Not mentioned on this page (outside today's slides); worth checking in session 2.
+  8. The school exam scope (23 Nov to 4 Dec) is not stated in any file.
+  9. Natural experiment example (school start times) is hypothetical. The slide's Czech smoking ban figures were not checked and are not used.
+-->
+<style>
+  :root{
+    --paper:#F5F7F4; --ink:#1E2A33; --ink-soft:#4A5862; --rule:#D6DCD8;
+    --indigo:#2F47A6; --indigo-soft:#E6EAF7; --amber:#B8761A; --amber-soft:#FBF1DF;
+    --green:#2E7D4F; --green-soft:#E3F2E8; --red:#B23A3A; --red-soft:#F8E4E4;
+    --card:#FFFFFF;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;overflow-wrap:break-word}
+  h1,h2,h3,h4{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;line-height:1.2;margin:0 0 .4em;font-weight:600}
+  h1{font-size:2.3rem}
+  h2{font-size:1.75rem;margin-top:0}
+  h3{font-size:1.25rem;margin-top:1.8em}
+  h4{font-size:1.05rem;margin-top:1.4em;font-family:inherit;font-weight:700}
+  p{margin:0 0 1em}
+  a{color:var(--indigo)}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
+
+  /* hero: the course map itself (guide Table 1 and Table 2, p19, and the HL assessment outline, p42-43) */
+  .hero{background:#0B0F1A;color:#fff;padding:0 0 28px}
+  .map{display:block;width:100%;max-width:900px;height:auto;margin:0 auto}
+  .hero .wrap{padding-top:18px;padding-bottom:0}
+  .hero h1{color:#fff}
+  .hero p{color:#C9D1E6;max-width:680px}
+  .hero a{color:#F2C46D}
+  .meta{display:flex;flex-wrap:wrap;gap:8px 22px;color:#C9D1E6;font-size:.95rem;margin-top:8px}
+
+  nav.toc{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+  nav.toc .wrap{display:flex;gap:2px;flex-wrap:wrap;padding:6px 20px}
+  nav.toc a{text-decoration:none;color:var(--ink-soft);padding:4px 8px;border-radius:6px;font-size:.9rem}
+  section[id]{scroll-margin-top:84px}
+  nav.toc a:hover,nav.toc a:focus-visible{background:var(--indigo-soft);color:var(--indigo);outline:none}
+
+  .plan{display:grid;grid-template-columns:1fr;gap:12px;margin:22px 0 8px}
+  .plan > div{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);padding:12px 16px}
+  .plan .bh{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-bottom:4px}
+  .plan .bh b{font-size:1.2rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+  .plan .bh span{font-weight:700;color:var(--indigo)}
+  .plan ol{margin:6px 0 0;padding-left:22px}
+  .plan li{margin:4px 0}
+  .plan .t{color:var(--ink-soft);font-size:.88rem;white-space:nowrap}
+  .files{margin:10px 0 0;padding-left:20px}
+  .files li{margin:5px 0;font-size:.95rem}
+  .legend{display:flex;flex-wrap:wrap;gap:8px 20px;background:var(--card);border:1px solid var(--rule);padding:10px 14px;font-size:.92rem;margin:16px 0}
+  .note{background:var(--amber-soft);border:1px solid var(--amber);padding:10px 14px;margin:14px 0;font-size:.95rem}
+
+  section.topic{margin-top:56px;padding-top:28px;border-top:3px solid var(--ink)}
+  section.topic ul{padding-left:22px}
+  section.topic li{margin:4px 0}
+  .kicker{color:var(--indigo);font-weight:700;letter-spacing:.01em;margin-bottom:4px}
+  .guiding{font-style:italic;color:var(--ink-soft);margin-bottom:18px}
+
+  .ican{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:0 0 24px}
+  .ican p{margin:0 0 8px;font-weight:700}
+  .ican label{display:flex;gap:10px;align-items:flex-start;padding:5px 0;cursor:pointer}
+  .ican input{margin-top:6px;width:16px;height:16px;flex:none;accent-color:var(--indigo)}
+
+  /* markers: what to learn word for word and what to understand and apply */
+  .fb,.learn{display:inline-block;font-size:.72rem;font-weight:700;padding:1px 7px;border-radius:3px;vertical-align:middle;margin-left:6px;white-space:nowrap;font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.01em}
+  .fb{background:var(--green);color:#fff}
+  .learn{background:var(--amber);color:#fff}
+
+  table{border-collapse:collapse;width:100%;margin:12px 0 20px;font-size:.95rem;background:var(--card)}
+  th,td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#EDF0EC}
+  td.c,th.c{text-align:center}
+  tr.ao th{background:var(--indigo-soft);color:var(--indigo)}
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:14px 0 20px}
+  .cards > div{background:var(--card);border:1px solid var(--rule);border-top:4px solid var(--indigo);padding:10px 14px}
+  .cards h4{margin:0 0 6px}
+  .cards p{margin:4px 0;font-size:.95rem}
+  .cards .cq{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:1.02rem;border-left:3px solid var(--amber);padding-left:10px}
+  .cards .lab{font-weight:700;color:var(--ink-soft)}
+  figure{margin:20px 0;background:var(--card);border:1px solid var(--rule);padding:12px}
+  figure svg{display:block;width:100%;height:auto}
+  figcaption{font-size:.9rem;color:var(--ink-soft);margin-top:8px}
+
+  .quote{background:var(--card);border-left:5px solid var(--amber);padding:10px 16px;margin:14px 0;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:1.05rem}
+  .quote small{display:block;font-family:"Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:.85rem;color:var(--ink-soft);margin-top:4px}
+  .tip{background:var(--amber-soft);border-left:5px solid var(--amber);padding:12px 16px;margin:18px 0}
+  .tip b:first-child{color:var(--amber)}
+  .worked{background:var(--indigo-soft);border-left:5px solid var(--indigo);padding:12px 16px;margin:18px 0}
+  .worked > b:first-child{color:var(--indigo)}
+  .worked ol{margin:6px 0 0;padding-left:22px}
+  .worked li{margin:3px 0}
+  .nw{white-space:nowrap}
+
+  details{background:var(--card);border:1px solid var(--rule);padding:10px 14px;margin:10px 0}
+  summary{cursor:pointer;font-weight:600}
+  details[open] summary{margin-bottom:8px}
+
+  .quiz .q{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:12px 0}
+  .quiz .q > p{font-weight:600;margin-bottom:8px}
+  .quiz button{display:block;width:100%;text-align:left;background:#F3F5F2;border:1px solid var(--rule);padding:8px 12px;margin:6px 0;border-radius:6px;font:inherit;cursor:pointer;color:var(--ink)}
+  .quiz button:hover,.quiz button:focus-visible{border-color:var(--indigo);outline:none}
+  .quiz button.right{background:var(--green-soft);border-color:var(--green)}
+  .quiz button.wrong{background:var(--red-soft);border-color:var(--red)}
+  .quiz .why{display:none;margin-top:8px;font-size:.95rem;color:var(--ink-soft)}
+  .quiz .q.done .why{display:block}
+  .score{font-weight:700;margin-top:14px}
+
+  .end{margin-top:56px;background:var(--card);border:1px solid var(--rule);padding:18px 20px}
+  .end ul{margin:8px 0 0;padding-left:20px}
+  @media (max-width:600px){section[id]{scroll-margin-top:130px}h1{font-size:1.8rem}body{font-size:16px}th,td{padding:6px}}
+  @media print{nav.toc{position:static}details{break-inside:avoid}.quiz button{border:1px solid #999}}
+
+
+/*terms:start*/
+.term{border-bottom:2px dotted var(--indigo);cursor:pointer;border-radius:2px}
+.term:hover,.term:focus{background:var(--indigo-soft);outline:none}
+#termbox{display:none;position:fixed;left:10px;right:10px;bottom:10px;max-width:640px;margin:0 auto;background:var(--card);border:2px solid var(--indigo);border-radius:12px;padding:14px 16px 12px;box-shadow:0 8px 28px rgba(0,0,0,.22);z-index:60;max-height:60vh;overflow:auto}
+#termbox.on{display:block}
+#termbox .tb-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+#termbox .tb-h b{font-size:1.1rem;color:var(--indigo)}
+#termbox button{font:inherit;border:1px solid var(--rule);background:var(--paper);border-radius:8px;padding:4px 12px;cursor:pointer;flex:none}
+#termbox .tb-d{margin:8px 0 0;line-height:1.5}
+.before .bgi{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);border-radius:10px;padding:12px 16px;margin:12px 0}
+.before .bgi h3{margin:0 0 6px;font-size:1.08rem}
+.before .bgi p{margin:6px 0}
+.before .bgi svg{max-width:100%;height:auto;display:block;margin:8px auto}
+.before .more{font-size:.95rem;color:var(--ink-soft)}
+.before .stuck{background:var(--amber-soft);border-radius:10px;padding:10px 14px}
+/*terms:end*/
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <svg class="map" viewBox="0 0 1000 745" role="img" aria-label="The IB Psychology course map: six concepts, four content areas and four contexts, the four HL extensions, and the four HL assessment components with their weights">
+    <rect width="1000" height="745" fill="#0B0F1A"/>
+    <g font-family="Arial,Helvetica,sans-serif" font-size="32" text-anchor="middle">
+      <g font-weight="bold" letter-spacing="1">
+        <text x="170" y="42" fill="#F2C46D">CONCEPTS</text>
+        <text x="500" y="42" fill="#9FB3FF">CONTENT</text>
+        <text x="830" y="42" fill="#8FD9A8">CONTEXTS</text>
+      </g>
+      <!-- six concepts -->
+      <g fill="#2A2410" stroke="#F2C46D" stroke-width="2">
+        <rect x="20" y="60" width="300" height="48" rx="10"/><rect x="20" y="117" width="300" height="48" rx="10"/><rect x="20" y="174" width="300" height="48" rx="10"/>
+        <rect x="20" y="231" width="300" height="48" rx="10"/><rect x="20" y="288" width="300" height="48" rx="10"/><rect x="20" y="345" width="300" height="48" rx="10"/>
+      </g>
+      <g fill="#F7E3B5">
+        <text x="170" y="95">Bias</text><text x="170" y="152">Causality</text><text x="170" y="209">Change</text>
+        <text x="170" y="266">Measurement</text><text x="170" y="323">Perspective</text><text x="170" y="380">Responsibility</text>
+      </g>
+      <!-- four content areas; research methods is today's -->
+      <g fill="#1B2550" stroke="#9FB3FF" stroke-width="2">
+        <rect x="350" y="60" width="300" height="78" rx="10"/><rect x="350" y="145" width="300" height="78" rx="10"/><rect x="350" y="230" width="300" height="78" rx="10"/>
+      </g>
+      <rect x="350" y="315" width="300" height="78" rx="10" fill="#F2C46D" stroke="#F2C46D" stroke-width="2"/>
+      <g fill="#DCE3FF">
+        <text x="500" y="110">Biological</text><text x="500" y="195">Cognitive</text><text x="500" y="280">Sociocultural</text>
+      </g>
+      <text x="500" y="347" fill="#0B0F1A" font-weight="bold">Research</text>
+      <text x="500" y="381" fill="#0B0F1A" font-weight="bold">methodology</text>
+      <!-- four contexts -->
+      <g fill="#123222" stroke="#8FD9A8" stroke-width="2">
+        <rect x="680" y="60" width="300" height="78" rx="10"/><rect x="680" y="145" width="300" height="78" rx="10"/><rect x="680" y="230" width="300" height="78" rx="10"/><rect x="680" y="315" width="300" height="78" rx="10"/>
+      </g>
+      <g fill="#D3F2DE">
+        <text x="830" y="93">Health &amp;</text><text x="830" y="127">well-being</text>
+        <text x="830" y="178">Human</text><text x="830" y="212">development</text>
+        <text x="830" y="263">Human</text><text x="830" y="297">relationships</text>
+        <text x="830" y="348">Learning &amp;</text><text x="830" y="382">cognition</text>
+      </g>
+      <!-- HL extensions -->
+      <text x="500" y="455" fill="#E0B3FF" font-weight="bold" letter-spacing="1">HL EXTENSIONS</text>
+      <g fill="#2B1838" stroke="#E0B3FF" stroke-width="2">
+        <rect x="20" y="470" width="231" height="78" rx="10"/><rect x="263" y="470" width="231" height="78" rx="10"/><rect x="506" y="470" width="231" height="78" rx="10"/><rect x="749" y="470" width="231" height="78" rx="10"/>
+      </g>
+      <g fill="#F1DDFF">
+        <text x="135" y="520">Culture</text><text x="378" y="520">Motivation</text><text x="621" y="520">Technology</text>
+        <text x="864" y="503">Data</text><text x="864" y="537">analysis</text>
+      </g>
+      <!-- HL assessment: widths proportional to 25, 25, 30, 20 per cent of 960 -->
+      <text x="500" y="603" fill="#FFFFFF" font-weight="bold" letter-spacing="1">HL ASSESSMENT</text>
+      <rect x="20" y="618" width="240" height="64" fill="#9FB3FF"/>
+      <rect x="260" y="618" width="240" height="64" fill="#C7D3FF"/>
+      <rect x="500" y="618" width="288" height="64" fill="#E0B3FF"/>
+      <rect x="788" y="618" width="192" height="64" fill="#8FD9A8"/>
+      <g stroke="#0B0F1A" stroke-width="3"><line x1="260" y1="618" x2="260" y2="682"/><line x1="500" y1="618" x2="500" y2="682"/><line x1="788" y1="618" x2="788" y2="682"/></g>
+      <g fill="#0B0F1A" font-weight="bold">
+        <text x="140" y="661">P1 25%</text><text x="380" y="661">P2 25%</text><text x="644" y="661">P3 30%</text><text x="884" y="661">IA 20%</text>
+      </g>
+      <g fill="#C9D1E6">
+        <text x="140" y="725">35 marks</text><text x="380" y="725">35 marks</text><text x="644" y="725">30 marks</text><text x="884" y="725">24 marks</text>
+      </g>
+    </g>
+  </svg>
+  <div class="wrap">
+    <h1>Psychology HL: the course map and research methods</h1>
+    <p>Study guide for Monday 9 November 2026, your first Psychology session. The picture above is the whole course on one page. The top part is Table 1 of the official IB guide (p19): every exam question takes some <b>content</b> (middle), asks about it through a <b>concept</b> (left) and often places it in a real-life <b>context</b> (right). Below that are the two HL extras and the four parts of your final grade. Today you learn this map by heart and start the first piece of content, research methodology (the gold box).</p>
+    <p>P1 and P2 last 1 h 30 each, P3 lasts 1 h 45, and the IA is a written research proposal of at most 2&nbsp;200 words.</p>
+    <div class="meta"><span>About 2 hours</span><span>Psychology HL catch-up, session 1 of 4</span><span>Source: official IB Psychology guide (first assessment 2027), your class slides and worksheets</span></div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <a href="../index.html" style="font-weight:700;color:var(--indigo)">All days</a><!--terms:start--><a href="#before">Before you start</a><!--terms:end--><a href="#plan">Plan</a><a href="#frame">Map</a><a href="#cmd">Command terms</a><a href="#concepts">Concepts</a><a href="#vars">Variables</a><a href="#exp">Experiments</a><a href="#samp">Sampling</a><a href="#quiz">Quiz</a><a href="#end">Finish</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+
+
+<!--terms:start--><section id="before" class="before">
+  <h2 style="margin-top:28px">Before you start (about 8 min)</h2>
+  <p style="margin:10px 0 0">This page builds on the ideas below. Read them first so you do not have to stop later. Words with a <span style="border-bottom:2px dotted var(--indigo)">dotted underline</span> anywhere on the page: tap them for a short explanation.</p>
+  <div class="bgi"><h3>What psychology is: a science about people</h3><p>Psychology tries to answer questions about why people act, think and feel as they do. Why do we forget names? Why do teenagers copy their friends? Why do some people feel anxious before tests?</p><p>It is a <b>science</b>: a psychologist does not just give an opinion, but collects evidence from real people and checks whether an idea fits that evidence. Other people must be able to repeat the check.</p><p>Psychology is not mind reading, and it is not only about therapy. Most of it is careful studies: giving people a task, measuring what they do, and comparing groups.</p></div><div class="bgi"><h3>How a scientific study works</h3><p>Almost every study follows the same steps:</p><ul><li><b>Question</b>: does exercise make people happier?</li><li><b>Prediction</b>: people who exercise for a week will rate their mood higher than people who do not.</li><li><b>Collect information</b>: ask both groups to rate their mood from 1 to 10.</li><li><b>Compare</b>: is the exercise group higher?</li><li><b>Conclusion</b>: does the evidence support the prediction or not?</li></ul><p>One study is never the final word. If other researchers repeat it and get the same result, we trust it more.</p></div><div class="bgi"><h3>Cause, or just a link?</h3><p>On days when more ice cream is sold, more people get sunburnt. Does ice cream cause sunburn? No: hot sunny weather causes both. The two things are <b>linked</b>, but one does not <b>cause</b> the other.</p><p>Much of today is about this problem. To show that X causes Y, a researcher changes X on purpose, keeps everything else the same, and checks whether Y changes. If something else also changed (like the weather), you cannot tell which one caused the result.</p></div><div class="bgi"><h3>Averages, and comparing two groups</h3><p>The <b>mean</b> is the usual average: add up all the scores and divide by how many there are. Mood scores 6, 7 and 8 have a mean of 21 ÷ 3 = 7.</p><p>Studies often compare the mean of two groups: exercise group 7, no-exercise group 4.2. A bigger mean in one group looks like an effect, but with only a few people a difference can happen by luck.</p><p>Psychologists use <b><span class="term" data-t="statistics" tabindex="0" role="button">statistics</span></b> (maths for <span class="term" data-t="data" tabindex="0" role="button">data</span>) to decide whether a difference is big enough not to be luck. You will learn the details later in <span class="term" data-t="hl" tabindex="0" role="button">HL</span> data analysis; today you only need the idea.</p></div><div class="bgi"><h3>Population and sample: tasting the soup</h3><p>To check whether a big pot of soup needs salt, you do not eat the whole pot. You stir it and taste one spoonful.</p><ul><li>The pot is the <b><span class="term" data-t="population" tabindex="0" role="button">population</span></b>: everyone you want to know about.</li><li>The spoonful is the <b><span class="term" data-t="sample" tabindex="0" role="button">sample</span></b>: the people you actually study.</li><li>Stirring matters: an unstirred spoonful from the top might taste nothing like the rest. A sample that is not like the population gives a wrong answer about the population.</li></ul><p>Today's <span class="term" data-t="sampling technique" tabindex="0" role="button">sampling</span> section is about different ways of choosing the spoonful, and what can go wrong with each.</p></div><div class="bgi"><h3>What "random" means in science</h3><p>In everyday talk, random means odd or unplanned ("a random question"). In science it means something exact: <b>decided by <span class="term" data-t="chance" tabindex="0" role="button">chance</span>, so every option has the same chance</b>.</p><p>Tossing a coin is random: heads and tails each have a 1 in 2 chance. A computer picking 60 names from a list of 600 is random: every name has the same 1 in 10 chance.</p><p>Walking up to whoever you happen to see is <b>not</b> random in this sense, because people who are not there have no chance at all. Keep this in mind for random sampling and <span class="term" data-t="random allocation" tabindex="0" role="button">random allocation</span>.</p></div><div class="bgi"><h3>How IB exams are marked</h3><p>IB Psychology papers have no multiple choice. You write answers, and examiners mark them with <b><span class="term" data-t="markband" tabindex="0" role="button">markbands</span></b>: descriptions of what an answer at each level looks like (for example 1-2 marks: limited knowledge; 3-4 marks: detailed knowledge, example <span class="term" data-t="explain" tabindex="0" role="button">explained</span>).</p><p>The first word of each question is a <b><span class="term" data-t="command term" tabindex="0" role="button">command term</span></b> (<span class="term" data-t="describe" tabindex="0" role="button">describe</span>, explain, <span class="term" data-t="evaluate" tabindex="0" role="button">evaluate</span>...). It tells you what kind of answer reaches the top band. Answering "describe" when the question says "explain" keeps you in a lower band, even if everything you wrote is true.</p><p>Your final grade is from 1 to 7.</p></div>
+  <p class="stuck"><b>Still stuck on a word?</b> Do not search for long. Write it in the <b>Error log</b> tab of the study sheet starting with "word:" (for example "word: composition") and carry on. It will be explained in the next guide.</p>
+</section><!--terms:end-->
+
+<section id="plan">
+  <h2 style="margin-top:28px">How to spend the two hours</h2><!--terms:start--><p style="margin:10px 0 0"><b>First:</b> read <a href="#before">Before you start</a> (about 8 min). It is not counted in the blocks below.</p><!--terms:end-->
+  <p style="margin:10px 0 0">Four blocks. Do them in order and tick each step off on paper. The file links open your IB Psychology folder in Drive; the section links jump down this page. You have had no Psychology lessons yet, so every word is <span class="term" data-t="explain" tabindex="0" role="button">explained</span> here: if a word has a dotted underline, tap it.</p>
+  <div class="plan">
+    <div>
+      <div class="bh"><b>Block 1 · 25 min</b><span>The course map</span></div>
+      <ol>
+        <li>Look at the map at the top of the page, then read the <a href="#frame">course map section</a>. <span class="t">(8 min)</span></li>
+        <li>Open the <a href="https://drive.google.com/file/d/1Khqsn6PrxoS5UXAEKBpu5G_XG5Viyvtq/view">REF - IB Psychology Subject Guide (official, first assessment 2027)</a>. Skim p17 (<span class="term" data-t="syllabus" tabindex="0" role="button">syllabus</span> outline), p19 (Tables 1 and 2) and p42-43 (assessment outline). You do not need to read every word: find each thing from the map on the page. <span class="t">(7 min)</span></li>
+        <li>Close everything. On one sheet of A4, draw the map from memory: the four <span class="term" data-t="content" tabindex="0" role="button">content</span> areas in the middle, the six <span class="term" data-t="concept" tabindex="0" role="button">concepts</span> on one side, the four <span class="term" data-t="context" tabindex="0" role="button">contexts</span> on the other, the <span class="term" data-t="hl" tabindex="0" role="button">HL</span> extensions, and P1, P2, P3 and <span class="term" data-t="ia" tabindex="0" role="button">IA</span> with their time, marks and weight. <span class="t">(7 min)</span></li>
+        <li>Check your drawing against the map and the assessment table. Correct it in another colour, then do "Self-check: the course map". Write anything you got wrong in the Error log tab of the study sheet. <span class="t">(3 min)</span></li>
+      </ol>
+    </div>
+    <div>
+      <div class="bh"><b>Block 2 · 30 min</b><span><span class="term" data-t="command term" tabindex="0" role="button">Command terms</span> and the six concepts</span></div>
+      <ol>
+        <li>Read the <a href="#cmd">command terms section</a>. Say each IB definition out loud, then cover it and say it again. <span class="t">(8 min)</span></li>
+        <li>Do "Self-check: command terms" on paper, then open it to check. <span class="t">(3 min)</span></li>
+        <li>Read the <a href="#concepts">concepts section</a>. Copy the six opening statements onto six flashcards (concept on the front, statement on the back). <span class="t">(7 min)</span></li>
+        <li>Open <a href="https://drive.google.com/file/d/1exoZh04Ac6Wym__lOYzQ8CuMHCfVtALC/view">GLO - Concept Measurement - Key terms and sentence starters (class, pp 11-14)</a>. Read "What it means", the "Questions to ask of any study" box and these key terms only: <span class="term" data-t="construct" tabindex="0" role="button">construct</span>, <span class="term" data-t="operationalise" tabindex="0" role="button">operationalisation</span> of <span class="term" data-t="variable" tabindex="0" role="button">variables</span>, <span class="term" data-t="quantitative" tabindex="0" role="button">quantitative</span> vs <span class="term" data-t="qualitative" tabindex="0" role="button">qualitative</span> <span class="term" data-t="data" tabindex="0" role="button">data</span>, <span class="term" data-t="true experiment" tabindex="0" role="button">true experiment</span> vs <span class="term" data-t="quasi-experiment" tabindex="0" role="button">quasi-experiment</span>, <span class="term" data-t="standardisation" tabindex="0" role="button">standardisation</span>. <span class="t">(6 min)</span></li>
+        <li>Open <a href="https://drive.google.com/file/d/1wiNZuZ7aX8NFteaqO9qwcsN9tfnMdpBL/view">GLO - Concept Perspective - Key terms and sentence starters (class, pp 15-17)</a>. Read "What it means", the "Questions to ask of any study" box and the first three rows (biological, cognitive and sociocultural <span class="term" data-t="approach" tabindex="0" role="button">approach</span>). <span class="t">(4 min)</span></li>
+        <li>Do "Self-check: concepts", then log any mistakes in the Error log. <span class="t">(2 min)</span></li>
+      </ol>
+    </div>
+    <div>
+      <div class="bh"><b>Block 3 · 50 min</b><span>Research methods: variables, <span class="term" data-t="experiment" tabindex="0" role="button">experiments</span>, <span class="term" data-t="hypothesis" tabindex="0" role="button">hypotheses</span>, <span class="term" data-t="sampling technique" tabindex="0" role="button">sampling</span></span></div>
+      <ol>
+        <li>Read the <a href="#vars">variables section</a> and do its self-check. <span class="t">(9 min)</span></li>
+        <li>Open <a href="https://drive.google.com/file/d/1cZcJIRkFGJhbWusL1hGaQZF7k2K-Wq3H/view">RM01 Research methodology - What is psychology, quantitative research, experiments, sampling, evaluating research - Slides (class)</a> and go through <b>slides 1-20</b> (what psychology is, quantitative and qualitative research, variables, constructs, <span class="term" data-t="iv" tabindex="0" role="button">IV</span> and <span class="term" data-t="dv" tabindex="0" role="button">DV</span>, <span class="term" data-t="confounding variable" tabindex="0" role="button">confounding</span> and <span class="term" data-t="control variable" tabindex="0" role="button">control variables</span>). Most of it repeats this page in your teacher's words. <span class="t">(5 min)</span></li>
+        <li>Read the <a href="#exp">experiments section</a> and the <a href="#hyp">hypotheses section</a>, with their self-checks. <span class="t">(8 min)</span></li>
+        <li>In RM01 go through <b>slides 43-59</b> (true experiment, hypotheses). Do the task on slide 59 on paper: questions 1 to 3, a <span class="term" data-t="null hypothesis" tabindex="0" role="button">null</span> and an experimental hypothesis each, variables operationalised. There is no answer key: check each one against the recipe and the checklist in the <a href="#hyp">hypotheses section</a>. <span class="t">(7 min)</span></li>
+        <li>Read the <a href="#samp">sampling section</a>, then RM01 <b>slides 21-42</b>. Answer the six <span class="term" data-t="scenario" tabindex="0" role="button">scenario</span> cards (slides 37-42) out loud: which technique, and is it <span class="term" data-t="bias" tabindex="0" role="button">biased</span>? <span class="t">(7 min)</span></li>
+        <li>Open <a href="https://drive.google.com/file/d/1Aah8cvs6dwSuv8rOC00F6r5z8caaMmRG/view">RM02 Research methodology - Experiments (true and quasi-) - Revision worksheet (Giddens)</a>. Read the page, then answer <b>activities 1, 2, 3, 9 and 10</b> in two to four sentences each. <span class="t">(8 min)</span></li>
+        <li>Open <a href="https://drive.google.com/file/d/1s87lpvDXR_nv-OtaZaYoEbiBblXQFLsR/view">RM03 Research methodology - Sampling techniques - Revision worksheet (Giddens)</a>. Answer <b>activities 1, 3, 5 and 8</b>. The worksheets have no answers in Drive: check yourself against the worksheet text above the activities and the sections on this page, and log any gap in the Error log. <span class="t">(6 min)</span></li>
+      </ol>
+    </div>
+    <div>
+      <div class="bh"><b>Block 4 · 15 min</b><span>Exit check, quiz, Error log</span></div>
+      <ol>
+        <li>Do the <a href="#exit">exit check</a> ("Does music help memory?") on paper with no notes. <span class="t">(6 min)</span></li>
+        <li>Open the model answer under the exit check and mark yourself with its checklist. <span class="t">(2 min)</span></li>
+        <li>Do the <a href="#quiz">quiz</a>. Decide your answer before you click. <span class="t">(5 min)</span></li>
+        <li>Write every mistake from today into the Error log tab of the study sheet. <span class="t">(2 min)</span></li>
+      </ol>
+    </div>
+  </div>
+
+  <p><b>Files for today in the IB folder</b></p>
+  <ul class="files">
+    <li><a href="https://drive.google.com/file/d/1Khqsn6PrxoS5UXAEKBpu5G_XG5Viyvtq/view">REF - IB Psychology Subject Guide (official, first assessment 2027)</a></li>
+    <li><a href="https://drive.google.com/file/d/1KoOk8IT670o-bbr1HKc-Nw2Kub_Gf1Mr/view">REF - Specimen papers 1, 2 and 3 with markschemes (official, first assessment 2027)</a> (used in two examples below)</li>
+    <li><a href="https://drive.google.com/file/d/1cZcJIRkFGJhbWusL1hGaQZF7k2K-Wq3H/view">RM01 Research methodology - What is psychology, quantitative research, experiments, sampling, evaluating research - Slides (class)</a>, slides 1-59 today</li>
+    <li><a href="https://drive.google.com/file/d/1Aah8cvs6dwSuv8rOC00F6r5z8caaMmRG/view">RM02 Research methodology - Experiments (true and quasi-) - Revision worksheet (Giddens)</a></li>
+    <li><a href="https://drive.google.com/file/d/1s87lpvDXR_nv-OtaZaYoEbiBblXQFLsR/view">RM03 Research methodology - Sampling techniques - Revision worksheet (Giddens)</a></li>
+    <li><a href="https://drive.google.com/file/d/1exoZh04Ac6Wym__lOYzQ8CuMHCfVtALC/view">GLO - Concept Measurement - Key terms and sentence starters (class, pp 11-14)</a></li>
+    <li><a href="https://drive.google.com/file/d/1wiNZuZ7aX8NFteaqO9qwcsN9tfnMdpBL/view">GLO - Concept Perspective - Key terms and sentence starters (class, pp 15-17)</a></li>
+    <li><a href="https://drive.google.com/file/d/1pjh95S1mQYIxbI25HhP19Ozc3JBE7A1N/view">GLO - Key terms glossary, all topics - Glossary (class, compiled from guide)</a>, to look up any word later</li>
+    <li>Free extra reading, only if a slide is unclear: Simply Psychology, <a href="https://www.simplypsychology.org/experimental-method.html">Experimental method</a> and <a href="https://www.simplypsychology.org/sampling.html">Sampling methods</a></li>
+  </ul>
+  <div class="legend" aria-label="Legend for the markers">
+    <span><span class="learn" style="margin-left:0">Learn word for word</span> official definitions and statements: you must be able to write them exactly</span>
+    <span><span class="fb" style="margin-left:0">Understand and <span class="term" data-t="apply" tabindex="0" role="button">apply</span></span> skills: you must be able to use them on a study you have never seen</span>
+  </div>
+  <h4>How this page is numbered</h4>
+  <p>The Psychology guide has no topic numbers like Maths (SL 1.2) or Biology (A1.1). This page uses the guide's own headings and page numbers instead. Your class files are named by code: REF = official IB files, GLO = glossaries, RM = <span class="term" data-t="research methodology" tabindex="0" role="button">research methodology</span>, LC = learning and cognition, EX = exam practice, HL = HL data analysis. The numbers after the code follow the order your class taught them, so RM01 comes first.</p>
+  <p style="font-size:.95rem;color:var(--ink-soft)">The real papers have no multiple-choice questions: every answer is written. The quiz at the end is multiple choice only so the page can mark it for you. The guide uses American spelling (operationalization, <span class="term" data-t="generalise" tabindex="0" role="button">generalize</span>); British spelling (operationalisation) is fine in your answers.</p>
+</section>
+
+<!-- =============================== COURSE MAP =============================== -->
+<section class="topic" id="frame">
+  <div class="kicker">Course frame · guide p16-19 and p42-43</div>
+  <h2>The course map</h2>
+  <p class="guiding">Every part of the course is a <span class="term" data-t="concept" tabindex="0" role="button">concept</span>, a piece of <span class="term" data-t="content" tabindex="0" role="button">content</span> or a <span class="term" data-t="context" tabindex="0" role="button">context</span>.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="f1"><span>Name the four content areas: the "Biological, cognitive and sociocultural <span class="term" data-t="approach" tabindex="0" role="button">approaches</span> to understanding human behaviour" and "<span class="term" data-t="research methodology" tabindex="0" role="button">Research methodology</span> for understanding human behaviour" (<span class="term" data-t="assessment objective" tabindex="0" role="button">assessment objective</span> 1, p16)</span></label>
+    <label><input type="checkbox" data-k="f2"><span>Name the six concepts and the four contexts of the course map (Table 1, p19)</span></label>
+    <label><input type="checkbox" data-k="f3"><span>Name the two <span class="term" data-t="hl" tabindex="0" role="button">HL</span> extensions: "The role of culture, motivation and technology in shaping human behaviour" and "<span class="term" data-t="data" tabindex="0" role="button">Data</span> analysis and interpretation" (Table 2, p19)</span></label>
+    <label><input type="checkbox" data-k="f4"><span><span class="term" data-t="state" tabindex="0" role="button">State</span> the time, marks and weight of Paper 1, Paper 2, Paper 3 and the <span class="term" data-t="ia" tabindex="0" role="button">internal assessment</span> at HL (p42-43)</span></label>
+  </div>
+
+  <h3>What psychology studies</h3>
+  <p>Your class deck starts with one sentence (RM01 slide 1): psychology is <b>"the scientific study of behaviour and mental processes"</b> <span class="learn">Learn word for word</span>.</p>
+  <ul>
+    <li><b>Behaviour</b> is what a person does that someone else can see or record: speaking, smiling, how fast you press a button, your heart rate.</li>
+    <li><b>Mental processes</b> happen inside the head and cannot be seen: paying attention, remembering, thinking, deciding. Psychologists work them out from behaviour (how many words you recall) or from what people say about themselves.</li>
+    <li><b>Scientific</b> means ideas are tested with evidence that others can check, not with opinion.</li>
+  </ul>
+
+  <h3>Concepts, content and contexts (Table 1, p19)</h3>
+  <div class="tablewrap"><table>
+    <tr><th>Concepts (6)</th><th>Content (4)</th><th>Contexts (4)</th></tr>
+    <tr><td><span class="term" data-t="bias" tabindex="0" role="button">Bias</span><br><span class="term" data-t="causality" tabindex="0" role="button">Causality</span><br>Change<br><span class="term" data-t="measurement" tabindex="0" role="button">Measurement</span><br>Perspective<br>Responsibility</td><td>Biological approach<br>Cognitive approach<br>Sociocultural approach<br>Research methodology</td><td>Health and well-being<br>Human development<br>Human relationships<br>Learning and cognition</td></tr>
+  </table></div>
+  <ul>
+    <li><b>Content</b> is what you know. The three <b>approaches</b> are three ways of explaining why people behave as they do: through the body and brain (biological), through thinking and memory (cognitive), or through other people and culture (sociocultural). <b>Research methodology</b> is how psychologists find things out. It "threads throughout the course" (p26), so it comes up in every paper.</li>
+    <li><b>Concepts</b> are six big questions you ask about any idea or study. Does it really show a cause? How was it measured? Is it biased? You meet them properly in the <a href="#concepts">concepts section</a>.</li>
+    <li><b>Contexts</b> are four areas of real life where the content is used, for example mental health (health and well-being) or how children grow up (human development).</li>
+  </ul>
+  <p>The guide says what matters most (p18): <i>"The focus of the psychology course is on <span class="term" data-t="conceptual" tabindex="0" role="button">conceptual understanding</span> and the ability to <span class="term" data-t="apply" tabindex="0" role="button">apply</span> given concepts across a variety of contexts as opposed to simple memorization of <span class="term" data-t="theory" tabindex="0" role="button">theories</span> supporting studies."</i> In plain words: learning studies by heart is not enough. You must use the ideas on new situations.</p>
+
+  <h4>The three approaches, with what your class has already done</h4>
+  <div class="tablewrap"><table>
+    <tr><th>Approach</th><th>Explains behaviour through</th><th>Already taught in your class</th></tr>
+    <tr><td>Biological</td><td>the brain, nerves, <span class="term" data-t="hormone" tabindex="0" role="button">hormones</span> and <span class="term" data-t="genes" tabindex="0" role="button">genes</span></td><td>patient HM, who lost the ability to make new memories after brain surgery (LC13)</td></tr>
+    <tr><td>Cognitive</td><td>mental processes: attention, memory, thinking, decisions</td><td>the <span class="term" data-t="multi-store model" tabindex="0" role="button">multi-store model</span> of memory (LC13); <span class="term" data-t="conditioning" tabindex="0" role="button">classical and operant conditioning</span> (LC02, LC06)</td></tr>
+    <tr><td>Sociocultural</td><td>other people, groups and culture</td><td><span class="term" data-t="social learning theory" tabindex="0" role="button">social learning theory</span> (LC09)</td></tr>
+  </table></div>
+  <p>Surprise for anyone with an older textbook: this guide puts classical and operant conditioning under the <b>cognitive</b> approach and social learning theory under the <b>sociocultural</b> approach (p25-26).</p>
+
+  <h4><span class="term" data-t="class practical" tabindex="0" role="button">Class practicals</span> and HL extensions</h4>
+  <p><b>Class practicals:</b> you run four small studies with your class, one of each type: an <span class="term" data-t="interview" tabindex="0" role="button">interview</span>, an <span class="term" data-t="observation" tabindex="0" role="button">observation</span>, a <span class="term" data-t="survey" tabindex="0" role="button">survey</span> and an <span class="term" data-t="experiment" tabindex="0" role="button">experiment</span> (p34-35). Paper 2 Section A asks about them, so keep notes of each one's <span class="term" data-t="aim" tabindex="0" role="button">aim</span>, <span class="term" data-t="procedure" tabindex="0" role="button">procedure</span>, <span class="term" data-t="sample" tabindex="0" role="button">sample</span> and <span class="term" data-t="ethics" tabindex="0" role="button">ethics</span>.</p>
+  <p><b>HL extensions</b> (HL only, 45 hours each, p17):</p>
+  <ul>
+    <li><b>Culture, motivation and technology</b>: how each one shapes behaviour in the four contexts. Paper 3 takes its <span class="term" data-t="source" tabindex="0" role="button">sources</span> from one of these three.</li>
+    <li><b>Data analysis and interpretation</b>: reading graphs, tables and <span class="term" data-t="statistics" tabindex="0" role="button">statistics</span>. SL students study it too, but it "is NOT assessed at SL" (p19). Your class started it in October (HL01).</li>
+  </ul>
+
+  <h3>How your grade is made (HL)</h3>
+  <div class="tablewrap"><table>
+    <tr><th>Component</th><th class="c">Time</th><th class="c">Marks</th><th class="c">HL weight</th><th>What it looks like</th></tr>
+    <tr><td><b>Paper 1</b>: Integration of the concepts, content and contexts</td><td class="c">1 h 30</td><td class="c">35</td><td class="c">25%</td><td>A: two short answers (4 + 4) on two of the three approaches. B: two short answers applying content to an <span class="term" data-t="unseen" tabindex="0" role="button">unseen</span> <span class="term" data-t="scenario" tabindex="0" role="button">scenario</span> (6 + 6). C: one essay on a concept, from a choice of two (15).</td></tr>
+    <tr><td><b>Paper 2</b>: Applying concepts and content to research contexts</td><td class="c">1 h 30</td><td class="c">35</td><td class="c">25%</td><td>A: four questions on your own class practicals (4 + 4 + 6 + 6). B: <span class="term" data-t="discuss" tabindex="0" role="button">discuss</span> an unseen study using two or more concepts (15).</td></tr>
+    <tr><td><b>Paper 3</b> (HL only): Data analysis and interpretation of research data</td><td class="c">1 h 45</td><td class="c">30</td><td class="c">30%</td><td>Four questions on given sources (graphs, tables, interview findings) from one HL extension (3 + 6 + 6 + 15).</td></tr>
+    <tr><td><b>Internal assessment (IA)</b>: <span class="term" data-t="research proposal" tabindex="0" role="button">Research proposal</span></td><td class="c">20 h in class</td><td class="c">24</td><td class="c">20%</td><td><span class="term" data-t="design" tabindex="0" role="button">Design</span>, but do not carry out, a study using an experiment, interview, observation or survey. At most 2&nbsp;200 words. Four <span class="term" data-t="criteria" tabindex="0" role="button">criteria</span> (introduction, research methodology, data collection, discussion), 6 marks each.</td></tr>
+  </table></div>
+  <p>Exams: 4 h 45 in total and 80% of the grade; the IA is the other 20% (p43). At SL there is no Paper 3, and the weights are P1 35%, P2 35%, IA 30%.</p>
+
+  <div class="worked"><b>Worked example 1: put a real exam question on the map.</b> <span class="term" data-t="specimen paper" tabindex="0" role="button">Specimen Paper</span> 1, question 5 (<a href="https://drive.google.com/file/d/1KoOk8IT670o-bbr1HKc-Nw2Kub_Gf1Mr/view">REF - Specimen papers 1, 2 and 3</a>): "In the context of human development, <span class="term" data-t="evaluate" tabindex="0" role="button">evaluate</span> one or more strategies used by developmental psychologists to measure <span class="term" data-t="theory of mind" tabindex="0" role="button">theory of mind</span>."
+    <ol>
+      <li><span class="term" data-t="command term" tabindex="0" role="button">Command term</span>: <b>evaluate</b>, so weigh up strengths and limitations (see the <a href="#cmd">command terms</a>).</li>
+      <li>Context: <b>human development</b>, named in the question.</li>
+      <li>Concept: <b>measurement</b>, hidden in the word "measure".</li>
+      <li>Where it sits: Paper 1 Section C, the 15-mark concept essay.</li>
+    </ol></div>
+  <div class="worked"><b>Worked example 2: a Paper 2 question.</b> Specimen Paper 2, Section B, about an experiment on <span class="term" data-t="self-esteem" tabindex="0" role="button">self-esteem</span> and attraction: "Discuss the following study with reference to two or more of the following concepts: bias, causality, measurement, and/or responsibility."
+    <ol>
+      <li>Command term: <b>discuss</b>, so a balanced review with a range of arguments and a supported conclusion.</li>
+      <li>Concepts: you choose at least two of the four named. The top <span class="term" data-t="markband" tabindex="0" role="button">markband</span> needs "two or more of the specified concepts" (p48-49).</li>
+      <li>Content: research methodology. You judge how the study was done, so today's topic is exactly what you need.</li>
+    </ol></div>
+
+  <div class="tip"><b>Exam traps.</b> (1) Paper 3 is HL only and carries the biggest weight (30%), more than Paper 1 or Paper 2. (2) The IA is a <b>proposal</b>: you design a study but never collect data. (3) Do not mix up the three columns: "measurement" is a concept, "cognitive" is content, "learning and cognition" is a context.</div>
+
+  <details><summary>Self-check: the course map (answer in your head, then open)</summary>
+    <ol>
+      <li>Which three of these are contexts: health and well-being, measurement, human relationships, cognitive approach, learning and cognition?</li>
+      <li>How long is Paper 3, how many marks is it, and what is it worth?</li>
+      <li>Which section of Paper 2 is about your own class practicals?</li>
+      <li>Under which approach does this guide put classical conditioning?</li>
+    </ol>
+    <p><b>Answers.</b> 1: health and well-being, human relationships, learning and cognition (measurement is a concept; cognitive approach is content). 2: 1 h 45, 30 marks, 30%. 3: Section A. 4: the cognitive approach (p25).</p>
+  </details>
+</section>
+
+<!-- =============================== COMMAND TERMS =============================== -->
+<section class="topic" id="cmd">
+  <div class="kicker"><span class="term" data-t="command term" tabindex="0" role="button">Command terms</span> · guide p16 and p60-61</div>
+  <h2>Command terms: what the question wants</h2>
+  <p class="guiding">The first word of a question tells you what kind of answer earns the marks.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="c1"><span>Give the IB definition of each of the 15 command terms in the Psychology guide (p60-61)</span></label>
+    <label><input type="checkbox" data-k="c2"><span>Tell "<span class="term" data-t="describe" tabindex="0" role="button">describe</span>" (<span class="term" data-t="assessment objective" tabindex="0" role="button">AO1</span>), "<span class="term" data-t="explain" tabindex="0" role="button">explain</span>" (AO2) and "<span class="term" data-t="evaluate" tabindex="0" role="button">evaluate</span>", "<span class="term" data-t="discuss" tabindex="0" role="button">discuss</span>" and "to what extent" (AO3) apart, and write the right kind of answer for each</span></label>
+  </div>
+
+  <p>The guide sorts the command terms by <b>assessment objective</b> (AO), the three kinds of skill that the exams test (p16):</p>
+  <ul>
+    <li><b>AO1 Knowledge and understanding</b>: show you know it.</li>
+    <li><b>AO2 Application and analysis</b>: use it on a question, a study or a situation.</li>
+    <li><b>AO3 <span class="term" data-t="synthesis" tabindex="0" role="button">Synthesis</span> and evaluation</b>: judge it, weigh it up, <span class="term" data-t="design" tabindex="0" role="button">design</span> something new.</li>
+  </ul>
+  <div class="tablewrap"><table>
+    <tr><th>Command term</th><th>IB definition <span class="learn">Learn word for word</span></th><th>In plain words</th></tr>
+    <tr class="ao"><th colspan="3">AO1 Knowledge and understanding</th></tr>
+    <tr><td><b>Describe</b></td><td>Give a detailed account.</td><td>Say what it is or what happened, with detail. No reasons needed.</td></tr>
+    <tr><td><b><span class="term" data-t="state" tabindex="0" role="button">State</span></b></td><td>Give a specific name, value or other brief answer without explanation or calculation.</td><td>A word, a name or a number. Nothing more.</td></tr>
+    <tr class="ao"><th colspan="3">AO2 Application and analysis</th></tr>
+    <tr><td><b>Analyse</b></td><td>Break down in order to bring out the essential elements or structure.</td><td>Take it apart and show the important pieces.</td></tr>
+    <tr><td><b><span class="term" data-t="apply" tabindex="0" role="button">Apply</span></b></td><td>Use an idea, equation, principle, <span class="term" data-t="theory" tabindex="0" role="button">theory</span> or law in relation to a given problem or issue.</td><td>Use a theory on the situation in the question.</td></tr>
+    <tr><td><b>Comment</b></td><td>Give a judgement based on a given statement or result of a calculation.</td><td>Say what you think a result means, with a reason.</td></tr>
+    <tr><td><b>Design</b></td><td>Produce a plan, simulation or model.</td><td>Plan a study: method, <span class="term" data-t="sample" tabindex="0" role="button">sample</span>, <span class="term" data-t="procedure" tabindex="0" role="button">procedure</span>.</td></tr>
+    <tr><td><b>Explain</b></td><td>Give a detailed account including reasons or causes.</td><td>Describe, then say <b>why</b> or <b>how</b>, with "because".</td></tr>
+    <tr><td><b>Interpret</b></td><td>Use knowledge and understanding to recognize trends and draw conclusions from given information.</td><td>Read the <span class="term" data-t="data" tabindex="0" role="button">data</span> and say what it shows.</td></tr>
+    <tr><td><b>Predict</b></td><td>Give an expected result.</td><td>Say what you expect to happen.</td></tr>
+    <tr><td><b><span class="term" data-t="suggest" tabindex="0" role="button">Suggest</span></b></td><td>Propose a solution, <span class="term" data-t="hypothesis" tabindex="0" role="button">hypothesis</span> or other possible answer.</td><td>Put forward a sensible idea; more than one answer could be right.</td></tr>
+    <tr class="ao"><th colspan="3">AO3 Synthesis and evaluation</th></tr>
+    <tr><td><b>Compare and contrast</b></td><td>Give an account of similarities and differences between two (or more) items or situations, referring to both (all) of them throughout.</td><td>Same and different, talking about both in every point.</td></tr>
+    <tr><td><b>Discuss</b></td><td>Offer a considered and balanced review that includes a range of arguments, factors or hypotheses. Opinions or conclusions should be presented clearly and supported by appropriate evidence.</td><td>Several sides, then a clear conclusion backed by evidence.</td></tr>
+    <tr><td><b>Evaluate</b></td><td>Make an appraisal by weighing up the strengths and limitations.</td><td>Good points and bad points, then a judgement.</td></tr>
+    <tr><td><b>Examine</b></td><td>Consider an argument or <span class="term" data-t="concept" tabindex="0" role="button">concept</span> in a way that uncovers the assumptions and interrelationships of the issue.</td><td>Look underneath: what is taken for granted, and how do the parts link?</td></tr>
+    <tr><td><b>To what extent?</b></td><td>Consider the merits or otherwise of an argument or concept. Opinions and conclusions should be presented clearly and supported with appropriate evidence and sound argument.</td><td>How far is it true? Argue both ways and give your answer.</td></tr>
+  </table></div>
+
+  <div class="worked"><b>Worked example 3: one topic, three command terms.</b> Watch how the same topic, <span class="term" data-t="operationalise" tabindex="0" role="button">operationalisation</span> (explained in the <a href="#vars">variables section</a>), needs a bigger answer as the command term climbs.
+    <ol>
+      <li><b>Describe operationalisation.</b> What it is plus detail: "Operationalisation means stating exactly how a <span class="term" data-t="variable" tabindex="0" role="button">variable</span> will be changed or measured. For example, memory can be operationalised as the number of words out of 20 that a <span class="term" data-t="participant" tabindex="0" role="button">participant</span> writes down in two minutes."</li>
+      <li><b>Explain why researchers operationalise variables.</b> Add reasons: "...because a vague idea like memory cannot be counted fairly. A precise measure means every participant is scored the same way, and other researchers can repeat the study exactly and check whether they get the same result."</li>
+      <li><b>Evaluate operationalisation.</b> Strengths and limitations, then a judgement: "A strength is precision, which allows the study to be repeated. A limitation is that recalling a word list is narrower than everyday memory, so the measure may not capture the whole idea. Overall it is necessary, but the chosen measure should be judged for how well it matches the idea being studied."</li>
+    </ol></div>
+
+  <div class="tip"><b>Exam traps.</b> (1) An answer that only <b>describes</b> when the question says <b>explain</b> stays in the lower <span class="term" data-t="markband" tabindex="0" role="button">markband</span>: explain needs reasons or causes. (2) Paper 1 Section A (4 marks): the top band needs "detailed knowledge" and an example that "is relevant and explained"; an example that is relevant but not explained stays in the 1-2 band (p45). Naming a study is not enough: say how the example shows the idea. (3) The same page says "Knowledge of details of research studies will not be assessed" (p45), and the example "may be a research study or a real or hypothetical situation". So dates and sample sizes earn nothing in Section A; a clear explanation does. (4) In the specimen <span class="term" data-t="markscheme" tabindex="0" role="button">markscheme</span> only the <b>first</b> example you give is credited, so choose one and develop it.</div>
+
+  <details><summary>Self-check: command terms (answer in your head, then open)</summary>
+    <ol>
+      <li>Which command term means "Give an expected result"?</li>
+      <li>What must every point of a "compare and contrast" answer do?</li>
+      <li>Which assessment objective does "evaluate" belong to?</li>
+      <li>What does "discuss" ask for that "evaluate" does not?</li>
+    </ol>
+    <p><b>Answers.</b> 1: predict. 2: refer to both (all) items, for similarities and for differences. 3: AO3. 4: a range of arguments, factors or hypotheses (not only strengths and limitations), with clear conclusions supported by evidence.</p>
+  </details>
+</section>
+
+<!-- =============================== CONCEPTS =============================== -->
+<section class="topic" id="concepts">
+  <div class="kicker"><span class="term" data-t="concept" tabindex="0" role="button">Concepts</span> · guide p20-23</div>
+  <h2>The six concepts</h2>
+  <p class="guiding">Six questions you can ask about any <span class="term" data-t="theory" tabindex="0" role="button">theory</span> or study.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="k1"><span>Name the six concepts and write the guide's opening statement for each (p20-23)</span></label>
+    <label><input type="checkbox" data-k="k2"><span>Use the concepts <span class="term" data-t="measurement" tabindex="0" role="button">measurement</span> and <span class="term" data-t="causality" tabindex="0" role="button">causality</span> to ask questions about a study</span></label>
+    <label><input type="checkbox" data-k="k3"><span><span class="term" data-t="explain" tabindex="0" role="button">Explain</span> what the concept perspective means for the biological, cognitive and sociocultural <span class="term" data-t="approach" tabindex="0" role="button">approaches</span></span></label>
+  </div>
+
+  <p>Paper 1 Section C and Paper 2 Section B name concepts in the question, so you must know what each one means. Each concept also has a list of "related terms" in the guide, but these "will not be used to set concept-based questions" (p20). The questions use the six concept names.</p>
+    <p>The opening statements <span class="learn">Learn word for word</span>:</p>
+  <div class="cards">
+    <div><h4><span class="term" data-t="bias" tabindex="0" role="button">Bias</span> <span style="font-weight:400;color:var(--ink-soft)">(p20)</span></h4><p class="cq">"A bias is a limitation in <span class="term" data-t="objective" tabindex="0" role="button">objective</span> thinking; it is a tendency to <span class="term" data-t="perceive" tabindex="0" role="button">perceive</span> information through a <span class="term" data-t="cognitive filter" tabindex="0" role="button">cognitive filter</span> of experience and preference."</p><p><span class="lab">In plain words:</span> Nobody sees things perfectly neutrally: what we expect and like colours what we notice. In research, the researcher, the <span class="term" data-t="participant" tabindex="0" role="button">participants</span> or the <span class="term" data-t="sample" tabindex="0" role="button">sample</span> can tilt the results.</p><p><span class="lab">Today:</span> <span class="term" data-t="sampling bias" tabindex="0" role="button">sampling bias</span></p></div>
+    <div><h4>Causality <span style="font-weight:400;color:var(--ink-soft)">(p21)</span></h4><p class="cq">"Psychologists investigate the relationship between <span class="term" data-t="variable" tabindex="0" role="button">variables</span> with the goal of determining <span class="term" data-t="cause and effect" tabindex="0" role="button">cause-and-effect</span> relationships."</p><p><span class="lab">In plain words:</span> Does X really cause Y, or is something else going on?</p><p><span class="lab">Today:</span> <span class="term" data-t="true experiment" tabindex="0" role="button">true experiments</span>, <span class="term" data-t="random allocation" tabindex="0" role="button">random allocation</span>, <span class="term" data-t="confounding variable" tabindex="0" role="button">confounding variables</span></p></div>
+    <div><h4>Change <span style="font-weight:400;color:var(--ink-soft)">(p21)</span></h4><p class="cq">"A key focus of psychological research is how to <span class="term" data-t="apply" tabindex="0" role="button">apply</span> theory and psychological findings with the goal of changing individual behaviours."</p><p><span class="lab">In plain words:</span> Using psychology to help people change, for example to stop smoking or overcome a fear.</p><p><span class="lab">Today:</span> later, with <span class="term" data-t="conditioning" tabindex="0" role="button">conditioning</span> and social learning</p></div>
+    <div><h4>Measurement <span style="font-weight:400;color:var(--ink-soft)">(p22)</span></h4><p class="cq">"A fundamental challenge for psychologists is that human behaviour is difficult to observe and objectively measure."</p><p><span class="lab">In plain words:</span> Much of what psychologists study is inside the head, so it is hard to see or count fairly.</p><p><span class="lab">Today:</span> <span class="term" data-t="construct" tabindex="0" role="button">constructs</span>, <span class="term" data-t="operationalise" tabindex="0" role="button">operationalisation</span>, <span class="term" data-t="quantitative" tabindex="0" role="button">quantitative</span> and <span class="term" data-t="qualitative" tabindex="0" role="button">qualitative</span> <span class="term" data-t="data" tabindex="0" role="button">data</span></p></div>
+    <div><h4>Perspective <span style="font-weight:400;color:var(--ink-soft)">(p22-23)</span></h4><p class="cq">"No single perspective explains behaviour sufficiently on its own; each provides a means by which to interpret and examine behaviour."</p><p><span class="lab">In plain words:</span> Each approach is one lens. You need more than one to see the whole picture.</p><p><span class="lab">Today:</span> the three approaches</p></div>
+    <div><h4>Responsibility <span style="font-weight:400;color:var(--ink-soft)">(p23)</span></h4><p class="cq">"Psychologists rely on humans as participants in their research; the relationship between researchers and participants is based on the <span class="term" data-t="premise" tabindex="0" role="button">premise</span> of treating each other with respect."</p><p><span class="lab">In plain words:</span> Researchers must treat the people they study fairly: ask for <span class="term" data-t="consent" tabindex="0" role="button">consent</span>, protect them from harm, let them leave.</p><p><span class="lab">Today:</span> later, with <span class="term" data-t="ethics" tabindex="0" role="button">ethics</span></p></div>
+  </div>
+  <p>Memory hook for the six: <b>B</b>ias, <b>C</b>ausality, <b>C</b>hange, <b>M</b>easurement, <b>P</b>erspective, <b>R</b>esponsibility, in alphabetical order, as the guide lists them.</p>
+
+  <h3>Your class concept sheets</h3>
+  <p>Your teacher's booklet has a page set for each concept; only two are in your folder. Each has a "Questions to ask of any study" box that turns a concept into a checklist:</p>
+  <ul>
+    <li><a href="https://drive.google.com/file/d/1exoZh04Ac6Wym__lOYzQ8CuMHCfVtALC/view">GLO - Concept Measurement</a>: how was the variable operationalised? Is the data <span class="term" data-t="direct or indirect" tabindex="0" role="button">direct or indirect</span>, quantitative or qualitative? Is the measure <span class="term" data-t="reliable" tabindex="0" role="button">reliable</span> and <span class="term" data-t="valid" tabindex="0" role="button">valid</span>? Would another method give a fuller picture?</li>
+    <li><a href="https://drive.google.com/file/d/1wiNZuZ7aX8NFteaqO9qwcsN9tfnMdpBL/view">GLO - Concept Perspective</a>: what does each approach emphasise and ignore? Is the theory tested <span class="term" data-t="deductively" tabindex="0" role="button">deductively</span> or built inductively? Whose viewpoint is missing? Is there an alternative explanation?</li>
+  </ul>
+  <p>The booklet marks some terms as "<span class="term" data-t="hl" tabindex="0" role="button">HL</span>" (for example <span class="term" data-t="emic and etic" tabindex="0" role="button">emic and etic</span>). In the official guide those are for SL and HL alike, so learn them in time either way.</p>
+
+  <div class="worked"><b>Worked example 4: two concepts on one study.</b> RM01 slides 4-8: one group exercises 30 minutes a day for a week, a <span class="term" data-t="control group" tabindex="0" role="button">control group</span> does no exercise, and both rate their mood from 1 to 10. The exercise group's average goes from 4 to 7; the control group ends at 4.2.
+    <ol>
+      <li><b>Measurement.</b> Mood, which cannot be seen, was turned into a number: a <span class="term" data-t="self-report" tabindex="0" role="button">self-rating</span> from 1 to 10. That makes groups easy to compare, but people may rate themselves higher because they guess what the researcher hopes to see.</li>
+      <li><b>Causality.</b> There is a control group, which helps: without exercise, mood barely changed. But the slides point out that if the exercise group also slept better, sleep could explain the result. Then we cannot say exercise <b>caused</b> the better mood.</li>
+      <li>So one study, two concepts, two different questions. This is the kind of thinking Paper 2 Section B rewards.</li>
+    </ol></div>
+
+  <div class="tip"><b>Exam traps.</b> (1) "Perspective" in IB Psychology is not your personal opinion: it means a way of explaining behaviour (biological, cognitive, sociocultural, or a cultural viewpoint). (2) "Bias" in the guide is about thinking and research, not only about being unfair to a group. (3) Learn the six names in the guide's form: "measurement", not "measuring"; "causality", not "cause".</div>
+
+  <details><summary>Self-check: concepts (answer in your head, then open)</summary>
+    <ol>
+      <li>Which concept begins "Psychologists rely on humans as participants in their research..."?</li>
+      <li>Fill the gap: "A fundamental challenge for psychologists is that human behaviour is difficult to observe and objectively ___."</li>
+      <li>A study finds that students who sleep longer get better grades, but it did not control how much they revise. Which concept is in trouble?</li>
+    </ol>
+    <p><b>Answers.</b> 1: responsibility. 2: measure. 3: causality, because revision could be the real cause.</p>
+  </details>
+</section>
+
+<!-- =============================== VARIABLES =============================== -->
+<section class="topic" id="vars">
+  <div class="kicker"><span class="term" data-t="research methodology" tabindex="0" role="button">Research methodology</span> · guide p22 and p26-28 · RM01 slides 1-20</div>
+  <h2>Quantitative research, variables and operationalisation</h2>
+  <p class="guiding">Before you can test an idea, you have to turn it into something you can count.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="v1"><span><span class="term" data-t="explain" tabindex="0" role="button">Explain</span> the difference between <span class="term" data-t="quantitative" tabindex="0" role="button">quantitative</span> and <span class="term" data-t="qualitative" tabindex="0" role="button">qualitative</span> research methodology (guide glossary)</span></label>
+    <label><input type="checkbox" data-k="v2"><span>Identify the <span class="term" data-t="iv" tabindex="0" role="button">independent variable</span> (IV) and <span class="term" data-t="dv" tabindex="0" role="button">dependent variable</span> (DV) in an <span class="term" data-t="experiment" tabindex="0" role="button">experiment</span></span></label>
+    <label><input type="checkbox" data-k="v3"><span><span class="term" data-t="operationalise" tabindex="0" role="button">Operationalise</span> a <span class="term" data-t="construct" tabindex="0" role="button">construct</span> as a measurable <span class="term" data-t="variable" tabindex="0" role="button">variable</span> ("constructs and variables, operationalization", <span class="term" data-t="measurement" tabindex="0" role="button">Measurement</span>, p22)</span></label>
+  </div>
+
+  <h3>Quantitative and qualitative research</h3>
+  <div class="tablewrap"><table>
+    <tr><th></th><th>Quantitative</th><th>Qualitative</th></tr>
+    <tr><td>Guide glossary <span class="learn">Learn word for word</span></td><td>"The collection and analysis of numerical <span class="term" data-t="data" tabindex="0" role="button">data</span> to examine relationships between variables."</td><td>"The collection and analysis of textual or verbal data to understand and explore the meaning behind people's behaviour."</td></tr>
+    <tr><td>Data</td><td>numbers: scores, times, counts, ratings</td><td>words: what people say or write, notes on what they do</td></tr>
+    <tr><td><span class="term" data-t="aim" tabindex="0" role="button">Aim</span></td><td>test a prediction, compare groups</td><td>understand experiences and meanings in depth</td></tr>
+    <tr><td>Example</td><td>mood rated 1 to 10 before and after exercise</td><td><span class="term" data-t="interview" tabindex="0" role="button">interviews</span> about how teenagers feel on exam results day</td></tr>
+  </table></div>
+  <p>Today is about quantitative research, and mainly the experiment. Interviews and <span class="term" data-t="observation" tabindex="0" role="button">observations</span>, which are often qualitative, come later.</p>
+
+  <h3>Variables and constructs</h3>
+  <p>A <b>variable</b> is, in the guide's words, "Any factor or characteristic that can vary and is subject to measurement or <span class="term" data-t="manipulate" tabindex="0" role="button">manipulation</span> in research." <span class="term" data-t="reaction time" tabindex="0" role="button">Reaction time</span>, number of words recalled and hours of sleep are variables.</p>
+  <p>A <b>construct</b> is "An abstract idea, <span class="term" data-t="concept" tabindex="0" role="button">concept</span> or variable that cannot be directly observed but is used to explain or measure aspects of human behaviour. Examples include intelligence and <span class="term" data-t="self-esteem" tabindex="0" role="button">self-esteem</span>." (guide glossary). Stress, happiness and <span class="term" data-t="anxiety" tabindex="0" role="button">anxiety</span> are constructs too: you cannot say "she has 6 units of stress" (RM01 slide 12).</p>
+  <p><b>Operationalisation</b> <span class="learn">Learn word for word</span>: "Stating exactly how a variable will be manipulated or measured in experimental research." (guide glossary). Once a construct has been operationalised, it is a variable you can measure.</p>
+
+  <h3>The independent and dependent variable</h3>
+  <p>An experiment asks "If I change X, does Y change?" (RM01 slide 18).</p>
+  <ul>
+    <li>The <b>independent variable (IV)</b> is the thing the researcher changes on purpose. It always has at least two <b><span class="term" data-t="condition" tabindex="0" role="button">conditions</span></b>, for example exercise and no exercise.</li>
+    <li>The <b>dependent variable (DV)</b> is the thing the researcher measures, to see whether it changed. It "depends" on the IV.</li>
+  </ul>
+  <figure>
+    <svg viewBox="0 0 700 250" role="img" aria-label="The IV is changed by the researcher and is expected to affect the DV, which is measured. Other variables are kept the same so they cannot affect the DV.">
+      <g font-family="Arial,Helvetica,sans-serif" font-size="26" text-anchor="middle">
+        <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1E2A33"/></marker>
+        <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B23A3A"/></marker></defs>
+        <rect x="20" y="20" width="200" height="90" rx="10" fill="#E6EAF7" stroke="#2F47A6" stroke-width="2"/>
+        <text x="120" y="60" font-weight="bold" fill="#2F47A6">IV</text><text x="120" y="92" fill="#1E2A33">changed</text>
+        <rect x="480" y="20" width="200" height="90" rx="10" fill="#E3F2E8" stroke="#2E7D4F" stroke-width="2"/>
+        <text x="580" y="60" font-weight="bold" fill="#2E7D4F">DV</text><text x="580" y="92" fill="#1E2A33">measured</text>
+        <line x1="225" y1="65" x2="472" y2="65" stroke="#1E2A33" stroke-width="3" marker-end="url(#ah)"/>
+        <text x="350" y="52" font-size="24" fill="#1E2A33">effect?</text>
+        <rect x="250" y="160" width="200" height="74" rx="10" fill="#FBF1DF" stroke="#B8761A" stroke-width="2"/>
+        <text x="350" y="194" font-weight="bold" fill="#B8761A">Other</text><text x="350" y="222" fill="#B8761A">variables</text>
+        <line x1="455" y1="185" x2="560" y2="118" stroke="#B23A3A" stroke-width="3" stroke-dasharray="7 6" marker-end="url(#ar)"/>
+        <text x="600" y="190" font-size="24" fill="#B23A3A">control</text>
+      </g>
+    </svg>
+    <figcaption>The researcher changes the IV and measures the DV. Anything else that could affect the DV (sleep, time of day, noise) must be kept the same, or you cannot tell what caused the change. That is the next section.</figcaption>
+  </figure>
+
+  <div class="worked"><b>Worked example 5: operationalise a construct.</b> A researcher wants to study stress. <span class="fb">Understand and <span class="term" data-t="apply" tabindex="0" role="button">apply</span></span>
+    <ol>
+      <li>Is it a construct? Yes: you cannot see stress directly.</li>
+      <li>Find something you can measure that goes up and down with it. Option A, the body: heart rate in beats per minute, measured with a finger clip while the <span class="term" data-t="participant" tabindex="0" role="button">participant</span> sits still for one minute. Option B, <span class="term" data-t="self-report" tabindex="0" role="button">self-report</span>: the total score on a 10-question stress <span class="term" data-t="questionnaire" tabindex="0" role="button">questionnaire</span>, each question scored 1 to 5, so totals run from 10 to 50.</li>
+      <li>Check each one: could another researcher do exactly the same thing? Yes, the device, the timing and the scoring are all stated.</li>
+      <li>Link to the concept of measurement: heart rate is <span class="term" data-t="objective" tabindex="0" role="button">objective</span> but also rises with exercise or coffee; the questionnaire asks the person directly but depends on honest answers. Neither is perfect, which is exactly the guide's point about measurement.</li>
+    </ol></div>
+
+  <div class="worked"><b>Worked example 6: identify and operationalise the IV and the DV.</b> Research question: "Does testing yourself with flashcards help you remember vocabulary better than rereading?" <span class="fb">Understand and apply</span>
+    <ol>
+      <li>What does the researcher change? The way of revising. That is the <b>IV</b>.</li>
+      <li>Operationalise the IV by stating both conditions exactly. Condition A: 10 minutes with 20 flashcards (Spanish word on the front, English on the back), saying the answer before turning each card. Condition B: 10 minutes rereading the same 20 Spanish and English word pairs on a printed list.</li>
+      <li>What is measured? How much is remembered. That is the <b>DV</b>.</li>
+      <li>Operationalise the DV: the number of the 20 Spanish words correctly translated into English in a written test 24 hours later (a score from 0 to 20).</li>
+      <li>Check: "memory" or "how well they revise" would be too vague. With the wording above, anyone could run the study again.</li>
+    </ol></div>
+
+  <div class="tip"><b>Exam traps.</b> (1) "The DV is memory" is not operationalised; "the number of words out of 20 recalled in 2 minutes" is. (2) Give the IV as its conditions ("flashcards or rereading"), not as one of them ("flashcards"). (3) The IV is changed by the researcher; the DV is never changed on purpose, only measured.</div>
+
+  <details><summary>Self-check: variables (answer in your head, then open)</summary>
+    <ol>
+      <li>A researcher shows half the participants a sad film clip and half a neutral one, then counts how many biscuits each person eats in 10 minutes. Name the IV and the DV.</li>
+      <li>Is self-esteem a variable or a construct?</li>
+      <li>Interview transcripts about how teenagers feel on exam results day: quantitative or qualitative data?</li>
+      <li>Give one operationalised DV for "anxiety before a test".</li>
+    </ol>
+    <p><b>Answers.</b> 1: IV: type of film clip (sad or neutral); DV: number of biscuits eaten in 10 minutes. 2: a construct; it becomes a variable once it is operationalised, for example as a score on a self-esteem questionnaire. 3: qualitative (words, not numbers). 4: for example, self-rated anxiety on a scale from 1 to 10 just before the test, or heart rate in beats per minute one minute before the test.</p>
+  </details>
+</section>
+
+<!-- =============================== EXPERIMENTS =============================== -->
+<section class="topic" id="exp">
+  <div class="kicker">Research methods · guide p28 · RM01 slides 18-20 and 43-49 · RM02</div>
+  <h2>Experiments, controls and confounding variables</h2>
+  <p class="guiding">Who decides which group a person is in? That one question sorts the types of <span class="term" data-t="experiment" tabindex="0" role="button">experiment</span>.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="e1"><span>"<span class="term" data-t="differentiate" tabindex="0" role="button">Differentiate</span> between the different types of research methods" (p28): tell a <span class="term" data-t="true experiment" tabindex="0" role="button">true experiment</span> from a <span class="term" data-t="quasi-experiment" tabindex="0" role="button">quasi-experiment</span>, and recognise field and <span class="term" data-t="natural experiment" tabindex="0" role="button">natural experiments</span></span></label>
+    <label><input type="checkbox" data-k="e2"><span><span class="term" data-t="explain" tabindex="0" role="button">Explain</span> "The role of <span class="term" data-t="extraneous variable" tabindex="0" role="button">external variables</span> in drawing conclusions about <span class="term" data-t="causality" tabindex="0" role="button">causality</span>" (p28)</span></label>
+    <label><input type="checkbox" data-k="e3"><span>Give "The advantages and disadvantages of different research methods" (p28) for true and quasi-experiments</span></label>
+    <label><input type="checkbox" data-k="e4"><span>Show "The appropriate selection of <span class="term" data-t="research methodology" tabindex="0" role="button">research methodology</span> to investigate a psychological question" (p28) by choosing a type of experiment for a research question</span></label>
+  </div>
+
+  <h3>True experiment and quasi-experiment</h3>
+  <p>The guide lists one research method as "experiments (true or quasi-)" (p28). Its glossary defines both:</p>
+  <div class="quote">True experiment: "A controlled experiment where researchers <span class="term" data-t="manipulate" tabindex="0" role="button">manipulate</span> an <span class="term" data-t="iv" tabindex="0" role="button">independent variable</span> to observe its impact on a <span class="term" data-t="dv" tabindex="0" role="button">dependent variable</span>, using <span class="term" data-t="random allocation" tabindex="0" role="button">random allocation</span> of <span class="term" data-t="participant" tabindex="0" role="button">participants</span> to <span class="term" data-t="condition" tabindex="0" role="button">conditions</span> to ensure causation." <span class="learn">Learn word for word</span><small>Guide glossary, quoted in RM02</small></div>
+  <div class="quote">Quasi-experiment: "A research method that resembles a true experiment but lacks random assignment of participants to different groups. In a true experiment, researchers randomly assign participants to different conditions. In a quasi-experiment, researchers often have limited control over participant assignment, meaning it is unable to establish a <span class="term" data-t="cause and effect" tabindex="0" role="button">cause-and-effect</span> relationship." <span class="learn">Learn word for word</span><small>Guide glossary, quoted in RM02</small></div>
+  <p><b>Random allocation</b> (also called random assignment) means <span class="term" data-t="chance" tabindex="0" role="button">chance</span> decides which condition each participant goes into, for example by tossing a coin or drawing names. It spreads differences between people, such as ability or motivation, evenly across the conditions, so they cannot explain a difference in the DV. In a quasi-experiment the groups exist already (age, gender, culture, a <span class="term" data-t="diagnosis" tabindex="0" role="button">diagnosis</span>), so the researcher cannot use chance to place people.</p>
+
+    <div class="cards">
+    <div><h4>True experiment</h4><p><span class="lab">IV changed by the researcher:</span> yes</p><p><span class="lab">Random allocation:</span> yes</p><p><span class="lab">Setting:</span> usually controlled, often a <span class="term" data-t="laboratory" tabindex="0" role="button">laboratory</span></p><p><span class="lab">Cause and effect:</span> strongest evidence</p><p><span class="lab">Example:</span> caffeine or <span class="term" data-t="decaf" tabindex="0" role="button">decaf</span>, chosen by chance, then an alertness test (RM01 slide 48)</p></div>
+    <div><h4><span class="term" data-t="field experiment" tabindex="0" role="button">Field experiment</span> <span style="font-weight:400">(class word)</span></h4><p><span class="lab">IV changed by the researcher:</span> yes</p><p><span class="lab">Random allocation:</span> usually yes</p><p><span class="lab">Setting:</span> real life</p><p><span class="lab">Cause and effect:</span> good, but less control</p><p><span class="lab">Example:</span> Piliavin <span class="term" data-t="et al" tabindex="0" role="button">et al.</span> (1969): helping on a real New York subway train (GLO <span class="term" data-t="measurement" tabindex="0" role="button">Measurement</span>)</p></div>
+    <div><h4>Quasi-experiment</h4><p><span class="lab">IV changed by the researcher:</span> no: the groups exist already</p><p><span class="lab">Random allocation:</span> no</p><p><span class="lab">Setting:</span> any</p><p><span class="lab">Cause and effect:</span> weaker; the guide says it cannot establish cause and effect</p><p><span class="lab">Example:</span> Maguire et al. (2000): London taxi drivers and non-drivers, brain scans compared (RM02)</p></div>
+    <div><h4>Natural experiment <span style="font-weight:400">(class word)</span></h4><p><span class="lab">IV changed by the researcher:</span> no: a real event changes it</p><p><span class="lab">Random allocation:</span> no</p><p><span class="lab">Setting:</span> real life</p><p><span class="lab">Cause and effect:</span> weaker</p><p><span class="lab">Example:</span> a smoking ban: health measured before and after (RM01 slides 92-94)</p></div>
+  </div>
+  <p class="note">Field and natural experiments are not in the guide's list or glossary. Your class deck (slide 92) says a natural experiment is a kind of quasi-experiment and "may simply be referred to as a quasi-experiment on exam day". A field experiment is a true experiment that happens in real life.</p>
+
+  <h3>Controls and confounding variables</h3>
+  <div class="quote">Extraneous variable: "<span class="term" data-t="variable" tabindex="0" role="button">Variables</span> other than the independent variable in an experiment that can potentially influence the dependent variable. If not controlled, they can become <span class="term" data-t="confounding variable" tabindex="0" role="button">confounding variables</span>." <span class="learn">Learn word for word</span><small>Guide glossary. Your worksheet RM02 calls them "external (also called extraneous or confounding) variables"; the guide's learning <span class="term" data-t="objective" tabindex="0" role="button">objective</span> says "external variables".</small></div>
+  <ul>
+    <li><b>Extraneous variable</b>: anything apart from the IV that could affect the DV, for example noise, time of day, tiredness, the words used in the test.</li>
+    <li><b><span class="term" data-t="control variable" tabindex="0" role="button">Control variable</span></b>: an extraneous variable that the researcher keeps the same in every condition (RM01 slide 20).</li>
+    <li><b>Confounding variable</b>: an extraneous variable that was not controlled and differs between the conditions. Now there are two possible causes of the result, and you cannot tell which one it was (RM01 slide 19).</li>
+  </ul>
+  <p>Three main ways to control them: <b><span class="term" data-t="standardisation" tabindex="0" role="button">standardisation</span></b> (the same instructions, materials, room and timing for everyone), <b>random allocation</b> (spreads differences between people evenly) and a <b><span class="term" data-t="control group" tabindex="0" role="button">control group</span></b> or control condition to compare against. This is why the guide links external variables to <b>causality</b>: only when they are controlled can you say the IV caused the change in the DV.</p>
+
+  <div class="worked"><b>Worked example 7: spot and fix a confounding variable.</b> In the flashcard study from worked example 6, the flashcard group is tested at 9 am, and the rereading group at 3 pm, straight after a PE lesson. The flashcard group scores higher. <span class="fb">Understand and <span class="term" data-t="apply" tabindex="0" role="button">apply</span></span>
+    <ol>
+      <li>List what differs between the groups apart from the IV: time of day and tiredness after sport.</li>
+      <li>Could that affect the DV (words recalled)? Yes: tired students may recall less.</li>
+      <li>So time of day is a <b>confounding variable</b>: the higher score may be caused by the flashcards or by being fresh in the morning.</li>
+      <li>Fix: test both groups at the same time of day in the same room, read the same instructions from a script (standardisation), and put students into groups by drawing names (random allocation).</li>
+    </ol></div>
+
+  <div class="worked"><b>Worked example 8: name the type of experiment.</b> Ask two questions in order: did the researcher change the IV? Did chance decide who went into which condition? <span class="fb">Understand and apply</span>
+    <ol>
+      <li>60 students are put by coin toss into "revise in silence" or "revise with recorded café noise", in the same classroom, then take the same test. Researcher changed the IV, chance decided the groups: <b>true experiment</b>.</li>
+      <li>The memory scores of 15-year-olds who speak two languages are compared with those who speak one. Nobody can be given a language by chance: <b>quasi-experiment</b>.</li>
+      <li>A city moves school start time from 7:30 to 8:30, and researchers compare students' sleep diaries from the term before and the term after. The change came from the city, not the researcher: <b>natural experiment</b> (you may call it a quasi-experiment).</li>
+      <li>An actor drops a pile of books in a real school corridor, wearing school uniform on some days and casual clothes on others (decided by coin toss), and the researcher counts how many passers-by help. Researcher changed the IV, in a real setting: <b>field experiment</b>.</li>
+    </ol></div>
+
+  <h3>Advantages and disadvantages</h3>
+  <div class="tablewrap"><table>
+    <tr><th></th><th>Advantages</th><th>Disadvantages</th></tr>
+    <tr><td><b>True experiment</b></td><td>can show cause and effect; high control over variables; easy to repeat with the same <span class="term" data-t="procedure" tabindex="0" role="button">procedure</span></td><td>artificial settings and tasks may not match real life; <span class="term" data-t="ethics" tabindex="0" role="button">ethics</span> stop researchers from changing some IVs (you cannot make people depressed)</td></tr>
+    <tr><td><b>Quasi-experiment</b></td><td>studies things that cannot or should not be assigned (age, culture, illness); often more like real life</td><td>no random allocation, so differences between the groups (for example income or education) can confound the result; cannot establish cause and effect</td></tr>
+  </table></div>
+  <p style="font-size:.95rem">Want more examples? Simply Psychology's free page <a href="https://www.simplypsychology.org/experimental-method.html">Experimental method</a> covers the same ideas (it says "lab experiment" for a true experiment in a laboratory).</p>
+
+  <div class="tip"><b>Exam traps.</b> (1) The difference between a true and a quasi-experiment is <b>who decides group membership</b>, not where the study happens: a true experiment can happen outside a lab, and a quasi-experiment can happen in one. Careful: RM01 slide 97 (next session's slides) highlights answer A, "Quasi-experiments take place in naturalistic environments", but by the guide's definition the right answer is B: random allocation. (2) A quasi-experiment still has an IV and a DV; it is not "just a correlation". (3) Extraneous and confounding are not the same word: an extraneous variable only <b>could</b> affect the DV; a confounding one is uncontrolled and differs between conditions.</div>
+
+  <details><summary>Self-check: experiments (answer in your head, then open)</summary>
+    <ol>
+      <li>A researcher compares the stress scores of nurses who work night shifts with nurses who work day shifts. True or quasi-experiment, and why?</li>
+      <li>Name two variables you would control in the flashcard study.</li>
+      <li>In one sentence each: what is an extraneous variable, and what makes it a confounding variable?</li>
+    </ol>
+    <p><b>Answers.</b> 1: quasi-experiment: the nurses are already on their shift pattern, so the researcher cannot allocate them by chance. 2: any two of: the same 20 words, the same 10 minutes, the same test, the same time of day, the same room, the same instructions. 3: an extraneous variable is anything apart from the IV that could affect the DV; it becomes confounding when it is not controlled and differs between the conditions, so it could explain the result instead of the IV.</p>
+  </details>
+</section>
+
+<!-- =============================== HYPOTHESES =============================== -->
+<section class="topic" id="hyp">
+  <div class="kicker">RM01 slides 50-59</div>
+  <h2>Hypotheses</h2>
+  <p class="guiding">A <span class="term" data-t="hypothesis" tabindex="0" role="button">hypothesis</span> turns a research question into a statement that the <span class="term" data-t="data" tabindex="0" role="button">data</span> can support or contradict.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="h1"><span>Write an experimental hypothesis and a <span class="term" data-t="null hypothesis" tabindex="0" role="button">null hypothesis</span> with both <span class="term" data-t="variable" tabindex="0" role="button">variables</span> <span class="term" data-t="operationalise" tabindex="0" role="button">operationalised</span></span></label>
+    <label><input type="checkbox" data-k="h2"><span>Tell a <span class="term" data-t="one-tailed" tabindex="0" role="button">one-tailed</span> (directional) hypothesis from a <span class="term" data-t="two-tailed" tabindex="0" role="button">two-tailed</span> (non-directional) one</span></label>
+  </div>
+  <p style="font-size:.95rem;color:var(--ink-soft)">The guide has no separate line for hypotheses, but you need them to "<span class="term" data-t="design" tabindex="0" role="button">Design</span> a study to investigate a research question" (<span class="term" data-t="assessment objective" tabindex="0" role="button">AO3</span>, p16), for Paper 2 Section A question 4 and for your <span class="term" data-t="ia" tabindex="0" role="button">IA</span>. "<span class="term" data-t="suggest" tabindex="0" role="button">Suggest</span>" means "Propose a solution, hypothesis or other possible answer."</p>
+
+  <ul>
+    <li><b>Research question</b>: a question. "Does testing yourself help you remember?"</li>
+    <li><b>Experimental hypothesis</b>: a testable statement that predicts the effect of the <span class="term" data-t="iv" tabindex="0" role="button">IV</span> on the <span class="term" data-t="dv" tabindex="0" role="button">DV</span> (RM01 slide 51).</li>
+    <li><b>Null hypothesis</b> (H<sub>0</sub>): the IV will have no effect on the DV, and any difference is due to <span class="term" data-t="chance" tabindex="0" role="button">chance</span> (slide 54).</li>
+    <li><b>One-tailed</b> (directional): predicts which way the result will go: "more", "fewer", "faster" (slide 57).</li>
+    <li><b>Two-tailed</b> (non-directional): predicts a difference but not which way: "will affect", "there will be a difference" (slide 58).</li>
+  </ul>
+  <p>Recipe <span class="fb">Understand and <span class="term" data-t="apply" tabindex="0" role="button">apply</span></span>: <b>[<span class="term" data-t="participant" tabindex="0" role="button">participants</span> in <span class="term" data-t="condition" tabindex="0" role="button">condition</span> A]</b> will <b>[more / fewer / differ in]</b> <b>[operationalised DV]</b> than <b>[participants in condition B]</b>.</p>
+  <p>After the study, a <span class="term" data-t="statistics" tabindex="0" role="button">statistical test</span> decides whether to <b><span class="term" data-t="reject" tabindex="0" role="button">reject</span></b> the null hypothesis (the difference is too big to be chance) or <b>retain</b> it. Psychologists do not say a study "proves" a hypothesis (slide 56).</p>
+
+  <div class="worked"><b>Worked example 9: three hypotheses for the flashcard study.</b>
+    <ol>
+      <li><b>One-tailed:</b> "Students who revise 20 Spanish words for 10 minutes with self-testing flashcards will correctly translate more of the words in a test 24 hours later than students who reread the word list for 10 minutes."</li>
+      <li><b>Two-tailed:</b> "There will be a difference in the number of the 20 Spanish words correctly translated 24 hours later between students who revise with self-testing flashcards for 10 minutes and students who reread the list for 10 minutes."</li>
+      <li><b>Null:</b> "There will be no difference in the number of the 20 Spanish words correctly translated 24 hours later between the flashcard condition and the rereading condition; any difference will be due to chance."</li>
+      <li>Checklist for every hypothesis: both conditions of the IV named; the DV given as a number you could record; the same people (who) and timing (when) stated; a statement, not a question.</li>
+    </ol></div>
+
+  <div class="tip"><b>Exam traps.</b> (1) "Flashcards improve memory" is not a hypothesis you can test: no conditions, no operationalised DV. (2) The null hypothesis is "no difference", not the opposite prediction ("rereading is better"). (3) Never write "prove" or "this will show that"; data support or fail to support a hypothesis.</div>
+
+  <details><summary>Self-check: hypotheses (answer in your head, then open)</summary>
+    <ol>
+      <li>"Students who listen to a 5-minute relaxation recording will report lower <span class="term" data-t="anxiety" tabindex="0" role="button">anxiety</span> on a scale from 1 to 10 than students who sit in silence for 5 minutes." One-tailed or two-tailed?</li>
+      <li>"The colour of the test paper (blue or white) will affect the number of maths questions answered correctly in 15 minutes." One-tailed or two-tailed?</li>
+      <li>Write the null hypothesis for question 2.</li>
+    </ol>
+    <p><b>Answers.</b> 1: one-tailed (it says "lower"). 2: two-tailed ("will affect", no direction). 3: "There will be no difference in the number of maths questions answered correctly in 15 minutes between students given blue paper and students given white paper; any difference will be due to chance."</p>
+  </details>
+</section>
+
+<!-- =============================== SAMPLING =============================== -->
+<section class="topic" id="samp">
+  <div class="kicker"><span class="term" data-t="sampling technique" tabindex="0" role="button">Sampling techniques</span> · guide p28 · RM01 slides 21-42 · RM03</div>
+  <h2>Sampling techniques</h2>
+  <p class="guiding">You cannot test everyone, so the people you pick decide how far your results reach.</p>
+
+  <div class="ican">
+    <p>By the end of this section I can</p>
+    <label><input type="checkbox" data-k="s1"><span>Name and <span class="term" data-t="describe" tabindex="0" role="button">describe</span> the five sampling techniques in the guide: "Self-selected", "Opportunity", "Stratified", "Random", "Snowball" (p28)</span></label>
+    <label><input type="checkbox" data-k="s2"><span>Give "The advantages and disadvantages of different sampling techniques." (p28)</span></label>
+    <label><input type="checkbox" data-k="s3"><span>Choose and justify a sampling technique for a study, and <span class="term" data-t="explain" tabindex="0" role="button">explain</span> how <span class="term" data-t="sampling bias" tabindex="0" role="button">sampling bias</span> limits <span class="term" data-t="generalise" tabindex="0" role="button">generalising</span> the results</span></label>
+  </div>
+
+  <h3>Population, sample and bias</h3>
+  <ul>
+    <li><b><span class="term" data-t="target population" tabindex="0" role="button">Target population</span></b>: the whole group you want to know about, for example all Grade 11 students in Singapore.</li>
+    <li><b><span class="term" data-t="sample" tabindex="0" role="button">Sample</span></b>: the smaller group who actually take part. RM01 slide 28: sampling is selecting "a <span class="term" data-t="subset" tabindex="0" role="button">subset</span> of individuals from a larger <span class="term" data-t="population" tabindex="0" role="button">population</span> to participate in a study".</li>
+    <li><b><span class="term" data-t="representative" tabindex="0" role="button">Representative</span></b>: the sample is like the population in the ways that matter (age, gender, school type). Then you can <b>generalise</b>: <span class="term" data-t="apply" tabindex="0" role="button">apply</span> the results to the whole population.</li>
+    <li><b>Sampling bias</b> (guide glossary): "This occurs when the sample used in a research study is not representative of the population from which it was drawn and to which the findings may be generalized." Example from the deck (slide 25): asking only children near the sweet stall which carnival ride is best.</li>
+  </ul>
+
+  <h3>The five techniques</h3>
+    <p>The five names <span class="learn">Learn word for word</span>, each with how it works, one advantage and one disadvantage:</p>
+  <div class="cards">
+    <div><h4>Self-selected <span style="font-weight:400">(also called volunteer)</span></h4><p><span class="lab">How:</span> People offer to take part, for example after seeing an advert or a post.</p><p><span class="lab">Advantage:</span> Easy to get many people; they are willing and have chosen to take part.</p><p><span class="lab">Disadvantage:</span> <span class="term" data-t="volunteer bias" tabindex="0" role="button">Volunteer bias</span>: volunteers tend to be alike (keen, interested, strong opinions), so the sample may not be representative.</p></div>
+    <div><h4>Opportunity <span style="font-weight:400">(also called convenience)</span></h4><p><span class="lab">How:</span> Whoever is available and willing at the time.</p><p><span class="lab">Advantage:</span> Quick, cheap and easy.</p><p><span class="lab">Disadvantage:</span> High risk of sampling bias; hard to generalise.</p></div>
+    <div><h4>Stratified</h4><p><span class="lab">How:</span> Split the population into subgroups (<span class="term" data-t="strata" tabindex="0" role="button">strata</span>) by a key feature, such as year group, then pick randomly from each subgroup in the same <span class="term" data-t="proportion" tabindex="0" role="button">proportion</span> as in the population.</p><p><span class="lab">Advantage:</span> Every subgroup is fairly represented, so results generalise well.</p><p><span class="lab">Disadvantage:</span> Needs detailed information about the population; slower and harder to organise; some people fit more than one subgroup.</p></div>
+    <div><h4>Random</h4><p><span class="lab">How:</span> Every member of the target population has an equal <span class="term" data-t="chance" tabindex="0" role="button">chance</span> of being picked, for example by a computer from a full list.</p><p><span class="lab">Advantage:</span> Reduces <span class="term" data-t="selection bias" tabindex="0" role="button">selection bias</span>; the sample is likely to be representative.</p><p><span class="lab">Disadvantage:</span> Needs a complete list of the population; impractical for very large or spread-out populations; people who refuse can still <span class="term" data-t="bias" tabindex="0" role="button">bias</span> it.</p></div>
+    <div><h4>Snowball</h4><p><span class="lab">How:</span> The first <span class="term" data-t="participant" tabindex="0" role="button">participants</span> recruit others they know who fit the study.</p><p><span class="lab">Advantage:</span> Reaches hidden or hard-to-reach groups; people may trust the study more.</p><p><span class="lab">Disadvantage:</span> Participants know each other and tend to be similar, so the sample is biased; <span class="term" data-t="privacy" tabindex="0" role="button">privacy</span> concerns.</p></div>
+  </div>
+
+  <figure>
+    <svg viewBox="0 0 700 230" role="img" aria-label="Random sampling picks who is in the study from the population; random allocation then splits that sample into condition A and condition B">
+      <g font-family="Arial,Helvetica,sans-serif" font-size="24" text-anchor="middle">
+        <defs><marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1E2A33"/></marker></defs>
+        <rect x="10" y="40" width="190" height="150" rx="12" fill="#F3F5F2" stroke="#4A5862" stroke-width="2"/>
+        <text x="105" y="125" font-weight="bold">Population</text>
+        <rect x="270" y="65" width="150" height="100" rx="12" fill="#E6EAF7" stroke="#2F47A6" stroke-width="2"/>
+        <text x="345" y="122" font-weight="bold" fill="#2F47A6">Sample</text>
+        <rect x="510" y="20" width="180" height="80" rx="12" fill="#E3F2E8" stroke="#2E7D4F" stroke-width="2"/>
+        <text x="600" y="68" font-weight="bold" fill="#2E7D4F">Condition A</text>
+        <rect x="510" y="130" width="180" height="80" rx="12" fill="#FBF1DF" stroke="#B8761A" stroke-width="2"/>
+        <text x="600" y="178" font-weight="bold" fill="#B8761A">Condition B</text>
+        <line x1="203" y1="115" x2="262" y2="115" stroke="#1E2A33" stroke-width="3" marker-end="url(#ah2)"/>
+        <line x1="423" y1="100" x2="503" y2="62" stroke="#1E2A33" stroke-width="3" marker-end="url(#ah2)"/>
+        <line x1="423" y1="130" x2="503" y2="168" stroke="#1E2A33" stroke-width="3" marker-end="url(#ah2)"/>
+        <text x="233" y="225" fill="#2F47A6">sampling</text>
+        <text x="463" y="225" fill="#2E7D4F">allocation</text>
+      </g>
+    </svg>
+    <figcaption>Two different steps. <b>Sampling</b> decides who is in the study (left arrow). <b>Allocation</b> decides which <span class="term" data-t="condition" tabindex="0" role="button">condition</span> each person in the sample goes into (right arrows). "Random sampling" is about the first step, "<span class="term" data-t="random allocation" tabindex="0" role="button">random allocation</span>" about the second.</figcaption>
+  </figure>
+
+  <div class="worked"><b>Worked example 10: a stratified sample, with numbers.</b> A school has 200 Grade 11 students: 120 take the IB Diploma and 80 take another programme. A researcher wants a stratified sample of 30. <span class="fb">Understand and apply</span>
+    <ol>
+      <li>Find the fraction of the population to sample: 30 out of 200 = 0.15 (15%).</li>
+      <li>Apply it to each stratum: 120 × 0.15 = 18 IB students; 80 × 0.15 = 12 others.</li>
+      <li>Check: 18 + 12 = 30, and 18 : 12 is the same ratio as 120 : 80 (3 : 2).</li>
+      <li>Then choose the 18 at random from the IB list and the 12 at random from the other list. Picking the first 18 IB students you meet would not be stratified sampling.</li>
+    </ol></div>
+
+  <div class="worked"><b>Worked example 11: choose and justify a technique.</b> A researcher wants to <span class="term" data-t="interview" tabindex="0" role="button">interview</span> teenagers who look after a sick parent at home (young carers) about their stress. <span class="fb">Understand and apply</span>
+    <ol>
+      <li>Is there a list of the population? No: young carers are often not known to schools, so random and stratified sampling are not possible.</li>
+      <li>Choose <b>snowball sampling</b>: find a few young carers through a support group, and ask each to pass the study on to other young carers they know.</li>
+      <li>Justify: it reaches a hidden group, and young carers may trust a study that a friend recommends.</li>
+      <li>One disadvantage: participants found through the same support group and friendships are likely to be similar (same area, same kind of support), so the results may not generalise to all young carers.</li>
+    </ol></div>
+
+  <p style="font-size:.95rem">Simply Psychology's free page <a href="https://www.simplypsychology.org/sampling.html">Sampling methods</a> explains the same techniques. It also covers systematic, cluster, quota and purposive sampling, which are not in the IB guide; you do not need them.</p>
+
+  <div class="tip"><b>Exam traps.</b> (1) <b>Random sampling is not random allocation.</b> Random sampling: everyone in the population has an equal chance of being <b>in the study</b>. Random allocation: chance decides which <b>condition</b> each participant goes into. A <span class="term" data-t="true experiment" tabindex="0" role="button">true experiment</span> needs random allocation; it can still use an opportunity sample. (2) "Stopping people at random in the street" is <b>opportunity</b> sampling, not random sampling: people who are not in that street that day have no chance of being picked. (3) RM01 slide 39 (filling equal numbers of men, women and age groups until quotas are full) is <b>quota</b> sampling. It looks like stratified sampling but people are not picked at random, and it is not one of the five guide techniques. (4) For a disadvantage, say <b>why</b> the sample is unrepresentative, linked to the study, not just "it is biased".</div>
+
+  <details><summary>Self-check: sampling (answer in your head, then open)</summary>
+    <ol>
+      <li>The names of all 600 students in a school go into a computer, which picks 60. Which technique?</li>
+      <li>A link on the school's Instagram page asks students to sign up for a sleep study. Which technique, and one disadvantage?</li>
+      <li>A researcher interviews three former gang members, and each one introduces others. Which technique?</li>
+      <li>A population has 100 Year 10 and 300 Year 11 students. How many of each in a stratified sample of 40?</li>
+      <li>In one sentence each: random sampling and random allocation.</li>
+    </ol>
+    <p><b>Answers.</b> 1: random. 2: self-selected; for example, students who follow the school account and care about sleep may differ from the rest, so the sample may not represent all students. 3: snowball. 4: 40 out of 400 is 10%, so 10 from Year 10 and 30 from Year 11. 5: random sampling gives every member of the target population an equal chance of being chosen for the study; random allocation uses chance to put each participant into a condition of the <span class="term" data-t="experiment" tabindex="0" role="button">experiment</span>.</p>
+  </details>
+</section>
+
+<!-- =============================== EXIT CHECK =============================== -->
+<section class="topic" id="exit">
+  <div class="kicker">Block 4 · no notes, 6 minutes</div>
+  <h2>Exit check: "Does music help memory?"</h2>
+  <p>On paper, with this page scrolled away:</p>
+  <ol>
+    <li><span class="term" data-t="operationalise" tabindex="0" role="button">Operationalise</span> the <span class="term" data-t="iv" tabindex="0" role="button">IV</span> (both <span class="term" data-t="condition" tabindex="0" role="button">conditions</span>) and the <span class="term" data-t="dv" tabindex="0" role="button">DV</span>.</li>
+    <li>Write a <span class="term" data-t="one-tailed" tabindex="0" role="button">one-tailed</span> <span class="term" data-t="hypothesis" tabindex="0" role="button">experimental hypothesis</span> and the <span class="term" data-t="null hypothesis" tabindex="0" role="button">null hypothesis</span>.</li>
+    <li>Name the <span class="term" data-t="sampling technique" tabindex="0" role="button">sampling technique</span> you would use, justify it in one sentence, and give one disadvantage.</li>
+    <li>Name one <span class="term" data-t="extraneous variable" tabindex="0" role="button">extraneous variable</span> you would control, and how.</li>
+  </ol>
+  <details><summary>Model answer and marking checklist (open only after you have written yours)</summary>
+    <p><b>1.</b> IV: whether <span class="term" data-t="participant" tabindex="0" role="button">participants</span> learn a list while hearing music or in silence. Condition A: a 3-minute instrumental piano track at the same volume for everyone while learning a list of 20 common nouns for 3 minutes. Condition B: the same list for 3 minutes in silence. DV: the number of the 20 words correctly written down in 2 minutes straight after learning.</p>
+    <p><b>2.</b> One-tailed: "Participants who learn a list of 20 nouns for 3 minutes while listening to instrumental piano music will recall more of the words in 2 minutes than participants who learn the list in silence." Null: "There will be no difference in the number of words recalled in 2 minutes between the music and silence conditions; any difference will be due to <span class="term" data-t="chance" tabindex="0" role="button">chance</span>."</p>
+    <p><b>3.</b> For example opportunity sampling: Grade 11 students free in one lunch break, because it is quick and needs no list of all students. Disadvantage: they are all from one school and one year group, so the results may not <span class="term" data-t="generalise" tabindex="0" role="button">generalise</span> to other teenagers or adults. (Stratified or random sampling with a good reason and a matching disadvantage is also right.)</p>
+    <p><b>4.</b> For example: the same word list, the same room and the same recorded instructions for everyone (<span class="term" data-t="standardisation" tabindex="0" role="button">standardisation</span>); <span class="term" data-t="random allocation" tabindex="0" role="button">random allocation</span> to the two conditions so that people with better memories are spread evenly.</p>
+    <p><b>Checklist:</b> both IV conditions named? DV is a number you could record? Hypothesis is a statement with a direction ("more")? Null says "no difference ... due to chance"? Technique named, justified and given a disadvantage linked to this study? Missing ticks go into the Error log.</p>
+  </details>
+</section>
+
+<!-- =============================== QUIZ =============================== -->
+<section class="topic quiz" id="quiz">
+  <div class="kicker">Ten questions on today's page</div>
+  <h2>Quick quiz</h2>
+  <p>Decide your answer before you click. Every question explains the trap after you answer. Write any you miss into the Error log.</p>
+
+  <div class="q" data-a="2"><p>1. Research question: "Does background noise affect how many words students recall?" The <span class="term" data-t="dv" tabindex="0" role="button">dependent variable</span> is</p>
+    <button>background noise</button>
+    <button>the students</button>
+    <button>the number of words recalled</button>
+    <button>the type of words on the list</button>
+    <div class="why">The DV is what is measured: words recalled. Background noise is the <span class="term" data-t="iv" tabindex="0" role="button">IV</span> (what the researcher changes). The type of words is an <span class="term" data-t="extraneous variable" tabindex="0" role="button">extraneous variable</span> to keep the same.</div></div>
+
+  <div class="q" data-a="1"><p>2. A researcher picks 40 names from the school register with a random number generator, then tosses a coin to put each person into <span class="term" data-t="condition" tabindex="0" role="button">condition</span> A or B. The coin toss is</p>
+    <button>random sampling</button>
+    <button>random allocation</button>
+    <button>stratified sampling</button>
+    <button>a control variable</button>
+    <div class="why">Choosing the 40 from the register is random <span class="term" data-t="sampling technique" tabindex="0" role="button">sampling</span>; the coin toss decides the condition, which is <span class="term" data-t="random allocation" tabindex="0" role="button">random allocation</span>. Mixing these two up is the classic trap.</div></div>
+
+  <div class="q" data-a="3"><p>3. Which of these is a <span class="term" data-t="quasi-experiment" tabindex="0" role="button">quasi-experiment</span>?</p>
+    <button>Participants are put by coin toss into a caffeine or a decaf group before a reaction-time test</button>
+    <button>An actor drops books in a real corridor, in uniform or not, decided by coin toss</button>
+    <button>Students are randomly allocated to revise with music or in silence</button>
+    <button>The anxiety scores of only children are compared with those of children who have siblings</button>
+    <div class="why">Nobody can be allocated to "only child" by <span class="term" data-t="chance" tabindex="0" role="button">chance</span>: the groups already exist, so it is quasi. The first and third are <span class="term" data-t="true experiment" tabindex="0" role="button">true experiments</span>; the second is a <span class="term" data-t="field experiment" tabindex="0" role="button">field experiment</span> (still random allocation).</div></div>
+
+  <div class="q" data-a="0"><p>4. Which is the best <span class="term" data-t="operationalise" tabindex="0" role="button">operationalised</span> DV for a memory study?</p>
+    <button>The number of the 20 words a participant writes down correctly in 2 minutes</button>
+    <button>How good the participant's memory is</button>
+    <button>Whether the participant feels they remembered well</button>
+    <button>Memory performance</button>
+    <div class="why">Only the first says exactly what is counted and how, so anyone could repeat it. The others name the <span class="term" data-t="construct" tabindex="0" role="button">construct</span> (memory) without saying how it is measured.</div></div>
+
+  <div class="q" data-a="2"><p>5. A psychologist puts a sign-up poster in the school library for a study on sleep. This is</p>
+    <button>opportunity sampling</button>
+    <button>random sampling</button>
+    <button>self-selected sampling</button>
+    <button>snowball sampling</button>
+    <div class="why">The students choose themselves by signing up: self-selected (volunteer). The trap is opportunity, where the researcher <span class="term" data-t="approach" tabindex="0" role="button">approaches</span> whoever is around.</div></div>
+
+  <div class="q" data-a="1"><p>6. A school has 250 students: 150 in Year 12 and 100 in Year 13. A stratified <span class="term" data-t="sample" tabindex="0" role="button">sample</span> of 25 should contain</p>
+    <button>13 from Year 12 and 12 from Year 13</button>
+    <button>15 from Year 12 and 10 from Year 13</button>
+    <button>10 from Year 12 and 15 from Year 13</button>
+    <button>25 from Year 12, the bigger group</button>
+    <div class="why">25 out of 250 is 10%: 150 × 0.1 = 15 and 100 × 0.1 = 10. Stratified means the same <span class="term" data-t="proportion" tabindex="0" role="button">proportions</span> as the <span class="term" data-t="population" tabindex="0" role="button">population</span>, not equal numbers; 10 and 15 swaps the groups.</div></div>
+
+  <div class="q" data-a="3"><p>7. Which is a <span class="term" data-t="one-tailed" tabindex="0" role="button">one-tailed</span> <span class="term" data-t="hypothesis" tabindex="0" role="button">hypothesis</span>?</p>
+    <button>Revision method will affect test scores</button>
+    <button>There will be no difference in test scores between the two revision methods</button>
+    <button>Does testing yourself improve test scores?</button>
+    <button>Students who test themselves with flashcards will score higher on a 20-word test than students who reread the list</button>
+    <div class="why">One-tailed means it says which way: "higher". The first is <span class="term" data-t="two-tailed" tabindex="0" role="button">two-tailed</span> (no direction), the second is the <span class="term" data-t="null hypothesis" tabindex="0" role="button">null hypothesis</span>, and the third is a research question, not a hypothesis.</div></div>
+
+  <div class="q" data-a="0"><p>8. "Give a detailed account including reasons or causes" is the IB definition of</p>
+    <button>Explain</button>
+    <button>Describe</button>
+    <button>Evaluate</button>
+    <button>Discuss</button>
+    <div class="why"><span class="term" data-t="describe" tabindex="0" role="button">Describe</span> is only "Give a detailed account." <span class="term" data-t="explain" tabindex="0" role="button">Explain</span> adds reasons or causes. <span class="term" data-t="evaluate" tabindex="0" role="button">Evaluate</span> weighs strengths and limitations; <span class="term" data-t="discuss" tabindex="0" role="button">discuss</span> is a balanced review with a range of arguments.</div></div>
+
+  <div class="q" data-a="2"><p>9. In the <span class="term" data-t="hl" tabindex="0" role="button">HL</span> <span class="term" data-t="ia" tabindex="0" role="button">internal assessment</span> you</p>
+    <button>carry out an experiment and analyse your results, worth 20%</button>
+    <button>write a 4&nbsp;000-word essay on any psychology topic</button>
+    <button>design a research proposal but do not carry it out, worth 20%</button>
+    <button>sit a 1 h 45 data paper, worth 30%</button>
+    <div class="why">The IA is a <span class="term" data-t="research proposal" tabindex="0" role="button">research proposal</span> of at most 2&nbsp;200 words, designed but not conducted, 24 marks and 20% at HL. 1 h 45 and 30% is Paper 3; 4&nbsp;000 words is the <span class="term" data-t="extended essay" tabindex="0" role="button">extended essay</span>.</div></div>
+
+  <div class="q" data-a="1"><p>10. "A fundamental challenge for psychologists is that human behaviour is difficult to observe and <span class="term" data-t="objective" tabindex="0" role="button">objectively</span> measure." This opens which <span class="term" data-t="concept" tabindex="0" role="button">concept</span>?</p>
+    <button>Bias</button>
+    <button>Measurement</button>
+    <button>Causality</button>
+    <button>Perspective</button>
+    <div class="why">It is the guide's opening statement for <span class="term" data-t="measurement" tabindex="0" role="button">measurement</span> (p22). <span class="term" data-t="bias" tabindex="0" role="button">Bias</span> opens with "A bias is a limitation in objective thinking", which also has the word "objective" in it: read to the end of the sentence.</div></div>
+
+  <div class="score" id="score">Score: 0 / 10 answered 0</div>
+</section>
+
+<section class="end" id="end">
+  <h2 style="font-size:1.4rem">Before you close this</h2>
+  <ul>
+    <li>Tick the "I can" boxes you are confident about. The unticked ones are the first ten minutes of your next Psychology session (Saturday 14 November: evaluating research and <span class="term" data-t="conditioning" tabindex="0" role="button">classical conditioning</span>).</li>
+    <li>Check your RM02 and RM03 answers and your slide 59 <span class="term" data-t="hypothesis" tabindex="0" role="button">hypotheses</span> against this page once more. Keep your one-page course map: you will add to it every session.</li>
+    <li>Open the <a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">study sheet</a>, <b>Error log</b> tab, and write one row for every mistake from the self-checks, the exit check and the quiz: what went wrong, and the rule that fixes it (for example "mixed up random <span class="term" data-t="sampling technique" tabindex="0" role="button">sampling</span> and <span class="term" data-t="random allocation" tabindex="0" role="button">random allocation</span>").</li>
+    <li>Also on the study site: <a href="../flashcards.html">flashcards</a> (5 to 10 minutes a day: today's <span class="term" data-t="command term" tabindex="0" role="button">command terms</span>, <span class="term" data-t="concept" tabindex="0" role="button">concepts</span> and sampling techniques are in there), <a href="../exam-psychology-hl.html">exam technique</a> for Psychology, and your <a href="../progress.html">progress page</a>, which turns green as you tick the "I can" boxes and pass the quiz.</li>
+  </ul>
+</section>
+
+</main>
+
+<script>
+(function(){
+  // remember ticked "I can" boxes on this device; fails quietly where storage is unavailable
+  var key='ib-psych-hl-frame-rm-ican';
+  var boxes=document.querySelectorAll('.ican input');
+  try{ var saved=JSON.parse(localStorage.getItem(key)||'{}'); boxes.forEach(function(b){ if(saved[b.dataset.k]) b.checked=true; }); }catch(e){}
+  boxes.forEach(function(b){ b.addEventListener('change',function(){ try{ var s={}; boxes.forEach(function(x){ if(x.checked) s[x.dataset.k]=1; }); localStorage.setItem(key,JSON.stringify(s)); }catch(e){} }); });
+
+  // quiz
+  var qs=document.querySelectorAll('.quiz .q'); var right=0, done=0, total=qs.length;
+  qs.forEach(function(q){
+    var a=parseInt(q.dataset.a,10); var btns=q.querySelectorAll('button');
+    btns.forEach(function(b,i){ b.addEventListener('click',function(){
+      if(q.classList.contains('done')) return;
+      q.classList.add('done'); done++;
+      if(i===a){ b.classList.add('right'); right++; } else { b.classList.add('wrong'); btns[a].classList.add('right'); }
+      document.getElementById('score').textContent='Score: '+right+' / '+total+' answered '+done+(done===total?(right>=8?'. Good. Log the ones you missed.':'. Re-read the sections for the ones you missed, then log them.'):'');
+      if(done===qs.length){ try{ var KQ='ib-quiz-guide-2026-11-09'; var prev=JSON.parse(localStorage.getItem(KQ)||'null'); localStorage.setItem(KQ,JSON.stringify({right:right,total:qs.length,date:new Date().toISOString().slice(0,10),best:Math.max(right,prev&&prev.best||0)})); }catch(e){} }
+    }); });
+  });
+})();
+</script>
+
+<!--terms:start-->
+<div id="termbox" role="dialog" aria-live="polite"><div class="tb-h"><b></b><button type="button">Close</button></div><p class="tb-d"></p></div>
+<script id="terms-data" type="application/json">{"approach": {"w": "approach", "d": "In IB Psychology, one of three ways of explaining behaviour: biological (body and brain), cognitive (thinking and memory) or sociocultural (other people and culture)."}, "concept": {"w": "concept", "d": "In this course, one of six big ideas used to question any study or theory: bias, causality, change, measurement, perspective and responsibility."}, "content": {"w": "content", "d": "In this course, the knowledge you learn: the biological, cognitive and sociocultural approaches, plus research methodology."}, "context": {"w": "context", "d": "In this course, one of four real-life areas where psychology is used: health and well-being, human development, human relationships, and learning and cognition."}, "research methodology": {"w": "research methodology", "d": "How psychologists find things out: which kind of study they run, who they study, how they collect information and how they analyse it."}, "hl": {"w": "HL and SL", "d": "Higher Level (HL) and Standard Level (SL). You take Psychology at HL: more hours, an extra exam (Paper 3) and extra topics."}, "ia": {"w": "IA (internal assessment)", "d": "The part of your grade done in class and marked by your teacher, not in the exam. In Psychology it is a written research proposal, worth 20% at HL."}, "research proposal": {"w": "research proposal", "d": "A written plan for a study: what you would investigate, who you would study and how. In your IA you write the plan but never carry the study out."}, "extended essay": {"w": "extended essay", "d": "A separate 4&nbsp;000-word research essay every IB Diploma student writes on a subject of their choice. It is not part of the Psychology grade."}, "syllabus": {"w": "syllabus", "d": "The official list of everything a course covers and can be tested on."}, "assessment objective": {"w": "assessment objective (AO)", "d": "One of three kinds of skill the exams test. AO1: know and understand. AO2: use your knowledge on a question or situation. AO3: judge, weigh up or design."}, "synthesis": {"w": "synthesis", "d": "Putting several pieces of information together to make one argument or conclusion."}, "command term": {"w": "command term", "d": "The instruction word at the start of an exam question, such as describe, explain or evaluate. The IB gives each one an exact meaning, and it decides what kind of answer gets the marks."}, "describe": {"w": "describe (command term)", "d": "IB command term: \"Give a detailed account.\" Say what something is or what happened, with detail. No reasons needed."}, "explain": {"w": "explain (command term)", "d": "IB command term: \"Give a detailed account including reasons or causes.\" Describe, then say why or how."}, "evaluate": {"w": "evaluate (command term)", "d": "IB command term: \"Make an appraisal by weighing up the strengths and limitations.\" Give good points and bad points, then a judgement."}, "discuss": {"w": "discuss (command term)", "d": "IB command term: give a balanced review with a range of arguments or factors, then a clear conclusion backed by evidence."}, "state": {"w": "state (command term)", "d": "IB command term: give a name, a number or another short answer, with no explanation."}, "design": {"w": "design (command term)", "d": "IB command term: \"Produce a plan, simulation or model.\" In Psychology: plan a study, saying the method, the participants and what happens step by step."}, "apply": {"w": "apply", "d": "Use an idea or theory on a particular situation or question, not just repeat it."}, "suggest": {"w": "suggest (command term)", "d": "IB command term: put forward a sensible possible answer, such as a hypothesis. More than one answer can be right."}, "differentiate": {"w": "differentiate", "d": "Show the difference between two or more things."}, "markband": {"w": "markband", "d": "A level on the examiners' marking grid, such as 1-2 marks or 3-4 marks. Each band describes what an answer must contain to get those marks."}, "markscheme": {"w": "markscheme", "d": "The examiners' guide to marking a paper: what earns marks and what does not."}, "specimen paper": {"w": "specimen paper", "d": "A sample exam made by the IB to show what the real papers will look like, before any real exam with the new course has happened."}, "unseen": {"w": "unseen", "d": "Not seen before. An unseen scenario or study is new to you in the exam, so you must apply what you know to it."}, "scenario": {"w": "scenario", "d": "A short description of a situation, made up or real, that a question asks you to think about."}, "source": {"w": "source", "d": "In Paper 3, a piece of evidence printed in the exam: a graph, a table of results or a summary of interviews."}, "criteria": {"w": "criteria", "d": "The standards something is marked against. Criterion is the singular. The IA has four criteria, each marked out of 6."}, "class practical": {"w": "class practical", "d": "A small study you run with your class, for example a short experiment or a survey. IB Psychology has four: an interview, an observation, a survey and an experiment."}, "interview": {"w": "interview", "d": "A research method where the researcher asks people questions and records their answers, often their own words."}, "observation": {"w": "observation", "d": "A research method where the researcher watches and records what people do."}, "survey": {"w": "survey", "d": "A research method that asks many people the same set of written questions (a questionnaire)."}, "questionnaire": {"w": "questionnaire", "d": "A list of written questions that people answer themselves, often by choosing a number on a scale."}, "procedure": {"w": "procedure", "d": "The exact steps of a study: what happens to the participants, in what order, for how long."}, "aim": {"w": "aim", "d": "What a study sets out to find out, in one sentence."}, "ethics": {"w": "ethics, ethical", "d": "Rules about treating research participants properly: asking their permission, not harming them, letting them stop at any time, keeping their data private."}, "consent": {"w": "consent", "d": "Permission. Informed consent means people agree to take part after being told what the study involves."}, "theory": {"w": "theory", "d": "An explanation of why or how something happens, which can be tested against evidence."}, "conceptual": {"w": "conceptual understanding", "d": "Understanding the big ideas well enough to use them in new situations, not just remembering facts."}, "hormone": {"w": "hormones", "d": "Chemical messages carried in the blood that change how the body and mood work. Adrenaline, released when you are scared, is one."}, "genes": {"w": "genes", "d": "Instructions passed on from parents to children inside every cell. They influence things like eye colour and, partly, some behaviour."}, "conditioning": {"w": "classical and operant conditioning", "d": "Two kinds of learning taught in your class. Classical: linking two things, like a dog drooling at a bell that always comes before food. Operant: repeating what gets rewarded and avoiding what gets punished."}, "multi-store model": {"w": "multi-store model", "d": "A diagram-like explanation of memory taught in your class: information passes from the senses into short-term memory and then, with rehearsal, into long-term memory."}, "social learning theory": {"w": "social learning theory", "d": "The idea (Bandura) that we learn by watching other people and copying them, especially when we see them being rewarded."}, "theory of mind": {"w": "theory of mind", "d": "Understanding that other people have their own thoughts, beliefs and feelings that can differ from yours. Young children develop it at around 4 years old."}, "self-esteem": {"w": "self-esteem", "d": "How much a person values and likes themselves."}, "anxiety": {"w": "anxiety", "d": "A feeling of worry, nervousness or fear, often with a fast heartbeat."}, "data": {"w": "data", "d": "Information collected in a study: numbers such as scores, or words such as interview answers."}, "statistics": {"w": "statistics", "d": "Maths used on data: averages, spread, and tests that decide whether a difference between groups is too big to be just luck."}, "objective": {"w": "objective", "d": "Not affected by personal feelings or opinions; the same whoever does the measuring. The opposite is subjective."}, "bias": {"w": "bias, biased", "d": "A tilt in thinking or in a study that pushes results one way, away from the truth. A biased sample is not like the population it is meant to represent."}, "perceive": {"w": "perceive", "d": "Notice and make sense of something with your senses and mind."}, "cognitive filter": {"w": "cognitive filter", "d": "The way your past experience and likes shape what you notice and how you understand it, like looking through tinted glasses."}, "premise": {"w": "premise", "d": "The basic idea or rule that something is built on."}, "causality": {"w": "causality", "d": "One of the six concepts: whether one thing really causes another. Psychologists try to find cause and effect, but other factors often get in the way."}, "measurement": {"w": "measurement", "d": "One of the six concepts: how psychologists turn behaviour and thoughts, which are hard to see, into information they can record and compare."}, "cause and effect": {"w": "cause and effect", "d": "When one thing (the cause) makes another thing happen (the effect). Showing this needs an experiment with good controls."}, "participant": {"w": "participant", "d": "A person who takes part in a study."}, "reliable": {"w": "reliable", "d": "Gives the same result when the measurement is repeated. A good bathroom scale is reliable."}, "valid": {"w": "valid", "d": "Really measures what it claims to measure. A maths test that is mostly reading is not a valid maths test."}, "direct or indirect": {"w": "direct or indirect data", "d": "Direct: measuring the behaviour itself, such as counting words recalled. Indirect: working it out from something else, such as brain activity on a scan."}, "deductively": {"w": "deductively, inductively", "d": "Deductively: start with a theory, make a prediction, test it. Inductively: start with observations and build a general idea from them."}, "emic and etic": {"w": "emic and etic", "d": "Emic: studying a culture from the inside, using its own ideas. Etic: studying from the outside, using the same measures in many cultures to compare them."}, "quantitative": {"w": "quantitative", "d": "To do with numbers. Quantitative data are scores, times or counts."}, "qualitative": {"w": "qualitative", "d": "To do with words and meanings rather than numbers. Qualitative data are what people say or write, or notes on what they do."}, "variable": {"w": "variable", "d": "Anything that can change or differ and can be measured or changed in a study, such as reaction time or hours of sleep."}, "construct": {"w": "construct", "d": "An idea you cannot see or touch directly, such as stress, intelligence or happiness. It has to be turned into something measurable first."}, "operationalise": {"w": "operationalise", "d": "State exactly how a variable will be changed or measured, so that anyone could do it the same way. \"Memory\" becomes \"number of words out of 20 recalled in 2 minutes\"."}, "iv": {"w": "IV (independent variable)", "d": "The thing the researcher changes on purpose in an experiment, to see whether it has an effect. It has at least two conditions."}, "dv": {"w": "DV (dependent variable)", "d": "The thing the researcher measures in an experiment, to see whether the IV changed it."}, "condition": {"w": "condition", "d": "One version of the IV in an experiment. Music and silence are the two conditions of a music experiment."}, "manipulate": {"w": "manipulate", "d": "In research: change something on purpose to see what happens. The researcher manipulates the IV."}, "experiment": {"w": "experiment", "d": "A study in which the researcher changes one thing (the IV), keeps other things the same, and measures whether another thing (the DV) changes."}, "true experiment": {"w": "true experiment", "d": "An experiment where the researcher changes the IV and chance decides which condition each participant goes into (random allocation). It gives the strongest evidence of cause and effect."}, "quasi-experiment": {"w": "quasi-experiment", "d": "Quasi means \"almost\". An experiment-like study where the groups already exist (age, gender, a diagnosis), so participants cannot be put into conditions by chance."}, "field experiment": {"w": "field experiment", "d": "A true experiment run in a real-life place, such as a street or a school corridor, instead of a laboratory."}, "natural experiment": {"w": "natural experiment", "d": "A study where a real event, such as a new law, changes the IV, not the researcher. It is a kind of quasi-experiment."}, "laboratory": {"w": "laboratory (lab)", "d": "A room where a researcher can control the conditions, such as noise and light. In psychology it is often just a quiet room with a computer."}, "random allocation": {"w": "random allocation", "d": "Using chance (a coin toss, drawing names) to decide which condition each participant goes into, so that differences between people are spread evenly."}, "extraneous variable": {"w": "extraneous variable", "d": "Anything other than the IV that could affect the DV, such as noise, time of day or tiredness."}, "confounding variable": {"w": "confounding variable", "d": "An extraneous variable that was not controlled and differs between the conditions. It gives a second possible cause for the result, so you cannot tell which one it was."}, "control variable": {"w": "control variable", "d": "A variable the researcher keeps the same in every condition, so it cannot affect the result."}, "control group": {"w": "control group", "d": "The group that does not get the thing being tested, for comparison. If exercisers become happier but the control group does not, exercise may be the reason."}, "standardisation": {"w": "standardisation", "d": "Giving every participant exactly the same instructions, materials, place and timing, so the results can be compared fairly."}, "population": {"w": "population", "d": "In research, the whole group of people a study wants to find out about, for example all teenagers in Singapore."}, "target population": {"w": "target population", "d": "The whole group the researcher wants the results to apply to. The sample is chosen from it."}, "sample": {"w": "sample", "d": "The smaller group of people chosen from the population who actually take part in a study."}, "sampling technique": {"w": "sampling technique", "d": "The way the researcher chooses the sample from the population. The IB guide names five: self-selected, opportunity, stratified, random and snowball."}, "sampling bias": {"w": "sampling bias", "d": "When the sample is not like the population it should represent, so the results may be wrong for that population."}, "subset": {"w": "subset", "d": "A smaller group taken out of a bigger group."}, "representative": {"w": "representative", "d": "Like the population in the ways that matter, for example the same mix of ages and genders. Results from a representative sample can be applied to the population."}, "generalise": {"w": "generalise", "d": "Apply the results of a study to other people or places beyond those actually studied."}, "strata": {"w": "strata", "d": "Subgroups of a population, such as year groups. One subgroup is a stratum. Stratified sampling picks from each one."}, "volunteer bias": {"w": "volunteer bias", "d": "Bias because people who volunteer tend to be alike (keen, interested, with strong opinions) and different from people who do not."}, "selection bias": {"w": "selection bias", "d": "Bias that comes from the way people were chosen for a study."}, "privacy": {"w": "privacy", "d": "Keeping people's personal information secret. In snowball sampling, participants know who else took part."}, "hypothesis": {"w": "hypothesis (plural: hypotheses)", "d": "A clear, testable statement that predicts what a study will find, for example that one condition will score higher than the other."}, "null hypothesis": {"w": "null hypothesis", "d": "The statement that the IV will make no difference to the DV, and that any difference found is just chance. Written H<sub>0<\/sub>."}, "one-tailed": {"w": "one-tailed (directional)", "d": "A hypothesis that says which way the result will go, using words like more, fewer, higher, faster."}, "two-tailed": {"w": "two-tailed (non-directional)", "d": "A hypothesis that predicts a difference but not which way, using words like \"will affect\" or \"there will be a difference\"."}, "reject": {"w": "reject, retain", "d": "After the statistics, researchers reject the null hypothesis (the difference is too big to be chance) or retain (keep) it."}, "chance": {"w": "chance", "d": "Luck. A difference \"due to chance\" happened by luck, not because of the IV."}, "self-report": {"w": "self-report", "d": "Information people give about themselves, for example by rating their own mood or answering a questionnaire. It depends on honest answers."}, "decaf": {"w": "decaf", "d": "Coffee with the caffeine taken out. It tastes like coffee, so people cannot tell which one they had."}, "reaction time": {"w": "reaction time", "d": "How quickly someone responds, for example pressing a key when a light appears, usually in thousandths of a second."}, "diagnosis": {"w": "diagnosis", "d": "When a doctor or psychologist officially identifies an illness, such as depression."}, "proportion": {"w": "proportion", "d": "A part compared with the whole. 120 out of 200 is a proportion of 0.6, or 60%."}, "et al": {"w": "et al.", "d": "Latin for \"and others\". \"Maguire et al.\" means Maguire and the other researchers who wrote the study."}}</script>
+<script>
+(function(){
+  // tap a dotted word to see what it means
+  var T={};
+  try{ T=JSON.parse(document.getElementById('terms-data').textContent); }catch(e){ return; }
+  var box=document.getElementById('termbox'), bt=box.querySelector('.tb-h b'), bd=box.querySelector('.tb-d');
+  function show(el){ var k=el.getAttribute('data-t'); if(!T[k]) return; bt.textContent=T[k].w; bd.innerHTML=T[k].d; box.classList.add('on'); }
+  function hide(){ box.classList.remove('on'); }
+  document.addEventListener('click',function(e){
+    var el=e.target.closest ? e.target.closest('.term') : null;
+    if(el){ e.preventDefault(); e.stopPropagation(); show(el); return; }
+    if(!box.contains(e.target)) hide();
+  },true);
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape') hide();
+    if((e.key==='Enter'||e.key===' ') && e.target.classList && e.target.classList.contains('term')){ e.preventDefault(); show(e.target); }
+  });
+  box.querySelector('button').addEventListener('click',hide);
+})();
+</script><!--terms:end-->
+</body>
+</html>
