@@ -268,6 +268,7 @@ body = f'''
 <div class="prog" id="progress" aria-live="polite">
   <h2>Your German progress</h2>
   <div class="pr"><span>Level check: A1 statements ticked</span><b id="pg-level">0 of {len(A1_CAN)}</b></div>
+  <p class="small" id="pg-start"><b>Where to start:</b> do the <a href="#check">level check</a> first (5 minutes).</p>
   <div class="bar"><i id="bar-level"></i></div>
   <div class="pr"><span>Daily sessions (9 Nov to 4 Dec)</span><b id="pg-days">0 of {N_DAYS_TICK}</b></div>
   <div class="bar"><i id="bar-days"></i></div>
@@ -281,13 +282,14 @@ body = f'''
 <section id="check">
 <h2>1. Check your level (5 minutes)</h2>
 <p>These are the official "I can" statements for level A1 from the Council of Europe's language scale (the CEFR, the European scale of language levels from A1, beginner, to C2, near native), as published by <a href="{SRC['europass']}">Europass</a>. Read each one and tick it only if it is true for you <b>in German</b> today.</p>
+<p><b>Why tick them:</b> the result below tells you <b>where to start</b>. You had German lessons before, so you may not need to begin at lesson 1; or you may find that the basics need a fresh start. Redo the check every few weeks: it also shows you how far you have come.</p>
 <p class="small">Quick test for the speaking line: say out loud now, in German, your name, where you live and who one person in your family is (for example: <i>Ich heiße …, ich wohne in Singapur, das ist meine Mutter, sie heißt …</i>).</p>
 <h3>A1 (beginner)</h3>
 {can_list(A1_CAN, "a1")}
 <details class="more"><summary>Next level up: four A2 statements (optional)</summary>
 {can_list(A2_CAN, "a2")}
 </details>
-<p class="verdict" id="verdict">Tick the statements that are true for you.</p>
+<div class="verdict" id="verdict" aria-live="polite"><b>Where to start:</b> tick the statements that are true for you and your starting point appears here.</div>
 </section>
 
 <section id="goal">
@@ -471,11 +473,14 @@ SCRIPT = r'''
   function refresh(){
     var a1=count('[data-store=level][data-grp=a1]'), a2=count('[data-store=level][data-grp=a2]');
     show('level',a1); show('days',count('[data-store=days]')); show('weeks',count('[data-store=weeks]'));
-    var v=document.getElementById('verdict');
-    if(v){ if(!a1[0]&&!a2[0]) v.textContent='Tick the statements that are true for you.';
-      else if(a1[0]<a1[1]) v.textContent=a1[0]+' of '+a1[1]+' A1 statements ticked: you are working towards A1. The daily sessions below are made for exactly this.';
-      else if(a2[0]>=3) v.textContent='All A1 statements and '+a2[0]+' of '+a2[1]+' A2 statements ticked: you may be past A1. Do the first daily sessions anyway (they will go fast) and tell your father; you could skip ahead in the weekly path.';
-      else v.textContent='All A1 statements ticked: you are at A1. The plan below fits you.'; }
+    var v=document.getElementById('verdict'), st=document.getElementById('pg-start'), msg, short;
+    if(!a1[0]&&!a2[0]){ msg='Tick the statements that are true for you and your starting point appears here.'; short='do the <a href="#check">level check</a> first (5 minutes).'; }
+    else if(a1[0]<=4){ msg=a1[0]+' of '+a1[1]+' A1 statements: start at <a href="#now">session 1</a> (Nicos Weg lesson 1) and follow the daily sessions in order. That is exactly what they are made for.'; short='session 1, in order.'; }
+    else if(a1[0]<a1[1]){ msg=a1[0]+' of '+a1[1]+' A1 statements: start at <a href="#now">session 1</a>, but move fast. If a session feels easy, do the next one the same day until the lessons feel new again.'; short='session 1, moving fast.'; }
+    else if(a2[0]<3){ msg='All A1 statements: you have the basics. Try the free <a href="__A1TEST__">Nicos Weg A1 final test</a>. Passed: use the daily sessions until 4 Dec as quick review and start <a href="__A2__">Nicos Weg A2</a> in the weekly path from 5 Dec. Not passed: follow the daily sessions in order.'; short='take the A1 final test, then decide (see the level check).'; }
+    else { msg='All A1 and '+a2[0]+' of '+a2[1]+' A2 statements: you are around A2. Take the free <a href="__A1TEST__">A1 final test</a> now. Passed: skip the A1 daily lessons and spend your 15 minutes on <a href="__A2__">Nicos Weg A2</a> from lesson 1; the weekly path from 5 Dec continues with A2.'; short='around A2: take the A1 final test, then Nicos Weg A2.'; }
+    if(v) v.innerHTML='<b>Where to start:</b> '+msg;
+    if(st) st.innerHTML='<b>Where to start:</b> '+short;
     boxes.forEach(function(b){ if(b.getAttribute('data-store')==='weeks'){ var w=b.closest('.wk'); if(w) w.classList.toggle('done',b.checked); } });
   }
   boxes.forEach(function(b){
@@ -488,6 +493,7 @@ SCRIPT = r'''
 })();
 '''
 
+SCRIPT = SCRIPT.replace('__A1TEST__', A1_TEST).replace('__A2__', A2_COURSE)
 html = page('German: route to a German-taught degree', 'index.html', 'German: your route to a degree in Germany',
             'Not an IB subject: this is your own track to a German-taught degree from autumn 2028. '
             'Now: 15 minutes a day during the exams. From December: about 3 to 4 hours a week, step by step to a C1 certificate.',
