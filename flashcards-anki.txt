@@ -110,3 +110,255 @@ True vs quasi-experiment: the key difference	Random allocation. In a quasi-exper
 Extraneous vs confounding variable	Extraneous: anything other than the IV that could affect the DV. Confounding: an extraneous variable not controlled that differs between conditions.	IB::Psychology RM
 The five sampling techniques in the guide	Self-selected, opportunity, stratified, random, snowball.	IB::Psychology Sampling
 Random sampling vs random allocation	Random sampling: every member of the population has an equal chance of being in the study. Random allocation: chance decides each participant's condition.	IB::Psychology Sampling
+HL Paper 1 (official IB guide)	Guided textual analysis: two unseen non-literary passages, a separate guided analysis of each. 2 h 15, 40 marks (20 per answer), 35% of the grade.	IB::English Paper_1
+The four Paper 1 criteria	A Understanding and interpretation; B Analysis and evaluation; C Focus and organization; D Language. 5 marks each per text.	IB::English Paper_1
+Minutes per text at HL (class revision guide)	Read and annotate 10, plan 10, write 40, check 7: 67 minutes per text.	IB::English Paper_1
+Must you answer the guiding question?	No, it is "not compulsory" (official guide), but the analysis must focus on one aspect; the guiding question is the safest focus.	IB::English Paper_1
+Criterion B: the IB's question	"To what extent does the candidate analyse and evaluate how textual features and/or authorial choices shape meaning?"	IB::English Paper_1
+Satire	Humour, irony or exaggeration used to criticise, usually people with power.	IB::English Satire
+Horatian vs Juvenalian satire	Horatian: gentle, amused, invites us to laugh at ourselves. Juvenalian: harsh, angry, attacks serious harm.	IB::English Satire
+Target (of a cartoon)	Who or what the cartoon criticises.	IB::English Satire
+The Big 5 groups	1 Audience (audience, purpose, context); 2 Meaning (content, theme); 3 Feeling (tone, mood, register); 4 Craft (style); 5 Shape (structure, layout).	IB::English Big_5
+Tone vs mood	Tone: the writer's attitude to the subject or audience. Mood: the atmosphere, how the audience feels.	IB::English Big_5
+The analysis chain (class revision guide)	Spot it, explain it, effect on reader, purpose.	IB::English Chain
+Juxtaposition vs analogy	Juxtaposition: two contrasting things side by side. Analogy: the issue shown as a different, familiar situation.	IB::English Cartoons
+Caricature vs exaggeration	Caricature: a real person with features stretched or shrunk. Exaggeration: anything shown as more extreme than in real life.	IB::English Cartoons
+Parody vs allusion (class guide)	Parody: a famous image copied and changed (visual). Allusion: a short reference to a famous text or saying (words).	IB::English Cartoons
+Verbal irony in a cartoon	Words that mean, or hide, the opposite of what they say; the picture often shows the gap.	IB::English Cartoons
+Understatement	Making something sound smaller than it is: "a bit of rain" for a flood.	IB::English Cartoons
+The ten effect verbs (class guide)	exposes, ridicules, undermines, invites, positions, implicates, provokes, disarms, reinforces, challenges	IB::English Cartoons
+How to write about colour (class guide)	Not "Red makes the reader angry" but "Here, red suggests danger because ..."	IB::English Colour
+Accent colour	One strong colour against a plain or grey background; it pulls the eye to one thing.	IB::English Colour
+What lifts the Horsey answer to 20/20	Analysis not description; integration of image and words; one or two original insights; evaluation.	IB::English Model
+Independent samples design	Different people in each condition, put there by random allocation. No order effects; risk: participant variables.	IB::Psychology RM_1
+Repeated measures design (guide glossary)	"A research design in which the same group of participants is measured or tested more than once under different conditions." Fewer people needed; risk: order effects.	IB::Psychology RM_1
+Matched pairs design	People are pre-tested on a trait, paired with someone similar, and one of each pair goes into each condition.	IB::Psychology RM_1
+Order effects: two kinds	Practice effect (better the second time) and fatigue or boredom effect (worse the second time). Only in repeated measures.	IB::Psychology RM_1
+Counterbalancing	Half do condition A then B, half do B then A, so order effects hit both conditions equally (AB/BA).	IB::Psychology RM_1
+Reliability (guide glossary)	"The consistency of measurement tools or methods." A reliable measure gives consistent results when used again under similar conditions.	IB::Psychology RM_3
+Test-retest vs inter-rater reliability	Test-retest: same people, same test, two times. Inter-rater: two or more people score the same thing separately and agree.	IB::Psychology RM_3
+The five kinds of validity in the guide (p27)	Internal, external, content, face, construct.	IB::Psychology RM_3
+Internal vs external validity	Internal: did the IV really cause the change in the DV? External: can the results be generalised to other people and settings?	IB::Psychology RM_3
+Construct validity	Whether a measure really captures the idea (construct) it is meant to, e.g. owning an iPhone is a poor measure of pro-American attitudes.	IB::Psychology RM_3
+Participant bias (guide glossary)	Participants alter their behaviour or responses because they know they are observed or expect something about the study's purpose.	IB::Psychology RM_3
+Four demand characteristics (class deck)	Expectancy effect, screw-you effect, social desirability effect, reactivity.	IB::Psychology RM_3
+Researcher bias (guide glossary)	The researcher's personal values or expectations influence the design, data collection or interpretation of findings.	IB::Psychology RM_3
+Double-blind design	Neither the participants nor the researchers collecting the data know who is in which group. Reduces participant and researcher bias.	IB::Psychology RM_3
+Population vs ecological validity	Population: is the sample like the population (who)? Ecological: are the setting and task like real life (where and how)?	IB::Psychology RM_3
+Transferability, credibility, reflexivity	Transferability: findings apply to other settings (qualitative). Credibility: a true picture of participants' views. Reflexivity: the researcher's awareness of their own biases.	IB::Psychology RM_3
+Classical conditioning: the five terms	NS (neutral stimulus), UCS (unconditioned stimulus), UCR (unconditioned response), CS (conditioned stimulus), CR (conditioned response).	IB::Psychology COG_2
+Pavlov: the five terms	UCS food; UCR salivating at food; NS metronome before pairing; CS metronome after pairing; CR salivating at the metronome alone.	IB::Psychology COG_2
+Extinction and spontaneous recovery	Extinction: the CS keeps coming without the UCS, so the CR fades. Spontaneous recovery: after a rest the CR returns, usually weaker.	IB::Psychology COG_2
+Garcia (1955) taste aversion	Rats drank saccharin during radiation (sickness); after one pairing they avoided saccharin for over a month. UCS radiation, CS saccharin taste.	IB::Psychology COG_2
+Law of effect (Thorndike)	Behaviour followed by a pleasant consequence is more likely to be repeated; followed by an unpleasant one, less likely.	IB::Psychology COG_7
+Positive vs negative (operant)	Positive = something is added; negative = something is taken away. Reinforcement increases behaviour; punishment decreases it.	IB::Psychology COG_7
+Negative reinforcement example	The seatbelt beep stops when you buckle up, so you buckle up more: something unpleasant is removed, behaviour increases.	IB::Psychology COG_7
+Most resistant schedule of reinforcement	Variable ratio (unpredictable number of behaviours, e.g. gambling). Continuous reinforcement extinguishes fastest.	IB::Psychology COG_7
+How many covalent bonds does a carbon atom form?	Four (single bonds, or single plus double; a double bond counts as two). It bonds to C and other non-metals, making chains, branched chains and rings.	IB::Biology B1.1.1
+Condensation reaction	Joins two molecules with a new covalent bond and releases one water molecule. n monomers in a chain release n − 1 waters.	IB::Biology B1.1.2
+Hydrolysis	Uses water to break a covalent bond, splitting a polymer into monomers (digestion). The water gives -H to one monomer and -OH to the other.	IB::Biology B1.1.3
+Bond made between two sugars / two amino acids / glycerol and a fatty acid	Glycosidic bond / peptide bond / ester bond.	IB::Biology B1.1.2
+Pentose or hexose: how to tell from a ring diagram	Count every carbon (ring and side chains): 5 = pentose (C5H10O5), 6 = hexose (C6H12O6). Do not count ring corners.	IB::Biology B1.1.4
+α-glucose versus β-glucose	They differ only at carbon 1: the -OH is below the ring in α-glucose, above it in β-glucose.	IB::Biology B1.1.4
+Four properties of glucose and their uses	Soluble: transported in blood plasma. Easy to transport. Chemically stable: can be stored. Much energy when oxidised: fuel for respiration.	IB::Biology B1.1.4
+Formula of maltose (two glucose joined)	C12H22O11 (2 × C6H12O6 minus one H2O).	IB::Biology B1.1.2
+Amylose, amylopectin, glycogen: structure	All α-glucose. Amylose: 1,4 bonds only, unbranched, coiled. Amylopectin: 1,4 plus some 1,6 bonds, branched. Glycogen: like amylopectin but more branched.	IB::Biology B1.1.5
+Why starch and glycogen are good energy stores	Coiled and branched, so compact. Large, so insoluble: no osmotic effect. Glucose easily added or removed at the ends by condensation and hydrolysis.	IB::Biology B1.1.5
+Cellulose structure and function	β-glucose, each flipped relative to its neighbour, so straight chains; parallel chains held by hydrogen bonds in bundles (microfibrils): high tensile strength for cell walls.	IB::Biology B1.1.6
+Glycoprotein and cell–cell recognition	A membrane protein with a carbohydrate chain on the outside. Cells recognise the chain (self or foreign). Example: ABO blood group antigens.	IB::Biology B1.1.7
+Lipid (definition)	Substances in living things that dissolve in non-polar solvents but only sparingly in water: fats, oils, waxes, steroids.	IB::Biology B1.1.8
+Triglyceride versus phospholipid	Triglyceride: glycerol + 3 fatty acids (3 ester bonds, 3 waters). Phospholipid: glycerol + 2 fatty acids + 1 phosphate group.	IB::Biology B1.1.9
+Saturated, monounsaturated, polyunsaturated	No C=C / exactly one C=C / two or more C=C double bonds in the fatty acid chain.	IB::Biology B1.1.10
+Why unsaturated fats have lower melting points	C=C bonds put kinks in the chains, so they cannot pack closely: less energy needed to separate them.	IB::Biology B1.1.10
+Oils in plants, fats in endotherms	Plants store oils (unsaturated, liquid even when cold). Birds and mammals store fats (more saturated), soft at their warm body temperature.	IB::Biology B1.1.10
+Why triglycerides suit long-term energy storage	About twice the energy per gram of carbohydrates (about 38 versus 17 kJ/g), so less mass; insoluble, so no osmotic effect.	IB::Biology B1.1.11
+Adipose tissue as an insulator	Fat conducts heat poorly, so a layer under the skin reduces heat loss; thicker in endotherms in colder habitats (seal blubber).	IB::Biology B1.1.11
+Amphipathic	Having a hydrophilic part and a hydrophobic part in one molecule, like a phospholipid (phosphate head, fatty acid tails).	IB::Biology B1.1.12
+How a phospholipid bilayer forms in water	Hydrophilic heads face the water on both sides; hydrophobic tails point inwards towards each other: a double layer with a hydrophobic core.	IB::Biology B1.1.12
+How to recognise a steroid in a diagram	Four fused rings: three of six carbons and one of five. Examples: oestradiol, testosterone.	IB::Biology B1.1.13
+Why steroids pass through the bilayer	They are non-polar (hydrophobic), so they dissolve in the hydrophobic core and diffuse straight through, without a protein channel.	IB::Biology B1.1.13
+Paper 1 Section A: marks and minutes per question (EX01)	Two 4-mark questions, about 10 minutes and 200 words each.	IB::Psychology Paper_1_exam_technique
+Section A markband, 3-4 marks (guide p45)	"The response demonstrates detailed knowledge relevant to the question." "The example is relevant and explained."	IB::Psychology Paper_1_exam_technique
+Section A markband, 1-2 marks (guide p45)	"The response demonstrates limited knowledge relevant to the question." "The example is relevant but is not explained."	IB::Psychology Paper_1_exam_technique
+PEEL (4-marker) and its longest part	Point, Evidence, Explain, Link. Explain is the longest (80-90 of about 200 words).	IB::Psychology Paper_1_exam_technique
+IEA (6-marker)	Identify a principle, Explain how it works, Apply it to the situation in the question; two or three times.	IB::Psychology Paper_1_exam_technique
+Official statement: social learning theory (Table 3.3, p26)	"Social learning theory: The application of social learning theory to explain and change behaviour." Sociocultural approach.	IB::Psychology Social_learning_theory
+Social learning theory: core claim (class, LC09)	"Humans learn not only through personal experience but also by observing models."	IB::Psychology Social_learning_theory
+Vicarious reinforcement	Seeing someone else rewarded for a behaviour makes you more likely to copy it, without being rewarded yourself.	IB::Psychology Social_learning_theory
+The four processes of observational learning	Attention, retention, reproduction, motivation.	IB::Psychology Social_learning_theory
+Self-efficacy (class definition)	The expectation of personal success in a task, based on the view that one is in control of one's actions and abilities.	IB::Psychology Social_learning_theory
+Four sources of self-efficacy	Mastery experiences, vicarious experiences, social persuasion, emotional and physical states.	IB::Psychology Social_learning_theory
+Bobo doll study, Bandura, Ross and Ross (1961): what it shows	Children copied an aggressive adult model's acts (observational learning); boys copied a male model more (identification). The model was not rewarded, so it does not show vicarious reinforcement.	IB::Psychology Social_learning_theory
+Official statement: cognitive models (Table 4.12, p33)	"Cognitive models: The value of one or more cognitive models in understanding one or more cognitive processes."	IB::Psychology Cognitive_models
+Model (guide glossary, p66)	"A theoretical representation or framework used to explain and understand complex processes in order to test hypotheses and make predictions."	IB::Psychology Cognitive_models
+Multi-store model: the three stores and how information moves	Sensory memory, short-term memory, long-term memory. Attention moves it to STM; rehearsal moves it to LTM; retrieval brings it back.	IB::Psychology Cognitive_models
+STM capacity and duration (class)	7 plus or minus 2 items (Miller, 1956), newer research about 4 chunks; about 15-30 seconds without rehearsal.	IB::Psychology Cognitive_models
+Peterson and Peterson (1959): what it shows	Counting backwards stopped rehearsal; recall of trigrams fell from about 80% at 3 s to under 10% at 18 s: STM has a short duration.	IB::Psychology Cognitive_models
+Levels of processing (Craik and Lockhart, 1972)	Memory depends on depth of processing: shallow (structural, phonetic) or deep (semantic). Deeper gives better memory.	IB::Psychology Cognitive_models
+Value of cognitive models (specimen markscheme)	Tested in empirical studies; different studies test different parts; the constructs must be well operationalised.	IB::Psychology Cognitive_models
+Official statement: descriptive statistics (p27, HL)	"Descriptive statistics: Analyse and interpret results of typical measures of central tendency (mean, median, mode) and measures of dispersion (range, standard deviation, semi-interquartile range)."	IB::Psychology Data_analysis
+Levels of measurement (NOIR, class)	Nominal: categories, no order. Ordinal: ordered, gaps not equal. Interval: equal gaps, no true zero. Ratio: equal gaps and a true zero.	IB::Psychology Data_analysis
+Which average for which data (HL01)	Nominal: mode. Ordinal: median. Interval or ratio: mean if symmetrical, median if skewed or with outliers.	IB::Psychology Data_analysis
+Positive skew (guide glossary)	A longer tail on the right; a few high values pull the mean above the median.	IB::Psychology Data_analysis
+Draw the generalised amino acid: what four things are bonded to the alpha carbon?	An amine group (−NH<sub>2</sub>), a carboxyl group (−COOH), a hydrogen atom and an R-group.	IB::Biology B1.2
+Word equation for joining two amino acids	amino acid + amino acid → dipeptide + water (a condensation reaction forming a peptide bond).	IB::Biology B1.2
+A chain of n amino acids has how many peptide bonds?	n − 1 (and n − 1 water molecules were released when it was made).	IB::Biology B1.2
+Essential vs non-essential amino acids	Essential: cannot be synthesised by the body, must come from food. Non-essential: can be made from other amino acids.	IB::Biology B1.2
+Number of possible peptide chains of n amino acids	20<sup>n</sup>, because each position can be any of the 20 amino acids.	IB::Biology B1.2
+Denaturation: what breaks and what does not?	Bonds between R-groups break (heat or pH), so the 3D shape changes and function is lost. Peptide bonds do not break.	IB::Biology B1.2
+(HL) Hydrophilic R-groups are either ...	Polar or charged; charged ones are acidic (negative) or basic (positive). Hydrophobic R-groups are non-polar.	IB::Biology B1.2
+(HL) Secondary structure: which bonds, between which groups?	Hydrogen bonds between C=O of one amino acid and N−H of another, at regular positions in the backbone: alpha helix and beta-pleated sheet.	IB::Biology B1.2
+(HL) The four bonds or interactions of tertiary structure	Hydrogen bonds, ionic bonds, disulfide covalent bonds (between two cysteines) and hydrophobic interactions, all between R-groups.	IB::Biology B1.2
+(HL) Where are hydrophobic amino acids in a soluble globular protein? In an integral protein?	Clustered in the core, away from water. In an integral protein: in the region that crosses the membrane.	IB::Biology B1.2
+(HL) Non-conjugated vs conjugated quaternary structure, with examples	Non-conjugated: only polypeptides (insulin, 2 chains; collagen, 3 chains). Conjugated: also a non-polypeptide part (haemoglobin, 4 chains with haem groups).	IB::Biology B1.2
+(HL) Globular vs fibrous, with the IB examples	Globular: rounded, soluble, precise shape (insulin, a hormone). Fibrous: long, insoluble, strong (collagen, triple helix, in skin and tendons).	IB::Biology B1.2
+Anabolism vs catabolism	Anabolism builds macromolecules by condensation and needs energy (protein synthesis, glycogen formation, photosynthesis). Catabolism breaks them down by hydrolysis or oxidation and releases energy (digestion, respiration).	IB::Biology C1.1
+Induced fit	When the substrate binds, both the substrate and the active site change shape to fit more tightly, straining bonds in the substrate.	IB::Biology C1.1
+Why does the rate level off at high substrate concentration?	All the active sites are occupied at any moment, so the amount of enzyme limits the rate.	IB::Biology C1.1
+Why does the rate fall above the optimum temperature?	Bonds holding the enzyme's 3D shape break, the active site changes shape, the substrate no longer fits: the enzyme is denatured.	IB::Biology C1.1
+Rate of an enzyme reaction (formula and a unit)	Rate = amount of product made (or substrate used) ÷ time, for example cm<sup>3</sup> s<sup>−1</sup>; or rate = 1 ÷ time to finish.	IB::Biology C1.1
+What do enzymes do to activation energy and to the overall energy change?	They lower the activation energy; the overall energy change stays the same.	IB::Biology C1.1
+(HL) Intracellular and extracellular examples	Intracellular: glycolysis (cytoplasm), Krebs cycle (mitochondria). Extracellular: digestion in the gut.	IB::Biology C1.1
+(HL) Linear and cyclical pathways, with examples	Linear: glycolysis. Cyclical (last step regenerates the first molecule): Krebs cycle and Calvin cycle.	IB::Biology C1.1
+(HL) Competitive vs non-competitive inhibition	Competitive: binds the active site reversibly, overcome by more substrate (statins). Non-competitive: binds an allosteric site, changes the active site, more substrate does not help.	IB::Biology C1.1
+(HL) Feedback inhibition example	Isoleucine (end product) binds the allosteric site of threonine deaminase, the first enzyme of its own pathway.	IB::Biology C1.1
+(HL) Mechanism-based inhibition example and resistance	Penicillin binds transpeptidase's active site irreversibly (covalent bond), so bacterial cell walls are weak. Resistance: a changed transpeptidase active site that penicillin cannot bind.	IB::Biology C1.1
+Human resource management	Managing the workforce so the organisation achieves its objectives: planning, hiring, training, pay, welfare and staff leaving.	IB::Business 2.1
+Human resource (workforce) planning	Forecasting the number and type (skills) of workers needed, compared with those the business has, and planning how to fill the gap.	IB::Business 2.1
+The five external HR planning factors the IB names	Demographic change, change in labour mobility, immigration, flexi-time, gig economy.	IB::Business 2.1
+Occupational vs geographical labour mobility	Occupational: moving between jobs or careers. Geographical: moving between places for work.	IB::Business 2.1
+Gig economy	Short-term, flexible jobs paid per task, usually done by self-employed workers, not employees.	IB::Business 2.1
+Four reasons for resistance to change	Self-interest; misunderstanding and mistrust; a different view of the situation; low tolerance of change.	IB::Business 2.1
+Six strategies for reducing resistance to change	Education and communication; participation and involvement; facilitation and support; negotiation and agreement; manipulation and co-option; coercion.	IB::Business 2.1
+Span of control	The number of people who report directly to one manager.	IB::Business 2.2
+Chain of command	The line of authority through which instructions pass down and reports pass up.	IB::Business 2.2
+Delayering	Removing one or more levels of the hierarchy, usually middle managers: wider spans, shorter chain of command.	IB::Business 2.2
+Centralisation vs decentralisation	Centralisation: most decisions made by a few at the top. Decentralisation: authority passed down to lower levels or local branches.	IB::Business 2.2
+Matrix structure	Staff from different departments work in project teams, so each reports to two managers: department manager and project manager.	IB::Business 2.2
+The organisation charts in the IB guide	Flat (horizontal), tall (vertical), and by product, by function or by region.	IB::Business 2.2
+Management vs leadership	Management: getting things done through people and resources (plan, organise, control); tasks and targets. Leadership: setting a direction and inspiring people to follow it.	IB::Business 2.3
+The five IB leadership styles	Autocratic, paternalistic, democratic, laissez-faire, situational.	IB::Business 2.3
+Paternalistic vs autocratic	Both decide alone; the paternalistic leader acts in what they believe is the staff's best interest and cares for their welfare.	IB::Business 2.3
+Situational leadership	The leader changes style to fit the situation: the task, the staff's skills and the time available.	IB::Business 2.3
+Taylor's scientific management	Workers are motivated mainly by money: find the most efficient way, train, supervise closely, pay by output (piece rate).	IB::Business 2.4
+Maslow's five needs, bottom to top	Physiological, safety, social (love and belonging), esteem, self-actualisation.	IB::Business 2.4
+Herzberg: hygiene factors vs motivators	Hygiene (pay, conditions, security, supervision, policy, colleagues) only prevent dissatisfaction. Motivators (achievement, recognition, the work itself, responsibility, promotion, growth) motivate. IB name: motivation-hygiene theory.	IB::Business 2.4
+The seven financial rewards	Salary; wages (time and piece rates); commission; performance-related pay; profit-related pay; employee share ownership schemes; fringe payments.	IB::Business 2.4
+Job enrichment vs job enlargement	Enrichment: harder tasks and more responsibility. Enlargement: more tasks at the same level.	IB::Business 2.4
+The six non-financial rewards	Job enrichment, job rotation, job enlargement, empowerment, purpose (the opportunity to make a difference), teamwork.	IB::Business 2.4
+Three types of training	Induction (new staff), on the job (at work, from colleagues), off the job (courses away from work).	IB::Business 2.4
+Extreme close-up (ECU): what it shows and its usual effect	One tiny detail fills the frame (an eye, a scar). Intensity: the reader must look at that one thing.	IB::English English_A_HL:_Persepolis_visual_analysis
+Close-up (CU): what it shows and its usual effect	A face or hands; the head fills most of the frame. Intimacy or tension: we feel close and read the emotion.	IB::English English_A_HL:_Persepolis_visual_analysis
+Medium shot (MS): what it shows and its usual effect	Waist or chest up: face and body language. Natural, like a conversation.	IB::English English_A_HL:_Persepolis_visual_analysis
+Long shot (LS): what it shows and its usual effect	The whole body inside its surroundings. Context: we see where the character is.	IB::English English_A_HL:_Persepolis_visual_analysis
+Extreme long shot (ELS): what it shows and its usual effect	A tiny figure in a huge setting. Scale, isolation or awe.	IB::English English_A_HL:_Persepolis_visual_analysis
+High angle vs low angle: usual effects	High (camera above, looking down): subject small, weak, vulnerable. Low (camera below, looking up): subject powerful, threatening, heroic.	IB::English English_A_HL:_Persepolis_visual_analysis
+Shot type vs camera angle	Shot type = how much we see (how close). Angle = where we look from (how high). Two separate choices that can combine, e.g. a low-angle close-up.	IB::English English_A_HL:_Persepolis_visual_analysis
+Gutter	The gap between two panels. Time passes there and the reader imagines what happens in it.	IB::English English_A_HL:_Persepolis_visual_analysis
+Closure (McCloud)	Observing the parts but perceiving the whole: the reader joins separate panels into one story, filling in what is not drawn.	IB::English English_A_HL:_Persepolis_visual_analysis
+The six panel transitions (class, McCloud)	Moment-to-moment, action-to-action, subject-to-subject, scene-to-scene, aspect-to-aspect, non-sequitur.	IB::English English_A_HL:_Persepolis_visual_analysis
+Panel size and pace	A bigger or wider panel makes a moment feel longer and more important; small panels feel quick. A silent panel is a pause.	IB::English English_A_HL:_Persepolis_visual_analysis
+Caption vs speech balloon	Speech balloon: what a character says. Caption: narration. In Persepolis captions are the adult Marjane looking back; pictures show the child Marji.	IB::English English_A_HL:_Persepolis_visual_analysis
+The seven word-picture combinations (class, McCloud)	Word-specific, picture-specific, duo-specific, additive, parallel, montage, interdependent.	IB::English English_A_HL:_Persepolis_visual_analysis
+Interdependent vs duo-specific	Duo-specific: words and picture say the same thing. Interdependent: together they say something neither could say alone.	IB::English English_A_HL:_Persepolis_visual_analysis
+Chiaroscuro	Strong contrast between light and dark areas (Italian for light-dark). Analyse it in context, e.g. white figure isolated by black.	IB::English English_A_HL:_Persepolis_visual_analysis
+The analysis chain	Spot it, explain it, effect on the reader, purpose.	IB::English English_A_HL:_Persepolis_visual_analysis
+HL Paper 1: format	Two unseen non-literary texts from different text types, each with a guiding question; an analysis of each; 2 h 15; 40 marks (20 per text); 35%.	IB::English English_A_HL:_Persepolis_visual_analysis
+Paper 1 criteria (5 marks each per text)	A Understanding and interpretation; B Analysis and evaluation; C Focus and organisation; D Language.	IB::English English_A_HL:_Persepolis_visual_analysis
+Why Persepolis is not a Paper 1 text	The IB guide lists the graphic novel as a literary form; Paper 1 texts are non-literary (e.g. cartoons, adverts).	IB::English English_A_HL:_Persepolis_visual_analysis
+Part 4 paragraph: four parts and marks	Topic sentence 2, evidence 2, micro-analysis 4, synthesis 2 (link to representation or perspective).	IB::English English_A_HL:_Persepolis_visual_analysis
+Part 2 rows: the three-mark pattern	Name the visual feature (1), link it to meaning (1), effect on the reader (1).	IB::English English_A_HL:_Persepolis_visual_analysis
+French B Paper 1 SL criteria	A Language 12, B Message 12, C Conceptual understanding 6 (30 marks); 250 to 400 words.	IB::English French_B_SL:_Paper_1_writing
+French screen-time task: which text type is wrong?	Lettre de motivation (job or place application): wrong audience and purpose. Use a discours or a blog.	IB::English French_B_SL:_Paper_1_writing
+What does ATP stand for, and what kind of molecule is it?	Adenosine triphosphate; a nucleotide (adenine, ribose, three phosphate groups).	IB::Biology C1.2
+Three properties that make ATP suitable as the energy currency of the cell	Releases a small, manageable amount of energy on hydrolysis; soluble, so it moves easily in the cytoplasm; cannot cross the plasma membrane, so the energy stays in the cell.	IB::Biology C1.2
+Three groups of life processes that ATP supplies with energy	Active transport; anabolism (building macromolecules); movement of the cell or its parts (e.g. chromosomes).	IB::Biology C1.2
+ATP hydrolysis and synthesis: which releases energy and which needs it?	ATP + water → ADP + phosphate releases energy; ADP + phosphate → ATP + water needs energy (from respiration).	IB::Biology C1.2
+Define cell respiration	The controlled release of energy from organic (carbon) compounds in cells to produce ATP. Main substrates: glucose and fatty acids.	IB::Biology C1.2
+Cell respiration or gas exchange: what is the difference?	Gas exchange: O<sub>2</sub> and CO<sub>2</sub> moving between organism and surroundings. Cell respiration: chemical reactions in every cell that make ATP.	IB::Biology C1.2
+Word equations: aerobic respiration and anaerobic respiration in humans	glucose + oxygen → carbon dioxide + water; glucose → lactate.	IB::Biology C1.2
+Aerobic vs anaerobic respiration in humans: oxygen, ATP yield, waste, place	Aerobic: needs O<sub>2</sub>, large yield (notes: 30 to 38 ATP), CO<sub>2</sub> + water, cytoplasm then mitochondria. Anaerobic: no O<sub>2</sub>, 2 ATP, lactate, cytoplasm only.	IB::Biology C1.2
+Respirometer: why add KOH or soda lime, and which way does the fluid move?	It absorbs CO<sub>2</sub>, so the volume change is O<sub>2</sub> used only; the pressure falls and the fluid moves towards the organisms.	IB::Biology C1.2
+Formula for the volume of oxygen used in a respirometer, and the rate	Volume = π r<sup>2</sup> d (r = inside radius of the capillary, d = distance moved); rate = volume ÷ time, e.g. mm<sup>3</sup> min<sup>−1</sup>.	IB::Biology C1.2
+(HL) Oxidation and reduction in terms of electrons; what happens to NAD?	Oxidation = loss of electrons (removing hydrogen = dehydrogenation); reduction = gain. NAD accepts hydrogen and is reduced (reduced NAD, NADH).	IB::Biology C1.2
+(HL) Four events of glycolysis, and where it happens	Phosphorylation, lysis, oxidation, ATP formation; in the cytoplasm; each step has its own enzyme.	IB::Biology C1.2
+(HL) Net yield of glycolysis per glucose	2 ATP (4 made, 2 used), 2 reduced NAD, 2 pyruvate.	IB::Biology C1.2
+(HL) Why do muscle cells make lactate without oxygen?	Pyruvate is reduced to lactate, which regenerates NAD, so glycolysis can continue (net 2 ATP per glucose).	IB::Biology C1.2
+(HL) Anaerobic respiration in yeast: products and uses	Ethanol and carbon dioxide; CO<sub>2</sub> makes bread rise (baking), ethanol is the alcohol (brewing).	IB::Biology C1.2
+(HL) What happens in the link reaction, and where?	In the matrix: pyruvate is decarboxylated (CO<sub>2</sub> removed) and oxidised (NAD reduced); the acetyl group joins coenzyme A to form acetyl CoA.	IB::Biology C1.2
+(HL) Krebs cycle: the two named intermediates and what happens each turn	Acetyl (2C) + oxaloacetate (4C) → citrate (6C); two decarboxylations and four oxidations regenerate oxaloacetate; 1 ATP per turn.	IB::Biology C1.2
+(HL) Krebs cycle products per glucose (your notes)	4 CO<sub>2</sub>, 6 reduced NAD, 2 reduced FAD, 2 ATP (two turns).	IB::Biology C1.2
+(HL) Where does each stage of aerobic respiration happen?	Glycolysis: cytoplasm. Link reaction and Krebs cycle: matrix. Electron transport chain and chemiosmosis: inner membrane (cristae).	IB::Biology C1.2
+(HL) How is the proton gradient made?	Reduced NAD gives electrons to the chain; as they pass along the carriers, energy is used to pump protons from the matrix into the intermembrane space.	IB::Biology C1.2
+(HL) Chemiosmosis	Protons flow back down their gradient from the intermembrane space into the matrix through ATP synthase, which uses the energy to phosphorylate ADP to ATP (oxidative phosphorylation).	IB::Biology C1.2
+(HL) Role of oxygen in aerobic respiration	Terminal electron acceptor: takes electrons from the chain and protons from the matrix, forming water, so electrons keep flowing.	IB::Biology C1.2
+(HL) Why do lipids give more energy per gram than carbohydrates, and why only aerobically?	Less oxygen, more hydrogen and carbon to oxidise. Fatty acids enter as acetyl CoA (not glycolysis), so they need the Krebs cycle and oxygen.	IB::Biology C1.2
+Paper 3: the four question types and marks	Q1 interpretation of graphs [3]; Q2 data analysis [6]; Q3 research considerations [6]; Q4 synthesis [15]. HL only, 1 h 45, 30 marks, 30%.	IB::Psychology Paper_3
+Paper 3 Q1 markband (3 marks)	1: a relevant issue is identified. 2: clearly described. 3: explained. Only the first issue is credited.	IB::Psychology Paper_3
+Paper 3 Q2: top band (5-6)	The data is analysed in detail, and a conclusion is stated that is explicitly linked to the findings.	IB::Psychology Paper_3
+Paper 3 Q3: the three possible questions	Discuss how the researcher could improve the credibility of the findings. / Discuss how the researcher could avoid bias. / To what extent are the findings transferable to other populations or contexts?	IB::Psychology Paper_3
+Paper 3 Q4: what the top band needs	At least three of the sources plus own knowledge, used effectively; different points of view identified and evaluated; a reasoned conclusion consistent with the arguments.	IB::Psychology Paper_3
+Mean, median, mode	Mean: add all scores, divide by how many. Median: middle score in order. Mode: most frequent score or category.	IB::Psychology Statistics
+Which average? (class rule, HL01)	Categories: mode. Ordered ratings: median. Numbers, symmetrical: mean. Numbers with skew or outliers: median.	IB::Psychology Statistics
+Range	Highest score minus lowest score. Uses only two scores, so one outlier can make it huge. (The specimen markscheme also accepts highest - lowest + 1.)	IB::Psychology Statistics
+Standard deviation (SD)	Roughly the typical distance of a score from the mean. Small SD: scores close together. Large SD: people differed a lot. Goes with the mean.	IB::Psychology Statistics
+Semi-interquartile range (SIQR)	(Q3 - Q1) / 2: half the width of the middle 50% of scores. Ignores extreme scores; goes with the median.	IB::Psychology Statistics
+Positive skew (guide glossary)	A longer tail on the right side. High scores pull the mean above the median. Negative skew: longer tail on the left.	IB::Psychology Statistics
+Box and whisker plot: the five numbers	Lowest score, Q1 (box left edge), median (line in the box), Q3 (box right edge), highest score.	IB::Psychology Statistics
+What an outlier does	Pulls the mean and the range towards it; the median and SIQR hardly move. Report the median and say why.	IB::Psychology Statistics
+Bidirectional ambiguity (guide glossary)	When the direction of cause and effect between two variables is unclear.	IB::Psychology Q4
+Correlation coefficient	A number from -1 to +1 for the strength and direction of a link between two variables. It cannot show cause.	IB::Psychology Q4
+Credibility (guide glossary)	The degree to which the research gives a true picture of what is being investigated and the results represent the perceptions and opinions of the research participants.	IB::Psychology Q3
+Transferability (guide glossary)	The extent to which findings from a study can be applied or generalized to other contexts or settings beyond the specific study's participants or conditions.	IB::Psychology Q3
+Strategies to improve credibility (specimen markscheme)	Member checking; triangulation (other methods, data sources or a second researcher); peer review of methods and themes; being open about biases and conflicts of interest; careful transcripts.	IB::Psychology Q3
+Member checking	Participants read the researcher's themes and confirm or correct them, so the findings represent what they meant.	IB::Psychology Q3
+HL05: the three homes of the gap between data and conclusion	D: in the data (what was measured, who, when). R: in the reader (choices, confirmation bias, anchoring). C: in the context (role, purpose of the source, what was left out).	IB::Psychology Q1
+Analyse (command term)	Break down in order to bring out the essential elements or structure.	IB::Psychology Drill
+Explain (command term)	Give a detailed account including reasons or causes.	IB::Psychology Drill
+Discuss (command term)	Offer a considered and balanced review that includes a range of arguments, factors or hypotheses. Opinions or conclusions should be presented clearly and supported by appropriate evidence.	IB::Psychology Drill
+To what extent? (command term)	Consider the merits or otherwise of an argument or concept. Opinions and conclusions should be presented clearly and supported with appropriate evidence and sound argument.	IB::Psychology Drill
+Interpret (command term)	Use knowledge and understanding to recognize trends and draw conclusions from given information.	IB::Psychology Drill
+Cause → conséquence: the 6 verbs for a POSITIVE effect (17 Sep table)	faciliter, contribuer à, aider à, favoriser, permettre de, motiver	IB::French Cause_and_consequence
+Cause → conséquence: the 5 verbs for a NEGATIVE effect (17 Sep table)	affecter, provoquer, causer, entraîner, être responsable de	IB::French Cause_and_consequence
+Cause → conséquence: the verbs that work for a positive OR negative effect (17 Sep table)	faire + verbe, rendre + adjectif, faire naître, engendrer, déclencher, être à l'origine de, être dû à, avoir pour effet de, susciter	IB::French Cause_and_consequence
+Fill the gap: L'augmentation des salaires a ______ la hausse du pouvoir d'achat des travailleurs. (positive effect)	a contribué à la hausse. Contribuer is always followed by à (à + le = au).	IB::French Cause_and_consequence
+Fill the gap: Les études qu'il a faites lui ______ de trouver un emploi dans le proche avenir.	lui permettront de trouver (or lui ont permis de). Permettre à quelqu'un de + infinitif: lui = à lui.	IB::French Cause_and_consequence
+Fill the gap: L'incendie ______ au vent qui soufflait très fort.	L'incendie est dû au vent. Être dû à agrees with the subject: dû, due, dus, dues (La fonte des glaces est due au réchauffement de la planète).	IB::French Cause_and_consequence
+Fill the gap: Mes bons résultats aux examens m'______ très heureux.	m'ont rendu très heureux. Rendre + adjectif. A girl writes: m'ont rendue très heureuse (agreement with m' placed before the verb).	IB::French Cause_and_consequence
+Fill the gap: Tes conseils me ______ réfléchir davantage avant de prendre ma décision finale.	me font réfléchir. Faire + infinitif: the advice makes me think.	IB::French Cause_and_consequence
+Fill the gap: L'annonce de la découverte d'un vaccin ______ beaucoup d'espoir.	a suscité (or a fait naître) beaucoup d'espoir. Susciter = to give rise to a feeling or reaction.	IB::French Cause_and_consequence
+Fill the gap: Un accident de voiture ______ des embouteillages. (negative effect)	a provoqué (or a causé, a entraîné) des embouteillages.	IB::French Cause_and_consequence
+Fill the gap: La déforestation ______ des inondations.	entraîne (or provoque, cause) des inondations. Also possible: est à l'origine des inondations.	IB::French Cause_and_consequence
+Les inondations ont provoqué ______ dégâts dans cette ville: des or d'importants?	d'importants dégâts. Before a plural adjective placed in front of the noun, des becomes de (d').	IB::French Cause_and_consequence
+Which cause connectors are followed by a clause (subject + conjugated verb)?	parce que, comme, puisque, étant donné que, du fait que, sous prétexte que	IB::French Connectors
+Which cause connectors are followed by a noun group (noun or pronoun)?	grâce à, à cause de, en raison de. Never parce que + noun: use à cause de.	IB::French Connectors
+grâce à or à cause de? ______ une application de suivi du temps d'écran, Manon a réussi à réduire sa dépendance aux réseaux sociaux.	Grâce à: a cause with a good result. À cause de is for a bad result: Plusieurs élèves se sentent mis à l'écart à cause de leur absence sur certains groupes de discussion en ligne.	IB::French Connectors
+Where does comme go? ______ elle recevait de moins en moins de likes sur ses publications, Léa a commencé à douter d'elle-même.	Comme elle recevait... Comme (cause) starts the sentence, before the main clause.	IB::French Connectors
+Which connector? ______ tu passes déjà six heures par jour sur les réseaux sociaux, ne me dis pas que tu n'as pas le temps de sortir !	Puisque: a cause the listener already knows and cannot deny.	IB::French Connectors
+Which connector? Il a désactivé toutes ses notifications ______ il voulait mieux se concentrer sur ses examens; en réalité, il passait plus de temps que jamais sur son téléphone.	sous prétexte qu'il voulait: the reason given is false or only claimed. Que becomes qu' before il.	IB::French Connectors
+Which connector? Le gouvernement a annoncé de nouvelles règles concernant l'usage du téléphone au lycée ______ l'augmentation des cas de décrochage scolaire.	en raison de l'augmentation: a formal, neutral cause + noun group (official announcements, news).	IB::French Connectors
+Exercice 1 (18 Sep): which connectors fill sentences 1, 4 and 5 (adolescents and notifications; cyberharcèlement; algorithmes)?	1 parce que (ils ont peur de manquer une notification importante); 4 and 5 étant donné que and du fait que, either way round. Each connector is used once.	IB::French Connectors
+Brain dump: how, and why it works	Blank paper, no notes, 5 minutes; then check with a key in a second colour. Pulling ideas out of memory strengthens them more than rereading; the gaps show what to learn.	IB::English English_A_HL:_revision_1
+Moment-to-moment vs action-to-action	Moment-to-moment: almost nothing changes, the same thing a second later (slow motion, suspense). Action-to-action: one subject, the next action.	IB::English English_A_HL:_revision_1
+Aspect-to-aspect vs scene-to-scene	Aspect-to-aspect: different parts of one place or mood; time seems to stand still. Scene-to-scene: a jump across time or place; the reader fills a big gap.	IB::English English_A_HL:_revision_1
+A wide panel with no words: effect on pace	It slows the reader: there is more to look at and nothing tells you to move on, so the moment feels longer and more important.	IB::English English_A_HL:_revision_1
+Criterion A, level 5 (official words)	"a thorough and perceptive understanding of the literal meaning"; "a convincing and insightful interpretation of larger implications and subtleties of the text"; references "well-chosen".	IB::English English_A_HL:_revision_1
+Criterion B, levels 1 and 2 (official words)	Level 1: "descriptive and/or demonstrates little relevant analysis". Level 2: "some appropriate analysis ... but is reliant on description". Fix: the chain after every detail.	IB::English English_A_HL:_revision_1
+Criterion B, level 5 (official words)	"an insightful and convincing analysis of textual features and/or authorial choices" and "a very good evaluation of how such features and/or choices shape meaning".	IB::English English_A_HL:_revision_1
+Criterion C, level 5 (official words)	"The presentation of ideas is effectively organized and coherent. The response is well focused."	IB::English English_A_HL:_revision_1
+Criterion D: what "register" means in the official guide	The candidate's "vocabulary, tone, sentence structure and terminology appropriate to the analysis". Level 5: language "very clear, effective, carefully chosen and precise".	IB::English English_A_HL:_revision_1
+Anachronism	Something placed in the wrong time, such as the modern word "technology" in a Stone Age scene. Cartoonists use it to make a joke and a point.	IB::English English_A_HL:_revision_1
+Ellipsis	The three dots ... at the end of a sentence: it trails off and leaves the reader to finish the thought.	IB::English English_A_HL:_revision_1
+French: grâce à, à cause de with le and les	à + le = au, à + les = aux (grâce au club, grâce aux vacances); de + le = du, de + les = des (à cause du téléphone, à cause des écrans).	IB::English English_A_HL:_revision_1
+The three most common mark-losing habits	Describing (B: "descriptive"), naming a technique without its effect (B: "little relevant analysis"), no claim in the first sentence (C: "little focus").	IB::English English_A_HL:_revision_2
+Habit "literal only": what it costs	Criterion A: understanding only the literal meaning without interpreting the implications. Fix: name the target and what is implied.	IB::English English_A_HL:_revision_2
+Habit "vague evidence": what it costs	Criterion A level 1: references "infrequent or ... rarely appropriate". Fix: one precise detail or short quote per point.	IB::English English_A_HL:_revision_2
+How to pick your three habits	Read your paragraphs sentence by sentence against the Horsey checklist, mark every habit, keep the three that come back most often, and write a rule for each.	IB::English English_A_HL:_revision_2
+Infographic: the usual conventions	Title, statistics in big type, pictograms and icons, colour coding, a reading path, imperatives, a logo or source.	IB::English English_A_HL:_revision_2
+Icon vs symbol	Icon: a simple picture of the thing itself (a bus for transport). Symbol: a thing standing for an idea (a heart for love).	IB::English English_A_HL:_revision_2
+Pictogram	A row of small icons standing for a number: ten people with three coloured in shows 3 out of 10 at a glance.	IB::English English_A_HL:_revision_2
+Reading path	Lines, arrows or numbers that lead the eye, so the text is read in the creator's order and ends where the creator wants.	IB::English English_A_HL:_revision_2
+Tricolon of imperatives	Three short orders in a row ("Walk it. Bike it. Bus it."): rhythmic, easy to remember, a call to action.	IB::English English_A_HL:_revision_2
+Analysing statistics in Paper 1: the trap	Do not argue with the data or only quote the number: analyse how it is shown (size, colour, position, icons) and its effect.	IB::English English_A_HL:_revision_2
+Official guide: literary or non-literary?	Non-literary: advertisement, cartoon, infographic (and many more). Literary: graphic novel, novel, poem, play, short story.	IB::English English_A_HL:_revision_2
+HL assessment (official guide)	Paper 1 guided textual analysis 35%; Paper 2 comparative essay 25%; HL essay (1,200 to 1,500 words) 20%; individual oral (15 min) 20%.	IB::English English_A_HL:_revision_2
