@@ -128,8 +128,9 @@ def errlog(extra=''):
     return f'''<div class="step"><div class="bh"><b>Error log</b><span>about 10 min</span></div><ol>
 <li>Open the <a href="{SHEET}">study sheet</a>, <b>Error log</b> tab.</li>
 <li>Write one row for every mark you lost: the date, the subject, the question (for example "{{q}}"), what went wrong, and the rule that fixes it.</li>
-<li>Say what kind of mistake it was: <b>did not know it</b> (go back to the guide or handout), <b>wrong method</b>, <b>careless slip</b> (copying, signs, units) or <b>ran out of time</b>. Four careless slips in one set is a pattern worth a rule of its own.</li>
+<li>Say what kind of mistake it was: <b>did not know it</b> (go back to the guide or handout), <b>wrong method</b>, <b>careless slip</b> (copying, signs, units), <b>ran out of time</b> or <b>ask teacher</b> (you still do not understand the mark scheme). Four careless slips in one set is a pattern worth a rule of its own.</li>
 <li>Timing: write down which question you were on when the timer ended. If you finished in extra time, how many minutes did it take? Speed problems and knowledge problems need different fixes.</li>
+<li><b>Fix-it:</b> rewrite one answer where you lost marks so it would now get full marks, using the mark scheme.</li>
 {extra}</ol></div>'''
 
 def build(fname, title, h1, intro, body, page_date):
@@ -166,7 +167,7 @@ body1 = f'''
 <tr><td>31, parts (c) to (g) only</td><td>Fuel pumped into a tank each hour (arithmetic sequence)</td><td>11</td></tr>
 <tr><th colspan="2">Total</th><th>35</th></tr></table></div>
 <div class="tip"><b>Read this first.</b> Question 20 (b) uses a probability table. The only fact you need is that the probabilities in the table add up to 1 (you meet this properly in Topic 4). In question 31, skip parts (a) and (b): they need a calculator. Start at (c) and use the volume 624&nbsp;000 m<sup>3</sup> that part (b) gives you.</div>
-<p class="muted">Why these questions: Tuesday's <a href="{MG}">sequences guide</a> (10 November) already uses most of the pack. Of the questions it does not use, only 20 and 31 (c) to (g) work without a calculator: 6, 29 and 31 (a) to (b) need a GDC, and 25 needs logarithms, which you have not covered yet. So the set also repeats three of Tuesday's no-calculator homework questions (4, 11 and 16). Do them again from a blank page without looking at Tuesday's work. Getting them right a second time, and faster, is the point.</p>
+<p class="muted">Why these questions: Tuesday's <a href="{MG}">sequences guide</a> (10 November) already uses most of the pack. Of the questions it does not use, 20, 28 and 31 (c) to (g) work without a calculator (28 is left for extra practice): 6, 29 and 31 (a) to (b) need a GDC, and 25 needs logarithms, which you have not covered yet. So the set also repeats question 11 from Tuesday's guide and questions 4 and 16 from its "more practice" list. Do them again from a blank page without looking at Tuesday's work. Getting them right a second time, and faster, is the point.</p>
 <p>Write every step. Most marks are for method (M1), so a correct method with a slip in the arithmetic still scores.</p>
 
 <h2>Mark it</h2>
@@ -189,7 +190,7 @@ body1 = f'''
 {score_table([('q4','Question 4',5,False),('q11','Question 11',6,False),('q16','Question 16',7,False),('q20','Question 20',6,False),('q31','Question 31 (c) to (g)',11,False)])}
 
 <h2>Error log</h2>
-{errlog('<li>If you lost marks on 4, 11 or 16 again, write "repeat" in the row. A mistake made twice is a habit: turn its rule into a flashcard.</li>').replace('{q}','Seq pack 16 (a)')}
+{errlog('<li>If you lost marks on a question you had already done (11, and 4 or 16 if you did them as extra practice on Tuesday), write "repeat" in the row. A mistake made twice is a habit: turn its rule into a flashcard.</li>').replace('{q}','Seq pack 16 (a)')}
 <p>Also on the study site: the <a href="{MG}">sequences guide</a> for anything you could not do, the <a href="../flashcards.html">flashcards</a>, <a href="../exam-maths-aa-sl.html">exam technique for Maths AA</a> and your <a href="../progress.html">progress page</a>.</p>
 '''
 build('2026-11-07-timed-maths-sequences.html', 'Timed set: Maths sequences, no calculator (Sat 14 Nov 2026)',
@@ -204,9 +205,13 @@ BIO_MIN, BIO_MARK = 36, 10          # combined paper: 30 marks x 1.2 min a mark 
 EN_READ, EN_PLAN, EN_WRITE, EN_CHECK, EN_MARK = 10, 10, 40, 7, 7   # HL timing per text from the class revision guide, step 7
 EN_MIN = EN_READ + EN_PLAN + EN_WRITE + EN_CHECK
 assert BIO_MIN == round(30 * 1.2) and EN_MIN == 67 and BIO_MIN + BIO_MARK + EN_MIN + EN_MARK == 120
-PS_P1, PS_RM, PS_P3, PS_MARK = 40, 25, 25, 30
+PS_P1, PS_RM, PS_P3, PS_MARK, PS_FIX = 40, 25, 20, 25, 10
+MK_P1, MK_RM, MK_P3 = 10, 8, 7
+BRK1, BRK2 = 15, 10          # break between the two halves; second break inside the Psychology half
+assert MK_P1 + MK_RM + MK_P3 == PS_MARK
+P3_READ = 6.5; assert PS_P3 == 9 * 1.5 + P3_READ   # 9 marks at about 1.5 min a mark + reading sources 1 and 2
 RM_READ, RM_Q5, RM_Q6, RM_MEAS = 3, 6, 6, 10
-assert RM_READ + RM_Q5 + RM_Q6 + RM_MEAS == PS_RM and PS_P1 + PS_RM + PS_P3 + PS_MARK == 120
+assert RM_READ + RM_Q5 + RM_Q6 + RM_MEAS == PS_RM and PS_P1 + PS_RM + PS_P3 + PS_MARK + PS_FIX == 120
 P1_PACE = 90 / 35; P3_PACE = 105 / 30          # official minutes per mark (guide: P1 1 h 30 for 35 marks, P3 1 h 45 for 30)
 assert round(P3_PACE * 9, 1) == 31.5 and round(P1_PACE * 16, 1) == 41.1
 # Optional Biology mock selection (biology audit, Sat 21 Nov proposal) without the C1.2 questions:
@@ -246,13 +251,15 @@ T_DAY = T_BIO + T_EN + T_PS; T_ALL = T_DAY + T_MOCK
 assert (T_DAY, T_ALL) == (87, 138)
 
 body3 = f'''
-<p style="margin-top:22px">Four hours today, with a break in the middle. <b>First two hours:</b> timed practice, the Biology combined paper and one English Paper 1 style analysis of a satirical cartoon. <b>Second two hours:</b> timed Psychology practice. Mark each part straight after its timer, while you still remember your thinking.</p>
-<div class="tablewrap"><table>
-<tr><th>Block</th><th>What</th><th>Minutes</th></tr>
-<tr><td>1. Timed practice</td><td>Biology combined paper ({BIO_MIN}) and marking ({BIO_MARK}); English cartoon analysis ({EN_MIN}) and self-check ({EN_MARK})</td><td>{BIO_MIN + BIO_MARK + EN_MIN + EN_MARK}</td></tr>
-<tr><td>Break</td><td>Get up, eat, no screens</td><td>about 15</td></tr>
-<tr><td>2. Psychology</td><td>Paper 1 Sections A and B ({PS_P1}); research methods ({PS_RM}); Paper 3 questions 1 and 2 ({PS_P3}); marking with the markbands ({PS_MARK})</td><td>{PS_P1 + PS_RM + PS_P3 + PS_MARK}</td></tr>
-</table></div>
+<p style="margin-top:22px">Four hours of work today, with two breaks. <b>First two hours:</b> timed practice, the Biology combined paper and one English Paper 1 style analysis of a satirical cartoon. <b>Second two hours:</b> timed Psychology practice. Mark each part straight after its timer, while you still remember your thinking.</p>
+<div class="blocks">
+{block_open('1', 'Timed practice: Biology and English', f'{BIO_MIN + BIO_MARK + EN_MIN + EN_MARK} min')}<p>Biology combined paper ({BIO_MIN}) and marking ({BIO_MARK}); English cartoon analysis ({EN_MIN}) and self-check ({EN_MARK}).</p></div>
+<div class="brkc"><b>Break · about {BRK1} min.</b> Get up, eat, no screens.</div>
+{block_open('2a', 'Psychology, part 1', f'{PS_P1 + PS_RM} min')}<p>Paper 1 Sections A and B ({PS_P1}); research methods ({PS_RM}).</p></div>
+<div class="brkc"><b>Break 2 · {BRK2} min.</b> Stand up, drink water, look out of a window, no phone.</div>
+{block_open('2b', 'Psychology, part 2', f'{PS_P3 + PS_MARK + PS_FIX} min')}<p>Paper 3 questions 1 and 2 ({PS_P3}); marking with the markbands ({PS_MARK}); Fix-it: rewrite your weakest answer to the top markband ({PS_FIX}).</p></div>
+</div>
+<p class="muted">Work time, breaks not counted: {BIO_MIN + BIO_MARK + EN_MIN + EN_MARK + PS_P1 + PS_RM + PS_P3 + PS_MARK + PS_FIX} minutes, plus about 10 minutes for the Error log at the end.</p>
 
 <h2>Before you start</h2>
 <div class="card"><ul>
@@ -280,7 +287,7 @@ body3 = f'''
 <h2>2. English A: one Paper 1 style cartoon analysis (20 marks)</h2>
 <p>Paper 1 gives you unseen non-literary texts, and a satirical cartoon is one possible text type. Today you write one full analysis under time, using what you practised in your class <a href="{EN_GUIDE}">Paper 1 satirical cartoons revision guide</a> ("Paper 1 Satirical Cartoons - Revision Guide (research workbook).docx") and the <a href="{EN_MODEL}">Horsey "Modern Life" model response</a> ("Paper 1 Satirical Cartoons - Horsey Modern Life - Model Response and Answers (20 of 20).docx") as your model.</p>
 <div class="step"><div class="bh"><b>Get the cartoon ready</b><span>before today</span></div><ol>
-<li>Ask someone at home to choose <b>one</b> satirical (editorial) cartoon you have not seen, for example from <a href="{CFP}">Cartooning for Peace</a> or the Pulitzer Prize winners for Illustrated Reporting and Commentary (both are on the research list in your revision guide). Not one from your own cartoon bank (step 6): those you have already analysed.</li>
+<li>Ask someone at home to choose <b>one</b> satirical (editorial) cartoon you have not seen, with no violent or graphic images, for example from <a href="{CFP}">Cartooning for Peace</a> or the Pulitzer Prize winners for Illustrated Reporting and Commentary (both are on the research list in your revision guide). Not one from your own cartoon bank (step 6): those you have already analysed.</li>
 <li>They save or print it with the cartoonist, the publication and the date, and do not show it to you before the timer starts.</li>
 <li>They write a guiding question on the back in the same form as the Horsey one: "How does the cartoonist use visual and linguistic features to comment on [the issue]?" If the cartoon has no words, "visual features" alone.</li></ol></div>
 {timer('eng-p1', 'English Paper 1 style analysis, one cartoon', EN_MIN * 60, f'Your revision guide (step 7) gives HL Paper 1 as 2 hours 15 minutes for two texts, and suggests per text: read and annotate {EN_READ} min, plan {EN_PLAN} min, write {EN_WRITE} min, check {EN_CHECK} min. That is {EN_MIN} minutes.')}
@@ -295,7 +302,7 @@ body3 = f'''
 <li>Underline your thesis and each topic sentence: do they all answer the guiding question (C)? Circle the subject terms you used (D) and compare with the Horsey ones (juxtaposition, lexis, semantic field, bathos, passive voice).</li>
 <li>Give yourself a rough mark out of 5 for each criterion, using the Horsey 5 out of 5 notes as the top. Enter the total out of 20 below, then hand the analysis to your English teacher and replace your mark with theirs when you get it.</li>
 <li>Write the weakest criterion in the Error log, with one thing you will do differently next time.</li></ol></div>
-<p class="muted">Where these figures come from: the 2 hours 15 minutes, 20 marks per text, 5 marks per criterion and the criteria A to D are all from your class revision guide (step 7) and the Horsey model. The official IB Language and Literature guide is not in your Drive, so check them with your teacher.</p>
+<p class="muted">Where these figures come from: the 2 hours 15 minutes, 20 marks per text, 5 marks per criterion and the criteria A to D are from your class revision guide (step 7) and the Horsey model, and match the official IB Language A: language and literature guide (first assessment 2021; Paper 1 is unchanged in the 2026 version).</p>
 
 <h2>3. Psychology: timed practice (37 marks)</h2>
 <p>This is the fourth Psychology session: no notes, under time. The structure of each paper comes from the official guide (<a href="{PS_GUIDE}">IB Psychology guide, first assessment 2027</a>): Paper 1 is 1 hour 30 minutes for 35 marks (Section A two 4-mark questions, Section B two 6-mark questions applied to an unseen situation, Section C one 15-mark essay); Paper 2 Section A has four questions on your class practicals (4, 4, 6 and 6 marks); Paper 3 (HL only) is 1 hour 45 minutes for 30 marks, with questions of 3, 6, 6 and 15 marks on a set of sources.</p>
@@ -313,8 +320,10 @@ body3 = f'''
 <li><a href="{PS_RM04}">Evaluating research task</a> ("RM04 Research methodology - Evaluating research, breathing study - Application task (class).docx"): re-read Ms Patel&apos;s breathing study, then answer <b>Q5 [4]</b> (reliability and construct validity of her anxiety questionnaire, and one improvement) and <b>Q6 [4]</b> (her claim about "all IB students", with population validity and ecological validity). This time with no notes.</li>
 <li><b>Paper 2 Section A style [4]:</b> "Explain the concept of measurement in relation to your class practical." This is a question from your <a href="{PS_RM06}">class practical planning template</a>. If you did not take part in the class experiment, use a simple experiment you can describe, for example "Does background music affect how many words people remember?". Cover how the independent and dependent variables were operationalised, how they were measured, and one limitation of that measurement.</li></ol></div>
 
+<p class="ok"><b>Break 2 · {BRK2} minutes.</b> Stand up, drink water, look out of a window. No phone. Then Paper 3.</p>
+
 <h3>Paper 3 (HL): questions 1 and 2 (9 marks)</h3>
-{timer('psy-p3', 'Psychology specimen Paper 3, Q1 and Q2', PS_P3 * 60, f'The official pace is 105 minutes for 30 marks, so 9 marks would be {P3_PACE * 9:.1f} minutes, but that time includes reading all five sources for question 4. You only need sources 1 and 2, so 25 minutes.')}
+{timer('psy-p3', 'Psychology specimen Paper 3, Q1 and Q2', PS_P3 * 60, f'The official pace is 105 minutes for 30 marks, so 9 marks would be {P3_PACE * 9:.1f} minutes, but that time includes reading all five sources for question 4. You only need sources 1 and 2: about 1.5 minutes a mark (9 × 1.5 = {9 * 1.5} minutes) plus {P3_READ} minutes to read them, so {PS_P3} minutes.')}
 <div class="step"><div class="bh"><b>Two questions</b><span>{PS_P3} min</span></div><ol>
 <li>In the <a href="{PS_SPEC}">specimen file</a>, find the Paper 3 question paper (it has source 1, a bar chart, and the four questions) and the resource booklet that follows it (source 2 is a table and a box plot).</li>
 <li><b>Q1 [3]</b> "Explain one issue that limits the interpretation of the data in source 1." Only your first issue counts, so pick one and explain it fully.</li>
@@ -323,10 +332,15 @@ body3 = f'''
 
 <h3>Mark it with the markbands</h3>
 <div class="step"><div class="bh"><b>Marking</b><span>{PS_MARK} min</span></div><ol>
-<li><b>Paper 1 (a), (b), (c)</b> <span class="t">(10 min)</span>. The markbands are at the start of the specimen Paper 1 markscheme (also guide pages 45 to 46). Section A, out of 4: 1 to 2 limited knowledge, the example is relevant but not explained; 3 to 4 detailed knowledge, the example is relevant and explained. Section B, out of 6: 1 to 2 limited; 3 to 4 some detail, mostly accurate, application partly developed; 5 to 6 accurate and detailed, application well developed. For (a) also check the PEEL word guide on the <a href="{PS_EX01}">practice sheet</a> and the "examiner would be looking for" notes in the <a href="{PS_LC02}">classical conditioning slides</a>; for (b) the three Identify, Explain, Apply cycles on the same sheet; for (c) the notes under question 4 in the specimen markscheme (you must suggest a strategy, not only describe the theory).</li>
-<li><b>Research methods</b> <span class="t">(8 min)</span>. There is no mark scheme for the evaluating research task in your Drive, so use my points below. For the measurement question use the official markband for Paper 2 Section A question 2 (guide pages 47 to 48): 1 to 2 the concept is relevant but limited, with some links to the practical; 3 to 4 the concept is well developed, with clear and detailed links.</li>
-<li><b>Paper 3</b> <span class="t">(7 min)</span>. Specimen Paper 3 markscheme (also guide page 50): Q1 gives 1 if the issue is identified, 2 if clearly described, 3 if explained. Q2: 1 to 2 limited or inaccurate analysis; 3 to 4 accurate but lacking detail, with an unclear link to the conclusion; 5 to 6 analysed in detail, with a conclusion explicitly linked to the findings.</li>
-<li><b>Weak points</b> <span class="t">(5 min)</span>. Write your three weakest points in the Error log. They are what you fix first in the exam window.</li></ol></div>
+<li><b>Paper 1 (a), (b), (c)</b> <span class="t">({MK_P1} min)</span>. The markbands are at the start of the specimen Paper 1 markscheme (also guide pages 45 to 46). Section A, out of 4: 1 to 2 limited knowledge, the example is relevant but not explained; 3 to 4 detailed knowledge, the example is relevant and explained. Section B, out of 6: 1 to 2 limited; 3 to 4 some detail, mostly accurate, application partly developed; 5 to 6 accurate and detailed, application well developed. For (a) also check the PEEL word guide on the <a href="{PS_EX01}">practice sheet</a> and the "examiner would be looking for" notes in the <a href="{PS_LC02}">classical conditioning slides</a>; for (b) the three Identify, Explain, Apply cycles on the same sheet; for (c) the notes under question 4 in the specimen markscheme (you must suggest a strategy, not only describe the theory).</li>
+<li><b>Research methods</b> <span class="t">({MK_RM} min)</span>. There is no mark scheme for the evaluating research task in your Drive, so use my points below. For the measurement question use the official markband for Paper 2 Section A question 2 (guide pages 47 to 48): 1 to 2 the concept is relevant but limited, with some links to the practical; 3 to 4 the concept is well developed, with clear and detailed links.</li>
+<li><b>Paper 3</b> <span class="t">({MK_P3} min)</span>. Specimen Paper 3 markscheme (also guide page 50): Q1 gives 1 if the issue is identified, 2 if clearly described, 3 if explained. Q2: 1 to 2 limited or inaccurate analysis; 3 to 4 accurate but lacking detail, with an unclear link to the conclusion; 5 to 6 analysed in detail, with a conclusion explicitly linked to the findings.</li>
+<li>Write one Error log row for every mark you lost, with its type: did not know, wrong method, slip, time or ask teacher.</li></ol></div>
+<div class="step"><div class="bh"><b>Fix-it</b><span>{PS_FIX} min</span></div><ol>
+<li>Pick your weakest Psychology answer: the one with the lowest mark compared with its maximum (for example 2 out of 6 is weaker than 2 out of 4).</li>
+<li>Rewrite it on a fresh page so that it meets the <b>top</b> markband, using the descriptors above as a checklist. Section A: detailed knowledge, and an example that is relevant <b>and explained</b>. Section B: accurate and detailed knowledge, and an application that is well developed (every paragraph goes back to the dogs or the children in the question). Paper 3 Q2: findings analysed in detail, with numbers, and a conclusion explicitly linked to them. Research methods: each point tied to Ms Patel&apos;s study.</li>
+<li>Check it against the <a href="../exam-psychology-hl.html#annotated">annotated model answers</a> on the exam technique page: can you say which descriptor each of your sentences earns?</li>
+<li>Write your three weakest points in the Error log. They are what you fix first in the exam window.</li></ol></div>
 <details><summary>My points for the evaluating research task, Q5 and Q6 (not the teacher&apos;s mark scheme)</summary>
 <p><b>Q5 [4]:</b> one mark for each point that is explained and tied to Ms Patel&apos;s study.</p>
 <ul>

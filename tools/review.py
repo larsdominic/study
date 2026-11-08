@@ -27,30 +27,122 @@ Q=[ # (subject, question, options, answer index, why)
 ("Psychology","A researcher puts every student's name in a hat and draws 30 names. This is",["opportunity sampling","random sampling","random allocation","self-selected sampling"],1,"Every member of the population has an equal chance of being picked: random sampling. Random allocation is something else: deciding by chance which condition each chosen participant goes into."),
 ("Psychology","At HL, Paper 3 (data analysis) is worth what share of the final grade?",["25%","20%","30%","35%"],2,"HL: Paper 1 25%, Paper 2 25%, Paper 3 30%, internal assessment 20%. 35% is Paper 1 or Paper 2 at SL."),
 ]
+N_OLD=len(Q); assert N_OLD==24
+# Psychology session 2 (Sat 14 Nov): evaluating research, classical and operant conditioning.
+# Checked against ~/ClaudeMe/ib-notes/research/psychology-audit.md (Session 2 plan, class files #4 Skittles worksheet
+# "buzzer + Skittle, salivation", #7 operant slides "positive/negative reinforcement and punishment", RM01 slides 60-148
+# "counterbalancing") and psych-glossary.json ("reinforcement increases a behaviour, punishment decreases it").
+NEW=[
+(6,("Psychology","In your class Skittles experiment, a buzzer sounded just before each Skittle was eaten. After several pairings, students salivated when they heard the buzzer alone. Salivating at the buzzer alone is the",["unconditioned response","conditioned response","conditioned stimulus","neutral stimulus"],1,"It is a learned response to the buzzer, so it is the conditioned response (CR). The buzzer is now the conditioned stimulus (CS); before the pairings it was a neutral stimulus. Salivating at the Skittle itself is the unconditioned response (UCR): nobody had to learn it.")),
+(15,("Psychology","A student's parents stop nagging her about homework as soon as she has finished it, and she starts doing her homework earlier. In operant conditioning this is",["positive reinforcement","negative reinforcement","positive punishment","negative punishment"],1,"Something unpleasant (the nagging) is taken away when she does the behaviour, and the behaviour increases: negative reinforcement. Reinforcement always makes a behaviour more likely, punishment less likely. \"Negative\" means something is taken away, not that it is bad.")),
+(23,("Psychology","In a repeated measures experiment, half the participants do condition A first and then B; the other half do B first and then A. This is done to control",["order effects, such as practice or tiredness","participant variables (differences between the people in two groups)","researcher bias","sampling bias"],0,"This is counterbalancing. In repeated measures the same people do both conditions, so participant variables are already controlled. The risk is that doing one condition first (practice, boredom, tiredness) changes the scores in the second; counterbalancing spreads these order effects evenly over both conditions.")),
+]
+for pos,item in NEW: Q.insert(pos,item)
+assert len(Q)==N_OLD+3 and all(0<=a<len(o) for _,_,o,a,_ in Q)
+assert all(len(set(o))==len(o) for _,_,o,_,_ in Q)   # no duplicate options, so exactly one button is right
 qhtml=''
 for i,(s,q,opts,a,why) in enumerate(Q,1):
     b=''.join(f'\n    <button>{o}</button>' for o in opts)
     qhtml+=f'\n  <div class="q" data-a="{a}"><p><span class="subj">{s}</span>{i}. {q}</p>{b}\n    <div class="why">{why}</div></div>\n'
-EL=SHEET
-body=f'''
-<div class="step" style="margin-top:24px"><div class="bh"><b>Step 1 · 15 min</b><span>Error log: find your top 3</span></div><ol>
-<li>Open the <a href="{EL}">study sheet</a>, Error log tab, and read every row from this week.</li>
-<li>Group mistakes that have the same cause (for example "used n instead of n − 1" twice counts as one repeat).</li>
-<li>Pick the <b>three</b> causes that came up most, or cost the most marks. For each one write a one-line rule on a card or sticky note (for example "u<sub>n</sub> has n − 1 steps").</li>
-<li>Redo one question from the Error log for each of the three, without looking at the answer.</li></ol></div>
-<div class="step"><div class="bh"><b>Step 2 · 25 min</b><span>Mixed quiz (below)</span></div><ol>
-<li>24 new questions, maths, biology, business and psychology mixed together. Mixing is harder than doing one topic at a time, and that is the point: it trains you to recognise which method a question needs.</li>
+
+# ---- three written items (self-marked; not part of the saved quiz score)
+W=[('psy','Psychology',4,'Paper 1 Section A style',
+ '<p><b>Describe operant conditioning with reference to one example.</b> [4]</p>',
+ '''<p><b>Model answer</b> (written for this site, not an official IB answer):</p>
+<p>Operant conditioning is learning through the consequences of a behaviour: a behaviour followed by reinforcement becomes more likely, and a behaviour followed by punishment becomes less likely. Positive reinforcement adds something pleasant, such as a reward; negative reinforcement takes away something unpleasant; both make the behaviour more frequent. Punishment adds something unpleasant or takes away something pleasant, so the behaviour becomes less frequent. For example, a teacher gives a disruptive student a merit point every lesson he stays in his seat. Because staying seated is now followed by a reward he values (positive reinforcement), he links the behaviour with its consequence and stays in his seat more often.</p>
+<p><b>Check it against the official markband</b> (Paper 1 Section A, IB Psychology guide p45):</p>
+<ul><li>1 to 2 marks: "limited knowledge"; the example "is relevant but is not explained".</li>
+<li>3 to 4 marks: "detailed knowledge"; the example "is relevant and explained".</li></ul>
+<p><b>Tick list:</b> learning through consequences? reinforcement increases, punishment decreases? positive and negative used correctly ("negative" = taken away)? <b>one</b> example (only the first counts)? the example says <b>how</b> the consequence changes the behaviour? All five: 4. Example named but not explained: 2 at most.</p>'''),
+('bus','Business',4,'Paper 1 style, short case',
+ '''<p><i>FreshBowl sells salads from 5 outlets in one city. The owners plan to open 15 more over the next two years, so the chain will have 20 outlets.</i></p>
+<p><b>Explain two internal economies of scale FreshBowl could gain from this growth.</b> [4]</p>''',
+ '''<p><b>Model answer</b> (written for this site, not an official IB answer):</p>
+<p><b>Purchasing economies.</b> With 20 outlets FreshBowl buys far more vegetables, bowls and packaging, so suppliers give bulk discounts. Each salad then costs less to make: its average cost falls.</p>
+<p><b>Marketing economies.</b> One advertising campaign or one ordering app can now be spread over the sales of 20 outlets instead of 5, so the marketing cost of each salad sold falls.</p>
+<p><b>How to mark it</b> (the 1 + 1 pattern from your <a href="__N__">Business guide</a>'s worked examples; not an official mark scheme): for each economy, 1 mark for naming a correct type, 1 mark for explaining it with FreshBowl's case (outlets, salads, ingredients) and saying it lowers <b>average</b> cost. Financial (cheaper loans for a bigger firm) or managerial (specialist managers) economies, explained with the case, also score. Writing "costs go down" without "per salad" or "average" loses the second mark.</p>'''),
+('bio','Biology',3,'short written answer',
+ '<p><b>Explain why glucose dissolves in water but olive oil does not.</b> [3]</p>',
+ '''<p><b>Mark points</b> (written for this site in the style of your class mark schemes, one mark per point, max 3; not an official IB mark scheme, and the IB Biology guide is not in your folder):</p>
+<ul><li>water molecules are polar (δ− oxygen, δ+ hydrogens);</li>
+<li>glucose is polar / has many -OH groups, so it forms hydrogen bonds with water / is hydrophilic;</li>
+<li>water molecules surround each glucose molecule, so it dissolves;</li>
+<li>oil is non-polar / hydrophobic, so it is not attracted to water and cannot form hydrogen bonds with it (it stays as a separate layer);</li></ul>
+<p>See A1.1 "Water as a solvent" in your <a href="__B__">Biology guide</a> if you missed one.</p>''')]
+T_W=sum(w[2] for w in W); assert T_W==11
+whtml=''
+for k,subj,mx,kind,qtext,model in W:
+    model=model.replace('__N__',N).replace('__B__',B)
+    whtml+=f'''
+<div class="written card" id="w-{k}" data-k="{k}" data-max="{mx}"><p class="wh"><span class="wsubj">{subj}</span> {kind}, {mx} marks</p>
+{qtext}
+<details><summary>Show model answer (only after you have written yours on paper)</summary>{model}</details></div>'''
+
+# ---- timings (one hour; the 3-minute break sits between blocks 2 and 3)
+BD, BD_CHECK = 5, 3
+QZ = 22
+BRK = 3
+W_WRITE, W_MARK = 13, 4
+EL = 10
+BLOCKS = [BD + BD_CHECK, QZ, BRK, W_WRITE + W_MARK, EL]
+assert sum(BLOCKS) == 60, BLOCKS
+G=[('Psychology, Mon 9 Nov',P,'course map, command terms, research methods: variables, experiments, hypotheses, sampling'),
+   ('Maths, Tue 10 Nov',M,'sequences, series, sigma notation, compound interest, proof'),
+   ('Biology, Wed 11 Nov',B,'A1.1 water, A1.2 nucleic acids'),
+   ('Business, Thu 12 Nov',N,'Unit 1, 1.1 to 1.6'),
+   ('English, Fri 13 Nov','../guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html','Paper 1, satirical cartoons'),
+   ('Psychology, Sat 14 Nov','../guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html','evaluating research, classical and operant conditioning')]
+glist=''.join(f'<li><b>{d}</b>: {t}' + (f' (<a href="{u}">guide</a>)' if u else ' (no guide page: check against the list below)') + '</li>' for d,u,t in G)
+EXTRA_CSS='''<style>
+.quiz .q:not(.done) .subj{display:none}
+.written .wh{font-weight:700;margin-bottom:6px}
+.written details{background:#F7F8F6;border:1px solid var(--rule);padding:8px 12px;margin:10px 0}
+.written summary{cursor:pointer;font-weight:600}
+.written ul{padding-left:22px}
+.stuck{background:var(--amber-soft);border-left:5px solid var(--amber);padding:10px 16px;margin:14px 0}
+.star{color:var(--amber-ink);font-weight:700}
+.brk{text-align:center;font-weight:700;color:var(--green);background:var(--green-soft);padding:10px;margin:16px 0}
+</style>'''
+body=f'''{EXTRA_CSS}
+<div class="card" style="margin-top:24px"><b>How the hour goes:</b> {BLOCKS[0]} min brain dump, {QZ} min mixed quiz, a {BRK}-minute break, {W_WRITE + W_MARK} min on three written questions, {EL} min Error log and Fix-it. That is {sum(BLOCKS)} minutes.<br>
+<span class="star">★</span> steps are extras. <b>Short on time: skip ★ steps, still do the quiz.</b></div>
+<div class="stuck"><b>Stuck?</b> Look at the worked example in that day's guide, then redo its self-check. Still stuck after 10 minutes? Log it as "ask teacher" in the Error log and move on.</div>
+
+{block_open(1,'Brain dump on a blank page',f'{BLOCKS[0]} min')}<ol>
+<li><b>{BD} min, no notes, page scrolled away.</b> Take a blank sheet. Write the six headings below, and under each one write every "I can" line you remember from that day, in your own words (key words are enough).<ul>{glist}</ul></li>
+<li><b>{BD_CHECK} min, check.</b> Open each guide and compare with its green "I can" boxes. Tick what you had; add what you missed in a different colour. The missed lines are your weak spots for the quiz.</li>
+<li><span class="star">★ If time:</span> add one example under each line you missed.</li></ol>
+</div>
+
+{block_open(2,'Mixed quiz (below)',f'{QZ} min')}<ol>
+<li>{len(Q)} questions from Maths, Biology, Business and Psychology, mixed together (English is in the brain dump). <b>The subject label is hidden until you answer.</b> Before you click, write in the margin which subject and which rule or method the question needs (for example "Maths: u<sub>n</sub> = u<sub>1</sub> + (n − 1)d"). Spotting the method is the skill an exam tests; mixing trains it.</li>
 <li>Work each one on paper first, then click. Every answer explains the trap. Do the maths ones without a calculator.</li>
-<li>Any you miss go into the Error log, same as during the week.</li></ol></div>
-<div class="step"><div class="bh"><b>Step 3 · 10 min</b><span>Flashcards</span></div><ol>
-<li>Open the <a href="../flashcards.html">flashcards</a> and go through the "to repeat" and "new" cards until the counts are low.</li></ol></div>
-<div class="step"><div class="bh"><b>Step 4 · 10 min</b><span>Progress and next week</span></div><ol>
-<li>Look at the <a href="../progress.html">progress page</a>: which topics are still amber or red?</li>
-<li>In the study sheet, write the three Error log rules from step 1 in the Notes column of next week's matching subject days, so the next guides can drill them.</li></ol></div>
-<p style="font-size:.92rem;color:var(--ink-soft)">This week's guides: <a href="{M}">Maths AA SL 1.2 to 1.6</a>, <a href="{B}">Biology HL A1.1 and A1.2</a> and <a href="{N}">Business Management SL 1.1 to 1.6</a> and <a href="{P}">Psychology HL: course map and research methods</a>.</p>
-<section class="quiz" id="quiz"><h2>Mixed quiz: week 1</h2>{qhtml}
+<li><span class="star">★ If time:</span> any you got right by guessing count as wrong for the Error log.</li></ol></div>
+
+<p class="brk">{BRK}-minute break: stand up, drink water, look out of a window. No phone.</p>
+
+{block_open(3,f'Three written exam questions ({T_W} marks)',f'{W_WRITE + W_MARK} min')}<ol>
+<li><b>{W_WRITE} min:</b> write all three on paper, page scrolled away. About 5 min each for the 4-mark ones, 3 min for the Biology one.</li>
+<li><b>{W_MARK} min:</b> open each "Show model answer", mark yours with the tick list and choose your mark in the "My mark" menu under the question. It saves on this device.</li>
+<li><span class="star">★ If time:</span> underline in your answer the words that earned each mark.</li></ol></div>
+<section id="written"><h2>Written questions</h2>
+<p style="font-size:.92rem;color:var(--ink-soft)">Psychology markband wording is from the official IB Psychology guide (first assessment 2027). The Business and Biology mark points are written for this site, not taken from an official IB mark scheme.</p>
+{whtml}
+</section>
+
+{block_open(4,'Error log and Fix-it',f'{EL} min')}<ol>
+<li>Open the <a href="{SHEET}">study sheet</a>, Error log tab. Write one row for every mark you lost today (quiz and written), with its type: <b>did not know</b>, <b>wrong method</b>, <b>slip</b>, <b>time</b> or <b>ask teacher</b>.</li>
+<li>Read this week's rows too. Group mistakes with the same cause and pick the <b>three</b> that came up most or cost the most marks. Write each as a one-line rule (for example "u<sub>n</sub> has n − 1 steps"). In the Notes column of next week's matching subject days, write the rule, so the next guides drill it.</li>
+<li><b>Fix-it:</b> take one written answer where you lost marks and rewrite it to full marks, using the model answer's tick list but your own words. Then close the page and redo that day's self-check from memory, and write the rule.</li>
+<li><span class="star">★ If time:</span> redo one old Error log question for each of the three rules, without looking at the answer.</li></ol></div>
+<div class="card"><b>After the hour</b> (<span class="star">★</span>, or in today's planning hour): open the <a href="../flashcards.html">flashcards</a> for the "to repeat" cards, and check your <a href="../progress.html">progress page</a> for topics still amber or red.</div>
+
+<section class="quiz" id="quiz"><h2>Mixed quiz: week 1</h2>
+<p style="font-size:.95rem;color:var(--ink-soft)">The subject appears after you answer. First decide: which subject, which method?</p>{qhtml}
   <div class="score" id="score">Score: 0 / {len(Q)} answered 0</div>
 </section>
 '''
-open(out+'/review/2026-11-08-week-1.html','w').write(page("Weekly review: week 1 (Sun 15 Nov 2026)","../index.html","Weekly review: week 1","Sunday 15 November 2026. About an hour (the other two hours today are Biology B1.1): turn this week's mistakes into rules, test yourself on everything mixed together, then plan next week.",body,quiz_js('ib-quiz-review-2026-11-08')))
-print(len(Q),"questions")
+html=page("Weekly review: week 1 (Sun 15 Nov 2026)","../index.html","Weekly review: week 1","Sunday 15 November 2026. One hour (the rest of today is Biology B1.1 and planning next week): pull the week out of memory, test yourself on everything mixed together, write three exam answers, then turn your mistakes into rules.",body,quiz_js('ib-quiz-review-2026-11-08'),crumb_label="All days")
+assert '—' not in html
+open(out+'/review/2026-11-08-week-1.html','w').write(html)
+print(len(Q),"questions,",len(W),"written items,",T_W,"written marks, blocks",BLOCKS)

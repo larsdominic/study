@@ -112,9 +112,273 @@ cards=[
 ("p23", "Psychology", "RM", "guides/2026-11-09-psychology-hl-frame-research-methods.html#exp", "Extraneous vs confounding variable", "Extraneous: anything other than the IV that could affect the DV. Confounding: an extraneous variable not controlled that differs between conditions."),
 ("p24", "Psychology", "Sampling", "guides/2026-11-09-psychology-hl-frame-research-methods.html#samp", "The five sampling techniques in the guide", "Self-selected, opportunity, stratified, random, snowball."),
 ("p25", "Psychology", "Sampling", "guides/2026-11-09-psychology-hl-frame-research-methods.html#samp", "Random sampling vs random allocation", "Random sampling: every member of the population has an equal chance of being in the study. Random allocation: chance decides each participant's condition."),
+("e01", "English", "Paper 1", "guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html#paper1", "HL Paper 1 (official IB guide)", "Guided textual analysis: two unseen non-literary passages, a separate guided analysis of each. 2 h 15, 40 marks (20 per answer), 35% of the grade."),
+("e02", "English", "Paper 1", "guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html#paper1", "The four Paper 1 criteria", "A Understanding and interpretation; B Analysis and evaluation; C Focus and organization; D Language. 5 marks each per text."),
+("e03", "English", "Paper 1", "guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html#paper1", "Minutes per text at HL (class revision guide)", "Read and annotate 10, plan 10, write 40, check 7: 67 minutes per text."),
+("e04", "English", "Paper 1", "guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html#paper1", "Must you answer the guiding question?", "No, it is \"not compulsory\" (official guide), but the analysis must focus on one aspect; the guiding question is the safest focus."),
+("e05", "English", "Paper 1", "guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html#paper1", "Criterion B: the IB's question", "\"To what extent does the candidate analyse and evaluate how textual features and/or authorial choices shape meaning?\""),
+("e06", "English", "Satire", "guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html#satire", "Satire", "Humour, irony or exaggeration used to criticise, usually people with power."),
+("e07", "English", "Satire", "guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html#satire", "Horatian vs Juvenalian satire", "Horatian: gentle, amused, invites us to laugh at ourselves. Juvenalian: harsh, angry, attacks serious harm."),
+("e08", "English", "Satire", "guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html#satire", "Target (of a cartoon)", "Who or what the cartoon criticises."),
+("e09", "English", "Big 5", "guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html#big5", "The Big 5 groups", "1 Audience (audience, purpose, context); 2 Meaning (content, theme); 3 Feeling (tone, mood, register); 4 Craft (style); 5 Shape (structure, layout)."),
+("e10", "English", "Big 5", "guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html#big5", "Tone vs mood", "Tone: the writer's attitude to the subject or audience. Mood: the atmosphere, how the audience feels."),
+("e11", "English", "Chain", "guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html#chain", "The analysis chain (class revision guide)", "Spot it, explain it, effect on reader, purpose."),
+("e12", "English", "Cartoons", "guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html#visual", "Juxtaposition vs analogy", "Juxtaposition: two contrasting things side by side. Analogy: the issue shown as a different, familiar situation."),
+("e13", "English", "Cartoons", "guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html#visual", "Caricature vs exaggeration", "Caricature: a real person with features stretched or shrunk. Exaggeration: anything shown as more extreme than in real life."),
+("e14", "English", "Cartoons", "guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html#visual", "Parody vs allusion (class guide)", "Parody: a famous image copied and changed (visual). Allusion: a short reference to a famous text or saying (words)."),
+("e15", "English", "Cartoons", "guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html#visual", "Verbal irony in a cartoon", "Words that mean, or hide, the opposite of what they say; the picture often shows the gap."),
+("e16", "English", "Cartoons", "guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html#visual", "Understatement", "Making something sound smaller than it is: \"a bit of rain\" for a flood."),
+("e17", "English", "Cartoons", "guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html#visual", "The ten effect verbs (class guide)", "exposes, ridicules, undermines, invites, positions, implicates, provokes, disarms, reinforces, challenges"),
+("e18", "English", "Colour", "guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html#colour", "How to write about colour (class guide)", "Not \"Red makes the reader angry\" but \"Here, red suggests danger because ...\""),
+("e19", "English", "Colour", "guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html#colour", "Accent colour", "One strong colour against a plain or grey background; it pulls the eye to one thing."),
+("e20", "English", "Model", "guides/2026-11-13-english-a-hl-paper1-satirical-cartoons.html#model", "What lifts the Horsey answer to 20/20", "Analysis not description; integration of image and words; one or two original insights; evaluation."),
+("qa01", "Psychology", "RM 1", "guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#designs", "Independent samples design", "Different people in each condition, put there by random allocation. No order effects; risk: participant variables."),
+("qa02", "Psychology", "RM 1", "guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#designs", "Repeated measures design (guide glossary)", "\"A research design in which the same group of participants is measured or tested more than once under different conditions.\" Fewer people needed; risk: order effects."),
+("qa03", "Psychology", "RM 1", "guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#designs", "Matched pairs design", "People are pre-tested on a trait, paired with someone similar, and one of each pair goes into each condition."),
+("qa04", "Psychology", "RM 1", "guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#designs", "Order effects: two kinds", "Practice effect (better the second time) and fatigue or boredom effect (worse the second time). Only in repeated measures."),
+("qa05", "Psychology", "RM 1", "guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#designs", "Counterbalancing", "Half do condition A then B, half do B then A, so order effects hit both conditions equally (AB/BA)."),
+("qa06", "Psychology", "RM 3", "guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#relval", "Reliability (guide glossary)", "\"The consistency of measurement tools or methods.\" A reliable measure gives consistent results when used again under similar conditions."),
+("qa07", "Psychology", "RM 3", "guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#relval", "Test-retest vs inter-rater reliability", "Test-retest: same people, same test, two times. Inter-rater: two or more people score the same thing separately and agree."),
+("qa08", "Psychology", "RM 3", "guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#relval", "The five kinds of validity in the guide (p27)", "Internal, external, content, face, construct."),
+("qa09", "Psychology", "RM 3", "guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#relval", "Internal vs external validity", "Internal: did the IV really cause the change in the DV? External: can the results be generalised to other people and settings?"),
+("qa10", "Psychology", "RM 3", "guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#relval", "Construct validity", "Whether a measure really captures the idea (construct) it is meant to, e.g. owning an iPhone is a poor measure of pro-American attitudes."),
+("qa11", "Psychology", "RM 3", "guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#threats", "Participant bias (guide glossary)", "Participants alter their behaviour or responses because they know they are observed or expect something about the study's purpose."),
+("qa12", "Psychology", "RM 3", "guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#threats", "Four demand characteristics (class deck)", "Expectancy effect, screw-you effect, social desirability effect, reactivity."),
+("qa13", "Psychology", "RM 3", "guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#threats", "Researcher bias (guide glossary)", "The researcher's personal values or expectations influence the design, data collection or interpretation of findings."),
+("qa14", "Psychology", "RM 3", "guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#threats", "Double-blind design", "Neither the participants nor the researchers collecting the data know who is in which group. Reduces participant and researcher bias."),
+("qa15", "Psychology", "RM 3", "guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#external", "Population vs ecological validity", "Population: is the sample like the population (who)? Ecological: are the setting and task like real life (where and how)?"),
+("qa16", "Psychology", "RM 3", "guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#external", "Transferability, credibility, reflexivity", "Transferability: findings apply to other settings (qualitative). Credibility: a true picture of participants' views. Reflexivity: the researcher's awareness of their own biases."),
+("qa17", "Psychology", "COG 2", "guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#classical", "Classical conditioning: the five terms", "NS (neutral stimulus), UCS (unconditioned stimulus), UCR (unconditioned response), CS (conditioned stimulus), CR (conditioned response)."),
+("qa18", "Psychology", "COG 2", "guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#classical", "Pavlov: the five terms", "UCS food; UCR salivating at food; NS metronome before pairing; CS metronome after pairing; CR salivating at the metronome alone."),
+("qa19", "Psychology", "COG 2", "guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#classical", "Extinction and spontaneous recovery", "Extinction: the CS keeps coming without the UCS, so the CR fades. Spontaneous recovery: after a rest the CR returns, usually weaker."),
+("qa20", "Psychology", "COG 2", "guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#classical", "Garcia (1955) taste aversion", "Rats drank saccharin during radiation (sickness); after one pairing they avoided saccharin for over a month. UCS radiation, CS saccharin taste."),
+("qa21", "Psychology", "COG 7", "guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#operant", "Law of effect (Thorndike)", "Behaviour followed by a pleasant consequence is more likely to be repeated; followed by an unpleasant one, less likely."),
+("qa22", "Psychology", "COG 7", "guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#operant", "Positive vs negative (operant)", "Positive = something is added; negative = something is taken away. Reinforcement increases behaviour; punishment decreases it."),
+("qa23", "Psychology", "COG 7", "guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#operant", "Negative reinforcement example", "The seatbelt beep stops when you buckle up, so you buckle up more: something unpleasant is removed, behaviour increases."),
+("qa24", "Psychology", "COG 7", "guides/2026-11-14-psychology-hl-evaluating-research-conditioning.html#operant", "Most resistant schedule of reinforcement", "Variable ratio (unpredictable number of behaviours, e.g. gambling). Continuous reinforcement extinguishes fastest."),
+("bc01", "Biology", "B1.1.1", "guides/2026-11-15-biology-hl-b1.1-carbohydrates-lipids.html#b11a", "How many covalent bonds does a carbon atom form?", "Four (single bonds, or single plus double; a double bond counts as two). It bonds to C and other non-metals, making chains, branched chains and rings."),
+("bc02", "Biology", "B1.1.2", "guides/2026-11-15-biology-hl-b1.1-carbohydrates-lipids.html#b11a", "Condensation reaction", "Joins two molecules with a new covalent bond and releases one water molecule. n monomers in a chain release n − 1 waters."),
+("bc03", "Biology", "B1.1.3", "guides/2026-11-15-biology-hl-b1.1-carbohydrates-lipids.html#b11a", "Hydrolysis", "Uses water to break a covalent bond, splitting a polymer into monomers (digestion). The water gives -H to one monomer and -OH to the other."),
+("bc04", "Biology", "B1.1.2", "guides/2026-11-15-biology-hl-b1.1-carbohydrates-lipids.html#b11a", "Bond made between two sugars / two amino acids / glycerol and a fatty acid", "Glycosidic bond / peptide bond / ester bond."),
+("bc05", "Biology", "B1.1.4", "guides/2026-11-15-biology-hl-b1.1-carbohydrates-lipids.html#b11a", "Pentose or hexose: how to tell from a ring diagram", "Count every carbon (ring and side chains): 5 = pentose (C5H10O5), 6 = hexose (C6H12O6). Do not count ring corners."),
+("bc06", "Biology", "B1.1.4", "guides/2026-11-15-biology-hl-b1.1-carbohydrates-lipids.html#b11a", "α-glucose versus β-glucose", "They differ only at carbon 1: the -OH is below the ring in α-glucose, above it in β-glucose."),
+("bc07", "Biology", "B1.1.4", "guides/2026-11-15-biology-hl-b1.1-carbohydrates-lipids.html#b11a", "Four properties of glucose and their uses", "Soluble: transported in blood plasma. Easy to transport. Chemically stable: can be stored. Much energy when oxidised: fuel for respiration."),
+("bc08", "Biology", "B1.1.2", "guides/2026-11-15-biology-hl-b1.1-carbohydrates-lipids.html#b11a", "Formula of maltose (two glucose joined)", "C12H22O11 (2 × C6H12O6 minus one H2O)."),
+("bc09", "Biology", "B1.1.5", "guides/2026-11-15-biology-hl-b1.1-carbohydrates-lipids.html#b11b", "Amylose, amylopectin, glycogen: structure", "All α-glucose. Amylose: 1,4 bonds only, unbranched, coiled. Amylopectin: 1,4 plus some 1,6 bonds, branched. Glycogen: like amylopectin but more branched."),
+("bc10", "Biology", "B1.1.5", "guides/2026-11-15-biology-hl-b1.1-carbohydrates-lipids.html#b11b", "Why starch and glycogen are good energy stores", "Coiled and branched, so compact. Large, so insoluble: no osmotic effect. Glucose easily added or removed at the ends by condensation and hydrolysis."),
+("bc11", "Biology", "B1.1.6", "guides/2026-11-15-biology-hl-b1.1-carbohydrates-lipids.html#b11b", "Cellulose structure and function", "β-glucose, each flipped relative to its neighbour, so straight chains; parallel chains held by hydrogen bonds in bundles (microfibrils): high tensile strength for cell walls."),
+("bc12", "Biology", "B1.1.7", "guides/2026-11-15-biology-hl-b1.1-carbohydrates-lipids.html#b11b", "Glycoprotein and cell–cell recognition", "A membrane protein with a carbohydrate chain on the outside. Cells recognise the chain (self or foreign). Example: ABO blood group antigens."),
+("bc13", "Biology", "B1.1.8", "guides/2026-11-15-biology-hl-b1.1-carbohydrates-lipids.html#b11c", "Lipid (definition)", "Substances in living things that dissolve in non-polar solvents but only sparingly in water: fats, oils, waxes, steroids."),
+("bc14", "Biology", "B1.1.9", "guides/2026-11-15-biology-hl-b1.1-carbohydrates-lipids.html#b11c", "Triglyceride versus phospholipid", "Triglyceride: glycerol + 3 fatty acids (3 ester bonds, 3 waters). Phospholipid: glycerol + 2 fatty acids + 1 phosphate group."),
+("bc15", "Biology", "B1.1.10", "guides/2026-11-15-biology-hl-b1.1-carbohydrates-lipids.html#b11c", "Saturated, monounsaturated, polyunsaturated", "No C=C / exactly one C=C / two or more C=C double bonds in the fatty acid chain."),
+("bc16", "Biology", "B1.1.10", "guides/2026-11-15-biology-hl-b1.1-carbohydrates-lipids.html#b11c", "Why unsaturated fats have lower melting points", "C=C bonds put kinks in the chains, so they cannot pack closely: less energy needed to separate them."),
+("bc17", "Biology", "B1.1.10", "guides/2026-11-15-biology-hl-b1.1-carbohydrates-lipids.html#b11c", "Oils in plants, fats in endotherms", "Plants store oils (unsaturated, liquid even when cold). Birds and mammals store fats (more saturated), soft at their warm body temperature."),
+("bc18", "Biology", "B1.1.11", "guides/2026-11-15-biology-hl-b1.1-carbohydrates-lipids.html#b11d", "Why triglycerides suit long-term energy storage", "About twice the energy per gram of carbohydrates (about 38 versus 17 kJ/g), so less mass; insoluble, so no osmotic effect."),
+("bc19", "Biology", "B1.1.11", "guides/2026-11-15-biology-hl-b1.1-carbohydrates-lipids.html#b11d", "Adipose tissue as an insulator", "Fat conducts heat poorly, so a layer under the skin reduces heat loss; thicker in endotherms in colder habitats (seal blubber)."),
+("bc20", "Biology", "B1.1.12", "guides/2026-11-15-biology-hl-b1.1-carbohydrates-lipids.html#b11d", "Amphipathic", "Having a hydrophilic part and a hydrophobic part in one molecule, like a phospholipid (phosphate head, fatty acid tails)."),
+("bc21", "Biology", "B1.1.12", "guides/2026-11-15-biology-hl-b1.1-carbohydrates-lipids.html#b11d", "How a phospholipid bilayer forms in water", "Hydrophilic heads face the water on both sides; hydrophobic tails point inwards towards each other: a double layer with a hydrophobic core."),
+("bc22", "Biology", "B1.1.13", "guides/2026-11-15-biology-hl-b1.1-carbohydrates-lipids.html#b11d", "How to recognise a steroid in a diagram", "Four fused rings: three of six carbons and one of five. Examples: oestradiol, testosterone."),
+("bc23", "Biology", "B1.1.13", "guides/2026-11-15-biology-hl-b1.1-carbohydrates-lipids.html#b11d", "Why steroids pass through the bilayer", "They are non-polar (hydrophobic), so they dissolve in the hydrophobic core and diffuse straight through, without a protein channel."),
+("qb01", "Psychology", "Paper 1 exam technique", "guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#technique", "Paper 1 Section A: marks and minutes per question (EX01)", "Two 4-mark questions, about 10 minutes and 200 words each."),
+("qb02", "Psychology", "Paper 1 exam technique", "guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#technique", "Section A markband, 3-4 marks (guide p45)", "\"The response demonstrates detailed knowledge relevant to the question.\" \"The example is relevant and explained.\""),
+("qb03", "Psychology", "Paper 1 exam technique", "guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#technique", "Section A markband, 1-2 marks (guide p45)", "\"The response demonstrates limited knowledge relevant to the question.\" \"The example is relevant but is not explained.\""),
+("qb04", "Psychology", "Paper 1 exam technique", "guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#technique", "PEEL (4-marker) and its longest part", "Point, Evidence, Explain, Link. Explain is the longest (80-90 of about 200 words)."),
+("qb05", "Psychology", "Paper 1 exam technique", "guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#slt", "IEA (6-marker)", "Identify a principle, Explain how it works, Apply it to the situation in the question; two or three times."),
+("qb06", "Psychology", "Social learning theory", "guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#slt", "Official statement: social learning theory (Table 3.3, p26)", "\"Social learning theory: The application of social learning theory to explain and change behaviour.\" Sociocultural approach."),
+("qb07", "Psychology", "Social learning theory", "guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#slt", "Social learning theory: core claim (class, LC09)", "\"Humans learn not only through personal experience but also by observing models.\""),
+("qb08", "Psychology", "Social learning theory", "guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#slt", "Vicarious reinforcement", "Seeing someone else rewarded for a behaviour makes you more likely to copy it, without being rewarded yourself."),
+("qb09", "Psychology", "Social learning theory", "guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#slt", "The four processes of observational learning", "Attention, retention, reproduction, motivation."),
+("qb10", "Psychology", "Social learning theory", "guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#slt", "Self-efficacy (class definition)", "The expectation of personal success in a task, based on the view that one is in control of one's actions and abilities."),
+("qb11", "Psychology", "Social learning theory", "guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#slt", "Four sources of self-efficacy", "Mastery experiences, vicarious experiences, social persuasion, emotional and physical states."),
+("qb12", "Psychology", "Social learning theory", "guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#slt", "Bobo doll study, Bandura, Ross and Ross (1961): what it shows", "Children copied an aggressive adult model's acts (observational learning); boys copied a male model more (identification). The model was not rewarded, so it does not show vicarious reinforcement."),
+("qb13", "Psychology", "Cognitive models", "guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#mem", "Official statement: cognitive models (Table 4.12, p33)", "\"Cognitive models: The value of one or more cognitive models in understanding one or more cognitive processes.\""),
+("qb14", "Psychology", "Cognitive models", "guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#mem", "Model (guide glossary, p66)", "\"A theoretical representation or framework used to explain and understand complex processes in order to test hypotheses and make predictions.\""),
+("qb15", "Psychology", "Cognitive models", "guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#mem", "Multi-store model: the three stores and how information moves", "Sensory memory, short-term memory, long-term memory. Attention moves it to STM; rehearsal moves it to LTM; retrieval brings it back."),
+("qb16", "Psychology", "Cognitive models", "guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#mem", "STM capacity and duration (class)", "7 plus or minus 2 items (Miller, 1956), newer research about 4 chunks; about 15-30 seconds without rehearsal."),
+("qb17", "Psychology", "Cognitive models", "guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#mem", "Peterson and Peterson (1959): what it shows", "Counting backwards stopped rehearsal; recall of trigrams fell from about 80% at 3 s to under 10% at 18 s: STM has a short duration."),
+("qb18", "Psychology", "Cognitive models", "guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#mem", "Levels of processing (Craik and Lockhart, 1972)", "Memory depends on depth of processing: shallow (structural, phonetic) or deep (semantic). Deeper gives better memory."),
+("qb19", "Psychology", "Cognitive models", "guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#mem", "Value of cognitive models (specimen markscheme)", "Tested in empirical studies; different studies test different parts; the constructs must be well operationalised."),
+("qb20", "Psychology", "Data analysis", "guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#data", "Official statement: descriptive statistics (p27, HL)", "\"Descriptive statistics: Analyse and interpret results of typical measures of central tendency (mean, median, mode) and measures of dispersion (range, standard deviation, semi-interquartile range).\""),
+("qb21", "Psychology", "Data analysis", "guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#data", "Levels of measurement (NOIR, class)", "Nominal: categories, no order. Ordinal: ordered, gaps not equal. Interval: equal gaps, no true zero. Ratio: equal gaps and a true zero."),
+("qb22", "Psychology", "Data analysis", "guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#data", "Which average for which data (HL01)", "Nominal: mode. Ordinal: median. Interval or ratio: mean if symmetrical, median if skewed or with outliers."),
+("qb23", "Psychology", "Data analysis", "guides/2026-11-16-psychology-hl-slt-memory-exam-technique.html#data", "Positive skew (guide glossary)", "A longer tail on the right; a few high values pull the mean above the median."),
+("bp01", "Biology", "B1.2", "guides/2026-11-18-biology-hl-b1.2-c1.1.html#b12", "Draw the generalised amino acid: what four things are bonded to the alpha carbon?", "An amine group (−NH<sub>2</sub>), a carboxyl group (−COOH), a hydrogen atom and an R-group."),
+("bp02", "Biology", "B1.2", "guides/2026-11-18-biology-hl-b1.2-c1.1.html#b12", "Word equation for joining two amino acids", "amino acid + amino acid → dipeptide + water (a condensation reaction forming a peptide bond)."),
+("bp03", "Biology", "B1.2", "guides/2026-11-18-biology-hl-b1.2-c1.1.html#b12", "A chain of n amino acids has how many peptide bonds?", "n − 1 (and n − 1 water molecules were released when it was made)."),
+("bp04", "Biology", "B1.2", "guides/2026-11-18-biology-hl-b1.2-c1.1.html#b12", "Essential vs non-essential amino acids", "Essential: cannot be synthesised by the body, must come from food. Non-essential: can be made from other amino acids."),
+("bp05", "Biology", "B1.2", "guides/2026-11-18-biology-hl-b1.2-c1.1.html#b12", "Number of possible peptide chains of n amino acids", "20<sup>n</sup>, because each position can be any of the 20 amino acids."),
+("bp06", "Biology", "B1.2", "guides/2026-11-18-biology-hl-b1.2-c1.1.html#b12", "Denaturation: what breaks and what does not?", "Bonds between R-groups break (heat or pH), so the 3D shape changes and function is lost. Peptide bonds do not break."),
+("bp07", "Biology", "B1.2", "guides/2026-11-18-biology-hl-b1.2-c1.1.html#b12hl", "(HL) Hydrophilic R-groups are either ...", "Polar or charged; charged ones are acidic (negative) or basic (positive). Hydrophobic R-groups are non-polar."),
+("bp08", "Biology", "B1.2", "guides/2026-11-18-biology-hl-b1.2-c1.1.html#b12hl", "(HL) Secondary structure: which bonds, between which groups?", "Hydrogen bonds between C=O of one amino acid and N−H of another, at regular positions in the backbone: alpha helix and beta-pleated sheet."),
+("bp09", "Biology", "B1.2", "guides/2026-11-18-biology-hl-b1.2-c1.1.html#b12hl", "(HL) The four bonds or interactions of tertiary structure", "Hydrogen bonds, ionic bonds, disulfide covalent bonds (between two cysteines) and hydrophobic interactions, all between R-groups."),
+("bp10", "Biology", "B1.2", "guides/2026-11-18-biology-hl-b1.2-c1.1.html#b12hl", "(HL) Where are hydrophobic amino acids in a soluble globular protein? In an integral protein?", "Clustered in the core, away from water. In an integral protein: in the region that crosses the membrane."),
+("bp11", "Biology", "B1.2", "guides/2026-11-18-biology-hl-b1.2-c1.1.html#b12hl", "(HL) Non-conjugated vs conjugated quaternary structure, with examples", "Non-conjugated: only polypeptides (insulin, 2 chains; collagen, 3 chains). Conjugated: also a non-polypeptide part (haemoglobin, 4 chains with haem groups)."),
+("bp12", "Biology", "B1.2", "guides/2026-11-18-biology-hl-b1.2-c1.1.html#b12hl", "(HL) Globular vs fibrous, with the IB examples", "Globular: rounded, soluble, precise shape (insulin, a hormone). Fibrous: long, insoluble, strong (collagen, triple helix, in skin and tendons)."),
+("bp13", "Biology", "C1.1", "guides/2026-11-18-biology-hl-b1.2-c1.1.html#c11", "Anabolism vs catabolism", "Anabolism builds macromolecules by condensation and needs energy (protein synthesis, glycogen formation, photosynthesis). Catabolism breaks them down by hydrolysis or oxidation and releases energy (digestion, respiration)."),
+("bp14", "Biology", "C1.1", "guides/2026-11-18-biology-hl-b1.2-c1.1.html#c11", "Induced fit", "When the substrate binds, both the substrate and the active site change shape to fit more tightly, straining bonds in the substrate."),
+("bp15", "Biology", "C1.1", "guides/2026-11-18-biology-hl-b1.2-c1.1.html#c11", "Why does the rate level off at high substrate concentration?", "All the active sites are occupied at any moment, so the amount of enzyme limits the rate."),
+("bp16", "Biology", "C1.1", "guides/2026-11-18-biology-hl-b1.2-c1.1.html#c11", "Why does the rate fall above the optimum temperature?", "Bonds holding the enzyme's 3D shape break, the active site changes shape, the substrate no longer fits: the enzyme is denatured."),
+("bp17", "Biology", "C1.1", "guides/2026-11-18-biology-hl-b1.2-c1.1.html#c11", "Rate of an enzyme reaction (formula and a unit)", "Rate = amount of product made (or substrate used) ÷ time, for example cm<sup>3</sup> s<sup>−1</sup>; or rate = 1 ÷ time to finish."),
+("bp18", "Biology", "C1.1", "guides/2026-11-18-biology-hl-b1.2-c1.1.html#c11", "What do enzymes do to activation energy and to the overall energy change?", "They lower the activation energy; the overall energy change stays the same."),
+("bp19", "Biology", "C1.1", "guides/2026-11-18-biology-hl-b1.2-c1.1.html#c11hl", "(HL) Intracellular and extracellular examples", "Intracellular: glycolysis (cytoplasm), Krebs cycle (mitochondria). Extracellular: digestion in the gut."),
+("bp20", "Biology", "C1.1", "guides/2026-11-18-biology-hl-b1.2-c1.1.html#c11hl", "(HL) Linear and cyclical pathways, with examples", "Linear: glycolysis. Cyclical (last step regenerates the first molecule): Krebs cycle and Calvin cycle."),
+("bp21", "Biology", "C1.1", "guides/2026-11-18-biology-hl-b1.2-c1.1.html#c11hl", "(HL) Competitive vs non-competitive inhibition", "Competitive: binds the active site reversibly, overcome by more substrate (statins). Non-competitive: binds an allosteric site, changes the active site, more substrate does not help."),
+("bp22", "Biology", "C1.1", "guides/2026-11-18-biology-hl-b1.2-c1.1.html#c11hl", "(HL) Feedback inhibition example", "Isoleucine (end product) binds the allosteric site of threonine deaminase, the first enzyme of its own pathway."),
+("bp23", "Biology", "C1.1", "guides/2026-11-18-biology-hl-b1.2-c1.1.html#c11hl", "(HL) Mechanism-based inhibition example and resistance", "Penicillin binds transpeptidase's active site irreversibly (covalent bond), so bacterial cell walls are weak. Resistance: a changed transpeptidase active site that penicillin cannot bind."),
+("nh01", "Business", "2.1", "guides/2026-11-19-business-sl-unit2-hrm.html#s21", "Human resource management", "Managing the workforce so the organisation achieves its objectives: planning, hiring, training, pay, welfare and staff leaving."),
+("nh02", "Business", "2.1", "guides/2026-11-19-business-sl-unit2-hrm.html#s21", "Human resource (workforce) planning", "Forecasting the number and type (skills) of workers needed, compared with those the business has, and planning how to fill the gap."),
+("nh03", "Business", "2.1", "guides/2026-11-19-business-sl-unit2-hrm.html#s21", "The five external HR planning factors the IB names", "Demographic change, change in labour mobility, immigration, flexi-time, gig economy."),
+("nh04", "Business", "2.1", "guides/2026-11-19-business-sl-unit2-hrm.html#s21", "Occupational vs geographical labour mobility", "Occupational: moving between jobs or careers. Geographical: moving between places for work."),
+("nh05", "Business", "2.1", "guides/2026-11-19-business-sl-unit2-hrm.html#s21", "Gig economy", "Short-term, flexible jobs paid per task, usually done by self-employed workers, not employees."),
+("nh06", "Business", "2.1", "guides/2026-11-19-business-sl-unit2-hrm.html#s21", "Four reasons for resistance to change", "Self-interest; misunderstanding and mistrust; a different view of the situation; low tolerance of change."),
+("nh07", "Business", "2.1", "guides/2026-11-19-business-sl-unit2-hrm.html#s21", "Six strategies for reducing resistance to change", "Education and communication; participation and involvement; facilitation and support; negotiation and agreement; manipulation and co-option; coercion."),
+("nh08", "Business", "2.2", "guides/2026-11-19-business-sl-unit2-hrm.html#s22", "Span of control", "The number of people who report directly to one manager."),
+("nh09", "Business", "2.2", "guides/2026-11-19-business-sl-unit2-hrm.html#s22", "Chain of command", "The line of authority through which instructions pass down and reports pass up."),
+("nh10", "Business", "2.2", "guides/2026-11-19-business-sl-unit2-hrm.html#s22", "Delayering", "Removing one or more levels of the hierarchy, usually middle managers: wider spans, shorter chain of command."),
+("nh11", "Business", "2.2", "guides/2026-11-19-business-sl-unit2-hrm.html#s22", "Centralisation vs decentralisation", "Centralisation: most decisions made by a few at the top. Decentralisation: authority passed down to lower levels or local branches."),
+("nh12", "Business", "2.2", "guides/2026-11-19-business-sl-unit2-hrm.html#s22", "Matrix structure", "Staff from different departments work in project teams, so each reports to two managers: department manager and project manager."),
+("nh13", "Business", "2.2", "guides/2026-11-19-business-sl-unit2-hrm.html#s22", "The organisation charts in the IB guide", "Flat (horizontal), tall (vertical), and by product, by function or by region."),
+("nh14", "Business", "2.3", "guides/2026-11-19-business-sl-unit2-hrm.html#s23", "Management vs leadership", "Management: getting things done through people and resources (plan, organise, control); tasks and targets. Leadership: setting a direction and inspiring people to follow it."),
+("nh15", "Business", "2.3", "guides/2026-11-19-business-sl-unit2-hrm.html#s23", "The five IB leadership styles", "Autocratic, paternalistic, democratic, laissez-faire, situational."),
+("nh16", "Business", "2.3", "guides/2026-11-19-business-sl-unit2-hrm.html#s23", "Paternalistic vs autocratic", "Both decide alone; the paternalistic leader acts in what they believe is the staff's best interest and cares for their welfare."),
+("nh17", "Business", "2.3", "guides/2026-11-19-business-sl-unit2-hrm.html#s23", "Situational leadership", "The leader changes style to fit the situation: the task, the staff's skills and the time available."),
+("nh18", "Business", "2.4", "guides/2026-11-19-business-sl-unit2-hrm.html#s24", "Taylor's scientific management", "Workers are motivated mainly by money: find the most efficient way, train, supervise closely, pay by output (piece rate)."),
+("nh19", "Business", "2.4", "guides/2026-11-19-business-sl-unit2-hrm.html#s24", "Maslow's five needs, bottom to top", "Physiological, safety, social (love and belonging), esteem, self-actualisation."),
+("nh20", "Business", "2.4", "guides/2026-11-19-business-sl-unit2-hrm.html#s24", "Herzberg: hygiene factors vs motivators", "Hygiene (pay, conditions, security, supervision, policy, colleagues) only prevent dissatisfaction. Motivators (achievement, recognition, the work itself, responsibility, promotion, growth) motivate. IB name: motivation-hygiene theory."),
+("nh21", "Business", "2.4", "guides/2026-11-19-business-sl-unit2-hrm.html#s24", "The seven financial rewards", "Salary; wages (time and piece rates); commission; performance-related pay; profit-related pay; employee share ownership schemes; fringe payments."),
+("nh22", "Business", "2.4", "guides/2026-11-19-business-sl-unit2-hrm.html#s24", "Job enrichment vs job enlargement", "Enrichment: harder tasks and more responsibility. Enlargement: more tasks at the same level."),
+("nh23", "Business", "2.4", "guides/2026-11-19-business-sl-unit2-hrm.html#s24", "The six non-financial rewards", "Job enrichment, job rotation, job enlargement, empowerment, purpose (the opportunity to make a difference), teamwork."),
+("nh24", "Business", "2.4", "guides/2026-11-19-business-sl-unit2-hrm.html#s24", "Three types of training", "Induction (new staff), on the job (at work, from colleagues), off the job (courses away from work)."),
+("ep01", "English", "English A HL: Persepolis visual analysis", "guides/2026-11-20-english-a-hl-persepolis-water-cell.html#shots", "Extreme close-up (ECU): what it shows and its usual effect", "One tiny detail fills the frame (an eye, a scar). Intensity: the reader must look at that one thing."),
+("ep02", "English", "English A HL: Persepolis visual analysis", "guides/2026-11-20-english-a-hl-persepolis-water-cell.html#shots", "Close-up (CU): what it shows and its usual effect", "A face or hands; the head fills most of the frame. Intimacy or tension: we feel close and read the emotion."),
+("ep03", "English", "English A HL: Persepolis visual analysis", "guides/2026-11-20-english-a-hl-persepolis-water-cell.html#shots", "Medium shot (MS): what it shows and its usual effect", "Waist or chest up: face and body language. Natural, like a conversation."),
+("ep04", "English", "English A HL: Persepolis visual analysis", "guides/2026-11-20-english-a-hl-persepolis-water-cell.html#shots", "Long shot (LS): what it shows and its usual effect", "The whole body inside its surroundings. Context: we see where the character is."),
+("ep05", "English", "English A HL: Persepolis visual analysis", "guides/2026-11-20-english-a-hl-persepolis-water-cell.html#shots", "Extreme long shot (ELS): what it shows and its usual effect", "A tiny figure in a huge setting. Scale, isolation or awe."),
+("ep06", "English", "English A HL: Persepolis visual analysis", "guides/2026-11-20-english-a-hl-persepolis-water-cell.html#shots", "High angle vs low angle: usual effects", "High (camera above, looking down): subject small, weak, vulnerable. Low (camera below, looking up): subject powerful, threatening, heroic."),
+("ep07", "English", "English A HL: Persepolis visual analysis", "guides/2026-11-20-english-a-hl-persepolis-water-cell.html#shots", "Shot type vs camera angle", "Shot type = how much we see (how close). Angle = where we look from (how high). Two separate choices that can combine, e.g. a low-angle close-up."),
+("ep08", "English", "English A HL: Persepolis visual analysis", "guides/2026-11-20-english-a-hl-persepolis-water-cell.html#pace", "Gutter", "The gap between two panels. Time passes there and the reader imagines what happens in it."),
+("ep09", "English", "English A HL: Persepolis visual analysis", "guides/2026-11-20-english-a-hl-persepolis-water-cell.html#pace", "Closure (McCloud)", "Observing the parts but perceiving the whole: the reader joins separate panels into one story, filling in what is not drawn."),
+("ep10", "English", "English A HL: Persepolis visual analysis", "guides/2026-11-20-english-a-hl-persepolis-water-cell.html#pace", "The six panel transitions (class, McCloud)", "Moment-to-moment, action-to-action, subject-to-subject, scene-to-scene, aspect-to-aspect, non-sequitur."),
+("ep11", "English", "English A HL: Persepolis visual analysis", "guides/2026-11-20-english-a-hl-persepolis-water-cell.html#pace", "Panel size and pace", "A bigger or wider panel makes a moment feel longer and more important; small panels feel quick. A silent panel is a pause."),
+("ep12", "English", "English A HL: Persepolis visual analysis", "guides/2026-11-20-english-a-hl-persepolis-water-cell.html#words", "Caption vs speech balloon", "Speech balloon: what a character says. Caption: narration. In Persepolis captions are the adult Marjane looking back; pictures show the child Marji."),
+("ep13", "English", "English A HL: Persepolis visual analysis", "guides/2026-11-20-english-a-hl-persepolis-water-cell.html#words", "The seven word-picture combinations (class, McCloud)", "Word-specific, picture-specific, duo-specific, additive, parallel, montage, interdependent."),
+("ep14", "English", "English A HL: Persepolis visual analysis", "guides/2026-11-20-english-a-hl-persepolis-water-cell.html#words", "Interdependent vs duo-specific", "Duo-specific: words and picture say the same thing. Interdependent: together they say something neither could say alone."),
+("ep15", "English", "English A HL: Persepolis visual analysis", "guides/2026-11-20-english-a-hl-persepolis-water-cell.html#words", "Chiaroscuro", "Strong contrast between light and dark areas (Italian for light-dark). Analyse it in context, e.g. white figure isolated by black."),
+("ep16", "English", "English A HL: Persepolis visual analysis", "guides/2026-11-20-english-a-hl-persepolis-water-cell.html#chain", "The analysis chain", "Spot it, explain it, effect on the reader, purpose."),
+("ep17", "English", "English A HL: Persepolis visual analysis", "guides/2026-11-20-english-a-hl-persepolis-water-cell.html#chain", "HL Paper 1: format", "Two unseen non-literary texts from different text types, each with a guiding question; an analysis of each; 2 h 15; 40 marks (20 per text); 35%."),
+("ep18", "English", "English A HL: Persepolis visual analysis", "guides/2026-11-20-english-a-hl-persepolis-water-cell.html#chain", "Paper 1 criteria (5 marks each per text)", "A Understanding and interpretation; B Analysis and evaluation; C Focus and organisation; D Language."),
+("ep19", "English", "English A HL: Persepolis visual analysis", "guides/2026-11-20-english-a-hl-persepolis-water-cell.html#chain", "Why Persepolis is not a Paper 1 text", "The IB guide lists the graphic novel as a literary form; Paper 1 texts are non-literary (e.g. cartoons, adverts)."),
+("ep20", "English", "English A HL: Persepolis visual analysis", "guides/2026-11-20-english-a-hl-persepolis-water-cell.html#part4", "Part 4 paragraph: four parts and marks", "Topic sentence 2, evidence 2, micro-analysis 4, synthesis 2 (link to representation or perspective)."),
+("ep21", "English", "English A HL: Persepolis visual analysis", "guides/2026-11-20-english-a-hl-persepolis-water-cell.html#parts", "Part 2 rows: the three-mark pattern", "Name the visual feature (1), link it to meaning (1), effect on the reader (1)."),
+("ep22", "English", "French B SL: Paper 1 writing", "guides/2026-11-20-english-a-hl-persepolis-water-cell.html#french", "French B Paper 1 SL criteria", "A Language 12, B Message 12, C Conceptual understanding 6 (30 marks); 250 to 400 words."),
+("ep23", "English", "French B SL: Paper 1 writing", "guides/2026-11-20-english-a-hl-persepolis-water-cell.html#french", "French screen-time task: which text type is wrong?", "Lettre de motivation (job or place application): wrong audience and purpose. Use a discours or a blog."),
+("br01", "Biology", "C1.2", "guides/2026-11-22-biology-hl-c1.2-cell-respiration.html#c12sl", "What does ATP stand for, and what kind of molecule is it?", "Adenosine triphosphate; a nucleotide (adenine, ribose, three phosphate groups)."),
+("br02", "Biology", "C1.2", "guides/2026-11-22-biology-hl-c1.2-cell-respiration.html#c12sl", "Three properties that make ATP suitable as the energy currency of the cell", "Releases a small, manageable amount of energy on hydrolysis; soluble, so it moves easily in the cytoplasm; cannot cross the plasma membrane, so the energy stays in the cell."),
+("br03", "Biology", "C1.2", "guides/2026-11-22-biology-hl-c1.2-cell-respiration.html#c12sl", "Three groups of life processes that ATP supplies with energy", "Active transport; anabolism (building macromolecules); movement of the cell or its parts (e.g. chromosomes)."),
+("br04", "Biology", "C1.2", "guides/2026-11-22-biology-hl-c1.2-cell-respiration.html#c12sl", "ATP hydrolysis and synthesis: which releases energy and which needs it?", "ATP + water → ADP + phosphate releases energy; ADP + phosphate → ATP + water needs energy (from respiration)."),
+("br05", "Biology", "C1.2", "guides/2026-11-22-biology-hl-c1.2-cell-respiration.html#c12sl", "Define cell respiration", "The controlled release of energy from organic (carbon) compounds in cells to produce ATP. Main substrates: glucose and fatty acids."),
+("br06", "Biology", "C1.2", "guides/2026-11-22-biology-hl-c1.2-cell-respiration.html#c12sl", "Cell respiration or gas exchange: what is the difference?", "Gas exchange: O<sub>2</sub> and CO<sub>2</sub> moving between organism and surroundings. Cell respiration: chemical reactions in every cell that make ATP."),
+("br07", "Biology", "C1.2", "guides/2026-11-22-biology-hl-c1.2-cell-respiration.html#c12sl", "Word equations: aerobic respiration and anaerobic respiration in humans", "glucose + oxygen → carbon dioxide + water; glucose → lactate."),
+("br08", "Biology", "C1.2", "guides/2026-11-22-biology-hl-c1.2-cell-respiration.html#c12sl", "Aerobic vs anaerobic respiration in humans: oxygen, ATP yield, waste, place", "Aerobic: needs O<sub>2</sub>, large yield (notes: 30 to 38 ATP), CO<sub>2</sub> + water, cytoplasm then mitochondria. Anaerobic: no O<sub>2</sub>, 2 ATP, lactate, cytoplasm only."),
+("br09", "Biology", "C1.2", "guides/2026-11-22-biology-hl-c1.2-cell-respiration.html#rate", "Respirometer: why add KOH or soda lime, and which way does the fluid move?", "It absorbs CO<sub>2</sub>, so the volume change is O<sub>2</sub> used only; the pressure falls and the fluid moves towards the organisms."),
+("br10", "Biology", "C1.2", "guides/2026-11-22-biology-hl-c1.2-cell-respiration.html#rate", "Formula for the volume of oxygen used in a respirometer, and the rate", "Volume = π r<sup>2</sup> d (r = inside radius of the capillary, d = distance moved); rate = volume ÷ time, e.g. mm<sup>3</sup> min<sup>−1</sup>."),
+("br11", "Biology", "C1.2", "guides/2026-11-22-biology-hl-c1.2-cell-respiration.html#c12hl", "(HL) Oxidation and reduction in terms of electrons; what happens to NAD?", "Oxidation = loss of electrons (removing hydrogen = dehydrogenation); reduction = gain. NAD accepts hydrogen and is reduced (reduced NAD, NADH)."),
+("br12", "Biology", "C1.2", "guides/2026-11-22-biology-hl-c1.2-cell-respiration.html#c12hl", "(HL) Four events of glycolysis, and where it happens", "Phosphorylation, lysis, oxidation, ATP formation; in the cytoplasm; each step has its own enzyme."),
+("br13", "Biology", "C1.2", "guides/2026-11-22-biology-hl-c1.2-cell-respiration.html#c12hl", "(HL) Net yield of glycolysis per glucose", "2 ATP (4 made, 2 used), 2 reduced NAD, 2 pyruvate."),
+("br14", "Biology", "C1.2", "guides/2026-11-22-biology-hl-c1.2-cell-respiration.html#c12hl", "(HL) Why do muscle cells make lactate without oxygen?", "Pyruvate is reduced to lactate, which regenerates NAD, so glycolysis can continue (net 2 ATP per glucose)."),
+("br15", "Biology", "C1.2", "guides/2026-11-22-biology-hl-c1.2-cell-respiration.html#c12hl", "(HL) Anaerobic respiration in yeast: products and uses", "Ethanol and carbon dioxide; CO<sub>2</sub> makes bread rise (baking), ethanol is the alcohol (brewing)."),
+("br16", "Biology", "C1.2", "guides/2026-11-22-biology-hl-c1.2-cell-respiration.html#c12hl2", "(HL) What happens in the link reaction, and where?", "In the matrix: pyruvate is decarboxylated (CO<sub>2</sub> removed) and oxidised (NAD reduced); the acetyl group joins coenzyme A to form acetyl CoA."),
+("br17", "Biology", "C1.2", "guides/2026-11-22-biology-hl-c1.2-cell-respiration.html#c12hl2", "(HL) Krebs cycle: the two named intermediates and what happens each turn", "Acetyl (2C) + oxaloacetate (4C) → citrate (6C); two decarboxylations and four oxidations regenerate oxaloacetate; 1 ATP per turn."),
+("br18", "Biology", "C1.2", "guides/2026-11-22-biology-hl-c1.2-cell-respiration.html#c12hl2", "(HL) Krebs cycle products per glucose (your notes)", "4 CO<sub>2</sub>, 6 reduced NAD, 2 reduced FAD, 2 ATP (two turns)."),
+("br19", "Biology", "C1.2", "guides/2026-11-22-biology-hl-c1.2-cell-respiration.html#c12hl2", "(HL) Where does each stage of aerobic respiration happen?", "Glycolysis: cytoplasm. Link reaction and Krebs cycle: matrix. Electron transport chain and chemiosmosis: inner membrane (cristae)."),
+("br20", "Biology", "C1.2", "guides/2026-11-22-biology-hl-c1.2-cell-respiration.html#c12hl2", "(HL) How is the proton gradient made?", "Reduced NAD gives electrons to the chain; as they pass along the carriers, energy is used to pump protons from the matrix into the intermembrane space."),
+("br21", "Biology", "C1.2", "guides/2026-11-22-biology-hl-c1.2-cell-respiration.html#c12hl2", "(HL) Chemiosmosis", "Protons flow back down their gradient from the intermembrane space into the matrix through ATP synthase, which uses the energy to phosphorylate ADP to ATP (oxidative phosphorylation)."),
+("br22", "Biology", "C1.2", "guides/2026-11-22-biology-hl-c1.2-cell-respiration.html#c12hl2", "(HL) Role of oxygen in aerobic respiration", "Terminal electron acceptor: takes electrons from the chain and protons from the matrix, forming water, so electrons keep flowing."),
+("br23", "Biology", "C1.2", "guides/2026-11-22-biology-hl-c1.2-cell-respiration.html#c12hl2", "(HL) Why do lipids give more energy per gram than carbohydrates, and why only aerobically?", "Less oxygen, more hydrogen and carbon to oxidise. Fatty acids enter as acetyl CoA (not glycolysis), so they need the Krebs cycle and oxygen."),
+("pd01", "Psychology", "Paper 3", "guides/2026-11-30-psychology-hl-data-analysis.html#p3", "Paper 3: the four question types and marks", "Q1 interpretation of graphs [3]; Q2 data analysis [6]; Q3 research considerations [6]; Q4 synthesis [15]. HL only, 1 h 45, 30 marks, 30%."),
+("pd02", "Psychology", "Paper 3", "guides/2026-11-30-psychology-hl-data-analysis.html#p3", "Paper 3 Q1 markband (3 marks)", "1: a relevant issue is identified. 2: clearly described. 3: explained. Only the first issue is credited."),
+("pd03", "Psychology", "Paper 3", "guides/2026-11-30-psychology-hl-data-analysis.html#p3", "Paper 3 Q2: top band (5-6)", "The data is analysed in detail, and a conclusion is stated that is explicitly linked to the findings."),
+("pd04", "Psychology", "Paper 3", "guides/2026-11-30-psychology-hl-data-analysis.html#q3", "Paper 3 Q3: the three possible questions", "Discuss how the researcher could improve the credibility of the findings. / Discuss how the researcher could avoid bias. / To what extent are the findings transferable to other populations or contexts?"),
+("pd05", "Psychology", "Paper 3", "guides/2026-11-30-psychology-hl-data-analysis.html#p3", "Paper 3 Q4: what the top band needs", "At least three of the sources plus own knowledge, used effectively; different points of view identified and evaluated; a reasoned conclusion consistent with the arguments."),
+("pd06", "Psychology", "Statistics", "guides/2026-11-30-psychology-hl-data-analysis.html#stats", "Mean, median, mode", "Mean: add all scores, divide by how many. Median: middle score in order. Mode: most frequent score or category."),
+("pd07", "Psychology", "Statistics", "guides/2026-11-30-psychology-hl-data-analysis.html#stats", "Which average? (class rule, HL01)", "Categories: mode. Ordered ratings: median. Numbers, symmetrical: mean. Numbers with skew or outliers: median."),
+("pd08", "Psychology", "Statistics", "guides/2026-11-30-psychology-hl-data-analysis.html#stats", "Range", "Highest score minus lowest score. Uses only two scores, so one outlier can make it huge. (The specimen markscheme also accepts highest - lowest + 1.)"),
+("pd09", "Psychology", "Statistics", "guides/2026-11-30-psychology-hl-data-analysis.html#stats", "Standard deviation (SD)", "Roughly the typical distance of a score from the mean. Small SD: scores close together. Large SD: people differed a lot. Goes with the mean."),
+("pd10", "Psychology", "Statistics", "guides/2026-11-30-psychology-hl-data-analysis.html#stats", "Semi-interquartile range (SIQR)", "(Q3 - Q1) / 2: half the width of the middle 50% of scores. Ignores extreme scores; goes with the median."),
+("pd11", "Psychology", "Statistics", "guides/2026-11-30-psychology-hl-data-analysis.html#stats", "Positive skew (guide glossary)", "A longer tail on the right side. High scores pull the mean above the median. Negative skew: longer tail on the left."),
+("pd12", "Psychology", "Statistics", "guides/2026-11-30-psychology-hl-data-analysis.html#stats", "Box and whisker plot: the five numbers", "Lowest score, Q1 (box left edge), median (line in the box), Q3 (box right edge), highest score."),
+("pd13", "Psychology", "Statistics", "guides/2026-11-30-psychology-hl-data-analysis.html#stats", "What an outlier does", "Pulls the mean and the range towards it; the median and SIQR hardly move. Report the median and say why."),
+("pd14", "Psychology", "Q4", "guides/2026-11-30-psychology-hl-data-analysis.html#q4", "Bidirectional ambiguity (guide glossary)", "When the direction of cause and effect between two variables is unclear."),
+("pd15", "Psychology", "Q4", "guides/2026-11-30-psychology-hl-data-analysis.html#q4", "Correlation coefficient", "A number from -1 to +1 for the strength and direction of a link between two variables. It cannot show cause."),
+("pd16", "Psychology", "Q3", "guides/2026-11-30-psychology-hl-data-analysis.html#q3", "Credibility (guide glossary)", "The degree to which the research gives a true picture of what is being investigated and the results represent the perceptions and opinions of the research participants."),
+("pd17", "Psychology", "Q3", "guides/2026-11-30-psychology-hl-data-analysis.html#q3", "Transferability (guide glossary)", "The extent to which findings from a study can be applied or generalized to other contexts or settings beyond the specific study's participants or conditions."),
+("pd18", "Psychology", "Q3", "guides/2026-11-30-psychology-hl-data-analysis.html#q3", "Strategies to improve credibility (specimen markscheme)", "Member checking; triangulation (other methods, data sources or a second researcher); peer review of methods and themes; being open about biases and conflicts of interest; careful transcripts."),
+("pd19", "Psychology", "Q3", "guides/2026-11-30-psychology-hl-data-analysis.html#q3", "Member checking", "Participants read the researcher's themes and confirm or correct them, so the findings represent what they meant."),
+("pd20", "Psychology", "Q1", "guides/2026-11-30-psychology-hl-data-analysis.html#clancy", "HL05: the three homes of the gap between data and conclusion", "D: in the data (what was measured, who, when). R: in the reader (choices, confirmation bias, anchoring). C: in the context (role, purpose of the source, what was left out)."),
+("pd21", "Psychology", "Drill", "guides/2026-11-30-psychology-hl-data-analysis.html#drill", "Analyse (command term)", "Break down in order to bring out the essential elements or structure."),
+("pd22", "Psychology", "Drill", "guides/2026-11-30-psychology-hl-data-analysis.html#drill", "Explain (command term)", "Give a detailed account including reasons or causes."),
+("pd23", "Psychology", "Drill", "guides/2026-11-30-psychology-hl-data-analysis.html#drill", "Discuss (command term)", "Offer a considered and balanced review that includes a range of arguments, factors or hypotheses. Opinions or conclusions should be presented clearly and supported by appropriate evidence."),
+("pd24", "Psychology", "Drill", "guides/2026-11-30-psychology-hl-data-analysis.html#drill", "To what extent? (command term)", "Consider the merits or otherwise of an argument or concept. Opinions and conclusions should be presented clearly and supported with appropriate evidence and sound argument."),
+("pd25", "Psychology", "Drill", "guides/2026-11-30-psychology-hl-data-analysis.html#drill", "Interpret (command term)", "Use knowledge and understanding to recognize trends and draw conclusions from given information."),
+("fr01", "French", "Cause and consequence", "index.html#d2026-11-12", "Cause → conséquence: the 6 verbs for a POSITIVE effect (17 Sep table)", "faciliter, contribuer à, aider à, favoriser, permettre de, motiver"),
+("fr02", "French", "Cause and consequence", "index.html#d2026-11-12", "Cause → conséquence: the 5 verbs for a NEGATIVE effect (17 Sep table)", "affecter, provoquer, causer, entraîner, être responsable de"),
+("fr03", "French", "Cause and consequence", "index.html#d2026-11-12", "Cause → conséquence: the verbs that work for a positive OR negative effect (17 Sep table)", "faire + verbe, rendre + adjectif, faire naître, engendrer, déclencher, être à l'origine de, être dû à, avoir pour effet de, susciter"),
+("fr04", "French", "Cause and consequence", "index.html#d2026-11-12", "Fill the gap: L'augmentation des salaires a ______ la hausse du pouvoir d'achat des travailleurs. (positive effect)", "a contribué à la hausse. Contribuer is always followed by à (à + le = au)."),
+("fr05", "French", "Cause and consequence", "index.html#d2026-11-12", "Fill the gap: Les études qu'il a faites lui ______ de trouver un emploi dans le proche avenir.", "lui permettront de trouver (or lui ont permis de). Permettre à quelqu'un de + infinitif: lui = à lui."),
+("fr06", "French", "Cause and consequence", "index.html#d2026-11-12", "Fill the gap: L'incendie ______ au vent qui soufflait très fort.", "L'incendie est dû au vent. Être dû à agrees with the subject: dû, due, dus, dues (La fonte des glaces est due au réchauffement de la planète)."),
+("fr07", "French", "Cause and consequence", "index.html#d2026-11-12", "Fill the gap: Mes bons résultats aux examens m'______ très heureux.", "m'ont rendu très heureux. Rendre + adjectif. A girl writes: m'ont rendue très heureuse (agreement with m' placed before the verb)."),
+("fr08", "French", "Cause and consequence", "index.html#d2026-11-12", "Fill the gap: Tes conseils me ______ réfléchir davantage avant de prendre ma décision finale.", "me font réfléchir. Faire + infinitif: the advice makes me think."),
+("fr09", "French", "Cause and consequence", "index.html#d2026-11-12", "Fill the gap: L'annonce de la découverte d'un vaccin ______ beaucoup d'espoir.", "a suscité (or a fait naître) beaucoup d'espoir. Susciter = to give rise to a feeling or reaction."),
+("fr10", "French", "Cause and consequence", "index.html#d2026-11-12", "Fill the gap: Un accident de voiture ______ des embouteillages. (negative effect)", "a provoqué (or a causé, a entraîné) des embouteillages."),
+("fr11", "French", "Cause and consequence", "index.html#d2026-11-12", "Fill the gap: La déforestation ______ des inondations.", "entraîne (or provoque, cause) des inondations. Also possible: est à l'origine des inondations."),
+("fr12", "French", "Cause and consequence", "index.html#d2026-11-12", "Les inondations ont provoqué ______ dégâts dans cette ville: des or d'importants?", "d'importants dégâts. Before a plural adjective placed in front of the noun, des becomes de (d')."),
+("fr13", "French", "Connectors", "index.html#d2026-11-12", "Which cause connectors are followed by a clause (subject + conjugated verb)?", "parce que, comme, puisque, étant donné que, du fait que, sous prétexte que"),
+("fr14", "French", "Connectors", "index.html#d2026-11-12", "Which cause connectors are followed by a noun group (noun or pronoun)?", "grâce à, à cause de, en raison de. Never parce que + noun: use à cause de."),
+("fr15", "French", "Connectors", "index.html#d2026-11-12", "grâce à or à cause de? ______ une application de suivi du temps d'écran, Manon a réussi à réduire sa dépendance aux réseaux sociaux.", "Grâce à: a cause with a good result. À cause de is for a bad result: Plusieurs élèves se sentent mis à l'écart à cause de leur absence sur certains groupes de discussion en ligne."),
+("fr16", "French", "Connectors", "index.html#d2026-11-12", "Where does comme go? ______ elle recevait de moins en moins de likes sur ses publications, Léa a commencé à douter d'elle-même.", "Comme elle recevait... Comme (cause) starts the sentence, before the main clause."),
+("fr17", "French", "Connectors", "index.html#d2026-11-12", "Which connector? ______ tu passes déjà six heures par jour sur les réseaux sociaux, ne me dis pas que tu n'as pas le temps de sortir !", "Puisque: a cause the listener already knows and cannot deny."),
+("fr18", "French", "Connectors", "index.html#d2026-11-12", "Which connector? Il a désactivé toutes ses notifications ______ il voulait mieux se concentrer sur ses examens; en réalité, il passait plus de temps que jamais sur son téléphone.", "sous prétexte qu'il voulait: the reason given is false or only claimed. Que becomes qu' before il."),
+("fr19", "French", "Connectors", "index.html#d2026-11-12", "Which connector? Le gouvernement a annoncé de nouvelles règles concernant l'usage du téléphone au lycée ______ l'augmentation des cas de décrochage scolaire.", "en raison de l'augmentation: a formal, neutral cause + noun group (official announcements, news)."),
+("fr20", "French", "Connectors", "index.html#d2026-11-12", "Exercice 1 (18 Sep): which connectors fill sentences 1, 4 and 5 (adolescents and notifications; cyberharcèlement; algorithmes)?", "1 parce que (ils ont peur de manquer une notification importante); 4 and 5 étant donné que and du fait que, either way round. Each connector is used once."),
+("er01", "English", "English A HL: revision 1", "guides/2026-11-27-english-a-hl-revision-1.html#dump", "Brain dump: how, and why it works", "Blank paper, no notes, 5 minutes; then check with a key in a second colour. Pulling ideas out of memory strengthens them more than rereading; the gaps show what to learn."),
+("er02", "English", "English A HL: revision 1", "guides/2026-11-27-english-a-hl-revision-1.html#panels", "Moment-to-moment vs action-to-action", "Moment-to-moment: almost nothing changes, the same thing a second later (slow motion, suspense). Action-to-action: one subject, the next action."),
+("er03", "English", "English A HL: revision 1", "guides/2026-11-27-english-a-hl-revision-1.html#panels", "Aspect-to-aspect vs scene-to-scene", "Aspect-to-aspect: different parts of one place or mood; time seems to stand still. Scene-to-scene: a jump across time or place; the reader fills a big gap."),
+("er04", "English", "English A HL: revision 1", "guides/2026-11-27-english-a-hl-revision-1.html#panels", "A wide panel with no words: effect on pace", "It slows the reader: there is more to look at and nothing tells you to move on, so the moment feels longer and more important."),
+("er05", "English", "English A HL: revision 1", "guides/2026-11-27-english-a-hl-revision-1.html#mark", "Criterion A, level 5 (official words)", "\"a thorough and perceptive understanding of the literal meaning\"; \"a convincing and insightful interpretation of larger implications and subtleties of the text\"; references \"well-chosen\"."),
+("er06", "English", "English A HL: revision 1", "guides/2026-11-27-english-a-hl-revision-1.html#mark", "Criterion B, levels 1 and 2 (official words)", "Level 1: \"descriptive and/or demonstrates little relevant analysis\". Level 2: \"some appropriate analysis ... but is reliant on description\". Fix: the chain after every detail."),
+("er07", "English", "English A HL: revision 1", "guides/2026-11-27-english-a-hl-revision-1.html#mark", "Criterion B, level 5 (official words)", "\"an insightful and convincing analysis of textual features and/or authorial choices\" and \"a very good evaluation of how such features and/or choices shape meaning\"."),
+("er08", "English", "English A HL: revision 1", "guides/2026-11-27-english-a-hl-revision-1.html#mark", "Criterion C, level 5 (official words)", "\"The presentation of ideas is effectively organized and coherent. The response is well focused.\""),
+("er09", "English", "English A HL: revision 1", "guides/2026-11-27-english-a-hl-revision-1.html#mark", "Criterion D: what \"register\" means in the official guide", "The candidate's \"vocabulary, tone, sentence structure and terminology appropriate to the analysis\". Level 5: language \"very clear, effective, carefully chosen and precise\"."),
+("er10", "English", "English A HL: revision 1", "guides/2026-11-27-english-a-hl-revision-1.html#mark", "Anachronism", "Something placed in the wrong time, such as the modern word \"technology\" in a Stone Age scene. Cartoonists use it to make a joke and a point."),
+("er11", "English", "English A HL: revision 1", "guides/2026-11-27-english-a-hl-revision-1.html#mark", "Ellipsis", "The three dots ... at the end of a sentence: it trails off and leaves the reader to finish the thought."),
+("er12", "English", "English A HL: revision 1", "guides/2026-11-27-english-a-hl-revision-1.html#french", "French: grâce à, à cause de with le and les", "à + le = au, à + les = aux (grâce au club, grâce aux vacances); de + le = du, de + les = des (à cause du téléphone, à cause des écrans)."),
+("er201", "English", "English A HL: revision 2", "guides/2026-12-04-english-a-hl-revision-2.html#habits", "The three most common mark-losing habits", "Describing (B: \"descriptive\"), naming a technique without its effect (B: \"little relevant analysis\"), no claim in the first sentence (C: \"little focus\")."),
+("er202", "English", "English A HL: revision 2", "guides/2026-12-04-english-a-hl-revision-2.html#habits", "Habit \"literal only\": what it costs", "Criterion A: understanding only the literal meaning without interpreting the implications. Fix: name the target and what is implied."),
+("er203", "English", "English A HL: revision 2", "guides/2026-12-04-english-a-hl-revision-2.html#habits", "Habit \"vague evidence\": what it costs", "Criterion A level 1: references \"infrequent or ... rarely appropriate\". Fix: one precise detail or short quote per point."),
+("er204", "English", "English A HL: revision 2", "guides/2026-12-04-english-a-hl-revision-2.html#habits", "How to pick your three habits", "Read your paragraphs sentence by sentence against the Horsey checklist, mark every habit, keep the three that come back most often, and write a rule for each."),
+("er205", "English", "English A HL: revision 2", "guides/2026-12-04-english-a-hl-revision-2.html#info", "Infographic: the usual conventions", "Title, statistics in big type, pictograms and icons, colour coding, a reading path, imperatives, a logo or source."),
+("er206", "English", "English A HL: revision 2", "guides/2026-12-04-english-a-hl-revision-2.html#info", "Icon vs symbol", "Icon: a simple picture of the thing itself (a bus for transport). Symbol: a thing standing for an idea (a heart for love)."),
+("er207", "English", "English A HL: revision 2", "guides/2026-12-04-english-a-hl-revision-2.html#info", "Pictogram", "A row of small icons standing for a number: ten people with three coloured in shows 3 out of 10 at a glance."),
+("er208", "English", "English A HL: revision 2", "guides/2026-12-04-english-a-hl-revision-2.html#info", "Reading path", "Lines, arrows or numbers that lead the eye, so the text is read in the creator's order and ends where the creator wants."),
+("er209", "English", "English A HL: revision 2", "guides/2026-12-04-english-a-hl-revision-2.html#info", "Tricolon of imperatives", "Three short orders in a row (\"Walk it. Bike it. Bus it.\"): rhythmic, easy to remember, a call to action."),
+("er210", "English", "English A HL: revision 2", "guides/2026-12-04-english-a-hl-revision-2.html#info", "Analysing statistics in Paper 1: the trap", "Do not argue with the data or only quote the number: analyse how it is shown (size, colour, position, icons) and its effect."),
+("er211", "English", "English A HL: revision 2", "guides/2026-12-04-english-a-hl-revision-2.html#info", "Official guide: literary or non-literary?", "Non-literary: advertisement, cartoon, infographic (and many more). Literary: graphic novel, novel, poem, play, short story."),
+("er212", "English", "English A HL: revision 2", "guides/2026-12-04-english-a-hl-revision-2.html#after", "HL assessment (official guide)", "Paper 1 guided textual analysis 35%; Paper 2 comparative essay 25%; HL essay (1,200 to 1,500 words) 20%; individual oral (15 min) 20%."),
 ]
 for c in cards: assert "—" not in c[4]+c[5]
 data=[dict(id=a,s=b,t=t,l=l,f=f,b=bk) for a,b,t,l,f,bk in cards]
+# unlock day: a card appears on the first plan day of its guide (tools/links.json); cards with no dated guide are open from the start
+from quizjs import STORAGE_JS
+_links=json.load(open(sys.argv[1]+'/links.json')); _first={}
+for _iso in sorted(_links):
+    for _l in (_links[_iso] if isinstance(_links[_iso],list) else [_links[_iso]]):
+        if not _l.get('review'): _first.setdefault(_l['url'],_iso)
+_extra={'exam-maths-aa-sl.html':'2026-11-10','exam-psychology-hl.html':'2026-11-09','exam-business-management-sl.html':'2026-11-12'}
+for _d in data:
+    _u=_first.get(_d['l'].split('#')[0]) or _extra.get(_d['l'].split('#')[0])
+    _m=re.search(r'#d(\d{4}-\d{2}-\d{2})$',_d['l'])
+    if not _u and _m: _u=_m.group(1)
+    if _u: _d['u']=_u
 # Anki import file: front<TAB>back<TAB>tags
 with open(out+'/flashcards-anki.txt','w') as fh:
     fh.write("#separator:tab\n#html:true\n#tags column:3\n")
@@ -122,45 +386,115 @@ with open(out+'/flashcards-anki.txt','w') as fh:
         fh.write(f"{f}\t{bk}\tIB::{s} {t.replace(' ','_')}\n")
 body='''
 <div class="card" style="margin-top:24px">
-  <p style="margin:0 0 8px"><b>How to use:</b> read the question, answer it out loud or on paper, then press <b>Show answer</b>. Press <b>Again</b> if you were wrong or slow, <b>Got it</b> if you knew it. "Again" cards come back first next time. Your progress is saved on this device.</p>
+  <p style="margin:0 0 8px"><b>How to use:</b> read the question, answer it out loud or on paper, then press <b>Show answer</b>. Press <b>Again</b> if you were wrong or slow, <b>Got it</b> if you knew it. A card you get right comes back after 1 day, then 3, 7 and 14 days; "Again" brings it back today. Each guide's cards appear on its plan day, at most 10 new cards a day. Keys: Space shows the answer, 1 = Again, 2 = Got it.</p>
   <div id="filters" style="display:flex;flex-wrap:wrap;gap:6px"></div>
 </div>
-<div id="stats" style="font-size:.92rem;color:var(--ink-soft);margin:8px 2px"></div>
-<div class="card" id="box" style="min-height:220px">
-  <div style="display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:.85rem;color:var(--ink-soft)"><span id="meta"></span><a id="src" href="#">open the section</a></div>
-  <p id="front" style="font-size:1.25rem;font-weight:600;margin:14px 0"></p>
-  <div id="back" style="display:none;border-top:1px solid var(--rule);padding-top:12px;font-size:1.08rem"></div>
-  <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px">
-    <button id="show" class="fb">Show answer</button>
-    <button id="again" class="fb" style="display:none;background:var(--red-soft);border-color:var(--red)">Again</button>
-    <button id="got" class="fb" style="display:none;background:var(--green-soft);border-color:var(--green)">Got it</button>
+<div id="stats" class="fstats"></div>
+<div class="card fcard" id="box">
+  <div class="fmeta"><span id="meta"></span><a id="src" href="#">open the section</a></div>
+  <p id="front"></p>
+  <div id="back" style="display:none"></div>
+  <div id="empty" style="display:none"></div>
+  <div class="frow" id="row">
+    <button id="show" class="fb fbig" style="grid-column:1 / -1">Show answer</button>
+    <button id="again" class="fb fbig" style="display:none">Again</button>
+    <button id="got" class="fb fbig" style="display:none">Got it</button>
   </div>
 </div>
-<p style="font-size:.92rem;color:var(--ink-soft)">Prefer Anki? Download <a href="flashcards-anki.txt" download>flashcards-anki.txt</a> and use File, Import in Anki. <button id="reset" class="fb" style="font-size:.85rem;padding:3px 10px;margin-left:6px">Reset progress</button></p>
-<style>.fb{font:inherit;padding:8px 16px;border-radius:6px;border:1px solid var(--rule);background:#F3F5F2;color:var(--ink);cursor:pointer}.fb.on{background:var(--indigo);color:#fff;border-color:var(--indigo)}</style>
+<p style="font-size:.92rem;color:var(--ink-soft)">Prefer Anki? Download <a href="flashcards-anki.txt" download>flashcards-anki.txt</a> and use File, Import in Anki.</p>
+<details class="fset"><summary>Settings</summary>
+  <p style="margin:8px 0">Start again from zero on this device: every card becomes new.</p>
+  <button id="reset" class="fb">Reset progress</button>
+</details>
+<style>:root{--amber-ink:#8A6416;--grey:#5F6B72}
+:focus-visible{outline:3px solid var(--indigo);outline-offset:2px}
+.fb{font:inherit;padding:8px 16px;border-radius:8px;border:1px solid var(--rule);background:#F3F5F2;color:var(--ink);cursor:pointer;min-height:44px}
+.fb.on{background:var(--indigo);color:#fff;border-color:var(--indigo)}
+.fstats{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;font-size:.92rem;color:var(--ink-soft);margin:8px 2px}
+.chip{display:inline-block;font-size:.85rem;font-weight:700;padding:3px 10px;border-radius:4px;border:1px solid var(--rule);background:var(--card);color:var(--ink)}
+.chip.due{background:var(--indigo);border-color:var(--indigo);color:#fff}
+.fcard{display:flex;flex-direction:column;min-height:300px}
+.fmeta{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:.85rem;color:var(--ink-soft)}
+#front{font-size:1.25rem;font-weight:600;margin:14px 0}
+#back{border-top:1px solid var(--rule);padding-top:12px;font-size:1.08rem}
+#empty{margin:14px 0}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:auto;padding-top:16px;position:sticky;bottom:0;background:var(--card)}
+.frow .fbig{min-height:52px;font-weight:700;width:100%}
+#again{background:var(--red-soft);border-color:var(--red)} #got{background:var(--green-soft);border-color:var(--green)}
+.fset{margin:10px 0 0} .fset summary{cursor:pointer;color:var(--indigo);min-height:44px;display:flex;align-items:center}
+</style>
 '''
-script='''
+script=STORAGE_JS+'''
+storageNotice();
 var CARDS=__DATA__;
-var KEY='ib-flash-v1', st={}; try{st=JSON.parse(localStorage.getItem(KEY)||'{}');}catch(e){}
-var subj='All', cur=null, queue=[];
-function save(){try{localStorage.setItem(KEY,JSON.stringify(st));}catch(e){}}
-function box(c){return (st[c.id]&&st[c.id].b)||0;}
-function pool(){return CARDS.filter(function(c){return subj==='All'||c.s===subj;});}
-function build(){var p=pool();
-  // never-seen and "again" cards first, then by box, keep list order inside a box
-  queue=p.slice().sort(function(a,b){var sa=st[a.id]?1:0, sb=st[b.id]?1:0; var ka=st[a.id]?box(a)+1:0, kb=st[b.id]?box(b)+1:0; return ka-kb;});
-}
-function stats(){var p=pool(),again=0,learning=0,known=0,fresh=0;p.forEach(function(c){if(!st[c.id])fresh++;else if(box(c)===0)again++;else if(box(c)<3)learning++;else known++;});
-  document.getElementById('stats').textContent=p.length+' cards: '+fresh+' new, '+again+' to repeat, '+learning+' learning, '+known+' known (3 correct in a row)';}
-function next(){if(!queue.length)build(); cur=queue.shift();
-  document.getElementById('meta').textContent=cur.s+' · '+cur.t;
-  var a=document.getElementById('src'); a.href=cur.l;
+// v2 state: {c:{id:{b:box 0-4, last:'YYYY-MM-DD', due:'YYYY-MM-DD'}}, nd: day of the new-card count, nn: new cards started that day}
+var K2='ib-flash-v2', K1='ib-flash-v1', NEWMAX=10, IV=[0,1,3,7,14];
+function pad(n){return (n<10?'0':'')+n;}
+function iso(d){return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());}
+function T(){return iso(new Date());}
+function addDays(s,n){var p=s.split('-');return iso(new Date(+p[0],p[1]-1,+p[2]+n));}
+function save(){try{localStorage.setItem(K2,JSON.stringify(st));}catch(e){}}
+var st=null; try{st=JSON.parse(localStorage.getItem(K2)||'null');}catch(e){}
+if(!st||typeof st!=='object'||!st.c){ st={c:{},nd:'',nn:0};
+  // move the old progress across: keep each card's box, due again after that box's interval
+  var old=null; try{old=JSON.parse(localStorage.getItem(K1)||'null');}catch(e){}
+  if(old&&typeof old==='object') Object.keys(old).forEach(function(id){var o=old[id]; if(!o||typeof o!=='object') return;
+    var b=Math.max(0,Math.min(4,o.b|0)), last=o.d?iso(new Date(o.d)):T(); st.c[id]={b:b,last:last,due:addDays(last,IV[b])};});
+  save(); }
+var subj='All', cur=null, queue=[], practice=false;
+function seen(c){return !!st.c[c.id];}
+function open_(c){return !c.u||c.u<=T();}
+function isDue(c){return seen(c)&&st.c[c.id].due<=T();}
+function newLeft(){return Math.max(0,NEWMAX-(st.nd===T()?st.nn:0));}
+function pool(){return CARDS.filter(function(c){return (subj==='All'||c.s===subj)&&open_(c);});}
+function mix(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function build(){var p=pool(); practice=false;
+  var due=mix(p.filter(isDue));
+  var fresh=p.filter(function(c){return !seen(c);}).sort(function(a,b){return (a.u||'')<(b.u||'')?-1:((a.u||'')>(b.u||'')?1:0);});
+  queue=due.concat(fresh.slice(0,newLeft()));}
+function counts(){var all=CARDS.filter(open_), dueAll=all.filter(isDue).length;
+  try{localStorage.setItem('ib-flash-due-count',String(dueAll));}catch(e){}
+  var p=pool(), d=p.filter(isDue).length, n=Math.min(newLeft(),p.filter(function(c){return !seen(c);}).length);
+  var locked=CARDS.filter(function(c){return (subj==='All'||c.s===subj)&&!open_(c);}).length;
+  var known=p.filter(function(c){return seen(c)&&st.c[c.id].b>=4;}).length;
+  return {d:d,n:n,locked:locked,known:known,next:p.filter(seen).map(function(c){return st.c[c.id].due;}).sort()[0]};}
+function stats(){var k=counts();
+  document.getElementById('stats').innerHTML='<span class="chip due">Due today: '+k.d+'</span><span class="chip">New today: '+k.n+'</span>'+
+    '<span>'+k.known+' known (14-day box)'+(k.locked?', '+k.locked+' waiting for later plan days':'')+(practice?'. Practice round: answers are not saved.':'')+'</span>';
+  return k;}
+function show(id,on){document.getElementById(id).style.display=on?'':'none';}
+function next(){var k=stats();
+  if(!queue.length){cur=null;
+    show('front',false);show('back',false);show('show',false);show('again',false);show('got',false);show('meta',true);
+    document.getElementById('meta').textContent='All done for now'; document.getElementById('src').style.display='none';
+    var nx=k.next&&k.next>T()?k.next:null;
+    var e=document.getElementById('empty'); e.style.display='';
+    e.innerHTML='<p style="margin:0 0 10px">Nothing due right now. Well done.'+(nx?' The next card is due on '+nx+'.':'')+'</p>'+
+      (pool().filter(seen).length?'<button id="more" class="fb">Practise anyway (does not change when cards come back)</button>':'');
+    var m=document.getElementById('more'); if(m) m.onclick=function(){practice=true; queue=mix(pool().filter(seen)); next();};
+    return;}
+  cur=queue.shift(); show('empty',false); show('front',true); document.getElementById('src').style.display='';
+  document.getElementById('meta').textContent=cur.s+' · '+cur.t+(seen(cur)?'':' · new');
+  document.getElementById('src').href=cur.l;
   document.getElementById('front').innerHTML=cur.f; var bk=document.getElementById('back'); bk.innerHTML=cur.b; bk.style.display='none';
-  document.getElementById('show').style.display=''; document.getElementById('again').style.display='none'; document.getElementById('got').style.display='none'; stats();}
-document.getElementById('show').onclick=function(){document.getElementById('back').style.display='block';this.style.display='none';document.getElementById('again').style.display='';document.getElementById('got').style.display='';};
-document.getElementById('again').onclick=function(){st[cur.id]={b:0,d:Date.now()};save();queue.splice(Math.min(3,queue.length),0,cur);next();};
-document.getElementById('got').onclick=function(){var b=box(cur);st[cur.id]={b:Math.min(3,(st[cur.id]?b:0)+1),d:Date.now()};save();next();};
-document.getElementById('reset').onclick=function(){if(confirm('Forget all flashcard progress on this device?')){st={};save();build();next();}};
+  show('show',true); show('again',false); show('got',false);}
+function reveal(){if(!cur||document.getElementById('show').style.display==='none') return; document.getElementById('back').style.display='block'; show('show',false); show('again',true); show('got',true); document.getElementById('got').focus({preventScroll:true});}
+function startNew(){ if(!seen(cur)){ if(st.nd!==T()){st.nd=T();st.nn=0;} st.nn++; } }
+function again(){if(!cur||document.getElementById('again').style.display==='none') return;
+  if(!practice){startNew(); st.c[cur.id]={b:0,last:T(),due:T()}; save();}
+  queue.splice(Math.min(3,queue.length),0,cur); next();}
+function got(){if(!cur||document.getElementById('got').style.display==='none') return;
+  if(!practice){var b=seen(cur)?Math.min(4,st.c[cur.id].b+1):1; startNew(); st.c[cur.id]={b:b,last:T(),due:addDays(T(),IV[b])}; save();}
+  next();}
+document.getElementById('show').onclick=reveal;
+document.getElementById('again').onclick=again;
+document.getElementById('got').onclick=got;
+document.addEventListener('keydown',function(e){ if(e.ctrlKey||e.metaKey||e.altKey) return; var tg=e.target&&e.target.tagName;
+  if(tg==='INPUT'||tg==='SELECT'||tg==='TEXTAREA'||(e.target&&e.target.closest&&e.target.closest('summary,#filters,#empty,.fset'))) return;
+  if(e.key===' '||e.key==='Spacebar'){ e.preventDefault(); reveal(); }
+  else if(e.key==='1'){ e.preventDefault(); again(); }
+  else if(e.key==='2'){ e.preventDefault(); got(); } });
+document.getElementById('reset').onclick=function(){if(confirm('Forget all flashcard progress on this device?')){st={c:{},nd:'',nn:0};save();build();next();}};
 var subs=['All'];CARDS.forEach(function(c){if(subs.indexOf(c.s)<0)subs.push(c.s);});
 var fl=document.getElementById('filters');subs.forEach(function(s){var b=document.createElement('button');b.className='fb'+(s===subj?' on':'');b.textContent=s;b.onclick=function(){subj=s;[].forEach.call(fl.children,function(x){x.classList.toggle('on',x===b);});build();next();};fl.appendChild(b);});
 build();next();

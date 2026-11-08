@@ -21,6 +21,51 @@ TERMS=[("AO1","Describe","Give a detailed account."),
 ("AO3","Examine","Consider an argument or concept in a way that uncovers the assumptions and interrelationships of the issue."),
 ("AO3","To what extent","Consider the merits or otherwise of an argument or concept. Opinions and conclusions should be presented clearly and supported with appropriate evidence and sound argument.")]
 tr=''.join(f'<tr><td><b>{t}</b></td><td style="text-align:center">{ao}</td><td>{d}</td></tr>' for ao,t,d in TERMS)
+
+ANNO_CSS = r'''<style>
+.anno{background:var(--card);border:1px solid var(--rule);padding:12px 16px;margin:12px 0 22px}
+.anno .qq{font-weight:700;margin-bottom:8px}
+.anno .row{display:grid;grid-template-columns:3fr 2fr;gap:4px 14px;border-top:1px solid var(--rule);padding:8px 0}
+.anno .s{margin:0}
+.anno .a{margin:0;font-size:.9rem;color:var(--green);background:var(--green-soft);padding:4px 8px;border-left:4px solid var(--green)}
+.anno .verdict{border-top:2px solid var(--ink);padding-top:8px;margin:4px 0 0}
+.mlabel{display:inline-block;background:var(--amber-soft);border-left:5px solid var(--amber);padding:6px 12px;font-size:.92rem}
+@media (max-width:600px){.anno .row{grid-template-columns:1fr}}
+</style>
+'''
+def anno(q, rows, verdict):
+    r = ''.join(f'<div class="row"><p class="s">{t}</p><p class="a">{a}</p></div>' for t, a in rows)
+    return f'<div class="anno"><p class="qq">{q}</p>{r}<p class="verdict">{verdict}</p></div>'
+# Markband wording: psych-assessment.json and psychology-audit.md 1.9 (guide p45-46). Section A content: classical conditioning
+# (cognitive approach, Table 3.2 p25). Section B context: health and well-being, area "social learning and health" (p28-30).
+anno_a = anno('Paper 1 Section A style: "Explain classical conditioning with reference to one example." [4]', [
+ ('Classical conditioning is learning by association: a neutral stimulus that is repeatedly paired with an unconditioned stimulus comes to produce a similar response on its own.',
+  'Knowledge: an accurate definition of the process.'),
+ ('The unconditioned stimulus (UCS) triggers an unconditioned response (UCR) without any learning; after the pairings the neutral stimulus has become a conditioned stimulus (CS), and the response it now triggers is a conditioned response (CR).',
+  'Knowledge: all five terms used correctly. This is what moves the answer from "limited knowledge" (1 to 2) to "detailed knowledge" (3 to 4).'),
+ ('For example, a child has a painful filling at the dentist (UCS), which makes her afraid (UCR); each time, she also hears the sound of the drill (neutral stimulus).',
+  'Example: relevant. A made-up (hypothetical) example is fine: details of research studies are not assessed in Section A.'),
+ ('Because the drill sound has been paired with pain several times, it becomes a CS: later the sound alone, even from another room, makes her anxious (CR).',
+  'Example explained: each part of the example is linked to a term. Without this sentence the example would be "relevant but is not explained", which caps the answer at 2.'),
+ ('So a fear can be learned through association with something that never caused harm itself.',
+  'Links the process to its role in behaviour, the wording of the syllabus point.')],
+ '<b>Band:</b> detailed knowledge and an example that is relevant and explained, so the 3 to 4 band; 4 marks. About 130 words: one example only, fully developed.')
+anno_b = anno('Paper 1 Section B style, health and well-being: "A secondary school wants its students to eat more vegetables at lunch. Explain how social learning theory could be used to achieve this goal." [6]', [
+ ('Social learning theory (Bandura) says people learn behaviours by observing models and imitating them, especially when they see the model being rewarded (vicarious reinforcement).',
+  'Knowledge: accurate statement of the theory with a key term.'),
+ ('Whether a behaviour is imitated depends on four processes: attention, retention, reproduction and motivation.',
+  'Knowledge: detailed. Together with the first sentence this is "accurate and detailed" (5 to 6), not just "some detail" (3 to 4).'),
+ ('The school could choose models the students pay attention to and identify with, such as popular older students or sports captains, and ask them to eat vegetables where everyone can see them in the canteen.',
+  'Application: attention, applied to this school and this canteen.'),
+ ('Short videos of the same models enjoying vegetable dishes, shown at lunchtime every day, would help students remember the behaviour (retention).',
+  'Application: retention, still tied to the scenario.'),
+ ('Vegetables should be easy to pick up at the counter the models use, so that the behaviour is simple to copy (reproduction).',
+  'Application: reproduction. Covering the processes one by one, each in the scenario, is what makes it "well developed".'),
+ ('Students should also see the models being praised by teachers, so vicarious reinforcement raises their motivation to imitate them.',
+  'Application: motivation through vicarious reinforcement, linked back to the theory.'),
+ ('Because the behaviour is noticed, remembered, easy to copy and seen to be rewarded, more students are likely to choose vegetables themselves.',
+  'Final link back to the goal in the question.')],
+ '<b>Band:</b> knowledge accurate and detailed, application well developed throughout, so the 5 to 6 band; 6 marks. An answer that described the theory well but said only "use role models" would be "partially developed" (3 to 4).')
 body=f'''
 <h2 style="margin-top:28px">The HL assessment at a glance</h2>
 <div class="tablewrap"><table>
@@ -40,6 +85,10 @@ body=f'''
 <tr><td>C</td><td>One essay from a choice of two, built on one of the six concepts</td><td>15</td><td>Critical analysis, clear links between the topic and the concept, a conclusion that follows from your arguments, accurate terms</td></tr>
 </table></div>
 
+<h2 id="annotated">Two annotated model answers</h2>
+<p class="mlabel">Models written for this site, not official IB answers. The green notes say which part of the official markband (guide p45 to 46) each sentence helps to earn.</p>
+{ANNO_CSS}
+{anno_a}{anno_b}
 <h2>Paper 2, section by section</h2>
 <div class="tablewrap"><table>
 <tr><th>Section</th><th>What you do</th><th>Marks</th></tr>
@@ -72,7 +121,7 @@ body=f'''
 <li><b>Paper 2 Section A is about your own practical.</b> Answers that describe a method in general, not the practical you did, are capped in the low band (specimen mark scheme). After each class practical write a short note: aim, procedure, sampling technique, findings, ethical points.</li>
 <li><b>Paper 2 Section B and Paper 3 Q4: use the numbers you need.</b> Paper 2 B wants two or more of the listed concepts; Paper 3 Q4 wants at least three sources. Fewer cannot reach the top band.</li>
 <li><b>Learn the vocabulary exactly.</b> Many marks are for "accurate terminology". Use the glossary flashcards: operationalisation, random vs opportunity sampling, internal vs external validity, and so on.</li>
-<li><b>Time.</b> Paper 1 and Paper 2: 35 marks in 90 minutes, about 2.5 minutes a mark, so about 37 minutes for the 15-mark question. Paper 3: 30 marks in 105 minutes, 3.5 minutes a mark.</li>
+<li><b>Time.</b> Paper 1 and Paper 2: 35 marks in 90 minutes, about 2.5 minutes a mark, so about 38 to 40 minutes for the 15-mark question. Paper 3: 30 marks in 105 minutes, 3.5 minutes a mark.</li>
 </ol></div>
 
 <h2>Command terms</h2>
