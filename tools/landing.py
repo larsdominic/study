@@ -11,6 +11,7 @@ body=f'''
   <a class="tl" href="progress.html"><b>Progress</b><span>Every syllabus topic, coloured by how far you have got</span></a>
   <a class="tl" href="flashcards.html"><b>Flashcards</b><span>Learn-by-heart cards, 5 to 10 minutes a day</span><span id="fdue" class="fchip" style="display:none"></span></a>
   <a class="tl" href="exam.html"><b>Exam technique</b><span>Pick a subject: papers, habits that win marks, command terms</span></a>
+  <a class="tl" href="german.html"><b>German</b><span>15 minutes a day now; your route to a German-taught degree</span></a>
   <a class="tl" href="{SHEET}"><b>Study sheet</b><span>Daily plan, files and the Error log</span></a>
 </div>
 <div id="plan"></div>

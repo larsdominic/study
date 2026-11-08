@@ -364,6 +364,36 @@ cards=[
 ("er210", "English", "English A HL: revision 2", "guides/2026-12-04-english-a-hl-revision-2.html#info", "Analysing statistics in Paper 1: the trap", "Do not argue with the data or only quote the number: analyse how it is shown (size, colour, position, icons) and its effect."),
 ("er211", "English", "English A HL: revision 2", "guides/2026-12-04-english-a-hl-revision-2.html#info", "Official guide: literary or non-literary?", "Non-literary: advertisement, cartoon, infographic (and many more). Literary: graphic novel, novel, poem, play, short story."),
 ("er212", "English", "English A HL: revision 2", "guides/2026-12-04-english-a-hl-revision-2.html#after", "HL assessment (official guide)", "Paper 1 guided textual analysis 35%; Paper 2 comparative essay 25%; HL essay (1,200 to 1,500 words) 20%; individual oral (15 min) 20%."),
+("de01", "German", "A1 basics", "german.html", "Hello / Good morning / Good evening", "Hallo / Guten Morgen / Guten Abend"),
+("de02", "German", "A1 basics", "german.html", "Goodbye (polite) / Bye (casual)", "Auf Wiedersehen / Tschüss"),
+("de03", "German", "A1 basics", "german.html", "How are you? (to a friend) and (polite, to an adult you do not know)", "Wie geht's? (Wie geht es dir?) / Wie geht es Ihnen?"),
+("de04", "German", "A1 basics", "german.html", "du or Sie: which one do you use for a teacher or shop assistant you do not know?", "Sie (polite, always with a capital S). du is for friends, family and children."),
+("de05", "German", "A1 basics", "german.html", "Ich heiße Jamila. Ich komme aus Singapur.", "My name is Jamila. I come from Singapore."),
+("de06", "German", "A1 basics", "german.html", "What is your name? (to a friend) and (polite)", "Wie heißt du? / Wie heißen Sie?"),
+("de07", "German", "Phrases", "german.html", "Please / Thank you / You're welcome", "Bitte / Danke / Bitte schön (or: Gern geschehen)"),
+("de08", "German", "Phrases", "german.html", "Entschuldigung!", "Excuse me! / Sorry!"),
+("de09", "German", "Phrases", "german.html", "I don't understand that. Can you repeat it, please? (polite)", "Ich verstehe das nicht. Können Sie das bitte wiederholen?"),
+("de10", "German", "Phrases", "german.html", "Can you speak more slowly, please? (polite)", "Können Sie bitte langsamer sprechen?"),
+("de11", "German", "Phrases", "german.html", "Was bedeutet das?", "What does that mean?"),
+("de12", "German", "Phrases", "german.html", "How do you say ... in German?", "Wie sagt man ... auf Deutsch?"),
+("de13", "German", "Articles", "german.html", "The three words for \"the\" (masculine, feminine, neuter), and \"the\" in the plural", "der (masculine), die (feminine), das (neuter); plural: die for all three"),
+("de14", "German", "Articles", "german.html", "the man (singular and plural)", "der Mann, die Männer"),
+("de15", "German", "Articles", "german.html", "the woman (singular and plural)", "die Frau, die Frauen"),
+("de16", "German", "Articles", "german.html", "the child (singular and plural)", "das Kind, die Kinder"),
+("de17", "German", "Articles", "german.html", "the book (singular and plural)", "das Buch, die Bücher"),
+("de18", "German", "Articles", "german.html", "the school (singular and plural)", "die Schule, die Schulen"),
+("de19", "German", "Articles", "german.html", "the friend: a boy, a girl (singular and plural)", "der Freund, die Freunde; die Freundin, die Freundinnen"),
+("de20", "German", "Articles", "german.html", "\"a\": ein or eine? Say: a man, a woman, a child", "ein Mann (der), eine Frau (die), ein Kind (das): eine only for die words"),
+("de21", "German", "Articles", "german.html", "I have no time. (Zeit is a die word)", "Ich habe keine Zeit. (kein / keine = no, not a)"),
+("de22", "German", "Verbs", "german.html", "sein (to be): ich, du, er/sie/es, wir, ihr, sie/Sie", "ich bin, du bist, er/sie/es ist, wir sind, ihr seid, sie/Sie sind"),
+("de23", "German", "Verbs", "german.html", "haben (to have): ich, du, er/sie/es, wir, ihr, sie/Sie", "ich habe, du hast, er/sie/es hat, wir haben, ihr habt, sie/Sie haben"),
+("de24", "German", "Verbs", "german.html", "wohnen (to live): ich, du, er/sie/es, wir, ihr, sie/Sie (the regular pattern)", "ich wohne, du wohnst, er/sie/es wohnt, wir wohnen, ihr wohnt, sie/Sie wohnen (-e, -st, -t, -en, -t, -en)"),
+("de25", "German", "Verbs", "german.html", "sprechen (to speak): ich, du, er/sie/es, wir. What is special?", "ich spreche, du sprichst, er/sie/es spricht, wir sprechen: e changes to i for du and er/sie/es"),
+("de26", "German", "Verbs", "german.html", "Wo wohnst du? Ich wohne in Singapur.", "Where do you live? I live in Singapore."),
+("de27", "German", "Numbers", "german.html", "1 to 10", "eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn"),
+("de28", "German", "Numbers", "german.html", "11, 12, 13, 16, 17, 20", "elf, zwölf, dreizehn, sechzehn, siebzehn, zwanzig (sechzehn drops the s, siebzehn drops the en)"),
+("de29", "German", "Numbers", "german.html", "21, 35, 99", "einundzwanzig, fünfunddreißig, neunundneunzig: the single digit comes first (\"one-and-twenty\")"),
+("de30", "German", "Numbers", "german.html", "How old are you? I am 17. (to a friend)", "Wie alt bist du? Ich bin siebzehn (Jahre alt)."),
 ]
 for c in cards: assert "—" not in c[4]+c[5]
 data=[dict(id=a,s=b,t=t,l=l,f=f,b=bk) for a,b,t,l,f,bk in cards]
@@ -373,7 +403,7 @@ _links=json.load(open(sys.argv[1]+'/links.json')); _first={}
 for _iso in sorted(_links):
     for _l in (_links[_iso] if isinstance(_links[_iso],list) else [_links[_iso]]):
         if not _l.get('review'): _first.setdefault(_l['url'],_iso)
-_extra={'exam-maths-aa-sl.html':'2026-11-10','exam-psychology-hl.html':'2026-11-09','exam-business-management-sl.html':'2026-11-12'}
+_extra={'german.html':'2026-11-09','exam-maths-aa-sl.html':'2026-11-10','exam-psychology-hl.html':'2026-11-09','exam-business-management-sl.html':'2026-11-12'}
 for _d in data:
     _u=_first.get(_d['l'].split('#')[0]) or _extra.get(_d['l'].split('#')[0])
     _m=re.search(r'#d(\d{4}-\d{2}-\d{2})$',_d['l'])

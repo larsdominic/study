@@ -362,3 +362,33 @@ Tricolon of imperatives	Three short orders in a row ("Walk it. Bike it. Bus it."
 Analysing statistics in Paper 1: the trap	Do not argue with the data or only quote the number: analyse how it is shown (size, colour, position, icons) and its effect.	IB::English English_A_HL:_revision_2
 Official guide: literary or non-literary?	Non-literary: advertisement, cartoon, infographic (and many more). Literary: graphic novel, novel, poem, play, short story.	IB::English English_A_HL:_revision_2
 HL assessment (official guide)	Paper 1 guided textual analysis 35%; Paper 2 comparative essay 25%; HL essay (1,200 to 1,500 words) 20%; individual oral (15 min) 20%.	IB::English English_A_HL:_revision_2
+Hello / Good morning / Good evening	Hallo / Guten Morgen / Guten Abend	IB::German A1_basics
+Goodbye (polite) / Bye (casual)	Auf Wiedersehen / Tschüss	IB::German A1_basics
+How are you? (to a friend) and (polite, to an adult you do not know)	Wie geht's? (Wie geht es dir?) / Wie geht es Ihnen?	IB::German A1_basics
+du or Sie: which one do you use for a teacher or shop assistant you do not know?	Sie (polite, always with a capital S). du is for friends, family and children.	IB::German A1_basics
+Ich heiße Jamila. Ich komme aus Singapur.	My name is Jamila. I come from Singapore.	IB::German A1_basics
+What is your name? (to a friend) and (polite)	Wie heißt du? / Wie heißen Sie?	IB::German A1_basics
+Please / Thank you / You're welcome	Bitte / Danke / Bitte schön (or: Gern geschehen)	IB::German Phrases
+Entschuldigung!	Excuse me! / Sorry!	IB::German Phrases
+I don't understand that. Can you repeat it, please? (polite)	Ich verstehe das nicht. Können Sie das bitte wiederholen?	IB::German Phrases
+Can you speak more slowly, please? (polite)	Können Sie bitte langsamer sprechen?	IB::German Phrases
+Was bedeutet das?	What does that mean?	IB::German Phrases
+How do you say ... in German?	Wie sagt man ... auf Deutsch?	IB::German Phrases
+The three words for "the" (masculine, feminine, neuter), and "the" in the plural	der (masculine), die (feminine), das (neuter); plural: die for all three	IB::German Articles
+the man (singular and plural)	der Mann, die Männer	IB::German Articles
+the woman (singular and plural)	die Frau, die Frauen	IB::German Articles
+the child (singular and plural)	das Kind, die Kinder	IB::German Articles
+the book (singular and plural)	das Buch, die Bücher	IB::German Articles
+the school (singular and plural)	die Schule, die Schulen	IB::German Articles
+the friend: a boy, a girl (singular and plural)	der Freund, die Freunde; die Freundin, die Freundinnen	IB::German Articles
+"a": ein or eine? Say: a man, a woman, a child	ein Mann (der), eine Frau (die), ein Kind (das): eine only for die words	IB::German Articles
+I have no time. (Zeit is a die word)	Ich habe keine Zeit. (kein / keine = no, not a)	IB::German Articles
+sein (to be): ich, du, er/sie/es, wir, ihr, sie/Sie	ich bin, du bist, er/sie/es ist, wir sind, ihr seid, sie/Sie sind	IB::German Verbs
+haben (to have): ich, du, er/sie/es, wir, ihr, sie/Sie	ich habe, du hast, er/sie/es hat, wir haben, ihr habt, sie/Sie haben	IB::German Verbs
+wohnen (to live): ich, du, er/sie/es, wir, ihr, sie/Sie (the regular pattern)	ich wohne, du wohnst, er/sie/es wohnt, wir wohnen, ihr wohnt, sie/Sie wohnen (-e, -st, -t, -en, -t, -en)	IB::German Verbs
+sprechen (to speak): ich, du, er/sie/es, wir. What is special?	ich spreche, du sprichst, er/sie/es spricht, wir sprechen: e changes to i for du and er/sie/es	IB::German Verbs
+Wo wohnst du? Ich wohne in Singapur.	Where do you live? I live in Singapore.	IB::German Verbs
+1 to 10	eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn	IB::German Numbers
+11, 12, 13, 16, 17, 20	elf, zwölf, dreizehn, sechzehn, siebzehn, zwanzig (sechzehn drops the s, siebzehn drops the en)	IB::German Numbers
+21, 35, 99	einundzwanzig, fünfunddreißig, neunundneunzig: the single digit comes first ("one-and-twenty")	IB::German Numbers
+How old are you? I am 17. (to a friend)	Wie alt bist du? Ich bin siebzehn (Jahre alt).	IB::German Numbers

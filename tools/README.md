@@ -3,6 +3,7 @@
 ## The plan (8 Nov 2026 restart: Chemistry dropped, Psychology HL added, clean slate from Mon 9 Nov)
 - `plan_data.py` is the single source for every day from 9 Nov to 4 Dec: subject, task, Drive files (new IDs after the 8 Nov re-upload, or checked free web pages) and the site pages for that day (`review=True` marks a revisit). The same data filled the study sheet (Daily plan tab, links in columns K to Y, site link in column Z).
 - `python3 tools/build_plan.py` writes `plan.json` and `links.json`; then run `landing.py`.
+- `german.py` → `german.html` (German track: daily sessions to 4 Dec, weekly path, certificates, KMK entry note).
 - `exam_psych.py` → `exam-psychology-hl.html` (from the official Psychology guide, first assessment 2027).
 
 Run from the repo root: `python3 tools/<script>.py tools .` (first argument: this folder, second: output root).

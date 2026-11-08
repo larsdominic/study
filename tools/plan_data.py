@@ -162,8 +162,11 @@ DAYS = [
       links=[E_CART, E_HORSEY],
       guide=[dict(url="guides/2026-12-04-english-a-hl-revision-2.html", label="English revision 2: unseen infographic and your habits", quiz="ib-quiz-guide-2026-12-04")]),
 ]
+GERMAN = " German (extra 15 min): flashcards, then today's short lesson on the German page."
 import datetime
 for d in DAYS:
+    if "Rest" not in d["subject"] and "German (extra 15 min)" not in d["task"]:
+        d["task"] = d["task"] + GERMAN
     dt = datetime.date.fromisoformat(d["iso"])
     d["day"] = dt.strftime("%a"); d["date"] = f"{dt.day} {dt.strftime('%b')}"
     d["week"] = "Week 1" if dt <= datetime.date(2026,11,15) else ("Week 2" if dt <= datetime.date(2026,11,22) else "Exam window")

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>German: route to a German-taught degree</title>
+<style>
+  :root{--paper:#F5F7F4;--ink:#1E2A33;--ink-soft:#4A5862;--rule:#D6DCD8;--indigo:#2F47A6;--indigo-soft:#E6EAF7;--amber:#B8761A;--amber-soft:#FBF1DF;--green:#2E7D4F;--green-soft:#E3F2E8;--red:#B23A3A;--red-soft:#F8E4E4;--grey:#5F6B72;--amber-ink:#8A6416;--card:#FFFFFF}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.6 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;overflow-wrap:break-word}
+  h1,h2,h3{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;line-height:1.2;margin:0 0 .4em;font-weight:600}
+  h1{font-size:2.1rem} h2{font-size:1.5rem;margin-top:1.6em} h3{font-size:1.15rem;margin-top:1.4em}
+  p{margin:0 0 1em} a{color:var(--indigo)}
+  sup,sub{line-height:0}
+  .wrap{max-width:820px;margin:0 auto;padding:0 20px 80px}
+  .top{background:#0B0F1A;color:#fff;padding:26px 0 22px}
+  .top h1{color:#fff} .top p{color:#C9D1E6;max-width:660px;margin-bottom:0}
+  .top .crumb{font-size:.9rem;margin-bottom:8px} .top .crumb a{color:#F2C46D}
+  table{border-collapse:collapse;width:100%;margin:12px 0 20px;font-size:.95rem;background:var(--card)}
+  th,td{border:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#EDF0EC}
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .card{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:12px 0}
+  .tip{background:var(--amber-soft);border-left:5px solid var(--amber);padding:12px 16px;margin:18px 0}
+  .tip b:first-child{color:var(--amber-ink)}
+  .step{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);padding:12px 16px;margin:12px 0}
+  .step .bh{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-bottom:4px}
+  .step .bh b{font-size:1.15rem;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif}
+  .step .bh span{font-weight:700;color:var(--indigo)}
+  .step ol{margin:6px 0 0;padding-left:22px} .step li{margin:4px 0}
+  .t{color:var(--ink-soft);font-size:.88rem;white-space:nowrap}
+  .tag{display:inline-block;font-size:.72rem;font-weight:700;padding:1px 7px;border-radius:4px;color:#fff;vertical-align:middle;white-space:nowrap}
+  .quiz .q{background:var(--card);border:1px solid var(--rule);padding:14px 16px;margin:12px 0}
+  .quiz .q > p{font-weight:600;margin-bottom:8px}
+  .quiz .subj{display:inline-block;font-size:.75rem;font-weight:700;color:var(--indigo);background:var(--indigo-soft);padding:1px 7px;border-radius:4px;margin-right:6px;vertical-align:middle}
+  .quiz button{display:block;width:100%;text-align:left;background:#F3F5F2;border:1px solid var(--rule);padding:8px 12px;margin:6px 0;border-radius:6px;font:inherit;cursor:pointer;color:var(--ink)}
+  .quiz button:focus-visible{border-color:var(--indigo)}
+  @media (hover:hover){.quiz button:hover{border-color:var(--indigo)}}
+  .quiz button.right{background:var(--green-soft);border-color:var(--green)}
+  .quiz button.wrong{background:var(--red-soft);border-color:var(--red)}
+  .quiz .why{display:none;margin-top:8px;font-size:.95rem;color:var(--ink-soft)}
+  .quiz .q.done .why{display:block}
+  .score{font-weight:700;margin-top:14px}
+  .frac{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;font-size:.92em;line-height:1.15;margin:0 2px}
+  .frac>span:first-child{border-bottom:1px solid currentColor;padding:0 3px}
+  .frac>span:last-child{padding:0 3px}
+  .nw{white-space:nowrap}
+  @media (max-width:600px){h1{font-size:1.7rem}body{font-size:16px}th,td{padding:6px}}
+
+  .prog{background:var(--card);border:2px solid var(--indigo);border-radius:8px;padding:14px 16px 8px;margin:20px 0}
+  .prog h2{margin:0 0 8px;font-size:1.25rem}
+  .pr{display:flex;justify-content:space-between;gap:10px;font-size:.95rem;margin-top:6px}
+  .bar{height:8px;background:#E8ECE9;border-radius:4px;overflow:hidden;margin:4px 0 2px}
+  .bar i{display:block;height:100%;width:0;background:var(--green);transition:width .2s}
+  .small{font-size:.92rem;color:var(--ink-soft)}
+  .jump{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 0}
+  .jump a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;border:1px solid var(--rule);border-radius:4px;background:var(--card);text-decoration:none;font-size:.95rem}
+  section{margin-top:34px}
+  .ck{display:flex;align-items:flex-start;gap:10px;min-height:44px;padding:8px 0;cursor:pointer}
+  .ck input{width:20px;height:20px;margin:3px 0 0;flex:none;accent-color:var(--green)}
+  ul.cans{list-style:none;padding:0;margin:6px 0}
+  ul.cans li{border-bottom:1px solid var(--rule)}
+  .sk{display:inline-block;font-weight:700;color:var(--indigo);margin-right:4px}
+  .verdict{background:var(--indigo-soft);border-radius:8px;padding:10px 14px;margin-top:12px}
+  .honest{background:var(--amber-soft);border-left:5px solid var(--amber);padding:12px 16px;margin:18px 0;border-radius:8px}
+  .honest ul{padding-left:22px}
+  .recipe{background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);border-radius:8px;padding:12px 16px;margin:14px 0}
+  .recipe ol{margin:4px 0 8px;padding-left:22px}
+  ol.days{list-style:none;padding:0;margin:12px 0}
+  ol.days li.day{display:grid;grid-template-columns:minmax(0,9.5em) minmax(0,1fr);gap:0 12px;align-items:start;border-bottom:1px solid var(--rule);padding:2px 0}
+  ol.days li.day .dw{padding:10px 0 8px}
+  ol.days li.rest{color:var(--ink-soft)}
+  ol.days li.rest .dd{padding:10px 0 8px 30px}
+  .dd{font-weight:700;white-space:nowrap}
+  @media (max-width:600px){ol.days li.day{grid-template-columns:minmax(0,1fr)} ol.days li.day .dw{padding:0 0 10px 30px} ol.days li.rest .dd{padding-bottom:0}}
+  .wks{display:grid;gap:10px;margin:14px 0}
+  .wk{background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:4px 16px 10px}
+  .wk.done{border-color:var(--green);background:var(--green-soft)}
+  .wk .wh{flex-wrap:wrap;gap:4px 10px;align-items:center}
+  .wk .wh input{margin-top:0}
+  .wk .chap{margin:0 0 4px;font-size:.9rem;color:var(--ink-soft)}
+  .wk ol.ls{margin:0;padding-left:22px}
+  .wk ol.ls li{margin:3px 0}
+  .tp{color:var(--ink-soft);font-size:.9rem}
+  .hol{margin:6px 0 0;font-size:.92rem;color:var(--amber-ink)}
+  .ibbox{background:var(--card);border:1px solid var(--rule);border-top:6px solid var(--indigo);border-radius:8px;padding:6px 16px 10px}
+  .ibbox h2{margin-top:10px}
+  .ibbox ul{padding-left:22px}
+  .ask{background:var(--amber-soft);border-radius:8px;padding:10px 14px}
+  ul.res li{margin:8px 0}
+  details.more{margin:14px 0}
+  details.more > summary{font-weight:700;color:var(--indigo)}
+</style>
+<!--enhance:start--><meta name="color-scheme" content="light"><style>
+:root{--amber-ink:#8A6416;--grey:#5F6B72;--purple:#6A3D9A;--green-ink:#256B43;--r-sm:4px;--r:8px}
+/* top bar: back to today, flashcards, progress, sheet */
+.sitebar{position:sticky;top:0;z-index:30;height:44px;background:var(--paper);box-shadow:0 1px 0 var(--rule)}
+.sitebar .sb{max-width:820px;height:44px;margin:0 auto;padding:0 10px;display:flex;align-items:stretch;gap:2px;overflow-x:auto;scrollbar-width:none;white-space:nowrap}
+.sitebar .sb::-webkit-scrollbar{display:none}
+.sitebar a{flex:none;display:flex;align-items:center;min-height:44px;padding:0 10px;color:var(--indigo);text-decoration:none;font:600 .95rem/1 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;border-radius:var(--r-sm)}
+.sitebar a.sb-home{font-weight:700}
+@media (hover:hover){.sitebar a:hover{background:var(--indigo-soft)}}
+/* guide section menu: one row that scrolls sideways, 44 px targets, current section marked */
+nav.toc{top:44px;z-index:29}
+nav.toc .wrap{display:flex;flex-wrap:nowrap;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;white-space:nowrap;padding:0 10px}
+nav.toc .wrap::-webkit-scrollbar{display:none}
+nav.toc a{flex:none;display:flex;align-items:center;min-height:44px;padding:12px 10px;line-height:1.2;border-radius:0}
+nav.toc a[href$="index.html"]{display:none}
+nav.toc a[aria-current]{color:var(--indigo);font-weight:700;background:var(--indigo-soft);box-shadow:inset 0 -3px 0 var(--indigo)}
+[id]{scroll-margin-top:56px}
+html:has(nav.toc) [id]{scroll-margin-top:100px}
+/* focus: always visible */
+:focus-visible{outline:3px solid var(--indigo)!important;outline-offset:2px!important}
+header.hero :focus-visible,header.top :focus-visible{outline-color:#F2C46D!important}
+/* readable text */
+main p,main li,.why{max-width:68ch}
+@media (max-width:600px){.wrap{padding-left:16px;padding-right:16px}}
+small{font-size:max(12px,.8em)}
+.sig small{font-size:max(12px,.62em)}
+/* hero: title first, then the picture (at most 30% of the screen height, as wide as the text column),
+   so the title and the Today card share the first screen; long intro paragraphs fold to 3 lines (tap to read) */
+header.hero{display:flex;flex-direction:column}
+header.hero > .wrap{order:-1;width:100%}
+header.hero > svg,header.hero > img{max-height:30vh;max-width:780px;margin:14px auto 0}
+header.hero p.fold{position:relative;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;cursor:pointer}
+header.hero p.fold::after{content:"more";position:absolute;right:0;bottom:0;padding:0 2px 0 28px;background:linear-gradient(90deg,rgba(11,15,26,0),#0B0F1A 22px);color:#F2C46D;font-weight:700}
+header.hero .wrap > p ~ p.fold{-webkit-line-clamp:2}
+header.hero p.fold.open{display:block;-webkit-line-clamp:unset}
+header.hero p.fold.open::after{content:none}
+@media (max-width:600px){header.hero > svg,header.hero > img{max-height:28vh} header.hero .meta{font-size:.85rem;gap:0 14px}}
+/* contrast: amber and grey text */
+body .tip b:first-child,body .src > b:first-child,body .star,body .col.l > h3,body .timer.low .tdisp{color:var(--amber-ink)}
+/* one badge system: Learn = solid amber; Given / in booklet = neutral outline; Apply = indigo outline; HL = purple outline; green = done */
+.badge,.fb,.learn,.tag,span.hl,.quiz .subj,.written .wsubj,.wsubj,.pill,.soon{display:inline-block;font:700 .8rem/1.4 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.01em;padding:1px 7px;border:1px solid currentColor;border-radius:var(--r-sm);background:var(--card);vertical-align:middle;white-space:nowrap}
+.learn,.badge.learn{background:var(--amber-ink);border-color:var(--amber-ink);color:#fff}
+.fb,.badge.apply{color:var(--indigo);border-color:var(--indigo)}
+.fb.given,.badge.given,.tag,.quiz .subj,.written .wsubj,.wsubj,.badge.subj{color:var(--ink);border-color:var(--grey)}
+span.hl,.badge.hl{color:var(--purple);border-color:var(--purple)}
+.pill{margin-left:6px}
+.p-done,.badge.done{color:var(--green-ink);border-color:var(--green);background:var(--green-soft)}
+.p-soon,.soon{color:var(--grey);border-color:var(--grey)}
+/* radii: 4 px small things, 8 px boxes */
+.today,.goals,.able,.todaycard,#termbox,.before .bgi,.before .stuck,.quiz button,.go,.notice,.btn,.timer button,.tl,.chip,.plan > div,.step,.block{border-radius:var(--r)}
+/* 44 px targets */
+.go{min-height:44px;display:inline-flex;align-items:center}
+main details>summary{min-height:44px;display:flex;align-items:center;cursor:pointer}
+ul.files a,.files li>a{display:inline-flex;align-items:center;min-height:44px}
+input[type=number],input[type=text],select{min-height:44px}
+#box a#src,a.src{display:inline-flex;align-items:center;min-height:44px}
+#termbox .tb-h button{min-height:44px;min-width:44px}
+.top .crumb{display:flex;flex-wrap:nowrap;align-items:center;gap:0 6px;overflow-x:auto;scrollbar-width:none;white-space:nowrap;margin-bottom:2px}
+.top .crumb::-webkit-scrollbar{display:none}
+.top .crumb a{flex:none;display:inline-flex;align-items:center;min-height:44px;padding-right:4px}
+/* timed blocks: one card for guide plans, review steps and mock plans */
+.plan > div,.block,.step{background:var(--card);border:1px solid var(--rule);padding:12px 16px}
+.plan > div.brk{background:var(--green-soft);border-color:var(--green)}
+.bh{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;margin-bottom:4px}
+.block > .bh{display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:4px 10px;align-items:center}
+.plan .bh .bn,.step .bh .bn,.bh .bn{flex:none;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--indigo);color:#fff;font:700 1rem/1 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif}
+.plan .bh > b,.step .bh > b,.bh > b{font-size:1.15rem;line-height:1.25;font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;color:var(--ink)}
+.plan .bh .bt,.step .bh .bt,.bh .bt{flex:none;display:inline-block;font:700 .8rem/1.4 "Segoe UI","Helvetica Neue",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--paper);border:1px solid var(--rule);border-radius:var(--r-sm);padding:2px 8px}
+.bdone{display:flex;align-items:center;gap:10px;min-height:44px;margin:8px 0 0;padding-top:4px;border-top:1px solid var(--rule);font-weight:600;color:var(--ink-soft);cursor:pointer;max-width:none}
+.bdone input{width:20px;height:20px;margin:0;flex:none;accent-color:var(--green)}
+.block.is-done{border-color:var(--green)} .block.is-done .bn{background:var(--green)} .block.is-done .bdone{color:var(--green-ink)}
+.blocks{display:grid;gap:10px;margin:16px 0}
+.blocks > .block p{margin:4px 0 0}
+.brkc{background:var(--green-soft);border:1px solid var(--green);border-radius:var(--r);padding:8px 16px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+/* Today card on guides: goals, plan chips, warm-up */
+.todaycard{background:var(--card);border:2px solid var(--indigo);padding:14px 16px 6px;margin:20px 0 10px}
+.todaycard .tc-goals > *{background:transparent!important;border:0!important;padding:0!important;margin:0!important;box-shadow:none!important;border-radius:0!important}
+.todaycard .tc-goals h2,.todaycard .tc-goals h3,.todaycard .tc-goals > * > p:first-child,.todaycard .tc-goals > * > b:first-child{display:block;font:600 1.25rem/1.25 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;color:var(--ink);margin:0 0 6px}
+.todaycard .tc-goals ol,.todaycard .tc-goals ul{margin:0;padding-left:22px}
+.todaycard .tc-goals li{margin:3px 0}
+.todaycard .tc-plan{margin:0 0 12px;padding-bottom:12px;border-bottom:1px solid var(--rule)}
+@media (max-width:600px){.todaycard .chips{display:grid;grid-template-columns:1fr 1fr;gap:6px}.todaycard .chip{padding:4px 10px;font-size:.9rem}.todaycard .chip.c0{grid-column:1 / -1}}
+.todaycard .tc-h{font-weight:700;margin:0 0 6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:4px;min-height:44px;padding:4px 12px;border:1px solid var(--indigo);background:var(--card);color:var(--indigo);text-decoration:none;font-size:.95rem;line-height:1.2}
+.chip b{font-weight:700}
+.chip.done{border-color:var(--green);color:var(--green-ink);background:var(--green-soft)}
+.chip.done::before{content:"\2713";font-weight:700}
+.todaycard .warmup{border:0;border-top:1px solid var(--rule);border-radius:0;padding:12px 0 4px;margin:12px 0 0;background:transparent}
+.todaycard .tc-plan + .warmup{border-top:0;margin-top:0;padding-top:0}
+.todaycard .warmup h2{font-size:1.15rem}
+.sitebar + .notice{margin:8px max(16px,calc((100% - 780px) / 2))}
+@media print{.sitebar,.notice,#termbox,.go,.chips,.bdone{display:none!important}nav.toc{position:static}.quiz button{display:list-item}.todaycard{border-width:1px}}
+</style><!--enhance:end-->
+</head>
+<body>
+<!--enhance:start--><nav class="sitebar" aria-label="Study site"><div class="sb"><a class="sb-home" href="index.html#today">← Today</a><a href="flashcards.html">Flashcards</a><a href="progress.html">Progress</a><a href="https://docs.google.com/spreadsheets/d/1svykHaPDhtPFnzkO6tdNk8GPLWyd8tOh6IAV-9gwkJQ/edit">Sheet</a></div></nav><!--enhance:end-->
+<header class="top"><div class="wrap" style="padding-bottom:0">
+  <div class="crumb"><a href="index.html">All study pages</a></div>
+  <h1>German: your route to a degree in Germany</h1>
+  <p>Not an IB subject: this is your own track to a German-taught degree from autumn 2028. Now: 15 minutes a day during the exams. From December: about 3 to 4 hours a week, step by step to a C1 certificate.</p>
+</div></header>
+<main class="wrap">
+
+<div class="prog" id="progress" aria-live="polite">
+  <h2>Your German progress</h2>
+  <div class="pr"><span>Level check: A1 statements ticked</span><b id="pg-level">0 of 7</b></div>
+  <div class="bar"><i id="bar-level"></i></div>
+  <div class="pr"><span>Daily sessions (9 Nov to 4 Dec)</span><b id="pg-days">0 of 25</b></div>
+  <div class="bar"><i id="bar-days"></i></div>
+  <div class="pr"><span>Weeks done (Dec 2026 to Mar 2027)</span><b id="pg-weeks">0 of 17</b></div>
+  <div class="bar"><i id="bar-weeks"></i></div>
+  <p class="small" id="savenote">Ticks are saved in this browser on this device.</p>
+</div>
+
+<nav class="jump" aria-label="On this page"><a href="#check">Level check</a><a href="#goal">Goal</a><a href="#now">Now to 4 Dec</a><a href="#weekly">From 5 Dec</a><a href="#later">Apr 2027 on</a><a href="#certs">Certificates</a><a href="#ib">IB and entry</a><a href="#free">Free resources</a></nav>
+
+<section id="check">
+<h2>1. Check your level (5 minutes)</h2>
+<p>These are the official "I can" statements for level A1 from the Council of Europe's language scale (the CEFR, the European scale of language levels from A1, beginner, to C2, near native), as published by <a href="https://europass.europa.eu/en/common-european-framework-reference-language-skills">Europass</a>. Read each one and tick it only if it is true for you <b>in German</b> today.</p>
+<p class="small">Quick test for the speaking line: say out loud now, in German, your name, where you live and who one person in your family is (for example: <i>Ich heiße …, ich wohne in Singapur, das ist meine Mutter, sie heißt …</i>).</p>
+<h3>A1 (beginner)</h3>
+<ul class="cans"><li><label class="ck"><input type="checkbox" data-store="level" data-grp="a1" data-k="l1"> <span><span class="sk">Listening</span> I can recognise familiar words and very basic phrases concerning myself, my family and immediate concrete surroundings when people speak slowly and clearly.</span></label></li><li><label class="ck"><input type="checkbox" data-store="level" data-grp="a1" data-k="l2"> <span><span class="sk">Reading</span> I can understand familiar names, words and very simple sentences, for example on notices and posters or in catalogues.</span></label></li><li><label class="ck"><input type="checkbox" data-store="level" data-grp="a1" data-k="l3"> <span><span class="sk">Spoken interaction</span> I can interact in a simple way provided the other person is prepared to repeat or rephrase things at a slower rate of speech and help me formulate what I'm trying to say.</span></label></li><li><label class="ck"><input type="checkbox" data-store="level" data-grp="a1" data-k="l4"> <span><span class="sk">Spoken interaction</span> I can ask and answer simple questions in areas of immediate need or on very familiar topics.</span></label></li><li><label class="ck"><input type="checkbox" data-store="level" data-grp="a1" data-k="l5"> <span><span class="sk">Spoken production</span> I can use simple phrases and sentences to describe where I live and people I know.</span></label></li><li><label class="ck"><input type="checkbox" data-store="level" data-grp="a1" data-k="l6"> <span><span class="sk">Writing</span> I can write a short, simple postcard, for example sending holiday greetings.</span></label></li><li><label class="ck"><input type="checkbox" data-store="level" data-grp="a1" data-k="l7"> <span><span class="sk">Writing</span> I can fill in forms with personal details, for example entering my name, nationality and address on a hotel registration form.</span></label></li></ul>
+<details class="more"><summary>Next level up: four A2 statements (optional)</summary>
+<ul class="cans"><li><label class="ck"><input type="checkbox" data-store="level" data-grp="a2" data-k="m1"> <span><span class="sk">Listening</span> I can catch the main point in short, clear, simple messages and announcements.</span></label></li><li><label class="ck"><input type="checkbox" data-store="level" data-grp="a2" data-k="m2"> <span><span class="sk">Reading</span> I can read very short, simple texts.</span></label></li><li><label class="ck"><input type="checkbox" data-store="level" data-grp="a2" data-k="m3"> <span><span class="sk">Spoken interaction</span> I can handle very short social exchanges, even though I can't usually understand enough to keep the conversation going myself.</span></label></li><li><label class="ck"><input type="checkbox" data-store="level" data-grp="a2" data-k="m4"> <span><span class="sk">Writing</span> I can write short, simple notes and messages relating to matters in areas of immediate needs.</span></label></li></ul>
+</details>
+<p class="verdict" id="verdict">Tick the statements that are true for you.</p>
+</section>
+
+<section id="goal">
+<h2>2. The goal and the timeline</h2>
+<p><b>Goal:</b> a degree taught in German at a German university, starting autumn 2028. For that you need a German certificate at about level C1 (see <a href="#certs">Certificates</a>). German is not one of your IB subjects, so this runs next to the IB, in small steady steps.</p>
+<div class="tablewrap"><table>
+<tr><th>When</th><th>Level (about)</th><th>How</th></tr>
+<tr><td>Now (Nov 2026)</td><td>A1</td><td>15 minutes a day during the exam fortnight</td></tr>
+<tr><td>End of Mar 2027</td><td>A1 complete</td><td>Weekly path: 3 to 4 hours a week, Nicos Weg A1 and its final test</td></tr>
+<tr><td>Summer 2027</td><td>A2</td><td>Nicos Weg A2 plus a holiday intensive course</td></tr>
+<tr><td>End of 2027</td><td>about B1</td><td>Nicos Weg B1 (in German only)</td></tr>
+<tr><td>Summer 2028</td><td>about C1, certificate</td><td>B2 and C1 work, then a full-time course after the IB exams, then the test</td></tr>
+</table></div>
+
+<div class="honest">
+<p><b>Being honest about the time.</b> The Goethe-Institut gives guide figures for the <i>total</i> time to reach each level from zero (<a href="https://www.goethe.de/ins/gb/de/sta/gla/kur/faq.html">Goethe-Institut Glasgow, FAQ</a>): B1 about 260 to 490 hours, C1 about 600 to 750 hours. It says the real time depends on the person, on other languages you already know (you have English and French, which helps) and on whether you live in Germany.</p>
+<p>What this plan adds up to (computed, assumptions in brackets):</p>
+<ul>
+<li>By the end of 2027: about 221 to 276 hours (55 weeks at 3 to 4 hours, plus one 3-week holiday intensive course in summer 2027 of 75 lessons of 45 minutes, about 56 hours). That is around the start of the B1 range (260 hours), so "about B1" is realistic if the habit holds.</li>
+<li>By the end of April 2028: about 293 to 365 hours (plus 17 weeks at 2 to 3 hours in the IB final year and a 2-week course in the December 2027 holiday, about 38 hours).</li>
+<li>That leaves about 235 to 457 hours short of the C1 range. A full-time course after the IB exams, June to August 2028 (4 intensive courses of 3 weeks, about 225 hours), brings the total to about 518 to 590 hours: still about 10 to 82 hours below the start of the C1 range. The German you learned before (and the 6 hours of daily sessions now) come on top.</li>
+</ul>
+<p><b>So:</b> C1 by summer 2028 is tight. It is possible if you learn faster than the average (English and French help) and keep the weekly habit every week, with holiday intensives (summer 2027 is the big one) and more hours whenever school allows. Keep a plan B in mind and discuss it with your parents: a German course in Germany that prepares for the university's own test (the DSH) before starting the degree (Goethe University Frankfurt, for example, asks for B1 to join its DSH course, <a href="https://www.uni-frankfurt.de/124980722/German_Language_Requirements?locale=en">source</a>), or a degree taught in English.</p>
+<p><b>Mind the dates.</b> Many universities want the certificate by the end of the application period, which for an October start is often 15 July (TU Braunschweig, <a href="https://www.tu-braunschweig.de/international-students/application">source</a>; also <a href="https://www.tum.de/en/studies/application/application-info-portal/admission-requirements/language-certificates">TUM</a>, <a href="https://www.uni-frankfurt.de/124980722/German_Language_Requirements?locale=en">Frankfurt</a>). A test taken at the end of a June to August 2028 course is too late for those. Routes that fit: a test passed before the deadline, a university that takes your current German proof with the application and lets you pass its own DSH before the semester starts (Viadrina, <a href="https://www.europa-uni.de/de/studium/studieneinstieg/internationale-studieninteressierte/sprachnachweise/index.html">source</a>), TU Braunschweig's rule for programmes without a selection limit (B2 course at application, certificate at enrolment), or starting a semester later.</p>
+</div>
+</section>
+
+<section id="now">
+<h2>3. Now to 4 Dec (exam fortnight): 15 minutes a day</h2>
+<div class="recipe">
+<p><b>Every day, 15 minutes, no more:</b></p>
+<ol>
+<li><b>5 to 8 min:</b> German flashcards on the <a href="flashcards.html">Flashcards page</a> (the German deck). Say each answer out loud before you turn the card.</li>
+<li><b>7 to 10 min:</b> one short part of Deutsche Welle's free video course <a href="https://learngerman.dw.com/en/nicos-weg/c-36519789">Nicos Weg A1</a>. Each lesson has a 1 to 2 minute video and about 8 to 16 short exercises, so each lesson is split into two days.</li>
+</ol>
+<p class="small">Free: lessons and exercises open without an account. Registering is optional; it only saves your progress across devices and unlocks DW's course certificate, which is not an official certificate (<a href="https://learngerman.dw.com/en/help">DW help</a>).</p>
+</div>
+<p>26 days: 20 lesson sessions (lessons 1 to 10), 5 lighter review days on busy days, and a rest day on Sun 29 Nov. Tick each day when done. Missed a day? Just do the next one; do not double up.</p>
+<ol class="days"><li class="day"><label class="ck"><input type="checkbox" data-store="days" data-k="2026-11-09"> <span class="dd">Mon 9 Nov</span></label><span class="dw"><b>Session 1:</b> lesson 1 <a href="https://learngerman.dw.com/en/hallo/l-37250531">Hallo!</a>, part 1: watch the video, then exercises 1 to 6 (of 12).</span></li><li class="day"><label class="ck"><input type="checkbox" data-store="days" data-k="2026-11-10"> <span class="dd">Tue 10 Nov</span></label><span class="dw"><b>Session 2:</b> lesson 1 <a href="https://learngerman.dw.com/en/hallo/l-37250531">Hallo!</a>, part 2: exercises 7 to 12, then read the Grammar tab.</span></li><li class="day"><label class="ck"><input type="checkbox" data-store="days" data-k="2026-11-11"> <span class="dd">Wed 11 Nov</span></label><span class="dw"><b>Session 3:</b> lesson 2 <a href="https://learngerman.dw.com/en/kein-problem/l-37251054">Kein Problem!</a>, part 1: watch the video, then exercises 1 to 6 (of 12).</span></li><li class="day"><label class="ck"><input type="checkbox" data-store="days" data-k="2026-11-12"> <span class="dd">Thu 12 Nov</span></label><span class="dw"><b>Session 4:</b> lesson 2 <a href="https://learngerman.dw.com/en/kein-problem/l-37251054">Kein Problem!</a>, part 2: exercises 7 to 12, then look through the Vocabulary tab.</span></li><li class="day"><label class="ck"><input type="checkbox" data-store="days" data-k="2026-11-13"> <span class="dd">Fri 13 Nov</span></label><span class="dw"><b>Session 5:</b> lesson 3 <a href="https://learngerman.dw.com/en/tsch%C3%BCss/l-37251033">Tschüss!</a>, part 1: watch the video, then exercises 1 to 6 (of 12).</span></li><li class="day"><label class="ck"><input type="checkbox" data-store="days" data-k="2026-11-14"> <span class="dd">Sat 14 Nov</span></label><span class="dw"><b>Session 6:</b> lesson 3 <a href="https://learngerman.dw.com/en/tsch%C3%BCss/l-37251033">Tschüss!</a>, part 2: exercises 7 to 12, then read the Grammar tab.</span></li><li class="day"><label class="ck"><input type="checkbox" data-store="days" data-k="2026-11-15"> <span class="dd">Sun 15 Nov</span></label><span class="dw"><b>Review (15 min).</b> All due German flashcards, then replay one Nicos Weg video you have already done: once with subtitles, once without. Say three sentences about yourself out loud.</span></li><li class="day"><label class="ck"><input type="checkbox" data-store="days" data-k="2026-11-16"> <span class="dd">Mon 16 Nov</span></label><span class="dw"><b>Session 7:</b> lesson 4 <a href="https://learngerman.dw.com/en/von-a-bis-z/l-37256418">Von A bis Z</a>, part 1: watch the video, then exercises 1 to 5 (of 10).</span></li><li class="day"><label class="ck"><input type="checkbox" data-store="days" data-k="2026-11-17"> <span class="dd">Tue 17 Nov</span></label><span class="dw"><b>Session 8:</b> lesson 4 <a href="https://learngerman.dw.com/en/von-a-bis-z/l-37256418">Von A bis Z</a>, part 2: exercises 6 to 10, then look through the Vocabulary tab.</span></li><li class="day"><label class="ck"><input type="checkbox" data-store="days" data-k="2026-11-18"> <span class="dd">Wed 18 Nov</span></label><span class="dw"><b>Session 9:</b> lesson 5 <a href="https://learngerman.dw.com/en/ich-hei%C3%9Fe-emma/l-37262882">Ich heiße Emma</a>, part 1: watch the video, then exercises 1 to 5 (of 9).</span></li><li class="day"><label class="ck"><input type="checkbox" data-store="days" data-k="2026-11-19"> <span class="dd">Thu 19 Nov</span></label><span class="dw"><b>Session 10:</b> lesson 5 <a href="https://learngerman.dw.com/en/ich-hei%C3%9Fe-emma/l-37262882">Ich heiße Emma</a>, part 2: exercises 6 to 9, then read the Grammar tab.</span></li><li class="day"><label class="ck"><input type="checkbox" data-store="days" data-k="2026-11-20"> <span class="dd">Fri 20 Nov</span></label><span class="dw"><b>Session 11:</b> lesson 6 <a href="https://learngerman.dw.com/en/das-ist-nico/l-37262923">Das ist Nico</a>, part 1: watch the video, then exercises 1 to 4 (of 8).</span></li><li class="day"><label class="ck"><input type="checkbox" data-store="days" data-k="2026-11-21"> <span class="dd">Sat 21 Nov</span></label><span class="dw"><b>Session 12:</b> lesson 6 <a href="https://learngerman.dw.com/en/das-ist-nico/l-37262923">Das ist Nico</a>, part 2: exercises 5 to 8, then look through the Vocabulary tab.</span></li><li class="day"><label class="ck"><input type="checkbox" data-store="days" data-k="2026-11-22"> <span class="dd">Sun 22 Nov</span></label><span class="dw"><b>Review (15 min).</b> All due German flashcards, then replay one Nicos Weg video you have already done: once with subtitles, once without. Say three sentences about yourself out loud.</span></li><li class="day"><label class="ck"><input type="checkbox" data-store="days" data-k="2026-11-23"> <span class="dd">Mon 23 Nov</span></label><span class="dw"><b>Session 13:</b> lesson 7 <a href="https://learngerman.dw.com/en/woher-kommst-du/l-37263828">Woher kommst du?</a>, part 1: watch the video, then exercises 1 to 6 (of 12).</span></li><li class="day"><label class="ck"><input type="checkbox" data-store="days" data-k="2026-11-24"> <span class="dd">Tue 24 Nov</span></label><span class="dw"><b>Session 14:</b> lesson 7 <a href="https://learngerman.dw.com/en/woher-kommst-du/l-37263828">Woher kommst du?</a>, part 2: exercises 7 to 12, then read the Grammar tab.</span></li><li class="day"><label class="ck"><input type="checkbox" data-store="days" data-k="2026-11-25"> <span class="dd">Wed 25 Nov</span></label><span class="dw"><b>Session 15:</b> lesson 8 <a href="https://learngerman.dw.com/en/nico-hat-ein-problem/l-37265543">Nico hat ein Problem</a>, part 1: watch the video, then exercises 1 to 6 (of 11).</span></li><li class="day"><label class="ck"><input type="checkbox" data-store="days" data-k="2026-11-26"> <span class="dd">Thu 26 Nov</span></label><span class="dw"><b>Session 16:</b> lesson 8 <a href="https://learngerman.dw.com/en/nico-hat-ein-problem/l-37265543">Nico hat ein Problem</a>, part 2: exercises 7 to 11, then read the Grammar tab.</span></li><li class="day"><label class="ck"><input type="checkbox" data-store="days" data-k="2026-11-27"> <span class="dd">Fri 27 Nov</span></label><span class="dw"><b>Session 17:</b> lesson 9 <a href="https://learngerman.dw.com/en/zahlen-von-1-bis-100/l-37265621">Zahlen von 1 bis 100</a>, part 1: watch the video, then exercises 1 to 7 (of 14).</span></li><li class="day"><label class="ck"><input type="checkbox" data-store="days" data-k="2026-11-28"> <span class="dd">Sat 28 Nov</span></label><span class="dw"><b>Review (15 min).</b> All due German flashcards, then replay one Nicos Weg video you have already done: once with subtitles, once without. Say three sentences about yourself out loud.</span></li><li class="day rest"><span class="dd">Sun 29 Nov</span><span class="dw"><b>Rest day.</b> No German today.</span></li><li class="day"><label class="ck"><input type="checkbox" data-store="days" data-k="2026-11-30"> <span class="dd">Mon 30 Nov</span></label><span class="dw"><b>Session 18:</b> lesson 9 <a href="https://learngerman.dw.com/en/zahlen-von-1-bis-100/l-37265621">Zahlen von 1 bis 100</a>, part 2: exercises 8 to 14, then read the Grammar tab.</span></li><li class="day"><label class="ck"><input type="checkbox" data-store="days" data-k="2026-12-01"> <span class="dd">Tue 1 Dec</span></label><span class="dw"><b>Session 19:</b> lesson 10 <a href="https://learngerman.dw.com/en/wichtige-nummern/l-37269501">Wichtige Nummern</a>, part 1: watch the video, then exercises 1 to 6 (of 12).</span></li><li class="day"><label class="ck"><input type="checkbox" data-store="days" data-k="2026-12-02"> <span class="dd">Wed 2 Dec</span></label><span class="dw"><b>Session 20:</b> lesson 10 <a href="https://learngerman.dw.com/en/wichtige-nummern/l-37269501">Wichtige Nummern</a>, part 2: exercises 7 to 12, then look through the Vocabulary tab.</span></li><li class="day"><label class="ck"><input type="checkbox" data-store="days" data-k="2026-12-03"> <span class="dd">Thu 3 Dec</span></label><span class="dw"><b>Review (15 min).</b> All due German flashcards, then replay one Nicos Weg video you have already done: once with subtitles, once without. Say three sentences about yourself out loud.</span></li><li class="day"><label class="ck"><input type="checkbox" data-store="days" data-k="2026-12-04"> <span class="dd">Fri 4 Dec</span></label><span class="dw"><b>Review and level check (15 min).</b> Due flashcards, then redo the <a href="#check">level check</a> at the top of this page and see what changed since 9 Nov.</span></li></ol>
+</section>
+
+<section id="weekly">
+<h2>4. From 5 Dec: the weekly path</h2>
+<p>After the exams the time goes up to about 3 to 4 hours a week: <b>4 sessions of 45 to 60 minutes</b>, one Nicos Weg lesson per session. Rest on 5 and 6 Dec; week 1 starts on Mon 7 Dec.</p>
+<div class="recipe">
+<p><b>One session (45 to 60 min):</b></p>
+<ol>
+<li><b>5 to 10 min:</b> due German flashcards, then the lesson's Vocabulary tab on DW.</li>
+<li><b>30 to 40 min:</b> the lesson: video once with subtitles and once without, all exercises, then the Grammar tab (if the lesson has one).</li>
+<li><b>5 to 10 min:</b> use it. Write five sentences about your own life with the new words and grammar, then read them out loud. Once a week, record yourself for one minute and listen back.</li>
+</ol>
+</div>
+<p>17 weeks, 4 lessons each, from lesson 11 to lesson 76 and the A1 final test (ends Sun 4 Apr 2027). Tick the week when all its sessions are done.</p>
+<div class="wks"><div class="wk" id="w1"><label class="ck wh"><input type="checkbox" data-store="weeks" data-k="2026-12-07"> <b>Week 1</b> <span class="dd">Mon 7 Dec to Sun 13 Dec</span></label><p class="chap">Chapter 2 Contact details and 3 In company</p><ol class="ls"><li>Lesson 11: <a href="https://learngerman.dw.com/en/adressen/l-37269671">Adressen</a> <span class="tp">(Providing personal information · W-questions)</span></li><li>Lesson 12: <a href="https://learngerman.dw.com/en/auf-dem-amt/l-37269629">Auf dem Amt</a> <span class="tp">(Formal address · Numbers over 100)</span></li><li>Lesson 13: <a href="https://learngerman.dw.com/en/was-machst-du-hier/l-37278679">Was machst du hier?</a> <span class="tp">(Social situations)</span></li><li>Lesson 14: <a href="https://learngerman.dw.com/en/was-trinkst-du/l-37279418">Was trinkst du?</a> <span class="tp">(Offering drinks · Nouns: gender)</span></li></ol></div><div class="wk" id="w2"><label class="ck wh"><input type="checkbox" data-store="weeks" data-k="2026-12-14"> <b>Week 2</b> <span class="dd">Mon 14 Dec to Sun 20 Dec</span></label><p class="chap">Chapter 3 In company and 4 Around the world</p><ol class="ls"><li>Lesson 15: <a href="https://learngerman.dw.com/en/eine-pizza-bitte/l-37279261">Eine Pizza bitte!</a> <span class="tp">(Placing an order · Vowel change: e to i)</span></li><li>Lesson 16: <a href="https://learngerman.dw.com/en/zahlen-bitte/l-37280348">Zahlen bitte!</a> <span class="tp">(Paying the bill)</span></li><li>Lesson 17: <a href="https://learngerman.dw.com/en/ich-war-schon-in-berlin/l-37325550">Ich war schon in Berlin</a> <span class="tp">(Sightseeing attractions · Simple past: sein)</span></li><li>Lesson 18: <a href="https://learngerman.dw.com/en/wo-liegt-das/l-37337877">Wo liegt das?</a> <span class="tp">(Geographic info · Questions and statements)</span></li></ol></div><div class="wk" id="w3"><label class="ck wh"><input type="checkbox" data-store="weeks" data-k="2026-12-21"> <b>Week 3</b> <span class="dd">Mon 21 Dec to Sun 27 Dec</span></label><p class="chap">Chapter 4 Around the world and 5 Things</p><ol class="ls"><li>Lesson 19: <a href="https://learngerman.dw.com/en/in-europa/l-37328492">In Europa</a> <span class="tp">(Speaking about countries · Indefinite pronouns: man)</span></li><li>Lesson 20: <a href="https://learngerman.dw.com/en/andere-l%C3%A4nder/l-37337244">Andere Länder</a> <span class="tp">(Languages · Conjugation: sprechen)</span></li><li>Lesson 21: <a href="https://learngerman.dw.com/en/was-ist-das/l-37368285">Was ist das?</a> <span class="tp">(Naming objects · Articles: definite)</span></li><li>Lesson 22: <a href="https://learngerman.dw.com/en/wem-geh%C3%B6rt-das/l-37372077">Wem gehört das?</a> <span class="tp">(Asking about objects · Articles: indefinite)</span></li></ol><p class="hol">Holiday week: if you travel, do at least 2 sessions and move the other lessons into next week.</p></div><div class="wk" id="w4"><label class="ck wh"><input type="checkbox" data-store="weeks" data-k="2026-12-28"> <b>Week 4</b> <span class="dd">Mon 28 Dec to Sun 3 Jan</span></label><p class="chap">Chapter 5 Things and 6 Living</p><ol class="ls"><li>Lesson 23: <a href="https://learngerman.dw.com/en/ich-habe-kein/l-37382992">Ich habe kein …</a> <span class="tp">(What you (do not) have · Sentence construction: subject)</span></li><li>Lesson 24: <a href="https://learngerman.dw.com/en/das-auto-ist-rot/l-37401537">Das Auto ist rot</a> <span class="tp">(Naming objects · Adjectives following "sein")</span></li><li>Lesson 25: <a href="https://learngerman.dw.com/en/so-wohne-ich/l-37425145">So wohne ich</a> <span class="tp">(Living arrangements · Articles)</span></li><li>Lesson 26: <a href="https://learngerman.dw.com/en/meine-wohnung/l-37425763">Meine Wohnung</a> <span class="tp">(The rooms in an apartment · Negatives: nicht)</span></li></ol><p class="hol">Holiday week: if you travel, do at least 2 sessions and move the other lessons into next week.</p></div><div class="wk" id="w5"><label class="ck wh"><input type="checkbox" data-store="weeks" data-k="2027-01-04"> <b>Week 5</b> <span class="dd">Mon 4 Jan to Sun 10 Jan</span></label><p class="chap">Chapter 6 Living and 7 Days and times</p><ol class="ls"><li>Lesson 27: <a href="https://learngerman.dw.com/en/sofa-sessel-und-tisch/l-37438475">Sofa, Sessel und Tisch</a> <span class="tp">(Describing interiors · zu + adjective)</span></li><li>Lesson 28: <a href="https://learngerman.dw.com/en/unser-haus/l-37439097">Unser Haus</a> <span class="tp">(Saying what is whose · Possessive determiners)</span></li><li>Lesson 29: <a href="https://learngerman.dw.com/en/emmas-tag/l-37442425">Emmas Tag</a> <span class="tp">(Talking about the day · Time: 12-hour clock)</span></li><li>Lesson 30: <a href="https://learngerman.dw.com/en/tageszeiten/l-37445884">Tageszeiten</a> <span class="tp">(Describing the day · Separable verbs)</span></li></ol></div><div class="wk" id="w6"><label class="ck wh"><input type="checkbox" data-store="weeks" data-k="2027-01-11"> <b>Week 6</b> <span class="dd">Mon 11 Jan to Sun 17 Jan</span></label><p class="chap">Chapter 7 Days and times and 8 Appointments</p><ol class="ls"><li>Lesson 31: <a href="https://learngerman.dw.com/en/am-sonntag-koche-ich/l-37452061">Am Sonntag koche ich</a> <span class="tp">(Free time activities · Prepositions of time: an)</span></li><li>Lesson 32: <a href="https://learngerman.dw.com/en/emmas-wochenende/l-37452629">Emmas Wochenende</a> <span class="tp">(The weekend · Adverbs: sequence)</span></li><li>Lesson 33: <a href="https://learngerman.dw.com/en/wie-sp%C3%A4t-ist-es/l-37453621">Wie spät ist es?</a> <span class="tp">(Understanding time and date · Time specification: 24-hour clock)</span></li><li>Lesson 34: <a href="https://learngerman.dw.com/en/hast-du-morgen-zeit/l-37461035">Hast du morgen Zeit?</a> <span class="tp">(Planning dates · Ordinal numbers)</span></li></ol></div><div class="wk" id="w7"><label class="ck wh"><input type="checkbox" data-store="weeks" data-k="2027-01-18"> <b>Week 7</b> <span class="dd">Mon 18 Jan to Sun 24 Jan</span></label><p class="chap">Chapter 8 Appointments and 9 Working life</p><ol class="ls"><li>Lesson 35: <a href="https://learngerman.dw.com/en/wann-spielen-wir/l-37468614">Wann spielen wir?</a> <span class="tp">(Making arrangements · Conjugation: können)</span></li><li>Lesson 36: <a href="https://learngerman.dw.com/en/zu-sp%C3%A4t/l-37460778">Zu spät!?</a> <span class="tp">(Delays · Simple past: haben)</span></li><li>Lesson 37: <a href="https://learngerman.dw.com/en/ich-bin-lehrerin/l-37469204">Ich bin Lehrerin</a> <span class="tp">(Talking about professions · Word formation: professions)</span></li><li>Lesson 38: <a href="https://learngerman.dw.com/en/mein-beruf/l-37475138">Mein Beruf</a> <span class="tp">(Describing activities · Modal verbs)</span></li></ol></div><div class="wk" id="w8"><label class="ck wh"><input type="checkbox" data-store="weeks" data-k="2027-01-25"> <b>Week 8</b> <span class="dd">Mon 25 Jan to Sun 31 Jan</span></label><p class="chap">Chapter 9 Working life and 10 Orientation</p><ol class="ls"><li>Lesson 39: <a href="https://learngerman.dw.com/en/wo-ist-der-aufzug/l-37476734">Wo ist der Aufzug?</a> <span class="tp">(Finding your way around a building · The dative)</span></li><li>Lesson 40: <a href="https://learngerman.dw.com/en/traumberufe/l-37477568">Traumberufe</a> <span class="tp">(Career hopes · Modal verbs: wollen)</span></li><li>Lesson 41: <a href="https://learngerman.dw.com/en/wo-ist-der-bahnhof/l-37594551">Wo ist der Bahnhof?</a> <span class="tp">(Living and working · Prepositions: bei, von)</span></li><li>Lesson 42: <a href="https://learngerman.dw.com/en/an-der-ampel-links/l-37595076">An der Ampel links</a> <span class="tp">(Giving directions · Prepositions of place)</span></li></ol></div><div class="wk" id="w9"><label class="ck wh"><input type="checkbox" data-store="weeks" data-k="2027-02-01"> <b>Week 9</b> <span class="dd">Mon 1 Feb to Sun 7 Feb</span></label><p class="chap">Chapter 10 Orientation and 11 Eating and leisure</p><ol class="ls"><li>Lesson 43: <a href="https://learngerman.dw.com/en/mit-bus-und-bahn/l-37595395">Mit Bus und Bahn</a> <span class="tp">(Commuting to work · Prepositions: mit)</span></li><li>Lesson 44: <a href="https://learngerman.dw.com/en/im-b%C3%BCro/l-37595501">Im Büro</a> <span class="tp">(Objects in the office · Two-case prepositions)</span></li><li>Lesson 45: <a href="https://learngerman.dw.com/en/lebensmittel/l-37597045">Lebensmittel</a> <span class="tp">(Talking about food · Negation: nicht/kein)</span></li><li>Lesson 46: <a href="https://learngerman.dw.com/en/ich-mag-nicht/l-37599970">Ich mag (nicht)!</a> <span class="tp">(Eating preferences · Comparative)</span></li></ol></div><div class="wk" id="w10"><label class="ck wh"><input type="checkbox" data-store="weeks" data-k="2027-02-08"> <b>Week 10</b> <span class="dd">Mon 8 Feb to Sun 14 Feb</span></label><p class="chap">Chapter 11 Eating and leisure and 12 Food</p><ol class="ls"><li>Lesson 47: <a href="https://learngerman.dw.com/en/haushaltsarbeit/l-37631238">Haushaltsarbeit</a> <span class="tp">(Preferences at home · Comparison: wie/als)</span></li><li>Lesson 48: <a href="https://learngerman.dw.com/en/was-macht-dir-spa%C3%9F/l-37630630">Was macht dir Spaß?</a> <span class="tp">(Leisure activities · gehen + infinitive)</span></li><li>Lesson 49: <a href="https://learngerman.dw.com/en/mengen-und-preise/l-37628421">Mengen und Preise</a> <span class="tp">(Buying groceries · Prepositions: in, auf)</span></li><li>Lesson 50: <a href="https://learngerman.dw.com/en/was-darf-es-sein/l-37635620">Was darf es sein?</a> <span class="tp">(Shopping conversations)</span></li></ol></div><div class="wk" id="w11"><label class="ck wh"><input type="checkbox" data-store="weeks" data-k="2027-02-15"> <b>Week 11</b> <span class="dd">Mon 15 Feb to Sun 21 Feb</span></label><p class="chap">Chapter 12 Food and 13 Weather and holiday</p><ol class="ls"><li>Lesson 51: <a href="https://learngerman.dw.com/en/sonst-noch-etwas/l-37646611">Sonst noch etwas?</a> <span class="tp">(Shopping at the market · Question words: wie viel)</span></li><li>Lesson 52: <a href="https://learngerman.dw.com/en/wie-viel-mehl/l-37647289">Wie viel Mehl?</a> <span class="tp">(Following a recipe · Instructions)</span></li><li>Lesson 53: <a href="https://learngerman.dw.com/en/wie-war-dein-urlaub/l-37648534">Wie war dein Urlaub?</a> <span class="tp">(Talking about holidays · Present perfect with "haben")</span></li><li>Lesson 54: <a href="https://learngerman.dw.com/en/jahreszeiten/l-37651758">Jahreszeiten</a> <span class="tp">(Comparing the seasons · Comparison)</span></li></ol></div><div class="wk" id="w12"><label class="ck wh"><input type="checkbox" data-store="weeks" data-k="2027-02-22"> <b>Week 12</b> <span class="dd">Mon 22 Feb to Sun 28 Feb</span></label><p class="chap">Chapter 13 Weather and holiday and 14 Clothing</p><ol class="ls"><li>Lesson 55: <a href="https://learngerman.dw.com/en/der-ausflug/l-37651657">Der Ausflug</a> <span class="tp">(Talking about the past · Present perfect with "sein")</span></li><li>Lesson 56: <a href="https://learngerman.dw.com/en/wie-wird-das-wetter/l-37653197">Wie wird das Wetter?</a> <span class="tp">(Talking about the weather · Pronouns: es)</span></li><li>Lesson 57: <a href="https://learngerman.dw.com/en/das-ist-jetzt-modern/l-37655848">Das ist jetzt modern</a> <span class="tp">(Talking about clothing · Adjective declension)</span></li><li>Lesson 58: <a href="https://learngerman.dw.com/en/mein-lieblingspulli/l-37656274">Mein Lieblingspulli</a> <span class="tp">(Describing clothing · Question words: welch-)</span></li></ol></div><div class="wk" id="w13"><label class="ck wh"><input type="checkbox" data-store="weeks" data-k="2027-03-01"> <b>Week 13</b> <span class="dd">Mon 1 Mar to Sun 7 Mar</span></label><p class="chap">Chapter 14 Clothing and 15 Family</p><ol class="ls"><li>Lesson 59: <a href="https://learngerman.dw.com/en/das-passt-gut/l-37661740">Das passt gut!</a> <span class="tp">(Shopping for clothes · Verbs with a dative object)</span></li><li>Lesson 60: <a href="https://learngerman.dw.com/en/schick/l-37661765">Schick!</a> <span class="tp">(Casual wear)</span></li><li>Lesson 61: <a href="https://learngerman.dw.com/en/meine-familie/l-37661741">Meine Familie</a> <span class="tp">(Talking about family · Adjective declension)</span></li><li>Lesson 62: <a href="https://learngerman.dw.com/en/meine-eltern/l-37664246">Meine Eltern</a> <span class="tp">(Introducing parents · Personal pronouns: accusative)</span></li></ol></div><div class="wk" id="w14"><label class="ck wh"><input type="checkbox" data-store="weeks" data-k="2027-03-08"> <b>Week 14</b> <span class="dd">Mon 8 Mar to Sun 14 Mar</span></label><p class="chap">Chapter 15 Family and 16 Sports and exercise</p><ol class="ls"><li>Lesson 63: <a href="https://learngerman.dw.com/en/meine-tante/l-37664498">Meine Tante</a> <span class="tp">(Career choices · The possessive determiner)</span></li><li>Lesson 64: <a href="https://learngerman.dw.com/en/mein-bruder/l-37664164">Mein Bruder</a> <span class="tp">(Talking about siblings · Modal verbs: sollen)</span></li><li>Lesson 65: <a href="https://learngerman.dw.com/en/von-kopf-bis-fu%C3%9F/l-37664951">Von Kopf bis Fuß</a> <span class="tp">(Sports · Comparison)</span></li><li>Lesson 66: <a href="https://learngerman.dw.com/en/bist-du-fit/l-37668333">Bist du fit?</a> <span class="tp">(Sports and training · Time specification: Wann ...?)</span></li></ol></div><div class="wk" id="w15"><label class="ck wh"><input type="checkbox" data-store="weeks" data-k="2027-03-15"> <b>Week 15</b> <span class="dd">Mon 15 Mar to Sun 21 Mar</span></label><p class="chap">Chapter 16 Sports and exercise and 17 Health</p><ol class="ls"><li>Lesson 67: <a href="https://learngerman.dw.com/en/fitness/l-37668815">Fitness</a> <span class="tp">(Fitness tips · Comparison)</span></li><li>Lesson 68: <a href="https://learngerman.dw.com/en/ist-das-gesund/l-37670365">Ist das gesund?</a> <span class="tp">(Talking about nutrition · Imperative: informal)</span></li><li>Lesson 69: <a href="https://learngerman.dw.com/en/geht-es-dir-gut/l-37778457">Geht es dir gut?</a> <span class="tp">(Talking about illnesses · Müssen or sollen?)</span></li><li>Lesson 70: <a href="https://learngerman.dw.com/en/beim-arzt/l-37778169">Beim Arzt</a> <span class="tp">(Checking in at the doctor's · Modal verbs: dürfen)</span></li></ol></div><div class="wk" id="w16"><label class="ck wh"><input type="checkbox" data-store="weeks" data-k="2027-03-22"> <b>Week 16</b> <span class="dd">Mon 22 Mar to Sun 28 Mar</span></label><p class="chap">Chapter 17 Health and 18 Home</p><ol class="ls"><li>Lesson 71: <a href="https://learngerman.dw.com/en/gute-besserung/l-37780308">Gute Besserung!</a> <span class="tp">(Inquiring about patients · Present perfect)</span></li><li>Lesson 72: <a href="https://learngerman.dw.com/en/nehmen-sie/l-37782214">Nehmen Sie …</a> <span class="tp">(A visit to the doctor · Prepositions: vor, nach)</span></li><li>Lesson 73: <a href="https://learngerman.dw.com/en/meine-heimat/l-37776166">Meine Heimat</a> <span class="tp">(Talking about home · Adjective declension)</span></li><li>Lesson 74: <a href="https://learngerman.dw.com/en/leben-in-deutschland/l-37777069">Leben in Deutschland</a> <span class="tp">(To miss something · Personal pronouns: dative)</span></li></ol></div><div class="wk" id="w17"><label class="ck wh"><input type="checkbox" data-store="weeks" data-k="2027-03-29"> <b>Week 17</b> <span class="dd">Mon 29 Mar to Sun 4 Apr</span></label><p class="chap">Chapter 18 Home</p><ol class="ls"><li>Lesson 75: <a href="https://learngerman.dw.com/en/anders-als-zu-hause/l-37779968">Anders als zu Hause</a> <span class="tp">(Comparisons)</span></li><li>Lesson 76: <a href="https://learngerman.dw.com/en/ich-tr%C3%A4ume-von/l-37783730">Ich träume von …</a> <span class="tp">(Hopes and dreams · Subjunctive: Wishes)</span></li><li><a href="https://learngerman.dw.com/en/final-test-a1/l-44875550">Final Test A1</a> (check your knowledge of the whole A1 course)</li></ol></div></div>
+</section>
+
+<section id="later">
+<h2>5. April 2027 to summer 2028: milestones</h2>
+<div class="tablewrap"><table>
+<tr><th>Quarter</th><th>Aim</th><th>Main resource</th></tr>
+<tr><td>Apr to Jun 2027</td><td>A2: about 48 of the 76 A2 lessons (12 weeks at 4 a week)</td><td><a href="https://learngerman.dw.com/en/nicos-weg/c-36519797">Nicos Weg A2</a></td></tr>
+<tr><td>Jul to Sep 2027</td><td>Finish A2 and its final test; holiday intensive course (2 to 3 weeks); start B1</td><td>Nicos Weg A2 and <a href="https://learngerman.dw.com/de/nicos-weg/c-36519718">B1</a> (B1 is in German only), a course at the <a href="https://www.goethe.de/ins/sg/en/kur/kur.html">Goethe-Institut Singapore</a> (adult courses from age 16) or in Germany (<a href="https://www.goethe.de/ins/de/en/uun/dln.html">intensive courses</a>)</td></tr>
+<tr><td>Oct to Dec 2027</td><td>About B1: most of Nicos Weg B1; a 2-week course in the December holiday</td><td>Nicos Weg B1, <a href="https://www.goethe.de/prj/dfd/en/home.cfm">Deutsch für dich</a> B1 exercises</td></tr>
+<tr><td>Jan to Apr 2028</td><td>Towards B2 at 2 to 3 hours a week (IB final year). Choose programmes, check their language rule and deadline, book the test</td><td>DW <a href="https://learngerman.dw.com/de/langsam-gesprochene-nachrichten/s-60040332">Langsam gesprochene Nachrichten</a>, TestDaF practice material (<a href="https://www.goethe.de/ins/sg/en/kur/prf/testdaf.html">Goethe-Institut Singapore</a>)</td></tr>
+<tr><td>May 2028</td><td>IB exams: German pauses (flashcards only)</td><td></td></tr>
+<tr><td>Jun to Aug 2028</td><td>Full-time intensive course (C1, test preparation), then the certificate test. Mind the deadlines (see the box in section 2)</td><td>Goethe-Institut intensive courses; TestDaF or telc C1 Hochschule, or the DSH in Germany</td></tr>
+</table></div>
+<!-- UNSURE: IB final exams assumed May 2028 (she is in Grade 11 now, diploma year 1); confirm with the school. -->
+</section>
+
+<section id="certs">
+<h2>6. Certificates that German universities accept</h2>
+<p>To study a programme taught in German, you prove your German with a certificate. These are the main ones. <b>Each university, and sometimes each programme, sets its own rule</b>, so always check the admission page of the programme you choose (<a href="https://www.daad.de/en/studying-in-germany/living-in-germany/german-language/">DAAD</a>).</p>
+<div class="tablewrap"><table>
+<tr><th>Certificate</th><th>Result usually needed</th><th>Where you take it</th></tr>
+<tr><td><b>TestDaF</b> (Test Deutsch als Fremdsprache)</td><td><b>TDN 4 in all four parts</b> (reading, listening, writing, speaking). This counts for unrestricted admission to all programmes (<a href="https://www.testdaf.de/de/hochschulen/der-testdaf-und-hochschulen/nachweis-der-deutschkenntnisse-fuer-das-studium/">TestDaF Institute</a>, quoting the national framework rules RO-DT). Some programmes accept less in one part.</td><td>Test centres in about 100 countries (<a href="https://www.daad.de/en/studying-in-germany/living-in-germany/german-language/">DAAD</a>); the <a href="https://www.goethe.de/ins/sg/en/kur/prf/testdaf.html">Goethe-Institut Singapore</a> offers it.</td></tr>
+<tr><td><b>DSH</b> (the universities' own German test)</td><td><b>DSH-2</b> overall counts for all programmes (<a href="https://www.tum.de/en/studies/application/application-info-portal/admission-requirements/language-certificates">TUM</a>, <a href="https://www.uni-frankfurt.de/124980722/German_Language_Requirements?locale=en">Goethe University Frankfurt</a>). Medicine and dentistry at Frankfurt need DSH-3.</td><td>In Germany, at universities (<a href="https://www.daad.de/en/studying-in-germany/living-in-germany/german-language/">DAAD</a>).</td></tr>
+<tr><td><b>telc Deutsch C1 Hochschule</b></td><td>Passed; "usually recognised" (<a href="https://www.daad.de/en/studying-in-germany/living-in-germany/german-language/">DAAD</a>; accepted at <a href="https://www.tum.de/en/studies/application/application-info-portal/admission-requirements/language-certificates">TUM</a> and <a href="https://www.tu-braunschweig.de/international-students/application">TU Braunschweig</a>). Some ask for a grade: Frankfurt wants at least "befriedigend" (satisfactory) (<a href="https://www.uni-frankfurt.de/124980722/German_Language_Requirements?locale=en">source</a>), Viadrina wants "gut" (good) (<a href="https://www.europa-uni.de/de/studium/studieneinstieg/internationale-studieninteressierte/sprachnachweise/index.html">source</a>).</td><td>telc exam centres.</td></tr>
+<tr><td><b>Goethe-Zertifikat C2</b></td><td>Passed; "usually recognised" (<a href="https://www.daad.de/en/studying-in-germany/living-in-germany/german-language/">DAAD</a>, <a href="https://www.tum.de/en/studies/application/application-info-portal/admission-requirements/language-certificates">TUM</a>, <a href="https://www.uni-frankfurt.de/124980722/German_Language_Requirements?locale=en">Frankfurt</a>).</td><td>Goethe-Institut, including Singapore.</td></tr>
+<tr><td><b>Goethe-Zertifikat C1</b></td><td>Only "for some degree programmes" (<a href="https://www.daad.de/en/studying-in-germany/living-in-germany/german-language/">DAAD</a>); Viadrina says C1 is not enough (<a href="https://www.europa-uni.de/de/studium/studieneinstieg/internationale-studieninteressierte/sprachnachweise/index.html">source</a>). Do not plan on it without checking.</td><td>Goethe-Institut, including Singapore.</td></tr>
+</table></div>
+<ul class="small">
+<li><b>Deadline:</b> some universities want the certificate by the end of the application period (<a href="https://www.tum.de/en/studies/application/application-info-portal/admission-requirements/language-certificates">TUM</a>, <a href="https://www.uni-frankfurt.de/124980722/German_Language_Requirements?locale=en">Frankfurt</a>). TU Braunschweig, for programmes without a selection limit, accepts proof of a B2 course at application and the certificate at enrolment (<a href="https://www.tu-braunschweig.de/international-students/application">source</a>).</li>
+<li>uni-assist (the service many universities use to check international applications) lists DSH, TestDaF, Goethe-Institut certificates and the school German diploma DSD as accepted by all universities, with levels that vary (<a href="https://www.uni-assist.de/en/how-to-apply/plan-your-application/language-certificates/">uni-assist</a>).</li>
+<li>Course attendance papers and DW's course certificate are not proof of German.</li>
+</ul>
+</section>
+
+<section id="ib">
+<div class="ibbox">
+<h2>7. Your IB subjects and German university entry</h2>
+<p class="small">Source: the official KMK agreement on recognising the IB Diploma (decision of 10.03.1986 as amended 15.06.2023; Anlage 1 as of 26.03.2026, Anlage 2 as of 19.11.2024), <a href="https://www.kmk.org/zab/fileadmin/Dateien/pdf/ZAB/Hochschulzugang_Beschluesse_der_KMK/aktuell/283_Vereinb_Anerkenn_Int_Baccalaureate_Diploma-2023-06-15_Liste1__2026-03-26_Liste2-2024-11-19.pdf">KMK PDF</a>. KMK is the conference of German state education ministers.</p>
+<ul>
+<li><b>Your subjects meet the subject rules</b> (rule 1a and 1b): two languages (English A, French B), a science (Biology), Mathematics (Analysis and Approaches), a social science (Psychology, Business Management), and at least one of the Higher Level subjects is a language, maths or a science (English A HL, Biology HL). Every subject needs at least grade 4 (one grade 3 can be balanced by a 5 in another subject at the same or a higher level, with at least 24 points in total: rule 1d).</li>
+<li><b>Maths is the catch</b> (footnote 3): with Mathematics AA at Standard Level you only get <i>subject-restricted</i> entry, to degrees outside mathematics, natural sciences and technology. So no maths, science or engineering degree. The exception is schools on the KMK's Anlage 1 or 2 lists; in Singapore only the German European School Singapore is listed. <b>With Mathematics AA at Higher Level you get general entry</b> to all subjects.</li>
+<li><b>German proof</b> (rule 1e): German citizens who took the IB at a school abroad without German as a subject must prove enough German before starting a degree in Germany; the federal states set the details. Other applicants need a German certificate anyway (see <a href="#certs">Certificates</a>). That is what this page is for.</li>
+</ul>
+<p class="ask"><b>Question for the school:</b> you may want a science or engineering degree. Can you move to Mathematics AA HL, and by when? Without it, the IB alone does not open those degrees (the agreement's rule 2 allows an extra entrance exam, the Feststellungsprüfung, but that costs time).</p>
+<!-- UNSURE: rule 1a asks that at least one language is a continued foreign language as Language A or Language B HL; English A is assumed to count. Confirm with the school or the ZAB if needed. -->
+</div>
+</section>
+
+<section id="free">
+<h2>8. Free resources</h2>
+<ul class="res">
+<li><a href="https://learngerman.dw.com/en/nicos-weg/c-36519789"><b>DW Learn German: Nicos Weg</b></a>, a free video course: <a href="https://learngerman.dw.com/en/nicos-weg/c-36519789">A1</a>, <a href="https://learngerman.dw.com/en/nicos-weg/c-36519797">A2</a>, <a href="https://learngerman.dw.com/de/nicos-weg/c-36519718">B1</a>. No login needed to watch and do the exercises; from B1 the course is in German only (<a href="https://learngerman.dw.com/en/help">DW help</a>).</li>
+<li><a href="https://www.goethe.de/prj/dfd/en/home.cfm"><b>Goethe-Institut: Deutsch für dich</b></a>: free grammar, vocabulary, reading and listening exercises for all levels. The login was switched off; the exercises stay free without it. More free Goethe material: <a href="https://www.goethe.de/de/spr/ueb.html">Kostenlos Deutsch üben</a> (page in German).</li>
+<li><a href="https://learngerman.dw.com/de/langsam-gesprochene-nachrichten/s-60040332"><b>DW: Langsam gesprochene Nachrichten</b></a> (slowly spoken news), Monday to Saturday, audio plus the full text to read along. DW labels it B2, so start it from about B1 (late 2027), with the text open.</li>
+<li><a href="https://learngerman.dw.com/en/deine-deutschpr%C3%BCfung/s-68305661"><b>DW: Deine Deutschprüfung</b></a>: what the official German tests look like, A1 to C2, with practice tasks for A1 to B1.</li>
+</ul>
+</section>
+
+<details class="more" id="sources"><summary>Sources (all checked 8 Nov 2026)</summary>
+<ul class="small">
+<li>Course content and links: DW Nicos Weg <a href="https://learngerman.dw.com/en/nicos-weg/c-36519789">A1</a>, <a href="https://learngerman.dw.com/en/nicos-weg/c-36519797">A2</a>, <a href="https://learngerman.dw.com/de/nicos-weg/c-36519718">B1</a>; <a href="https://learngerman.dw.com/en/help">DW help</a>.</li>
+<li>Level statements: CEFR self-assessment grid, <a href="https://europass.europa.eu/en/common-european-framework-reference-language-skills">Europass</a>.</li>
+<li>Hours per level: <a href="https://www.goethe.de/ins/gb/de/sta/gla/kur/faq.html">Goethe-Institut Glasgow FAQ</a>; course sizes: <a href="https://www.goethe.de/ins/de/en/uun/dln.html">Goethe-Institut Germany</a>.</li>
+<li>Certificates: <a href="https://www.daad.de/en/studying-in-germany/living-in-germany/german-language/">DAAD</a>, <a href="https://www.testdaf.de/de/hochschulen/der-testdaf-und-hochschulen/nachweis-der-deutschkenntnisse-fuer-das-studium/">TestDaF Institute</a>, <a href="https://www.uni-assist.de/en/how-to-apply/plan-your-application/language-certificates/">uni-assist</a>, <a href="https://www.tum.de/en/studies/application/application-info-portal/admission-requirements/language-certificates">TUM</a>, <a href="https://www.uni-frankfurt.de/124980722/German_Language_Requirements?locale=en">Goethe University Frankfurt</a>, <a href="https://www.tu-braunschweig.de/international-students/application">TU Braunschweig</a>, <a href="https://www.europa-uni.de/de/studium/studieneinstieg/internationale-studieninteressierte/sprachnachweise/index.html">Viadrina</a>.</li>
+<li>IB entry: <a href="https://www.kmk.org/zab/fileadmin/Dateien/pdf/ZAB/Hochschulzugang_Beschluesse_der_KMK/aktuell/283_Vereinb_Anerkenn_Int_Baccalaureate_Diploma-2023-06-15_Liste1__2026-03-26_Liste2-2024-11-19.pdf">KMK agreement on the IB Diploma</a>.</li>
+</ul>
+</details>
+
+</main>
+<script>
+(function(){
+  var KEYS={level:'ib-german-level',days:'ib-german-days',weeks:'ib-german-weeks'};
+  var ok=true; try{var t='__ib_t'; localStorage.setItem(t,'1'); localStorage.removeItem(t);}catch(e){ok=false;}
+  function get(k){ try{ var v=JSON.parse(localStorage.getItem(k)||'null'); return v&&typeof v==='object'?v:{}; }catch(e){ return {}; } }
+  function put(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); }catch(e){} }
+  function today(){ var d=new Date(); return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2); }
+  var boxes=[].slice.call(document.querySelectorAll('input[data-store]'));
+  function count(sel){ var all=boxes.filter(function(b){return b.matches(sel);}); return [all.filter(function(b){return b.checked;}).length, all.length]; }
+  function show(id,c){ var e=document.getElementById('pg-'+id); if(e) e.textContent=c[0]+' of '+c[1];
+    var b=document.getElementById('bar-'+id); if(b) b.style.width=(c[1]?Math.round(100*c[0]/c[1]):0)+'%'; }
+  function refresh(){
+    var a1=count('[data-store=level][data-grp=a1]'), a2=count('[data-store=level][data-grp=a2]');
+    show('level',a1); show('days',count('[data-store=days]')); show('weeks',count('[data-store=weeks]'));
+    var v=document.getElementById('verdict');
+    if(v){ if(!a1[0]&&!a2[0]) v.textContent='Tick the statements that are true for you.';
+      else if(a1[0]<a1[1]) v.textContent=a1[0]+' of '+a1[1]+' A1 statements ticked: you are working towards A1. The daily sessions below are made for exactly this.';
+      else if(a2[0]>=3) v.textContent='All A1 statements and '+a2[0]+' of '+a2[1]+' A2 statements ticked: you may be past A1. Do the first daily sessions anyway (they will go fast) and tell your father; you could skip ahead in the weekly path.';
+      else v.textContent='All A1 statements ticked: you are at A1. The plan below fits you.'; }
+    boxes.forEach(function(b){ if(b.getAttribute('data-store')==='weeks'){ var w=b.closest('.wk'); if(w) w.classList.toggle('done',b.checked); } });
+  }
+  boxes.forEach(function(b){
+    var k=KEYS[b.getAttribute('data-store')], id=b.getAttribute('data-k');
+    b.checked=!!get(k)[id];
+    b.addEventListener('change',function(){ var s=get(k); if(b.checked) s[id]=today(); else delete s[id]; put(k,s); refresh(); });
+  });
+  if(!ok){ var n=document.getElementById('savenote'); if(n) n.textContent='This browser is not saving ticks (private mode?). Your ticks will be lost when you close the page.'; }
+  refresh();
+})();
+</script>
+<!--enhance:start--><script>(function(){
+  if(window.__ibSite) return; window.__ibSite=1;
+  var PAGE='ib-'+((location.pathname.split('/').pop()||'index').replace(/\.html?$/,''));
+  var BK=PAGE+'-blocks';
+  function get(){ try{ var v=JSON.parse(localStorage.getItem(BK)||'null'); return v&&typeof v==='object'?v:{}; }catch(e){ return {}; } }
+  function put(v){ try{ localStorage.setItem(BK,JSON.stringify(v)); }catch(e){} }
+  // guide plan blocks "Block 1 · 25 min" + title -> numbered card with a time chip
+  [].forEach.call(document.querySelectorAll('.plan > div:not(.brk), .step'),function(d){
+    var bh=d.querySelector(':scope > .bh'); if(!bh || bh.querySelector('.bn')) return;
+    var b=bh.querySelector('b'); var m=b && /^\s*Block\s+(\d+[a-z]?)\s*[·.:-]\s*(.+?)\s*$/i.exec(b.textContent); if(!m) return;
+    var s=bh.querySelector('span'); var title=s?s.innerHTML:'';
+    d.classList.add('block'); d.setAttribute('data-n',m[1]);
+    bh.innerHTML='<span class="bn" aria-hidden="true">'+m[1]+'</span><b><span class="sr">Block '+m[1]+': </span>'+(title||('Block '+m[1]))+'</b><span class="bt">'+m[2]+'</span>';
+    // teaching sections linked from this block get a kicker "Block n · ..."
+    [].forEach.call(d.querySelectorAll('a[href^="#"]'),function(a){
+      var t=document.getElementById(a.getAttribute('href').slice(1)); if(!t) return;
+      var k=t.querySelector(':scope > .kicker'); if(!k || k.getAttribute('data-bk')) return;
+      k.setAttribute('data-bk',m[1]); k.insertAdjacentHTML('afterbegin','<span class="bk">Block '+m[1]+' · </span>');
+    });
+  });
+  // long hero intro paragraphs fold to 3 lines; tap to read them all
+  [].forEach.call(document.querySelectorAll('header.hero .wrap > p'),function(p){
+      if(p.textContent.length<160) return;
+      p.classList.add('fold'); if(p.scrollHeight<=p.clientHeight+2){ p.classList.remove('fold'); return; }
+      p.setAttribute('role','button'); p.setAttribute('tabindex','0'); p.setAttribute('aria-expanded','false');
+      function tog(e){ if(e && e.target && e.target.closest && e.target.closest('a,.term')) return; var o=p.classList.toggle('open'); p.setAttribute('aria-expanded',o?'true':'false'); }
+      p.addEventListener('click',tog); p.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); tog(); } });
+  });
+  // keep the Today card on the first screen: shrink the header picture (not below 18% of the screen height) if needed
+  (function(){ var art=document.querySelector('header.hero > svg, header.hero > img'), card=document.querySelector('.todaycard');
+    if(!art || !card) return; var vh=window.innerHeight, over=card.getBoundingClientRect().top+window.pageYOffset-(vh-70);
+    if(over>0){ var h=art.getBoundingClientRect().height; art.style.maxHeight=Math.max(0.18*vh,h-over)+'px'; } })();
+  // "Block done" ticks
+  var st=get();
+  [].forEach.call(document.querySelectorAll('.block'),function(d,i){
+    if(d.querySelector(':scope > .bdone')) return;
+    var n=d.getAttribute('data-n')||String(i+1);
+    var l=document.createElement('label'); l.className='bdone';
+    l.innerHTML='<input type="checkbox"> Block done';
+    var c=l.querySelector('input'); c.checked=!!st[n]; d.classList.toggle('is-done',c.checked);
+    c.addEventListener('change',function(){ var s=get(); if(c.checked) s[n]=new Date().toISOString().slice(0,10); else delete s[n]; put(s); d.classList.toggle('is-done',c.checked); chips(); });
+    d.appendChild(l);
+  });
+  function chips(){ var s=get(); [].forEach.call(document.querySelectorAll('.chip[data-n]'),function(a){ a.classList.toggle('done',!!s[a.getAttribute('data-n')]); }); }
+  chips();
+  // current section in the menu
+  var nav=document.querySelector('nav.toc .wrap'); if(!nav || !('IntersectionObserver' in window)) return;
+  var links={}, secs=[];
+  [].forEach.call(nav.querySelectorAll('a[href^="#"]'),function(a){ var el=document.getElementById(a.getAttribute('href').slice(1)); if(el){ links[el.id]=a; secs.push(el); } });
+  // the current section is the last one whose top has passed under the two bars; the observer (and a
+  // throttled scroll check, for long sections) only decides when to look again
+  function mark(){ var best=null; secs.forEach(function(el){ if(el.getBoundingClientRect().top<=120) best=el; });
+    Object.keys(links).forEach(function(id){ links[id].removeAttribute('aria-current'); });
+    if(best){ var a=links[best.id]; a.setAttribute('aria-current','location');
+      var l=a.offsetLeft-nav.offsetLeft, r=l+a.offsetWidth; if(l<nav.scrollLeft+8 || r>nav.scrollLeft+nav.clientWidth-8) nav.scrollLeft=Math.max(0,l-40); } }
+  secs.sort(function(a,b){ return (a.compareDocumentPosition(b)&2)?1:-1; });
+  var io=new IntersectionObserver(mark,{rootMargin:'-100px 0px -55% 0px'});
+  var tick=false; window.addEventListener('scroll',function(){ if(tick) return; tick=true; requestAnimationFrame(function(){ tick=false; mark(); }); },{passive:true});
+  secs.forEach(function(el){ io.observe(el); });
+})();</script><!--enhance:end-->
+</body>
+</html>
