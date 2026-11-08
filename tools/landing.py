@@ -19,9 +19,10 @@ body=f'''
 .tl{{display:block;background:var(--card);border:1px solid var(--rule);border-left:5px solid var(--indigo);padding:10px 12px;text-decoration:none;color:var(--ink)}}
 .tl b{{display:block;color:var(--indigo)}} .tl span{{font-size:.88rem;color:var(--ink-soft)}}
 .wk{{margin-top:26px}} .wk h2{{margin:0 0 8px;font-size:1.25rem}}
-.day{{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline;background:var(--card);border:1px solid var(--rule);padding:10px 14px;margin:6px 0}}
-.day .d{{min-width:92px;font-weight:700}} .day .s{{min-width:150px;color:var(--indigo);font-weight:700}} .day .k{{flex:1 1 260px;font-size:.92rem;color:var(--ink-soft)}}
-.day .g{{flex-basis:100%;font-size:.95rem}}
+.day{{display:grid;grid-template-columns:96px 210px minmax(0,1fr);gap:4px 16px;align-items:baseline;background:var(--card);border:1px solid var(--rule);padding:10px 14px;margin:6px 0}}
+.day .d{{font-weight:700;white-space:nowrap}} .day .s{{color:var(--indigo);font-weight:700}} .day .k{{font-size:.92rem;color:var(--ink-soft)}}
+.day .g{{grid-column:1 / -1;font-size:.95rem}}
+@media (max-width:700px){{.day{{grid-template-columns:96px minmax(0,1fr)}} .day .k{{grid-column:1 / -1}}}}
 .day.today{{border:2px solid var(--amber);background:var(--amber-soft)}} .day.past{{opacity:.7}}
 .pill{{display:inline-block;font-size:.78rem;font-weight:700;padding:1px 8px;border-radius:999px;margin-left:6px;vertical-align:1px}}
 .p-done{{background:var(--green-soft);color:var(--green)}} .p-soon{{background:#EDF0EC;color:var(--grey)}}
